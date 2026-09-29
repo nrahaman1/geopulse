@@ -1,0 +1,10 @@
+services:
+  geopulse:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - geopulse-data:/home/geopulse/data  # models, STAC read cache and job outputs survive restarts
+
+volumes:
+  geopulse-data:

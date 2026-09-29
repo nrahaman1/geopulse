@@ -1,0 +1,32 @@
+name: Bug report
+description: Something GeoPulse did wrong (crash, wrong map, bad install)
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The command or request (task, AOI or example name, before/after windows, sensors, model).
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Error message, or the relevant part of summary.json / provenance.json.
+      render: text
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: Paste the output of `geopulse doctor`.
+      render: text
+    validations:
+      required: true

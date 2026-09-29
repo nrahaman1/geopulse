@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Cyclone Idai \u2014 Buzi, Mozambique (2019)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          34.0,
+          -19.95
+        ],
+        [
+          34.14,
+          -19.95
+        ],
+        [
+          34.14,
+          -19.82
+        ],
+        [
+          34.0,
+          -19.82
+        ],
+        [
+          34.0,
+          -19.95
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+title: Palisades Fire — Los Angeles, CA (2025)
+task: wildfire
+aoi_file: aoi.geojson
+before: 2024-12-01/2025-01-06
+after: 2025-02-01/2025-03-31
+sensors: [s1, s2]

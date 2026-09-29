@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use GeoPulse or GeoPulse-Bench, please cite it as below."
+title: "GeoPulse: open-source multimodal geospatial AI for Earth-change intelligence"
+type: software
+authors:
+  - family-names: Rahaman
+    given-names: Nafiz
+version: 0.2.0
+date-released: 2026-09-29
+license: Apache-2.0
+repository-code: "https://github.com/nrahaman1/geopulse"
+keywords:
+  - remote sensing
+  - earth observation
+  - Sentinel-1
+  - Sentinel-2
+  - change detection
+  - flood mapping
+  - wildfire
+  - forest disturbance
+abstract: >-
+  GeoPulse maps flood inundation, wildfire burn scars and vegetation disturbance from Sentinel-1 SAR,
+  Sentinel-2 optical imagery and the Copernicus DEM. It provides STAC-based data acquisition on deterministic
+  grids, training-free physics baselines, a multi-task quality-gated fusion network with calibrated uncertainty,
+  event-split benchmarks with independent labels (MTBS, Hansen Global Forest Change), and a CLI, Python SDK,
+  REST API and web map producing Cloud-Optimized GeoTIFF, GeoJSON and STAC outputs with provenance.

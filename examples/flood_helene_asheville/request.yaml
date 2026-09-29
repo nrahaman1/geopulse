@@ -1,0 +1,6 @@
+title: Hurricane Helene — Asheville, NC (2024)
+task: flood
+aoi_file: aoi.geojson
+before: 2024-09-01/2024-09-25
+after: 2024-09-27/2024-10-10
+sensors: [s1, s2]

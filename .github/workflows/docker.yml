@@ -1,0 +1,25 @@
+name: Docker
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t geopulse:ci .
+      - name: Smoke test (API + web map + examples)
+        run: |
+          docker run -d --name gp -p 8000:8000 geopulse:ci
+          for i in $(seq 1 90); do curl -fs http://127.0.0.1:8000/health && break; sleep 2; done
+          curl -fs http://127.0.0.1:8000/health | grep -q '"status":"ok"'
+          curl -fs http://127.0.0.1:8000/ | grep -q maplibre
+          curl -fs http://127.0.0.1:8000/examples | grep -q flood_emilia_conselice
+      - if: failure()
+        run: docker logs gp

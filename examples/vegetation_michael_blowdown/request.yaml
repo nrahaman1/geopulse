@@ -1,0 +1,6 @@
+title: Hurricane Michael windthrow — Florida panhandle (2018)
+task: vegetation
+aoi_file: aoi.geojson
+before: 2017-11-01/2018-01-31
+after: 2019-11-01/2020-01-31
+sensors: [s1, s2]

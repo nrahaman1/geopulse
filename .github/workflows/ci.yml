@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uvx ruff check geopulse tests
+      - run: uvx ruff format --check geopulse tests
+      - name: Lockfile matches pyproject.toml
+        run: uv lock --check
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install with CPU PyTorch
+        run: |
+          uv venv
+          uv pip install torch --index-url https://download.pytorch.org/whl/cpu
+          uv pip install -e . pytest httpx
+      - name: "Tests (offline: no STAC or Hub access)"
+        run: uv run --no-sync pytest -q
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - name: Wheel ships the web map and example events
+        run: |
+          python3 -m zipfile -l dist/*.whl > wheel.txt
+          grep -q "geopulse/web/index.html" wheel.txt
+          grep -q "geopulse/examples/flood_emilia_conselice/request.yaml" wheel.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/

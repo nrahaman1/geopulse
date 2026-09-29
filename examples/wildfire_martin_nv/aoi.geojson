@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Martin Fire \u2014 sagebrush steppe, NV (2018)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -116.65,
+          41.5
+        ],
+        [
+          -116.5,
+          41.5
+        ],
+        [
+          -116.5,
+          41.63
+        ],
+        [
+          -116.65,
+          41.63
+        ],
+        [
+          -116.65,
+          41.5
+        ]
+      ]
+    ]
+  }
+}

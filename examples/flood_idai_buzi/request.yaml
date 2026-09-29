@@ -1,0 +1,6 @@
+title: Cyclone Idai — Buzi, Mozambique (2019)
+task: flood
+aoi_file: aoi.geojson
+before: 2019-02-01/2019-03-10
+after: 2019-03-17/2019-03-31
+sensors: [s1, s2]

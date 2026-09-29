@@ -1,0 +1,6 @@
+title: Camp Fire — Paradise, CA (2018)
+task: wildfire
+aoi_file: aoi.geojson
+before: 2018-09-15/2018-11-07
+after: 2018-11-26/2019-01-31
+sensors: [s1, s2]

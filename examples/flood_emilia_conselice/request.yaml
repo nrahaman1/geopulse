@@ -1,0 +1,6 @@
+title: Emilia-Romagna floods — Conselice, Italy (2023)
+task: flood
+aoi_file: aoi.geojson
+before: 2023-04-01/2023-04-30
+after: 2023-05-18/2023-05-30
+sensors: [s1, s2]

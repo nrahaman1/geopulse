@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Pakistan monsoon floods \u2014 Dadu, Sindh (2022)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          67.6,
+          26.85
+        ],
+        [
+          67.75,
+          26.85
+        ],
+        [
+          67.75,
+          26.98
+        ],
+        [
+          67.6,
+          26.98
+        ],
+        [
+          67.6,
+          26.85
+        ]
+      ]
+    ]
+  }
+}

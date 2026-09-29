@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoPulse</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #151a21; --panel-2: #1b212a; --line: #2a323d; --text: #e6e9ee; --muted: #8b96a5;
+    --accent: #3fb6c8; --accent-ink: #06222a; --flood: #2878ff; --warn: #f0b429; --bad: #ef5b5b; --ok: #3ecf8e;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { display: grid; grid-template-columns: 360px 1fr; }
+  aside { background: var(--panel); border-right: 1px solid var(--line); overflow-y: auto; height: 100vh; }
+  header { padding: 18px 20px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 10px; }
+  header h1 { font-size: 18px; margin: 0; letter-spacing: .02em; }
+  header .tag { color: var(--muted); font-size: 12px; }
+  section { padding: 14px 20px; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  select, input[type=date], button { font: inherit; color: var(--text); background: var(--panel-2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 7px 9px; width: 100%; }
+  input[type=date] { color-scheme: dark; }
+  select:focus, input:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .btns { display: flex; gap: 8px; margin-top: 8px; }
+  .btns button { flex: 1; cursor: pointer; }
+  button:hover { border-color: #3a4552; }
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; cursor: pointer; }
+  button.primary:disabled { opacity: .5; cursor: progress; }
+  .check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); margin: 6px 0; cursor: pointer; }
+  .check input { accent-color: var(--accent); }
+  .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .mono { font-family: var(--mono); }
+  #log { font: 12px/1.55 var(--mono); color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 10px; margin-top: 10px; max-height: 190px; overflow-y: auto; white-space: pre-wrap; display: none; }
+  #log .ok { color: var(--ok); } #log .warn { color: var(--warn); } #log .err { color: var(--bad); }
+  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .metric { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+  .metric .v { font: 600 18px var(--mono); }
+  .metric .k { font-size: 11px; color: var(--muted); }
+  .bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; margin: 3px 0 8px; }
+  .bar > div { height: 100%; background: var(--accent); }
+  .warnings { color: var(--warn); font-size: 12px; margin: 8px 0 0; padding-left: 16px; }
+  .files a { display: inline-block; font: 12px var(--mono); color: var(--accent); margin: 0 10px 6px 0; text-decoration: none; }
+  .files a:hover { text-decoration: underline; }
+  .jobs { font: 12px var(--mono); }
+  .jobs div { display: flex; justify-content: space-between; padding: 4px 0; cursor: pointer; color: var(--muted); }
+  .jobs div:hover { color: var(--text); }
+  .st-succeeded { color: var(--ok); } .st-failed { color: var(--bad); } .st-running, .st-queued { color: var(--warn); }
+  #maps { position: relative; height: 100vh; }
+  #map, #map-before { position: absolute; inset: 0; }
+  #map-before { display: none; }
+  #swipe { position: absolute; top: 0; bottom: 0; width: 0; display: none; z-index: 3; }
+  #swipe .handle { position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: #fff; box-shadow: 0 0 6px #000a; }
+  #swipe .grip { position: absolute; top: 50%; left: -16px; width: 32px; height: 32px; margin-top: -16px; border-radius: 50%;
+    background: #fff; color: #111; display: grid; place-items: center; cursor: ew-resize; font: 700 13px var(--mono); }
+  .swipe-label { position: absolute; bottom: 36px; z-index: 3; background: #000a; color: #fff; font: 12px var(--mono);
+    padding: 3px 8px; border-radius: 4px; display: none; }
+  #layers { position: absolute; top: 12px; right: 12px; z-index: 4; width: 250px; background: color-mix(in srgb, var(--panel) 94%, transparent);
+    border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+  #layers h2 { margin-bottom: 6px; }
+  #layers summary { cursor: pointer; list-style: none; }
+  #layers summary h2 { display: inline; }
+  #layers:not([open]) { width: auto; padding: 8px 12px; }
+  #layers .check { margin: 4px 0; }
+  #layers .check.disabled { opacity: .4; pointer-events: none; }
+  .legend { height: 8px; border-radius: 4px; margin: 4px 0 2px; }
+  .legend-scale { display: flex; justify-content: space-between; font: 10px var(--mono); color: var(--muted); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .maplibregl-ctrl-attrib { font-size: 10px; }
+  header a { margin-left: auto; color: var(--muted); font-size: 12px; text-decoration: none; }
+  header a:hover { color: var(--accent); }
+  #search { position: absolute; top: 12px; left: 12px; z-index: 4; width: 320px; max-width: calc(100% - 150px); }
+  #search input { width: 100%; font: inherit; color: var(--text); background: color-mix(in srgb, var(--panel) 96%, transparent);
+    border: 1px solid var(--line); border-radius: 8px; padding: 9px 40px 9px 12px; box-shadow: 0 2px 10px #0006; }
+  #search input::-webkit-search-cancel-button { filter: invert(1); }
+  #search button { position: absolute; top: 4px; right: 4px; width: 32px; height: 30px; padding: 0; border: 0;
+    background: transparent; cursor: pointer; font-size: 16px; color: var(--muted); }
+  #search button:hover { color: var(--accent); }
+  #search-results { margin-top: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  #search-results:empty { display: none; }
+  #search-results button, #search-results .msg { position: static; display: block; width: 100%; height: auto; text-align: left;
+    padding: 8px 12px; font-size: 13px; color: var(--text); border-bottom: 1px solid var(--line); border-radius: 0; }
+  #search-results button:hover, #search-results button:focus-visible { background: var(--panel-2); color: var(--text); }
+  #search-results .msg { color: var(--muted); cursor: default; }
+  #search-results .attr { padding: 5px 12px; font-size: 10px; color: var(--muted); }
+  @media (max-width: 800px) {
+    body { grid-template-columns: 1fr; grid-template-rows: 55vh auto; }
+    aside { height: auto; order: 2; } #maps { height: 55vh; } #layers { width: 200px; }
+  }
+</style>
+</head>
+<body>
+<aside>
+  <header><h1>GeoPulse</h1><span class="tag">Earth-change intelligence · <span id="version">v0.2</span></span>
+    <a href="https://github.com/nrahaman1/geopulse" target="_blank" rel="noopener">GitHub ↗</a></header>
+
+  <section>
+    <h2>Area of interest</h2>
+    <label for="example">Example event</label>
+    <select id="example"><option value="">— choose —</option></select>
+    <div class="btns">
+      <button id="draw" type="button">Draw box</button>
+      <button id="upload-btn" type="button">Upload GeoJSON</button>
+      <input id="upload" type="file" accept=".geojson,.json" hidden>
+    </div>
+    <div class="hint" id="aoi-info">No AOI yet. Search a place on the map, pick an example, draw a box, or upload a polygon.</div>
+  </section>
+
+  <section>
+    <h2>Time windows</h2>
+    <label>Before event</label>
+    <div class="row"><input type="date" id="b0" aria-label="before start"><input type="date" id="b1" aria-label="before end"></div>
+    <label>After event</label>
+    <div class="row"><input type="date" id="a0" aria-label="after start"><input type="date" id="a1" aria-label="after end"></div>
+  </section>
+
+  <section>
+    <h2>Task · sensors · model</h2>
+    <label for="task">Task</label>
+    <select id="task">
+      <option value="flood">Flood inundation</option>
+      <option value="wildfire">Wildfire / burn</option>
+      <option value="vegetation">Vegetation disturbance</option>
+    </select>
+    <div class="hint" id="task-hint"></div>
+    <div style="margin:10px 0 8px">
+      <label class="check"><input type="checkbox" id="s1" checked> Sentinel-1 SAR (cloud-independent)</label>
+      <label class="check"><input type="checkbox" id="s2" checked> Sentinel-2 optical</label>
+    </div>
+    <label for="model">Model</label>
+    <select id="model"><option value="auto">auto</option></select>
+    <div class="btns"><button class="primary" id="run" type="button">Run analysis</button></div>
+    <div id="log" aria-live="polite"></div>
+  </section>
+
+  <section id="results" hidden>
+    <h2>Result</h2>
+    <div class="metrics">
+      <div class="metric"><div class="v" id="m-hit">–</div><div class="k" id="k-hit">affected km²</div></div>
+      <div class="metric"><div class="v" id="m-review">–</div><div class="k">review recommended km²</div></div>
+      <div class="metric"><div class="v" id="m-conf">–</div><div class="k" id="k-conf">mean confidence</div></div>
+      <div class="metric"><div class="v" id="m-obs">–</div><div class="k">observed km²</div></div>
+    </div>
+    <div style="margin-top:12px">
+      <label>Sensors used</label>
+      <div id="sensors-used" class="mono" style="font-size:12px"></div>
+    </div>
+    <div id="severity" style="margin-top:10px"></div>
+    <div id="weights" style="margin-top:10px"></div>
+    <ul class="warnings" id="warnings"></ul>
+    <div style="margin-top:10px"><label>Downloads</label><div class="files" id="files"></div></div>
+  </section>
+
+  <section>
+    <h2>Recent jobs</h2>
+    <div class="jobs" id="jobs"><span class="hint">none yet</span></div>
+  </section>
+</aside>
+
+<div id="maps">
+  <div id="map"></div>
+  <div id="map-before"></div>
+  <form id="search" role="search" autocomplete="off">
+    <input id="search-q" type="search" placeholder="Search a place, or lat, lon" aria-label="Search a place or coordinates">
+    <button type="submit" aria-label="Search">⌕</button>
+    <div id="search-results" aria-live="polite"></div>
+  </form>
+  <div id="swipe"><div class="handle"></div><div class="grip" title="drag">⇆</div></div>
+  <div class="swipe-label" id="lbl-before" style="left:12px">BEFORE</div>
+  <div class="swipe-label" id="lbl-after" style="right:276px">AFTER</div>
+
+  <details id="layers" open>
+    <summary><h2>Layers</h2></summary>
+    <label class="check" data-layer="target"><input type="checkbox" checked> <span id="target-name">Flood</span> probability</label>
+    <div class="legend" id="target-legend" style="background:linear-gradient(90deg,#2878ff00,#2878ff96 40%,#145affeb)"></div>
+    <div class="legend-scale"><span>0.2</span><span>0.5</span><span>1.0</span></div>
+    <label class="check" data-layer="severity"><input type="checkbox"> Burn severity (dNBR)</label>
+    <div class="legend" style="background:linear-gradient(90deg,#7fffd4 0 25%,#ffff00 25% 50%,#ff8c00 50% 75%,#ff0000 75%)"></div>
+    <div class="legend-scale"><span>low</span><span>mod-low</span><span>mod-high</span><span>high</span></div>
+    <label class="check" data-layer="uncertainty"><input type="checkbox"> Uncertainty</label>
+    <div class="legend" style="background:linear-gradient(90deg,#3c145a00,#78288c6e 30%,#e6505abe 70%,#ffd23ce6)"></div>
+    <div class="legend-scale"><span>low</span><span>high</span></div>
+    <label class="check" data-layer="change"><input type="checkbox"> Change probability</label>
+    <label class="check" data-layer="outline"><input type="checkbox" checked> Extent polygons</label>
+    <div style="margin:8px 0 4px"><label for="opacity">Prediction opacity</label><input type="range" id="opacity" min="0" max="100" value="85"></div>
+    <h2 style="margin-top:10px">Imagery</h2>
+    <label class="check" data-layer="s2_post"><input type="checkbox" checked> Sentinel-2 after</label>
+    <label class="check" data-layer="s2_pre"><input type="checkbox"> Sentinel-2 before</label>
+    <label class="check" data-layer="s1_post"><input type="checkbox"> Sentinel-1 VV after</label>
+    <label class="check" data-layer="s1_pre"><input type="checkbox"> Sentinel-1 VV before</label>
+    <label class="check"><input type="checkbox" id="swipe-toggle"> Before / after swipe</label>
+    <h2 style="margin-top:10px">Basemap</h2>
+    <div class="row" style="margin:0">
+      <button type="button" data-basemap="dark">Dark</button><button type="button" data-basemap="imagery">Imagery</button>
+    </div>
+  </details>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const api = async (path, opts) => {
+  const r = await fetch(path, opts);
+  const body = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(body.detail || r.statusText);
+  return body;
+};
+
+const basemap = () => ({
+  version: 8,
+  sources: {
+    dark: { type: "raster", tileSize: 256, maxzoom: 16, attribution: "Basemap © Esri, HERE, Garmin, © OpenStreetMap contributors",
+      tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"] },
+    imagery: { type: "raster", tileSize: 256, maxzoom: 19, attribution: "Imagery © Esri, Maxar, Earthstar Geographics",
+      tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"] },
+  },
+  layers: [
+    { id: "dark", type: "raster", source: "dark" },
+    { id: "imagery", type: "raster", source: "imagery", layout: { visibility: "none" } },
+  ],
+});
+
+const view = { center: [-40, 30], zoom: 2 };
+const map = new maplibregl.Map({ container: "map", style: basemap(), ...view, attributionControl: { compact: true } });
+const before = new maplibregl.Map({ container: "map-before", style: basemap(), ...view, attributionControl: false });
+map.addControl(new maplibregl.NavigationControl(), "bottom-right");
+map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-left");
+
+// Keep the two maps in lockstep (the "before" map is only visible in swipe mode).
+let syncing = false;
+const sync = (from, to) => from.on("move", () => {
+  if (syncing) return;
+  syncing = true;
+  to.jumpTo({ center: from.getCenter(), zoom: from.getZoom(), bearing: from.getBearing(), pitch: from.getPitch() });
+  syncing = false;
+});
+sync(map, before); sync(before, map);
+
+// ------------------------------------------------------------------ AOI
+let aoi = null;
+const emptyFC = { type: "FeatureCollection", features: [] };
+map.on("load", () => {
+  map.addSource("aoi", { type: "geojson", data: emptyFC });
+  map.addLayer({ id: "aoi-line", type: "line", source: "aoi", paint: { "line-color": "#3fb6c8", "line-width": 2, "line-dasharray": [2, 1] } });
+});
+
+function areaKm2(geom) {
+  const ring = (geom.type === "Polygon" ? geom.coordinates : geom.coordinates[0])[0];
+  const R = 6371.0088, rad = Math.PI / 180;
+  let a = 0;
+  for (let i = 0; i < ring.length - 1; i++) {
+    const [x1, y1] = ring[i], [x2, y2] = ring[i + 1];
+    a += (x2 - x1) * rad * (2 + Math.sin(y1 * rad) + Math.sin(y2 * rad));
+  }
+  return Math.abs(a * R * R / 2);
+}
+
+function setAoi(geom, fit = true) {
+  if (geom.type === "FeatureCollection") geom = geom.features[0].geometry;
+  if (geom.type === "Feature") geom = geom.geometry;
+  aoi = geom;
+  map.getSource("aoi")?.setData(geom);
+  $("aoi-info").textContent = `${geom.type} · ${areaKm2(geom).toFixed(1)} km²`;
+  if (fit) {
+    const pts = (geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates).flat(2);
+    const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+    map.fitBounds([[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], { padding: 80, duration: 800 });
+  }
+}
+
+// ------------------------------------------------------------------ place search
+// Nominatim (OpenStreetMap) on submit only: its usage policy forbids search-as-you-type. Coordinates need no lookup.
+const COORDS = /^\s*(-?\d+(?:\.\d+)?)\s*[,\s]\s*(-?\d+(?:\.\d+)?)\s*$/;
+const AOI_KM = 10;
+function boxAround(lon, lat, km = AOI_KM) {
+  const dLat = km / 2 / 110.574, dLon = km / 2 / (111.32 * Math.cos((lat * Math.PI) / 180));
+  return { type: "Polygon", coordinates: [[[lon - dLon, lat - dLat], [lon + dLon, lat - dLat], [lon + dLon, lat + dLat], [lon - dLon, lat + dLat], [lon - dLon, lat - dLat]]] };
+}
+function goTo(name, lon, lat) {
+  $("search-results").replaceChildren();
+  $("example").value = "";
+  const set = () => {
+    setAoi(boxAround(lon, lat));
+    $("aoi-info").textContent = `${AOI_KM} × ${AOI_KM} km box around ${name} — draw a box to change it`;
+  };
+  map.loaded() ? set() : map.once("load", set);
+}
+function searchMessage(text) {
+  $("search-results").replaceChildren(Object.assign(document.createElement("div"), { className: "msg", textContent: text }));
+}
+$("search").onsubmit = async (e) => {
+  e.preventDefault();
+  const q = $("search-q").value.trim();
+  if (!q) return;
+  const m = q.match(COORDS);
+  if (m && Math.abs(+m[1]) <= 90 && Math.abs(+m[2]) <= 180) return goTo(`${+m[1]}, ${+m[2]}`, +m[2], +m[1]);
+  searchMessage("Searching…");
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=${encodeURIComponent(q)}`;
+    const r = await fetch(url, { headers: { "Accept-Language": navigator.language || "en" } });
+    if (!r.ok) throw new Error(r.statusText || `HTTP ${r.status}`);
+    const hits = await r.json();
+    if (!hits.length) return searchMessage(`No place found for “${q}”. Try adding a region or country.`);
+    if (hits.length === 1) return goTo(hits[0].name || q, +hits[0].lon, +hits[0].lat);
+    $("search-results").replaceChildren(
+      ...hits.map((h) => Object.assign(document.createElement("button"), {
+        type: "button", textContent: h.display_name, onclick: () => goTo(h.name || h.display_name.split(",")[0], +h.lon, +h.lat),
+      })),
+      Object.assign(document.createElement("div"), { className: "attr", textContent: "Places © OpenStreetMap contributors (Nominatim)" }),
+    );
+  } catch (err) {
+    searchMessage(`Place search unavailable (${err.message}). Coordinates like 39.76, -121.62 always work.`);
+  }
+};
+$("search-q").onkeydown = (e) => { if (e.key === "Escape") $("search-results").replaceChildren(); };
+
+let drawing = null;
+$("draw").onclick = () => {
+  drawing = { start: null };
+  map.getCanvas().style.cursor = "crosshair";
+  map.dragPan.disable();
+  $("aoi-info").textContent = "Drag on the map to draw a box.";
+};
+const box = (a, b) => ({ type: "Polygon", coordinates: [[[a.lng, a.lat], [b.lng, a.lat], [b.lng, b.lat], [a.lng, b.lat], [a.lng, a.lat]]] });
+map.on("mousedown", (e) => { if (drawing) drawing.start = e.lngLat; });
+map.on("mousemove", (e) => { if (drawing?.start) map.getSource("aoi").setData(box(drawing.start, e.lngLat)); });
+map.on("mouseup", (e) => {
+  if (!drawing?.start) return;
+  const g = box(drawing.start, e.lngLat);
+  drawing = null;
+  map.dragPan.enable();
+  map.getCanvas().style.cursor = "";
+  $("example").value = "";
+  setAoi(g, false);
+});
+
+$("upload-btn").onclick = () => $("upload").click();
+$("upload").onchange = async (e) => {
+  try { setAoi(JSON.parse(await e.target.files[0].text())); $("example").value = ""; }
+  catch (err) { $("aoi-info").textContent = `Could not read GeoJSON: ${err.message}`; }
+};
+
+// ------------------------------------------------------------------ examples, models, jobs
+let examples = [], allModels = [];
+const TASK_ICON = { flood: "💧", wildfire: "🔥", vegetation: "🌲" };
+const TASK_HINT = {
+  flood: "Before: a dry period. After: the days right after the event (earliest clear view is used).",
+  wildfire: "Before: weeks before ignition. After: after containment (post-fire median). Severity from dNBR.",
+  vegetation: "Use the SAME season in different years (e.g. Jun–Aug 2019 vs Jun–Aug 2021) so phenology cancels.",
+};
+const TARGET = {
+  flood: ["Flood", "#2878ff", "#145aff"],
+  wildfire: ["Burn", "#eb461e", "#c8140a"],
+  vegetation: ["Disturbance", "#be46eb", "#961edc"],
+};
+function setTask(task) {
+  $("task").value = task;
+  $("task-hint").textContent = TASK_HINT[task];
+  const keep = $("model").value;
+  $("model").replaceChildren(new Option("auto", "auto"));
+  for (const m of allModels.filter((m) => m.tasks.includes(task))) $("model").add(new Option(`${m.model_id} v${m.version}`, m.model_id));
+  $("model").value = [...$("model").options].some((o) => o.value === keep) ? keep : "auto";
+}
+$("task").onchange = () => setTask($("task").value);
+const setDates = (w, a, b) => { const [x, y] = Array.isArray(w) ? w : w.split("/"); $(a).value = x; $(b).value = y; };
+async function init() {
+  const [health, models] = await Promise.all([api("/health"), api("/models")]);
+  $("version").textContent = `v${health.version} · ${health.device}`;
+  allModels = models;
+  setTask("flood");
+  examples = await api("/examples");
+  for (const ex of examples) $("example").add(new Option(`${TASK_ICON[ex.task] || ""} ${ex.title || ex.id}`, ex.id));
+  if (examples.length) { $("example").value = examples[0].id; $("example").onchange(); }
+  refreshJobs();
+}
+$("example").onchange = () => {
+  const ex = examples.find((x) => x.id === $("example").value);
+  if (!ex) return;
+  const go = () => setAoi(ex.aoi);
+  map.loaded() ? go() : map.once("load", go);
+  setTask(ex.task || "flood");
+  setDates(ex.before, "b0", "b1");
+  setDates(ex.after, "a0", "a1");
+};
+
+// Public deployments hide /jobs; each browser then remembers the jobs it started.
+const myJobs = () => { try { return JSON.parse(localStorage.getItem("geopulse.jobs") || "[]"); } catch { return []; } };
+const remember = (id) => { try { localStorage.setItem("geopulse.jobs", JSON.stringify([id, ...myJobs()].slice(0, 20))); } catch {} };
+async function refreshJobs() {
+  const jobs = await api("/jobs").catch(async () => (await Promise.all(myJobs().map((id) => api(`/jobs/${id}`).catch(() => null))))
+    .filter(Boolean).map((j) => ({ ...j, task: j.request.task, aoi_km2: j.request.aoi_km2 })));
+  if (!jobs.length) return;
+  $("jobs").replaceChildren(...jobs.slice(0, 8).map((j) => {
+    const d = document.createElement("div");
+    d.innerHTML = `<span>${TASK_ICON[j.task] || ""} ${j.id} · ${j.aoi_km2?.toFixed?.(0) ?? "?"} km²</span><span class="st-${j.status}">${j.status}</span>`;
+    d.onclick = () => j.status === "succeeded" ? showResults(j.id) : watch(j.id);
+    return d;
+  }));
+}
+
+// ------------------------------------------------------------------ run
+function logLines(lines) {
+  const el = $("log");
+  el.style.display = "block";
+  el.innerHTML = lines.map((l) => {
+    const cls = l.startsWith("✓") ? "ok" : l.startsWith("!") ? "warn" : l.startsWith("✗") ? "err" : "";
+    return `<div class="${cls}">${l.replace(/</g, "&lt;")}</div>`;
+  }).join("");
+  el.scrollTop = el.scrollHeight;
+}
+
+$("run").onclick = async () => {
+  if (!aoi) return logLines(["✗ Choose an area of interest first."]);
+  const sensors = ["s1", "s2"].filter((s) => $(s).checked);
+  if (!sensors.length) return logLines(["✗ Select at least one sensor."]);
+  const body = {
+    task: $("task").value, aoi, sensors, model: $("model").value,
+    before: [$("b0").value, $("b1").value], after: [$("a0").value, $("a1").value],
+  };
+  try {
+    const job = await api("/jobs", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    remember(job.id);
+    watch(job.id);
+  } catch (err) { logLines([`✗ ${err.message}`]); }
+};
+
+async function watch(id) {
+  $("run").disabled = true;
+  try {
+    for (;;) {
+      const job = await api(`/jobs/${id}`);
+      logLines([`job ${id}: ${job.status}`, ...job.log, ...(job.error ? [`✗ ${job.error}`] : [])]);
+      if (job.status === "succeeded") { await showResults(id); break; }
+      if (job.status === "failed") break;
+      await new Promise((r) => setTimeout(r, 1500));
+    }
+  } finally { $("run").disabled = false; refreshJobs(); }
+}
+
+// ------------------------------------------------------------------ results
+const PRED = ["change", "uncertainty", "severity", "target"];
+const IMG = ["s2_pre", "s2_post", "s1_pre", "s1_post"];
+let current = null;
+
+function clearResult(m) {
+  for (const id of [...IMG, ...PRED, "outline"]) {
+    if (m.getLayer(id)) m.removeLayer(id);
+    if (m.getSource(id)) m.removeSource(id);
+  }
+}
+
+function addImage(m, id, url, b, opacity) {
+  const [w, s, e, n] = b;
+  m.addSource(id, { type: "image", url, coordinates: [[w, n], [e, n], [e, s], [w, s]] });
+  m.addLayer({ id, type: "raster", source: id, paint: { "raster-opacity": opacity, "raster-resampling": "nearest", "raster-fade-duration": 0 } }, m.getLayer("aoi-line") ? "aoi-line" : undefined);
+}
+
+async function showResults(id) {
+  const res = await api(`/jobs/${id}/results`);
+  const job = await api(`/jobs/${id}`);
+  current = { id, res };
+  const { bounds, layers } = res.layers;
+  const f = (name) => res.files[`layers/${name}.png`];
+  clearResult(map); clearResult(before);
+  for (const k of IMG) if (layers.includes(k)) {
+    addImage(map, k, f(k), bounds, 1);
+    if (k.endsWith("_pre")) addImage(before, k, f(k), bounds, 1);
+  }
+  for (const k of PRED) if (layers.includes(k)) addImage(map, k, f(k), bounds, $("opacity").value / 100);
+  const [tname, c0, c1] = TARGET[job.request.task] || TARGET.flood;
+  $("target-name").textContent = tname;
+  $("target-legend").style.background = `linear-gradient(90deg,${c0}00,${c0}96 40%,${c1}eb)`;
+  map.addSource("outline", { type: "geojson", data: res.files[res.layers.extent] });
+  map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": "#ffffff", "line-opacity": 0.7, "line-width": 0.8 } });
+  setAoi(job.request.aoi, true);
+
+  // Default visibility: optical if we have it, otherwise SAR.
+  const afterImg = layers.includes("s2_post") ? "s2_post" : "s1_post";
+  for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
+    const k = el.dataset.layer, box = el.querySelector("input");
+    const exists = k === "outline" || layers.includes(k);
+    el.classList.toggle("disabled", !exists);
+    if (IMG.includes(k)) box.checked = k === afterImg;
+    applyLayer(k, box.checked && exists);
+  }
+  const beforeImg = layers.includes("s2_pre") ? "s2_pre" : "s1_pre";
+  for (const k of IMG) if (before.getLayer(k)) before.setLayoutProperty(k, "visibility", k === beforeImg ? "visible" : "none");
+
+  const s = res.summary;
+  $("results").hidden = false;
+  $("m-hit").textContent = s.affected_km2.toFixed(2);
+  $("k-hit").textContent = `${s.affected_label} km²`;
+  $("k-conf").textContent = `mean confidence (${s.affected_label})`;
+  $("m-review").textContent = s.review_km2.toFixed(2);
+  $("m-conf").textContent = s.mean_confidence_affected == null ? "–" : `${(s.mean_confidence_affected * 100).toFixed(0)}%`;
+  $("severity").innerHTML = s.severity_km2 ? "<label>Burn severity (dNBR, Key &amp; Benson 2006)</label>" +
+    Object.entries(s.severity_km2).map(([k, v]) => `<div class="mono" style="font-size:12px">${k.padEnd(14)} ${v.toFixed(2)} km²</div>`).join("") : "";
+  $("m-obs").textContent = s.observed_km2.toFixed(1);
+  $("sensors-used").innerHTML = ["s1_pre", "s1_post", "s2_pre", "s2_post"].map((k) =>
+    `${k.replace("_", " ").toUpperCase().padEnd(8)} ${s.scenes[k] ? `${s.scenes[k]} scene(s)` : '<span style="color:var(--bad)">missing</span>'}`).join("<br>")
+    + `<br>MODEL    ${s.model.id} v${s.model.version}`;
+  $("weights").innerHTML = s.modality_weights ? "<label>Modality reliability weight (post-event, learned)</label>" +
+    Object.entries(s.modality_weights).filter(([, v]) => v != null).map(([k, v]) =>
+      `<div class="mono" style="font-size:12px">${k.toUpperCase()} ${(v * 100).toFixed(0)}%</div><div class="bar"><div style="width:${v * 100}%"></div></div>`).join("") : "";
+  $("warnings").replaceChildren(...s.warnings.map((w) => Object.assign(document.createElement("li"), { textContent: w })));
+  $("files").innerHTML = Object.keys(res.files).filter((k) => !k.startsWith("layers")).map((k) => `<a href="${res.files[k]}" download>${k}</a>`).join("");
+}
+
+function applyLayer(k, on) {
+  const vis = on ? "visible" : "none";
+  if (map.getLayer(k)) map.setLayoutProperty(k, "visibility", vis);
+}
+for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
+  el.querySelector("input").onchange = (e) => applyLayer(el.dataset.layer, e.target.checked);
+}
+$("opacity").oninput = () => { for (const k of PRED) if (map.getLayer(k)) map.setPaintProperty(k, "raster-opacity", $("opacity").value / 100); };
+for (const b of document.querySelectorAll("[data-basemap]")) b.onclick = () => {
+  for (const m of [map, before]) for (const id of ["dark", "imagery"]) m.setLayoutProperty(id, "visibility", id === b.dataset.basemap ? "visible" : "none");
+};
+
+// ------------------------------------------------------------------ swipe
+let swipeX = 0.5;
+function placeSwipe() {
+  const w = $("maps").clientWidth, x = swipeX * w;
+  $("swipe").style.left = `${x}px`;
+  $("map-before").style.clipPath = `inset(0 ${w - x}px 0 0)`;
+}
+$("swipe-toggle").onchange = (e) => {
+  const on = e.target.checked;
+  for (const id of ["map-before", "swipe", "lbl-before", "lbl-after"]) $(id).style.display = on ? "block" : "none";
+  if (on) { before.resize(); before.jumpTo({ center: map.getCenter(), zoom: map.getZoom() }); placeSwipe(); }
+};
+$("swipe").querySelector(".grip").onpointerdown = (e) => {
+  e.target.setPointerCapture(e.pointerId);
+  e.target.onpointermove = (ev) => {
+    const r = $("maps").getBoundingClientRect();
+    swipeX = Math.min(0.98, Math.max(0.02, (ev.clientX - r.left) / r.width));
+    placeSwipe();
+  };
+  e.target.onpointerup = () => { e.target.onpointermove = null; };
+};
+new ResizeObserver(() => { map.resize(); before.resize(); placeSwipe(); }).observe($("maps"));
+
+if (innerWidth < 800) $("layers").open = false;  // small screens: keep the map visible
+
+init().catch((err) => logLines([`✗ API unreachable: ${err.message}`]));
+</script>
+</body>
+</html>

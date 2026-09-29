@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Hurricane Helene \u2014 Asheville, NC (2024)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -82.6,
+          35.53
+        ],
+        [
+          -82.5,
+          35.53
+        ],
+        [
+          -82.5,
+          35.62
+        ],
+        [
+          -82.6,
+          35.62
+        ],
+        [
+          -82.6,
+          35.53
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Amazon deforestation \u2014 Novo Progresso, Par\u00e1 (2020)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -55.5,
+          -7.2
+        ],
+        [
+          -55.35,
+          -7.2
+        ],
+        [
+          -55.35,
+          -7.05
+        ],
+        [
+          -55.5,
+          -7.05
+        ],
+        [
+          -55.5,
+          -7.2
+        ]
+      ]
+    ]
+  }
+}

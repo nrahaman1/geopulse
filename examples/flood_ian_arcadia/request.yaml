@@ -1,0 +1,6 @@
+title: Hurricane Ian — Peace River, Arcadia, FL (2022)
+task: flood
+aoi_file: aoi.geojson
+before: 2022-09-01/2022-09-25
+after: 2022-09-29/2022-10-08
+sensors: [s1, s2]

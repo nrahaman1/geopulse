@@ -1,0 +1,6 @@
+title: Missouri River levee breaches — Hamburg, IA (2019)
+task: flood
+aoi_file: aoi.geojson
+before: 2018-10-01/2018-11-15
+after: 2019-03-20/2019-04-10
+sensors: [s1, s2]

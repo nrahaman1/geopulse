@@ -1,0 +1,6 @@
+title: Pakistan monsoon floods — Dadu, Sindh (2022)
+task: flood
+aoi_file: aoi.geojson
+before: 2022-06-01/2022-07-10
+after: 2022-09-01/2022-09-20
+sensors: [s1, s2]

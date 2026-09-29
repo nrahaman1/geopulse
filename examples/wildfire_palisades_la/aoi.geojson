@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Palisades Fire \u2014 Los Angeles, CA (2025)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -118.62,
+          34.03
+        ],
+        [
+          -118.5,
+          34.03
+        ],
+        [
+          -118.5,
+          34.12
+        ],
+        [
+          -118.62,
+          34.12
+        ],
+        [
+          -118.62,
+          34.03
+        ]
+      ]
+    ]
+  }
+}

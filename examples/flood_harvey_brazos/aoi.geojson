@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Hurricane Harvey \u2014 Brazos River, TX (2017)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -95.8,
+          29.45
+        ],
+        [
+          -95.66,
+          29.45
+        ],
+        [
+          -95.66,
+          29.57
+        ],
+        [
+          -95.8,
+          29.57
+        ],
+        [
+          -95.8,
+          29.45
+        ]
+      ]
+    ]
+  }
+}

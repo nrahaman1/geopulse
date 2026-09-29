@@ -1,0 +1,6 @@
+title: Martin Fire — sagebrush steppe, NV (2018)
+task: wildfire
+aoi_file: aoi.geojson
+before: 2018-05-15/2018-07-04
+after: 2018-07-25/2018-09-15
+sensors: [s1, s2]

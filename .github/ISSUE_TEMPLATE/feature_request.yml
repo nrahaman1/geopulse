@@ -1,0 +1,22 @@
+name: Feature or research idea
+description: A new task, sensor, label source, benchmark event, model or interface
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: For data or benchmark additions, include the source, its license and how labels are derived.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [data / provider, task, benchmark, model, API / web map, docs, other]

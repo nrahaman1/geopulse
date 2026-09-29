@@ -1,0 +1,6 @@
+title: Amazon deforestation — Novo Progresso, Pará (2020)
+task: vegetation
+aoi_file: aoi.geojson
+before: 2019-06-15/2019-09-15
+after: 2021-06-15/2021-09-15
+sensors: [s1, s2]

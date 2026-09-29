@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Hurricane Michael windthrow \u2014 Florida panhandle (2018)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -85.25,
+          30.4
+        ],
+        [
+          -85.1,
+          30.4
+        ],
+        [
+          -85.1,
+          30.52
+        ],
+        [
+          -85.25,
+          30.52
+        ],
+        [
+          -85.25,
+          30.4
+        ]
+      ]
+    ]
+  }
+}

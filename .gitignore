@@ -1,0 +1,24 @@
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# large or generated artifacts: imagery cache, benchmark tiles, checkpoints, runs and job outputs
+# (tiles and weights are published on the Hugging Face Hub, not in git)
+data/
+outputs/
+runs/
+models/
+
+# local tooling
+.claude/
+.vscode/
+.idea/
+
+# private planning document (not part of the public project)
+GeoPulse_Full_Design.md

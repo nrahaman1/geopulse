@@ -1,0 +1,14 @@
+# One GPFT-mini for all three tasks: shared adapters/fusion/encoder, one head per task + a shared change head.
+# RQ7: does one architecture serve flood, burn and vegetation disturbance without losing task-specific skill?
+name: gpft-multitask-mini
+version: 0.1.0
+dataset:
+  - data/bench/geopulse-bench-flood
+  - data/bench/geopulse-bench-wildfire
+  - data/bench/geopulse-bench-vegetation
+tasks: [flood, wildfire, vegetation]
+seed: 42
+model: {channels: 32, dropout: 0.1}
+train: {epochs: 25, batch_size: 8, lr: 0.002, weight_decay: 0.0001}
+loss: {change_weight: 0.5}
+sensor_dropout: {s1: 0.15, s2: 0.25}

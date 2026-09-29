@@ -1,0 +1,6 @@
+title: Hurricane Harvey — Brazos River, TX (2017)
+task: flood
+aoi_file: aoi.geojson
+before: 2017-07-15/2017-08-20
+after: 2017-08-29/2017-09-10
+sensors: [s1, s2]

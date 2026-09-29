@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Emilia-Romagna floods \u2014 Conselice, Italy (2023)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          11.78,
+          44.47
+        ],
+        [
+          11.92,
+          44.47
+        ],
+        [
+          11.92,
+          44.57
+        ],
+        [
+          11.78,
+          44.57
+        ],
+        [
+          11.78,
+          44.47
+        ]
+      ]
+    ]
+  }
+}

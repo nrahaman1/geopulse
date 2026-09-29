@@ -1,0 +1,8 @@
+GeoPulse
+Copyright 2026 Nafiz Rahaman and GeoPulse contributors
+
+This product includes software developed as part of the GeoPulse project (https://github.com/nrahaman1/geopulse),
+licensed under the Apache License, Version 2.0.
+
+Outputs produced with GeoPulse contain modified Copernicus Sentinel data; see DATA_LICENSES.md for the notices
+required by the imagery and label providers.

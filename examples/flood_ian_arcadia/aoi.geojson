@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Hurricane Ian \u2014 Peace River, Arcadia, FL (2022)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -81.95,
+          27.15
+        ],
+        [
+          -81.8,
+          27.15
+        ],
+        [
+          -81.8,
+          27.28
+        ],
+        [
+          -81.95,
+          27.28
+        ],
+        [
+          -81.95,
+          27.15
+        ]
+      ]
+    ]
+  }
+}

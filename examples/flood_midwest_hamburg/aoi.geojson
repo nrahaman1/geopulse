@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Missouri River levee breaches \u2014 Hamburg, IA (2019)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -95.75,
+          40.5
+        ],
+        [
+          -95.6,
+          40.5
+        ],
+        [
+          -95.6,
+          40.65
+        ],
+        [
+          -95.75,
+          40.65
+        ],
+        [
+          -95.75,
+          40.5
+        ]
+      ]
+    ]
+  }
+}
