@@ -95,9 +95,10 @@ packages = ["geopulse"]
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "geopulse", "tests", "examples", "configs", "docs", "hatch_build.py", "README.md", "CHANGELOG.md", "CONTRIBUTING.md",
+    "geopulse", "app/dist", "tests", "examples", "configs", "docs", "hatch_build.py", "README.md", "CHANGELOG.md", "CONTRIBUTING.md",
     "MODEL_CARD.md", "DATA_LICENSES.md", "THIRD_PARTY_NOTICES.md", "ROADMAP.md", "LICENSE", "NOTICE", "CITATION.cff",
 ]
+artifacts = ["app/dist"]  # the built web app is gitignored; the sdist carries it so installs from it need no Node.js
 
 [tool.ruff]
 line-length = 120
