@@ -62,7 +62,7 @@ const emptyFC = { type: "FeatureCollection", features: [] };
 // Resolves once, after the first "load". map.loaded() can read false again during redraws, when "load" never refires.
 const mapReady = new Promise((resolve) => map.once("load", resolve));
 map.on("load", () => {
-  map.addSource("aoi", { type: "geojson", data: emptyFC });
+  map.addSource("aoi", { type: "geojson", data: aoi ?? emptyFC }); // an AOI chosen before the map loaded shows now
   map.addLayer({ id: "aoi-line", type: "line", source: "aoi", paint: { "line-color": "#3fb6c8", "line-width": 2, "line-dasharray": [2, 1] } });
 });
 
@@ -101,11 +101,8 @@ function boxAround(lon, lat, km = AOI_KM) {
 function goTo(name, lon, lat) {
   $("search-results").replaceChildren();
   $("example").value = "";
-  const set = () => {
-    setAoi(boxAround(lon, lat));
-    $("aoi-info").textContent = `${AOI_KM} × ${AOI_KM} km box around ${name} — draw a box to change it`;
-  };
-  mapReady.then(set);
+  setAoi(boxAround(lon, lat));
+  $("aoi-info").textContent = `${AOI_KM} × ${AOI_KM} km box around ${name} — draw a box to change it`;
 }
 function searchMessage(text) {
   $("search-results").replaceChildren(Object.assign(document.createElement("div"), { className: "msg", textContent: text }));
@@ -264,8 +261,7 @@ async function init() {
 $("example").onchange = () => {
   const ex = examples.find((x) => x.id === $("example").value);
   if (!ex) return;
-  const go = () => setAoi(ex.aoi);
-  mapReady.then(go);
+  setAoi(ex.aoi); // the AOI is set at once; the map draws it when it has loaded (slow or blocked basemaps included)
   setTask(ex.task || "flood");
   setDates(ex.before, "b0", "b1");
   setDates(ex.after, "a0", "a1");
@@ -423,21 +419,7 @@ async function showResults(id) {
   if (rec) rec.urls ??= Object.fromEntries(Object.entries(rec.res.files).map(([k, blob]) => [k, URL.createObjectURL(blob)]));
   const { res, job } = rec ? { res: { ...rec.res, files: rec.urls }, job: rec.job } : await serverResults(id);
   if (rec) logLines(job.log);
-  await mapReady;
   current = { id, res };
-  const { bounds, layers } = res.layers;
-  const f = (name) => res.files[`layers/${name}.png`];
-  clearResult(map); clearResult(before);
-  for (const k of IMG) if (layers.includes(k)) {
-    addImage(map, k, f(k), bounds, 1);
-    if (k.endsWith("_pre")) addImage(before, k, f(k), bounds, 1);
-  }
-  for (const k of PRED) if (layers.includes(k)) addImage(map, k, f(k), bounds, $("opacity").value / 100);
-  const [tname, c0, c1] = TARGET[job.request.task] || TARGET.flood;
-  $("target-name").textContent = tname;
-  $("target-legend").style.background = `linear-gradient(90deg,${c0}00,${c0}96 40%,${c1}eb)`;
-  map.addSource("outline", { type: "geojson", data: res.files[res.layers.extent] });
-  map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": "#ffffff", "line-opacity": 0.7, "line-width": 0.8 } });
   setAoi(job.request.aoi, true);
   // The form now describes this job, ready to tweak and rerun.
   $("example").value = "";
@@ -445,18 +427,6 @@ async function showResults(id) {
   setDates(job.request.before, "b0", "b1");
   setDates(job.request.after, "a0", "a1");
   for (const k of ["s1", "s2"]) $(k).checked = job.request.sensors.includes(k);
-
-  // Default visibility: optical if we have it, otherwise SAR.
-  const afterImg = layers.includes("s2_post") ? "s2_post" : "s1_post";
-  for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
-    const k = el.dataset.layer, box = el.querySelector("input");
-    const exists = k === "outline" || layers.includes(k);
-    el.classList.toggle("disabled", !exists);
-    if (IMG.includes(k)) box.checked = k === afterImg;
-    applyLayer(k, box.checked && exists);
-  }
-  const beforeImg = layers.includes("s2_pre") ? "s2_pre" : "s1_pre";
-  for (const k of IMG) if (before.getLayer(k)) before.setLayoutProperty(k, "visibility", k === beforeImg ? "visible" : "none");
 
   const s = res.summary;
   $("results").hidden = false;
@@ -478,6 +448,34 @@ async function showResults(id) {
   $("files").innerHTML = Object.keys(res.files).filter((k) => !k.startsWith("layers")).map((k) => `<a href="${res.files[k]}" download="${k}">${k}</a>`).join("");
   // A cross-origin link (the desktop app's engine) ignores `download` and would open the file in place of the app.
   for (const a of $("files").querySelectorAll("a")) if (new URL(a.href).origin !== location.origin) a.onclick = saveFile;
+
+  // Map layers need the map; the numbers and downloads above do not wait for it.
+  await mapReady;
+  if (current.id !== id) return; // another result was opened meanwhile
+  const { bounds, layers } = res.layers;
+  const f = (name) => res.files[`layers/${name}.png`];
+  clearResult(map); clearResult(before);
+  for (const k of IMG) if (layers.includes(k)) {
+    addImage(map, k, f(k), bounds, 1);
+    if (k.endsWith("_pre")) addImage(before, k, f(k), bounds, 1);
+  }
+  for (const k of PRED) if (layers.includes(k)) addImage(map, k, f(k), bounds, $("opacity").value / 100);
+  const [tname, c0, c1] = TARGET[job.request.task] || TARGET.flood;
+  $("target-name").textContent = tname;
+  $("target-legend").style.background = `linear-gradient(90deg,${c0}00,${c0}96 40%,${c1}eb)`;
+  map.addSource("outline", { type: "geojson", data: res.files[res.layers.extent] });
+  map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": "#ffffff", "line-opacity": 0.7, "line-width": 0.8 } });
+  // Default visibility: optical if we have it, otherwise SAR.
+  const afterImg = layers.includes("s2_post") ? "s2_post" : "s1_post";
+  for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
+    const k = el.dataset.layer, box = el.querySelector("input");
+    const exists = k === "outline" || layers.includes(k);
+    el.classList.toggle("disabled", !exists);
+    if (IMG.includes(k)) box.checked = k === afterImg;
+    applyLayer(k, box.checked && exists);
+  }
+  const beforeImg = layers.includes("s2_pre") ? "s2_pre" : "s1_pre";
+  for (const k of IMG) if (before.getLayer(k)) before.setLayoutProperty(k, "visibility", k === beforeImg ? "visible" : "none");
 }
 
 async function saveFile(e) {
