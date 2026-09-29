@@ -22,3 +22,6 @@ models/
 
 # private planning document (not part of the public project)
 GeoPulse_Full_Design.md
+
+# generated static showcase (scripts/export_static.py)
+site/

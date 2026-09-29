@@ -43,6 +43,7 @@ Pull trained weights with `uv run geopulse models pull`; rebuild or download ben
 2. `git tag vX.Y.Z && git push --tags` — `.github/workflows/release.yml` builds, publishes to PyPI (trusted
    publishing) and creates a GitHub release.
 3. New weights: `geopulse models push`; new benchmark tiles: `geopulse dataset push` (needs `hf auth login`).
+4. Online showcase: `python scripts/export_static.py site && hf upload nafizrahaman/geopulse site --repo-type space`.
 
 By contributing you agree that your contributions are licensed under Apache-2.0, and you confirm that you have the
 right to submit them (no employer-, sponsor- or third-party-restricted code or data).

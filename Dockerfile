@@ -6,6 +6,9 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
 
+# rasterio's manylinux wheels link against the system libexpat, which slim images no longer include.
+RUN apt-get update && apt-get install -y --no-install-recommends libexpat1 && rm -rf /var/lib/apt/lists/*
+
 # CPU PyTorch first, so installing GeoPulse does not pull the multi-GB CUDA build.
 RUN pip install torch --index-url https://download.pytorch.org/whl/cpu
 

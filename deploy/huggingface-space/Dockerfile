@@ -2,6 +2,8 @@
 FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+# rasterio's manylinux wheels link against the system libexpat, which slim images no longer include.
+RUN apt-get update && apt-get install -y --no-install-recommends libexpat1 && rm -rf /var/lib/apt/lists/*
 RUN pip install torch --index-url https://download.pytorch.org/whl/cpu \
  && pip install "geopulse-eo @ https://github.com/nrahaman1/geopulse/archive/refs/heads/main.zip"
 

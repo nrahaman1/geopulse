@@ -101,6 +101,13 @@
   <header><h1>GeoPulse</h1><span class="tag">Earth-change intelligence · <span id="version">v0.2</span></span>
     <a href="https://github.com/nrahaman1/geopulse" target="_blank" rel="noopener">GitHub ↗</a></header>
 
+  <section id="static-note" hidden style="background:var(--panel-2)">
+    <div class="hint" style="margin:0">Online showcase: results for the <b>example events</b> are precomputed.
+      To analyse any place, <a id="codespaces-link" target="_blank" rel="noopener" style="color:var(--accent)">open the full
+      platform in GitHub Codespaces</a> (free) or <a href="https://github.com/nrahaman1/geopulse#quickstart" target="_blank"
+      rel="noopener" style="color:var(--accent)">run it locally</a>.</div>
+  </section>
+
   <section>
     <h2>Area of interest</h2>
     <label for="example">Example event</label>
@@ -205,7 +212,20 @@
 
 <script>
 const $ = (id) => document.getElementById(id);
+// Showcase mode: served as static files (no API), results for the example events are precomputed under static/.
+let STATIC = null;
+const STATIC_ROUTES = [
+  [/^\/health$/, () => "static/health.json"], [/^\/models$/, () => "static/models.json"],
+  [/^\/examples$/, () => "static/examples.json"], [/^\/jobs\/([\w-]+)\/results$/, (m) => `static/results/${m[1]}/results.json`],
+  [/^\/jobs\/([\w-]+)$/, (m) => `static/results/${m[1]}/job.json`],
+];
 const api = async (path, opts) => {
+  if (STATIC) {
+    if (path === "/jobs") return [];
+    const hit = STATIC_ROUTES.map(([re, to]) => [path.match(re), to]).find(([m]) => m);
+    if (!hit) throw new Error("not available in the online showcase");
+    path = hit[1](hit[0]);
+  }
   const r = await fetch(path, opts);
   const body = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(body.detail || r.statusText);
@@ -245,6 +265,8 @@ sync(map, before); sync(before, map);
 // ------------------------------------------------------------------ AOI
 let aoi = null;
 const emptyFC = { type: "FeatureCollection", features: [] };
+// Resolves once, after the first "load". map.loaded() can read false again during redraws, when "load" never refires.
+const mapReady = new Promise((resolve) => map.once("load", resolve));
 map.on("load", () => {
   map.addSource("aoi", { type: "geojson", data: emptyFC });
   map.addLayer({ id: "aoi-line", type: "line", source: "aoi", paint: { "line-color": "#3fb6c8", "line-width": 2, "line-dasharray": [2, 1] } });
@@ -289,7 +311,7 @@ function goTo(name, lon, lat) {
     setAoi(boxAround(lon, lat));
     $("aoi-info").textContent = `${AOI_KM} × ${AOI_KM} km box around ${name} — draw a box to change it`;
   };
-  map.loaded() ? set() : map.once("load", set);
+  mapReady.then(set);
 }
 function searchMessage(text) {
   $("search-results").replaceChildren(Object.assign(document.createElement("div"), { className: "msg", textContent: text }));
@@ -370,6 +392,11 @@ function setTask(task) {
 $("task").onchange = () => setTask($("task").value);
 const setDates = (w, a, b) => { const [x, y] = Array.isArray(w) ? w : w.split("/"); $(a).value = x; $(b).value = y; };
 async function init() {
+  STATIC = await fetch("static/site.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  if (STATIC) {
+    $("static-note").hidden = false;
+    $("codespaces-link").href = STATIC.codespaces;
+  }
   const [health, models] = await Promise.all([api("/health"), api("/models")]);
   $("version").textContent = `v${health.version} · ${health.device}`;
   allModels = models;
@@ -383,7 +410,7 @@ $("example").onchange = () => {
   const ex = examples.find((x) => x.id === $("example").value);
   if (!ex) return;
   const go = () => setAoi(ex.aoi);
-  map.loaded() ? go() : map.once("load", go);
+  mapReady.then(go);
   setTask(ex.task || "flood");
   setDates(ex.before, "b0", "b1");
   setDates(ex.after, "a0", "a1");
@@ -417,6 +444,13 @@ function logLines(lines) {
 
 $("run").onclick = async () => {
   if (!aoi) return logLines(["✗ Choose an area of interest first."]);
+  if (STATIC) {
+    const ex = $("example").value;
+    if (!ex) return logLines(["! The online showcase has precomputed results for the example events only.",
+      "  To analyse this area, open GeoPulse in GitHub Codespaces (free) or run it locally — see the note at the top."]);
+    logLines([`✓ Precomputed result for ${ex} (model: ${STATIC.model})`]);
+    return showResults(ex);
+  }
   const sensors = ["s1", "s2"].filter((s) => $(s).checked);
   if (!sensors.length) return logLines(["✗ Select at least one sensor."]);
   const body = {

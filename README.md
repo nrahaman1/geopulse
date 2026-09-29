@@ -6,11 +6,15 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Models on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-models-yellow.svg)](https://huggingface.co/nafizrahaman/geopulse-gpft-mini)
 [![Benchmark on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-GeoPulse--Bench-yellow.svg)](https://huggingface.co/datasets/nafizrahaman/geopulse-bench)
-[![Live demo](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-live%20demo-3fb6c8.svg)](https://nafizrahaman-geopulse.hf.space)
+[![Online showcase](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-open%20the%20platform-3fb6c8.svg)](https://nafizrahaman-geopulse.static.hf.space)
 
-**▶ Open the platform: <https://nafizrahaman-geopulse.hf.space>** — search a place, pick an example (flood, wildfire,
-forest loss) or draw a box, choose before/after dates and run. The demo runs on a free CPU
-([Space page](https://huggingface.co/spaces/nafizrahaman/geopulse)); for large areas or a GPU, run it locally below.
+## ▶ Open the platform
+
+| | |
+|---|---|
+| **Online showcase** — instant, nothing to install | **<https://nafizrahaman-geopulse.static.hf.space>** — the GeoPulse web map with precomputed results for 13 flood, wildfire and forest-loss events: search places, explore layers, swipe before/after, download results. |
+| **Full platform on any place** — free | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) — builds in a few minutes, then the map opens by itself: search any place, pick dates, run all three tasks. |
+| **On your machine** (GPU optional) | see [Quickstart](#quickstart) or `docker compose up`. |
 
 ```text
       Sentinel-1 SAR  +  Sentinel-2 optical  +  Copernicus DEM
@@ -169,7 +173,8 @@ for this 0.54 M-parameter model.
 |---|---|---|
 | Trained checkpoints + eval reports | [nafizrahaman/geopulse-gpft-mini](https://huggingface.co/nafizrahaman/geopulse-gpft-mini) | `geopulse models pull` |
 | GeoPulse-Bench tiles (flood, wildfire, vegetation) | [nafizrahaman/geopulse-bench](https://huggingface.co/datasets/nafizrahaman/geopulse-bench) | `geopulse dataset pull` |
-| Live web demo | [nafizrahaman/geopulse](https://huggingface.co/spaces/nafizrahaman/geopulse) (from [deploy/huggingface-space/](deploy/huggingface-space/)) | open <https://nafizrahaman-geopulse.hf.space> |
+| Online showcase (static Space) | [nafizrahaman/geopulse](https://huggingface.co/spaces/nafizrahaman/geopulse) | open <https://nafizrahaman-geopulse.static.hf.space>; rebuild with `scripts/export_static.py` |
+| Full live Space (Docker, needs HF PRO hardware) | ready in [deploy/huggingface-space/](deploy/huggingface-space/) | `hf upload <user>/<space> deploy/huggingface-space --repo-type space` |
 
 ## Development
 

@@ -15,7 +15,8 @@ before 1.0, minor versions may change APIs and output schemas.
 - Hugging Face Hub integration: `geopulse models pull|push`, `geopulse dataset pull|push`, checksum-verified
   downloads, generated model and dataset cards.
 - Place search in the web map (OpenStreetMap Nominatim, or `lat, lon`), which sets a 10 × 10 km AOI.
-- Live demo on Hugging Face Spaces; `GEOPULSE_MC_PASSES` for small CPU deployments.
+- Online showcase on a static Hugging Face Space (`scripts/export_static.py`: web map + precomputed example results),
+  a GitHub Codespaces dev container that opens the full platform, and `GEOPULSE_MC_PASSES` for small CPU deployments.
 - Dockerfile, compose file and a Hugging Face Space definition; public mode (`GEOPULSE_PUBLIC=1`) that hides other
   visitors' jobs; `GEOPULSE_MAX_JOB_KM2`.
 - CI (lint, tests on Python 3.11–3.14, wheel contents, lockfile), Docker smoke test, tag-driven release to PyPI,
@@ -27,6 +28,8 @@ before 1.0, minor versions may change APIs and output schemas.
 - SAR change evidence uses a softer slope (speckle-aware "stable" band).
 
 ### Fixed
+- Docker image: install `libexpat1`, which rasterio's Linux wheels need and slim images no longer ship.
+- Web map: example and search AOIs no longer wait forever when the map redraws after its first load.
 - Remote reads now time out instead of hanging a job forever.
 - Burn and disturbance maps are forced to zero on pre-event open water.
 - Vegetation scene selection samples both windows evenly (it compared late-summer with early-summer scenes).
