@@ -147,6 +147,7 @@ def predict_gpft(
     mc: int = 8,
     batch_size: int = 8,
     fp16: bool = False,
+    progress=None,
 ) -> dict[str, np.ndarray]:
     """Sliding-window inference with MC dropout; uncertainty = entropy of the mean task probability."""
     ti = model.tasks.index(task)
@@ -178,6 +179,9 @@ def predict_gpft(
             acc[:, r : r + tile, c : c + tile] += probs[j]
             wsum[:, r : r + tile, c : c + tile] += weights[j]
             cnt[r : r + tile, c : c + tile] += 1
+        if progress:
+            done = i + len(chunk)
+            progress(done / len(offsets), f"Running the model ({done}/{len(offsets)} tiles)")
     acc, wsum = (acc / cnt)[:, :h, :w], (wsum / cnt)[:, :h, :w]
     observed = (t["s1_post_valid"][0] + t["s2_post_valid"][0])[:h, :w] > 0
     out = {"target": acc[ti], "change": acc[-1], "uncertainty": baseline.binary_entropy(acc[ti])}

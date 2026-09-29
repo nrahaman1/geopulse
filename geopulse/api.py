@@ -111,9 +111,12 @@ def _run(job_id: str) -> None:
         job["log"].append(msg)
         _save(job)
 
+    def progress(frac: float, stage: str) -> None:  # GET /jobs/{id} returns it; saved with the next log line
+        job.update(progress=round(frac, 4), stage=stage)
+
     try:
-        job["summary"] = pipeline.run(job["request"], jobs_dir() / job_id, log=log)
-        job["status"] = "succeeded"
+        job["summary"] = pipeline.run(job["request"], jobs_dir() / job_id, log=log, progress=progress)
+        job.update(status="succeeded", progress=1.0, stage="Done")
     except Exception as e:  # the job record is the error channel for async work
         job.update(status="failed", error=f"{type(e).__name__}: {e}")
     job["finished"] = _now()

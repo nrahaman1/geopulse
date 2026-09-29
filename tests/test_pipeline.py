@@ -128,3 +128,38 @@ def test_open_water_is_never_burned_or_disturbed(tmp_path, task):
     with rasterio.open(tmp_path / f"{target}_probability.tif") as src:
         prob = src.read(1)
     assert (prob[CONTROL] == 0).all() and np.nanmean(prob[:40, :40]) > 0.9
+
+
+def test_progress_is_monotonic_and_reaches_the_output_stage(tmp_path):
+    calls = []
+    pipeline.run(
+        request(), tmp_path, log=lambda m: None, inputs=synthetic_inputs(), progress=lambda f, s: calls.append((f, s))
+    )
+    fracs = [f for f, _ in calls]
+    assert fracs == sorted(fracs) and fracs[0] == 0.0
+    assert calls[-1] == (pipeline.PROGRESS["model"], "Writing maps and downloads")
+
+
+def test_acquisition_progress_advances_scene_by_scene(monkeypatch):
+    """Each composite (sensor x period) and the DEM get an equal share, advanced as scenes load."""
+    from types import SimpleNamespace
+
+    from geopulse import data
+
+    items = [SimpleNamespace(id=f"i{k}", properties={"sat:relative_orbit": 1}) for k in range(3)]
+    monkeypatch.setattr(data.stac, "search", lambda sensor, *a, **kw: items)
+    monkeypatch.setattr(data.stac, "describe", lambda item: {"id": item.id})
+
+    def fake_composite(sensor, items, grid, method="median", done=None):
+        for k in range(1, len(items) + 1):
+            done(k)
+        return np.ones((2, 4, 4), "float32")
+
+    monkeypatch.setattr(data, "composite", fake_composite)
+    monkeypatch.setattr(data, "dem", lambda items, grid: np.ones((2, 4, 4), "float32"))
+    calls = []
+    data.prepare({}, None, "a", "b", ("s1", "s2"), log=lambda m: None, progress=lambda f, s: calls.append((f, s)))
+    fracs = [f for f, _ in calls]
+    assert fracs == sorted(fracs) and fracs[-1] == 4 / 5  # 4 composites done, the DEM is last
+    assert ("Reading Sentinel-2 after (3/3 scenes)") in [s for _, s in calls]
+    assert calls[-1][1] == "Reading terrain (Copernicus DEM)"

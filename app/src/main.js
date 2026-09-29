@@ -360,11 +360,14 @@ function runInBrowser(body) {
   const lines = [`browser job: ${request.task} with ${card.model_id}`];
   logLines(lines);
   $("run").disabled = true;
+  startProgress();
   worker ??= new Worker(new URL("./worker.js", import.meta.url), { type: "module" });
-  worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); $("run").disabled = false; };
+  worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); $("run").disabled = false; endProgress(); };
   worker.onmessage = async ({ data }) => {
     if (data.type === "log") { lines.push(data.msg); logLines(lines); return; }
+    if (data.type === "progress") { setProgress(data.value, data.label); return; }
     $("run").disabled = false;
+    endProgress();
     if (data.type === "error") { lines.push(`✗ ${data.message}`); logLines(lines); return; }
     const id = [...crypto.getRandomValues(new Uint8Array(6))].map((b) => b.toString(16).padStart(2, "0")).join("");
     const job = { id, status: "succeeded", request, log: lines, created: new Date().toISOString(), summary: data.result.summary };
@@ -379,15 +382,46 @@ function runInBrowser(body) {
 
 async function watch(id) {
   $("run").disabled = true;
+  startProgress();
   try {
     for (;;) {
       const job = await api(`/jobs/${id}`);
       logLines([`job ${id}: ${job.status}`, ...job.log, ...(job.error ? [`✗ ${job.error}`] : [])]);
+      if (job.started) progressT0 = Date.parse(job.started);
+      setProgress(job.progress, job.stage ?? (job.status === "queued" ? "Waiting for the engine" : null));
       if (job.status === "succeeded") { await showResults(id); break; }
       if (job.status === "failed") break;
       await new Promise((r) => setTimeout(r, 1500));
     }
-  } finally { $("run").disabled = false; refreshJobs(); }
+  } finally { $("run").disabled = false; endProgress(); refreshJobs(); }
+}
+
+// ------------------------------------------------------------------ progress
+// A native <progress>: indeterminate until the engine reports a fraction, and it never moves backwards.
+let progressT0 = 0, progressValue = 0, progressTimer = null;
+function startProgress() {
+  clearInterval(progressTimer);
+  progressT0 = Date.now();
+  progressValue = 0;
+  $("progress-bar").removeAttribute("value");
+  $("progress-label").textContent = "Starting…";
+  $("progress").hidden = false;
+  progressTimer = setInterval(showProgressMeta, 1000);
+  showProgressMeta();
+}
+function setProgress(value, label) {
+  if (typeof value === "number") $("progress-bar").value = progressValue = Math.max(progressValue, Math.min(value, 1));
+  if (label) $("progress-label").textContent = label;
+  showProgressMeta();
+}
+function showProgressMeta() {
+  const s = Math.max(0, Math.round((Date.now() - progressT0) / 1000));
+  const pct = $("progress-bar").hasAttribute("value") ? `${Math.floor(progressValue * 100)}% · ` : "";
+  $("progress-meta").textContent = `${pct}${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+function endProgress() {
+  clearInterval(progressTimer);
+  $("progress").hidden = true;
 }
 
 // ------------------------------------------------------------------ results

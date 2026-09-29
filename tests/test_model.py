@@ -161,3 +161,20 @@ def test_checkpoints_load_by_name_from_a_relative_models_dir(tmp_path, monkeypat
     monkeypatch.setenv("GEOPULSE_MODELS", "models")  # the default; a card's checkpoint is a bare file name
     card = models.save(models.GPFT(channels=8), tmp_path / "models" / "m.pt", {"model_id": "m"})
     assert models.load(card["checkpoint"]).tasks == ["flood"]
+
+
+def test_inference_reports_progress_per_batch():
+    calls = []
+    arrays = synthetic_inputs().arrays
+    models.predict_gpft(
+        models.GPFT(channels=8),
+        arrays,
+        tile=64,
+        stride=64,
+        mc=1,
+        batch_size=4,
+        progress=lambda f, s: calls.append((f, s)),
+    )
+    fracs = [f for f, _ in calls]
+    assert fracs == sorted(fracs) and fracs[-1] == 1.0 and len(calls) > 1
+    assert calls[-1][1].startswith("Running the model (") and calls[-1][1].endswith(" tiles)")

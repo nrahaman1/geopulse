@@ -203,3 +203,10 @@ def test_onnx_self_check_input_matches(js):
         np.testing.assert_array_equal(
             np.array(out["probe"][name], "float32"), models.probe_values(name, tuple(dims)).ravel()
         )
+
+
+def test_progress_stages_and_labels_match(js):
+    from geopulse import data
+
+    out = js[2]["progress"]
+    assert out == {"stages": pipeline.PROGRESS, "sensors": data.SENSOR_NAMES, "periods": data.PERIOD_NAMES}

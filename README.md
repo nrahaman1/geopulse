@@ -37,7 +37,7 @@ implemented and why: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md); results and c
 ## Quickstart
 
 ```bash
-pip install https://github.com/nrahaman1/geopulse/releases/download/v0.4.0/geopulse_eo-0.4.0-py3-none-any.whl
+pip install https://github.com/nrahaman1/geopulse/releases/download/v0.4.1/geopulse_eo-0.4.1-py3-none-any.whl
 # Python 3.11+. The wheel on each release includes the web app; the command and import are `geopulse`.
 geopulse models pull         # trained checkpoints from GitHub Releases, SHA-256 verified
 geopulse doctor              # GDAL, PROJ, PyTorch, CUDA, STAC connectivity
@@ -121,7 +121,8 @@ background worker, and persisted under `outputs/jobs/<id>/`.
 🔥 wildfire, 🌲 vegetation), draw a box or upload GeoJSON;
 set task, windows, sensors and model (filtered by task); run. Layers for the task probability, burn severity,
 uncertainty, change, extent polygons and pre/post S1/S2 imagery; opacity; before/after swipe; metrics (affected km²,
-review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads.
+review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads;
+a progress bar with the current stage while a job runs.
 **Compute** chooses where a job runs: the *PC engine* (desktop app), the *GeoPulse server* (when `geopulse serve`
 serves the page) or *built-in* (this browser, always available). Built-in jobs and their files are kept on the
 device (IndexedDB), 10 at most.

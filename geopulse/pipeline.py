@@ -21,7 +21,7 @@ from rasterio.warp import calculate_default_transform, reproject, transform_boun
 from . import baseline
 from . import model as models
 from .baseline import IGNORE
-from .data import PIPELINE_VERSION, Inputs, Log, prepare
+from .data import PIPELINE_VERSION, Inputs, Log, Progress, prepare
 from .grid import Grid, aoi_geometry, area_km2, make_grid
 from .tasks import TASKS
 
@@ -108,9 +108,22 @@ def make_request(
     }
 
 
-def run(request: dict, out_dir: str | Path, log: Log = print, inputs: Inputs | None = None) -> dict:
+# Where each stage ends on the progress bar (the browser engine's engine.js::PROGRESS matches): catalog search,
+# imagery, the model, then maps and downloads.
+PROGRESS = {"search": 0.05, "imagery": 0.8, "model": 0.95}
+
+
+def run(
+    request: dict,
+    out_dir: str | Path,
+    log: Log = print,
+    inputs: Inputs | None = None,
+    progress: Progress = lambda frac, label: None,
+) -> dict:
     """Run a validated request (see make_request); returns summary.json content. `inputs` skips acquisition."""
     t0 = time.time()
+    p0, p1, p2 = PROGRESS["search"], PROGRESS["imagery"], PROGRESS["model"]
+    progress(0.0, "Preparing the grid")
     task = request["task"]
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -128,6 +141,7 @@ def run(request: dict, out_dir: str | Path, log: Log = print, inputs: Inputs | N
             log,
             spec["composite"],
             spec["scenes"],
+            progress=lambda f, label: progress(p0 + (p1 - p0) * f, label),
         )
     inputs.warnings[:0] = request.get("warnings", [])
     if not any(k in inputs.arrays for k in ("s1_post", "s2_post")):
@@ -138,7 +152,14 @@ def run(request: dict, out_dir: str | Path, log: Log = print, inputs: Inputs | N
         inputs.warnings.append("no pre-event observations: permanent water cannot be separated from flood water")
     card = models.resolve(request.get("model", "auto"), task)
     log(f"✓ Model loaded: {card['model_id']} v{card['version']}")
-    maps = models.predict(card, inputs.arrays, tuple(request["sensors"]), task)
+    progress(p1, f"Loading {card['model_id']}")
+    maps = models.predict(
+        card,
+        inputs.arrays,
+        tuple(request["sensors"]),
+        task,
+        progress=lambda f, label: progress(p1 + (p2 - p1) * f, label),
+    )
     inside = grid.mask(geometry)
     for k in ("target", "change", "uncertainty"):
         maps[k] = np.where(inside, maps[k], np.nan).astype("float32")
@@ -151,6 +172,7 @@ def run(request: dict, out_dir: str | Path, log: Log = print, inputs: Inputs | N
         valid = inside & np.isfinite(maps["target"]) & (maps["severity"] != IGNORE)
         maps["severity"] = np.where(valid, np.where(burned, maps["severity"], 0), IGNORE).astype("uint8")
     log("✓ Inference complete")
+    progress(p2, "Writing maps and downloads")
     summary = write_outputs(out, request, grid, inputs, maps, card, time.time() - t0)
     log(f"✓ Outputs: {out}")
     return summary

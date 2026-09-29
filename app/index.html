@@ -57,6 +57,10 @@
     <label for="model">Model</label>
     <select id="model"><option value="auto">auto</option></select>
     <div class="btns"><button class="primary" id="run" type="button">Run analysis</button></div>
+    <div id="progress" hidden>
+      <progress id="progress-bar" max="1" aria-labelledby="progress-label"></progress>
+      <div class="progress-text"><span id="progress-label">Starting…</span><span id="progress-meta"></span></div>
+    </div>
     <div id="log" aria-live="polite"></div>
   </section>
 

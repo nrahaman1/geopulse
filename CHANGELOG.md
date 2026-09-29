@@ -3,6 +3,14 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [0.4.1] — 2026-09-29
+
+### Added
+- A progress bar while an analysis runs, for every engine (built-in, PC engine, `geopulse serve`): the current stage
+  ("Reading Sentinel-2 after (2/4 scenes)", "Running the model (12/81 tiles)"), percent and elapsed time. Both
+  pipelines report the same stages (`pipeline.PROGRESS` = `engine.js::PROGRESS`); jobs expose `progress` and `stage`.
+- Branch protection for `main`: no force pushes or deletion; CI must pass (repository admins may push directly).
+
 ## [0.4.0] — 2026-09-29
 
 ### Added

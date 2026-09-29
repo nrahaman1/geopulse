@@ -10,6 +10,7 @@ const TILE = 256, STRIDE = 192;
 let ort; // ONNX Runtime (and its ~26 MB of WebAssembly) loads only when a model runs
 
 const log = (msg) => self.postMessage({ type: "log", msg });
+const progress = (value, label) => self.postMessage({ type: "progress", value, label });
 
 self.onmessage = async ({ data }) => {
   if (data.type !== "run") return;
@@ -173,8 +174,12 @@ async function prepare(req, grid, spec) {
   const npx = grid.width * grid.height, readBand = readerFor(grid);
   const arrays = {}, scenes = {}, warnings = [];
   const method = { pre: spec.composite[0], post: spec.composite[1] };
+  const { search: p0, imagery: p1 } = E.PROGRESS, units = req.sensors.length * 2 + 1; // composites + DEM
+  let unit = 0;
+  const step = (frac, label) => progress(p0 + ((p1 - p0) * (unit + frac)) / units, label);
   for (const sensor of req.sensors) {
     const S = sensor.toUpperCase();
+    step(0, `Searching ${E.SENSOR_NAMES[sensor]} scenes`);
     let found = { pre: await search(sensor, req.aoi, req.before), post: await search(sensor, req.aoi, req.after) };
     if (sensor === "s1") {
       found = E.matchOrbits(found, spec.scenes);
@@ -182,19 +187,28 @@ async function prepare(req, grid, spec) {
     }
     for (const period of E.TIMES) {
       const items = E.selectScenes(found[period], period, spec.scenes);
+      const what = `${E.SENSOR_NAMES[sensor]} ${E.PERIOD_NAMES[period]}`;
       if (!items.length) {
         warnings.push(`no ${S} scenes in ${period}-event window`);
         log(`! ${S} ${period}: no scenes`);
+        unit++;
         continue;
       }
+      step(0, `Reading ${what} (0/${items.length} scenes)`);
       const key = JSON.stringify([sensor, method[period], items.map((it) => it.id), grid]);
       if (!cache.has(key)) log(`  ${S} ${period}: reading ${items.length} scene(s)…`);
       const bands = await cached(key, async () => {
         const load = sensor === "s2" ? s2Scene : s1Scene;
-        const loaded = (await pool(items.map((it) => () => load(it, readBand, npx)), 3)).filter(Boolean);
+        let done = 0;
+        const loaded = (await pool(items.map((it) => async () => {
+          const scene = await load(it, readBand, npx);
+          step(++done / items.length, `Reading ${what} (${done}/${items.length} scenes)`);
+          return scene;
+        }), 3)).filter(Boolean);
         const nb = sensor === "s2" ? E.S2_BANDS.length : E.S1_BANDS.length;
         return loaded.length ? E.composite(loaded, method[period], sensor, npx) : Array.from({ length: nb }, () => new Float32Array(npx).fill(NaN));
       });
+      unit++;
       const frac = E.validFraction(bands);
       if (frac < 0.01) {
         warnings.push(`${S} ${period}-event composite has no valid pixels (clouds?)`);
@@ -205,6 +219,7 @@ async function prepare(req, grid, spec) {
       log(`✓ ${S} ${period}: ${items.length} scene(s), ${Math.round(frac * 100)}% valid`);
     }
   }
+  step(0, "Reading terrain (Copernicus DEM)");
   const demItems = await search("dem", req.aoi);
   if (demItems.length) {
     arrays.dem = await cached(JSON.stringify(["dem", demItems.map((it) => it.id), grid]), async () => {
@@ -262,6 +277,7 @@ async function predictOnnx(card, A, req, grid) {
   const { sess, ep } = await session(card);
   const { width: W, height: H } = grid, npx = W * H;
   const T = E.toTensors(A, req.sensors, npx);
+  const { imagery: p1, model: p2 } = E.PROGRESS;
   const tasks = card.onnx.tasks, ti = tasks.indexOf(req.task), nOut = tasks.length + 1, p = card.onnx.dropout;
   if (ti < 0) throw new Error(`${card.model_id} cannot map ${req.task}`);
   const mc = ep === "webgpu" ? 8 : 3; // MC-dropout passes; fewer on CPU to keep waits reasonable
@@ -302,6 +318,7 @@ async function predictOnnx(card, A, req, grid) {
       wsum[0][g] += w0[t]; wsum[1][g] += w0[T2 + t];
     }
     if (o % 4 === 3 || o === offsets.length - 1) log(`  inference ${o + 1}/${offsets.length} tiles`);
+    progress(p1 + ((p2 - p1) * (o + 1)) / offsets.length, `Running the model (${o + 1}/${offsets.length} tiles)`);
   }
   const target = new Float32Array(npx), change = new Float32Array(npx), unc = new Float32Array(npx);
   const wmean = [0, 0];
@@ -351,6 +368,7 @@ const json = (obj) => new Blob([JSON.stringify(obj, null, 2)], { type: "applicat
 
 async function run(req, card, version) {
   const t0 = performance.now();
+  progress(0, "Preparing the grid");
   const spec = E.TASKS[req.task], grid = E.makeGrid(req.aoi), npx = grid.width * grid.height, crs = E.projection(grid.epsg);
   log(`✓ Grid EPSG:${grid.epsg}, ${grid.width}×${grid.height} px @ ${grid.res} m — computing in your browser`);
   const inp = await prepare(req, grid, spec);
@@ -361,6 +379,7 @@ async function run(req, card, version) {
     warnings.push("no pre-event observations: permanent water cannot be separated from flood water");
   }
   let maps, engine;
+  progress(E.PROGRESS.imagery, `Loading ${card.model_id}`);
   if (card.model_id === "threshold-baseline") {
     const sub = Object.fromEntries(Object.entries(A).filter(([k]) => k === "dem" || req.sensors.includes(k.slice(0, 2))));
     maps = E.baselinePredict(sub, req.task, npx);
@@ -385,6 +404,7 @@ async function run(req, card, version) {
     maps.severity[k] = valid ? (maps.target[k] >= E.THRESHOLD ? maps.severity[k] : 0) : E.IGNORE;
   }
   log("✓ Inference complete — rendering maps");
+  progress(E.PROGRESS.model, "Writing maps and downloads");
 
   const target = spec.target, [rgb, deep] = E.TARGET_COLORS[target];
   const layerImgs = { target: E.ramp(maps.target, E.probPalette(rgb, deep)), change: E.ramp(maps.change, E.PALETTES.change), uncertainty: E.ramp(maps.uncertainty, E.PALETTES.uncertainty) };

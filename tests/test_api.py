@@ -36,8 +36,9 @@ def test_invalid_requests_rejected(client, patch):
 
 
 def test_job_lifecycle(client, monkeypatch):
-    def fake_run(request, out_dir, log, inputs=None):
+    def fake_run(request, out_dir, log, inputs=None, progress=lambda f, label: None):
         log("✓ fake")
+        progress(0.5, "Reading Sentinel-2 after (2/4 scenes)")
         (out_dir / "layers").mkdir(parents=True, exist_ok=True)
         layers = {"bounds": [0, 0, 1, 1], "layers": ["target"], "target": "flood", "extent": "flood_extent.geojson"}
         (out_dir / "layers.json").write_text(json.dumps(layers))
@@ -52,6 +53,7 @@ def test_job_lifecycle(client, monkeypatch):
             break
         time.sleep(0.05)
     assert state["status"] == "succeeded" and state["log"] == ["✓ fake"]
+    assert (state["progress"], state["stage"]) == (1.0, "Done")  # what the web app's progress bar reads
     res = client.get(f"/jobs/{job['id']}/results").json()
     assert res["summary"] == {"affected_km2": 1.0}
     assert client.get(res["files"]["layers/target.png"]).content == b"png"

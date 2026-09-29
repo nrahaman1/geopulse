@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import itertools
 import json
 import os
 import warnings
@@ -39,6 +40,9 @@ GDAL_ENV = {
 }
 
 Log = Callable[[str], None]
+Progress = Callable[[float, str], None]  # (fraction done 0..1, what is happening)
+SENSOR_NAMES = {"s1": "Sentinel-1", "s2": "Sentinel-2"}
+PERIOD_NAMES = {"pre": "before", "post": "after"}
 
 
 @dataclass
@@ -117,7 +121,9 @@ def s1_scene(item, grid: Grid) -> np.ndarray:
     return x
 
 
-def composite(sensor: str, items: list, grid: Grid, method: str = "median") -> np.ndarray:
+def composite(
+    sensor: str, items: list, grid: Grid, method: str = "median", done: Callable[[int], None] | None = None
+) -> np.ndarray:
     """Per-pixel composite of time-ordered scenes.
 
     median: robust stable baseline (pre-event).  first: earliest valid observation (post-event), because floods
@@ -126,8 +132,16 @@ def composite(sensor: str, items: list, grid: Grid, method: str = "median") -> n
 
     def compute():
         load = s2_scene if sensor == "s2" else s1_scene
+        count = itertools.count(1)
+
+        def one(item):  # reports each loaded scene to `done` (progress)
+            scene = load(item, grid)
+            if done:
+                done(next(count))
+            return scene
+
         with ThreadPoolExecutor(4) as pool:
-            scenes = [s for s in pool.map(lambda i: load(i, grid), items) if s is not None]
+            scenes = [s for s in pool.map(one, items) if s is not None]
         if not scenes:
             return np.full((len(S2_BANDS if sensor == "s2" else S1_BANDS), grid.height, grid.width), np.nan, "float32")
         stack = np.stack(scenes)
@@ -179,12 +193,22 @@ def prepare(
     log: Log = print,
     methods: tuple[str, str] = ("median", "first"),
     selection: str = "closest",
+    progress: Progress | None = None,
 ) -> Inputs:
-    """Search, fetch and composite every sensor for both periods (pre, post methods; scene selection), plus terrain."""
+    """Search, fetch and composite every sensor for both periods (pre, post methods; scene selection), plus terrain.
+
+    `progress` gets the fraction of this stage done: one equal share per composite and the DEM, advanced per scene."""
     inp = Inputs(grid)
     windows = {"pre": before, "post": after}
     method = dict(zip(windows, methods, strict=True))
+    units, unit = len(sensors) * 2 + 1, 0
+
+    def step(frac: float, label: str) -> None:
+        if progress:
+            progress((unit + frac) / units, label)
+
     for sensor in sensors:
+        step(0, f"Searching {SENSOR_NAMES[sensor]} scenes")
         found = {
             p: stac.search(sensor, geometry, w, max_cloud=MAX_S2_CLOUD if sensor == "s2" else None)
             for p, w in windows.items()
@@ -194,12 +218,22 @@ def prepare(
         for period, items in found.items():
             key = f"{sensor}_{period}"
             items = select(items, period, selection)
+            what, n = f"{SENSOR_NAMES[sensor]} {PERIOD_NAMES[period]}", len(items)
             if not items:
                 inp.warnings.append(f"no {sensor.upper()} scenes in {period}-event window")
                 log(f"! {sensor.upper()} {period}: no scenes")
+                unit += 1
                 continue
             log(f"  {sensor.upper()} {period}: compositing {len(items)} scene(s)")
-            arr = composite(sensor, items, grid, method[period])
+            step(0, f"Reading {what} (0/{n} scenes)")
+            arr = composite(
+                sensor,
+                items,
+                grid,
+                method[period],
+                done=lambda k, w=what, n=n: step(k / n, f"Reading {w} ({k}/{n} scenes)"),
+            )
+            unit += 1
             frac = float(np.isfinite(arr).all(0).mean())
             if frac < 0.01:
                 inp.warnings.append(f"{sensor.upper()} {period}-event composite has no valid pixels (clouds?)")
@@ -207,6 +241,7 @@ def prepare(
             inp.arrays[key] = arr
             inp.scenes[key] = [stac.describe(i) | {"valid_fraction": round(frac, 4)} for i in items]
             log(f"✓ {sensor.upper()} {period}: {len(items)} scene(s), {frac:.0%} valid")
+    step(0, "Reading terrain (Copernicus DEM)")
     dem_items = stac.search("dem", geometry)
     if dem_items:
         inp.arrays["dem"] = dem(dem_items, grid)

@@ -684,3 +684,9 @@ export function probeValues(name, dims) {
   for (let i = 0; i < n; i++) out[i] = ones ? 1 : ((i * 7919) % 1000) / 1000 - 0.5;
   return out;
 }
+
+// Where each stage ends on the progress bar (same in pipeline.py::PROGRESS): catalog search, imagery (one equal share
+// per sensor and period plus the DEM, advanced scene by scene), the model (tile by tile), then maps and downloads.
+export const PROGRESS = { search: 0.05, imagery: 0.8, model: 0.95 };
+export const SENSOR_NAMES = { s1: "Sentinel-1", s2: "Sentinel-2" };
+export const PERIOD_NAMES = { pre: "before", post: "after" };

@@ -25,6 +25,7 @@ const out = {
   }),
   tensors: inp.tensors.map((c) => Object.fromEntries(Object.entries(E.toTensors(bands(c.arrays), c.sensors, c.npx)).map(([k, v]) => [k, Array.from(v)]))),
   tasks: E.TASKS,
+  progress: { stages: E.PROGRESS, sensors: E.SENSOR_NAMES, periods: E.PERIOD_NAMES },
   probe: Object.fromEntries(inp.probe.map(([name, dims]) => [name, Array.from(E.probeValues(name, dims))])),
 };
 fs.writeFileSync(outPath, JSON.stringify(out)); // NaN -> null
