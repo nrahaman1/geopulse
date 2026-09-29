@@ -6,7 +6,7 @@ colorTo: indigo
 sdk: static
 app_file: index.html
 license: apache-2.0
-short_description: Flood, wildfire and forest-loss maps computed in your browser
+short_description: Flood, wildfire & forest-loss maps computed in your browser
 models:
   - nafizrahaman/geopulse-gpft-mini
 datasets:
