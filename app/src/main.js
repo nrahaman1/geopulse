@@ -1,234 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoPulse</title>
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-<style>
-  :root {
-    --bg: #0e1116; --panel: #151a21; --panel-2: #1b212a; --line: #2a323d; --text: #e6e9ee; --muted: #8b96a5;
-    --accent: #3fb6c8; --accent-ink: #06222a; --flood: #2878ff; --warn: #f0b429; --bad: #ef5b5b; --ok: #3ecf8e;
-    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
-    font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  body { display: grid; grid-template-columns: 360px 1fr; }
-  aside { background: var(--panel); border-right: 1px solid var(--line); overflow-y: auto; height: 100vh; }
-  header { padding: 18px 20px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 10px; }
-  header h1 { font-size: 18px; margin: 0; letter-spacing: .02em; }
-  header .tag { color: var(--muted); font-size: 12px; }
-  section { padding: 14px 20px; border-bottom: 1px solid var(--line); }
-  h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
-  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  select, input[type=date], button { font: inherit; color: var(--text); background: var(--panel-2); border: 1px solid var(--line);
-    border-radius: 6px; padding: 7px 9px; width: 100%; }
-  input[type=date] { color-scheme: dark; }
-  select:focus, input:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
-  .btns { display: flex; gap: 8px; margin-top: 8px; }
-  .btns button { flex: 1; cursor: pointer; }
-  button:hover { border-color: #3a4552; }
-  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; cursor: pointer; }
-  button.primary:disabled { opacity: .5; cursor: progress; }
-  .check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); margin: 6px 0; cursor: pointer; }
-  .check input { accent-color: var(--accent); }
-  .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
-  .mono { font-family: var(--mono); }
-  #log { font: 12px/1.55 var(--mono); color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
-    padding: 8px 10px; margin-top: 10px; max-height: 190px; overflow-y: auto; white-space: pre-wrap; display: none; }
-  #log .ok { color: var(--ok); } #log .warn { color: var(--warn); } #log .err { color: var(--bad); }
-  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .metric { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
-  .metric .v { font: 600 18px var(--mono); }
-  .metric .k { font-size: 11px; color: var(--muted); }
-  .bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; margin: 3px 0 8px; }
-  .bar > div { height: 100%; background: var(--accent); }
-  .warnings { color: var(--warn); font-size: 12px; margin: 8px 0 0; padding-left: 16px; }
-  .files a { display: inline-block; font: 12px var(--mono); color: var(--accent); margin: 0 10px 6px 0; text-decoration: none; }
-  .files a:hover { text-decoration: underline; }
-  .jobs { font: 12px var(--mono); }
-  .jobs div { display: flex; justify-content: space-between; padding: 4px 0; cursor: pointer; color: var(--muted); }
-  .jobs div:hover { color: var(--text); }
-  .jobs div > span:first-child { flex: 1; }
-  .jobs .del { background: none; border: 0; padding: 0 0 0 8px; color: var(--muted); cursor: pointer; font: inherit; }
-  .jobs .del:hover { color: var(--bad); }
-  .st-succeeded { color: var(--ok); } .st-failed { color: var(--bad); } .st-running, .st-queued { color: var(--warn); }
-  #maps { position: relative; height: 100vh; }
-  #map, #map-before { position: absolute; inset: 0; }
-  #map-before { display: none; }
-  #swipe { position: absolute; top: 0; bottom: 0; width: 0; display: none; z-index: 3; }
-  #swipe .handle { position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: #fff; box-shadow: 0 0 6px #000a; }
-  #swipe .grip { position: absolute; top: 50%; left: -16px; width: 32px; height: 32px; margin-top: -16px; border-radius: 50%;
-    background: #fff; color: #111; display: grid; place-items: center; cursor: ew-resize; font: 700 13px var(--mono); }
-  .swipe-label { position: absolute; bottom: 36px; z-index: 3; background: #000a; color: #fff; font: 12px var(--mono);
-    padding: 3px 8px; border-radius: 4px; display: none; }
-  #layers { position: absolute; top: 12px; right: 12px; z-index: 4; width: 250px; background: color-mix(in srgb, var(--panel) 94%, transparent);
-    border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
-  #layers h2 { margin-bottom: 6px; }
-  #layers summary { cursor: pointer; list-style: none; }
-  #layers summary h2 { display: inline; }
-  #layers:not([open]) { width: auto; padding: 8px 12px; }
-  #layers .check { margin: 4px 0; }
-  #layers .check.disabled { opacity: .4; pointer-events: none; }
-  .legend { height: 8px; border-radius: 4px; margin: 4px 0 2px; }
-  .legend-scale { display: flex; justify-content: space-between; font: 10px var(--mono); color: var(--muted); }
-  input[type=range] { width: 100%; accent-color: var(--accent); }
-  .maplibregl-ctrl-attrib { font-size: 10px; }
-  header a { margin-left: auto; color: var(--muted); font-size: 12px; text-decoration: none; }
-  header a:hover { color: var(--accent); }
-  #search { position: absolute; top: 12px; left: 12px; z-index: 4; width: 320px; max-width: calc(100% - 150px); }
-  #search input { width: 100%; font: inherit; color: var(--text); background: color-mix(in srgb, var(--panel) 96%, transparent);
-    border: 1px solid var(--line); border-radius: 8px; padding: 9px 40px 9px 12px; box-shadow: 0 2px 10px #0006; }
-  #search input::-webkit-search-cancel-button { filter: invert(1); }
-  #search button { position: absolute; top: 4px; right: 4px; width: 32px; height: 30px; padding: 0; border: 0;
-    background: transparent; cursor: pointer; font-size: 16px; color: var(--muted); }
-  #search button:hover { color: var(--accent); }
-  #search-results { margin-top: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  #search-results:empty { display: none; }
-  #search-results button, #search-results .msg { position: static; display: block; width: 100%; height: auto; text-align: left;
-    padding: 8px 12px; font-size: 13px; color: var(--text); border-bottom: 1px solid var(--line); border-radius: 0; }
-  #search-results button:hover, #search-results button:focus-visible { background: var(--panel-2); color: var(--text); }
-  #search-results .msg { color: var(--muted); cursor: default; }
-  #search-results .attr { padding: 5px 12px; font-size: 10px; color: var(--muted); }
-  @media (max-width: 800px) {
-    body { grid-template-columns: 1fr; grid-template-rows: 55vh auto; }
-    aside { height: auto; order: 2; } #maps { height: 55vh; } #layers { width: 200px; }
-  }
-</style>
-</head>
-<body>
-<aside>
-  <header><h1>GeoPulse</h1><span class="tag">Earth-change intelligence · <span id="version">v0.2</span></span>
-    <a href="https://github.com/nrahaman1/geopulse" target="_blank" rel="noopener">GitHub ↗</a></header>
+import * as maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
+import mapWorker from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+import * as E from "./engine.js";
+import "./style.css";
 
-  <section style="background:var(--panel-2)">
-    <h2>Compute</h2>
-    <div class="row" style="margin:0">
-      <label class="check"><input type="radio" name="engine" value="browser" checked> This browser</label>
-      <label class="check" id="engine-server" hidden><input type="radio" name="engine" value="server"> GeoPulse server</label>
-    </div>
-    <div class="hint" id="engine-hint"></div>
-  </section>
-
-  <section>
-    <h2>Area of interest</h2>
-    <label for="example">Example event</label>
-    <select id="example"><option value="">— choose —</option></select>
-    <div class="btns">
-      <button id="draw" type="button">Draw box</button>
-      <button id="upload-btn" type="button">Upload GeoJSON</button>
-      <input id="upload" type="file" accept=".geojson,.json" hidden>
-    </div>
-    <div class="hint" id="aoi-info">No AOI yet. Search a place on the map, pick an example, draw a box, or upload a polygon.</div>
-  </section>
-
-  <section>
-    <h2>Time windows</h2>
-    <label>Before event</label>
-    <div class="row"><input type="date" id="b0" aria-label="before start"><input type="date" id="b1" aria-label="before end"></div>
-    <label>After event</label>
-    <div class="row"><input type="date" id="a0" aria-label="after start"><input type="date" id="a1" aria-label="after end"></div>
-  </section>
-
-  <section>
-    <h2>Task · sensors · model</h2>
-    <label for="task">Task</label>
-    <select id="task">
-      <option value="flood">Flood inundation</option>
-      <option value="wildfire">Wildfire / burn</option>
-      <option value="vegetation">Vegetation disturbance</option>
-    </select>
-    <div class="hint" id="task-hint"></div>
-    <div style="margin:10px 0 8px">
-      <label class="check"><input type="checkbox" id="s1" checked> Sentinel-1 SAR (cloud-independent)</label>
-      <label class="check"><input type="checkbox" id="s2" checked> Sentinel-2 optical</label>
-    </div>
-    <label for="model">Model</label>
-    <select id="model"><option value="auto">auto</option></select>
-    <div class="btns"><button class="primary" id="run" type="button">Run analysis</button></div>
-    <div id="log" aria-live="polite"></div>
-  </section>
-
-  <section id="results" hidden>
-    <h2>Result</h2>
-    <div class="metrics">
-      <div class="metric"><div class="v" id="m-hit">–</div><div class="k" id="k-hit">affected km²</div></div>
-      <div class="metric"><div class="v" id="m-review">–</div><div class="k">review recommended km²</div></div>
-      <div class="metric"><div class="v" id="m-conf">–</div><div class="k" id="k-conf">mean confidence</div></div>
-      <div class="metric"><div class="v" id="m-obs">–</div><div class="k">observed km²</div></div>
-    </div>
-    <div style="margin-top:12px">
-      <label>Sensors used</label>
-      <div id="sensors-used" class="mono" style="font-size:12px"></div>
-    </div>
-    <div id="severity" style="margin-top:10px"></div>
-    <div id="weights" style="margin-top:10px"></div>
-    <ul class="warnings" id="warnings"></ul>
-    <div style="margin-top:10px"><label>Downloads</label><div class="files" id="files"></div></div>
-  </section>
-
-  <section>
-    <h2>Recent jobs</h2>
-    <div class="jobs" id="jobs"><span class="hint">none yet</span></div>
-  </section>
-</aside>
-
-<div id="maps">
-  <div id="map"></div>
-  <div id="map-before"></div>
-  <form id="search" role="search" autocomplete="off">
-    <input id="search-q" type="search" placeholder="Search a place, or lat, lon" aria-label="Search a place or coordinates">
-    <button type="submit" aria-label="Search">⌕</button>
-    <div id="search-results" aria-live="polite"></div>
-  </form>
-  <div id="swipe"><div class="handle"></div><div class="grip" title="drag">⇆</div></div>
-  <div class="swipe-label" id="lbl-before" style="left:12px">BEFORE</div>
-  <div class="swipe-label" id="lbl-after" style="right:276px">AFTER</div>
-
-  <details id="layers" open>
-    <summary><h2>Layers</h2></summary>
-    <label class="check" data-layer="target"><input type="checkbox" checked> <span id="target-name">Flood</span> probability</label>
-    <div class="legend" id="target-legend" style="background:linear-gradient(90deg,#2878ff00,#2878ff96 40%,#145affeb)"></div>
-    <div class="legend-scale"><span>0.2</span><span>0.5</span><span>1.0</span></div>
-    <label class="check" data-layer="severity"><input type="checkbox"> Burn severity (dNBR)</label>
-    <div class="legend" style="background:linear-gradient(90deg,#7fffd4 0 25%,#ffff00 25% 50%,#ff8c00 50% 75%,#ff0000 75%)"></div>
-    <div class="legend-scale"><span>low</span><span>mod-low</span><span>mod-high</span><span>high</span></div>
-    <label class="check" data-layer="uncertainty"><input type="checkbox"> Uncertainty</label>
-    <div class="legend" style="background:linear-gradient(90deg,#3c145a00,#78288c6e 30%,#e6505abe 70%,#ffd23ce6)"></div>
-    <div class="legend-scale"><span>low</span><span>high</span></div>
-    <label class="check" data-layer="change"><input type="checkbox"> Change probability</label>
-    <label class="check" data-layer="outline"><input type="checkbox" checked> Extent polygons</label>
-    <div style="margin:8px 0 4px"><label for="opacity">Prediction opacity</label><input type="range" id="opacity" min="0" max="100" value="85"></div>
-    <h2 style="margin-top:10px">Imagery</h2>
-    <label class="check" data-layer="s2_post"><input type="checkbox" checked> Sentinel-2 after</label>
-    <label class="check" data-layer="s2_pre"><input type="checkbox"> Sentinel-2 before</label>
-    <label class="check" data-layer="s1_post"><input type="checkbox"> Sentinel-1 VV after</label>
-    <label class="check" data-layer="s1_pre"><input type="checkbox"> Sentinel-1 VV before</label>
-    <label class="check"><input type="checkbox" id="swipe-toggle"> Before / after swipe</label>
-    <h2 style="margin-top:10px">Basemap</h2>
-    <div class="row" style="margin:0">
-      <button type="button" data-basemap="dark">Dark</button><button type="button" data-basemap="imagery">Imagery</button>
-    </div>
-  </details>
-</div>
-
-<script>
 const $ = (id) => document.getElementById(id);
-// Two compute engines. "browser": web/worker.js runs the whole pipeline on the visitor's machine (STAC + COG reads,
-// compositing, physics, ONNX model on WebGPU/WebAssembly). "server": a GeoPulse API (`geopulse serve`), if one serves
-// this page. Static hosting (GitHub Pages, Hugging Face) has only the browser engine.
-const HF_MODELS = "https://huggingface.co/nafizrahaman/geopulse-gpft-mini/resolve/main/";
+// Two compute engines. "browser": worker.js runs the whole pipeline on this machine (STAC + COG reads, compositing,
+// physics, ONNX model on WebGPU/WebAssembly). "server": GeoPulse's Python engine (PyTorch on CUDA/Metal/CPU), either
+// the one the desktop app runs on this PC or a `geopulse serve` that serves this page. GitHub Pages has only "browser".
+const TAURI = window.__TAURI__; // set inside the desktop app
+const RELEASES = "https://github.com/nrahaman1/geopulse/releases/latest";
 const BROWSER_MAX_KM2 = 300;
 const BASELINE = { model_id: "threshold-baseline", version: "1.1.0", tasks: ["flood", "wildfire", "vegetation"] };
-let SERVER = false, ENGINE = "browser", E = null, worker = null, VERSION = "?";
+let SERVER = false, SERVER_URL = "", TOKEN = "", SERVER_INFO = {}, ENGINE = "browser", worker = null, VERSION = "?";
 let browserModels = [BASELINE], serverModels = [];
 const BROWSER_JOBS = new Map(); // id -> { job, res: { summary, layers, files: {name: Blob} } }, oldest first
 const KEEP_JOBS = 10;
-const api = async (path, opts) => {
-  const r = await fetch(path, opts);
+const withToken = (url) => (TOKEN ? `${url}${url.includes("?") ? "&" : "?"}token=${TOKEN}` : url);
+const api = async (path, opts = {}) => {
+  const auth = TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {};
+  const r = await fetch(SERVER_URL + path, { ...opts, headers: { ...opts.headers, ...auth } });
   const body = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(body.detail || r.statusText);
   return body;
@@ -248,6 +39,7 @@ const basemap = () => ({
   ],
 });
 
+maplibregl.setWorkerUrl(mapWorker); // bundled: MapLibre would look for it next to its own (bundled) module
 const view = { center: [-40, 30], zoom: 2 };
 const map = new maplibregl.Map({ container: "map", style: basemap(), ...view, attributionControl: { compact: true } });
 const before = new maplibregl.Map({ container: "map-before", style: basemap(), ...view, attributionControl: false });
@@ -394,31 +186,80 @@ function setTask(task) {
 }
 $("task").onchange = () => setTask($("task").value);
 const setDates = (w, a, b) => { const [x, y] = Array.isArray(w) ? w : w.split("/"); $(a).value = x; $(b).value = y; };
+const WEBGPU = !!self.navigator.gpu;
 function setEngine(engine) {
   ENGINE = engine;
   document.querySelector(`input[name=engine][value=${engine}]`).checked = true;
-  $("engine-hint").textContent = engine === "browser"
-    ? `Runs on your computer: imagery streams straight from the Microsoft Planetary Computer and the model runs on your ${self.navigator.gpu ? "GPU (WebGPU)" : "CPU (WebAssembly)"}. Nothing is uploaded. Areas up to ${BROWSER_MAX_KM2} km².`
-    : "Runs on the GeoPulse server that serves this page (Python pipeline, server GPU if present).";
-  $("version").textContent = `v${VERSION} · ${engine === "browser" ? (self.navigator.gpu ? "WebGPU" : "WebAssembly") : "server"}`;
+  const where = WEBGPU ? "GPU (WebGPU)" : "CPU (WebAssembly)";
+  $("engine-hint").innerHTML = engine === "browser"
+    ? `${TAURI ? "Built-in engine" : "Runs on your computer"}: imagery streams straight from the Microsoft Planetary Computer and the model runs on your ${where}. Nothing is uploaded. Areas up to ${BROWSER_MAX_KM2} km².`
+      + (TAURI ? "" : ` For your full GPU and larger areas, <a href="${RELEASES}" target="_blank" rel="noopener">get the desktop app</a>.`)
+    : `${TAURI ? "GeoPulse's Python engine on this PC" : "The GeoPulse server that serves this page"}: ${SERVER_INFO.device}. Full pipeline, areas up to ${SERVER_INFO.max_job_km2} km².`;
+  $("version").textContent = `v${VERSION} · ${engine === "browser" ? (WEBGPU ? "WebGPU" : "WebAssembly") : SERVER_INFO.device.split(" · ")[0]}`;
   setTask($("task").value || "flood");
 }
 for (const el of document.querySelectorAll("input[name=engine]")) el.onchange = () => setEngine(el.value);
 
+async function connectServer() {
+  SERVER_INFO = await api("/health");
+  serverModels = await api("/models");
+  SERVER = true;
+  $("engine-server").hidden = false;
+  $("engine-server").querySelector("input").disabled = false;
+  $("server-label").textContent = `${TAURI ? "This PC" : "GeoPulse server"} · ${SERVER_INFO.device}`;
+  setEngine("server");
+  refreshJobs();
+}
+
+// Desktop app: GeoPulse's Python engine on this PC. The first start installs Python and PyTorch (CUDA when an NVIDIA
+// GPU is present) with uv into the app's data folder; later starts take seconds. The built-in engine works meanwhile.
+async function desktopEngine(install = false) {
+  const { invoke } = TAURI.core;
+  const status = await invoke("engine_status");
+  $("engine-server").hidden = false;
+  $("engine-server").querySelector("input").disabled = true;
+  $("server-label").textContent = `This PC · Python engine${status.gpu ? ` · ${status.gpu}` : ""}`;
+  if (!status.installed && !install) {
+    $("engine-setup").hidden = false;
+    $("engine-start").textContent = `Install the PC engine (one-time, ~${status.download})`;
+    $("engine-start").title = `Python and PyTorch (${status.gpu ? "CUDA, for your NVIDIA GPU" : "CPU"}) into the app's data folder`;
+    return;
+  }
+  $("engine-setup").hidden = true;
+  const lines = [status.installed ? "Starting the GeoPulse engine on this PC…" : "Installing the GeoPulse engine on this PC (one time)…"];
+  const quiet = status.installed; // routine starts stay out of the log unless they fail
+  if (!quiet) logLines(lines);
+  const unlisten = await TAURI.event.listen("engine-log", ({ payload }) => {
+    lines.push(payload);
+    if (!quiet) logLines(lines.slice(-300));
+  });
+  try {
+    ({ url: SERVER_URL, token: TOKEN } = await invoke("engine_start", { variant: status.variant }));
+    await connectServer();
+    if (!quiet) logLines([...lines, `✓ GeoPulse engine ready: ${SERVER_INFO.device}`]);
+  } catch (err) {
+    logLines([...lines.slice(-40), `✗ The PC engine did not start: ${err}`]);
+    $("engine-setup").hidden = false;
+    $("engine-start").textContent = "Retry the PC engine";
+  } finally {
+    unlisten();
+  }
+}
+$("engine-start").onclick = () => desktopEngine(true);
+
 async function init() {
-  E = await import("./web/engine.js");
-  const health = await fetch("/health").then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  SERVER = !!health?.status;
-  VERSION = health?.version ?? (await fetch("web/site.json").then((r) => r.json()).catch(() => ({}))).version ?? "?";
-  const index = await fetch(`${HF_MODELS}index.json`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
-  browserModels = [...index.filter((c) => c.onnx).map((c) => ({ ...c, tasks: c.onnx.tasks, url: HF_MODELS + c.onnx.file })), BASELINE];
-  if (SERVER) { serverModels = await api("/models"); $("engine-server").hidden = false; }
+  VERSION = (await fetch("site.json").then((r) => r.json()).catch(() => ({}))).version ?? "?";
+  const index = await fetch("weights/index.json").then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  // The checksum in the URL makes a changed model a new URL, so browser and service-worker caches never go stale.
+  browserModels = [...index.map((c) => ({ ...c, tasks: c.onnx.tasks, url: new URL(`weights/${c.onnx.file}?v=${c.onnx.sha256.slice(0, 12)}`, document.baseURI).href })), BASELINE];
   setEngine("browser");
-  examples = SERVER ? await api("/examples") : await fetch("examples.json").then((r) => r.json()).catch(() => []);
+  examples = await fetch("examples.json").then((r) => r.json()).catch(() => []);
   for (const ex of examples) $("example").add(new Option(`${TASK_ICON[ex.task] || ""} ${ex.title || ex.id}`, ex.id));
   if (examples.length) { $("example").value = examples[0].id; $("example").onchange(); }
   await loadBrowserJobs();
   refreshJobs();
+  if (TAURI) desktopEngine();
+  else if (await fetch("health").then((r) => r.ok && r.headers.get("content-type")?.includes("json")).catch(() => false)) await connectServer();
 }
 $("example").onchange = () => {
   const ex = examples.find((x) => x.id === $("example").value);
@@ -523,7 +364,7 @@ function runInBrowser(body) {
   const lines = [`browser job: ${request.task} with ${card.model_id}`];
   logLines(lines);
   $("run").disabled = true;
-  worker ??= new Worker("web/worker.js", { type: "module" });
+  worker ??= new Worker(new URL("./worker.js", import.meta.url), { type: "module" });
   worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); $("run").disabled = false; };
   worker.onmessage = async ({ data }) => {
     if (data.type === "log") { lines.push(data.msg); logLines(lines); return; }
@@ -571,10 +412,16 @@ function addImage(m, id, url, b, opacity) {
   m.addLayer({ id, type: "raster", source: id, paint: { "raster-opacity": opacity, "raster-resampling": "nearest", "raster-fade-duration": 0 } }, m.getLayer("aoi-line") ? "aoi-line" : undefined);
 }
 
+async function serverResults(id) {
+  const res = await api(`/jobs/${id}/results`);
+  res.files = Object.fromEntries(Object.entries(res.files).map(([k, url]) => [k, withToken(SERVER_URL + url)]));
+  return { res, job: await api(`/jobs/${id}`) };
+}
+
 async function showResults(id) {
   const rec = BROWSER_JOBS.get(id);
   if (rec) rec.urls ??= Object.fromEntries(Object.entries(rec.res.files).map(([k, blob]) => [k, URL.createObjectURL(blob)]));
-  const { res, job } = rec ? { res: { ...rec.res, files: rec.urls }, job: rec.job } : { res: await api(`/jobs/${id}/results`), job: await api(`/jobs/${id}`) };
+  const { res, job } = rec ? { res: { ...rec.res, files: rec.urls }, job: rec.job } : await serverResults(id);
   if (rec) logLines(job.log);
   await mapReady;
   current = { id, res };
@@ -629,7 +476,23 @@ async function showResults(id) {
       `<div class="mono" style="font-size:12px">${k.toUpperCase()} ${(v * 100).toFixed(0)}%</div><div class="bar"><div style="width:${v * 100}%"></div></div>`).join("") : "";
   $("warnings").replaceChildren(...s.warnings.map((w) => Object.assign(document.createElement("li"), { textContent: w })));
   $("files").innerHTML = Object.keys(res.files).filter((k) => !k.startsWith("layers")).map((k) => `<a href="${res.files[k]}" download="${k}">${k}</a>`).join("");
+  // A cross-origin link (the desktop app's engine) ignores `download` and would open the file in place of the app.
+  for (const a of $("files").querySelectorAll("a")) if (new URL(a.href).origin !== location.origin) a.onclick = saveFile;
 }
+
+async function saveFile(e) {
+  e.preventDefault();
+  const a = e.currentTarget;
+  const url = URL.createObjectURL(await (await fetch(a.href)).blob());
+  Object.assign(document.createElement("a"), { href: url, download: a.download }).click();
+  setTimeout(() => URL.revokeObjectURL(url), 60e3);
+}
+
+// Desktop app: web links open in the system browser, not inside the app window.
+if (TAURI) document.addEventListener("click", (e) => {
+  const a = e.target.closest?.("a[href^='https://']");
+  if (a) { e.preventDefault(); TAURI.opener.openUrl(a.href); }
+});
 
 function applyLayer(k, on) {
   const vis = on ? "visible" : "none";
@@ -669,6 +532,3 @@ new ResizeObserver(() => { map.resize(); before.resize(); placeSwipe(); }).obser
 if (innerWidth < 800) $("layers").open = false;  // small screens: keep the map visible
 
 init().catch((err) => logLines([`✗ could not start: ${err.message}`]));
-</script>
-</body>
-</html>

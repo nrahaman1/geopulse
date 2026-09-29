@@ -1,28 +1,11 @@
----
-license: other
-license_name: mixed-open-data
-license_link: https://github.com/nrahaman1/geopulse/blob/main/DATA_LICENSES.md
-pretty_name: GeoPulse-Bench
-task_categories:
-  - image-segmentation
-tags:
-  - remote-sensing
-  - earth-observation
-  - sentinel-1
-  - sentinel-2
-  - change-detection
-  - flood-mapping
-  - wildfire
-  - deforestation
-size_categories:
-  - n<1K
----
-
 # GeoPulse-Bench v0.1
 
 Event-split benchmarks for multimodal Earth-change mapping, built by
 [GeoPulse](https://github.com/nrahaman1/geopulse) from Sentinel-1 RTC, Sentinel-2 L2A and Copernicus DEM GLO-30
-(Microsoft Planetary Computer). Each folder is one benchmark:
+(Microsoft Planetary Computer). Published as the assets of the
+[`bench-v1` release](https://github.com/nrahaman1/geopulse/releases/tag/bench-v1): one zip per benchmark and
+`SHA256SUMS`. Download and verify with `geopulse dataset pull` (or `geopulse dataset pull geopulse-bench-wildfire`).
+Each folder is one benchmark:
 
 | Folder | Task | Events (train / val / test) | Tiles | Labels |
 |---|---|---|---:|---|

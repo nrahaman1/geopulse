@@ -1,4 +1,4 @@
-# GeoPulse architecture (v0.3: flood, wildfire, vegetation disturbance; Python or in-browser)
+# GeoPulse architecture (v0.4: flood, wildfire, vegetation disturbance; desktop, web and Python)
 
 ```text
 request (AOI, windows, task, sensors)      geopulse/pipeline.py::make_request   — one validator for CLI, API, SDK
@@ -24,10 +24,11 @@ STAC item, Web-Mercator PNG layers                                              
 FastAPI jobs + MapLibre web map            geopulse/api.py, geopulse/web/index.html
 ```
 
-The same inference pipeline also runs in a web browser (ADR-011):
+The same inference pipeline also runs in a web browser (ADR-011), and the desktop app runs the Python pipeline on
+the user's PC (ADR-012):
 
 ```text
-geopulse/web/index.html ──postMessage──▶ geopulse/web/worker.js (module Web Worker)
+app/index.html + src/main.js ──postMessage──▶ app/src/worker.js (module Web Worker)
                                           ├─ engine.js: request validation, UTM grid, projection, warping,
                                           │  compositing, physics baseline, model inputs, map rendering
                                           ├─ geotiff.js: COG range reads from Planetary Computer blob storage
@@ -119,7 +120,25 @@ dependency-free JavaScript (`engine.js`) that mirrors the Python functions one-f
 millimetre UTM agreement, baseline and model inputs within 1e-4). The model is exported to ONNX with its two
 `Dropout2d` masks as inputs, so the browser draws MC-dropout masks itself (`tests/test_onnx.py`: ONNX = PyTorch
 within 1e-4). Everything the browser reads is CORS-enabled: Planetary Computer STAC and SAS tokens (signed per storage
-account and container, since the DEM lives in a different account than its collection token) and the Hugging Face
-model files (SHA-256 verified). Limits: 300 km² per job (browser memory), and single-threaded WebAssembly because
-static hosts do not send cross-origin-isolation headers; WebGPU makes that moot where available. Results stay on the
-device in IndexedDB; nothing is uploaded.
+account and container, since the DEM lives in a different account than its collection token); the ONNX models ship
+with the app and are SHA-256 verified. GPU backends can compute a model wrongly without any error (ONNX Runtime Web
+1.30's `webgpu` build did for GPFT-mini: 1.76 vs 3.28 km² on a test box), so each model card carries the logits
+PyTorch produced for a fixed input and a backend is trusted only if it reproduces them; otherwise WebAssembly is used.
+Imagery reads are retried with backoff and at most 12 are in flight. Limits: 300 km² per job (browser memory), and
+single-threaded WebAssembly because static hosts do not send cross-origin-isolation headers; WebGPU makes that moot
+where available. Results stay on the device in IndexedDB; nothing is uploaded.
+
+**ADR-012 Desktop app: a native shell plus the Python engine on the user's PC.** Also from GeoLibre: one Vite web
+app (`app/`) is the UI of the GitHub Pages site, of `geopulse serve` and of a Tauri 2 desktop app (`app/src-tauri`).
+The desktop app bundles uv and the locked Python project (pyproject.toml, uv.lock, the `geopulse` package); on first
+use `uv sync --frozen --extra gpu|cpu` installs a managed Python and PyTorch into the app's data folder, CUDA when
+`nvidia-smi` finds an NVIDIA GPU (Metal on Apple silicon), so users with a GPU get all of it and others do not
+download 3 GB they cannot use. The engine is `geopulse serve` on 127.0.0.1 and a random port, with a per-launch token
+(Bearer header, or `?token=` for file links) and CORS limited to the app's origins; it exits when the app does,
+even after a crash, because it watches the app's process. Checkpoints come from the `models-v1` release, verified.
+Why not ship Python inside the installer: a CUDA PyTorch is ~3 GB and differs per GPU; the installer stays ~40 MB.
+
+**ADR-013 Everything on GitHub.** Code, CI, the web app (Pages), installers and wheels (releases on `v*` tags), and
+data as release assets: `models-v1` (checkpoints, ONNX exports, cards, `index.json`, eval reports) and `bench-v1`
+(one zip per benchmark + SHA256SUMS). `geopulse/releases.py` downloads with the standard library and verifies every
+file; publishing uses the `gh` CLI.

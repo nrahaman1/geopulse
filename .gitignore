@@ -9,7 +9,7 @@ build/
 *.egg-info/
 
 # large or generated artifacts: imagery cache, benchmark tiles, checkpoints, runs and job outputs
-# (tiles and weights are published on the Hugging Face Hub, not in git)
+# (tiles and weights are published as GitHub Release assets, not in git)
 data/
 outputs/
 runs/
@@ -23,5 +23,10 @@ models/
 # private planning document (not part of the public project)
 GeoPulse_Full_Design.md
 
-# generated static showcase (scripts/export_static.py)
-site/
+# web and desktop app (app/): dependencies and build output; uv is downloaded per target by app/scripts/fetch-uv.mjs
+node_modules/
+app/dist/
+app/dev-dist/
+app/src-tauri/target/
+app/src-tauri/gen/
+app/src-tauri/binaries/

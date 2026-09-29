@@ -22,9 +22,13 @@ Only the latest release receives security fixes while GeoPulse is pre-1.0.
 - Result files are served only from inside the job's directory (path traversal is rejected; see `tests/test_api.py`).
 - Checkpoints are loaded with `torch.load(weights_only=True)`, and `geopulse models pull` verifies each file's
   SHA-256 against its model card before use.
-- The in-browser platform (GitHub Pages, Hugging Face static Space) has no backend. The visitor's browser talks
-  directly to the Planetary Computer (STAC search, anonymous SAS tokens, imagery), Hugging Face (model files, verified
-  by SHA-256 before use), jsDelivr and unpkg (JavaScript libraries), Esri (basemap tiles) and, for place search,
-  Nominatim. The AOI and dates are sent to the Planetary Computer as a STAC search; results stay in the browser's
-  IndexedDB and are never uploaded. Delete them from the jobs list or by clearing the site's data.
-- No credentials are stored in the repository. Hugging Face uploads use the token from `hf auth login`.
+- The web app (GitHub Pages) has no backend. The visitor's browser talks directly to the Planetary Computer (STAC
+  search, anonymous SAS tokens, imagery), Esri (basemap tiles) and, for place search, Nominatim; the app, its
+  libraries and the ONNX models come from GitHub Pages (models are verified by SHA-256 before use). The AOI and
+  dates are sent to the Planetary Computer as a STAC search; results stay in the browser's IndexedDB and are never
+  uploaded. Delete them from the jobs list or by clearing the site's data.
+- Desktop app: the Python engine binds to 127.0.0.1 on a random port and rejects any request without the per-launch
+  token (a random 192-bit value held by the app); CORS allows only the app's own origins. The engine environment is
+  installed by the bundled uv from the bundled lockfile (hashes pinned); checkpoints come from this repository's
+  `models-v1` release and are SHA-256 verified. The app's content security policy allows scripts only from the app.
+- No credentials are stored in the repository. Publishing releases uses the `gh` CLI's own login.

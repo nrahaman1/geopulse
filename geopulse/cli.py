@@ -56,15 +56,15 @@ def cmd_dataset(a):
 
 
 def cmd_dataset_pull(a):
-    from .hub import pull_dataset
+    from .releases import pull_dataset
 
-    pull_dataset(a.name, a.repo, a.out)
+    pull_dataset(a.name, a.tag, a.repo, a.out)
 
 
 def cmd_dataset_push(a):
-    from .hub import push_dataset
+    from .releases import push_dataset
 
-    push_dataset(a.repo, a.root, a.private)
+    push_dataset(a.tag, a.repo, a.root)
 
 
 def cmd_train(a):
@@ -92,14 +92,14 @@ def cmd_models(a):
 
 
 def cmd_models_pull(a):
-    from .hub import pull_models
+    from .releases import pull_models
 
     try:
-        pulled = pull_models(a.repo, a.revision)
-    except Exception as e:  # network, missing repo, auth: one readable line instead of a traceback
-        sys.exit(f"error: could not pull models from {a.repo}: {type(e).__name__}: {str(e).splitlines()[0]}")
+        pulled = pull_models(a.tag, a.repo)
+    except Exception as e:  # network, missing release, checksum: one readable line instead of a traceback
+        sys.exit(f"error: could not pull models from {a.repo} {a.tag}: {type(e).__name__}: {str(e).splitlines()[0]}")
     if not pulled:
-        sys.exit(f"error: no checkpoints found in {a.repo}")
+        sys.exit(f"error: no checkpoints in {a.repo} {a.tag}")
 
 
 def cmd_models_export(a):
@@ -114,15 +114,38 @@ def cmd_models_export(a):
 
 
 def cmd_models_push(a):
-    from .hub import push_models
+    from .releases import push_models
 
-    push_models(a.repo, a.private)
+    push_models(a.tag, a.repo)
+
+
+def _exit_with(pid: int) -> None:
+    """Exit as soon as process `pid` (the desktop app) is gone, even if it crashed. (Watching stdin for EOF instead
+    deadlocks on Windows: a thread blocked reading a pipe also blocks other calls on that handle.)"""
+    import os
+    import time
+
+    if os.name == "nt":
+        import ctypes
+
+        kernel32 = ctypes.windll.kernel32
+        handle = kernel32.OpenProcess(0x00100000, False, pid)  # SYNCHRONIZE
+        if handle:
+            kernel32.WaitForSingleObject(handle, 0xFFFFFFFF)  # returns when the process ends
+    else:
+        while os.getppid() == pid:  # an orphan is re-parented
+            time.sleep(1)
+    os._exit(0)
 
 
 def cmd_serve(a):
+    import threading
+
     import uvicorn
 
-    print(f"GeoPulse at http://{a.host}:{a.port}  (API docs: /docs)")
+    if a.exit_with_parent:
+        threading.Thread(target=_exit_with, args=(a.exit_with_parent,), daemon=True).start()
+    print(f"GeoPulse at http://{a.host}:{a.port}  (API docs: /docs)", flush=True)
     uvicorn.run("geopulse.api:app", host=a.host, port=a.port)
 
 
@@ -223,15 +246,16 @@ def main(argv=None):
     b.add_argument("manifest")
     b.add_argument("--out", default="data/bench")
     b.set_defaults(fn=cmd_dataset)
-    b = ds.add_parser("pull", help="download prebuilt benchmark tiles from Hugging Face")
+    b = ds.add_parser("pull", help="download prebuilt benchmark tiles from GitHub Releases")
     b.add_argument("name", nargs="?", default="all", help="e.g. geopulse-bench-wildfire (default: all)")
-    b.add_argument("--repo", default=None)
+    b.add_argument("--repo", default=None, help="GitHub owner/repo")
+    b.add_argument("--tag", default=None, help="release tag")
     b.add_argument("--out", default="data/bench")
     b.set_defaults(fn=cmd_dataset_pull)
-    b = ds.add_parser("push", help="publish benchmark tiles to Hugging Face (maintainers)")
+    b = ds.add_parser("push", help="publish benchmark tiles to GitHub Releases (maintainers; needs gh)")
     b.add_argument("--repo", default=None)
+    b.add_argument("--tag", default=None)
     b.add_argument("--root", default="data/bench")
-    b.add_argument("--private", action="store_true")
     b.set_defaults(fn=cmd_dataset_push)
 
     s = sub.add_parser("train", help="train from an experiment config")
@@ -248,21 +272,22 @@ def main(argv=None):
     s.set_defaults(fn=cmd_models)
     ms = s.add_subparsers(dest="action")
     ms.add_parser("list", help="list registered models (default)").set_defaults(fn=cmd_models)
-    m = ms.add_parser("pull", help="download trained checkpoints from Hugging Face")
-    m.add_argument("--repo", default=None)
-    m.add_argument("--revision", default=None)
+    m = ms.add_parser("pull", help="download trained checkpoints from GitHub Releases (SHA-256 verified)")
+    m.add_argument("--repo", default=None, help="GitHub owner/repo")
+    m.add_argument("--tag", default=None, help="release tag")
     m.set_defaults(fn=cmd_models_pull)
     m = ms.add_parser("export-onnx", help="export checkpoints to ONNX for the in-browser engine")
     m.add_argument("--model", default="all")
     m.set_defaults(fn=cmd_models_export)
-    m = ms.add_parser("push", help="publish trained checkpoints to Hugging Face (maintainers)")
+    m = ms.add_parser("push", help="publish trained checkpoints to GitHub Releases (maintainers; needs gh)")
     m.add_argument("--repo", default=None)
-    m.add_argument("--private", action="store_true")
+    m.add_argument("--tag", default=None)
     m.set_defaults(fn=cmd_models_push)
 
     s = sub.add_parser("serve", help="run the API + web map")
     s.add_argument("--host", default="127.0.0.1")
     s.add_argument("--port", type=int, default=8000)
+    s.add_argument("--exit-with-parent", type=int, metavar="PID", help=argparse.SUPPRESS)  # used by the desktop app
     s.set_defaults(fn=cmd_serve)
 
     s = sub.add_parser("benchmark", help="model latency / throughput / memory")
@@ -274,10 +299,11 @@ def main(argv=None):
     sub.add_parser("doctor", help="check the local environment").set_defaults(fn=cmd_doctor)
 
     a = p.parse_args(argv)
-    if getattr(a, "repo", "unset") is None:  # hub commands: default repos live in geopulse.hub
-        from . import hub
+    if hasattr(a, "tag"):  # release commands: defaults live in geopulse.releases
+        from . import releases
 
-        a.repo = hub.MODEL_REPO if a.cmd == "models" else hub.DATA_REPO
+        a.repo = a.repo or releases.REPO
+        a.tag = a.tag or (releases.MODELS_TAG if a.cmd == "models" else releases.BENCH_TAG)
     sys.stdout.reconfigure(encoding="utf-8")  # progress lines use ✓ even on legacy Windows consoles
     try:
         a.fn(a)

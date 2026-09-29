@@ -1,15 +1,20 @@
-name: pages
+name: Pages
+
+# The web app on GitHub Pages: static files; every job runs in the visitor's browser.
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,12 +23,19 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-node@v5
         with:
-          python-version: "3.12"
-      - run: pip install pyyaml && python scripts/build_web.py site
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: ONNX models for the in-browser engine (from the models release)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download models-v1 -R "$GITHUB_REPOSITORY" -p "*.onnx" -p index.json -D models
+      - run: npm ci && npm run build
+        working-directory: app
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: app/dist
       - id: deploy
         uses: actions/deploy-pages@v4

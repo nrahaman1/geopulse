@@ -15,22 +15,31 @@ installed from its own distribution under its own license. Data licenses are in 
 | PyTorch (torch) | BSD-3-Clause |
 | FastAPI | MIT (on Starlette, BSD-3-Clause; Pydantic, MIT) |
 | uvicorn | BSD-3-Clause |
-| huggingface-hub | Apache-2.0 |
 
 Development only: pytest (MIT), httpx (BSD-3-Clause), ruff (MIT), pre-commit (MIT), onnx and onnxruntime (MIT).
 
-## Loaded by the web map at run time (not redistributed)
+## Bundled into the web and desktop app (app/, from npm)
 
 | Component | License / terms |
 |---|---|
-| MapLibre GL JS 4.7.1 (from unpkg CDN) | BSD-3-Clause |
-| geotiff.js 3.0.5 (from jsDelivr, in-browser engine) | MIT |
-| ONNX Runtime Web 1.30.0 (from jsDelivr, in-browser engine) | MIT (© Microsoft) |
-| d3-contour 4.0.2 and d3-array (from jsDelivr, in-browser engine) | ISC |
-| Esri World Imagery and World Dark Gray Canvas tiles | Esri Terms of Use; attribution shown on the map |
-| Nominatim place search (OpenStreetMap Foundation) | ODbL data, © OpenStreetMap contributors; Nominatim usage policy (one request per submitted search, no autocomplete) |
+| MapLibre GL JS 6 | BSD-3-Clause |
+| geotiff.js 3 (and its decoders: pako MIT, zstd, lerc Apache-2.0) | MIT |
+| ONNX Runtime Web 1.30 | MIT (© Microsoft) |
+| d3-contour 4 and d3-array | ISC |
+| Workbox (service worker, via vite-plugin-pwa) | MIT |
+| Tauri 2 (desktop shell) and tauri-plugin-opener | Apache-2.0 / MIT |
+| uv (bundled with the desktop app, installs its Python engine) | Apache-2.0 / MIT (© Astral) |
+
+Build tools: Vite (MIT), vite-plugin-pwa (MIT), yaml (ISC), @tauri-apps/cli (Apache-2.0 / MIT).
 
 ## Services used at run time
 
-Microsoft Planetary Computer STAC API and blob storage (anonymous signed URLs); Google Cloud Storage for Hansen
-Global Forest Change tiles; Hugging Face Hub for published checkpoints, ONNX models and benchmark tiles; GitHub Pages hosts the static platform.
+| Service | Terms |
+|---|---|
+| Esri World Imagery and World Dark Gray Canvas tiles | Esri Terms of Use; attribution shown on the map |
+| Nominatim place search (OpenStreetMap Foundation) | ODbL data, © OpenStreetMap contributors; Nominatim usage policy (one request per submitted search, no autocomplete) |
+
+Also: Microsoft Planetary Computer STAC API and blob storage (anonymous signed URLs); Google Cloud Storage for
+Hansen Global Forest Change tiles; GitHub (Pages for the web app; release assets for installers, checkpoints and
+benchmark tiles); the desktop engine's first start downloads Python (python-build-standalone) and packages from PyPI
+and download.pytorch.org through uv.

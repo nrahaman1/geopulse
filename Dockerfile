@@ -1,5 +1,16 @@
-# GeoPulse API + web map, CPU build. rasterio wheels bundle GDAL and PROJ, so no system GIS stack is needed.
+# GeoPulse API + web app, CPU build. rasterio wheels bundle GDAL and PROJ, so no system GIS stack is needed.
 #   docker build -t geopulse . && docker run -p 8000:8000 geopulse      (or: docker compose up)
+
+# The web app (Vite). Its build reads the example events and the package version.
+FROM node:22-slim AS web
+WORKDIR /src
+COPY geopulse/__init__.py geopulse/__init__.py
+COPY examples examples
+COPY app/package.json app/package-lock.json app/
+RUN cd app && npm ci
+COPY app app
+RUN cd app && npm run build
+
 FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
@@ -13,12 +24,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends libexpat1 && rm
 RUN pip install torch --index-url https://download.pytorch.org/whl/cpu
 
 WORKDIR /app
-COPY pyproject.toml README.md LICENSE NOTICE ./
+COPY pyproject.toml README.md LICENSE NOTICE hatch_build.py ./
 COPY geopulse ./geopulse
 COPY examples ./examples
+COPY --from=web /src/app/dist ./app/dist
 RUN pip install . && rm -rf /app/build
 
-# Hugging Face Spaces (and good practice) run as uid 1000.
+# An unprivileged user.
 RUN useradd --create-home --uid 1000 geopulse
 USER geopulse
 ENV GEOPULSE_MODELS=/home/geopulse/data/models \

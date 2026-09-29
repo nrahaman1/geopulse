@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "GeoPulse",
+  "version": "../package.json",
+  "identifier": "io.github.nrahaman1.geopulse",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "GeoPulse",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 900,
+        "minHeight": 600
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' ipc: http://ipc.localhost blob: data: https: http://127.0.0.1:*; img-src 'self' blob: data: https: http://127.0.0.1:*; worker-src 'self' blob:; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "publisher": "GeoPulse contributors",
+    "copyright": "Apache-2.0",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/nrahaman1/geopulse",
+    "category": "Utility",
+    "shortDescription": "Earth-change maps from Sentinel-1/2, computed on this PC",
+    "longDescription": "Flood, wildfire and forest-loss mapping from Sentinel-1 SAR, Sentinel-2 optical and the Copernicus DEM, computed on your own computer with its GPU.",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+    "externalBin": ["binaries/uv"],
+    "resources": {
+      "../../pyproject.toml": "python/pyproject.toml",
+      "../../uv.lock": "python/uv.lock",
+      "../../hatch_build.py": "python/hatch_build.py",
+      "../../README.md": "python/README.md",
+      "../../LICENSE": "python/LICENSE",
+      "../../NOTICE": "python/NOTICE",
+      "../../geopulse/*.py": "python/geopulse/"
+    }
+  },
+  "plugins": {}
+}

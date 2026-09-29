@@ -3,6 +3,37 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [0.4.0] — 2026-09-29
+
+### Added
+- Desktop app for Windows, macOS and Linux (Tauri 2, `app/src-tauri`), after GeoLibre: the web app in a native
+  window plus GeoPulse's Python engine on the user's PC. On first use the bundled uv installs Python and PyTorch
+  (CUDA with an NVIDIA GPU, Metal on Apple silicon, else CPU) into the app's data folder; the engine serves on
+  127.0.0.1 with a per-launch token, takes areas up to 1500 km² and exits with the app. Installers are built by
+  `.github/workflows/release.yml` and attached to each `v*` release.
+- The web app is a Vite project (`app/`): npm dependencies bundled instead of CDNs, code-split (MapLibre, geotiff
+  decoders and ONNX Runtime load only when needed), a service worker that caches the app, ONNX Runtime and the
+  models (installable PWA). The same build is served by GitHub Pages, the desktop app and `geopulse serve`.
+- ONNX self-check: model cards carry the logits PyTorch produced for a fixed input; the browser trusts a GPU
+  backend only if it reproduces them, else it falls back to WebAssembly.
+- `geopulse/releases.py`: checkpoints, ONNX exports and benchmark tiles are GitHub Release assets (`models-v1`,
+  `bench-v1`), downloaded with the standard library and SHA-256 verified.
+- `gpu` / `cpu` extras choose the PyTorch build (`uv sync --extra gpu`); Apple-silicon GPUs are used (MPS).
+- `/health` reports the compute device and the area limit; `geopulse serve --exit-with-parent`; `GEOPULSE_TOKEN`.
+
+### Changed
+- ONNX Runtime Web uses its JSEP WebGPU build: the newer `webgpu` build computed GPFT-mini wrongly (1.76 vs 3.28 km²
+  flooded on a test box).
+
+### Removed
+- Hugging Face: the Hub integration (`huggingface-hub` dependency, `geopulse/hub.py`), the Spaces and their deploy files.
+
+### Fixed
+- Browser engine: a single dropped or throttled imagery read ("Failed to fetch") no longer fails the job; reads are
+  retried with backoff and at most 12 are in flight.
+- Checkpoints load by name from a relative models directory again (`models/models/...` error).
+- Hidden controls (the server option, the setup button) no longer show: `display` rules overrode `hidden`.
+
 ## [0.3.0] — 2026-09-29
 
 ### Added

@@ -122,7 +122,18 @@ class GPFT(nn.Module):
 
 
 def device() -> torch.device:
-    return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    if torch.backends.mps.is_available():  # Apple silicon GPU
+        return torch.device("mps")
+    return torch.device("cpu")
+
+
+def device_name() -> str:
+    dev = device()
+    if dev.type == "cuda":
+        return f"GPU · {torch.cuda.get_device_name()}"
+    return "GPU · Apple silicon (Metal)" if dev.type == "mps" else f"CPU · {os.cpu_count()} threads"
 
 
 @torch.no_grad()
@@ -263,6 +274,31 @@ class _OnnxGPFT(nn.Module):
         return logits, w["post"].squeeze(2).transpose(0, 1)  # (B, sensors, H, W) fusion weights
 
 
+PROBE_SIZE = 64
+
+
+def probe_values(name: str, shape: tuple[int, ...]) -> np.ndarray:
+    """Fixed input for the ONNX self-check (identical to engine.js::probeValues): validity and dropout masks are 1,
+    everything else a deterministic pattern in [-0.5, 0.5)."""
+    n = int(np.prod(shape))
+    if name.endswith("_valid") or name.startswith("mask_"):
+        return np.ones(shape, "float32")
+    return ((np.arange(n, dtype="int64") * 7919 % 1000) / 1000 - 0.5).astype("float32").reshape(shape)
+
+
+def onnx_probe(model: GPFT, masks: dict) -> dict:
+    """Expected logits for the self-check input. The browser runs it on its ONNX backend first and trusts a GPU
+    backend only if it reproduces these numbers (a backend or driver bug would otherwise go unnoticed)."""
+    s = PROBE_SIZE
+    shapes = {f"{k}_{t}": [1, n, s, s] for k, n in SENSORS.items() for t in TIMES}
+    shapes |= {f"{k}_{t}_valid": [1, 1, s, s] for k in SENSORS for t in TIMES}
+    shapes |= {"dem": [1, 2, s, s]} | {k: [1, c, 1, 1] for k, c in masks.items()}
+    xs = [torch.from_numpy(probe_values(k, tuple(shapes[k]))) for k in ONNX_INPUTS]
+    with torch.no_grad():
+        logits = _OnnxGPFT(model.eval())(*xs)[0].double()
+    return {"shapes": shapes, "mean": round(logits.mean().item(), 6), "absmean": round(logits.abs().mean().item(), 6)}
+
+
 def export_onnx(card: dict) -> dict:
     """Write <model>.onnx next to the checkpoint and record it in the model card."""
     model = read(card["checkpoint"])
@@ -293,6 +329,7 @@ def export_onnx(card: dict) -> dict:
             "masks": masks,
             "dropout": model.config["dropout"],
             "tasks": model.tasks,
+            "probe": onnx_probe(model, masks),
         }
     }
     _path(card["checkpoint"]).with_suffix(".json").write_text(json.dumps(card, indent=2))

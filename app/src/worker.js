@@ -1,17 +1,13 @@
 // GeoPulse browser worker: runs a full GeoPulse analysis on the visitor's machine.
 // STAC search + SAS signing (Planetary Computer), COG window reads (geotiff.js, HTTP range requests), compositing
 // and physics (engine.js), the trained model (ONNX Runtime Web: WebGPU, else WebAssembly), then maps and downloads.
+import { contours } from "d3-contour";
+import { BaseClient, BaseResponse, fromCustomClient, writeArrayBuffer } from "geotiff";
 import * as E from "./engine.js";
 
-const LIB = {
-  geotiff: "https://cdn.jsdelivr.net/npm/geotiff@3.0.5/+esm",
-  ort: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.30.0/dist/ort.all.min.mjs",
-  ortWasm: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.30.0/dist/",
-  contour: "https://cdn.jsdelivr.net/npm/d3-contour@4.0.2/+esm",
-};
 const PC = "https://planetarycomputer.microsoft.com/api";
 const TILE = 256, STRIDE = 192;
-let GeoTIFF, ort, contours;
+let ort; // ONNX Runtime (and its ~26 MB of WebAssembly) loads only when a model runs
 
 const log = (msg) => self.postMessage({ type: "log", msg });
 
@@ -24,15 +20,54 @@ self.onmessage = async ({ data }) => {
   }
 };
 
-async function fetchRetry(url, opts = {}, tries = 4) {
+// Transient failures (a dropped connection, "Failed to fetch", 429/5xx throttling) are retried with backoff; a big
+// AOI makes hundreds of range reads and one of them failing used to end the whole job.
+const TRIES = 6;
+const retryable = (status) => status === 429 || status >= 500;
+const backoff = (i) => new Promise((res) => setTimeout(res, 500 * 2 ** i));
+async function fetchRetry(url, opts = {}) {
   for (let i = 0; ; i++) {
     try {
       const r = await fetch(url, opts);
-      if (r.ok || (r.status < 500 && r.status !== 429) || i === tries - 1) return r;
+      if (!retryable(r.status) || i === TRIES - 1) return r;
     } catch (err) {
-      if (i === tries - 1) throw err;
+      if (i === TRIES - 1) throw new Error(`network error after ${TRIES} tries: ${err.message} (${new URL(url).host})`);
     }
-    await new Promise((res) => setTimeout(res, 1000 * 2 ** i));
+    await backoff(i);
+  }
+}
+
+// At most MAX_READS range requests in flight: browsers queue the rest anyway, and long queues time out.
+const MAX_READS = 12;
+let reading = 0;
+const readQueue = [];
+async function throttled(fn) {
+  while (reading >= MAX_READS) await new Promise((res) => readQueue.push(res));
+  reading++;
+  try { return await fn(); } finally { reading--; readQueue.shift()?.(); }
+}
+
+class Bytes extends BaseResponse {
+  constructor(status, headers, data) { super(); this._status = status; this.headers = headers; this.data = data; }
+  get status() { return this._status; }
+  getHeader(name) { return this.headers.get(name) || undefined; }
+  async getData() { return this.data; }
+}
+
+// geotiff.js client whose reads (headers and body) are retried and throttled.
+class RetryClient extends BaseClient {
+  request({ headers, signal } = {}) {
+    return throttled(async () => {
+      for (let i = 0; ; i++) {
+        try {
+          const r = await fetch(this.url, { headers, signal });
+          if (!retryable(r.status) || i === TRIES - 1) return new Bytes(r.status, r.headers, await r.arrayBuffer());
+        } catch (err) {
+          if (signal?.aborted || i === TRIES - 1) throw new Error(`imagery read failed after ${TRIES} tries: ${err.message}`);
+        }
+        await backoff(i);
+      }
+    });
   }
 }
 
@@ -90,7 +125,7 @@ function georef(img) {
 function readerFor(grid) {
   const coordCache = new Map(), npx = grid.width * grid.height;
   return async function readBand(href, method) {
-    const tiff = await GeoTIFF.fromUrl(await sign(href), { allowFullFile: false });
+    const tiff = await fromCustomClient(new RetryClient(await sign(href)), { allowFullFile: false });
     const img = await tiff.getImage();
     const geo = georef(img), W = img.getWidth(), H = img.getHeight();
     const key = `${geo.epsg}|${geo.x0}|${geo.y0}|${geo.rx}|${geo.ry}`;
@@ -189,20 +224,38 @@ async function prepare(req, grid, spec) {
 const sessions = new Map();
 async function session(card) {
   if (sessions.has(card.url)) return sessions.get(card.url);
-  ort ??= await import(LIB.ort);
-  ort.env.wasm.wasmPaths = LIB.ortWasm;
-  log(`  downloading ${card.model_id} (${card.onnx.file})…`);
+  // The JSEP WebGPU backend (plus WebAssembly). The newer `onnxruntime-web/webgpu` EP gave wrong GPFT outputs
+  // (1.30.0: 1.76 vs 3.28 km² flooded on the Emilia test box), so it is not used.
+  ort ??= await import("onnxruntime-web");
+  log(`  loading ${card.model_id} (${card.onnx.file})…`);
   const bytes = new Uint8Array(await (await fetchRetry(card.url)).arrayBuffer());
   const digest = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)), (b) => b.toString(16).padStart(2, "0")).join("");
   if (card.onnx.sha256 && digest !== card.onnx.sha256) throw new Error(`checksum mismatch for ${card.onnx.file}`);
   let s = null;
   for (const ep of self.navigator.gpu ? ["webgpu", "wasm"] : ["wasm"]) {
-    try { s = { sess: await ort.InferenceSession.create(bytes, { executionProviders: [ep] }), ep }; break; }
-    catch (err) { log(`! ${ep} unavailable (${String(err.message || err).slice(0, 80)}); falling back`); }
+    try {
+      const sess = await ort.InferenceSession.create(bytes, { executionProviders: [ep] });
+      if (await reproduces(sess, card.onnx.probe)) { s = { sess, ep }; break; }
+      log(`! ${ep} computed ${card.model_id} wrongly on this device (self-check failed); falling back`);
+    } catch (err) {
+      log(`! ${ep} unavailable (${String(err.message || err).slice(0, 80)}); falling back`);
+    }
   }
-  if (!s) throw new Error("no ONNX Runtime backend available in this browser");
+  if (!s) throw new Error("no ONNX Runtime backend in this browser computes the model correctly");
   sessions.set(card.url, s);
   return s;
+}
+
+// The model card carries the logits PyTorch produced for a fixed input. A backend is trusted only if it reproduces
+// them: GPU backends and drivers can compute a model wrongly without raising any error.
+async function reproduces(sess, probe) {
+  if (!probe) return true; // cards exported before the self-check existed
+  const feeds = Object.fromEntries(Object.entries(probe.shapes).map(([name, dims]) => [name, new ort.Tensor("float32", E.probeValues(name, dims), dims)]));
+  const L = (await sess.run(feeds)).logits.data;
+  let sum = 0, abs = 0;
+  for (const v of L) { sum += v; abs += Math.abs(v); }
+  const tol = 1e-3 * probe.absmean + 1e-4;
+  return Math.abs(sum / L.length - probe.mean) <= tol && Math.abs(abs / L.length - probe.absmean) <= tol;
 }
 
 async function predictOnnx(card, A, req, grid) {
@@ -272,16 +325,14 @@ async function png(rgba, width, height) {
 }
 
 async function geotiff(values, grid, nodata) {
-  GeoTIFF ??= await import(LIB.geotiff);
-  const buf = await GeoTIFF.writeArrayBuffer(values, {
+  const buf = await writeArrayBuffer(values, {
     width: grid.width, height: grid.height, ModelPixelScale: [grid.res, grid.res, 0], ModelTiepoint: [0, 0, 0, grid.x0, grid.y0, 0],
     GTModelTypeGeoKey: 1, GTRasterTypeGeoKey: 1, ProjectedCSTypeGeoKey: grid.epsg, GDAL_NODATA: String(nodata),
   });
   return new Blob([buf], { type: "image/tiff" });
 }
 
-async function extent(prob, grid, crs) {
-  contours ??= (await import(LIB.contour)).contours;
+function extent(prob, grid, crs) {
   const values = Array.from(prob, (v) => (Number.isNaN(v) ? 0 : v));
   const [mp] = contours().size([grid.width, grid.height]).thresholds([E.THRESHOLD])(values);
   const toLonLat = ([x, y]) => crs.inverse(grid.x0 + x * grid.res, grid.y0 - y * grid.res).map((v) => Math.round(v * 1e6) / 1e6);
@@ -300,7 +351,6 @@ const json = (obj) => new Blob([JSON.stringify(obj, null, 2)], { type: "applicat
 
 async function run(req, card, version) {
   const t0 = performance.now();
-  GeoTIFF ??= await import(LIB.geotiff);
   const spec = E.TASKS[req.task], grid = E.makeGrid(req.aoi), npx = grid.width * grid.height, crs = E.projection(grid.epsg);
   log(`✓ Grid EPSG:${grid.epsg}, ${grid.width}×${grid.height} px @ ${grid.res} m — computing in your browser`);
   const inp = await prepare(req, grid, spec);
@@ -359,7 +409,7 @@ async function run(req, card, version) {
   files["uncertainty.tif"] = await geotiff(maps.uncertainty, grid, "nan");
   files["change_probability.tif"] = await geotiff(maps.change, grid, "nan");
   if (maps.severity) files[`${target}_severity.tif`] = await geotiff(maps.severity, grid, 255);
-  files[names.extent] = json(await extent(maps.target, grid, crs));
+  files[names.extent] = json(extent(maps.target, grid, crs));
 
   const runtime = (performance.now() - t0) / 1000;
   const summary = E.summarize({ request: req, grid, maps, scenes: inp.scenes, warnings, card, runtime, engine });

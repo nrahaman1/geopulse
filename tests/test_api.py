@@ -72,9 +72,19 @@ def test_failed_job_reports_error(client, monkeypatch):
 
 
 def test_web_ui_and_examples(client):
-    assert "maplibre" in client.get("/").text
+    page = client.get("/")  # the built web app (app/dist), or a pointer to how to build it
+    assert page.status_code == 200 and "GeoPulse" in page.text
     ex = client.get("/examples").json()
     assert ex and {"id", "aoi", "before", "after"} <= set(ex[0])
+
+
+def test_desktop_engine_requires_its_token(client, monkeypatch):
+    monkeypatch.setattr(api, "TOKEN", "s3cret")
+    assert client.get("/health").status_code == 200  # the app polls this before it has connected
+    assert client.get("/models").status_code == 401
+    assert client.get("/models", headers={"Authorization": "Bearer nope"}).status_code == 401
+    assert client.get("/models", headers={"Authorization": "Bearer s3cret"}).status_code == 200
+    assert client.get("/models?token=s3cret").status_code == 200  # file links (downloads, map layers)
 
 
 def test_v01_flood_jobs_still_render(client):

@@ -39,3 +39,9 @@ def test_onnx_matches_torch_with_explicit_dropout_masks():
     np.testing.assert_allclose(logits, want.numpy(), atol=1e-4)
     np.testing.assert_allclose(weights, w_want["post"].squeeze(2).transpose(0, 1).numpy(), atol=1e-5)
     assert logits.shape == (2, 3, h, w)  # two task heads + change head
+    # The browser's self-check: ONNX on the probe input reproduces the card's expected logits.
+    probe = card["onnx"]["probe"]
+    feeds = {k: models.probe_values(k, tuple(v)) for k, v in probe["shapes"].items()}
+    logits = sess.run(["logits"], feeds)[0].astype("float64")
+    assert logits.mean() == pytest.approx(probe["mean"], abs=1e-4)
+    assert np.abs(logits).mean() == pytest.approx(probe["absmean"], rel=1e-4)

@@ -1,8 +1,9 @@
 {
   "name": "GeoPulse",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": { "ghcr.io/devcontainers/features/node:1": { "version": "22" } },
   "hostRequirements": { "cpus": 4, "memory": "8gb" },
-  "postCreateCommand": "pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -e . pytest httpx && (geopulse models pull || echo 'models not pulled: the physics baseline will be used')",
+  "postCreateCommand": "(cd app && npm ci && npm run build) && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -e . pytest httpx && (geopulse models pull || echo 'models not pulled: the physics baseline will be used')",
   "postAttachCommand": "geopulse serve --host 0.0.0.0 --port 8000",
   "forwardPorts": [8000],
   "portsAttributes": {

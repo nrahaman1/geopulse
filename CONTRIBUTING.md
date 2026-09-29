@@ -7,16 +7,16 @@ keep it that way are very welcome: new benchmark events, label sources, sensors,
 
 ```bash
 git clone https://github.com/nrahaman1/geopulse && cd geopulse
-uv sync                       # installs the package, dev tools and PyTorch (CUDA on Windows/Linux)
+uv sync --extra gpu           # the package, dev tools and PyTorch with CUDA (or --extra cpu)
 uv run pre-commit install     # ruff + basic hygiene on every commit
 uv run geopulse doctor
-uv run pytest                 # offline: no STAC or Hub access needed (browser-engine parity tests need Node.js)
+uv run pytest                 # offline: no STAC or network access (browser-engine parity tests need Node.js)
 ```
 
-The web platform is `geopulse/web/`. `geopulse serve` serves it with the API; for the static build (no server, the
-browser computes everything) run `python scripts/build_web.py site && python -m http.server -d site 8080`. A change to
-the Python pipeline that alters results needs the matching change in `geopulse/web/engine.js` or `worker.js`;
-`tests/test_js_parity.py` compares the two.
+The web and desktop app is `app/` (Vite + Tauri): `cd app && npm ci && npm run dev` for the web app with hot reload,
+`npm run build` for what GitHub Pages and `geopulse serve` serve, and `npm run uv && npm run tauri dev` for the
+desktop app (needs Rust). A change to the Python pipeline that alters results needs the matching change in
+`app/src/engine.js` or `worker.js`; `tests/test_js_parity.py` compares the two.
 
 CPU-only machine: `uv pip install torch --index-url https://download.pytorch.org/whl/cpu` after `uv sync`.
 Pull trained weights with `uv run geopulse models pull`; rebuild or download benchmarks with
@@ -44,11 +44,12 @@ Pull trained weights with `uv run geopulse models pull`; rebuild or download ben
 
 ## Releasing (maintainers)
 
-1. Update `geopulse/__init__.py::__version__`, `CITATION.cff` and `CHANGELOG.md`.
-2. `git tag vX.Y.Z && git push --tags` — `.github/workflows/release.yml` builds, publishes to PyPI (trusted
-   publishing) and creates a GitHub release.
-3. New weights: `geopulse models push`; new benchmark tiles: `geopulse dataset push` (needs `hf auth login`).
-4. In-browser platform: `geopulse models export-onnx --model all`, then `python scripts/build_web.py site && hf upload nafizrahaman/geopulse site --repo-type space` (GitHub Pages deploys automatically).
+1. Update the version in `geopulse/__init__.py`, `app/package.json` and `CITATION.cff` (a test checks they agree),
+   and `CHANGELOG.md`.
+2. `git tag vX.Y.Z && git push --tags`: `.github/workflows/release.yml` creates the GitHub release and attaches the
+   desktop installers (Windows, macOS, Linux) and the wheel (and publishes to PyPI once trusted publishing is set up).
+3. New weights: `geopulse models export-onnx --model all`, then `geopulse models push`; new benchmark tiles:
+   `geopulse dataset push` (both upload release assets with the `gh` CLI). GitHub Pages redeploys on every push.
 
 By contributing you agree that your contributions are licensed under Apache-2.0, and you confirm that you have the
 right to submit them (no employer-, sponsor- or third-party-restricted code or data).

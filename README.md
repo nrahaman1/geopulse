@@ -4,17 +4,19 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
 
 [![CI](https://github.com/nrahaman1/geopulse/actions/workflows/ci.yml/badge.svg)](https://github.com/nrahaman1/geopulse/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Models on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-models-yellow.svg)](https://huggingface.co/nafizrahaman/geopulse-gpft-mini)
-[![Benchmark on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-GeoPulse--Bench-yellow.svg)](https://huggingface.co/datasets/nafizrahaman/geopulse-bench)
-[![Open the platform](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-open%20the%20platform-3fb6c8.svg)](https://nrahaman1.github.io/geopulse/)
+[![Download the desktop app](https://img.shields.io/github/v/release/nrahaman1/geopulse?label=desktop%20app&logo=github)](https://github.com/nrahaman1/geopulse/releases/latest)
+[![Open the web app](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-open%20the%20web%20app-3fb6c8.svg)](https://nrahaman1.github.io/geopulse/)
 
-## ▶ Open the platform
+## ▶ Get GeoPulse
 
 | | |
 |---|---|
-| **In your browser** — nothing to install | **<https://nrahaman1.github.io/geopulse/>** (mirror: <https://nafizrahaman-geopulse.static.hf.space>) — the full platform on any place: search, pick dates and a task, run. **Your own computer does the work** ([how](#in-browser-engine)); nothing is uploaded and no server is involved. Areas up to 300 km². |
-| **Python server in the cloud** — free | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) — builds in a few minutes, then the map opens by itself (areas up to 500 km²). |
-| **On your machine** (GPU optional) | see [Quickstart](#quickstart) or `docker compose up`. |
+| **Desktop app** — Windows, macOS, Linux | **[Download from Releases](https://github.com/nrahaman1/geopulse/releases/latest)**: `GeoPulse_…_x64-setup.exe` (Windows), `…_aarch64.dmg` / `…_x64.dmg` (macOS), `….AppImage` / `….deb` (Linux). Runs GeoPulse's full Python engine on **your PC and its GPU** (NVIDIA CUDA, Apple Metal) with areas up to 1500 km², plus the built-in WebGPU engine. The first start of the PC engine downloads Python and PyTorch once (~3 GB with CUDA, ~400 MB CPU-only). [How it works](#how-it-runs). |
+| **Web app** — nothing to install | **<https://nrahaman1.github.io/geopulse/>**: the same app, computing in your browser (WebGPU, else WebAssembly). Nothing is uploaded and no server is involved. Areas up to 300 km². Installable as a PWA. |
+| **Python** (CLI, SDK, API) | see [Quickstart](#quickstart), `docker compose up`, or [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) |
+
+The installers are not code-signed yet: Windows SmartScreen asks you to confirm ("More info" → "Run anyway"), and on
+macOS open the app once with right-click → Open.
 
 ```text
       Sentinel-1 SAR  +  Sentinel-2 optical  +  Copernicus DEM
@@ -28,16 +30,16 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
      Probability + uncertainty + polygons + provenance (COG / GeoJSON / STAC)
 ```
 
-**Status: v0.3 (alpha), three tasks.** Runs in a web browser, or on a laptop with or without a GPU, against public data. What is
+**Status: v0.4 (alpha), three tasks.** A desktop app, a web app and a Python package, all on public data. What is
 implemented and why: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md); results and caveats:
 [MODEL_CARD.md](MODEL_CARD.md); what comes next: [ROADMAP.md](ROADMAP.md).
 
 ## Quickstart
 
 ```bash
-pip install https://github.com/nrahaman1/geopulse/archive/refs/heads/main.zip   # Python 3.11+
-# (PyPI package `geopulse-eo` coming; the command and import are `geopulse`)
-geopulse models pull         # trained checkpoints from Hugging Face, SHA-256 verified
+pip install https://github.com/nrahaman1/geopulse/releases/download/v0.4.0/geopulse_eo-0.4.0-py3-none-any.whl
+# Python 3.11+. The wheel on each release includes the web app; the command and import are `geopulse`.
+geopulse models pull         # trained checkpoints from GitHub Releases, SHA-256 verified
 geopulse doctor              # GDAL, PROJ, PyTorch, CUDA, STAC connectivity
 geopulse serve               # API + web map at http://127.0.0.1:8000  (API docs at /docs)
 ```
@@ -46,7 +48,7 @@ From a clone, with the example events:
 
 ```bash
 git clone https://github.com/nrahaman1/geopulse && cd geopulse
-uv sync                      # CUDA PyTorch on Windows/Linux; CPU-only: see CONTRIBUTING.md
+uv sync --extra gpu          # CUDA PyTorch on Windows/Linux (Metal on macOS); or --extra cpu
 uv run geopulse models pull
 uv run geopulse infer --config examples/flood_emilia_conselice/request.yaml
 uv run geopulse infer --config examples/wildfire_palisades_la/request.yaml
@@ -120,21 +122,38 @@ background worker, and persisted under `outputs/jobs/<id>/`.
 set task, windows, sensors and model (filtered by task); run. Layers for the task probability, burn severity,
 uncertainty, change, extent polygons and pre/post S1/S2 imagery; opacity; before/after swipe; metrics (affected km²,
 review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads.
-**Compute** chooses where a job runs: *this browser* (always available) or *GeoPulse server* (when the page is served
-by `geopulse serve`). Browser jobs and their files are kept on the device (IndexedDB), 10 at most.
+**Compute** chooses where a job runs: the *PC engine* (desktop app), the *GeoPulse server* (when `geopulse serve`
+serves the page) or *built-in* (this browser, always available). Built-in jobs and their files are kept on the
+device (IndexedDB), 10 at most.
 
-## In-browser engine
+## How it runs
 
-Following [GeoLibre](https://github.com/opengeos/GeoLibre), the hosted platform is static files and every job runs on
-the visitor's machine: [`geopulse/web/worker.js`](geopulse/web/worker.js) (a Web Worker) and
-[`geopulse/web/engine.js`](geopulse/web/engine.js) redo the Python pipeline in JavaScript.
+GeoPulse follows [GeoLibre](https://github.com/opengeos/GeoLibre): one web app ([`app/`](app/), Vite) ships three ways,
+and the heavy lifting happens on the user's own machine.
+
+- **Desktop app** ([`app/src-tauri/`](app/src-tauri/), [Tauri 2](https://tauri.app)): a small native shell around
+  the web app. Like GeoLibre's processing sidecar, GeoPulse's Python engine is a locked project bundled with the app
+  (`pyproject.toml` + `uv.lock` + the `geopulse` package) that the bundled [uv](https://docs.astral.sh/uv/)
+  installs on first use into the app's data folder, with PyTorch built for CUDA when an NVIDIA GPU is present
+  (Metal on Apple silicon, CPU otherwise). The engine listens on 127.0.0.1 only, on a random port, accepts only
+  requests carrying a per-launch token, and exits with the app. It runs the full Python pipeline (rasterio/GDAL
+  reads, PyTorch on the GPU) with areas up to 1500 km².
+- **Web app** on GitHub Pages: static files and a service worker (PWA) that caches the app, ONNX Runtime and the
+  models after first use. Every job runs in the visitor's browser (below).
+- **`geopulse serve`**: the same web app from the Python package, with its API as the engine.
+
+The built-in (browser) engine, [`app/src/worker.js`](app/src/worker.js) and [`app/src/engine.js`](app/src/engine.js),
+redoes the Python pipeline in JavaScript:
 
 1. STAC search on the Planetary Computer, scene selection, per-container SAS signing (all CORS-enabled).
-2. HTTP range reads of only the COG windows over the AOI ([geotiff.js](https://geotiffjs.github.io/)), warped to the
-   same 10 m UTM grid as Python (own UTM projection, bilinear/nearest with nodata renormalisation).
+2. HTTP range reads of only the COG windows over the AOI ([geotiff.js](https://geotiffjs.github.io/)), retried on
+   transient network errors and throttled, warped to the same 10 m UTM grid as Python (own UTM projection,
+   bilinear/nearest with nodata renormalisation).
 3. Task-aware composites, SCL cloud masks, dB conversion, DEM slope, physics baseline and dNBR severity.
 4. The GeoPulse model as ONNX ([ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/)) on **WebGPU** (8 MC-dropout
-   passes) or WebAssembly (3 passes), downloaded from Hugging Face and SHA-256 verified.
+   passes) or WebAssembly (3 passes), SHA-256 verified. Before a backend is trusted it must reproduce the model
+   card's self-check (logits PyTorch produced for a fixed input); a GPU backend or driver that computes the model
+   wrongly is caught and WebAssembly is used instead.
 5. Polygons ([d3-contour](https://github.com/d3/d3-contour)), map overlays, GeoTIFF/GeoJSON/summary/provenance downloads.
 
 Same events, browser vs Python server (both `gpft-multitask-mini`, 8 MC passes):
@@ -195,27 +214,31 @@ geopulse evaluate --model gpft-multitask-mini --dataset data/bench/geopulse-benc
 Systems (RTX 4060 Laptop, 256 px tiles, batch 16): 10.1 ms/tile FP32, 1.9 GB peak; FP16 autocast is not faster
 for this 0.54 M-parameter model.
 
-## Hugging Face
+## Downloads (everything is on GitHub)
 
 | What | Where | Command |
 |---|---|---|
-| Trained checkpoints + eval reports | [nafizrahaman/geopulse-gpft-mini](https://huggingface.co/nafizrahaman/geopulse-gpft-mini) | `geopulse models pull` |
-| GeoPulse-Bench tiles (flood, wildfire, vegetation) | [nafizrahaman/geopulse-bench](https://huggingface.co/datasets/nafizrahaman/geopulse-bench) | `geopulse dataset pull` |
-| ONNX models for the browser | same repo (`*.onnx`, `index.json`) | `geopulse models export-onnx --model all`, then `models push` |
-| In-browser platform (static Space, mirror of GitHub Pages) | [nafizrahaman/geopulse](https://huggingface.co/spaces/nafizrahaman/geopulse) | `python scripts/build_web.py site && hf upload nafizrahaman/geopulse site --repo-type space` |
-| Full live Space (Docker, needs HF PRO hardware) | ready in [deploy/huggingface-space/](deploy/huggingface-space/) | `hf upload <user>/<space> deploy/huggingface-space --repo-type space` |
+| Desktop installers + Python wheel | [Releases](https://github.com/nrahaman1/geopulse/releases/latest) (`v*` tags) | built by `.github/workflows/release.yml` |
+| Web app | [GitHub Pages](https://nrahaman1.github.io/geopulse/) | built by `.github/workflows/pages.yml` on every push |
+| Trained checkpoints, ONNX exports, cards, eval reports | release [`models-v1`](https://github.com/nrahaman1/geopulse/releases/tag/models-v1) | `geopulse models pull` / `models push` |
+| GeoPulse-Bench tiles (flood, wildfire, vegetation) | release [`bench-v1`](https://github.com/nrahaman1/geopulse/releases/tag/bench-v1) | `geopulse dataset pull` / `dataset push` |
 
 ## Development
 
 ```bash
-uv run pytest          # offline: grid alignment, physics per task, modality combinations, multi-task, API, Hub,
-                       # browser engine vs Python (needs Node.js), ONNX vs PyTorch
-uv run ruff check geopulse tests scripts
-python scripts/build_web.py site && python -m http.server -d site   # the static platform at http://localhost:8000
+uv run pytest                     # offline: grid alignment, physics per task, modality combinations, multi-task,
+                                  # API, releases, browser engine vs Python (needs Node.js), ONNX vs PyTorch
+uv run ruff check geopulse tests
+cd app && npm ci
+npm run dev                       # the web app at http://localhost:5173 (hot reload)
+npm run build                     # dist/: what GitHub Pages serves; `geopulse serve` serves it too
+npm run uv && npm run tauri dev   # the desktop app (needs Rust; `npm run uv` fetches uv for this machine)
+npm run tauri build               # installers under src-tauri/target/release/bundle/
 ```
 
-Layout: `geopulse/{tasks,stac,grid,data,baseline,model,bench,train,pipeline,hub,api,cli}.py`,
-`geopulse/web/{index.html,engine.js,worker.js}`, `configs/`, `examples/`, `tests/`, `docs/`, `deploy/`.
+Layout: `geopulse/{tasks,stac,grid,data,baseline,model,bench,train,pipeline,releases,api,cli}.py`;
+`app/` (web app: `index.html`, `src/{main,engine,worker}.js`; desktop shell: `src-tauri/`); `configs/`, `examples/`,
+`tests/`, `docs/`.
 Contributions welcome: [CONTRIBUTING.md](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) ·
 [Security](SECURITY.md) · [Changelog](CHANGELOG.md). Citing GeoPulse: [CITATION.cff](CITATION.cff).
 

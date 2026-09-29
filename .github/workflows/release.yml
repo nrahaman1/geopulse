@@ -1,27 +1,107 @@
 name: Release
 
-# Push a tag like v0.2.0. PyPI publishing uses trusted publishing: configure a publisher for project
-# "geopulse-eo", workflow "release.yml", environment "pypi" at https://pypi.org/manage/account/publishing/.
+# Push a tag like v0.4.0: builds the desktop installers (Windows, macOS, Linux) and the Python wheel and attaches them
+# to the GitHub Release. PyPI publishing is optional (trusted publishing for project "geopulse-eo", environment "pypi";
+# then set the repository variable PYPI_PUBLISH=true).
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch: # a trial build: installers become workflow artifacts, nothing is published
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  build:
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 ||
+            gh release create "$GITHUB_REF_NAME" --title "GeoPulse ${GITHUB_REF_NAME#v}" --generate-notes --latest
+
+  desktop:
+    needs: release
+    if: always() && (needs.release.result == 'success' || needs.release.result == 'skipped')
+    name: Desktop ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: Windows x64, os: windows-latest, target: x86_64-pc-windows-msvc, args: "" }
+          - { name: macOS Apple silicon, os: macos-latest, target: aarch64-apple-darwin, args: --target aarch64-apple-darwin }
+          - { name: macOS Intel, os: macos-latest, target: x86_64-apple-darwin, args: --target x86_64-apple-darwin }
+          - { name: Linux x64, os: ubuntu-22.04, target: x86_64-unknown-linux-gnu, args: --bundles deb,appimage }
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app/src-tauri
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+      - name: ONNX models for the built-in engine (from the models release)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download models-v1 -R "$GITHUB_REPOSITORY" -p "*.onnx" -p index.json -D models
+      - run: npm ci && npm run uv -- ${{ matrix.target }}
+        working-directory: app
+      - uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          projectPath: app
+          tagName: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || '' }}
+          args: ${{ matrix.args }}
+      - if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: geopulse-${{ matrix.target }}
+          path: app/src-tauri/target/**/release/bundle/**/*
+          if-no-files-found: error
+
+  wheel:
+    needs: release
+    if: always() && (needs.release.result == 'success' || needs.release.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: npm ci && npm run build
+        working-directory: app
       - uses: astral-sh/setup-uv@v6
       - run: uv build
       - uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
+      - if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$GITHUB_REF_NAME" dist/* --clobber
 
   pypi:
-    needs: build
-    # Enable once the trusted publisher exists: Settings -> Secrets and variables -> Actions -> Variables: PYPI_PUBLISH=true
-    if: vars.PYPI_PUBLISH == 'true'
+    needs: wheel
+    if: startsWith(github.ref, 'refs/tags/v') && vars.PYPI_PUBLISH == 'true'
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
@@ -32,18 +112,3 @@ jobs:
           name: dist
           path: dist/
       - uses: pypa/gh-action-pypi-publish@release/v1
-
-  github-release:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-      - uses: softprops/action-gh-release@v2
-        with:
-          files: dist/*
-          generate_release_notes: true

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoPulse</title>
+<meta name="description" content="Flood, wildfire and forest-loss maps from Sentinel-1/2, computed on your own machine">
+<meta name="theme-color" content="#0e1116">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+</head>
+<body>
+<aside>
+  <header><h1>GeoPulse</h1><span class="tag">Earth-change intelligence · <span id="version"></span></span>
+    <a href="https://github.com/nrahaman1/geopulse" target="_blank" rel="noopener">GitHub ↗</a></header>
+
+  <section style="background:var(--panel-2)">
+    <h2>Compute</h2>
+    <label class="check" id="engine-server" hidden><input type="radio" name="engine" value="server"> <span id="server-label">GeoPulse server</span></label>
+    <label class="check"><input type="radio" name="engine" value="browser" checked> <span>Built-in (this browser)</span></label>
+    <div class="btns" id="engine-setup" hidden><button type="button" class="primary" id="engine-start"></button></div>
+    <div class="hint" id="engine-hint"></div>
+  </section>
+
+  <section>
+    <h2>Area of interest</h2>
+    <label for="example">Example event</label>
+    <select id="example"><option value="">— choose —</option></select>
+    <div class="btns">
+      <button id="draw" type="button">Draw box</button>
+      <button id="upload-btn" type="button">Upload GeoJSON</button>
+      <input id="upload" type="file" accept=".geojson,.json" hidden>
+    </div>
+    <div class="hint" id="aoi-info">No AOI yet. Search a place on the map, pick an example, draw a box, or upload a polygon.</div>
+  </section>
+
+  <section>
+    <h2>Time windows</h2>
+    <label>Before event</label>
+    <div class="row"><input type="date" id="b0" aria-label="before start"><input type="date" id="b1" aria-label="before end"></div>
+    <label>After event</label>
+    <div class="row"><input type="date" id="a0" aria-label="after start"><input type="date" id="a1" aria-label="after end"></div>
+  </section>
+
+  <section>
+    <h2>Task · sensors · model</h2>
+    <label for="task">Task</label>
+    <select id="task">
+      <option value="flood">Flood inundation</option>
+      <option value="wildfire">Wildfire / burn</option>
+      <option value="vegetation">Vegetation disturbance</option>
+    </select>
+    <div class="hint" id="task-hint"></div>
+    <div style="margin:10px 0 8px">
+      <label class="check"><input type="checkbox" id="s1" checked> Sentinel-1 SAR (cloud-independent)</label>
+      <label class="check"><input type="checkbox" id="s2" checked> Sentinel-2 optical</label>
+    </div>
+    <label for="model">Model</label>
+    <select id="model"><option value="auto">auto</option></select>
+    <div class="btns"><button class="primary" id="run" type="button">Run analysis</button></div>
+    <div id="log" aria-live="polite"></div>
+  </section>
+
+  <section id="results" hidden>
+    <h2>Result</h2>
+    <div class="metrics">
+      <div class="metric"><div class="v" id="m-hit">–</div><div class="k" id="k-hit">affected km²</div></div>
+      <div class="metric"><div class="v" id="m-review">–</div><div class="k">review recommended km²</div></div>
+      <div class="metric"><div class="v" id="m-conf">–</div><div class="k" id="k-conf">mean confidence</div></div>
+      <div class="metric"><div class="v" id="m-obs">–</div><div class="k">observed km²</div></div>
+    </div>
+    <div style="margin-top:12px">
+      <label>Sensors used</label>
+      <div id="sensors-used" class="mono" style="font-size:12px"></div>
+    </div>
+    <div id="severity" style="margin-top:10px"></div>
+    <div id="weights" style="margin-top:10px"></div>
+    <ul class="warnings" id="warnings"></ul>
+    <div style="margin-top:10px"><label>Downloads</label><div class="files" id="files"></div></div>
+  </section>
+
+  <section>
+    <h2>Recent jobs</h2>
+    <div class="jobs" id="jobs"><span class="hint">none yet</span></div>
+  </section>
+</aside>
+
+<div id="maps">
+  <div id="map"></div>
+  <div id="map-before"></div>
+  <form id="search" role="search" autocomplete="off">
+    <input id="search-q" type="search" placeholder="Search a place, or lat, lon" aria-label="Search a place or coordinates">
+    <button type="submit" aria-label="Search">⌕</button>
+    <div id="search-results" aria-live="polite"></div>
+  </form>
+  <div id="swipe"><div class="handle"></div><div class="grip" title="drag">⇆</div></div>
+  <div class="swipe-label" id="lbl-before" style="left:12px">BEFORE</div>
+  <div class="swipe-label" id="lbl-after" style="right:276px">AFTER</div>
+
+  <details id="layers" open>
+    <summary><h2>Layers</h2></summary>
+    <label class="check" data-layer="target"><input type="checkbox" checked> <span id="target-name">Flood</span> probability</label>
+    <div class="legend" id="target-legend" style="background:linear-gradient(90deg,#2878ff00,#2878ff96 40%,#145affeb)"></div>
+    <div class="legend-scale"><span>0.2</span><span>0.5</span><span>1.0</span></div>
+    <label class="check" data-layer="severity"><input type="checkbox"> Burn severity (dNBR)</label>
+    <div class="legend" style="background:linear-gradient(90deg,#7fffd4 0 25%,#ffff00 25% 50%,#ff8c00 50% 75%,#ff0000 75%)"></div>
+    <div class="legend-scale"><span>low</span><span>mod-low</span><span>mod-high</span><span>high</span></div>
+    <label class="check" data-layer="uncertainty"><input type="checkbox"> Uncertainty</label>
+    <div class="legend" style="background:linear-gradient(90deg,#3c145a00,#78288c6e 30%,#e6505abe 70%,#ffd23ce6)"></div>
+    <div class="legend-scale"><span>low</span><span>high</span></div>
+    <label class="check" data-layer="change"><input type="checkbox"> Change probability</label>
+    <label class="check" data-layer="outline"><input type="checkbox" checked> Extent polygons</label>
+    <div style="margin:8px 0 4px"><label for="opacity">Prediction opacity</label><input type="range" id="opacity" min="0" max="100" value="85"></div>
+    <h2 style="margin-top:10px">Imagery</h2>
+    <label class="check" data-layer="s2_post"><input type="checkbox" checked> Sentinel-2 after</label>
+    <label class="check" data-layer="s2_pre"><input type="checkbox"> Sentinel-2 before</label>
+    <label class="check" data-layer="s1_post"><input type="checkbox"> Sentinel-1 VV after</label>
+    <label class="check" data-layer="s1_pre"><input type="checkbox"> Sentinel-1 VV before</label>
+    <label class="check"><input type="checkbox" id="swipe-toggle"> Before / after swipe</label>
+    <h2 style="margin-top:10px">Basemap</h2>
+    <div class="row" style="margin:0">
+      <button type="button" data-basemap="dark">Dark</button><button type="button" data-basemap="imagery">Imagery</button>
+    </div>
+  </details>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

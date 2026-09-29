@@ -7,6 +7,7 @@ import json
 import mimetypes
 import os
 import re
+import secrets
 import threading
 import time
 import uuid
@@ -15,7 +16,8 @@ from pathlib import Path
 
 import yaml
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import FileResponse, PlainTextResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -27,10 +29,15 @@ ROOT = Path(__file__).resolve().parent
 EXAMPLES = next(
     (p for p in (ROOT / "examples", ROOT.parent / "examples") if p.is_dir()), ROOT / "examples"
 )  # wheel, repo
+# The web app (app/, built by Vite): packaged into the wheel as geopulse/ui, or app/dist in a source checkout.
+UI = next((p for p in (ROOT / "ui", ROOT.parent / "app" / "dist") if (p / "index.html").is_file()), None)
 MAX_JOB_KM2 = float(os.environ.get("GEOPULSE_MAX_JOB_KM2", 500))
 MAX_SYNC_KM2 = 25.0
 PUBLIC = os.environ.get("GEOPULSE_PUBLIC") == "1"  # shared demo: never list other visitors' jobs
 MAX_PENDING = 20
+# Desktop app: the engine it launches accepts only requests carrying this per-launch secret, from the app's origins.
+TOKEN = os.environ.get("GEOPULSE_TOKEN", "")
+APP_ORIGINS = ["http://tauri.localhost", "https://tauri.localhost", "tauri://localhost"]
 
 
 def jobs_dir() -> Path:
@@ -54,10 +61,9 @@ class SearchRequest(BaseModel):
 
 
 app = FastAPI(title="GeoPulse", version=__version__, description="Multimodal Earth-change intelligence API")
-# Browser engine (web/engine.js, web/worker.js). Windows' registry can map .js to text/plain, which browsers refuse
-# for module scripts, so pin the type.
+# Windows' registry can map .js to text/plain, which browsers refuse for module scripts, so pin the types.
 mimetypes.add_type("text/javascript", ".js")
-app.mount("/web", StaticFiles(directory=ROOT / "web"), name="web")
+mimetypes.add_type("application/wasm", ".wasm")
 # ponytail: one in-process worker thread; move to Redis + RQ/Celery when jobs must outlive the server process.
 worker = ThreadPoolExecutor(1)
 JOBS: dict[str, dict] = {}
@@ -126,8 +132,6 @@ def _job(job_id: str) -> dict:
 async def count_requests(request: Request, call_next):
     t0 = time.perf_counter()
     response = await call_next(request)
-    if request.url.path.startswith("/web/"):
-        response.headers["Cache-Control"] = "no-cache"  # the browser engine must update with the server
     route = request.scope.get("route")
     key = (request.method, getattr(route, "path", "unmatched"), response.status_code)
     STATS["requests"][key] = STATS["requests"].get(key, 0) + 1
@@ -135,14 +139,34 @@ async def count_requests(request: Request, call_next):
     return response
 
 
+@app.middleware("http")
+async def require_token(request: Request, call_next):
+    if TOKEN and request.method != "OPTIONS" and request.url.path != "/health":
+        auth = request.headers.get("authorization", "")
+        given = auth.removeprefix("Bearer ") if auth else request.query_params.get("token", "")
+        if not secrets.compare_digest(given.encode(), TOKEN.encode()):
+            return JSONResponse({"detail": "missing or wrong token"}, status_code=401)
+    return await call_next(request)
+
+
+if TOKEN:  # added last, so it wraps the token check and even a 401 carries CORS headers
+    extra = [o for o in os.environ.get("GEOPULSE_CORS_ORIGINS", "").split(",") if o]
+    app.add_middleware(CORSMiddleware, allow_origins=APP_ORIGINS + extra, allow_methods=["*"], allow_headers=["*"])
+
+
 @app.get("/", include_in_schema=False)
 def index():
-    return FileResponse(ROOT / "web" / "index.html", headers={"Cache-Control": "no-cache"})  # revalidate on upgrade
+    if UI is None:
+        return HTMLResponse(
+            "<h1>GeoPulse API</h1><p>API docs: <a href='/docs'>/docs</a>. The web app is not built: "
+            "<code>cd app &amp;&amp; npm ci &amp;&amp; npm run build</code>, then restart the server.</p>"
+        )
+    return FileResponse(UI / "index.html", headers={"Cache-Control": "no-cache"})  # revalidate on upgrade
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "version": __version__, "device": str(models.device())}
+    return {"status": "ok", "version": __version__, "device": models.device_name(), "max_job_km2": MAX_JOB_KM2}
 
 
 @app.get("/models")
@@ -274,3 +298,7 @@ def metrics():
     for status in ("queued", "running", "succeeded", "failed"):
         lines.append(f'geopulse_jobs{{status="{status}"}} {sum(j["status"] == status for j in JOBS.values())}')
     return "\n".join(lines) + "\n"
+
+
+if UI is not None:  # last, so every API route above takes precedence over the static files
+    app.mount("/", StaticFiles(directory=UI), name="ui")

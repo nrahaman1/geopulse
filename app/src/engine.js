@@ -675,3 +675,12 @@ export function summarize({ request, grid, maps, scenes, warnings, card, runtime
   }
   return s;
 }
+
+// Fixed input for the ONNX self-check (identical to model.py::probe_values): validity and dropout masks are 1,
+// everything else a deterministic pattern in [-0.5, 0.5).
+export function probeValues(name, dims) {
+  const n = dims.reduce((a, b) => a * b, 1), out = new Float32Array(n);
+  const ones = name.endsWith("_valid") || name.startsWith("mask_");
+  for (let i = 0; i < n; i++) out[i] = ones ? 1 : ((i * 7919) % 1000) / 1000 - 0.5;
+  return out;
+}

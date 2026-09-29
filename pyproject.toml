@@ -32,15 +32,22 @@ dependencies = [
     "torch>=2.4",
     "fastapi>=0.115",
     "uvicorn>=0.30",
-    "huggingface-hub>=0.23",
 ]
+
+# Which PyTorch build to install. Plain `pip install` / `uv sync` get PyPI's (CUDA on Linux, CPU on Windows,
+# Metal on macOS); `uv sync --extra gpu` adds CUDA on Windows too, `--extra cpu` keeps Windows/Linux small. The
+# desktop app picks `gpu` when it finds an NVIDIA GPU, else `cpu`.
+[project.optional-dependencies]
+gpu = ["torch>=2.4"]
+cpu = ["torch>=2.4"]
 
 [project.urls]
 Homepage = "https://github.com/nrahaman1/geopulse"
 Repository = "https://github.com/nrahaman1/geopulse"
 Issues = "https://github.com/nrahaman1/geopulse/issues"
 Changelog = "https://github.com/nrahaman1/geopulse/blob/main/CHANGELOG.md"
-Models = "https://huggingface.co/nafizrahaman/geopulse-gpft-mini"
+Platform = "https://nrahaman1.github.io/geopulse/"
+Downloads = "https://github.com/nrahaman1/geopulse/releases"
 
 [project.scripts]
 geopulse = "geopulse.cli:main"
@@ -55,14 +62,23 @@ dev = [
     "onnxruntime>=1.18",
 ]
 
-# Windows wheels on PyPI are CPU-only, so Windows gets the CUDA 12.8 build; Linux wheels on PyPI already ship CUDA,
-# macOS uses PyPI (CPU/MPS). CPU-only Linux: `uv pip install torch --index-url https://download.pytorch.org/whl/cpu`.
+[tool.uv]
+conflicts = [[{ extra = "gpu" }, { extra = "cpu" }]]
+
 [tool.uv.sources]
-torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'win32'" }]
+torch = [
+    { index = "pytorch-cu128", extra = "gpu", marker = "sys_platform == 'win32'" },  # PyPI's Windows wheels are CPU-only
+    { index = "pytorch-cpu", extra = "cpu", marker = "sys_platform != 'darwin'" },  # PyPI's Linux wheels bundle CUDA
+]
 
 [[tool.uv.index]]
 name = "pytorch-cu128"
 url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
 [build-system]
@@ -75,12 +91,11 @@ path = "geopulse/__init__.py"
 [tool.hatch.build.targets.wheel]
 packages = ["geopulse"]
 
-[tool.hatch.build.targets.wheel.force-include]
-"examples" = "geopulse/examples"  # so `pip install` users get the example events in the API and web map
+[tool.hatch.build.targets.wheel.hooks.custom]  # hatch_build.py: adds the built web app and the example events
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "geopulse", "tests", "examples", "configs", "docs", "README.md", "CHANGELOG.md", "CONTRIBUTING.md",
+    "geopulse", "tests", "examples", "configs", "docs", "hatch_build.py", "README.md", "CHANGELOG.md", "CONTRIBUTING.md",
     "MODEL_CARD.md", "DATA_LICENSES.md", "THIRD_PARTY_NOTICES.md", "ROADMAP.md", "LICENSE", "NOTICE", "CITATION.cff",
 ]
 

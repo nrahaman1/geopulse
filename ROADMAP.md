@@ -3,7 +3,7 @@
 GeoPulse is heading for a v1.0 that is technically deep, reproducible and polished rather than broad. Status
 against the v1.0 definition of done:
 
-## Done (v0.3)
+## Done (v0.4)
 
 - Data: reproducible STAC search, Sentinel-1 and Sentinel-2 pipelines, Copernicus DEM, deterministic tiling,
   split audit, provenance, read cache.
@@ -11,11 +11,11 @@ against the v1.0 definition of done:
 - ML: physics baselines, GPFT-mini (quality-gated fusion, sensor dropout, MC-dropout uncertainty, temperature
   scaling), multi-task training, out-of-distribution test events, sensor-ablation robustness matrices.
 - Engineering: Python package, CLI, SDK, FastAPI with async jobs, COG/GeoJSON/STAC outputs, web map, Docker,
-  CI, model registry with checksums, Hugging Face distribution of weights and benchmark tiles.
-- Platform: the full pipeline in the visitor's browser (WebGPU/WebAssembly, ONNX), hosted as static files on
-  GitHub Pages and Hugging Face, checked against the Python reference in CI.
+  CI, model registry with checksums, weights and benchmark tiles as GitHub Release assets.
+- Platform: the full pipeline in the visitor's browser (WebGPU/WebAssembly, ONNX, self-checked), a PWA on
+  GitHub Pages; a desktop app (Windows, macOS, Linux) that runs the Python engine on the user's GPU.
 
-## Next (v0.4 — make the numbers trustworthy)
+## Next (v0.5 — make the numbers trustworthy)
 
 - [ ] Hand-labelled validation tiles for flood (cloudy and ambiguous pixels), replacing weak-label-only scoring.
 - [ ] Multiple seeds and event-level bootstrap confidence intervals.

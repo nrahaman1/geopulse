@@ -1,4 +1,4 @@
-"""The browser engine (geopulse/web/engine.js) must agree with the Python reference. Runs the engine under Node.js."""
+"""The browser engine (app/src/engine.js) must agree with the Python reference. Runs the engine under Node.js."""
 
 import json
 import shutil
@@ -10,6 +10,7 @@ import pytest
 from rasterio.warp import transform
 
 from geopulse import baseline, pipeline
+from geopulse import model as models
 from geopulse.data import select
 from geopulse.grid import _starts, area_km2, bbox_geometry, make_grid
 from geopulse.model import to_tensors
@@ -96,6 +97,12 @@ def js(tmp_path_factory):
             }
             for t, a in base
         ],
+        "probe": [
+            ["s2_post", [1, 4, 8, 8]],
+            ["s1_pre_valid", [1, 1, 8, 8]],
+            ["mask_e3", [1, 32, 1, 1]],
+            ["dem", [1, 2, 64, 64]],
+        ],
         "tensors": [
             {
                 "case": i,
@@ -111,7 +118,7 @@ def js(tmp_path_factory):
         [
             NODE,
             str(ROOT / "tests" / "js" / "parity.mjs"),
-            str(ROOT / "geopulse" / "web" / "engine.js"),
+            str(ROOT / "app" / "src" / "engine.js"),
             str(tmp / "in.json"),
             str(tmp / "out.json"),
         ],
@@ -188,3 +195,11 @@ def test_model_inputs_match(js):
         want = to_tensors(base[spec["case"]][1], tuple(spec["sensors"]))
         for k, v in want.items():
             np.testing.assert_allclose(dec(got[k]), v.ravel(), atol=1e-5, err_msg=k)
+
+
+def test_onnx_self_check_input_matches(js):
+    payload, _, out = js
+    for name, dims in payload["probe"]:
+        np.testing.assert_array_equal(
+            np.array(out["probe"][name], "float32"), models.probe_values(name, tuple(dims)).ravel()
+        )
