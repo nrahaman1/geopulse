@@ -46,7 +46,14 @@ Models = "https://huggingface.co/nafizrahaman/geopulse-gpft-mini"
 geopulse = "geopulse.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.6", "pre-commit>=3"]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",
+    "ruff>=0.6",
+    "pre-commit>=3",
+    "onnx>=1.16",
+    "onnxruntime>=1.18",
+]
 
 # Windows wheels on PyPI are CPU-only, so Windows gets the CUDA 12.8 build; Linux wheels on PyPI already ship CUDA,
 # macOS uses PyPI (CPU/MPS). CPU-only Linux: `uv pip install torch --index-url https://download.pytorch.org/whl/cpu`.

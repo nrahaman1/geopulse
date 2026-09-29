@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import mimetypes
 import os
 import re
 import threading
@@ -15,6 +16,7 @@ from pathlib import Path
 import yaml
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, PlainTextResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from . import __version__, pipeline, stac
@@ -52,6 +54,10 @@ class SearchRequest(BaseModel):
 
 
 app = FastAPI(title="GeoPulse", version=__version__, description="Multimodal Earth-change intelligence API")
+# Browser engine (web/engine.js, web/worker.js). Windows' registry can map .js to text/plain, which browsers refuse
+# for module scripts, so pin the type.
+mimetypes.add_type("text/javascript", ".js")
+app.mount("/web", StaticFiles(directory=ROOT / "web"), name="web")
 # ponytail: one in-process worker thread; move to Redis + RQ/Celery when jobs must outlive the server process.
 worker = ThreadPoolExecutor(1)
 JOBS: dict[str, dict] = {}
@@ -120,6 +126,8 @@ def _job(job_id: str) -> dict:
 async def count_requests(request: Request, call_next):
     t0 = time.perf_counter()
     response = await call_next(request)
+    if request.url.path.startswith("/web/"):
+        response.headers["Cache-Control"] = "no-cache"  # the browser engine must update with the server
     route = request.scope.get("route")
     key = (request.method, getattr(route, "path", "unmatched"), response.status_code)
     STATS["requests"][key] = STATS["requests"].get(key, 0) + 1

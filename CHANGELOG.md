@@ -3,6 +3,27 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [0.3.0] — 2026-09-29
+
+### Added
+- In-browser engine (after [GeoLibre](https://github.com/opengeos/GeoLibre)): the full platform runs on the visitor's
+  machine as static files. `geopulse/web/worker.js` + `engine.js` do STAC search, per-container SAS signing, COG range
+  reads (geotiff.js), warping onto the Python grid, compositing, physics, the ONNX model on WebGPU or WebAssembly
+  (ONNX Runtime Web, MC dropout), polygons and GeoTIFF/GeoJSON downloads. Browser and Python results agree within
+  1.7 % on the flood, wildfire and vegetation examples.
+- Hosted platform on GitHub Pages (<https://nrahaman1.github.io/geopulse/>, `.github/workflows/pages.yml`), mirrored
+  on the static Hugging Face Space; `scripts/build_web.py` builds it.
+- Browser jobs and their result files persist on the device (IndexedDB, newest 10) and can be deleted from the list.
+- `geopulse models export-onnx`: ONNX export with explicit dropout masks; the Hub model repo carries `*.onnx` and `index.json`.
+- A "Compute" choice in the web map (this browser / GeoPulse server when one serves the page).
+- Tests: the JavaScript engine against the Python reference under Node.js, and ONNX against PyTorch.
+
+### Removed
+- The precomputed online showcase (`scripts/export_static.py`); the hosted platform computes any place instead.
+
+### Fixed
+- Model cards list newest-first by their `created` date, not file modification time.
+
 ## [0.2.0] — 2026-09-29
 
 ### Added

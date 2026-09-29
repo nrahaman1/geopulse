@@ -154,3 +154,10 @@ def test_baseline_sees_the_same_physics_through_tiles():
     np.testing.assert_allclose(raw["s2_pre"], arrays["s2_pre"], atol=1e-5)
     p = baseline_predictor("vegetation")(x, ("s1", "s2"))
     assert p[EVENT].mean() > 0.9
+
+
+def test_checkpoints_load_by_name_from_a_relative_models_dir(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("GEOPULSE_MODELS", "models")  # the default; a card's checkpoint is a bare file name
+    card = models.save(models.GPFT(channels=8), tmp_path / "models" / "m.pt", {"model_id": "m"})
+    assert models.load(card["checkpoint"]).tasks == ["flood"]

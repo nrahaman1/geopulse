@@ -102,7 +102,10 @@ class GPFT(nn.Module):
         w = torch.softmax(torch.stack(logits), 0)  # (S,B,1,H,W)
         return (w * torch.stack(feats)).sum(0), w
 
-    def forward(self, batch: dict):
+    def forward(self, batch: dict, masks: tuple | None = None):
+        """masks: optional explicit Dropout2d masks (for e3 and d1), values 0 or 1/(1-p). The ONNX export uses them
+        so a browser can run MC dropout itself; None = the usual nn.Dropout2d behaviour."""
+        drop = (lambda x, i: self.drop(x)) if masks is None else (lambda x, i: x * masks[i])
         pre, w_pre = self.fuse(batch, "pre")
         post, w_post = self.fuse(batch, "post")
         d = post - pre
@@ -110,9 +113,9 @@ class GPFT(nn.Module):
         e1 = self.enc1(x)
         e2 = self.enc2(F.max_pool2d(e1, 2))
         e3 = self.enc3(F.max_pool2d(e2, 2))
-        d2 = self.dec2(torch.cat([self.up2(self.drop(e3)), e2], 1))
+        d2 = self.dec2(torch.cat([self.up2(drop(e3, 0)), e2], 1))
         d1 = self.dec1(torch.cat([self.up1(d2), e1], 1))
-        return self.head(self.drop(d1)) / self.temperature, {"pre": w_pre, "post": w_post}
+        return self.head(drop(d1, 1)) / self.temperature, {"pre": w_pre, "post": w_post}
 
 
 # --------------------------------------------------------------------------- inference
@@ -214,17 +217,86 @@ def save(model: GPFT, path: Path, card: dict) -> dict:
 _LOADED: dict[str, GPFT] = {}
 
 
-def load(path: str | Path) -> GPFT:
+def _path(path: str | Path) -> Path:
     path = Path(path)
-    if not path.is_absolute():
-        path = models_dir() / path
+    return path if path.is_absolute() else (models_dir() / path).resolve()  # absolute, so load() -> read() is safe
+
+
+def read(path: str | Path) -> GPFT:
+    """A fresh CPU model from a checkpoint (not cached)."""
+    ckpt = torch.load(_path(path), map_location="cpu", weights_only=True)
+    model = GPFT(**ckpt["config"])
+    model.load_state_dict(ckpt["state_dict"])
+    return model.eval()
+
+
+def load(path: str | Path) -> GPFT:
+    """Cached model on the inference device."""
+    path = _path(path)
     key = f"{path}:{path.stat().st_mtime}"
     if key not in _LOADED:
-        ckpt = torch.load(path, map_location="cpu", weights_only=True)
-        model = GPFT(**ckpt["config"])
-        model.load_state_dict(ckpt["state_dict"])
-        _LOADED[key] = model.to(device()).eval()
+        _LOADED[key] = read(path).to(device())
     return _LOADED[key]
+
+
+# --------------------------------------------------------------------------- ONNX export (browser inference)
+
+ONNX_INPUTS = [
+    *(f"{s}_{t}" for s in SENSORS for t in TIMES),
+    *(f"{s}_{t}_valid" for s in SENSORS for t in TIMES),
+    "dem",
+    "mask_e3",
+    "mask_d1",
+]
+ONNX_OPSET = 17
+
+
+class _OnnxGPFT(nn.Module):
+    """Positional inputs in ONNX_INPUTS order; the caller supplies the two Dropout2d masks (MC dropout)."""
+
+    def __init__(self, model: GPFT):
+        super().__init__()
+        self.model = model
+
+    def forward(self, *xs):
+        logits, w = self.model(dict(zip(ONNX_INPUTS[:-2], xs[:-2], strict=True)), masks=xs[-2:])
+        return logits, w["post"].squeeze(2).transpose(0, 1)  # (B, sensors, H, W) fusion weights
+
+
+def export_onnx(card: dict) -> dict:
+    """Write <model>.onnx next to the checkpoint and record it in the model card."""
+    model = read(card["checkpoint"])
+    c = model.config["channels"]
+    masks = {"mask_e3": 4 * c, "mask_d1": c}
+    xs = [torch.zeros(1, n, 64, 64) for s, n in SENSORS.items() for _ in TIMES]
+    xs += [torch.ones(1, 1, 64, 64) for _ in SENSORS for _ in TIMES]
+    xs += [torch.zeros(1, 2, 64, 64), torch.ones(1, masks["mask_e3"], 1, 1), torch.ones(1, masks["mask_d1"], 1, 1)]
+    out = _path(card["checkpoint"]).with_suffix(".onnx")
+    image = {0: "batch", 2: "height", 3: "width"}
+    torch.onnx.export(
+        _OnnxGPFT(model),
+        tuple(xs),
+        str(out),
+        input_names=ONNX_INPUTS,
+        output_names=["logits", "weights"],
+        dynamic_axes={n: ({0: "batch"} if n.startswith("mask") else image) for n in ONNX_INPUTS}
+        | {"logits": image, "weights": image},
+        opset_version=ONNX_OPSET,
+        dynamo=False,
+    )
+    card = card | {
+        "onnx": {
+            "file": out.name,
+            "sha256": sha256(out),
+            "opset": ONNX_OPSET,
+            "inputs": ONNX_INPUTS,
+            "masks": masks,
+            "dropout": model.config["dropout"],
+            "tasks": model.tasks,
+        }
+    }
+    _path(card["checkpoint"]).with_suffix(".json").write_text(json.dumps(card, indent=2))
+    return card
 
 
 BASELINE_CARD = {
@@ -239,11 +311,13 @@ BASELINE_CARD = {
 
 def list_models() -> list[dict]:
     cards = [BASELINE_CARD]
-    for p in sorted(models_dir().glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True):
+    trained = []
+    for p in models_dir().glob("*.json"):
         card = json.loads(p.read_text(encoding="utf-8"))
         if (p.parent / card.get("checkpoint", "")).is_file():
-            cards.append(card)
-    return cards
+            trained.append(card)
+    # Newest training run first (by the card's timestamp: file times change whenever a card is rewritten).
+    return cards + sorted(trained, key=lambda c: c.get("created", ""), reverse=True)
 
 
 def resolve(model_id: str = "auto", task: str | None = None) -> dict:

@@ -1,4 +1,4 @@
-# GeoPulse architecture (v0.2, local-first: flood, wildfire, vegetation disturbance)
+# GeoPulse architecture (v0.3: flood, wildfire, vegetation disturbance; Python or in-browser)
 
 ```text
 request (AOI, windows, task, sensors)      geopulse/pipeline.py::make_request   — one validator for CLI, API, SDK
@@ -22,6 +22,18 @@ STAC item, Web-Mercator PNG layers                                              
         │
         ▼
 FastAPI jobs + MapLibre web map            geopulse/api.py, geopulse/web/index.html
+```
+
+The same inference pipeline also runs in a web browser (ADR-011):
+
+```text
+geopulse/web/index.html ──postMessage──▶ geopulse/web/worker.js (module Web Worker)
+                                          ├─ engine.js: request validation, UTM grid, projection, warping,
+                                          │  compositing, physics baseline, model inputs, map rendering
+                                          ├─ geotiff.js: COG range reads from Planetary Computer blob storage
+                                          ├─ ONNX Runtime Web: GPFT-mini on WebGPU / WebAssembly
+                                          └─ d3-contour + geotiff.js writer: polygons and GeoTIFFs
+results (Blobs) ──▶ IndexedDB (kept on the device) ──▶ MapLibre layers and downloads
 ```
 
 Training side: `geopulse/bench.py` (manifest → tiles + label source + leakage audit) → `geopulse/train.py`
@@ -98,3 +110,16 @@ one head or three.
 machine; the `ponytail:` comment in `api.py` marks where Redis + RQ/Celery goes when jobs must survive restarts.
 
 **ADR-010 Apache-2.0 for code; data licenses tracked separately** in `DATA_LICENSES.md`.
+
+**ADR-011 Compute in the visitor's browser.** Inspired by GeoLibre, the hosted platform is static files and each
+visitor's machine does the work, so it scales with its users and costs nothing to run. Pyodide (Python in
+WebAssembly) was ruled out: it has neither PyTorch nor rasterio/GDAL network I/O. The pipeline is instead ported to
+dependency-free JavaScript (`engine.js`) that mirrors the Python functions one-for-one, and
+`tests/test_js_parity.py` runs it under Node.js against the Python reference (identical grids and requests,
+millimetre UTM agreement, baseline and model inputs within 1e-4). The model is exported to ONNX with its two
+`Dropout2d` masks as inputs, so the browser draws MC-dropout masks itself (`tests/test_onnx.py`: ONNX = PyTorch
+within 1e-4). Everything the browser reads is CORS-enabled: Planetary Computer STAC and SAS tokens (signed per storage
+account and container, since the DEM lives in a different account than its collection token) and the Hugging Face
+model files (SHA-256 verified). Limits: 300 km² per job (browser memory), and single-threaded WebAssembly because
+static hosts do not send cross-origin-isolation headers; WebGPU makes that moot where available. Results stay on the
+device in IndexedDB; nothing is uploaded.

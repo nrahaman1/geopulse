@@ -58,7 +58,11 @@ def pull_models(repo: str = MODEL_REPO, revision: str | None = None, log: Log = 
     """Download every checkpoint + card into models_dir() and verify checksums (corrupt files are deleted)."""
     dest = models.models_dir()
     snapshot_download(
-        repo, revision=revision, allow_patterns=["*.pt", "*.json"], ignore_patterns=["eval/*"], local_dir=dest
+        repo,
+        revision=revision,
+        allow_patterns=["*.pt", "*.json", "*.onnx"],
+        ignore_patterns=["eval/*", "index.json"],
+        local_dir=dest,
     )
     pulled = []
     for card_path in sorted(dest.glob("*.json")):
@@ -78,10 +82,14 @@ def stage_models(out: Path, runs: Path = Path("runs"), data_repo: str = DATA_REP
     """Lay out a model repo: checkpoints + cards at the root, eval reports under eval/, README model card."""
     out.mkdir(parents=True, exist_ok=True)
     staged = []
-    for card in models.list_models()[1:]:  # [0] is the training-free baseline
-        for suffix in (".pt", ".json"):
-            shutil.copy2(models.models_dir() / f"{Path(card['checkpoint']).stem}{suffix}", out)
+    cards = models.list_models()[1:]  # [0] is the training-free baseline
+    for card in cards:
+        stem = Path(card["checkpoint"]).stem
+        for suffix in (".pt", ".json", ".onnx"):
+            if (models.models_dir() / f"{stem}{suffix}").exists():
+                shutil.copy2(models.models_dir() / f"{stem}{suffix}", out)
         staged.append(card["model_id"])
+    (out / "index.json").write_text(json.dumps(cards, indent=2))  # the browser engine picks models from this
     for report in runs.glob("*/eval_*.json"):
         (out / "eval" / report.parent.name).mkdir(parents=True, exist_ok=True)
         shutil.copy2(report, out / "eval" / report.parent.name / report.name)

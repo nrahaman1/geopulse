@@ -6,14 +6,14 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Models on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-models-yellow.svg)](https://huggingface.co/nafizrahaman/geopulse-gpft-mini)
 [![Benchmark on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-GeoPulse--Bench-yellow.svg)](https://huggingface.co/datasets/nafizrahaman/geopulse-bench)
-[![Online showcase](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-open%20the%20platform-3fb6c8.svg)](https://nafizrahaman-geopulse.static.hf.space)
+[![Open the platform](https://img.shields.io/badge/%F0%9F%9B%B0%EF%B8%8F-open%20the%20platform-3fb6c8.svg)](https://nrahaman1.github.io/geopulse/)
 
 ## ▶ Open the platform
 
 | | |
 |---|---|
-| **Online showcase** — instant, nothing to install | **<https://nafizrahaman-geopulse.static.hf.space>** — the GeoPulse web map with precomputed results for 13 flood, wildfire and forest-loss events: search places, explore layers, swipe before/after, download results. |
-| **Full platform on any place** — free | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) — builds in a few minutes, then the map opens by itself: search any place, pick dates, run all three tasks. |
+| **In your browser** — nothing to install | **<https://nrahaman1.github.io/geopulse/>** (mirror: <https://nafizrahaman-geopulse.static.hf.space>) — the full platform on any place: search, pick dates and a task, run. **Your own computer does the work** ([how](#in-browser-engine)); nothing is uploaded and no server is involved. Areas up to 300 km². |
+| **Python server in the cloud** — free | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) — builds in a few minutes, then the map opens by itself (areas up to 500 km²). |
 | **On your machine** (GPU optional) | see [Quickstart](#quickstart) or `docker compose up`. |
 
 ```text
@@ -28,7 +28,7 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
      Probability + uncertainty + polygons + provenance (COG / GeoJSON / STAC)
 ```
 
-**Status: v0.2 (alpha), three tasks.** Runs on a laptop against public data, with or without a GPU. What is
+**Status: v0.3 (alpha), three tasks.** Runs in a web browser, or on a laptop with or without a GPU, against public data. What is
 implemented and why: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md); results and caveats:
 [MODEL_CARD.md](MODEL_CARD.md); what comes next: [ROADMAP.md](ROADMAP.md).
 
@@ -115,11 +115,39 @@ POST /predict/sync       (≤ 25 km²)      GET /metrics     (Prometheus text)
 Jobs are validated up front (task, geometry, ≤ 500 km², ordered windows ≤ 120 days, known sensors), run on a
 background worker, and persisted under `outputs/jobs/<id>/`.
 
-**Web map** (`/`): search a place or `lat, lon` (sets a 10 × 10 km box), pick one of 13 examples (💧 flood,
+**Web map** (`/`, and the hosted platform): search a place or `lat, lon` (sets a 10 × 10 km box), pick one of 13 examples (💧 flood,
 🔥 wildfire, 🌲 vegetation), draw a box or upload GeoJSON;
 set task, windows, sensors and model (filtered by task); run. Layers for the task probability, burn severity,
 uncertainty, change, extent polygons and pre/post S1/S2 imagery; opacity; before/after swipe; metrics (affected km²,
 review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads.
+**Compute** chooses where a job runs: *this browser* (always available) or *GeoPulse server* (when the page is served
+by `geopulse serve`). Browser jobs and their files are kept on the device (IndexedDB), 10 at most.
+
+## In-browser engine
+
+Following [GeoLibre](https://github.com/opengeos/GeoLibre), the hosted platform is static files and every job runs on
+the visitor's machine: [`geopulse/web/worker.js`](geopulse/web/worker.js) (a Web Worker) and
+[`geopulse/web/engine.js`](geopulse/web/engine.js) redo the Python pipeline in JavaScript.
+
+1. STAC search on the Planetary Computer, scene selection, per-container SAS signing (all CORS-enabled).
+2. HTTP range reads of only the COG windows over the AOI ([geotiff.js](https://geotiffjs.github.io/)), warped to the
+   same 10 m UTM grid as Python (own UTM projection, bilinear/nearest with nodata renormalisation).
+3. Task-aware composites, SCL cloud masks, dB conversion, DEM slope, physics baseline and dNBR severity.
+4. The GeoPulse model as ONNX ([ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/)) on **WebGPU** (8 MC-dropout
+   passes) or WebAssembly (3 passes), downloaded from Hugging Face and SHA-256 verified.
+5. Polygons ([d3-contour](https://github.com/d3/d3-contour)), map overlays, GeoTIFF/GeoJSON/summary/provenance downloads.
+
+Same events, browser vs Python server (both `gpft-multitask-mini`, 8 MC passes):
+
+| Event | Browser | Python | Browser time (cold, WebGPU) |
+|---|---:|---:|---:|
+| Emilia 2023 flood, flooded km² | 17.68 | 17.70 | 178 s |
+| Palisades 2025 fire, burned km² | 73.79 | 73.76 | 182 s |
+| Pará 2020 forest loss, disturbed km² | 16.31 | 16.04 | 287 s |
+
+Most of the time is spent downloading imagery; reruns with other sensors or models reuse it while the tab is open.
+Without WebGPU a model pass is ~12× slower, so WebAssembly uses 3 passes. `tests/test_js_parity.py` checks the engine against the Python reference
+under Node.js (grids, projections, requests, masks, baseline, model inputs); `tests/test_onnx.py` checks ONNX against PyTorch.
 
 ## Models
 
@@ -173,18 +201,21 @@ for this 0.54 M-parameter model.
 |---|---|---|
 | Trained checkpoints + eval reports | [nafizrahaman/geopulse-gpft-mini](https://huggingface.co/nafizrahaman/geopulse-gpft-mini) | `geopulse models pull` |
 | GeoPulse-Bench tiles (flood, wildfire, vegetation) | [nafizrahaman/geopulse-bench](https://huggingface.co/datasets/nafizrahaman/geopulse-bench) | `geopulse dataset pull` |
-| Online showcase (static Space) | [nafizrahaman/geopulse](https://huggingface.co/spaces/nafizrahaman/geopulse) | open <https://nafizrahaman-geopulse.static.hf.space>; rebuild with `scripts/export_static.py` |
+| ONNX models for the browser | same repo (`*.onnx`, `index.json`) | `geopulse models export-onnx --model all`, then `models push` |
+| In-browser platform (static Space, mirror of GitHub Pages) | [nafizrahaman/geopulse](https://huggingface.co/spaces/nafizrahaman/geopulse) | `python scripts/build_web.py site && hf upload nafizrahaman/geopulse site --repo-type space` |
 | Full live Space (Docker, needs HF PRO hardware) | ready in [deploy/huggingface-space/](deploy/huggingface-space/) | `hf upload <user>/<space> deploy/huggingface-space --repo-type space` |
 
 ## Development
 
 ```bash
-uv run pytest          # offline: grid alignment, physics per task, modality combinations, multi-task, API, Hub
-uv run ruff check geopulse tests
+uv run pytest          # offline: grid alignment, physics per task, modality combinations, multi-task, API, Hub,
+                       # browser engine vs Python (needs Node.js), ONNX vs PyTorch
+uv run ruff check geopulse tests scripts
+python scripts/build_web.py site && python -m http.server -d site   # the static platform at http://localhost:8000
 ```
 
 Layout: `geopulse/{tasks,stac,grid,data,baseline,model,bench,train,pipeline,hub,api,cli}.py`,
-`geopulse/web/index.html`, `configs/`, `examples/`, `tests/`, `docs/`, `deploy/`.
+`geopulse/web/{index.html,engine.js,worker.js}`, `configs/`, `examples/`, `tests/`, `docs/`, `deploy/`.
 Contributions welcome: [CONTRIBUTING.md](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) ·
 [Security](SECURITY.md) · [Changelog](CHANGELOG.md). Citing GeoPulse: [CITATION.cff](CITATION.cff).
 

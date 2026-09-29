@@ -102,6 +102,17 @@ def cmd_models_pull(a):
         sys.exit(f"error: no checkpoints found in {a.repo}")
 
 
+def cmd_models_export(a):
+    from .model import export_onnx, list_models
+
+    cards = [c for c in list_models()[1:] if a.model in ("all", c["model_id"])]
+    if not cards:
+        sys.exit(f"error: no trained model matches {a.model!r}")
+    for card in cards:
+        card = export_onnx(card)
+        print(f"✓ {card['onnx']['file']}  sha256 {card['onnx']['sha256'][:12]}")
+
+
 def cmd_models_push(a):
     from .hub import push_models
 
@@ -241,6 +252,9 @@ def main(argv=None):
     m.add_argument("--repo", default=None)
     m.add_argument("--revision", default=None)
     m.set_defaults(fn=cmd_models_pull)
+    m = ms.add_parser("export-onnx", help="export checkpoints to ONNX for the in-browser engine")
+    m.add_argument("--model", default="all")
+    m.set_defaults(fn=cmd_models_export)
     m = ms.add_parser("push", help="publish trained checkpoints to Hugging Face (maintainers)")
     m.add_argument("--repo", default=None)
     m.add_argument("--private", action="store_true")

@@ -10,8 +10,13 @@ git clone https://github.com/nrahaman1/geopulse && cd geopulse
 uv sync                       # installs the package, dev tools and PyTorch (CUDA on Windows/Linux)
 uv run pre-commit install     # ruff + basic hygiene on every commit
 uv run geopulse doctor
-uv run pytest                 # offline: no STAC or Hub access needed
+uv run pytest                 # offline: no STAC or Hub access needed (browser-engine parity tests need Node.js)
 ```
+
+The web platform is `geopulse/web/`. `geopulse serve` serves it with the API; for the static build (no server, the
+browser computes everything) run `python scripts/build_web.py site && python -m http.server -d site 8080`. A change to
+the Python pipeline that alters results needs the matching change in `geopulse/web/engine.js` or `worker.js`;
+`tests/test_js_parity.py` compares the two.
 
 CPU-only machine: `uv pip install torch --index-url https://download.pytorch.org/whl/cpu` after `uv sync`.
 Pull trained weights with `uv run geopulse models pull`; rebuild or download benchmarks with
@@ -43,7 +48,7 @@ Pull trained weights with `uv run geopulse models pull`; rebuild or download ben
 2. `git tag vX.Y.Z && git push --tags` — `.github/workflows/release.yml` builds, publishes to PyPI (trusted
    publishing) and creates a GitHub release.
 3. New weights: `geopulse models push`; new benchmark tiles: `geopulse dataset push` (needs `hf auth login`).
-4. Online showcase: `python scripts/export_static.py site && hf upload nafizrahaman/geopulse site --repo-type space`.
+4. In-browser platform: `geopulse models export-onnx --model all`, then `python scripts/build_web.py site && hf upload nafizrahaman/geopulse site --repo-type space` (GitHub Pages deploys automatically).
 
 By contributing you agree that your contributions are licensed under Apache-2.0, and you confirm that you have the
 right to submit them (no employer-, sponsor- or third-party-restricted code or data).

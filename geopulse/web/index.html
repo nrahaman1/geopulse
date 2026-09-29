@@ -52,6 +52,9 @@
   .jobs { font: 12px var(--mono); }
   .jobs div { display: flex; justify-content: space-between; padding: 4px 0; cursor: pointer; color: var(--muted); }
   .jobs div:hover { color: var(--text); }
+  .jobs div > span:first-child { flex: 1; }
+  .jobs .del { background: none; border: 0; padding: 0 0 0 8px; color: var(--muted); cursor: pointer; font: inherit; }
+  .jobs .del:hover { color: var(--bad); }
   .st-succeeded { color: var(--ok); } .st-failed { color: var(--bad); } .st-running, .st-queued { color: var(--warn); }
   #maps { position: relative; height: 100vh; }
   #map, #map-before { position: absolute; inset: 0; }
@@ -101,11 +104,13 @@
   <header><h1>GeoPulse</h1><span class="tag">Earth-change intelligence · <span id="version">v0.2</span></span>
     <a href="https://github.com/nrahaman1/geopulse" target="_blank" rel="noopener">GitHub ↗</a></header>
 
-  <section id="static-note" hidden style="background:var(--panel-2)">
-    <div class="hint" style="margin:0">Online showcase: results for the <b>example events</b> are precomputed.
-      To analyse any place, <a id="codespaces-link" target="_blank" rel="noopener" style="color:var(--accent)">open the full
-      platform in GitHub Codespaces</a> (free) or <a href="https://github.com/nrahaman1/geopulse#quickstart" target="_blank"
-      rel="noopener" style="color:var(--accent)">run it locally</a>.</div>
+  <section style="background:var(--panel-2)">
+    <h2>Compute</h2>
+    <div class="row" style="margin:0">
+      <label class="check"><input type="radio" name="engine" value="browser" checked> This browser</label>
+      <label class="check" id="engine-server" hidden><input type="radio" name="engine" value="server"> GeoPulse server</label>
+    </div>
+    <div class="hint" id="engine-hint"></div>
   </section>
 
   <section>
@@ -212,20 +217,17 @@
 
 <script>
 const $ = (id) => document.getElementById(id);
-// Showcase mode: served as static files (no API), results for the example events are precomputed under static/.
-let STATIC = null;
-const STATIC_ROUTES = [
-  [/^\/health$/, () => "static/health.json"], [/^\/models$/, () => "static/models.json"],
-  [/^\/examples$/, () => "static/examples.json"], [/^\/jobs\/([\w-]+)\/results$/, (m) => `static/results/${m[1]}/results.json`],
-  [/^\/jobs\/([\w-]+)$/, (m) => `static/results/${m[1]}/job.json`],
-];
+// Two compute engines. "browser": web/worker.js runs the whole pipeline on the visitor's machine (STAC + COG reads,
+// compositing, physics, ONNX model on WebGPU/WebAssembly). "server": a GeoPulse API (`geopulse serve`), if one serves
+// this page. Static hosting (GitHub Pages, Hugging Face) has only the browser engine.
+const HF_MODELS = "https://huggingface.co/nafizrahaman/geopulse-gpft-mini/resolve/main/";
+const BROWSER_MAX_KM2 = 300;
+const BASELINE = { model_id: "threshold-baseline", version: "1.1.0", tasks: ["flood", "wildfire", "vegetation"] };
+let SERVER = false, ENGINE = "browser", E = null, worker = null, VERSION = "?";
+let browserModels = [BASELINE], serverModels = [];
+const BROWSER_JOBS = new Map(); // id -> { job, res: { summary, layers, files: {name: Blob} } }, oldest first
+const KEEP_JOBS = 10;
 const api = async (path, opts) => {
-  if (STATIC) {
-    if (path === "/jobs") return [];
-    const hit = STATIC_ROUTES.map(([re, to]) => [path.match(re), to]).find(([m]) => m);
-    if (!hit) throw new Error("not available in the online showcase");
-    path = hit[1](hit[0]);
-  }
   const r = await fetch(path, opts);
   const body = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(body.detail || r.statusText);
@@ -369,7 +371,7 @@ $("upload").onchange = async (e) => {
 };
 
 // ------------------------------------------------------------------ examples, models, jobs
-let examples = [], allModels = [];
+let examples = [];
 const TASK_ICON = { flood: "💧", wildfire: "🔥", vegetation: "🌲" };
 const TASK_HINT = {
   flood: "Before: a dry period. After: the days right after the event (earliest clear view is used).",
@@ -386,24 +388,36 @@ function setTask(task) {
   $("task-hint").textContent = TASK_HINT[task];
   const keep = $("model").value;
   $("model").replaceChildren(new Option("auto", "auto"));
-  for (const m of allModels.filter((m) => m.tasks.includes(task))) $("model").add(new Option(`${m.model_id} v${m.version}`, m.model_id));
+  const models = ENGINE === "browser" ? browserModels : serverModels;
+  for (const m of models.filter((m) => m.tasks.includes(task))) $("model").add(new Option(`${m.model_id} v${m.version}`, m.model_id));
   $("model").value = [...$("model").options].some((o) => o.value === keep) ? keep : "auto";
 }
 $("task").onchange = () => setTask($("task").value);
 const setDates = (w, a, b) => { const [x, y] = Array.isArray(w) ? w : w.split("/"); $(a).value = x; $(b).value = y; };
+function setEngine(engine) {
+  ENGINE = engine;
+  document.querySelector(`input[name=engine][value=${engine}]`).checked = true;
+  $("engine-hint").textContent = engine === "browser"
+    ? `Runs on your computer: imagery streams straight from the Microsoft Planetary Computer and the model runs on your ${self.navigator.gpu ? "GPU (WebGPU)" : "CPU (WebAssembly)"}. Nothing is uploaded. Areas up to ${BROWSER_MAX_KM2} km².`
+    : "Runs on the GeoPulse server that serves this page (Python pipeline, server GPU if present).";
+  $("version").textContent = `v${VERSION} · ${engine === "browser" ? (self.navigator.gpu ? "WebGPU" : "WebAssembly") : "server"}`;
+  setTask($("task").value || "flood");
+}
+for (const el of document.querySelectorAll("input[name=engine]")) el.onchange = () => setEngine(el.value);
+
 async function init() {
-  STATIC = await fetch("static/site.json").then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  if (STATIC) {
-    $("static-note").hidden = false;
-    $("codespaces-link").href = STATIC.codespaces;
-  }
-  const [health, models] = await Promise.all([api("/health"), api("/models")]);
-  $("version").textContent = `v${health.version} · ${health.device}`;
-  allModels = models;
-  setTask("flood");
-  examples = await api("/examples");
+  E = await import("./web/engine.js");
+  const health = await fetch("/health").then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  SERVER = !!health?.status;
+  VERSION = health?.version ?? (await fetch("web/site.json").then((r) => r.json()).catch(() => ({}))).version ?? "?";
+  const index = await fetch(`${HF_MODELS}index.json`).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+  browserModels = [...index.filter((c) => c.onnx).map((c) => ({ ...c, tasks: c.onnx.tasks, url: HF_MODELS + c.onnx.file })), BASELINE];
+  if (SERVER) { serverModels = await api("/models"); $("engine-server").hidden = false; }
+  setEngine("browser");
+  examples = SERVER ? await api("/examples") : await fetch("examples.json").then((r) => r.json()).catch(() => []);
   for (const ex of examples) $("example").add(new Option(`${TASK_ICON[ex.task] || ""} ${ex.title || ex.id}`, ex.id));
   if (examples.length) { $("example").value = examples[0].id; $("example").onchange(); }
+  await loadBrowserJobs();
   refreshJobs();
 }
 $("example").onchange = () => {
@@ -419,14 +433,56 @@ $("example").onchange = () => {
 // Public deployments hide /jobs; each browser then remembers the jobs it started.
 const myJobs = () => { try { return JSON.parse(localStorage.getItem("geopulse.jobs") || "[]"); } catch { return []; } };
 const remember = (id) => { try { localStorage.setItem("geopulse.jobs", JSON.stringify([id, ...myJobs()].slice(0, 20))); } catch {} };
+
+// Browser jobs and their result files live in IndexedDB (as GeoLibre keeps projects), so they survive reloads.
+// Without IndexedDB (some private windows) they last until the tab closes.
+const DB = new Promise((resolve, reject) => {
+  const r = indexedDB.open("geopulse", 1);
+  r.onupgradeneeded = () => r.result.createObjectStore("jobs", { keyPath: "job.id" });
+  r.onsuccess = () => resolve(r.result);
+  r.onerror = () => reject(r.error);
+});
+async function store(mode, fn) {
+  const t = (await DB).transaction("jobs", mode);
+  const req = fn(t.objectStore("jobs"));
+  return new Promise((resolve, reject) => {
+    t.oncomplete = () => resolve(req?.result);
+    t.onerror = t.onabort = () => reject(t.error);
+  });
+}
+async function loadBrowserJobs() {
+  const recs = await store("readonly", (s) => s.getAll()).catch(() => []);
+  for (const rec of recs.sort((a, b) => a.job.created.localeCompare(b.job.created))) BROWSER_JOBS.set(rec.job.id, rec);
+}
+async function saveBrowserJob(rec) {
+  BROWSER_JOBS.set(rec.job.id, rec);
+  for (const old of [...BROWSER_JOBS.keys()].slice(0, -KEEP_JOBS)) await deleteBrowserJob(old);
+  const { urls, ...keep } = rec;
+  await store("readwrite", (s) => s.put(keep));
+}
+async function deleteBrowserJob(id) {
+  for (const u of Object.values(BROWSER_JOBS.get(id)?.urls ?? {})) URL.revokeObjectURL(u);
+  BROWSER_JOBS.delete(id);
+  await store("readwrite", (s) => s.delete(id)).catch(() => {});
+}
+
 async function refreshJobs() {
-  const jobs = await api("/jobs").catch(async () => (await Promise.all(myJobs().map((id) => api(`/jobs/${id}`).catch(() => null))))
+  const local = [...BROWSER_JOBS.values()].reverse().map(({ job }) => ({ ...job, task: job.request.task, aoi_km2: job.request.aoi_km2, local: true }));
+  const server = !SERVER ? [] : await api("/jobs").catch(async () => (await Promise.all(myJobs().map((id) => api(`/jobs/${id}`).catch(() => null))))
     .filter(Boolean).map((j) => ({ ...j, task: j.request.task, aoi_km2: j.request.aoi_km2 })));
-  if (!jobs.length) return;
-  $("jobs").replaceChildren(...jobs.slice(0, 8).map((j) => {
+  const jobs = [...local, ...server];
+  if (!jobs.length) return $("jobs").replaceChildren(Object.assign(document.createElement("span"), { className: "hint", textContent: "none yet" }));
+  $("jobs").replaceChildren(...jobs.slice(0, 12).map((j) => {
     const d = document.createElement("div");
-    d.innerHTML = `<span>${TASK_ICON[j.task] || ""} ${j.id} · ${j.aoi_km2?.toFixed?.(0) ?? "?"} km²</span><span class="st-${j.status}">${j.status}</span>`;
+    const when = j.local ? new Date(j.created).toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }) : j.id;
+    d.innerHTML = `<span>${TASK_ICON[j.task] || ""} ${when} · ${j.aoi_km2?.toFixed?.(0) ?? "?"} km²</span><span class="st-${j.status}">${j.local ? "in browser" : j.status}</span>`;
+    d.title = j.local ? `Computed in this browser (${j.id}); kept on this device` : `Server job ${j.id}`;
     d.onclick = () => j.status === "succeeded" ? showResults(j.id) : watch(j.id);
+    if (j.local) {
+      const x = Object.assign(document.createElement("button"), { type: "button", className: "del", textContent: "×", title: "Delete this result from this device" });
+      x.onclick = async (e) => { e.stopPropagation(); await deleteBrowserJob(j.id); refreshJobs(); };
+      d.append(x);
+    }
     return d;
   }));
 }
@@ -444,25 +500,45 @@ function logLines(lines) {
 
 $("run").onclick = async () => {
   if (!aoi) return logLines(["✗ Choose an area of interest first."]);
-  if (STATIC) {
-    const ex = $("example").value;
-    if (!ex) return logLines(["! The online showcase has precomputed results for the example events only.",
-      "  To analyse this area, open GeoPulse in GitHub Codespaces (free) or run it locally — see the note at the top."]);
-    logLines([`✓ Precomputed result for ${ex} (model: ${STATIC.model})`]);
-    return showResults(ex);
-  }
   const sensors = ["s1", "s2"].filter((s) => $(s).checked);
   if (!sensors.length) return logLines(["✗ Select at least one sensor."]);
   const body = {
     task: $("task").value, aoi, sensors, model: $("model").value,
     before: [$("b0").value, $("b1").value], after: [$("a0").value, $("a1").value],
   };
+  if (ENGINE === "browser") return runInBrowser(body);
   try {
     const job = await api("/jobs", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
     remember(job.id);
     watch(job.id);
   } catch (err) { logLines([`✗ ${err.message}`]); }
 };
+
+function runInBrowser(body) {
+  let request;
+  try { request = E.makeRequest({ ...body, maxKm2: BROWSER_MAX_KM2 }); }
+  catch (err) { return logLines([`✗ ${err.message}`]); }
+  const fits = browserModels.filter((m) => m.tasks.includes(request.task));
+  const card = body.model === "auto" ? fits[0] : fits.find((m) => m.model_id === body.model) ?? BASELINE;
+  const lines = [`browser job: ${request.task} with ${card.model_id}`];
+  logLines(lines);
+  $("run").disabled = true;
+  worker ??= new Worker("web/worker.js", { type: "module" });
+  worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); $("run").disabled = false; };
+  worker.onmessage = async ({ data }) => {
+    if (data.type === "log") { lines.push(data.msg); logLines(lines); return; }
+    $("run").disabled = false;
+    if (data.type === "error") { lines.push(`✗ ${data.message}`); logLines(lines); return; }
+    const id = [...crypto.getRandomValues(new Uint8Array(6))].map((b) => b.toString(16).padStart(2, "0")).join("");
+    const job = { id, status: "succeeded", request, log: lines, created: new Date().toISOString(), summary: data.result.summary };
+    const { summary, layers, files } = data.result;
+    try { await saveBrowserJob({ job, res: { summary, layers, files } }); }
+    catch (err) { lines.push(`! not kept after this tab closes (browser storage: ${err.message || err.name})`); logLines(lines); }
+    refreshJobs();
+    showResults(id);
+  };
+  worker.postMessage({ type: "run", request, model: card, version: VERSION });
+}
 
 async function watch(id) {
   $("run").disabled = true;
@@ -496,8 +572,11 @@ function addImage(m, id, url, b, opacity) {
 }
 
 async function showResults(id) {
-  const res = await api(`/jobs/${id}/results`);
-  const job = await api(`/jobs/${id}`);
+  const rec = BROWSER_JOBS.get(id);
+  if (rec) rec.urls ??= Object.fromEntries(Object.entries(rec.res.files).map(([k, blob]) => [k, URL.createObjectURL(blob)]));
+  const { res, job } = rec ? { res: { ...rec.res, files: rec.urls }, job: rec.job } : { res: await api(`/jobs/${id}/results`), job: await api(`/jobs/${id}`) };
+  if (rec) logLines(job.log);
+  await mapReady;
   current = { id, res };
   const { bounds, layers } = res.layers;
   const f = (name) => res.files[`layers/${name}.png`];
@@ -513,6 +592,12 @@ async function showResults(id) {
   map.addSource("outline", { type: "geojson", data: res.files[res.layers.extent] });
   map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": "#ffffff", "line-opacity": 0.7, "line-width": 0.8 } });
   setAoi(job.request.aoi, true);
+  // The form now describes this job, ready to tweak and rerun.
+  $("example").value = "";
+  setTask(job.request.task);
+  setDates(job.request.before, "b0", "b1");
+  setDates(job.request.after, "a0", "a1");
+  for (const k of ["s1", "s2"]) $(k).checked = job.request.sensors.includes(k);
 
   // Default visibility: optical if we have it, otherwise SAR.
   const afterImg = layers.includes("s2_post") ? "s2_post" : "s1_post";
@@ -543,7 +628,7 @@ async function showResults(id) {
     Object.entries(s.modality_weights).filter(([, v]) => v != null).map(([k, v]) =>
       `<div class="mono" style="font-size:12px">${k.toUpperCase()} ${(v * 100).toFixed(0)}%</div><div class="bar"><div style="width:${v * 100}%"></div></div>`).join("") : "";
   $("warnings").replaceChildren(...s.warnings.map((w) => Object.assign(document.createElement("li"), { textContent: w })));
-  $("files").innerHTML = Object.keys(res.files).filter((k) => !k.startsWith("layers")).map((k) => `<a href="${res.files[k]}" download>${k}</a>`).join("");
+  $("files").innerHTML = Object.keys(res.files).filter((k) => !k.startsWith("layers")).map((k) => `<a href="${res.files[k]}" download="${k}">${k}</a>`).join("");
 }
 
 function applyLayer(k, on) {
@@ -583,7 +668,7 @@ new ResizeObserver(() => { map.resize(); before.resize(); placeSwipe(); }).obser
 
 if (innerWidth < 800) $("layers").open = false;  // small screens: keep the map visible
 
-init().catch((err) => logLines([`✗ API unreachable: ${err.message}`]));
+init().catch((err) => logLines([`✗ could not start: ${err.message}`]));
 </script>
 </body>
 </html>

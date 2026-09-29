@@ -22,4 +22,9 @@ Only the latest release receives security fixes while GeoPulse is pre-1.0.
 - Result files are served only from inside the job's directory (path traversal is rejected; see `tests/test_api.py`).
 - Checkpoints are loaded with `torch.load(weights_only=True)`, and `geopulse models pull` verifies each file's
   SHA-256 against its model card before use.
+- The in-browser platform (GitHub Pages, Hugging Face static Space) has no backend. The visitor's browser talks
+  directly to the Planetary Computer (STAC search, anonymous SAS tokens, imagery), Hugging Face (model files, verified
+  by SHA-256 before use), jsDelivr and unpkg (JavaScript libraries), Esri (basemap tiles) and, for place search,
+  Nominatim. The AOI and dates are sent to the Planetary Computer as a STAC search; results stay in the browser's
+  IndexedDB and are never uploaded. Delete them from the jobs list or by clearing the site's data.
 - No credentials are stored in the repository. Hugging Face uploads use the token from `hf auth login`.

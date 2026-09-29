@@ -6,19 +6,23 @@ colorTo: indigo
 sdk: static
 app_file: index.html
 license: apache-2.0
-short_description: Flood, wildfire and forest-loss maps from Sentinel-1/2
+short_description: Flood, wildfire and forest-loss maps computed in your browser
 models:
   - nafizrahaman/geopulse-gpft-mini
 datasets:
   - nafizrahaman/geopulse-bench
 ---
 
-# GeoPulse — online showcase
+# GeoPulse
 
-The GeoPulse web map with precomputed results for 13 example events (floods, wildfires, forest loss), made by the
-multi-task GPFT-mini model from Sentinel-1, Sentinel-2 and the Copernicus DEM. Search a place, explore the layers,
-compare before/after imagery and download the results.
+The full GeoPulse platform, running on **your** computer. Search any place (or pick an example), choose before/after
+dates and a task (flood, wildfire/burn, vegetation disturbance), and your browser:
 
-To analyse **any** place and dates, run the full platform for free in
-[GitHub Codespaces](https://codespaces.new/nrahaman1/geopulse?quickstart=1) or locally — see
-<https://github.com/nrahaman1/geopulse>. Built with `scripts/export_static.py`.
+1. searches the Microsoft Planetary Computer STAC catalog and streams only the needed Sentinel-1, Sentinel-2 and
+   Copernicus DEM windows (HTTP range reads of Cloud-Optimized GeoTIFFs),
+2. composites and harmonises them on a 10 m UTM grid,
+3. runs the GeoPulse multi-task model (ONNX Runtime Web on WebGPU, or WebAssembly) with MC-dropout uncertainty,
+4. maps the result and lets you download GeoTIFFs, GeoJSON polygons, a summary and provenance.
+
+No server does any computing and nothing is uploaded. Source, docs and benchmarks:
+<https://github.com/nrahaman1/geopulse> (built with `scripts/build_web.py`).
