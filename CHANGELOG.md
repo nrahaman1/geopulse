@@ -3,7 +3,7 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
-## [Unreleased]
+## [0.5.1] — 2026-10-01
 
 ### Added
 - Example event: the Trishuli debris flood of 26 August 2026 in Nuwakot, Nepal (Bidur/Trishuli Bazar, Betrawati,
