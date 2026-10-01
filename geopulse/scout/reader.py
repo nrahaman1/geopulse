@@ -16,6 +16,7 @@ import math
 import os
 import re
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 import urllib.robotparser
@@ -33,6 +34,10 @@ MAX_CHARS = 8000  # the facts are near the top of a news story
 MAX_PLACE_KM = 150  # a geocode bigger than this (a state, a country) is too vague to map
 TOO_VAGUE = {"country", "state", "region", "province", "continent", "ocean", "sea"}
 PLACE_KINDS = {"place", "boundary", "natural", "waterway", "water", "leisure", "landuse"}  # Nominatim categories
+# A quote with these words announces or warns of an event; it is no evidence that one happened.
+SPECULATIVE = re.compile(
+    r"\b(watch(es)?|warnings?|forecasts?|risk of|threat of|expected to|outlook|advisor(y|ies))\b", re.I
+)
 
 SYSTEM = (
     "You extract Earth-surface change events from one news article for a satellite mapping system. "
@@ -176,12 +181,16 @@ def extract(article: dict, text: str, why: list | None = None) -> dict | None:
         return None
     body = _norm(f"{article['title']} {text}")
     quotes = [q for q in out.get("evidence", []) if len(_norm(q)) > 20 and _norm(q).rstrip(".") in body]
+    facts = [q for q in quotes if not SPECULATIVE.search(q)]
     # A place must be in the quoted evidence or the title, not merely somewhere on the page (where an injected
     # sentence could have put it).
-    support = _norm(" ".join([article["title"], *quotes]))
+    support = _norm(" ".join([article["title"], *facts]))
     places = [loc for loc in out.get("locations", []) if loc.get("place") and _norm(loc["place"]) in support]
-    if not quotes or not places:  # nothing the article itself supports
-        why.append("quote not in article" if not quotes else "place not in the evidence")
+    if not facts or not places:  # nothing the article itself supports
+        why.append(
+            "quote not in article" if not quotes else "only forecasts or warnings quoted" if not facts
+            else "place not in the evidence"
+        )  # fmt: skip
         return None
     published = dt.date.fromisoformat(article["date"])
     window = (published - dt.timedelta(days=60), published + dt.timedelta(days=1))
@@ -193,7 +202,7 @@ def extract(article: dict, text: str, why: list | None = None) -> dict | None:
         "start": start,
         "end": max(start, end),
         "impact": out.get("impact", "")[:300],
-        "quote": quotes[0][:400],
+        "quote": facts[0][:400],
     }
 
 
@@ -209,11 +218,25 @@ def _cache() -> tuple[Path, dict]:
     return path, (json.loads(path.read_text(encoding="utf-8")) if path.exists() else {})
 
 
-def _mappable(hit: dict) -> bool:
-    """A town, district, park, river…: not a building or shop, and not a state or country."""
+def _plain(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
+
+
+def _mappable(hit: dict, asked: str) -> bool:
+    """A town, district, park, river… called what was asked for: not a building or shop (place rank 30), not a state
+    or country, and not a place whose name merely occurs in the words asked for ("State" for "the state") or contains
+    them ("Vanny Bio-research (Cambodia)" for "Cambodia")."""
     s, n, w, e = map(float, hit["boundingbox"])
     km = math.hypot((n - s) * 110.6, (e - w) * 111.3 * math.cos(math.radians((n + s) / 2)))
-    return hit.get("category") in PLACE_KINDS and hit.get("addresstype") not in TOO_VAGUE and km <= MAX_PLACE_KM
+    name = _plain(hit.get("name") or "")
+    return (
+        hit.get("category") in PLACE_KINDS
+        and hit.get("addresstype") not in TOO_VAGUE
+        and int(hit.get("place_rank", 30)) < 30
+        and km <= MAX_PLACE_KM
+        and bool(name)
+        and re.search(rf"\b{re.escape(name)}\b", _plain(asked)) is not None  # case-sensitive: names are capitalised
+    )
 
 
 def geocode(place: str, admin: str, country: str) -> dict | None:
@@ -222,17 +245,18 @@ def geocode(place: str, admin: str, country: str) -> dict | None:
     global _last_geocode
     path, cache = _cache()
     queries = ((place, admin, country), (place, country), (admin, country))
-    for q in dict.fromkeys(", ".join(p for p in parts if p) for parts in queries if parts[0]):
+    for q, asked in dict.fromkeys((", ".join(p for p in parts if p), parts[0]) for parts in queries if parts[0]):
         # Places, boundaries, natural features, parks and reserves: not shops, banks and hotels (the "poi" layer).
-        params = {"q": q, "format": "jsonv2", "limit": 5, "layer": "address,natural,manmade"}
-        key = f"{params['layer']}|{q}"  # raw results are cached, so a change to _mappable applies to them too
+        # English names, to compare with the English article.
+        params = {"q": q, "format": "jsonv2", "limit": 5, "layer": "address,natural,manmade", "accept-language": "en"}
+        key = f"{params['layer']}|en|{q}"  # raw results are cached, so a change to _mappable applies to them too
         if key not in cache:
             time.sleep(max(0.0, _last_geocode + 1.1 - time.time()))
             cache[key] = get_json("https://nominatim.openstreetmap.org/search", params)
             _last_geocode = time.time()
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(cache), encoding="utf-8")
-        if hit := next((h for h in cache[key] if _mappable(h)), None):
+        if hit := next((h for h in cache[key] if _mappable(h, asked)), None):
             s, n, w, e = map(float, hit["boundingbox"])
             return {"lon": float(hit["lon"]), "lat": float(hit["lat"]), "label": hit.get("display_name", q),
                     "bbox": [w, s, e, n]}  # fmt: skip

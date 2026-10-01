@@ -3,6 +3,13 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [Unreleased]
+
+### Fixed
+- Scout: the first live run accepted two flood forecasts and placed three stories at the wrong spot (a stadium, an
+  industrial site, a housing estate named "State"). Evidence quotes that only warn or forecast no longer count, and a
+  geocoded place must be a place (not a building) whose name is the one the story gives; names come in English.
+
 ## [0.5.0] — 2026-09-30
 
 ### Added
