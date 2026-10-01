@@ -44,7 +44,8 @@
       "../../README.md": "python/README.md",
       "../../LICENSE": "python/LICENSE",
       "../../NOTICE": "python/NOTICE",
-      "../../geopulse/*.py": "python/geopulse/"
+      "../../geopulse/*.py": "python/geopulse/",
+      "../../geopulse/scout/*.py": "python/geopulse/scout/"
     }
   },
   "plugins": {}

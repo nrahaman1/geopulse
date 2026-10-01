@@ -185,6 +185,14 @@ def get_model(model_id: str):
         raise HTTPException(404, str(e)) from None
 
 
+@app.get("/scout/cases")
+def scout_cases():
+    """Events the Scout found in official alerts and the news, each a ready-to-run case (`geopulse scout discover`)."""
+    from .scout import load_cases
+
+    return load_cases()
+
+
 @app.get("/examples")
 def examples():
     out = []

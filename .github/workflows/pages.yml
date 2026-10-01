@@ -32,8 +32,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release download models-v1 -R "$GITHUB_REPOSITORY" -p "*.onnx" -p index.json -D models
+      - name: The live Scout's cases (from the scout-data branch)
+        run: git fetch --depth 1 origin scout-data && git worktree add scout-data FETCH_HEAD || echo "no Scout data yet"
       - run: npm ci && npm run build
         working-directory: app
+        env:
+          GEOPULSE_SCOUT: ${{ github.workspace }}/scout-data
       - uses: actions/upload-pages-artifact@v4
         with:
           path: app/dist

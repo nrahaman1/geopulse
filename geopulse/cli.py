@@ -138,6 +138,42 @@ def _exit_with(pid: int) -> None:
     os._exit(0)
 
 
+def _case_line(c: dict) -> str:
+    scenes = c.get("scenes", {})
+    imagery = " ".join(f"{k.replace('_before', '↤').replace('_after', '↦')}{v}" for k, v in scenes.items()) or "-"
+    return (
+        f"{c['id']:34s} {c.get('status', '?'):19s} {c.get('confidence', '?'):6s} "
+        f"{len(c['sources']):2d} src  {imagery:28s} {c.get('title', '')}"
+    )
+
+
+def cmd_scout_discover(a):
+    from .scout import discover
+
+    for c in discover(days=a.days, news=not a.no_news, max_articles=a.max_articles, budget_minutes=a.budget_minutes):
+        print(_case_line(c))
+
+
+def cmd_scout_list(a):
+    from .scout import load_cases
+
+    cases = load_cases()
+    if not cases:
+        sys.exit("no cases yet: run `geopulse scout discover`")
+    for c in cases:
+        print(_case_line(c))
+
+
+def cmd_scout_run(a):
+    from .scout import run_case
+
+    try:
+        summary = run_case(a.case)
+    except (KeyError, ValueError) as e:
+        sys.exit(f"error: {e.args[0]}")
+    print(json.dumps({k: summary.get(k) for k in ("task", "affected_km2", "review_km2", "model")}, indent=2))
+
+
 def cmd_serve(a):
     import threading
 
@@ -283,6 +319,19 @@ def main(argv=None):
     m.add_argument("--repo", default=None)
     m.add_argument("--tag", default=None)
     m.set_defaults(fn=cmd_models_push)
+
+    s = sub.add_parser("scout", help="find floods, wildfires and forest loss in alerts and news; propose cases")
+    sc = s.add_subparsers(dest="action", required=True)
+    c = sc.add_parser("discover", help="read official feeds and the news, then plan and check cases")
+    c.add_argument("--days", type=int, default=3, help="look back this many days")
+    c.add_argument("--no-news", action="store_true", help="official feeds only (no LLM needed)")
+    c.add_argument("--max-articles", type=int, default=15, help="articles read per hazard")
+    c.add_argument("--budget-minutes", type=float, default=None, help="stop reading news after this long")
+    c.set_defaults(fn=cmd_scout_discover)
+    sc.add_parser("list", help="the current cases").set_defaults(fn=cmd_scout_list)
+    c = sc.add_parser("run", help="run the GeoPulse analysis of one case")
+    c.add_argument("case")
+    c.set_defaults(fn=cmd_scout_run)
 
     s = sub.add_parser("serve", help="run the API + web map")
     s.add_argument("--host", default="127.0.0.1")

@@ -30,12 +30,21 @@ function weights() {
   return { cards: usable, files: usable.map((c) => [c.onnx.file, resolve(dir, c.onnx.file)]) };
 }
 
+// The live Scout's cases and health, when GEOPULSE_SCOUT points at its state (the scout-data branch in CI).
+function scout() {
+  const dir = process.env.GEOPULSE_SCOUT;
+  const files = { "cases.json": "cases.json", "scout-status.json": "status.json" };
+  return Object.fromEntries(Object.entries(files).filter(([, f]) => dir && existsSync(resolve(dir, f)))
+    .map(([name, f]) => [name, readFileSync(resolve(dir, f))]));
+}
+
 function geopulseData() {
   const assets = () => {
     const w = weights();
     return {
       "examples.json": JSON.stringify(examples()),
       "site.json": JSON.stringify({ version: VERSION }),
+      ...scout(),
       "weights/index.json": JSON.stringify(w.cards),
       ...Object.fromEntries(w.files.map(([name, path]) => [`weights/${name}`, readFileSync(path)])),
     };

@@ -40,6 +40,8 @@ dependencies = [
 [project.optional-dependencies]
 gpu = ["torch>=2.4"]
 cpu = ["torch>=2.4"]
+# GeoPulse Scout (geopulse.scout): reads news articles. The LLM runs separately (e.g. Ollama).
+scout = ["scrapling[rag]>=0.4.15"]
 
 [project.urls]
 Homepage = "https://github.com/nrahaman1/geopulse"

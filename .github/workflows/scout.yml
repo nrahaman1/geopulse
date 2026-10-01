@@ -1,0 +1,110 @@
+name: Scout
+
+# Every 6 hours: read official alerts (GDACS, Copernicus EMS) and the news (GDELT; an open-weights LLM, Qwen3 8B, reads
+# the articles on the runner's CPU through Ollama), merge everything into ready-to-run cases, and publish them on the
+# scout-data branch. The web app (GitHub Pages) and the desktop app list them as "Recent events".
+# State lives on scout-data, never on main: cases.json, status.json (the health of each source), history.jsonl,
+# extractions.jsonl (every article read and its verdict, no article text) and the geocoder cache.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: news articles read per hazard
+        default: "10"
+
+permissions:
+  contents: write # push scout-data
+  actions: write # rebuild Pages, and keep this schedule enabled
+
+concurrency:
+  group: scout
+  cancel-in-progress: false
+
+env:
+  OLLAMA_VERSION: v0.35.0
+  GEOPULSE_LLM_MODEL: qwen3:8b # 8/8 on the reader benchmark; ~1 min per article on 4 CPU cores
+  GEOPULSE_SCOUT: ${{ github.workspace }}/scout-data
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Scout state (the scout-data branch)
+        run: |
+          if git fetch --depth 1 origin scout-data; then
+            git worktree add -B scout-data scout-data FETCH_HEAD
+          else
+            git worktree add --orphan -b scout-data scout-data  # first run ever
+          fi
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install GeoPulse with the Scout (CPU)
+        run: |
+          uv venv
+          uv pip install torch --index-url https://download.pytorch.org/whl/cpu
+          uv pip install -e ".[scout]"
+
+      - name: Cache the LLM runtime and model
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/ollama
+            ~/.ollama/models
+          key: ollama-${{ env.OLLAMA_VERSION }}-${{ env.GEOPULSE_LLM_MODEL }}
+
+      - name: Start the LLM (Ollama, CPU)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -x ~/ollama/bin/ollama ]; then
+            mkdir -p ~/ollama && cd ~/ollama
+            gh release download "$OLLAMA_VERSION" -R ollama/ollama -p ollama-linux-amd64.tar.zst -p sha256sum.txt
+            grep " ./ollama-linux-amd64.tar.zst$" sha256sum.txt | sed 's| \./| |' | sha256sum -c -
+            tar --zstd -xf ollama-linux-amd64.tar.zst
+            rm -rf ollama-linux-amd64.tar.zst sha256sum.txt lib/ollama/cuda_* lib/ollama/rocm*  # CPU runner
+            cd -
+          fi
+          OLLAMA_HOST=127.0.0.1:11434 nohup ~/ollama/bin/ollama serve > "$RUNNER_TEMP/ollama.log" 2>&1 &
+          for i in $(seq 60); do curl -sf 127.0.0.1:11434/api/version && break; sleep 1; done
+          ~/ollama/bin/ollama pull "$GEOPULSE_LLM_MODEL"
+
+      - name: Discover
+        run: >-
+          uv run --no-sync geopulse scout discover --days 2
+          --max-articles "${{ inputs.max_articles || '10' }}" --budget-minutes 90
+
+      - name: Publish to scout-data
+        if: always()
+        working-directory: scout-data
+        run: |
+          [ -f cases.json ] || exit 0
+          git add -A
+          git -c user.name="geopulse-scout[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Scout $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          git push origin scout-data
+
+      - name: Rebuild the web app with the new cases
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main # pushes by this token trigger no workflows by themselves
+
+      - name: Keep this schedule enabled
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow enable scout.yml # GitHub disables schedules in repositories idle for 60 days
+
+      - name: LLM log on failure
+        if: failure()
+        run: tail -50 "$RUNNER_TEMP/ollama.log" || true

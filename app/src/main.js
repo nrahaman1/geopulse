@@ -201,6 +201,7 @@ async function connectServer() {
   SERVER_INFO = await api("/health");
   serverModels = await api("/models");
   SERVER = true;
+  loadCases();
   $("engine-server").hidden = false;
   $("engine-server").querySelector("input").disabled = false;
   $("server-label").textContent = `${TAURI ? "This PC" : "GeoPulse server"} · ${SERVER_INFO.device}`;
@@ -253,19 +254,69 @@ async function init() {
   examples = await fetch("examples.json").then((r) => r.json()).catch(() => []);
   for (const ex of examples) $("example").add(new Option(`${TASK_ICON[ex.task] || ""} ${ex.title || ex.id}`, ex.id));
   if (examples.length) { $("example").value = examples[0].id; $("example").onchange(); }
+  loadCases();
   await loadBrowserJobs();
   refreshJobs();
   if (TAURI) desktopEngine();
   else if (await fetch("health").then((r) => r.ok && r.headers.get("content-type")?.includes("json")).catch(() => false)) await connectServer();
 }
 $("example").onchange = () => {
-  const ex = examples.find((x) => x.id === $("example").value);
+  const id = $("example").value;
+  const ex = examples.find((x) => x.id === id) ?? cases.find((x) => x.id === id);
+  showCase(cases.find((x) => x.id === id));
   if (!ex) return;
   setAoi(ex.aoi); // the AOI is set at once; the map draws it when it has loaded (slow or blocked basemaps included)
   setTask(ex.task || "flood");
-  setDates(ex.before, "b0", "b1");
-  setDates(ex.after, "a0", "a1");
+  if (ex.before) { setDates(ex.before, "b0", "b1"); setDates(ex.after, "a0", "a1"); }
+  if (ex.sensors) for (const k of ["s1", "s2"]) $(k).checked = ex.sensors.includes(k);
 };
+
+// ------------------------------------------------------------------ Scout cases
+// Events the Scout found in official alerts (GDACS, Copernicus EMS) and the news, served by the engine. They share
+// the examples' shape (title, task, aoi, before, after), so picking one fills the form; nothing runs until "Run".
+let cases = [];
+const LIVE = "https://nrahaman1.github.io/geopulse/"; // the live Scout publishes here every 6 hours
+const getJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))));
+async function loadCases() {
+  // The live Scout's cases are part of the GitHub Pages build; the desktop app and `geopulse serve` fetch them from
+  // there. A Scout run on this machine (`geopulse scout discover`) adds its own through the engine.
+  const [live, status] = await Promise.all(["cases.json", "scout-status.json"].map((f) =>
+    getJson(f).catch(() => getJson(LIVE + f)).catch(() => null)));
+  const local = SERVER ? await api("/scout/cases").catch(() => []) : [];
+  const byId = new Map([...(live ?? []), ...local].map((c) => [c.id, c]));
+  cases = [...byId.values()];
+  $("example").querySelector("optgroup[data-scout]")?.remove();
+  if (!cases.length) return;
+  const hours = status?.finished ? Math.round((Date.now() - Date.parse(status.finished)) / 3.6e6) : null;
+  const age = hours === null ? "" : `, updated ${hours < 1 ? "<1" : hours} h ago`;
+  const group = Object.assign(document.createElement("optgroup"), { label: `Recent events · Scout (${cases.length}${age})` });
+  group.dataset.scout = "";
+  for (const c of cases) group.append(new Option(`${TASK_ICON[c.task] || ""} ${c.title} · ${c.status}`, c.id));
+  $("example").append(group);
+}
+
+// News titles and quotes are untrusted text: built with textContent, never as HTML.
+function el(tag, props = {}, ...kids) {
+  const node = Object.assign(document.createElement(tag), props);
+  node.append(...kids);
+  return node;
+}
+function showCase(c) {
+  $("case-info").hidden = !c;
+  if (!c) return;
+  const sc = c.scenes ?? {};
+  const imagery = c.scenes ? `S1 ${sc.s1_before}→${sc.s1_after} · S2 ${sc.s2_before}→${sc.s2_after} scenes (before→after)` : "";
+  const sources = c.sources.map((s) => {
+    const link = /^https?:\/\//.test(s.url ?? "") ? el("a", { href: s.url, target: "_blank", rel: "noopener", textContent: s.title || s.url }) : el("span", { textContent: s.title ?? "" });
+    const who = s.kind === "news" ? s.outlet : s.kind === "cems" ? "Copernicus EMS" : "GDACS";
+    return el("li", {}, `${who} · ${s.date ?? ""} · `, link, ...(s.quote ? [el("q", { textContent: s.quote })] : []));
+  });
+  $("case-info").replaceChildren(
+    el("div", { className: "case-head" }, el("span", { className: `conf-${c.confidence}`, textContent: `${c.confidence} confidence` }), ` · ${c.status}`),
+    el("div", { textContent: imagery }),
+    el("ul", {}, ...sources),
+  );
+}
 
 // Public deployments hide /jobs; each browser then remembers the jobs it started.
 const myJobs = () => { try { return JSON.parse(localStorage.getItem("geopulse.jobs") || "[]"); } catch { return []; } };
