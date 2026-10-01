@@ -3,6 +3,24 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [0.5.0] — 2026-09-30
+
+### Added
+- **GeoPulse Scout** (`geopulse/scout/`, `geopulse scout discover|list|run`, [docs/SCOUT.md](docs/SCOUT.md)): finds
+  floods, wildfires and forest loss in official alerts (GDACS, Copernicus EMS, NASA EONET) and in the news (GDELT and
+  topic RSS feeds, read by an open-weights LLM through any OpenAI-compatible endpoint, Qwen3 8B on Ollama by default),
+  verifies quotes and places, geocodes them and plans each event as a ready-to-run case with before/after windows and
+  an imagery check. Optional extra `scout` (Scrapling). `GET /scout/cases`.
+- The live Scout: `.github/workflows/scout.yml` runs every 6 hours on GitHub Actions, keeps its state on the
+  `scout-data` branch and republishes GitHub Pages; the web and desktop apps list the cases as *Recent events*.
+- Self-update for the desktop app (tauri-plugin-updater): at startup the app checks the latest GitHub Release,
+  downloads a signed update in the background and installs it once no analysis is running.
+- The official GeoPulse logo: app icons, web app favicon and PWA icons, the header and the README.
+
+### Changed
+- Windows releases ship only the NSIS installer (`…_x64-setup.exe`), which upgrades an installed GeoPulse in place;
+  the MSI is no longer built, so updates never install a second copy.
+
 ## [0.4.1] — 2026-09-29
 
 ### Added

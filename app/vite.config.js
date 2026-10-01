@@ -85,7 +85,7 @@ export default defineConfig({
     VitePWA({
       disable: DESKTOP,
       registerType: "autoUpdate",
-      includeAssets: ["icon.svg"],
+      includeAssets: ["icons/32x32.png", "icons/192x192.png"],
       manifest: {
         name: "GeoPulse",
         short_name: "GeoPulse",
@@ -96,7 +96,6 @@ export default defineConfig({
         icons: [
           { src: "icons/192x192.png", sizes: "192x192", type: "image/png" },
           { src: "icons/512x512.png", sizes: "512x512", type: "image/png" },
-          { src: "icon.svg", sizes: "any", type: "image/svg+xml" },
         ],
       },
       workbox: {

@@ -410,11 +410,19 @@ fn stop(app: &AppHandle) {
     }
 }
 
+/// Before a self-update: the Windows installer replaces the app files and exits the app without RunEvent::Exit.
+#[tauri::command]
+fn engine_stop(app: AppHandle) {
+    stop(&app);
+}
+
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
+        .plugin(tauri_plugin_process::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
         .manage(Engine::default())
-        .invoke_handler(tauri::generate_handler![engine_status, engine_start])
+        .invoke_handler(tauri::generate_handler![engine_status, engine_start, engine_stop])
         .build(tauri::generate_context!())
         .expect("error while building GeoPulse")
         .run(|app, event| {

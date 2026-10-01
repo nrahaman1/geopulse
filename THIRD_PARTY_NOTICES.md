@@ -16,6 +16,8 @@ installed from its own distribution under its own license. Data licenses are in 
 | FastAPI | MIT (on Starlette, BSD-3-Clause; Pydantic, MIT) |
 | uvicorn | BSD-3-Clause |
 
+Optional (`scout` extra): Scrapling (BSD-3-Clause).
+
 Development only: pytest (MIT), httpx (BSD-3-Clause), ruff (MIT), pre-commit (MIT), onnx and onnxruntime (MIT).
 
 ## Bundled into the web and desktop app (app/, from npm)
@@ -27,7 +29,7 @@ Development only: pytest (MIT), httpx (BSD-3-Clause), ruff (MIT), pre-commit (MI
 | ONNX Runtime Web 1.30 | MIT (© Microsoft) |
 | d3-contour 4 and d3-array | ISC |
 | Workbox (service worker, via vite-plugin-pwa) | MIT |
-| Tauri 2 (desktop shell) and tauri-plugin-opener | Apache-2.0 / MIT |
+| Tauri 2 (desktop shell) and its opener, updater and process plugins | Apache-2.0 / MIT |
 | uv (bundled with the desktop app, installs its Python engine) | Apache-2.0 / MIT (© Astral) |
 
 Build tools: Vite (MIT), vite-plugin-pwa (MIT), yaml (ISC), @tauri-apps/cli (Apache-2.0 / MIT).
@@ -38,6 +40,10 @@ Build tools: Vite (MIT), vite-plugin-pwa (MIT), yaml (ISC), @tauri-apps/cli (Apa
 |---|---|
 | Esri World Imagery and World Dark Gray Canvas tiles | Esri Terms of Use; attribution shown on the map |
 | Nominatim place search (OpenStreetMap Foundation) | ODbL data, © OpenStreetMap contributors; Nominatim usage policy (one request per submitted search, no autocomplete) |
+
+The Scout (`geopulse scout`, and the scheduled workflow) also reads GDACS, Copernicus EMS, NASA EONET, the GDELT
+DOC API, the RSS feeds listed in `geopulse/scout/feeds.py` and the linked news pages (only where robots.txt allows;
+article text is never stored or published), runs Qwen3 (Apache-2.0) on Ollama (MIT), and geocodes with Nominatim.
 
 Also: Microsoft Planetary Computer STAC API and blob storage (anonymous signed URLs); Google Cloud Storage for
 Hansen Global Forest Change tiles; GitHub (Pages for the web app; release assets for installers, checkpoints and

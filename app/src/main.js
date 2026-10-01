@@ -245,6 +245,20 @@ async function desktopEngine(install = false) {
 }
 $("engine-start").onclick = () => desktopEngine(true);
 
+// Desktop app: a new release (signed; the app checks the signature) downloads in the background and installs once no
+// analysis or engine setup is running; the installer then restarts GeoPulse.
+async function selfUpdate(engineReady) {
+  const update = await TAURI.updater.check().catch(() => null);
+  if (!update) return;
+  await update.download();
+  await engineReady.catch(() => {});
+  while ($("run").disabled) await new Promise((r) => setTimeout(r, 15000));
+  logLines([`Installing GeoPulse ${update.version}: the app restarts in a moment…`]);
+  await TAURI.core.invoke("engine_stop");
+  await update.install(); // Windows: the installer takes over and reopens the app
+  await TAURI.process.relaunch(); // macOS and Linux
+}
+
 async function init() {
   VERSION = (await fetch("site.json").then((r) => r.json()).catch(() => ({}))).version ?? "?";
   const index = await fetch("weights/index.json").then((r) => (r.ok ? r.json() : [])).catch(() => []);
@@ -257,7 +271,7 @@ async function init() {
   loadCases();
   await loadBrowserJobs();
   refreshJobs();
-  if (TAURI) desktopEngine();
+  if (TAURI) selfUpdate(desktopEngine()).catch((err) => console.warn("update:", err));
   else if (await fetch("health").then((r) => r.ok && r.headers.get("content-type")?.includes("json")).catch(() => false)) await connectServer();
 }
 $("example").onchange = () => {

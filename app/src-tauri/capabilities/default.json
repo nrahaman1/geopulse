@@ -1,13 +1,21 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "The GeoPulse window: app commands and events, and opening web links in the system browser.",
-  "windows": ["main"],
+  "description": "The GeoPulse window: app commands and events, web links in the system browser, and self-update.",
+  "windows": [
+    "main"
+  ],
   "permissions": [
     "core:default",
     {
       "identifier": "opener:allow-open-url",
-      "allow": [{ "url": "https://*" }]
-    }
+      "allow": [
+        {
+          "url": "https://*"
+        }
+      ]
+    },
+    "updater:default",
+    "process:allow-restart"
   ]
 }

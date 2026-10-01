@@ -3,6 +3,8 @@ name: Release
 # Push a tag like v0.4.0: builds the desktop installers (Windows, macOS, Linux) and the Python wheel and attaches them
 # to the GitHub Release. PyPI publishing is optional (trusted publishing for project "geopulse-eo", environment "pypi";
 # then set the repository variable PYPI_PUBLISH=true).
+# Self-update: with the repository secret TAURI_SIGNING_PRIVATE_KEY set, the installers come with signed update
+# packages and latest.json, which installed apps check at startup (see plugins.updater in tauri.conf.json).
 on:
   push:
     tags: ["v*"]
@@ -37,7 +39,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { name: Windows x64, os: windows-latest, target: x86_64-pc-windows-msvc, args: "" }
+          - { name: Windows x64, os: windows-latest, target: x86_64-pc-windows-msvc, args: --bundles nsis } # one installer type, so an update never installs a second copy
           - { name: macOS Apple silicon, os: macos-latest, target: aarch64-apple-darwin, args: --target aarch64-apple-darwin }
           - { name: macOS Intel, os: macos-latest, target: x86_64-apple-darwin, args: --target x86_64-apple-darwin }
           - { name: Linux x64, os: ubuntu-22.04, target: x86_64-unknown-linux-gnu, args: "--bundles deb,appimage" }
@@ -66,10 +68,13 @@ jobs:
       - uses: tauri-apps/tauri-action@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
         with:
           projectPath: app
           tagName: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || '' }}
-          args: ${{ matrix.args }}
+          args: ${{ matrix.args }} ${{ secrets.TAURI_SIGNING_PRIVATE_KEY != '' && '--config src-tauri/tauri.updater.conf.json' || '' }}
+          updaterJsonPreferNsis: true
       - if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v4
         with:

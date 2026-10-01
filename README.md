@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/geopulse-logo.png" alt="GeoPulse: Earth Intelligence" width="420"></p>
+
 # GeoPulse
 
 Open-source multimodal geospatial AI for Earth-change intelligence.
@@ -15,6 +17,9 @@ Open-source multimodal geospatial AI for Earth-change intelligence.
 | **Web app** — nothing to install | **<https://nrahaman1.github.io/geopulse/>**: the same app, computing in your browser (WebGPU, else WebAssembly). Nothing is uploaded and no server is involved. Areas up to 300 km². Installable as a PWA. |
 | **Python** (CLI, SDK, API) | see [Quickstart](#quickstart), `docker compose up`, or [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/nrahaman1/geopulse?quickstart=1) |
 
+Installing a new version over an old one upgrades it in place, and from v0.5.0 the desktop app updates itself: it
+checks for a new release at startup and installs it when no analysis is running.
+
 The installers are not code-signed yet: Windows SmartScreen asks you to confirm ("More info" → "Run anyway"), and on
 macOS open the app once with right-click → Open.
 
@@ -30,14 +35,14 @@ macOS open the app once with right-click → Open.
      Probability + uncertainty + polygons + provenance (COG / GeoJSON / STAC)
 ```
 
-**Status: v0.4 (alpha), three tasks.** A desktop app, a web app and a Python package, all on public data. What is
+**Status: v0.5 (alpha), three tasks.** A desktop app, a web app and a Python package, all on public data. What is
 implemented and why: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md); results and caveats:
 [MODEL_CARD.md](MODEL_CARD.md); what comes next: [ROADMAP.md](ROADMAP.md).
 
 ## Quickstart
 
 ```bash
-pip install https://github.com/nrahaman1/geopulse/releases/download/v0.4.1/geopulse_eo-0.4.1-py3-none-any.whl
+pip install https://github.com/nrahaman1/geopulse/releases/download/v0.5.0/geopulse_eo-0.5.0-py3-none-any.whl
 # Python 3.11+. The wheel on each release includes the web app; the command and import are `geopulse`.
 geopulse models pull         # trained checkpoints from GitHub Releases, SHA-256 verified
 geopulse doctor              # GDAL, PROJ, PyTorch, CUDA, STAC connectivity
@@ -126,6 +131,11 @@ a progress bar with the current stage while a job runs.
 **Compute** chooses where a job runs: the *PC engine* (desktop app), the *GeoPulse server* (when `geopulse serve`
 serves the page) or *built-in* (this browser, always available). Built-in jobs and their files are kept on the
 device (IndexedDB), 10 at most.
+
+**Scout** ([docs/SCOUT.md](docs/SCOUT.md)): every 6 hours a GitHub Actions run reads official alerts (GDACS,
+Copernicus EMS, NASA EONET) and the news with an open-weights LLM, and proposes each new flood, wildfire or forest-loss
+event as a ready-to-run case. The apps list them under *Recent events*; picking one fills the form, nothing runs until
+you press Run. Locally: `geopulse scout discover` (needs `--extra scout` and an OpenAI-compatible LLM such as Ollama).
 
 ## How it runs
 

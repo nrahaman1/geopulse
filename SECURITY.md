@@ -31,4 +31,10 @@ Only the latest release receives security fixes while GeoPulse is pre-1.0.
   token (a random 192-bit value held by the app); CORS allows only the app's own origins. The engine environment is
   installed by the bundled uv from the bundled lockfile (hashes pinned); checkpoints come from this repository's
   `models-v1` release and are SHA-256 verified. The app's content security policy allows scripts only from the app.
+- Desktop updates: the app installs an update only if its minisign signature matches the public key built into the
+  app (`plugins.updater` in `tauri.conf.json`); the private key is a repository secret used only by the release
+  workflow. Updates come from this repository's latest GitHub Release over HTTPS.
+- Scout: news pages are untrusted input. The model reading them has no tools and must fill a strict JSON schema;
+  code checks every quote against the article, geocodes places itself and plans the case. The scheduled run writes
+  only to the `scout-data` branch, and the apps display case text as text, never as HTML.
 - No credentials are stored in the repository. Publishing releases uses the `gh` CLI's own login.
