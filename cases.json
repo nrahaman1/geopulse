@@ -80,7 +80,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -136,6 +136,80 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260928-41.47_2.08",
+  "hazard": "flood",
+  "lon": 2.0849,
+  "lat": 41.4708,
+  "bbox": [
+   1.7943,
+   41.2634,
+   2.1676,
+   41.6035
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-01",
+  "place": "",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104199",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104199&episodeid=3&eventtype=FL",
+    "title": "Flood in Spain (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Spain (2026-09-28)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      1.90507,
+      41.33514
+     ],
+     [
+      2.26473,
+      41.33514
+     ],
+     [
+      2.26473,
+      41.60646
+     ],
+     [
+      1.90507,
+      41.60646
+     ],
+     [
+      1.90507,
+      41.33514
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.73,
+  "before": "2026-08-24/2026-09-23",
+  "after": "2026-09-28/2026-10-01",
+  "scenes": {
+   "s1_before": 27,
+   "s1_after": 5,
+   "s2_before": 64,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -221,7 +295,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-09-29",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -232,6 +306,14 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-09-27",
     "detail": "Green impact for forestfire in 29689 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032497",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032497&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 19879 ha"
    }
   ],
   "first_seen": "2026-10-01",
@@ -274,6 +356,79 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260927-12.38_-16.74",
+  "hazard": "flood",
+  "lon": -16.7445,
+  "lat": 12.3815,
+  "bbox": [
+   -16.7576,
+   12.385,
+   -16.7394,
+   12.4047
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-27",
+  "event_end": "2026-09-29",
+  "place": "",
+  "country": "Senegal",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104203",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104203&episodeid=1&eventtype=FL",
+    "title": "Flood in Senegal (Green alert)",
+    "date": "2026-09-27",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Senegal (2026-09-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -16.77149,
+      12.37224
+     ],
+     [
+      -16.72551,
+      12.37224
+     ],
+     [
+      -16.72551,
+      12.41746
+     ],
+     [
+      -16.77149,
+      12.41746
+     ],
+     [
+      -16.77149,
+      12.37224
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.014,
+  "before": "2026-08-23/2026-09-22",
+  "after": "2026-09-27/2026-10-01",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 3,
    "s2_after": 2
   },
   "sensors": [
@@ -365,7 +520,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -517,7 +672,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -662,7 +817,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -935,7 +1090,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-24",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1000,6 +1155,79 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260923-7.15_0.48",
+  "hazard": "flood",
+  "lon": 0.4777,
+  "lat": 7.1532,
+  "bbox": [
+   0.3281,
+   7.0029,
+   0.6143,
+   7.2266
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-23",
+  "event_end": "2026-09-30",
+  "place": "",
+  "country": "Ghana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104196",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104196&episodeid=3&eventtype=FL",
+    "title": "Flood in Ghana (Green alert)",
+    "date": "2026-09-23",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Ghana (2026-09-23)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      0.34191,
+      7.0029
+     ],
+     [
+      0.61349,
+      7.0029
+     ],
+     [
+      0.61349,
+      7.2266
+     ],
+     [
+      0.34191,
+      7.2266
+     ],
+     [
+      0.34191,
+      7.0029
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 743.035,
+  "before": "2026-08-19/2026-09-18",
+  "after": "2026-09-23/2026-10-01",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 2,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -1079,7 +1307,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Papua New Guinea, Indonesia",
   "sources": [
@@ -1147,7 +1375,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -1220,6 +1448,80 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260921-7.62_5.22",
+  "hazard": "flood",
+  "lon": 5.2227,
+  "lat": 7.6232,
+  "bbox": [
+   5.1064,
+   7.5372,
+   5.3993,
+   7.6742
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-21",
+  "event_end": "2026-09-29",
+  "place": "",
+  "country": "Nigeria",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104186",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104186&episodeid=4&eventtype=FL",
+    "title": "Flood in Nigeria (Green alert)",
+    "date": "2026-09-21",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Nigeria (2026-09-21)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      5.08676,
+      7.5372
+     ],
+     [
+      5.35864,
+      7.5372
+     ],
+     [
+      5.35864,
+      7.6742
+     ],
+     [
+      5.08676,
+      7.6742
+     ],
+     [
+      5.08676,
+      7.5372
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 454.87,
+  "before": "2026-08-17/2026-09-16",
+  "after": "2026-09-21/2026-10-01",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 3,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -1437,7 +1739,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1792,7 +2094,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-18",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1861,7 +2163,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-17",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2704,6 +3006,224 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260915-37.84_-119.52",
+  "hazard": "wildfire",
+  "lon": -119.5164635,
+  "lat": 37.8393004,
+  "bbox": [
+   -119.8861599,
+   37.4921493,
+   -119.1995075,
+   38.1863499
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-15",
+  "event_end": "2026-09-30",
+  "place": "Yosemite National Park, California",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://nypost.com/2026/09/30/us-news/cause-of-deadly-yosemite-dome-wildfire-that-killed-two-revealed/",
+    "title": "Cause of deadly Yosemite Dome wildfire that killed two revealed",
+    "outlet": "nypost.com",
+    "date": "2026-09-30",
+    "quote": "The Yosemite Dome Fire that has burned thousands of acres could have been avoided \u2014 officials revealed Tuesday that an abandoned campfire sparked the blaze.",
+    "detail": "closure of multiple trails in Yosemite National Park, closure of Glacier Point road, affected nearby communities, claimed the lives of two firefighting pilots"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Yosemite National Park, California, United States (2026-09-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -119.68709,
+      37.70364
+     ],
+     [
+      -119.34584,
+      37.70364
+     ],
+     [
+      -119.34584,
+      37.97496
+     ],
+     [
+      -119.68709,
+      37.97496
+     ],
+     [
+      -119.68709,
+      37.70364
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.958,
+  "before": "2026-08-06/2026-09-13",
+  "after": "2026-09-17/2026-10-01",
+  "scenes": {
+   "s1_before": 29,
+   "s1_after": 11,
+   "s2_before": 35,
+   "s2_after": 12
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260929-12.12_15.05",
+  "hazard": "flood",
+  "lon": 15.0503,
+  "lat": 12.1192,
+  "bbox": [
+   14.8853,
+   12.054,
+   15.1826,
+   12.2535
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-01",
+  "place": "",
+  "country": "Chad",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104205",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104205&episodeid=1&eventtype=FL",
+    "title": "Flood in Chad (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Chad (2026-09-29)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.91246,
+      12.054
+     ],
+     [
+      15.18814,
+      12.054
+     ],
+     [
+      15.18814,
+      12.2535
+     ],
+     [
+      14.91246,
+      12.2535
+     ],
+     [
+      14.91246,
+      12.054
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 661.668,
+  "before": "2026-08-25/2026-09-24",
+  "after": "2026-09-29/2026-10-01",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20260929-46.03_-118.86",
+  "hazard": "wildfire",
+  "lon": -118.8588,
+  "lat": 46.0322,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-09-29",
+  "event_end": "2026-09-29",
+  "place": "Hatch Grade, Walla Walla, Washington",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_24963",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-WAWFS-000664",
+    "title": "Wildfire Hatch Grade, Walla Walla, Washington",
+    "date": "2026-09-29",
+    "detail": "5000.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Hatch Grade, Walla Walla, Washington (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -118.95584,
+      45.96437
+     ],
+     [
+      -118.76176,
+      45.96437
+     ],
+     [
+      -118.76176,
+      46.10003
+     ],
+     [
+      -118.95584,
+      46.10003
+     ],
+     [
+      -118.95584,
+      45.96437
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.499,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-10-01/2026-10-01",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20260928-39.17_-6.15",
   "hazard": "flood",
   "lon": -6.153,
@@ -2853,6 +3373,81 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "fl-20260930-40.08_-76.24",
+  "hazard": "flood",
+  "lon": -76.2411283,
+  "lat": 40.08067,
+  "bbox": [
+   -76.721369,
+   39.7212512,
+   -75.8731587,
+   40.3158323
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-30",
+  "event_end": "2026-10-01",
+  "place": "48th and Cornhusker, Lancaster County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.1011now.com/2026/10/01/breaking-lancaster-county-issues-flash-flood-warning/",
+    "title": "Drivers urged to avoid flooded roads tonight and Thursday",
+    "outlet": "1011now.com",
+    "date": "2026-10-01",
+    "quote": "Flooding closes 48th and Cornhusker",
+    "detail": "Roads closed due to flooding; drivers urged to avoid flooded roads; potential for further flooding through Thursday evening; risk of contaminated water and vehicle entrapment"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 48th and Cornhusker, Lancaster County, United States (2026-09-30)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -76.41724,
+      39.94501
+     ],
+     [
+      -76.06502,
+      39.94501
+     ],
+     [
+      -76.06502,
+      40.21633
+     ],
+     [
+      -76.41724,
+      40.21633
+     ],
+     [
+      -76.41724,
+      39.94501
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.579,
+  "before": "2026-08-26/2026-09-25",
+  "after": "2026-09-30/2026-10-01",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20260929--34.49_150.78",
   "hazard": "wildfire",
   "lon": 150.7761111,
@@ -2984,6 +3579,68 @@
      [
       -119.68709,
       37.70364
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20260930-49.26_-123.11",
+  "hazard": "wildfire",
+  "lon": -123.113952,
+  "lat": 49.2608724,
+  "bbox": [
+   -123.2249611,
+   49.1989306,
+   -123.0232419,
+   49.3161714
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-30",
+  "event_end": "2026-09-30",
+  "place": "Vancouver, British Columbia",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://theprovince.com/news/air-pollution-from-wildfires-ozone-this-summer-rated-poor-in-vancouver-global-report/wcm/14f683a3-9dda-4a7b-80d7-520c6c25521d",
+    "title": "Air pollution from wildfires , ozone this summer rated  poor  in Vancouver : global report",
+    "outlet": "theprovince.com",
+    "date": "2026-09-30",
+    "quote": "Air pollution from wildfires, ozone this summer rated 'poor' in Vancouver: global report",
+    "detail": "health"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Vancouver, British Columbia, Canada (2026-09-30)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -123.22496,
+      49.19893
+     ],
+     [
+      -123.02324,
+      49.19893
+     ],
+     [
+      -123.02324,
+      49.31617
+     ],
+     [
+      -123.22496,
+      49.31617
+     ],
+     [
+      -123.22496,
+      49.19893
      ]
     ]
    ]
