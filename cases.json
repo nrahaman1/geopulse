@@ -73,6 +73,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260929-12.12_15.05",
+  "hazard": "flood",
+  "lon": 15.0503,
+  "lat": 12.1192,
+  "bbox": [
+   14.8853,
+   12.054,
+   15.1826,
+   12.2535
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-01",
+  "place": "",
+  "country": "Chad",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104205",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104205&episodeid=1&eventtype=FL",
+    "title": "Flood in Chad (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Chad (2026-09-29)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.91246,
+      12.054
+     ],
+     [
+      15.18814,
+      12.054
+     ],
+     [
+      15.18814,
+      12.2535
+     ],
+     [
+      14.91246,
+      12.2535
+     ],
+     [
+      14.91246,
+      12.054
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 661.668,
+  "before": "2026-08-25/2026-09-24",
+  "after": "2026-09-29/2026-10-01",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260928--16.71_130.04",
   "hazard": "wildfire",
   "lon": 130.0425,
@@ -211,6 +284,79 @@
   "sensors": [
    "s1",
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260928-39.17_-6.15",
+  "hazard": "flood",
+  "lon": -6.153,
+  "lat": 39.1748,
+  "bbox": [
+   -7.5417,
+   37.941,
+   -4.6476,
+   40.4866
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-09-30",
+  "place": "",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104199",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104199&episodeid=2&eventtype=FL",
+    "title": "Flood in Spain (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Spain (2026-09-28)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -6.32682,
+      39.03914
+     ],
+     [
+      -5.97918,
+      39.03914
+     ],
+     [
+      -5.97918,
+      39.31046
+     ],
+     [
+      -6.32682,
+      39.31046
+     ],
+     [
+      -6.32682,
+      39.03914
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.493,
+  "before": "2026-08-24/2026-09-23",
+  "after": "2026-09-28/2026-10-01",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 24,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -2240,7 +2386,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-17",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2858,6 +3004,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260930-35.47_-97.52",
+  "hazard": "flood",
+  "lon": -97.5170536,
+  "lat": 35.4729886,
+  "bbox": [
+   -97.830948,
+   35.290695,
+   -97.124718,
+   35.6748662
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-30",
+  "event_end": "2026-10-01",
+  "place": "Oklahoma City, Oklahoma",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.news9.com/live/oklahoma-severe-storms-live-updates-flooding-heavy-rain",
+    "title": "LIVE UPDATES : Severe storms bring heavy rain , flooding to Oklahoma",
+    "outlet": "news9.com",
+    "date": "2026-10-01",
+    "quote": "Severe storms are moving across Oklahoma, bringing heavy rain and flooding to parts of the state.",
+    "detail": "Flooding, road closures, vehicle rescues, and traffic disruptions due to heavy rain and storm activity."
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Oklahoma City, Oklahoma, United States (2026-09-30)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -97.68251,
+      35.33733
+     ],
+     [
+      -97.3516,
+      35.33733
+     ],
+     [
+      -97.3516,
+      35.60864
+     ],
+     [
+      -97.68251,
+      35.60864
+     ],
+     [
+      -97.68251,
+      35.33733
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.731,
+  "before": "2026-08-26/2026-09-25",
+  "after": "2026-09-30/2026-10-01",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 2,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260928-49.78_-86.54",
   "hazard": "wildfire",
   "lon": -86.5393957,
@@ -3081,80 +3301,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20260929-12.12_15.05",
-  "hazard": "flood",
-  "lon": 15.0503,
-  "lat": 12.1192,
-  "bbox": [
-   14.8853,
-   12.054,
-   15.1826,
-   12.2535
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-29",
-  "event_end": "2026-10-01",
-  "place": "",
-  "country": "Chad",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104205",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104205&episodeid=1&eventtype=FL",
-    "title": "Flood in Chad (Green alert)",
-    "date": "2026-09-29",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Chad (2026-09-29)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      14.91246,
-      12.054
-     ],
-     [
-      15.18814,
-      12.054
-     ],
-     [
-      15.18814,
-      12.2535
-     ],
-     [
-      14.91246,
-      12.2535
-     ],
-     [
-      14.91246,
-      12.054
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 661.668,
-  "before": "2026-08-25/2026-09-24",
-  "after": "2026-09-29/2026-10-01",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20260929-46.03_-118.86",
   "hazard": "wildfire",
   "lon": -118.8588,
@@ -3224,71 +3370,141 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20260928-39.17_-6.15",
-  "hazard": "flood",
-  "lon": -6.153,
-  "lat": 39.1748,
-  "bbox": [
-   -7.5417,
-   37.941,
-   -4.6476,
-   40.4866
-  ],
+  "id": "wi-20260928--15.59_144.56",
+  "hazard": "wildfire",
+  "lon": 144.5562,
+  "lat": -15.5889,
+  "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
-  "country": "Spain",
+  "country": "Australia",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "FL1104199",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104199&episodeid=2&eventtype=FL",
-    "title": "Flood in Spain (Green alert)",
+    "id": "WF1032498",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032498&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
     "date": "2026-09-28",
-    "detail": "Magnitude 0"
+    "detail": "Green impact for forestfire in 10055 ha"
    }
   ],
   "first_seen": "2026-10-01",
   "updated": "2026-10-01",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Flood \u00b7 Spain (2026-09-28)",
+  "title": "Wildfire \u00b7 Australia (2026-09-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      144.48625,
+      -15.65673
+     ],
+     [
+      144.62615,
+      -15.65673
+     ],
+     [
+      144.62615,
+      -15.52107
+     ],
+     [
+      144.48625,
+      -15.52107
+     ],
+     [
+      144.48625,
+      -15.65673
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.439,
+  "before": "2026-08-19/2026-09-26",
+  "after": "2026-09-30/2026-10-01",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261001-38.94_-99.56",
+  "hazard": "flood",
+  "lon": -99.560667,
+  "lat": 38.938066,
+  "bbox": [
+   -99.573213,
+   38.920995,
+   -99.5394816,
+   38.949645
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Ellis, county",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://hayspost.com/posts/4fceff39-27b3-4f09-8bb8-ae3dc894417c",
+    "title": "Flash Flood Warning issued for Ellis , Trego counties",
+    "outlet": "hayspost.com",
+    "date": "2026-10-01",
+    "quote": "Radar indicated thunderstorms producing heavy rains across the warned area. Between one and two inches have fallen. The expected rainfall rate is 0.5 to 1.5 inches in one hour. Additional rainfall amounts of 1 to 2 inches are possible.",
+    "detail": "Flash flooding is ongoing or expected to begin shortly."
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Ellis, county, US (2026-10-01)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -6.32682,
-      39.03914
+      -99.58522,
+      38.91271
      ],
      [
-      -5.97918,
-      39.03914
+      -99.52748,
+      38.91271
      ],
      [
-      -5.97918,
-      39.31046
+      -99.52748,
+      38.95793
      ],
      [
-      -6.32682,
-      39.31046
+      -99.58522,
+      38.95793
      ],
      [
-      -6.32682,
-      39.03914
+      -99.58522,
+      38.91271
      ]
     ]
    ]
   },
-  "aoi_km2": 905.493,
-  "before": "2026-08-24/2026-09-23",
-  "after": "2026-09-28/2026-10-01",
+  "aoi_km2": 25.114,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-01",
   "scenes": {
-   "s1_before": 20,
+   "s1_before": 5,
    "s1_after": 0,
-   "s2_before": 24,
+   "s2_before": 10,
    "s2_after": 0
   },
   "sensors": [
@@ -3523,6 +3739,68 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261001-47.71_15.74",
+  "hazard": "wildfire",
+  "lon": 15.7368164,
+  "lat": 47.7143167,
+  "bbox": [
+   15.6395663,
+   47.6552835,
+   15.8232057,
+   47.7733417
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Hirschwang, Neunkirchen district",
+  "country": "Austria",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.vol.at/five-years-after-forest-fire-at-rax-fire-department-is-upgraded/10512194",
+    "title": "Five Years After Forest Fire at Rax , Fire Department is Upgraded",
+    "outlet": "vol.at",
+    "date": "2026-10-01",
+    "quote": "Five Years After Forest Fire at Rax",
+    "detail": "The fire affected approximately 115 hectares and was one of the most complex forest fire fighting operations of the past decades. The soil was severely damaged by the fire and is partially at risk of erosion."
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Hirschwang, Neunkirchen district, Austria (2026-10-01)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      15.63957,
+      47.65528
+     ],
+     [
+      15.82321,
+      47.65528
+     ],
+     [
+      15.82321,
+      47.77334
+     ],
+     [
+      15.63957,
+      47.77334
+     ],
+     [
+      15.63957,
+      47.65528
+     ]
+    ]
+   ]
+  }
+ },
+ {
   "id": "wi-20260930-37.84_-119.52",
   "hazard": "wildfire",
   "lon": -119.5164635,
@@ -3641,6 +3919,68 @@
      [
       -123.22496,
       49.19893
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20260930-51.05_12.30",
+  "hazard": "wildfire",
+  "lon": 12.2975,
+  "lat": 51.0475,
+  "bbox": [
+   12.250807,
+   51.0152352,
+   12.4358575,
+   51.084737
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-30",
+  "event_end": "2026-09-30",
+  "place": "Thuringia, Germany",
+  "country": "Germany",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.euronews.com/2026/09/30/underground-fire-blaze-in-german-lignite-mine-cannot-be-extinguished",
+    "title": "Underground fire : Blaze in German lignite mine cannot be extinguished",
+    "outlet": "euronews.com",
+    "date": "2026-09-30",
+    "quote": "Blaze in German lignite mine cannot be extinguished",
+    "detail": "smouldering fire, smoke, odour nuisance, respiratory irritation, air quality monitoring"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Thuringia, Germany, Germany (2026-09-30)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      12.25081,
+      51.01524
+     ],
+     [
+      12.43586,
+      51.01524
+     ],
+     [
+      12.43586,
+      51.08474
+     ],
+     [
+      12.25081,
+      51.08474
+     ],
+     [
+      12.25081,
+      51.01524
      ]
     ]
    ]
