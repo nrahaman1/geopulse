@@ -1,0 +1,48 @@
+{
+ "started": "2026-10-01T03:24:05+00:00",
+ "sources": {
+  "gdacs": {
+   "ok": true,
+   "events": 45
+  },
+  "cems": {
+   "ok": true,
+   "events": 0
+  },
+  "eonet": {
+   "ok": true,
+   "events": 0
+  },
+  "gdelt": {
+   "ok": true,
+   "articles": 114
+  },
+  "rss:wildfiretoday.com": {
+   "ok": true,
+   "articles": 1
+  },
+  "rss:inciweb.wildfire.gov": {
+   "ok": true,
+   "articles": 2
+  },
+  "rss:news.mongabay.com": {
+   "ok": true,
+   "articles": 2
+  }
+ },
+ "news": {
+  "read": 20,
+  "per_hazard": {
+   "flood": 10,
+   "wildfire": 6,
+   "vegetation": 4
+  },
+  "events": 8,
+  "model": "qwen3:8b"
+ },
+ "finished": "2026-10-01T04:11:41+00:00",
+ "duration_s": 2856,
+ "cases": 45,
+ "new": 45,
+ "ok": true
+}
