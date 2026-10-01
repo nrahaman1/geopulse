@@ -108,11 +108,38 @@
 #progress-label { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #progress-meta { font-family: var(--mono); white-space: nowrap; }
 
-#case-info { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg);
-  font-size: 12px; color: var(--muted); }
-#case-info .case-head { color: var(--text); margin-bottom: 4px; }
-#case-info .conf-high { color: var(--ok); } #case-info .conf-medium { color: var(--warn); } #case-info .conf-low { color: var(--bad); }
-#case-info ul { margin: 6px 0 0; padding-left: 16px; }
-#case-info li { margin: 3px 0; }
-#case-info a { color: var(--accent); text-decoration: none; }
-#case-info q { display: block; color: var(--muted); font-style: italic; margin-top: 2px; }
+/* Scout events: the card of an added event (sidebar) and each event in the Recent events dialog. */
+#scout-open { border-color: var(--accent); color: var(--accent); font-weight: 600; cursor: pointer; }
+.case { padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); font-size: 12px;
+  color: var(--muted); }
+#case-info { margin-top: 8px; }
+.case .ev-title { color: var(--text); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.case .case-head { color: var(--text); margin-bottom: 4px; }
+.case .conf-high { color: var(--ok); } .case .conf-medium { color: var(--warn); } .case .conf-low { color: var(--bad); }
+.case .src-label { margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; font-size: 10px; }
+.case ul { margin: 2px 0 0; padding-left: 16px; }
+.case li { margin: 3px 0; }
+.case a { color: var(--accent); text-decoration: none; }
+.case a:hover { text-decoration: underline; }
+.case q { display: block; color: var(--muted); font-style: italic; margin-top: 2px; }
+.case .btns button:not(.primary) { cursor: pointer; }
+
+dialog#scout { width: min(780px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; color: var(--text);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+dialog#scout[open] { display: flex; } /* only the event list scrolls */
+dialog#scout::backdrop { background: rgb(0 0 0 / .6); }
+#scout .dlg { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+#scout .dlg-head { display: flex; gap: 16px; align-items: flex-start; padding: 16px 20px 12px; border-bottom: 1px solid var(--line); }
+#scout .dlg-head h2 { font-size: 13px; color: var(--text); }
+#scout .dlg-head a { color: var(--accent); text-decoration: none; }
+#scout .run { margin-top: 6px; font: 11px/1.5 var(--mono); }
+#scout-close { width: auto; flex: none; margin-left: auto; padding: 4px 10px; cursor: pointer; }
+#scout .dlg-filter { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 20px 0; }
+#scout .dlg-filter label { display: flex; align-items: center; gap: 6px; margin: 0; padding: 4px 10px; font-size: 12px;
+  color: var(--text); border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+#scout .dlg-filter label:has(input:checked) { border-color: var(--accent); background: var(--panel-2); }
+#scout .dlg-filter input { accent-color: var(--accent); margin: 0; }
+#scout-list { list-style: none; margin: 0; padding: 12px 20px 20px; overflow-y: auto; min-height: 0; display: grid; gap: 10px; }
+#scout-list .btns { margin-top: 8px; }
+#scout-list .btns button { flex: none; width: auto; padding: 6px 14px; }
+#scout-list button:disabled { opacity: .55; cursor: default; }

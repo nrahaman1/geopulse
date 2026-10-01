@@ -5,6 +5,16 @@ before 1.0, minor versions may change APIs and output schemas.
 
 ## [Unreleased]
 
+### Added
+- Example event: the Trishuli debris flood of 26 August 2026 in Nuwakot, Nepal (Bidur/Trishuli Bazar, Betrawati,
+  Devighat), Sentinel-1 and Sentinel-2.
+
+### Changed
+- The Scout's events are no longer mixed into the example list. A **Recent events** button opens them in a dialog with
+  each event's sources (alerts, news links, quoted sentences), its location and imagery, and the health of the last
+  Scout run; **Add to examples** puts an event in the example list under *Added from the Scout* (kept in this browser
+  or app, refreshed while the Scout still lists it), where it can be run or removed.
+
 ### Fixed
 - Scout: the first live run accepted two flood forecasts and placed three stories at the wrong spot (a stadium, an
   industrial site, a housing estate named "State"). Evidence quotes that only warn or forecast no longer count, and a

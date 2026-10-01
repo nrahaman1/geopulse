@@ -1,0 +1,6 @@
+title: Trishuli debris flood — Nuwakot, Nepal (2026)
+task: flood
+aoi_file: aoi.geojson
+before: 2026-07-25/2026-08-24
+after: 2026-08-26/2026-09-15
+sensors: [s1, s2]

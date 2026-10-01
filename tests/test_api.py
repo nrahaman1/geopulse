@@ -78,6 +78,8 @@ def test_web_ui_and_examples(client):
     assert page.status_code == 200 and "GeoPulse" in page.text
     ex = client.get("/examples").json()
     assert ex and {"id", "aoi", "before", "after"} <= set(ex[0])
+    for e in ex:  # every example is a request the API accepts (area, windows, task, sensors)
+        pipeline.make_request(e["aoi"], e["before"], e["after"], e["task"], e["sensors"])
 
 
 def test_desktop_engine_requires_its_token(client, monkeypatch):

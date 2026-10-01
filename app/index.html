@@ -24,9 +24,11 @@
 
   <section>
     <h2>Area of interest</h2>
-    <label for="example">Example event</label>
+    <button type="button" id="scout-open" aria-haspopup="dialog">📡 Recent events</button>
+    <div class="hint" id="scout-hint">Floods, wildfires and forest loss the GeoPulse Scout found in alerts and the news.</div>
+    <label for="example" style="margin-top:12px">Example event</label>
     <select id="example"><option value="">— choose —</option></select>
-    <div id="case-info" hidden></div>
+    <div id="case-info" class="case" hidden></div>
     <div class="btns">
       <button id="draw" type="button">Draw box</button>
       <button id="upload-btn" type="button">Upload GeoJSON</button>
@@ -128,6 +130,25 @@
     </div>
   </details>
 </div>
+
+<dialog id="scout" aria-labelledby="scout-title">
+  <div class="dlg">
+    <div class="dlg-head">
+      <div>
+        <h2 id="scout-title">Recent events · GeoPulse Scout</h2>
+        <div class="hint" id="scout-about"></div>
+      </div>
+      <button type="button" id="scout-close" aria-label="Close">✕</button>
+    </div>
+    <div class="dlg-filter" role="radiogroup" aria-label="Show">
+      <label><input type="radio" name="scout-hazard" value="" checked> All</label>
+      <label><input type="radio" name="scout-hazard" value="flood"> 💧 Floods</label>
+      <label><input type="radio" name="scout-hazard" value="wildfire"> 🔥 Wildfires</label>
+      <label><input type="radio" name="scout-hazard" value="vegetation"> 🌲 Forest loss</label>
+    </div>
+    <ul id="scout-list"></ul>
+  </div>
+</dialog>
 
 <script type="module" src="/src/main.js"></script>
 </body>

@@ -36,7 +36,8 @@ decides places, windows and whether a case exists.
 2. starts Ollama with Qwen3 8B (runtime and model cached between runs);
 3. `geopulse scout discover --days 2 --max-articles 10 --budget-minutes 90`;
 4. commits `cases.json`, `status.json`, `history.jsonl`, `extractions.jsonl` and the geocoder cache to `scout-data`;
-5. rebuilds GitHub Pages, whose build includes the cases: the web app lists them as *Recent events*, and the desktop
+5. rebuilds GitHub Pages, whose build includes the cases: the apps' **Recent events** button lists them with their
+   sources, and **Add to examples** adds one to the user's example list (kept in that browser or app); the desktop
    app and `geopulse serve` fetch them from Pages;
 6. re-enables its own schedule (GitHub disables schedules in repositories idle for 60 days).
 

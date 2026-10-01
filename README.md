@@ -122,7 +122,7 @@ POST /predict/sync       (≤ 25 km²)      GET /metrics     (Prometheus text)
 Jobs are validated up front (task, geometry, ≤ 500 km², ordered windows ≤ 120 days, known sensors), run on a
 background worker, and persisted under `outputs/jobs/<id>/`.
 
-**Web map** (`/`, and the hosted platform): search a place or `lat, lon` (sets a 10 × 10 km box), pick one of 13 examples (💧 flood,
+**Web map** (`/`, and the hosted platform): search a place or `lat, lon` (sets a 10 × 10 km box), pick one of 14 examples (💧 flood,
 🔥 wildfire, 🌲 vegetation), draw a box or upload GeoJSON;
 set task, windows, sensors and model (filtered by task); run. Layers for the task probability, burn severity,
 uncertainty, change, extent polygons and pre/post S1/S2 imagery; opacity; before/after swipe; metrics (affected km²,
@@ -134,8 +134,10 @@ device (IndexedDB), 10 at most.
 
 **Scout** ([docs/SCOUT.md](docs/SCOUT.md)): every 6 hours a GitHub Actions run reads official alerts (GDACS,
 Copernicus EMS, NASA EONET) and the news with an open-weights LLM, and proposes each new flood, wildfire or forest-loss
-event as a ready-to-run case. The apps list them under *Recent events*; picking one fills the form, nothing runs until
-you press Run. Locally: `geopulse scout discover` (needs `--extra scout` and an OpenAI-compatible LLM such as Ollama).
+event as a ready-to-run case. The **Recent events** button lists them with their sources (alerts, news links and
+the quoted sentences), so you can see where each comes from; **Add to examples** puts one in your example list,
+and nothing runs until you press Run. Locally: `geopulse scout discover` (needs `--extra scout` and an
+OpenAI-compatible LLM such as Ollama).
 
 ## How it runs
 

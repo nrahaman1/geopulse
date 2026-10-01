@@ -266,8 +266,8 @@ async function init() {
   browserModels = [...index.map((c) => ({ ...c, tasks: c.onnx.tasks, url: new URL(`weights/${c.onnx.file}?v=${c.onnx.sha256.slice(0, 12)}`, document.baseURI).href })), BASELINE];
   setEngine("browser");
   examples = await fetch("examples.json").then((r) => r.json()).catch(() => []);
-  for (const ex of examples) $("example").add(new Option(`${TASK_ICON[ex.task] || ""} ${ex.title || ex.id}`, ex.id));
-  if (examples.length) { $("example").value = examples[0].id; $("example").onchange(); }
+  fillExamples(examples[0]?.id ?? "");
+  $("example").onchange();
   loadCases();
   await loadBrowserJobs();
   refreshJobs();
@@ -276,8 +276,8 @@ async function init() {
 }
 $("example").onchange = () => {
   const id = $("example").value;
-  const ex = examples.find((x) => x.id === id) ?? cases.find((x) => x.id === id);
-  showCase(cases.find((x) => x.id === id));
+  const ex = examples.find((x) => x.id === id) ?? added.find((x) => x.id === id);
+  showCase(added.find((x) => x.id === id));
   if (!ex) return;
   setAoi(ex.aoi); // the AOI is set at once; the map draws it when it has loaded (slow or blocked basemaps included)
   setTask(ex.task || "flood");
@@ -285,12 +285,28 @@ $("example").onchange = () => {
   if (ex.sensors) for (const k of ["s1", "s2"]) $(k).checked = ex.sensors.includes(k);
 };
 
-// ------------------------------------------------------------------ Scout cases
-// Events the Scout found in official alerts (GDACS, Copernicus EMS) and the news, served by the engine. They share
-// the examples' shape (title, task, aoi, before, after), so picking one fills the form; nothing runs until "Run".
-let cases = [];
+// ------------------------------------------------------------------ Scout: recent events
+// Events the Scout found in official alerts (GDACS, Copernicus EMS, NASA EONET) and the news. "Recent events" lists
+// them with their sources; "Add to examples" copies one into the example list (kept in this browser or app), where it
+// fills the form like any example. Nothing runs until "Run analysis".
+let cases = [], scoutStatus = null;
 const LIVE = "https://nrahaman1.github.io/geopulse/"; // the live Scout publishes here every 6 hours
+const SCOUT_DOC = "https://github.com/nrahaman1/geopulse/blob/main/docs/SCOUT.md";
 const getJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(r.status))));
+let added = (() => { try { return JSON.parse(localStorage.getItem("geopulse.added") || "[]"); } catch { return []; } })();
+const saveAdded = () => { try { localStorage.setItem("geopulse.added", JSON.stringify(added)); } catch {} };
+const ago = (iso) => {
+  const h = Math.round((Date.now() - Date.parse(iso)) / 3.6e6);
+  return h < 1 ? "less than an hour ago" : h < 48 ? `${h} h ago` : `${Math.round(h / 24)} days ago`;
+};
+
+function fillExamples(selected = $("example").value) {
+  const option = (x) => new Option(`${TASK_ICON[x.task] || ""} ${x.title || x.id}`, x.id);
+  $("example").replaceChildren(new Option("— choose —", ""), ...examples.map(option));
+  if (added.length) $("example").append(el("optgroup", { label: "Added from the Scout" }, ...added.map(option)));
+  $("example").value = selected;
+}
+
 async function loadCases() {
   // The live Scout's cases are part of the GitHub Pages build; the desktop app and `geopulse serve` fetch them from
   // there. A Scout run on this machine (`geopulse scout discover`) adds its own through the engine.
@@ -299,14 +315,13 @@ async function loadCases() {
   const local = SERVER ? await api("/scout/cases").catch(() => []) : [];
   const byId = new Map([...(live ?? []), ...local].map((c) => [c.id, c]));
   cases = [...byId.values()];
-  $("example").querySelector("optgroup[data-scout]")?.remove();
-  if (!cases.length) return;
-  const hours = status?.finished ? Math.round((Date.now() - Date.parse(status.finished)) / 3.6e6) : null;
-  const age = hours === null ? "" : `, updated ${hours < 1 ? "<1" : hours} h ago`;
-  const group = Object.assign(document.createElement("optgroup"), { label: `Recent events · Scout (${cases.length}${age})` });
-  group.dataset.scout = "";
-  for (const c of cases) group.append(new Option(`${TASK_ICON[c.task] || ""} ${c.title} · ${c.status}`, c.id));
-  $("example").append(group);
+  scoutStatus = status;
+  added = added.map((a) => byId.get(a.id) ?? a); // the Scout's latest view of an added event (new imagery, sources)
+  saveAdded();
+  fillExamples();
+  $("scout-open").textContent = `📡 Recent events${cases.length ? ` (${cases.length})` : ""}`;
+  if (status?.finished) $("scout-hint").textContent = `Floods, wildfires and forest loss the GeoPulse Scout found in alerts and the news; updated ${ago(status.finished)}.`;
+  if ($("scout").open) renderScout();
 }
 
 // News titles and quotes are untrusted text: built with textContent, never as HTML.
@@ -315,22 +330,71 @@ function el(tag, props = {}, ...kids) {
   node.append(...kids);
   return node;
 }
+const SOURCE = { gdacs: "GDACS alert", cems: "Copernicus EMS activation", eonet: "NASA EONET" };
+function caseDetails(c) {
+  const sc = c.scenes;
+  const when = c.event_start && (c.event_end && c.event_end !== c.event_start ? `${c.event_start} to ${c.event_end}` : c.event_start);
+  const at = c.lat != null && `${Math.abs(c.lat).toFixed(2)}°${c.lat < 0 ? "S" : "N"} ${Math.abs(c.lon).toFixed(2)}°${c.lon < 0 ? "W" : "E"}`;
+  const facts = [when && `event ${when}`, at, c.aoi_km2 && `${Math.round(c.aoi_km2)} km²`,
+    sc && `S1 ${sc.s1_before}→${sc.s1_after}, S2 ${sc.s2_before}→${sc.s2_after} scenes (before→after)`];
+  const sources = c.sources.map((s) => {
+    const link = /^https?:\/\//.test(s.url ?? "") ? el("a", { href: s.url, target: "_blank", rel: "noopener", textContent: s.title || s.url }) : el("span", { textContent: s.title ?? "" });
+    const who = s.kind === "news" ? s.outlet : SOURCE[s.kind] ?? s.kind;
+    return el("li", {}, `${who} · ${s.date ?? ""} · `, link, ...(s.quote ? [el("q", { textContent: s.quote })] : []));
+  });
+  return [
+    el("div", { className: "case-head" }, el("span", { className: `conf-${c.confidence}`, textContent: `${c.confidence} confidence` }), ` · ${c.status}`),
+    el("div", { textContent: facts.filter(Boolean).join(" · ") }),
+    el("div", { className: "src-label", textContent: c.sources.length > 1 ? `${c.sources.length} sources` : "Source" }),
+    el("ul", {}, ...sources),
+  ];
+}
 function showCase(c) {
   $("case-info").hidden = !c;
   if (!c) return;
-  const sc = c.scenes ?? {};
-  const imagery = c.scenes ? `S1 ${sc.s1_before}→${sc.s1_after} · S2 ${sc.s2_before}→${sc.s2_after} scenes (before→after)` : "";
-  const sources = c.sources.map((s) => {
-    const link = /^https?:\/\//.test(s.url ?? "") ? el("a", { href: s.url, target: "_blank", rel: "noopener", textContent: s.title || s.url }) : el("span", { textContent: s.title ?? "" });
-    const who = s.kind === "news" ? s.outlet : s.kind === "cems" ? "Copernicus EMS" : "GDACS";
-    return el("li", {}, `${who} · ${s.date ?? ""} · `, link, ...(s.quote ? [el("q", { textContent: s.quote })] : []));
-  });
-  $("case-info").replaceChildren(
-    el("div", { className: "case-head" }, el("span", { className: `conf-${c.confidence}`, textContent: `${c.confidence} confidence` }), ` · ${c.status}`),
-    el("div", { textContent: imagery }),
-    el("ul", {}, ...sources),
-  );
+  const remove = el("button", { type: "button", textContent: "Remove from examples" });
+  remove.onclick = () => { added = added.filter((a) => a.id !== c.id); saveAdded(); fillExamples(""); showCase(null); };
+  $("case-info").replaceChildren(...caseDetails(c), el("div", { className: "btns" }, remove));
 }
+
+function scoutAbout() {
+  const intro = "Every 6 hours the Scout reads official disaster alerts and the news. An open-weights language model "
+    + "reads each article; code then checks every quote word for word against the article and locates the place "
+    + "with OpenStreetMap. Each event below lists where it comes from. ";
+  const how = el("a", { href: SCOUT_DOC, target: "_blank", rel: "noopener", textContent: "How the Scout works ↗" });
+  const s = scoutStatus;
+  if (!s?.sources) return [intro, how];
+  const name = { gdacs: "GDACS", cems: "Copernicus EMS", eonet: "NASA EONET", gdelt: "GDELT" };
+  const runs = Object.entries(s.sources).map(([k, v]) => `${name[k] ?? k.replace(/^rss:/, "")} `
+    + (v.ok ? `✓ ${v.events ?? v.articles ?? 0} ${"events" in v ? "alerts" : "articles"}` : "✗ unavailable"));
+  const news = s.news ? ` · ${s.news.read} articles read by ${s.news.model}` : "";
+  return [intro, how, el("div", { className: "run", textContent: `Last run ${ago(s.finished)}: ${runs.join(" · ")}${news}` })];
+}
+function renderScout() {
+  const hazard = document.querySelector("input[name=scout-hazard]:checked").value;
+  const shown = cases.filter((c) => !hazard || c.task === hazard);
+  $("scout-about").replaceChildren(...scoutAbout());
+  $("scout-list").replaceChildren(...(shown.length ? shown.map(eventItem) : [el("li", { className: "hint",
+    textContent: cases.length ? "No events of this kind right now." : "The recent events could not be loaded (offline?)." })]));
+}
+function eventItem(c) {
+  const mine = added.some((a) => a.id === c.id);
+  const ready = "before" in c; // "too recent": the after-event window has not started yet
+  const btn = el("button", { type: "button", className: mine ? "" : "primary", disabled: !mine && !ready,
+    textContent: mine ? "In your examples · show it" : ready ? "Add to examples" : "Too recent to add: no after-event imagery yet" });
+  btn.onclick = () => {
+    if (!mine) { added.push(c); saveAdded(); }
+    fillExamples(c.id);
+    $("example").onchange();
+    $("scout").close();
+  };
+  return el("li", { className: "case" }, el("div", { className: "ev-title", textContent: `${TASK_ICON[c.task] || ""} ${c.title}` }),
+    ...caseDetails(c), el("div", { className: "btns" }, btn));
+}
+$("scout-open").onclick = () => { renderScout(); $("scout").showModal(); };
+$("scout-close").onclick = () => $("scout").close();
+$("scout").onclick = (e) => { if (e.target === $("scout")) $("scout").close(); }; // a click on the backdrop
+for (const r of document.querySelectorAll("input[name=scout-hazard]")) r.onchange = renderScout;
 
 // Public deployments hide /jobs; each browser then remembers the jobs it started.
 const myJobs = () => { try { return JSON.parse(localStorage.getItem("geopulse.jobs") || "[]"); } catch { return []; } };

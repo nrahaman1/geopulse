@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Trishuli debris flood \u2014 Nuwakot, Nepal (2026)"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          85.09,
+          27.84
+        ],
+        [
+          85.21,
+          27.84
+        ],
+        [
+          85.21,
+          27.99
+        ],
+        [
+          85.09,
+          27.99
+        ],
+        [
+          85.09,
+          27.84
+        ]
+      ]
+    ]
+  }
+}
