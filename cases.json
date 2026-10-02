@@ -146,6 +146,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260929-46.03_-118.86",
+  "hazard": "wildfire",
+  "lon": -118.8588,
+  "lat": 46.0322,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-09-29",
+  "event_end": "2026-09-29",
+  "place": "Hatch Grade, Walla Walla, Washington",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_24963",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-WAWFS-000664",
+    "title": "Wildfire Hatch Grade, Walla Walla, Washington",
+    "date": "2026-09-29",
+    "detail": "5000.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Hatch Grade, Walla Walla, Washington (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -118.95584,
+      45.96437
+     ],
+     [
+      -118.76176,
+      45.96437
+     ],
+     [
+      -118.76176,
+      46.10003
+     ],
+     [
+      -118.95584,
+      46.10003
+     ],
+     [
+      -118.95584,
+      45.96437
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.499,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-09-30/2026-10-02",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 1,
+   "s2_before": 10,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260928--16.71_130.04",
   "hazard": "wildfire",
   "lon": 130.0425,
@@ -742,7 +811,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-09-30",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1385,7 +1454,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-22",
-  "event_end": "2026-09-29",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1896,10 +1965,18 @@
     "title": "Forest fires in Brazil (Green alert)",
     "date": "2026-09-19",
     "detail": "Green impact for forestfire in 22958 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032507",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032507&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 10182 ha"
    }
   ],
   "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Brazil (2026-09-19)",
@@ -1933,7 +2010,7 @@
   },
   "aoi_km2": 224.915,
   "before": "2026-08-10/2026-09-17",
-  "after": "2026-09-21/2026-10-01",
+  "after": "2026-09-21/2026-10-02",
   "scenes": {
    "s1_before": 6,
    "s1_after": 2,
@@ -1954,7 +2031,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-09-29",
+  "event_end": "2026-10-01",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3078,6 +3155,154 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260930-32.67_-107.15",
+  "hazard": "flood",
+  "lon": -107.153438,
+  "lat": 32.6651718,
+  "bbox": [
+   -107.265411,
+   32.617356,
+   -107.131577,
+   32.678336
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-30",
+  "event_end": "2026-09-30",
+  "place": "Hatch, Do\u00f1a Ana County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kob.com/news/top-news/hatch-closes-all-gas-pumps-after-floodwater-breaches-main-gasoline-line/",
+    "title": "Hatch closes all gas pumps after floodwater breaches main gasoline line",
+    "outlet": "kob.com",
+    "date": "2026-09-30",
+    "quote": "floodwater breaches main gasoline line",
+    "detail": "gasoline line breach, vehicle damage, evacuation order"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Hatch, Do\u00f1a Ana County, United States (2026-09-30)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -107.26541,
+      32.61736
+     ],
+     [
+      -107.13158,
+      32.61736
+     ],
+     [
+      -107.13158,
+      32.67834
+     ],
+     [
+      -107.26541,
+      32.67834
+     ],
+     [
+      -107.26541,
+      32.61736
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 84.934,
+  "before": "2026-08-26/2026-09-25",
+  "after": "2026-09-30/2026-10-02",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 24,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260929--34.49_150.78",
+  "hazard": "wildfire",
+  "lon": 150.7761111,
+  "lat": -34.49,
+  "bbox": [
+   150.7496654,
+   -34.5026626,
+   150.7977991,
+   -34.4786426
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-29",
+  "event_end": "2026-09-29",
+  "place": "Horsley, Illawarra",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.illawarramercury.com.au/story/9359605/horsley-bushfire-teen-airlifted-to-hospital-with-severe-burns/",
+    "title": "Horsley bushfire : Teen airlifted to hospital with severe burns | Illawarra Mercury",
+    "outlet": "illawarramercury.com.au",
+    "date": "2026-09-29",
+    "quote": "A bushfire in Horsley",
+    "detail": "A 13-year-old boy was treated at the scene for significant burns to his back and legs by paramedics, before being transported by road ambulance to Reed Park in Horsley, where the Toll rescue helicopter had landed. The teenager was airlifted to Westmead Children's Hospital in a serious but stable con"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Horsley, Illawarra, Australia (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      150.74648,
+      -34.51326
+     ],
+     [
+      150.80098,
+      -34.51326
+     ],
+     [
+      150.80098,
+      -34.46804
+     ],
+     [
+      150.74648,
+      -34.46804
+     ],
+     [
+      150.74648,
+      -34.51326
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.117,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-09-30/2026-10-02",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260928-49.78_-86.54",
   "hazard": "wildfire",
   "lon": -86.5393957,
@@ -3301,75 +3526,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20260929-46.03_-118.86",
-  "hazard": "wildfire",
-  "lon": -118.8588,
-  "lat": 46.0322,
-  "bbox": null,
-  "geometry_from": "eonet",
-  "event_start": "2026-09-29",
-  "event_end": "2026-09-29",
-  "place": "Hatch Grade, Walla Walla, Washington",
-  "country": "",
-  "sources": [
-   {
-    "kind": "eonet",
-    "id": "EONET_24963",
-    "url": "https://irwin.doi.gov/observer/incidents/2026-WAWFS-000664",
-    "title": "Wildfire Hatch Grade, Walla Walla, Washington",
-    "date": "2026-09-29",
-    "detail": "5000.0 acres"
-   }
-  ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Hatch Grade, Walla Walla, Washington (2026-09-29)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -118.95584,
-      45.96437
-     ],
-     [
-      -118.76176,
-      45.96437
-     ],
-     [
-      -118.76176,
-      46.10003
-     ],
-     [
-      -118.95584,
-      46.10003
-     ],
-     [
-      -118.95584,
-      45.96437
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 226.499,
-  "before": "2026-08-20/2026-09-27",
-  "after": "2026-10-01/2026-10-01",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 0,
-   "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20260928--15.59_144.56",
   "hazard": "wildfire",
   "lon": 144.5562,
@@ -3425,7 +3581,7 @@
   },
   "aoi_km2": 225.439,
   "before": "2026-08-19/2026-09-26",
-  "after": "2026-09-30/2026-10-01",
+  "after": "2026-09-30/2026-10-02",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -3500,7 +3656,7 @@
   },
   "aoi_km2": 25.114,
   "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-01",
+  "after": "2026-10-01/2026-10-02",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -3514,72 +3670,72 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20260930-32.67_-107.15",
+  "id": "fl-20261001-39.02_-94.69",
   "hazard": "flood",
-  "lon": -107.153438,
-  "lat": 32.6651718,
+  "lon": -94.689947,
+  "lat": 39.0168058,
   "bbox": [
-   -107.265411,
-   32.617356,
-   -107.131577,
-   32.678336
+   -94.7057952,
+   38.9929728,
+   -94.676904,
+   39.0440703
   ],
   "geometry_from": "news",
-  "event_start": "2026-09-30",
-  "event_end": "2026-09-30",
-  "place": "Hatch, Do\u00f1a Ana County",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-02",
+  "place": "Merriam, Missouri",
   "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.kob.com/news/top-news/hatch-closes-all-gas-pumps-after-floodwater-breaches-main-gasoline-line/",
-    "title": "Hatch closes all gas pumps after floodwater breaches main gasoline line",
-    "outlet": "kob.com",
-    "date": "2026-09-30",
-    "quote": "floodwater breaches main gasoline line",
-    "detail": "gasoline line breach, vehicle damage, evacuation order"
+    "url": "https://www.kmbc.com/article/merriam-turkey-creek-flash-flood-warning-downtown-flooding/73986544",
+    "title": "Flash flood warning renews Turkey Creek concerns in Merriam",
+    "outlet": "kmbc.com",
+    "date": "2026-10-02",
+    "quote": "Last year, flash flooding from Turkey Creek in Merriam washed a car on top of the north fence at Waterfall Park.",
+    "detail": "business owners worry about flooding, potential damage to property and future downtown redevelopment plans"
    }
   ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
+  "first_seen": "2026-10-02",
+  "updated": "2026-10-02",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Hatch, Do\u00f1a Ana County, United States (2026-09-30)",
+  "title": "Flood \u00b7 Merriam, Missouri, United States (2026-10-01)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -107.26541,
-      32.61736
+      -94.72025,
+      38.99297
      ],
      [
-      -107.13158,
-      32.61736
+      -94.66244,
+      38.99297
      ],
      [
-      -107.13158,
-      32.67834
+      -94.66244,
+      39.04407
      ],
      [
-      -107.26541,
-      32.67834
+      -94.72025,
+      39.04407
      ],
      [
-      -107.26541,
-      32.61736
+      -94.72025,
+      38.99297
      ]
     ]
    ]
   },
-  "aoi_km2": 84.934,
-  "before": "2026-08-26/2026-09-25",
-  "after": "2026-09-30/2026-10-01",
+  "aoi_km2": 28.394,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-02",
   "scenes": {
-   "s1_before": 6,
+   "s1_before": 5,
    "s1_after": 0,
-   "s2_before": 24,
+   "s2_before": 7,
    "s2_after": 0
   },
   "sensors": [
@@ -3650,7 +3806,7 @@
   },
   "aoi_km2": 904.579,
   "before": "2026-08-26/2026-09-25",
-  "after": "2026-09-30/2026-10-01",
+  "after": "2026-09-30/2026-10-02",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -3664,79 +3820,66 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20260929--34.49_150.78",
+  "id": "wi-20261002-33.97_-78.39",
   "hazard": "wildfire",
-  "lon": 150.7761111,
-  "lat": -34.49,
+  "lon": -78.3858371,
+  "lat": 33.9732275,
   "bbox": [
-   150.7496654,
-   -34.5026626,
-   150.7977991,
-   -34.4786426
+   -78.460218,
+   33.913817,
+   -78.313931,
+   34.012898
   ],
   "geometry_from": "news",
-  "event_start": "2026-09-29",
-  "event_end": "2026-09-29",
-  "place": "Horsley, Illawarra",
-  "country": "Australia",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-02",
+  "place": "Shallotte, Brunswick County",
+  "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.illawarramercury.com.au/story/9359605/horsley-bushfire-teen-airlifted-to-hospital-with-severe-burns/",
-    "title": "Horsley bushfire : Teen airlifted to hospital with severe burns | Illawarra Mercury",
-    "outlet": "illawarramercury.com.au",
-    "date": "2026-09-29",
-    "quote": "A bushfire in Horsley",
-    "detail": "A 13-year-old boy was treated at the scene for significant burns to his back and legs by paramedics, before being transported by road ambulance to Reed Park in Horsley, where the Toll rescue helicopter had landed. The teenager was airlifted to Westmead Children's Hospital in a serious but stable con"
+    "url": "https://www.wwaytv3.com/evacuation-alert-residents-being-evacuated-due-to-forest-fire-near-shallotte/",
+    "title": "EVACUATION ALERT : Residents being evacuated due to forest fire near Shallotte",
+    "outlet": "wwaytv3.com",
+    "date": "2026-10-02",
+    "quote": "Wildfire near Shallotte grows to 50 acres",
+    "detail": "Residents returned to their homes after evacuation; no homes were threatened or damaged by the fire."
    }
   ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
+  "first_seen": "2026-10-02",
+  "updated": "2026-10-02",
   "score": 0.15,
   "confidence": "low",
-  "title": "Wildfire \u00b7 Horsley, Illawarra, Australia (2026-09-29)",
+  "title": "Wildfire \u00b7 Shallotte, Brunswick County, United States (2026-10-02)",
   "task": "wildfire",
+  "status": "too recent",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      150.74648,
-      -34.51326
+      -78.46022,
+      33.91382
      ],
      [
-      150.80098,
-      -34.51326
+      -78.31393,
+      33.91382
      ],
      [
-      150.80098,
-      -34.46804
+      -78.31393,
+      34.0129
      ],
      [
-      150.74648,
-      -34.46804
+      -78.46022,
+      34.0129
      ],
      [
-      150.74648,
-      -34.51326
+      -78.46022,
+      33.91382
      ]
     ]
    ]
-  },
-  "aoi_km2": 25.117,
-  "before": "2026-08-20/2026-09-27",
-  "after": "2026-10-01/2026-10-01",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 0,
-   "s2_before": 7,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
+  }
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -3795,6 +3938,68 @@
      [
       15.63957,
       47.65528
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261001-50.27_-119.27",
+  "hazard": "wildfire",
+  "lon": -119.2718157,
+  "lat": 50.2668671,
+  "bbox": [
+   -119.4539892,
+   50.1514945,
+   -119.2052068,
+   50.3215156
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Vernon, British Columbia",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://dailyhive.com/vancouver/predator-ridge-bc-wildfire-detection-defence-system",
+    "title": "Opinion : This B . C . community sets a new standard for wildfire detection and defence | Daily Hive",
+    "outlet": "dailyhive.com",
+    "date": "2026-10-01",
+    "quote": "Wildfire season is getting worse.",
+    "detail": "Wildfire preparedness is evolving as communities face more aggressive and larger fires. Predator Ridge has implemented a comprehensive system including technology, water infrastructure, and collaboration with fire services to enhance wildfire detection and response."
+   }
+  ],
+  "first_seen": "2026-10-02",
+  "updated": "2026-10-02",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Vernon, British Columbia, Canada (2026-10-01)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -119.45399,
+      50.15149
+     ],
+     [
+      -119.20521,
+      50.15149
+     ],
+     [
+      -119.20521,
+      50.32152
+     ],
+     [
+      -119.45399,
+      50.32152
+     ],
+     [
+      -119.45399,
+      50.15149
      ]
     ]
    ]
@@ -3860,7 +4065,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 904.958,
+  "before": "2026-08-21/2026-09-28",
+  "after": "2026-10-02/2026-10-02"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -3922,7 +4130,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 191.309,
+  "before": "2026-08-21/2026-09-28",
+  "after": "2026-10-02/2026-10-02"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -3984,6 +4195,9 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 100.334,
+  "before": "2026-08-21/2026-09-28",
+  "after": "2026-10-02/2026-10-02"
  }
 ]
