@@ -209,6 +209,12 @@ fn forward<R: Read + Send + 'static>(
     })
 }
 
+/// A step of the engine start, shown under "This PC" while it runs (and in the log).
+fn stage(app: &AppHandle, text: &str) {
+    let _ = app.emit("engine-stage", text);
+    let _ = app.emit("engine-log", text);
+}
+
 fn token() -> Result<String, String> {
     let mut bytes = [0u8; 24];
     getrandom::fill(&mut bytes).map_err(|e| e.to_string())?;
@@ -281,7 +287,7 @@ fn start(app: &AppHandle, variant: &str) -> Result<(Child, EngineInfo), String> 
     let interpreter = match find_python(&pythons) {
         Some(py) => py,
         None => {
-            let _ = app.emit("engine-log", format!("Installing Python {PYTHON} with uv…"));
+            stage(app, &format!("Installing Python {PYTHON} (one time)…"));
             let installed = run_logged(
                 app,
                 Command::new(&uv)
@@ -303,9 +309,15 @@ fn start(app: &AppHandle, variant: &str) -> Result<(Child, EngineInfo), String> 
     remove_links(&pythons);
 
     // 2. The locked environment. Fast when it is already current; after an app update it installs what changed.
-    let _ = app.emit(
-        "engine-log",
-        format!("Preparing GeoPulse + PyTorch ({variant}) with uv…"),
+    let marker = root.join(format!("env-{variant}.ok"));
+    let version = app.package_info().version.to_string();
+    stage(
+        app,
+        match std::fs::read_to_string(&marker) {
+            Ok(v) if v == version => "Checking GeoPulse and PyTorch…",
+            Ok(_) => "Updating the engine for this GeoPulse version…",
+            Err(_) => "Installing GeoPulse and PyTorch (one time, a few minutes)…",
+        },
     );
     run_logged(
         app,
@@ -323,8 +335,7 @@ fn start(app: &AppHandle, variant: &str) -> Result<(Child, EngineInfo), String> 
             .env("UV_PYTHON_DOWNLOADS", "never"),
     )
     .map_err(|e| format!("installing the engine failed:\n{e}"))?;
-    let version = app.package_info().version.to_string();
-    std::fs::write(root.join(format!("env-{variant}.ok")), version).map_err(|e| e.to_string())?;
+    std::fs::write(&marker, version).map_err(|e| e.to_string())?;
 
     // 3. Trained models from the GitHub release (checksum-verified; files already present are kept).
     let py = python(&env);
@@ -337,6 +348,7 @@ fn start(app: &AppHandle, variant: &str) -> Result<(Child, EngineInfo), String> 
             .env("PYTHONIOENCODING", "utf-8")
             .current_dir(&data);
     };
+    stage(app, "Checking the trained models…");
     let mut pull = Command::new(&py);
     pull.args(["-m", "geopulse.cli", "models", "pull"]);
     engine_env(&mut pull);
@@ -348,6 +360,14 @@ fn start(app: &AppHandle, variant: &str) -> Result<(Child, EngineInfo), String> 
     }
 
     // 4. The API on a free loopback port, with a per-launch token.
+    stage(
+        app,
+        if variant == "gpu" {
+            "Starting the engine (loading PyTorch on the GPU)…"
+        } else {
+            "Starting the engine (loading PyTorch)…"
+        },
+    );
     let port = free_port()?;
     let info = EngineInfo {
         url: format!("http://127.0.0.1:{port}"),
@@ -422,7 +442,11 @@ pub fn run() {
         .plugin(tauri_plugin_process::init())
         .plugin(tauri_plugin_updater::Builder::new().build())
         .manage(Engine::default())
-        .invoke_handler(tauri::generate_handler![engine_status, engine_start, engine_stop])
+        .invoke_handler(tauri::generate_handler![
+            engine_status,
+            engine_start,
+            engine_stop
+        ])
         .build(tauri::generate_context!())
         .expect("error while building GeoPulse")
         .run(|app, event| {

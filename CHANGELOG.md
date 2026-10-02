@@ -3,6 +3,13 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [Unreleased]
+
+### Changed
+- Desktop app: while the PC engine starts, a spinner under "This PC" shows the current step (checking or updating the
+  Python environment, checking the trained models, loading PyTorch on the GPU) and the seconds so far, so the start no
+  longer looks frozen.
+
 ## [0.5.1] — 2026-10-01
 
 ### Added

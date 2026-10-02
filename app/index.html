@@ -17,6 +17,7 @@
   <section style="background:var(--panel-2)">
     <h2>Compute</h2>
     <label class="check" id="engine-server" hidden><input type="radio" name="engine" value="server"> <span id="server-label">GeoPulse server</span></label>
+    <div class="engine-status" id="engine-status" role="status" hidden><span class="spinner" aria-hidden="true"></span><span id="engine-status-text"></span><span id="engine-status-time"></span></div>
     <label class="check"><input type="radio" name="engine" value="browser" checked> <span>Built-in (this browser)</span></label>
     <div class="btns" id="engine-setup" hidden><button type="button" class="primary" id="engine-start"></button></div>
     <div class="hint" id="engine-hint"></div>

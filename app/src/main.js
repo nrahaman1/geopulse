@@ -227,10 +227,12 @@ async function desktopEngine(install = false) {
   const lines = [status.installed ? "Starting the GeoPulse engine on this PC…" : "Installing the GeoPulse engine on this PC (one time)…"];
   const quiet = status.installed; // routine starts stay out of the log unless they fail
   if (!quiet) logLines(lines);
+  engineBusy(lines[0]);
   const unlisten = await TAURI.event.listen("engine-log", ({ payload }) => {
     lines.push(payload);
     if (!quiet) logLines(lines.slice(-300));
   });
+  const unstage = await TAURI.event.listen("engine-stage", ({ payload }) => engineBusy(payload));
   try {
     ({ url: SERVER_URL, token: TOKEN } = await invoke("engine_start", { variant: status.variant }));
     await connectServer();
@@ -241,6 +243,24 @@ async function desktopEngine(install = false) {
     $("engine-start").textContent = "Retry the PC engine";
   } finally {
     unlisten();
+    unstage();
+    engineBusy(null);
+  }
+}
+
+// Under "This PC" while its engine starts: a spinner, the current step and the seconds so far, so a start that takes
+// a while (PyTorch loading, or installing what an app update changed) never looks frozen.
+let busyTimer = null;
+function engineBusy(step) {
+  $("engine-status").hidden = !step;
+  $("engine-status-text").textContent = step ?? "";
+  if (step && !busyTimer) {
+    const t0 = Date.now();
+    $("engine-status-time").textContent = "";
+    busyTimer = setInterval(() => { $("engine-status-time").textContent = `${Math.round((Date.now() - t0) / 1000)} s`; }, 1000);
+  } else if (!step) {
+    clearInterval(busyTimer);
+    busyTimer = null;
   }
 }
 $("engine-start").onclick = () => desktopEngine(true);
