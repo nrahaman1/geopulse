@@ -887,7 +887,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-01",
+  "event_end": "2026-10-02",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -3228,6 +3228,153 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260519-41.12_-73.37",
+  "hazard": "flood",
+  "lon": -73.3711,
+  "lat": 41.119,
+  "bbox": [
+   -74.2062,
+   40.8887,
+   -71.4839,
+   41.7316
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-05-19",
+  "event_end": "2026-10-02",
+  "place": "",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1103888",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1103888&episodeid=91&eventtype=FL",
+    "title": "Flood in United States (Green alert)",
+    "date": "2026-05-19",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-02",
+  "updated": "2026-10-02",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 United States (2026-05-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -73.54996,
+      40.98334
+     ],
+     [
+      -73.19224,
+      40.98334
+     ],
+     [
+      -73.19224,
+      41.25466
+     ],
+     [
+      -73.54996,
+      41.25466
+     ],
+     [
+      -73.54996,
+      40.98334
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.929,
+  "before": "2026-04-14/2026-05-14",
+  "after": "2026-09-22/2026-10-02",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 2,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261001-39.02_-94.69",
+  "hazard": "flood",
+  "lon": -94.689947,
+  "lat": 39.0168058,
+  "bbox": [
+   -94.7057952,
+   38.9929728,
+   -94.676904,
+   39.0440703
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-02",
+  "place": "Merriam, Missouri",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kmbc.com/article/merriam-turkey-creek-flash-flood-warning-downtown-flooding/73986544",
+    "title": "Flash flood warning renews Turkey Creek concerns in Merriam",
+    "outlet": "kmbc.com",
+    "date": "2026-10-02",
+    "quote": "Last year, flash flooding from Turkey Creek in Merriam washed a car on top of the north fence at Waterfall Park.",
+    "detail": "business owners worry about flooding, potential damage to property and future downtown redevelopment plans"
+   }
+  ],
+  "first_seen": "2026-10-02",
+  "updated": "2026-10-02",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Merriam, Missouri, United States (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -94.72025,
+      38.99297
+     ],
+     [
+      -94.66244,
+      38.99297
+     ],
+     [
+      -94.66244,
+      39.04407
+     ],
+     [
+      -94.72025,
+      39.04407
+     ],
+     [
+      -94.72025,
+      38.99297
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 28.394,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-02",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260930-35.47_-97.52",
   "hazard": "flood",
   "lon": -97.5170536,
@@ -3882,81 +4029,6 @@
    "s1_before": 5,
    "s1_after": 0,
    "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261001-39.02_-94.69",
-  "hazard": "flood",
-  "lon": -94.689947,
-  "lat": 39.0168058,
-  "bbox": [
-   -94.7057952,
-   38.9929728,
-   -94.676904,
-   39.0440703
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-02",
-  "place": "Merriam, Missouri",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.kmbc.com/article/merriam-turkey-creek-flash-flood-warning-downtown-flooding/73986544",
-    "title": "Flash flood warning renews Turkey Creek concerns in Merriam",
-    "outlet": "kmbc.com",
-    "date": "2026-10-02",
-    "quote": "Last year, flash flooding from Turkey Creek in Merriam washed a car on top of the north fence at Waterfall Park.",
-    "detail": "business owners worry about flooding, potential damage to property and future downtown redevelopment plans"
-   }
-  ],
-  "first_seen": "2026-10-02",
-  "updated": "2026-10-02",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Merriam, Missouri, United States (2026-10-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -94.72025,
-      38.99297
-     ],
-     [
-      -94.66244,
-      38.99297
-     ],
-     [
-      -94.66244,
-      39.04407
-     ],
-     [
-      -94.72025,
-      39.04407
-     ],
-     [
-      -94.72025,
-      38.99297
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 28.394,
-  "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-02",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 7,
    "s2_after": 0
   },
   "sensors": [
