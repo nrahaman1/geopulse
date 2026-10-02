@@ -42,7 +42,7 @@ implemented and why: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md); results and c
 ## Quickstart
 
 ```bash
-pip install https://github.com/nrahaman1/geopulse/releases/download/v0.5.1/geopulse_eo-0.5.1-py3-none-any.whl
+pip install https://github.com/nrahaman1/geopulse/releases/download/v0.5.2/geopulse_eo-0.5.2-py3-none-any.whl
 # Python 3.11+. The wheel on each release includes the web app; the command and import are `geopulse`.
 geopulse models pull         # trained checkpoints from GitHub Releases, SHA-256 verified
 geopulse doctor              # GDAL, PROJ, PyTorch, CUDA, STAC connectivity

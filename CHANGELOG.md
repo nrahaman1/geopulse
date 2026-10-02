@@ -3,7 +3,7 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
-## [Unreleased]
+## [0.5.2] — 2026-10-02
 
 ### Changed
 - Desktop app: while the PC engine starts, a spinner under "This PC" shows the current step (checking or updating the

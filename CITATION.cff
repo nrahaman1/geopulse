@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Rahaman
     given-names: Nafiz
-version: 0.5.1
-date-released: 2026-10-01
+version: 0.5.2
+date-released: 2026-10-02
 license: Apache-2.0
 repository-code: "https://github.com/nrahaman1/geopulse"
 keywords:

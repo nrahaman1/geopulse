@@ -8,7 +8,7 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 
-__version__ = "0.5.1"
+__version__ = "0.5.2"
 
 
 @dataclass
