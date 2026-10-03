@@ -3,7 +3,7 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
-## [Unreleased]
+## [0.5.4] — 2026-10-03
 
 ### Fixed
 - Built-in engine: a run could fail with "network error after 6 tries: Failed to fetch (planetarycomputer.microsoft.com)".
