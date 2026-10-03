@@ -1,5 +1,78 @@
 [
  {
+  "id": "fl-20261001-5.94_116.08",
+  "hazard": "flood",
+  "lon": 116.0823,
+  "lat": 5.9435,
+  "bbox": [
+   116.0373,
+   5.8985,
+   116.1274,
+   5.9886
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Malaysia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104207",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104207&episodeid=1&eventtype=FL",
+    "title": "Flood in Malaysia (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Malaysia (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      116.0373,
+      5.8985
+     ],
+     [
+      116.1274,
+      5.8985
+     ],
+     [
+      116.1274,
+      5.9886
+     ],
+     [
+      116.0373,
+      5.9886
+     ],
+     [
+      116.0373,
+      5.8985
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 99.348,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-03",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260929-43.93_3.71",
   "hazard": "flood",
   "lon": 3.7097,
@@ -222,7 +295,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -510,7 +583,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -645,6 +718,74 @@
    "s1_after": 0,
    "s2_before": 3,
    "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260927--15.90_134.31",
+  "hazard": "wildfire",
+  "lon": 134.3053,
+  "lat": -15.8986,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-27",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032518",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032518&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-27",
+    "detail": "Green impact for forestfire in 10255 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-27)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      134.23525,
+      -15.96643
+     ],
+     [
+      134.37535,
+      -15.96643
+     ],
+     [
+      134.37535,
+      -15.83077
+     ],
+     [
+      134.23525,
+      -15.83077
+     ],
+     [
+      134.23525,
+      -15.96643
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.074,
+  "before": "2026-08-18/2026-09-25",
+  "after": "2026-09-29/2026-10-03",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
   },
   "sensors": [
    "s2"
@@ -1237,7 +1378,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-24",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Paraguay",
   "sources": [
@@ -1454,7 +1595,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-22",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1522,7 +1663,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Papua New Guinea, Indonesia",
   "sources": [
@@ -1590,7 +1731,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -1954,7 +2095,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2317,7 +2458,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-18",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2379,6 +2520,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260918--4.01_144.28",
+  "hazard": "wildfire",
+  "lon": 144.2823,
+  "lat": -4.013,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-18",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032482",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032482&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-09-18",
+    "detail": "Green impact for forestfire in 10069 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-09-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      144.21476,
+      -4.08083
+     ],
+     [
+      144.34984,
+      -4.08083
+     ],
+     [
+      144.34984,
+      -3.94517
+     ],
+     [
+      144.21476,
+      -3.94517
+     ],
+     [
+      144.21476,
+      -4.08083
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.352,
+  "before": "2026-08-09/2026-09-16",
+  "after": "2026-09-20/2026-10-03",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 12,
+   "s2_after": 8
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260917--11.37_-43.41",
   "hazard": "wildfire",
   "lon": -43.4144,
@@ -2386,7 +2596,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-17",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3154,6 +3364,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260704-21.86_96.10",
+  "hazard": "flood",
+  "lon": 96.098,
+  "lat": 21.8577,
+  "bbox": [
+   95.984,
+   21.7723,
+   96.2155,
+   21.941
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-07-04",
+  "event_end": "2026-10-02",
+  "place": "",
+  "country": "Myanmar",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104011",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104011&episodeid=28&eventtype=FL",
+    "title": "Flood in Myanmar (Green alert)",
+    "date": "2026-07-04",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Myanmar (2026-07-04)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      95.984,
+      21.7723
+     ],
+     [
+      96.2155,
+      21.7723
+     ],
+     [
+      96.2155,
+      21.941
+     ],
+     [
+      95.984,
+      21.941
+     ],
+     [
+      95.984,
+      21.7723
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 447.629,
+  "before": "2026-05-30/2026-06-29",
+  "after": "2026-09-22/2026-10-03",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 3,
+   "s2_before": 5,
+   "s2_after": 6
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260519-29.42_-98.50",
   "hazard": "flood",
   "lon": -98.4951,
@@ -3894,6 +4178,81 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260807-49.60_-119.67",
+  "hazard": "wildfire",
+  "lon": -119.666667,
+  "lat": 49.6,
+  "bbox": [
+   -119.8050644,
+   49.5479743,
+   -119.616591,
+   49.7120458
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-08-07",
+  "event_end": "2026-10-01",
+  "place": "Summerland, British Columbia",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.theglobeandmail.com/canada/british-columbia/article-summerland-bc-rescinds-last-evacuation-orders-two-months-after/",
+    "title": "Summerland , B . C ., rescinds last evacuation orders two months after wildfire tore through region",
+    "outlet": "theglobeandmail.com",
+    "date": "2026-10-01",
+    "quote": "About 150 buildings were damaged or destroyed in the Bald Range wildfire after the blaze grew rapidly on the evening of Aug. 7.",
+    "detail": "evacuation of thousands of residents, fatality of an 80-year-old woman"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Summerland, British Columbia, Canada (2026-08-07)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -119.80506,
+      49.54797
+     ],
+     [
+      -119.61659,
+      49.54797
+     ],
+     [
+      -119.61659,
+      49.71205
+     ],
+     [
+      -119.80506,
+      49.71205
+     ],
+     [
+      -119.80506,
+      49.54797
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 248.516,
+  "before": "2026-06-28/2026-08-05",
+  "after": "2026-09-03/2026-10-03",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 6,
+   "s2_before": 66,
+   "s2_after": 32
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260928--15.59_144.56",
   "hazard": "wildfire",
   "lon": 144.5562,
@@ -3901,7 +4260,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3954,6 +4313,75 @@
    "s1_before": 10,
    "s1_after": 0,
    "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20260928--15.31_133.79",
+  "hazard": "wildfire",
+  "lon": 133.7878,
+  "lat": -15.3099,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032508",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032508&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 10438 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      133.71795,
+      -15.37773
+     ],
+     [
+      133.85765,
+      -15.37773
+     ],
+     [
+      133.85765,
+      -15.24207
+     ],
+     [
+      133.71795,
+      -15.24207
+     ],
+     [
+      133.71795,
+      -15.37773
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.124,
+  "before": "2026-08-19/2026-09-26",
+  "after": "2026-09-30/2026-10-03",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 19,
    "s2_after": 0
   },
   "sensors": [
@@ -4029,6 +4457,81 @@
    "s1_before": 5,
    "s1_after": 0,
    "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261001-30.27_-97.74",
+  "hazard": "flood",
+  "lon": -97.7436995,
+  "lat": 30.2711286,
+  "bbox": [
+   -97.9367663,
+   30.0985133,
+   -97.5605288,
+   30.5166255
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-02",
+  "place": "Austin, Texas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox7austin.com/weather/austin-weather-flood-alerts-issued-central-texas-storms-roll-through",
+    "title": "Austin weather : Flood alerts issued in Central Texas as storms roll through",
+    "outlet": "fox7austin.com",
+    "date": "2026-10-01",
+    "quote": "Localized flooding and lightning are main threats",
+    "detail": "Localized flooding and lightning are main threats. All of Central Texas is also a moderate risk of flooding. Residents are advised to stay weather aware, be cautious around low-water crossings, and prepare emergency kits."
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Austin, Texas, US (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -97.89972,
+      30.13547
+     ],
+     [
+      -97.58768,
+      30.13547
+     ],
+     [
+      -97.58768,
+      30.40678
+     ],
+     [
+      -97.89972,
+      30.40678
+     ],
+     [
+      -97.89972,
+      30.13547
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.665,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-03",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 28,
    "s2_after": 0
   },
   "sensors": [
