@@ -1028,7 +1028,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -4251,6 +4251,75 @@
    "s2"
   ],
   "status": "ready"
+ },
+ {
+  "id": "wi-20261001--7.25_30.08",
+  "hazard": "wildfire",
+  "lon": 30.0753,
+  "lat": -7.2494,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "The Democratic Republic of Congo",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032552",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032552&episodeid=1&eventtype=WF",
+    "title": "Forest fires in The Democratic Republic of Congo (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Green impact for forestfire in 10102 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 The Democratic Republic of Congo (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      30.00738,
+      -7.31723
+     ],
+     [
+      30.14322,
+      -7.31723
+     ],
+     [
+      30.14322,
+      -7.18157
+     ],
+     [
+      30.00738,
+      -7.18157
+     ],
+     [
+      30.00738,
+      -7.31723
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.468,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-03/2026-10-03",
+  "scenes": {
+   "s1_before": 19,
+   "s1_after": 0,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
  },
  {
   "id": "wi-20260928--15.59_144.56",
