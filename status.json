@@ -1,5 +1,5 @@
 {
- "started": "2026-10-03T11:45:03+00:00",
+ "started": "2026-10-03T16:26:38+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
@@ -15,7 +15,7 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 92
+   "articles": 85
   },
   "rss:wildfiretoday.com": {
    "ok": true,
@@ -40,9 +40,9 @@
   "events": 7,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-03T12:22:15+00:00",
- "duration_s": 2232,
- "cases": 69,
- "new": 7,
+ "finished": "2026-10-03T17:15:29+00:00",
+ "duration_s": 2931,
+ "cases": 70,
+ "new": 1,
  "ok": true
 }

@@ -4541,6 +4541,81 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261001-39.76_-121.62",
+  "hazard": "wildfire",
+  "lon": -121.6219177,
+  "lat": 39.7596061,
+  "bbox": [
+   -121.655652,
+   39.725361,
+   -121.564452,
+   39.801543
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Paradise, Butte County",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.pressdemocrat.com/2026/09/30/newsom-wildfire-bill/",
+    "title": "Newsom signs bill to pave way for full compensation for Northern California wildfire survivors",
+    "outlet": "pressdemocrat.com",
+    "date": "2026-10-01",
+    "quote": "The bill would require the California Public Utilities Commission to study possible pathways for full restitution for victims of wildfires sparked by PG&E from 2015 through 2018, including the 2015 Butte Fire, the 2017 North Bay firestorm that claimed more than 6,000 homes and businesses and 40 lives and the 2018 Camp Fire that burned through Paradise and killed 85 people.",
+    "detail": "The bill would require the state utilities commission to lay out in a study clear restitution mechanisms, and specifically ones that would put utilities on the hook without shifting costs onto ratepayers."
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Paradise, Butte County, US (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -121.65565,
+      39.72536
+     ],
+     [
+      -121.56445,
+      39.72536
+     ],
+     [
+      -121.56445,
+      39.80154
+     ],
+     [
+      -121.65565,
+      39.80154
+     ],
+     [
+      -121.65565,
+      39.72536
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 66.069,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-03/2026-10-03",
+  "scenes": {
+   "s1_before": 23,
+   "s1_after": 0,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261002-33.97_-78.39",
   "hazard": "wildfire",
   "lon": -78.3858371,
