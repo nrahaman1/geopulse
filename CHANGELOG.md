@@ -3,7 +3,7 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
-## [Unreleased]
+## [0.5.3] — 2026-10-03
 
 ### Added
 - **Stop** a running analysis: the Run button turns into Stop while a job runs. The built-in engine stops at once; a
