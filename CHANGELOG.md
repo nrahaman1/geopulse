@@ -3,6 +3,20 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [Unreleased]
+
+### Added
+- **Stop** a running analysis: the Run button turns into Stop while a job runs. The built-in engine stops at once; a
+  PC-engine or server job stops at its next progress report (`POST /jobs/{id}/cancel`; new job status `cancelled`).
+- A search box in **Recent events** (place, country, source, quoted text).
+
+### Changed
+- Layout: a wider side panel with *Set up*, *Result* and *Jobs* tabs, so setting up and running fit one screen without
+  scrolling; the run bar (Run/Stop, progress, log) stays at the bottom of the panel; a result opens in the *Result* tab.
+  **Recent events** moved beside the map's place search, with a count.
+- Extent polygons are drawn in bright yellow on a dark casing (were thin white lines), so they stand out on the dark
+  basemap, on imagery and over every task colour.
+
 ## [0.5.2] — 2026-10-02
 
 ### Changed

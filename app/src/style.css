@@ -7,13 +7,14 @@
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
     font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  body { display: grid; grid-template-columns: 360px 1fr; }
-  aside { background: var(--panel); border-right: 1px solid var(--line); overflow-y: auto; height: 100vh; }
-  header { padding: 16px 20px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; }
+  body { display: grid; grid-template-columns: clamp(380px, 32vw, 460px) 1fr; }
+  aside { background: var(--panel); border-right: 1px solid var(--line); height: 100dvh; display: flex; flex-direction: column;
+    min-width: 0; }
+  header { padding: 14px 20px 12px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; flex: none; }
   header .mark { flex: none; display: block; }
   header h1 { font-size: 18px; margin: 0; letter-spacing: .02em; }
   header .tag { color: var(--muted); font-size: 12px; }
-  section { padding: 14px 20px; border-bottom: 1px solid var(--line); }
+  section { padding: 12px 20px; border-bottom: 1px solid var(--line); }
   h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
   label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
   select, input[type=date], button { font: inherit; color: var(--text); background: var(--panel-2); border: 1px solid var(--line);
@@ -31,7 +32,7 @@
   .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
   .mono { font-family: var(--mono); }
   #log { font: 12px/1.55 var(--mono); color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
-    padding: 8px 10px; margin-top: 10px; max-height: 190px; overflow-y: auto; white-space: pre-wrap; display: none; }
+    padding: 6px 10px; margin-top: 10px; max-height: 112px; overflow-y: auto; white-space: pre-wrap; display: none; }
   #log .ok { color: var(--ok); } #log .warn { color: var(--warn); } #log .err { color: var(--bad); }
   .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .metric { background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
@@ -49,7 +50,8 @@
   .jobs .del { background: none; border: 0; padding: 0 0 0 8px; color: var(--muted); cursor: pointer; font: inherit; }
   .jobs .del:hover { color: var(--bad); }
   .st-succeeded { color: var(--ok); } .st-failed { color: var(--bad); } .st-running, .st-queued { color: var(--warn); }
-  #maps { position: relative; height: 100vh; }
+  .st-cancelled { color: var(--muted); }
+  #maps { position: relative; height: 100dvh; }
   #map, #map-before { position: absolute; inset: 0; }
   #map-before { display: none; }
   #swipe { position: absolute; top: 0; bottom: 0; width: 0; display: none; z-index: 3; }
@@ -72,7 +74,10 @@
   .maplibregl-ctrl-attrib { font-size: 10px; }
   header a { margin-left: auto; color: var(--muted); font-size: 12px; text-decoration: none; }
   header a:hover { color: var(--accent); }
-  #search { position: absolute; top: 12px; left: 12px; z-index: 4; width: 320px; max-width: calc(100% - 150px); }
+  #map-top { position: absolute; top: 12px; left: 12px; right: 276px; z-index: 4; display: flex; flex-wrap: wrap; gap: 8px;
+    align-items: flex-start; pointer-events: none; }
+  #map-top > * { pointer-events: auto; }
+  #search { position: relative; flex: 1 1 240px; max-width: 360px; }
   #search input { width: 100%; font: inherit; color: var(--text); background: color-mix(in srgb, var(--panel) 96%, transparent);
     border: 1px solid var(--line); border-radius: 8px; padding: 9px 40px 9px 12px; box-shadow: 0 2px 10px #0006; }
   #search input::-webkit-search-cancel-button { filter: invert(1); }
@@ -88,7 +93,9 @@
   #search-results .attr { padding: 5px 12px; font-size: 10px; color: var(--muted); }
   @media (max-width: 800px) {
     body { grid-template-columns: 1fr; grid-template-rows: 55vh auto; }
-    aside { height: auto; order: 2; } #maps { height: 55vh; } #layers { width: 200px; }
+    aside { height: auto; order: 2; } #maps { height: 55vh; } #layers { width: 200px; top: 104px; }
+    .panel-body { overflow: visible; } .runbar { position: sticky; bottom: 0; }
+    #map-top { right: 12px; }
   }
 
 #engine-hint a { color: var(--accent); }
@@ -118,8 +125,37 @@
 @media (prefers-reduced-motion: reduce) { .engine-status .spinner { animation-duration: 3s; } }
 .check:has(input:disabled) { cursor: progress; opacity: .75; }
 
-/* Scout events: the card of an added event (sidebar) and each event in the Recent events dialog. */
-#scout-open { border-color: var(--accent); color: var(--accent); font-weight: 600; cursor: pointer; }
+/* Panel tabs, the scrolling panel body, and the run bar that never scrolls away. */
+.tabs { display: flex; gap: 4px; padding: 0 14px; border-bottom: 1px solid var(--line); flex: none; }
+.tabs button { width: auto; flex: 1; background: none; border: 0; border-bottom: 2px solid transparent; border-radius: 0;
+  padding: 10px 6px 8px; color: var(--muted); font-weight: 600; cursor: pointer; }
+.tabs button:hover { color: var(--text); }
+.tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+.panel-body { flex: 1; min-height: 0; overflow-y: auto; }
+.hint.empty { padding: 16px 20px; margin: 0; }
+.compute { background: var(--panel-2); }
+.dates { display: grid; grid-template-columns: auto 1fr 1fr; gap: 6px 8px; align-items: center; margin: 2px 0 4px; }
+.dates span { font-size: 12px; color: var(--muted); }
+.sensors { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 6px; }
+.runbar { flex: none; padding: 12px 20px 14px; border-top: 1px solid var(--line); background: var(--panel-2);
+  box-shadow: 0 -6px 14px rgb(0 0 0 / .25); }
+.run-row button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; font-weight: 600;
+  cursor: pointer; }
+.run-row svg { width: 14px; height: 14px; fill: currentColor; flex: none; }
+button.stop { color: var(--bad); border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--panel-2)); }
+button.stop:hover { background: color-mix(in srgb, var(--bad) 22%, var(--panel-2)); }
+button.stop:disabled { opacity: .6; cursor: progress; }
+.swatch-line { display: inline-block; width: 16px; border-top: 2px solid #ffd60a; box-shadow: 0 0 0 1px rgb(0 0 0 / .6);
+  margin-right: 2px; }
+
+/* Scout events: the Recent events button on the map, the card of an added event (sidebar) and each event in the dialog. */
+#scout-open { width: auto; flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 8px;
+  border-color: var(--accent); color: var(--accent); font-weight: 600; cursor: pointer; box-shadow: 0 2px 10px #0006;
+  background: color-mix(in srgb, var(--panel) 96%, transparent); }
+#scout-open svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+#scout-open svg circle { fill: currentColor; stroke: none; }
+.badge { min-width: 20px; padding: 1px 6px; border-radius: 999px; background: var(--accent); color: var(--accent-ink);
+  font: 700 11px/16px var(--mono); text-align: center; }
 .case { padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); font-size: 12px;
   color: var(--muted); }
 #case-info { margin-top: 8px; }
@@ -144,7 +180,11 @@ dialog#scout::backdrop { background: rgb(0 0 0 / .6); }
 #scout .dlg-head a { color: var(--accent); text-decoration: none; }
 #scout .run { margin-top: 6px; font: 11px/1.5 var(--mono); }
 #scout-close { width: auto; flex: none; margin-left: auto; padding: 4px 10px; cursor: pointer; }
-#scout .dlg-filter { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 20px 0; }
+#scout .dlg-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 20px 0; }
+#scout-q { flex: 1 1 220px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 6px 10px; }
+#scout-q::-webkit-search-cancel-button { filter: invert(1); }
+#scout .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 #scout .dlg-filter label { display: flex; align-items: center; gap: 6px; margin: 0; padding: 4px 10px; font-size: 12px;
   color: var(--text); border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
 #scout .dlg-filter label:has(input:checked) { border-color: var(--accent); background: var(--panel-2); }

@@ -116,6 +116,7 @@ result.save("outputs/camp/")
 ```text
 GET  /health             GET  /models   /models/{id}     GET /examples
 POST /search             POST /jobs     GET /jobs   /jobs/{id}   /jobs/{id}/results   /jobs/{id}/files/{path}
+POST /jobs/{id}/cancel
 POST /predict/sync       (≤ 25 km²)      GET /metrics     (Prometheus text)
 ```
 
@@ -126,8 +127,10 @@ background worker, and persisted under `outputs/jobs/<id>/`.
 🔥 wildfire, 🌲 vegetation), draw a box or upload GeoJSON;
 set task, windows, sensors and model (filtered by task); run. Layers for the task probability, burn severity,
 uncertainty, change, extent polygons and pre/post S1/S2 imagery; opacity; before/after swipe; metrics (affected km²,
-review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads;
-a progress bar with the current stage while a job runs.
+review-recommended km², confidence, severity breakdown, sensors used, learned modality weights); downloads.
+Everything needed to run fits one screen: the side panel has *Set up*, *Result* and *Jobs* tabs, and its run bar (Run,
+or Stop while a job runs, with the current stage and progress) never scrolls away. **Recent events** sits beside the
+place search.
 **Compute** chooses where a job runs: the *PC engine* (desktop app), the *GeoPulse server* (when `geopulse serve`
 serves the page) or *built-in* (this browser, always available). Built-in jobs and their files are kept on the
 device (IndexedDB), 10 at most.

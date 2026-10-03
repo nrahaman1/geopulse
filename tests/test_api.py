@@ -64,6 +64,28 @@ def test_job_lifecycle(client, monkeypatch):
     assert 'geopulse_jobs{status="succeeded"}' in client.get("/metrics").text
 
 
+def test_a_running_job_can_be_stopped(client, monkeypatch):
+    def slow_run(request, out_dir, log, inputs=None, progress=lambda f, label: None):
+        for i in range(400):  # a long read: reports progress like the pipeline does after each scene
+            progress(i / 400, "Reading Sentinel-2 after")
+            time.sleep(0.01)
+        return {"affected_km2": 1.0}
+
+    monkeypatch.setattr(pipeline, "run", slow_run)
+    job = client.post("/jobs", json=JOB).json()
+    while client.get(f"/jobs/{job['id']}").json()["status"] != "running":
+        time.sleep(0.01)
+    client.post(f"/jobs/{job['id']}/cancel")
+    for _ in range(100):
+        state = client.get(f"/jobs/{job['id']}").json()
+        if state["status"] != "running":
+            break
+        time.sleep(0.02)
+    assert state["status"] == "cancelled" and state["log"][-1] == "■ Stopped." and state["progress"] < 0.5
+    assert client.get(f"/jobs/{job['id']}/results").status_code == 409
+    assert client.post("/jobs/zzz/cancel").status_code == 404
+
+
 def test_failed_job_reports_error(client, monkeypatch):
     def boom(*a, **k):
         raise pipeline.RequestError("no usable post-event observations")

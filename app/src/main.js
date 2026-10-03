@@ -339,8 +339,9 @@ async function loadCases() {
   added = added.map((a) => byId.get(a.id) ?? a); // the Scout's latest view of an added event (new imagery, sources)
   saveAdded();
   fillExamples();
-  $("scout-open").textContent = `📡 Recent events${cases.length ? ` (${cases.length})` : ""}`;
-  if (status?.finished) $("scout-hint").textContent = `Floods, wildfires and forest loss the GeoPulse Scout found in alerts and the news; updated ${ago(status.finished)}.`;
+  $("scout-count").hidden = !cases.length;
+  $("scout-count").textContent = cases.length;
+  if (status?.finished) $("scout-open").title = `Floods, wildfires and forest loss the GeoPulse Scout found in official alerts and the news; updated ${ago(status.finished)}`;
   if ($("scout").open) renderScout();
 }
 
@@ -392,10 +393,14 @@ function scoutAbout() {
 }
 function renderScout() {
   const hazard = document.querySelector("input[name=scout-hazard]:checked").value;
-  const shown = cases.filter((c) => !hazard || c.task === hazard);
+  const words = $("scout-q").value.toLowerCase().split(/\s+/).filter(Boolean);
+  const text = (c) => [c.title, c.place, c.country, ...c.sources.flatMap((s) => [s.title, s.outlet, s.quote, SOURCE[s.kind]])]
+    .filter(Boolean).join(" ").toLowerCase();
+  const shown = cases.filter((c) => (!hazard || c.task === hazard) && words.every((w) => text(c).includes(w)));
   $("scout-about").replaceChildren(...scoutAbout());
   $("scout-list").replaceChildren(...(shown.length ? shown.map(eventItem) : [el("li", { className: "hint",
-    textContent: cases.length ? "No events of this kind right now." : "The recent events could not be loaded (offline?)." })]));
+    textContent: !cases.length ? "The recent events could not be loaded (offline?)."
+      : words.length ? `No event matches “${$("scout-q").value.trim()}”.` : "No events of this kind right now." })]));
 }
 function eventItem(c) {
   const mine = added.some((a) => a.id === c.id);
@@ -415,6 +420,7 @@ $("scout-open").onclick = () => { renderScout(); $("scout").showModal(); };
 $("scout-close").onclick = () => $("scout").close();
 $("scout").onclick = (e) => { if (e.target === $("scout")) $("scout").close(); }; // a click on the backdrop
 for (const r of document.querySelectorAll("input[name=scout-hazard]")) r.onchange = renderScout;
+$("scout-q").oninput = renderScout;
 
 // Public deployments hide /jobs; each browser then remembers the jobs it started.
 const myJobs = () => { try { return JSON.parse(localStorage.getItem("geopulse.jobs") || "[]"); } catch { return []; } };
@@ -473,12 +479,47 @@ async function refreshJobs() {
   }));
 }
 
+// ------------------------------------------------------------------ panel tabs
+const TABS = ["setup", "result", "jobs"];
+function showTab(name, focus = false) {
+  for (const t of TABS) {
+    const on = t === name;
+    $(`tab-${t}`).setAttribute("aria-selected", on);
+    $(`tab-${t}`).tabIndex = on ? 0 : -1;
+    $(`panel-${t}`).hidden = !on;
+  }
+  if (focus) $(`tab-${name}`).focus();
+}
+for (const t of TABS) {
+  $(`tab-${t}`).onclick = () => showTab(t);
+  $(`tab-${t}`).onkeydown = (e) => { // arrow keys move between tabs (WAI-ARIA tabs pattern)
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (step) showTab(TABS[(TABS.indexOf(t) + step + TABS.length) % TABS.length], true);
+  };
+}
+
 // ------------------------------------------------------------------ run
+// While an analysis runs, Run turns into Stop. `running.stop` ends it: the browser engine's worker is terminated; a
+// server job is asked to stop and does so at its next progress report.
+let running = null;
+function setRunning(stop) {
+  running = stop ? { stop } : null;
+  $("run").disabled = !!stop; // the self-updater waits on this
+  $("run").hidden = !!stop;
+  $("stop").hidden = !stop;
+  $("stop").disabled = false;
+}
+$("stop").onclick = () => {
+  $("stop").disabled = true;
+  setProgress(null, "Stopping…");
+  running?.stop();
+};
+
 function logLines(lines) {
   const el = $("log");
   el.style.display = "block";
   el.innerHTML = lines.map((l) => {
-    const cls = l.startsWith("✓") ? "ok" : l.startsWith("!") ? "warn" : l.startsWith("✗") ? "err" : "";
+    const cls = l.startsWith("✓") ? "ok" : l.startsWith("!") || l.startsWith("■") ? "warn" : l.startsWith("✗") ? "err" : "";
     return `<div class="${cls}">${l.replace(/</g, "&lt;")}</div>`;
   }).join("");
   el.scrollTop = el.scrollHeight;
@@ -508,14 +549,21 @@ function runInBrowser(body) {
   const card = body.model === "auto" ? fits[0] : fits.find((m) => m.model_id === body.model) ?? BASELINE;
   const lines = [`browser job: ${request.task} with ${card.model_id}`];
   logLines(lines);
-  $("run").disabled = true;
   startProgress();
   worker ??= new Worker(new URL("./worker.js", import.meta.url), { type: "module" });
-  worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); $("run").disabled = false; endProgress(); };
+  setRunning(() => { // a fresh worker next time: terminating is the only way to stop one mid-read
+    worker.terminate();
+    worker = null;
+    lines.push("■ Stopped.");
+    logLines(lines);
+    setRunning(null);
+    endProgress();
+  });
+  worker.onerror = (e) => { lines.push(`✗ worker failed: ${e.message || "could not start"}`); logLines(lines); setRunning(null); endProgress(); };
   worker.onmessage = async ({ data }) => {
     if (data.type === "log") { lines.push(data.msg); logLines(lines); return; }
     if (data.type === "progress") { setProgress(data.value, data.label); return; }
-    $("run").disabled = false;
+    setRunning(null);
     endProgress();
     if (data.type === "error") { lines.push(`✗ ${data.message}`); logLines(lines); return; }
     const id = [...crypto.getRandomValues(new Uint8Array(6))].map((b) => b.toString(16).padStart(2, "0")).join("");
@@ -530,8 +578,9 @@ function runInBrowser(body) {
 }
 
 async function watch(id) {
-  $("run").disabled = true;
   startProgress();
+  setRunning(() => api(`/jobs/${id}/cancel`, { method: "POST" })
+    .catch((err) => { $("stop").disabled = false; logLines([`✗ could not stop the job: ${err.message}`]); }));
   try {
     for (;;) {
       const job = await api(`/jobs/${id}`);
@@ -539,10 +588,11 @@ async function watch(id) {
       if (job.started) progressT0 = Date.parse(job.started);
       setProgress(job.progress, job.stage ?? (job.status === "queued" ? "Waiting for the engine" : null));
       if (job.status === "succeeded") { await showResults(id); break; }
-      if (job.status === "failed") break;
+      if (job.status === "failed" || job.status === "cancelled") break;
+      if (job.cancel) setProgress(null, "Stopping…"); // until the engine reaches its next progress report
       await new Promise((r) => setTimeout(r, 1500));
     }
-  } finally { $("run").disabled = false; endProgress(); refreshJobs(); }
+  } finally { setRunning(null); endProgress(); refreshJobs(); }
 }
 
 // ------------------------------------------------------------------ progress
@@ -575,11 +625,12 @@ function endProgress() {
 
 // ------------------------------------------------------------------ results
 const PRED = ["change", "uncertainty", "severity", "target"];
+const EXTENT = "#ffd60a"; // extent polygons: yellow, unlike any task colour (blue, red, purple) or the cyan study area
 const IMG = ["s2_pre", "s2_post", "s1_pre", "s1_post"];
 let current = null;
 
 function clearResult(m) {
-  for (const id of [...IMG, ...PRED, "outline"]) {
+  for (const id of [...IMG, ...PRED, "outline", "outline-casing"]) {
     if (m.getLayer(id)) m.removeLayer(id);
     if (m.getSource(id)) m.removeSource(id);
   }
@@ -613,6 +664,8 @@ async function showResults(id) {
 
   const s = res.summary;
   $("results").hidden = false;
+  $("result-empty").hidden = true;
+  showTab("result");
   $("m-hit").textContent = s.affected_km2.toFixed(2);
   $("k-hit").textContent = `${s.affected_label} km²`;
   $("k-conf").textContent = `mean confidence (${s.affected_label})`;
@@ -647,7 +700,8 @@ async function showResults(id) {
   $("target-name").textContent = tname;
   $("target-legend").style.background = `linear-gradient(90deg,${c0}00,${c0}96 40%,${c1}eb)`;
   map.addSource("outline", { type: "geojson", data: res.files[res.layers.extent] });
-  map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": "#ffffff", "line-opacity": 0.7, "line-width": 0.8 } });
+  map.addLayer({ id: "outline-casing", type: "line", source: "outline", paint: { "line-color": "#000000", "line-opacity": 0.6, "line-width": 3.4 } });
+  map.addLayer({ id: "outline", type: "line", source: "outline", paint: { "line-color": EXTENT, "line-width": 1.6 } });
   // Default visibility: optical if we have it, otherwise SAR.
   const afterImg = layers.includes("s2_post") ? "s2_post" : "s1_post";
   for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
@@ -677,7 +731,7 @@ if (TAURI) document.addEventListener("click", (e) => {
 
 function applyLayer(k, on) {
   const vis = on ? "visible" : "none";
-  if (map.getLayer(k)) map.setLayoutProperty(k, "visibility", vis);
+  for (const id of k === "outline" ? ["outline", "outline-casing"] : [k]) if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", vis);
 }
 for (const el of document.querySelectorAll("#layers .check[data-layer]")) {
   el.querySelector("input").onchange = (e) => applyLayer(el.dataset.layer, e.target.checked);

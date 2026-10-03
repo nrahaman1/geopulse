@@ -101,22 +101,39 @@ def _validate(req: JobRequest, max_km2: float) -> dict:
         raise HTTPException(422, str(e)) from None
 
 
+class Cancelled(BaseException):
+    """Raised inside a running job when the user stops it. A BaseException, so no `except Exception` in the pipeline
+    swallows it (thread pools pass it on, like any error)."""
+
+
 def _run(job_id: str) -> None:
     job = JOBS[job_id]
+    if job["status"] == "cancelled":  # stopped while it waited in the queue
+        return
     job.update(status="running", started=_now())
     _save(job)
     t0 = time.time()
 
+    # The pipeline reports progress after every scene and every batch of model tiles: that is where a stop takes hold.
+    def check() -> None:
+        if job.get("cancel"):
+            raise Cancelled
+
     def log(msg: str) -> None:
+        check()
         job["log"].append(msg)
         _save(job)
 
     def progress(frac: float, stage: str) -> None:  # GET /jobs/{id} returns it; saved with the next log line
+        check()
         job.update(progress=round(frac, 4), stage=stage)
 
     try:
         job["summary"] = pipeline.run(job["request"], jobs_dir() / job_id, log=log, progress=progress)
         job.update(status="succeeded", progress=1.0, stage="Done")
+    except Cancelled:
+        job.update(status="cancelled", stage="Stopped")
+        job["log"].append("■ Stopped.")
     except Exception as e:  # the job record is the error channel for async work
         job.update(status="failed", error=f"{type(e).__name__}: {e}")
     job["finished"] = _now()
@@ -245,6 +262,20 @@ def get_job(job_id: str):
     return _job(job_id)
 
 
+@app.post("/jobs/{job_id}/cancel")
+def cancel_job(job_id: str):
+    """Stop a queued or running job. A running job stops at its next progress report (seconds; up to the scenes being
+    read at that moment)."""
+    job = _job(job_id)
+    if job["status"] == "queued":
+        job.update(status="cancelled", stage="Stopped", finished=_now())
+        job["log"].append("■ Stopped before it started.")
+        _save(job)
+    elif job["status"] == "running":
+        job["cancel"] = True
+    return job
+
+
 @app.get("/jobs/{job_id}/results")
 def job_results(job_id: str):
     job = _job(job_id)
@@ -306,7 +337,7 @@ def metrics():
         f"geopulse_job_seconds_total {STATS['job_seconds']:.3f}",
         "# TYPE geopulse_jobs gauge",
     ]
-    for status in ("queued", "running", "succeeded", "failed"):
+    for status in ("queued", "running", "succeeded", "failed", "cancelled"):
         lines.append(f'geopulse_jobs{{status="{status}"}} {sum(j["status"] == status for j in JOBS.values())}')
     return "\n".join(lines) + "\n"
 
