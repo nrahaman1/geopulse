@@ -67,7 +67,7 @@ jobs:
           python3 -m zipfile -l dist/*.whl > wheel.txt
           grep -q "geopulse/ui/index.html" wheel.txt
           grep -q "geopulse/examples/flood_emilia_conselice/request.yaml" wheel.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist/
