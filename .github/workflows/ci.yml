@@ -55,6 +55,9 @@ jobs:
         working-directory: app
       - run: npm run build
         working-directory: app
+      - name: Browser engine asks for each read token once
+        run: node scripts/test-sign.mjs
+        working-directory: app
       - name: Build has the app shell, service worker and examples
         run: test -f app/dist/index.html && test -f app/dist/sw.js && grep -q flood_emilia_conselice app/dist/examples.json
       - uses: astral-sh/setup-uv@v6

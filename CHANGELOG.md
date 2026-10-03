@@ -3,6 +3,16 @@
 All notable changes are recorded here. The project follows [Semantic Versioning](https://semver.org/);
 before 1.0, minor versions may change APIs and output schemas.
 
+## [Unreleased]
+
+### Fixed
+- Built-in engine: a run could fail with "network error after 6 tries: Failed to fetch (planetarycomputer.microsoft.com)".
+  Every scene asked for the same storage read token at once; the Planetary Computer rate-limits such bursts (429) or
+  drops them at its gateway (504 without CORS headers, which a browser reports as "Failed to fetch"), and the retries,
+  all on the same schedule, collided again. Now one token request per storage container is shared by all scenes,
+  retries are jittered, catalog and token requests retry for about a minute, and the error says what to do.
+  `app/scripts/test-sign.mjs` (run in CI) checks the token sharing.
+
 ## [0.5.3] — 2026-10-03
 
 ### Added

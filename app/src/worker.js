@@ -22,17 +22,23 @@ self.onmessage = async ({ data }) => {
 };
 
 // Transient failures (a dropped connection, "Failed to fetch", 429/5xx throttling) are retried with backoff; a big
-// AOI makes hundreds of range reads and one of them failing used to end the whole job.
+// AOI makes hundreds of range reads and one of them failing used to end the whole job. Catalog searches and read
+// tokens get about a minute, to ride out the Planetary Computer's busy spells.
 const TRIES = 6;
+const API_TRIES = 8;
 const retryable = (status) => status === 429 || status >= 500;
-const backoff = (i) => new Promise((res) => setTimeout(res, 500 * 2 ** i));
+// Randomized ("jittered"), so requests that failed together do not all retry at the same moment and collide again.
+const backoff = (i) => new Promise((res) => setTimeout(res, 500 * 2 ** i * (0.5 + Math.random())));
 async function fetchRetry(url, opts = {}) {
   for (let i = 0; ; i++) {
     try {
       const r = await fetch(url, opts);
-      if (!retryable(r.status) || i === TRIES - 1) return r;
+      if (!retryable(r.status) || i === API_TRIES - 1) return r;
     } catch (err) {
-      if (i === TRIES - 1) throw new Error(`network error after ${TRIES} tries: ${err.message} (${new URL(url).host})`);
+      if (i === API_TRIES - 1) {
+        throw new Error(`${new URL(url).host} did not answer after ${API_TRIES} tries (${err.message}). The service may be `
+          + "busy or your connection was interrupted: try again in a few minutes.");
+      }
     }
     await backoff(i);
   }
@@ -95,16 +101,24 @@ async function search(sensor, aoi, datetime) {
 
 // SAS tokens are per storage account + container (as the planetary-computer Python client signs): the per-collection
 // token can belong to a different account than an asset's (the DEM's does) and then reads fail with 403.
-const tokens = {};
+// One request per container, shared by every scene that needs it: all scenes ask at once, and a burst of identical
+// token requests is rate-limited (429) or dropped by the gateway (504 without CORS headers: "Failed to fetch").
+const tokens = {}; // key -> Promise of the token
+const fresh = (t) => t && Date.parse(t["msft:expiry"]) - Date.now() > 5 * 60e3;
+async function getToken(key) {
+  const r = await fetchRetry(`${PC}/sas/v1/token/${key}`);
+  if (!r.ok) throw new Error(`could not get a read token for ${key} (${r.status})`);
+  return r.json();
+}
 async function sign(href) {
   const u = new URL(href), key = `${u.hostname.split(".")[0]}/${u.pathname.split("/")[1]}`;
-  const t = tokens[key];
-  if (!t || Date.parse(t["msft:expiry"]) - Date.now() < 5 * 60e3) {
-    const r = await fetchRetry(`${PC}/sas/v1/token/${key}`);
-    if (!r.ok) throw new Error(`could not get a read token for ${key} (${r.status})`);
-    tokens[key] = await r.json();
+  const pending = tokens[key];
+  let t = await pending?.catch(() => null);
+  if (!fresh(t)) {
+    if (tokens[key] === pending) tokens[key] = getToken(key); // the first caller to find it missing or stale asks
+    t = await tokens[key];
   }
-  return `${href}${href.includes("?") ? "&" : "?"}${tokens[key].token}`;
+  return `${href}${href.includes("?") ? "&" : "?"}${t.token}`;
 }
 
 const describe = (item, frac) => ({
