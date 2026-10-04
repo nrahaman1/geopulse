@@ -73,6 +73,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261001--7.25_30.08",
+  "hazard": "wildfire",
+  "lon": 30.0753,
+  "lat": -7.2494,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "The Democratic Republic of Congo",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032552",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032552&episodeid=1&eventtype=WF",
+    "title": "Forest fires in The Democratic Republic of Congo (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Green impact for forestfire in 10102 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 The Democratic Republic of Congo (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      30.00738,
+      -7.31723
+     ],
+     [
+      30.14322,
+      -7.31723
+     ],
+     [
+      30.14322,
+      -7.18157
+     ],
+     [
+      30.00738,
+      -7.18157
+     ],
+     [
+      30.00738,
+      -7.31723
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.468,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-03/2026-10-04",
+  "scenes": {
+   "s1_before": 19,
+   "s1_after": 1,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260929-43.93_3.71",
   "hazard": "flood",
   "lon": 3.7097,
@@ -499,6 +567,142 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260928--15.59_144.56",
+  "hazard": "wildfire",
+  "lon": 144.5562,
+  "lat": -15.5889,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032498",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032498&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 10055 ha"
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      144.48625,
+      -15.65673
+     ],
+     [
+      144.62615,
+      -15.65673
+     ],
+     [
+      144.62615,
+      -15.52107
+     ],
+     [
+      144.48625,
+      -15.52107
+     ],
+     [
+      144.48625,
+      -15.65673
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.439,
+  "before": "2026-08-19/2026-09-26",
+  "after": "2026-09-30/2026-10-04",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260928--18.25_130.51",
+  "hazard": "wildfire",
+  "lon": 130.5092,
+  "lat": -18.2468,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032506",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032506&episodeid=11&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 10135 ha"
+   }
+  ],
+  "first_seen": "2026-10-04",
+  "updated": "2026-10-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      130.43826,
+      -18.31463
+     ],
+     [
+      130.58014,
+      -18.31463
+     ],
+     [
+      130.58014,
+      -18.17897
+     ],
+     [
+      130.43826,
+      -18.17897
+     ],
+     [
+      130.43826,
+      -18.31463
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.262,
+  "before": "2026-08-19/2026-09-26",
+  "after": "2026-09-30/2026-10-04",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 14,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -1173,7 +1377,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-02",
+  "event_end": "2026-10-03",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3659,6 +3863,80 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261001-39.76_-121.62",
+  "hazard": "wildfire",
+  "lon": -121.6219177,
+  "lat": 39.7596061,
+  "bbox": [
+   -121.655652,
+   39.725361,
+   -121.564452,
+   39.801543
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Paradise, Butte County",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.pressdemocrat.com/2026/09/30/newsom-wildfire-bill/",
+    "title": "Newsom signs bill to pave way for full compensation for Northern California wildfire survivors",
+    "outlet": "pressdemocrat.com",
+    "date": "2026-10-01",
+    "quote": "The bill would require the California Public Utilities Commission to study possible pathways for full restitution for victims of wildfires sparked by PG&E from 2015 through 2018, including the 2015 Butte Fire, the 2017 North Bay firestorm that claimed more than 6,000 homes and businesses and 40 lives and the 2018 Camp Fire that burned through Paradise and killed 85 people.",
+    "detail": "The bill would require the state utilities commission to lay out in a study clear restitution mechanisms, and specifically ones that would put utilities on the hook without shifting costs onto ratepayers."
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Paradise, Butte County, US (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -121.65565,
+      39.72536
+     ],
+     [
+      -121.56445,
+      39.72536
+     ],
+     [
+      -121.56445,
+      39.80154
+     ],
+     [
+      -121.65565,
+      39.80154
+     ],
+     [
+      -121.65565,
+      39.72536
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 66.069,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-02/2026-10-04",
+  "scenes": {
+   "s1_before": 23,
+   "s1_after": 0,
+   "s2_before": 17,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260930-35.47_-97.52",
   "hazard": "flood",
   "lon": -97.5170536,
@@ -4253,144 +4531,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261001--7.25_30.08",
-  "hazard": "wildfire",
-  "lon": 30.0753,
-  "lat": -7.2494,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-03",
-  "place": "",
-  "country": "The Democratic Republic of Congo",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032552",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032552&episodeid=1&eventtype=WF",
-    "title": "Forest fires in The Democratic Republic of Congo (Green alert)",
-    "date": "2026-10-01",
-    "detail": "Green impact for forestfire in 10102 ha"
-   }
-  ],
-  "first_seen": "2026-10-03",
-  "updated": "2026-10-03",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 The Democratic Republic of Congo (2026-10-01)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      30.00738,
-      -7.31723
-     ],
-     [
-      30.14322,
-      -7.31723
-     ],
-     [
-      30.14322,
-      -7.18157
-     ],
-     [
-      30.00738,
-      -7.18157
-     ],
-     [
-      30.00738,
-      -7.31723
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.468,
-  "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-03/2026-10-03",
-  "scenes": {
-   "s1_before": 19,
-   "s1_after": 0,
-   "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20260928--15.59_144.56",
-  "hazard": "wildfire",
-  "lon": 144.5562,
-  "lat": -15.5889,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-28",
-  "event_end": "2026-10-03",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032498",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032498&episodeid=5&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-09-28",
-    "detail": "Green impact for forestfire in 10055 ha"
-   }
-  ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-09-28)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      144.48625,
-      -15.65673
-     ],
-     [
-      144.62615,
-      -15.65673
-     ],
-     [
-      144.62615,
-      -15.52107
-     ],
-     [
-      144.48625,
-      -15.52107
-     ],
-     [
-      144.48625,
-      -15.65673
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.439,
-  "before": "2026-08-19/2026-09-26",
-  "after": "2026-09-30/2026-10-03",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 0,
-   "s2_before": 17,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20260928--15.31_133.79",
   "hazard": "wildfire",
   "lon": 133.7878,
@@ -4446,7 +4586,7 @@
   },
   "aoi_km2": 225.124,
   "before": "2026-08-19/2026-09-26",
-  "after": "2026-09-30/2026-10-03",
+  "after": "2026-09-30/2026-10-04",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -4521,7 +4661,7 @@
   },
   "aoi_km2": 25.114,
   "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-03",
+  "after": "2026-10-01/2026-10-04",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -4596,86 +4736,11 @@
   },
   "aoi_km2": 902.665,
   "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-03",
+  "after": "2026-10-01/2026-10-04",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 28,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261001-39.76_-121.62",
-  "hazard": "wildfire",
-  "lon": -121.6219177,
-  "lat": 39.7596061,
-  "bbox": [
-   -121.655652,
-   39.725361,
-   -121.564452,
-   39.801543
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-01",
-  "place": "Paradise, Butte County",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.pressdemocrat.com/2026/09/30/newsom-wildfire-bill/",
-    "title": "Newsom signs bill to pave way for full compensation for Northern California wildfire survivors",
-    "outlet": "pressdemocrat.com",
-    "date": "2026-10-01",
-    "quote": "The bill would require the California Public Utilities Commission to study possible pathways for full restitution for victims of wildfires sparked by PG&E from 2015 through 2018, including the 2015 Butte Fire, the 2017 North Bay firestorm that claimed more than 6,000 homes and businesses and 40 lives and the 2018 Camp Fire that burned through Paradise and killed 85 people.",
-    "detail": "The bill would require the state utilities commission to lay out in a study clear restitution mechanisms, and specifically ones that would put utilities on the hook without shifting costs onto ratepayers."
-   }
-  ],
-  "first_seen": "2026-10-03",
-  "updated": "2026-10-03",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Paradise, Butte County, US (2026-10-01)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -121.65565,
-      39.72536
-     ],
-     [
-      -121.56445,
-      39.72536
-     ],
-     [
-      -121.56445,
-      39.80154
-     ],
-     [
-      -121.65565,
-      39.80154
-     ],
-     [
-      -121.65565,
-      39.72536
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 66.069,
-  "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-03/2026-10-03",
-  "scenes": {
-   "s1_before": 23,
-   "s1_after": 0,
-   "s2_before": 17,
    "s2_after": 0
   },
   "sensors": [
@@ -4744,7 +4809,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 148.69,
+  "before": "2026-08-23/2026-09-30",
+  "after": "2026-10-04/2026-10-04"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -4809,7 +4877,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-03/2026-10-03"
+  "after": "2026-10-02/2026-10-04"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -4874,7 +4942,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-03/2026-10-03"
+  "after": "2026-10-02/2026-10-04"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -4939,7 +5007,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-03"
+  "after": "2026-10-01/2026-10-04"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -5004,7 +5072,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-03"
+  "after": "2026-10-01/2026-10-04"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -5069,6 +5137,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-03"
+  "after": "2026-10-01/2026-10-04"
  }
 ]
