@@ -363,7 +363,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -578,7 +578,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -646,7 +646,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -787,7 +787,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -936,7 +936,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1232,7 +1232,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -1582,7 +1582,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-24",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Paraguay",
   "sources": [
@@ -1799,7 +1799,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-22",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1867,7 +1867,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Papua New Guinea, Indonesia",
   "sources": [
@@ -1935,7 +1935,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2299,7 +2299,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2800,7 +2800,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-17",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3559,6 +3559,80 @@
    "s1_before": 3,
    "s1_after": 2,
    "s2_before": 9,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260818-13.63_99.36",
+  "hazard": "flood",
+  "lon": 99.3558,
+  "lat": 13.6318,
+  "bbox": [
+   99.1636,
+   13.1488,
+   100.0714,
+   13.9576
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-08-18",
+  "event_end": "2026-10-03",
+  "place": "",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104122",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104122&episodeid=57&eventtype=FL",
+    "title": "Flood in Thailand (Green alert)",
+    "date": "2026-08-18",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-04",
+  "updated": "2026-10-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Thailand (2026-08-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      99.21715,
+      13.49614
+     ],
+     [
+      99.49445,
+      13.49614
+     ],
+     [
+      99.49445,
+      13.76746
+     ],
+     [
+      99.21715,
+      13.76746
+     ],
+     [
+      99.21715,
+      13.49614
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 899.993,
+  "before": "2026-07-14/2026-08-13",
+  "after": "2026-09-23/2026-10-04",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 5,
+   "s2_before": 2,
    "s2_after": 2
   },
   "sensors": [
@@ -4531,6 +4605,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260929--15.18_134.30",
+  "hazard": "wildfire",
+  "lon": 134.296,
+  "lat": -15.1834,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-04",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032546",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032546&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Green impact for forestfire in 11416 ha"
+   }
+  ],
+  "first_seen": "2026-10-04",
+  "updated": "2026-10-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      134.22619,
+      -15.25123
+     ],
+     [
+      134.36581,
+      -15.25123
+     ],
+     [
+      134.36581,
+      -15.11557
+     ],
+     [
+      134.22619,
+      -15.11557
+     ],
+     [
+      134.22619,
+      -15.25123
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.064,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-10-01/2026-10-04",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20260928--15.31_133.79",
   "hazard": "wildfire",
   "lon": 133.7878,
@@ -4538,7 +4681,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-03",
+  "event_end": "2026-10-04",
   "place": "",
   "country": "Australia",
   "sources": [
