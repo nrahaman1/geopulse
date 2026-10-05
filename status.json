@@ -1,5 +1,5 @@
 {
- "started": "2026-10-04T21:33:42+00:00",
+ "started": "2026-10-05T05:48:54+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
@@ -40,9 +40,9 @@
   "events": 0,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-04T21:34:59+00:00",
- "duration_s": 78,
- "cases": 74,
- "new": 0,
+ "finished": "2026-10-05T05:49:40+00:00",
+ "duration_s": 46,
+ "cases": 78,
+ "new": 4,
  "ok": true
 }
