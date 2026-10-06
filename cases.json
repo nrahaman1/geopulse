@@ -5469,6 +5469,80 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "fl-20261003-14.50_-90.56",
+  "hazard": "flood",
+  "lon": -90.556,
+  "lat": 14.4977,
+  "bbox": [
+   -90.5799,
+   14.4708,
+   -90.5289,
+   14.543
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-03",
+  "event_end": "2026-10-05",
+  "place": "",
+  "country": "Guatemala",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104213",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104213&episodeid=1&eventtype=FL",
+    "title": "Flood in Guatemala (Green alert)",
+    "date": "2026-10-03",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Guatemala (2026-10-03)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -90.5799,
+      14.4708
+     ],
+     [
+      -90.5289,
+      14.4708
+     ],
+     [
+      -90.5289,
+      14.543
+     ],
+     [
+      -90.5799,
+      14.543
+     ],
+     [
+      -90.5799,
+      14.4708
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 43.957,
+  "before": "2026-08-29/2026-09-28",
+  "after": "2026-10-03/2026-10-06",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261002-13.40_-85.91",
   "hazard": "flood",
   "lon": -85.9139,
@@ -5911,6 +5985,68 @@
    "s2"
   ],
   "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261006--11.74_-67.14",
+  "hazard": "wildfire",
+  "lon": -67.1366534,
+  "lat": -11.743613,
+  "bbox": [
+   -67.1382745,
+   -11.745704,
+   -67.1346658,
+   -11.7424278
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-06",
+  "place": "Canada, Wildfire Resilience Consortium of Canada",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wildfiretoday.com/sorting-and-sharing-in-the-world-of-new-technology/",
+    "title": "Sorting and sharing in the world of new technology",
+    "outlet": "wildfiretoday.com",
+    "date": "2026-10-06",
+    "quote": "Wildfire agencies are regularly approached by companies spruiking the next best thing in innovation for wildfire prevention, preparedness, detection, response, recovery or fuels management.",
+    "detail": "The article discusses challenges in adopting wildfire technologies due to budget limitations, risk appetite, and the need for collaboration platforms to share insights and reduce duplication of effort."
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Canada, Wildfire Resilience Consortium of Canada, Canada (2026-10-06)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -67.15941,
+      -11.76668
+     ],
+     [
+      -67.11353,
+      -11.76668
+     ],
+     [
+      -67.11353,
+      -11.72146
+     ],
+     [
+      -67.15941,
+      -11.72146
+     ],
+     [
+      -67.15941,
+      -11.76668
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261005-35.20_-111.65",

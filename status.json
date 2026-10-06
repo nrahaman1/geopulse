@@ -1,9 +1,9 @@
 {
- "started": "2026-10-06T00:07:18+00:00",
+ "started": "2026-10-06T06:27:59+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 32
+   "events": 33
   },
   "cems": {
    "ok": true,
@@ -14,12 +14,12 @@
    "events": 0
   },
   "gdelt": {
-   "ok": false,
-   "error": "OSError: GDELT kept refusing requests (rate limit)"
+   "ok": true,
+   "articles": 0
   },
   "rss:wildfiretoday.com": {
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   "rss:inciweb.wildfire.gov": {
    "ok": true,
@@ -31,18 +31,18 @@
   }
  },
  "news": {
-  "read": 2,
+  "read": 3,
   "per_hazard": {
    "flood": 0,
-   "wildfire": 1,
+   "wildfire": 2,
    "vegetation": 1
   },
-  "events": 1,
+  "events": 2,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-06T00:15:28+00:00",
- "duration_s": 490,
- "cases": 89,
- "new": 1,
+ "finished": "2026-10-06T06:36:18+00:00",
+ "duration_s": 499,
+ "cases": 91,
+ "new": 2,
  "ok": true
 }
