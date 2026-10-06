@@ -153,7 +153,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-01",
-  "event_end": "2026-10-04",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "The Democratic Republic of Congo",
   "sources": [
@@ -436,7 +436,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -492,6 +492,80 @@
    "s2_after": 4
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260929-32.65_-16.92",
+  "hazard": "flood",
+  "lon": -16.9205,
+  "lat": 32.6519,
+  "bbox": [
+   -16.9655,
+   32.6068,
+   -16.8754,
+   32.6969
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-04",
+  "place": "",
+  "country": "Portugal",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104212",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104212&episodeid=2&eventtype=FL",
+    "title": "Flood in Portugal (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Portugal (2026-09-29)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -16.9655,
+      32.6068
+     ],
+     [
+      -16.8754,
+      32.6068
+     ],
+     [
+      -16.8754,
+      32.6969
+     ],
+     [
+      -16.9655,
+      32.6969
+     ],
+     [
+      -16.9655,
+      32.6068
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 84.462,
+  "before": "2026-08-25/2026-09-24",
+  "after": "2026-09-29/2026-10-06",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 3,
+   "s2_before": 4,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -719,7 +793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1002,7 +1076,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1151,7 +1225,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1365,7 +1439,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -1662,7 +1736,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -1944,7 +2018,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2298,7 +2372,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-23",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2367,7 +2441,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-22",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2435,7 +2509,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Papua New Guinea, Indonesia",
   "sources": [
@@ -2503,7 +2577,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2867,7 +2941,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -5171,6 +5245,81 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260916-13.75_100.49",
+  "hazard": "flood",
+  "lon": 100.4935089,
+  "lat": 13.7524938,
+  "bbox": [
+   100.3278772,
+   13.2191019,
+   100.9386039,
+   13.9551693
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-16",
+  "event_end": "2026-10-06",
+  "place": "Bangkok, Thailand",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wtvbam.com/2026/10/06/thailand-asks-firms-to-cut-egg-exports-after-flood-losses/",
+    "title": "Thailand asks firms to cut egg exports after flood losses",
+    "outlet": "wtvbam.com",
+    "date": "2026-10-06",
+    "quote": "Since September 16, there has been flooding in 51 provinces, including Bangkok, with 31 people killed, according to the Interior Ministry.",
+    "detail": "Thailand has asked companies to cut egg exports by 30% to 50% until December 2026, with supplies hit by heavy flooding, which killed a significant number of hens"
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Bangkok, Thailand, Thailand (2026-09-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.35479,
+      13.61684
+     ],
+     [
+      100.63223,
+      13.61684
+     ],
+     [
+      100.63223,
+      13.88815
+     ],
+     [
+      100.35479,
+      13.88815
+     ],
+     [
+      100.35479,
+      13.61684
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.512,
+  "before": "2026-08-12/2026-09-11",
+  "after": "2026-09-26/2026-10-06",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 2,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260915-37.84_-119.52",
   "hazard": "wildfire",
   "lon": -119.5164635,
@@ -5691,6 +5840,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261002-1.90_-55.77",
+  "hazard": "wildfire",
+  "lon": -55.7733,
+  "lat": 1.9035,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-06",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032573",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032573&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10188 ha"
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -55.84071,
+      1.83567
+     ],
+     [
+      -55.70589,
+      1.83567
+     ],
+     [
+      -55.70589,
+      1.97133
+     ],
+     [
+      -55.84071,
+      1.97133
+     ],
+     [
+      -55.84071,
+      1.83567
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.932,
+  "before": "2026-08-23/2026-09-30",
+  "after": "2026-10-04/2026-10-06",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20260929--15.18_134.30",
   "hazard": "wildfire",
   "lon": 134.296,
@@ -5698,7 +5916,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -5775,7 +5993,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-06",
   "place": "",
   "country": "Australia",
   "sources": [
