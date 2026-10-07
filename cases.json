@@ -226,7 +226,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-05",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "France",
   "sources": [
@@ -436,7 +436,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -578,7 +578,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -634,6 +634,75 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260929--8.61_141.81",
+  "hazard": "wildfire",
+  "lon": 141.8126,
+  "lat": -8.6124,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032608",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032608&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Green impact for forestfire in 11116 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      141.74446,
+      -8.68023
+     ],
+     [
+      141.88074,
+      -8.68023
+     ],
+     [
+      141.88074,
+      -8.54457
+     ],
+     [
+      141.74446,
+      -8.54457
+     ],
+     [
+      141.74446,
+      -8.68023
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.933,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-10-01/2026-10-07",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -861,7 +930,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1138,6 +1207,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260928-40.52_-3.77",
+  "hazard": "flood",
+  "lon": -3.7716,
+  "lat": 40.5248,
+  "bbox": [
+   -4.579,
+   39.8846,
+   -3.053,
+   41.1657
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104199",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104199&episodeid=13&eventtype=FL",
+    "title": "Flood in Spain (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Spain (2026-09-28)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -3.94887,
+      40.38914
+     ],
+     [
+      -3.59433,
+      40.38914
+     ],
+     [
+      -3.59433,
+      40.66046
+     ],
+     [
+      -3.94887,
+      40.66046
+     ],
+     [
+      -3.94887,
+      40.38914
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.51,
+  "before": "2026-08-24/2026-09-23",
+  "after": "2026-09-28/2026-10-07",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 2,
+   "s2_before": 33,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260927--2.19_-79.89",
   "hazard": "flood",
   "lon": -79.8869,
@@ -1218,7 +1361,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1581,7 +1724,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -1650,7 +1793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2228,7 +2371,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2297,7 +2440,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2650,7 +2793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-23",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2719,7 +2862,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-23",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2788,7 +2931,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-22",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2856,7 +2999,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Papua New Guinea, Indonesia",
   "sources": [
@@ -2867,10 +3010,18 @@
     "title": "Forest fires in Papua New Guinea, Indonesia (Green alert)",
     "date": "2026-09-21",
     "detail": "Green impact for forestfire in 11290 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032527",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032527&episodeid=12&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea, Indonesia (Green alert)",
+    "date": "2026-09-23",
+    "detail": "Green impact for forestfire in 10701 ha"
    }
   ],
   "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
+  "updated": "2026-10-07",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Papua New Guinea, Indonesia (2026-09-21)",
@@ -2904,15 +3055,16 @@
   },
   "aoi_km2": 224.861,
   "before": "2026-08-12/2026-09-19",
-  "after": "2026-09-23/2026-10-01",
+  "after": "2026-09-23/2026-10-07",
   "scenes": {
    "s1_before": 8,
-   "s1_after": 2,
+   "s1_after": 3,
    "s2_before": 3,
-   "s2_after": 0
+   "s2_after": 2
   },
   "sensors": [
-   "s1"
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -3071,6 +3223,79 @@
   "sensors": [
    "s1",
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260921-8.88_7.23",
+  "hazard": "flood",
+  "lon": 7.2272,
+  "lat": 8.8796,
+  "bbox": [
+   7.1822,
+   8.8346,
+   7.2722,
+   8.9247
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-21",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Nigeria",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104186",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104186&episodeid=8&eventtype=FL",
+    "title": "Flood in Nigeria (Green alert)",
+    "date": "2026-09-21",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Nigeria (2026-09-21)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      7.1822,
+      8.8346
+     ],
+     [
+      7.2722,
+      8.8346
+     ],
+     [
+      7.2722,
+      8.9247
+     ],
+     [
+      7.1822,
+      8.9247
+     ],
+     [
+      7.1822,
+      8.8346
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 98.663,
+  "before": "2026-08-17/2026-09-16",
+  "after": "2026-09-27/2026-10-07",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 2,
+   "s2_before": 1,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -3288,7 +3513,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -4705,6 +4930,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260903-11.66_108.13",
+  "hazard": "flood",
+  "lon": 108.1335,
+  "lat": 11.6615,
+  "bbox": [
+   107.2061,
+   9.378,
+   109.4019,
+   12.8125
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-03",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Vietnam",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104141",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104141&episodeid=10&eventtype=FL",
+    "title": "Flood in Vietnam (Green alert)",
+    "date": "2026-09-03",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Vietnam (2026-09-03)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      107.99591,
+      11.52584
+     ],
+     [
+      108.27109,
+      11.52584
+     ],
+     [
+      108.27109,
+      11.79716
+     ],
+     [
+      107.99591,
+      11.79716
+     ],
+     [
+      107.99591,
+      11.52584
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.999,
+  "before": "2026-07-30/2026-08-29",
+  "after": "2026-09-27/2026-10-07",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 2,
+   "s2_before": 11,
+   "s2_after": 10
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260818-13.63_99.36",
   "hazard": "flood",
   "lon": 99.3558,
@@ -6108,6 +6407,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261003--13.13_131.90",
+  "hazard": "wildfire",
+  "lon": 131.8998,
+  "lat": -13.1276,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-03",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032565",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032565&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-03",
+    "detail": "Green impact for forestfire in 10154 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-03)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      131.83062,
+      -13.19543
+     ],
+     [
+      131.96898,
+      -13.19543
+     ],
+     [
+      131.96898,
+      -13.05977
+     ],
+     [
+      131.83062,
+      -13.05977
+     ],
+     [
+      131.83062,
+      -13.19543
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.529,
+  "before": "2026-08-24/2026-10-01",
+  "after": "2026-10-05/2026-10-07",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261002-13.40_-85.91",
   "hazard": "flood",
   "lon": -85.9139,
@@ -6263,7 +6631,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -6332,7 +6700,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
