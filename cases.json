@@ -715,7 +715,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-07",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -6324,6 +6324,75 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261004--16.42_18.64",
+  "hazard": "wildfire",
+  "lon": 18.6434,
+  "lat": -16.4218,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Angola",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032592",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032592&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Angola (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10342 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Angola (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      18.57316,
+      -16.48963
+     ],
+     [
+      18.71364,
+      -16.48963
+     ],
+     [
+      18.71364,
+      -16.35397
+     ],
+     [
+      18.57316,
+      -16.35397
+     ],
+     [
+      18.57316,
+      -16.48963
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.425,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-07",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 31,
    "s2_after": 0
   },
   "sensors": [
