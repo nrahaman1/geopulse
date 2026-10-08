@@ -1,5 +1,282 @@
 [
  {
+  "id": "fl-20261005-17.11_99.00",
+  "hazard": "flood",
+  "lon": 98.9954,
+  "lat": 17.1054,
+  "bbox": [
+   97.7422,
+   15.18,
+   99.467,
+   17.8679
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104169",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104169&episodeid=1&eventtype=FL",
+    "title": "Flood in Thailand (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-05",
+  "updated": "2026-10-05",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Thailand (2026-10-05)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      98.85442,
+      16.96974
+     ],
+     [
+      99.13638,
+      16.96974
+     ],
+     [
+      99.13638,
+      17.24106
+     ],
+     [
+      98.85442,
+      17.24106
+     ],
+     [
+      98.85442,
+      16.96974
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.33,
+  "before": "2026-08-31/2026-09-30",
+  "after": "2026-10-05/2026-10-08",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 0,
+   "s2_before": 5,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--17.45_21.64",
+  "hazard": "wildfire",
+  "lon": 21.6386,
+  "lat": -17.4452,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-06",
+  "place": "",
+  "country": "Angola",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032571",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032571&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Angola (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10928 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Angola (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      21.56798,
+      -17.51303
+     ],
+     [
+      21.70922,
+      -17.51303
+     ],
+     [
+      21.70922,
+      -17.37737
+     ],
+     [
+      21.56798,
+      -17.37737
+     ],
+     [
+      21.56798,
+      -17.51303
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.118,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 12,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--16.42_18.64",
+  "hazard": "wildfire",
+  "lon": 18.6434,
+  "lat": -16.4218,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Angola",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032592",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032592&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Angola (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10342 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Angola (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      18.57316,
+      -16.48963
+     ],
+     [
+      18.71364,
+      -16.48963
+     ],
+     [
+      18.71364,
+      -16.35397
+     ],
+     [
+      18.57316,
+      -16.35397
+     ],
+     [
+      18.57316,
+      -16.48963
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.425,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-08",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 31,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261003--13.13_131.90",
+  "hazard": "wildfire",
+  "lon": 131.8998,
+  "lat": -13.1276,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-03",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032565",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032565&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-03",
+    "detail": "Green impact for forestfire in 10154 ha"
+   }
+  ],
+  "first_seen": "2026-10-07",
+  "updated": "2026-10-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-03)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      131.83062,
+      -13.19543
+     ],
+     [
+      131.96898,
+      -13.19543
+     ],
+     [
+      131.96898,
+      -13.05977
+     ],
+     [
+      131.83062,
+      -13.05977
+     ],
+     [
+      131.83062,
+      -13.19543
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.529,
+  "before": "2026-08-24/2026-10-01",
+  "after": "2026-10-05/2026-10-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261002-15.49_-88.01",
   "hazard": "flood",
   "lon": -88.0078,
@@ -69,6 +346,79 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261002-40.40_-7.54",
+  "hazard": "flood",
+  "lon": -7.5409,
+  "lat": 40.4006,
+  "bbox": [
+   -7.6129,
+   40.3113,
+   -7.4189,
+   40.4616
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-04",
+  "place": "",
+  "country": "Portugal",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104212",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104212&episodeid=1&eventtype=FL",
+    "title": "Flood in Portugal (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-05",
+  "updated": "2026-10-05",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Portugal (2026-10-02)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -7.6129,
+      40.3113
+     ],
+     [
+      -7.4189,
+      40.3113
+     ],
+     [
+      -7.4189,
+      40.4616
+     ],
+     [
+      -7.6129,
+      40.4616
+     ],
+     [
+      -7.6129,
+      40.3113
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 274.809,
+  "before": "2026-08-28/2026-09-27",
+  "after": "2026-10-02/2026-10-08",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -210,6 +560,74 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260930--8.68_14.13",
+  "hazard": "wildfire",
+  "lon": 14.1286,
+  "lat": -8.6788,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-30",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Angola",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032645",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032645&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Angola (Green alert)",
+    "date": "2026-09-30",
+    "detail": "Green impact for forestfire in 11229 ha"
+   }
+  ],
+  "first_seen": "2026-10-08",
+  "updated": "2026-10-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Angola (2026-09-30)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.06045,
+      -8.74663
+     ],
+     [
+      14.19675,
+      -8.74663
+     ],
+     [
+      14.19675,
+      -8.61097
+     ],
+     [
+      14.06045,
+      -8.61097
+     ],
+     [
+      14.06045,
+      -8.74663
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.934,
+  "before": "2026-08-21/2026-09-28",
+  "after": "2026-10-02/2026-10-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -436,7 +854,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -578,7 +996,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -703,6 +1121,82 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260929--15.18_134.30",
+  "hazard": "wildfire",
+  "lon": 134.296,
+  "lat": -15.1834,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-29",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032546",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032546&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Green impact for forestfire in 11416 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032556",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032556&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10703 ha"
+   }
+  ],
+  "first_seen": "2026-10-04",
+  "updated": "2026-10-05",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-29)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      134.22619,
+      -15.25123
+     ],
+     [
+      134.36581,
+      -15.25123
+     ],
+     [
+      134.36581,
+      -15.11557
+     ],
+     [
+      134.22619,
+      -15.11557
+     ],
+     [
+      134.22619,
+      -15.25123
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.064,
+  "before": "2026-08-20/2026-09-27",
+  "after": "2026-10-01/2026-10-08",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -1276,6 +1770,74 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260928--15.31_133.79",
+  "hazard": "wildfire",
+  "lon": 133.7878,
+  "lat": -15.3099,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-28",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032508",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032508&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-09-28",
+    "detail": "Green impact for forestfire in 10438 ha"
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-09-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      133.71795,
+      -15.37773
+     ],
+     [
+      133.85765,
+      -15.37773
+     ],
+     [
+      133.85765,
+      -15.24207
+     ],
+     [
+      133.71795,
+      -15.24207
+     ],
+     [
+      133.71795,
+      -15.37773
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.124,
+  "before": "2026-08-19/2026-09-26",
+  "after": "2026-09-30/2026-10-08",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 2
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -2440,7 +3002,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2459,6 +3021,14 @@
     "title": "Forest fires in Indonesia (Green alert)",
     "date": "2026-09-25",
     "detail": "Green impact for forestfire in 10632 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032578",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032578&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Indonesia (Green alert)",
+    "date": "2026-09-29",
+    "detail": "Green impact for forestfire in 10246 ha"
    }
   ],
   "first_seen": "2026-10-07",
@@ -5472,6 +6042,154 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261001-38.94_-99.56",
+  "hazard": "flood",
+  "lon": -99.560667,
+  "lat": 38.938066,
+  "bbox": [
+   -99.573213,
+   38.920995,
+   -99.5394816,
+   38.949645
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-01",
+  "place": "Ellis, county",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://hayspost.com/posts/4fceff39-27b3-4f09-8bb8-ae3dc894417c",
+    "title": "Flash Flood Warning issued for Ellis , Trego counties",
+    "outlet": "hayspost.com",
+    "date": "2026-10-01",
+    "quote": "Radar indicated thunderstorms producing heavy rains across the warned area. Between one and two inches have fallen. The expected rainfall rate is 0.5 to 1.5 inches in one hour. Additional rainfall amounts of 1 to 2 inches are possible.",
+    "detail": "Flash flooding is ongoing or expected to begin shortly."
+   }
+  ],
+  "first_seen": "2026-10-01",
+  "updated": "2026-10-01",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Ellis, county, US (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -99.58522,
+      38.91271
+     ],
+     [
+      -99.52748,
+      38.91271
+     ],
+     [
+      -99.52748,
+      38.95793
+     ],
+     [
+      -99.58522,
+      38.95793
+     ],
+     [
+      -99.58522,
+      38.91271
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.114,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-08",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261001-30.27_-97.74",
+  "hazard": "flood",
+  "lon": -97.7436995,
+  "lat": 30.2711286,
+  "bbox": [
+   -97.9367663,
+   30.0985133,
+   -97.5605288,
+   30.5166255
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-02",
+  "place": "Austin, Texas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox7austin.com/weather/austin-weather-flood-alerts-issued-central-texas-storms-roll-through",
+    "title": "Austin weather : Flood alerts issued in Central Texas as storms roll through",
+    "outlet": "fox7austin.com",
+    "date": "2026-10-01",
+    "quote": "Localized flooding and lightning are main threats",
+    "detail": "Localized flooding and lightning are main threats. All of Central Texas is also a moderate risk of flooding. Residents are advised to stay weather aware, be cautious around low-water crossings, and prepare emergency kits."
+   }
+  ],
+  "first_seen": "2026-10-03",
+  "updated": "2026-10-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Austin, Texas, US (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -97.89972,
+      30.13547
+     ],
+     [
+      -97.58768,
+      30.13547
+     ],
+     [
+      -97.58768,
+      30.40678
+     ],
+     [
+      -97.89972,
+      30.40678
+     ],
+     [
+      -97.89972,
+      30.13547
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.665,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-01/2026-10-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 28,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260930-35.47_-97.52",
   "hazard": "flood",
   "lon": -97.5170536,
@@ -6141,80 +6859,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261005-17.11_99.00",
-  "hazard": "flood",
-  "lon": 98.9954,
-  "lat": 17.1054,
-  "bbox": [
-   97.7422,
-   15.18,
-   99.467,
-   17.8679
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-07",
-  "place": "",
-  "country": "Thailand",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104169",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104169&episodeid=1&eventtype=FL",
-    "title": "Flood in Thailand (Green alert)",
-    "date": "2026-10-05",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Thailand (2026-10-05)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      98.85442,
-      16.96974
-     ],
-     [
-      99.13638,
-      16.96974
-     ],
-     [
-      99.13638,
-      17.24106
-     ],
-     [
-      98.85442,
-      17.24106
-     ],
-     [
-      98.85442,
-      16.96974
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.33,
-  "before": "2026-08-31/2026-09-30",
-  "after": "2026-10-05/2026-10-08",
-  "scenes": {
-   "s1_before": 11,
-   "s1_after": 0,
-   "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261005-17.67_-100.00",
   "hazard": "flood",
   "lon": -100.0,
@@ -6279,7 +6923,7 @@
   "scenes": {
    "s1_before": 16,
    "s1_after": 0,
-   "s2_before": 6,
+   "s2_before": 7,
    "s2_after": 0
   },
   "sensors": [
@@ -6289,135 +6933,135 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261004--17.45_21.64",
+  "id": "wi-20261005--6.91_34.19",
   "hazard": "wildfire",
-  "lon": 21.6386,
-  "lat": -17.4452,
+  "lon": 34.1861,
+  "lat": -6.9101,
   "bbox": null,
   "geometry_from": "gdacs",
-  "event_start": "2026-10-04",
-  "event_end": "2026-10-06",
-  "place": "",
-  "country": "Angola",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032571",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032571&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Angola (Green alert)",
-    "date": "2026-10-04",
-    "detail": "Green impact for forestfire in 10928 ha"
-   }
-  ],
-  "first_seen": "2026-10-07",
-  "updated": "2026-10-07",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Angola (2026-10-04)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      21.56798,
-      -17.51303
-     ],
-     [
-      21.70922,
-      -17.51303
-     ],
-     [
-      21.70922,
-      -17.37737
-     ],
-     [
-      21.56798,
-      -17.37737
-     ],
-     [
-      21.56798,
-      -17.51303
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.118,
-  "before": "2026-08-25/2026-10-02",
-  "after": "2026-10-06/2026-10-08",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 12,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261004--16.42_18.64",
-  "hazard": "wildfire",
-  "lon": 18.6434,
-  "lat": -16.4218,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-04",
+  "event_start": "2026-10-05",
   "event_end": "2026-10-08",
   "place": "",
-  "country": "Angola",
+  "country": "Tanzania",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "WF1032592",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032592&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Angola (Green alert)",
-    "date": "2026-10-04",
-    "detail": "Green impact for forestfire in 10342 ha"
+    "id": "WF1032641",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032641&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Tanzania (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Green impact for forestfire in 11096 ha"
    }
   ],
-  "first_seen": "2026-10-07",
-  "updated": "2026-10-07",
+  "first_seen": "2026-10-08",
+  "updated": "2026-10-08",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Wildfire \u00b7 Angola (2026-10-04)",
+  "title": "Wildfire \u00b7 Tanzania (2026-10-05)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      18.57316,
-      -16.48963
+      34.11823,
+      -6.97793
      ],
      [
-      18.71364,
-      -16.48963
+      34.25397,
+      -6.97793
      ],
      [
-      18.71364,
-      -16.35397
+      34.25397,
+      -6.84227
      ],
      [
-      18.57316,
-      -16.35397
+      34.11823,
+      -6.84227
      ],
      [
-      18.57316,
-      -16.48963
+      34.11823,
+      -6.97793
      ]
     ]
    ]
   },
-  "aoi_km2": 225.425,
-  "before": "2026-08-25/2026-10-02",
+  "aoi_km2": 224.978,
+  "before": "2026-08-26/2026-10-03",
+  "after": "2026-10-07/2026-10-08",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261005-41.02_-115.21",
+  "hazard": "wildfire",
+  "lon": -115.20765,
+  "lat": 41.02195,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-05",
+  "place": "Jones, Elko, Nevada",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_25117",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-NVECFX-010656",
+    "title": "Wildfire Jones, Elko, Nevada",
+    "date": "2026-10-05",
+    "detail": "1657.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-08",
+  "updated": "2026-10-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Jones, Elko, Nevada (2026-10-05)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -115.29695,
+      40.95412
+     ],
+     [
+      -115.11835,
+      40.95412
+     ],
+     [
+      -115.11835,
+      41.08978
+     ],
+     [
+      -115.29695,
+      41.08978
+     ],
+     [
+      -115.29695,
+      40.95412
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.255,
+  "before": "2026-08-26/2026-10-03",
   "after": "2026-10-06/2026-10-08",
   "scenes": {
-   "s1_before": 4,
+   "s1_before": 10,
    "s1_after": 0,
-   "s2_before": 31,
+   "s2_before": 9,
    "s2_after": 0
   },
   "sensors": [
@@ -6501,75 +7145,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261003--13.13_131.90",
-  "hazard": "wildfire",
-  "lon": 131.8998,
-  "lat": -13.1276,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-03",
-  "event_end": "2026-10-08",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032565",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032565&episodeid=6&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-03",
-    "detail": "Green impact for forestfire in 10154 ha"
-   }
-  ],
-  "first_seen": "2026-10-07",
-  "updated": "2026-10-07",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-03)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      131.83062,
-      -13.19543
-     ],
-     [
-      131.96898,
-      -13.19543
-     ],
-     [
-      131.96898,
-      -13.05977
-     ],
-     [
-      131.83062,
-      -13.05977
-     ],
-     [
-      131.83062,
-      -13.19543
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.529,
-  "before": "2026-08-24/2026-10-01",
-  "after": "2026-10-05/2026-10-08",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 18,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261002-13.40_-85.91",
   "hazard": "flood",
   "lon": -85.9139,
@@ -6644,80 +7219,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261002-40.40_-7.54",
-  "hazard": "flood",
-  "lon": -7.5409,
-  "lat": 40.4006,
-  "bbox": [
-   -7.6129,
-   40.3113,
-   -7.4189,
-   40.4616
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Portugal",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104212",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104212&episodeid=1&eventtype=FL",
-    "title": "Flood in Portugal (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Portugal (2026-10-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -7.6129,
-      40.3113
-     ],
-     [
-      -7.4189,
-      40.3113
-     ],
-     [
-      -7.4189,
-      40.4616
-     ],
-     [
-      -7.6129,
-      40.4616
-     ],
-     [
-      -7.6129,
-      40.3113
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 274.809,
-  "before": "2026-08-28/2026-09-27",
-  "after": "2026-10-02/2026-10-08",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 0,
-   "s2_before": 8,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261002-1.90_-55.77",
   "hazard": "wildfire",
   "lon": -55.7733,
@@ -6725,7 +7226,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -6847,302 +7348,6 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 8,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20260929--15.18_134.30",
-  "hazard": "wildfire",
-  "lon": 134.296,
-  "lat": -15.1834,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-29",
-  "event_end": "2026-10-08",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032546",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032546&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-09-29",
-    "detail": "Green impact for forestfire in 11416 ha"
-   },
-   {
-    "kind": "gdacs",
-    "id": "WF1032556",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032556&episodeid=4&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Green impact for forestfire in 10703 ha"
-   }
-  ],
-  "first_seen": "2026-10-04",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-09-29)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      134.22619,
-      -15.25123
-     ],
-     [
-      134.36581,
-      -15.25123
-     ],
-     [
-      134.36581,
-      -15.11557
-     ],
-     [
-      134.22619,
-      -15.11557
-     ],
-     [
-      134.22619,
-      -15.25123
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.064,
-  "before": "2026-08-20/2026-09-27",
-  "after": "2026-10-01/2026-10-08",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20260928--15.31_133.79",
-  "hazard": "wildfire",
-  "lon": 133.7878,
-  "lat": -15.3099,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-28",
-  "event_end": "2026-10-08",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032508",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032508&episodeid=9&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-09-28",
-    "detail": "Green impact for forestfire in 10438 ha"
-   }
-  ],
-  "first_seen": "2026-10-03",
-  "updated": "2026-10-03",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-09-28)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      133.71795,
-      -15.37773
-     ],
-     [
-      133.85765,
-      -15.37773
-     ],
-     [
-      133.85765,
-      -15.24207
-     ],
-     [
-      133.71795,
-      -15.24207
-     ],
-     [
-      133.71795,
-      -15.37773
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.124,
-  "before": "2026-08-19/2026-09-26",
-  "after": "2026-09-30/2026-10-08",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 19,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261001-38.94_-99.56",
-  "hazard": "flood",
-  "lon": -99.560667,
-  "lat": 38.938066,
-  "bbox": [
-   -99.573213,
-   38.920995,
-   -99.5394816,
-   38.949645
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-01",
-  "place": "Ellis, county",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://hayspost.com/posts/4fceff39-27b3-4f09-8bb8-ae3dc894417c",
-    "title": "Flash Flood Warning issued for Ellis , Trego counties",
-    "outlet": "hayspost.com",
-    "date": "2026-10-01",
-    "quote": "Radar indicated thunderstorms producing heavy rains across the warned area. Between one and two inches have fallen. The expected rainfall rate is 0.5 to 1.5 inches in one hour. Additional rainfall amounts of 1 to 2 inches are possible.",
-    "detail": "Flash flooding is ongoing or expected to begin shortly."
-   }
-  ],
-  "first_seen": "2026-10-01",
-  "updated": "2026-10-01",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Ellis, county, US (2026-10-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -99.58522,
-      38.91271
-     ],
-     [
-      -99.52748,
-      38.91271
-     ],
-     [
-      -99.52748,
-      38.95793
-     ],
-     [
-      -99.58522,
-      38.95793
-     ],
-     [
-      -99.58522,
-      38.91271
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.114,
-  "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-08",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261001-30.27_-97.74",
-  "hazard": "flood",
-  "lon": -97.7436995,
-  "lat": 30.2711286,
-  "bbox": [
-   -97.9367663,
-   30.0985133,
-   -97.5605288,
-   30.5166255
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-02",
-  "place": "Austin, Texas",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.fox7austin.com/weather/austin-weather-flood-alerts-issued-central-texas-storms-roll-through",
-    "title": "Austin weather : Flood alerts issued in Central Texas as storms roll through",
-    "outlet": "fox7austin.com",
-    "date": "2026-10-01",
-    "quote": "Localized flooding and lightning are main threats",
-    "detail": "Localized flooding and lightning are main threats. All of Central Texas is also a moderate risk of flooding. Residents are advised to stay weather aware, be cautious around low-water crossings, and prepare emergency kits."
-   }
-  ],
-  "first_seen": "2026-10-03",
-  "updated": "2026-10-03",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Austin, Texas, US (2026-10-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -97.89972,
-      30.13547
-     ],
-     [
-      -97.58768,
-      30.13547
-     ],
-     [
-      -97.58768,
-      30.40678
-     ],
-     [
-      -97.89972,
-      30.40678
-     ],
-     [
-      -97.89972,
-      30.13547
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.665,
-  "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-01/2026-10-08",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 28,
    "s2_after": 0
   },
   "sensors": [
