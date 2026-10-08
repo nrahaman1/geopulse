@@ -646,7 +646,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -930,7 +930,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1361,7 +1361,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1510,7 +1510,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1724,7 +1724,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -1793,7 +1793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2371,7 +2371,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2801,7 +2801,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-23",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2878,7 +2878,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-23",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -3092,7 +3092,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -3538,7 +3538,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-19",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -6365,7 +6365,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Angola",
   "sources": [
@@ -6508,7 +6508,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -6787,6 +6787,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261002--13.04_-63.13",
+  "hazard": "wildfire",
+  "lon": -63.1284,
+  "lat": -13.0353,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Bolivia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032574",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032574&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Bolivia (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10681 ha"
+   }
+  ],
+  "first_seen": "2026-10-08",
+  "updated": "2026-10-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Bolivia (2026-10-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -63.19756,
+      -13.10313
+     ],
+     [
+      -63.05924,
+      -13.10313
+     ],
+     [
+      -63.05924,
+      -12.96747
+     ],
+     [
+      -63.19756,
+      -12.96747
+     ],
+     [
+      -63.19756,
+      -13.10313
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.996,
+  "before": "2026-08-23/2026-09-30",
+  "after": "2026-10-04/2026-10-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20260929--15.18_134.30",
   "hazard": "wildfire",
   "lon": 134.296,
@@ -6794,7 +6863,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -6871,7 +6940,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-07",
+  "event_end": "2026-10-08",
   "place": "",
   "country": "Australia",
   "sources": [
