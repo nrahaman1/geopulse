@@ -1,5 +1,141 @@
 [
  {
+  "id": "wi-20261006--11.99_35.39",
+  "hazard": "wildfire",
+  "lon": 35.3891,
+  "lat": -11.9925,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032638",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032638&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Green impact for forestfire in 10245 ha"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      35.32022,
+      -12.06033
+     ],
+     [
+      35.45798,
+      -12.06033
+     ],
+     [
+      35.45798,
+      -11.92467
+     ],
+     [
+      35.32022,
+      -11.92467
+     ],
+     [
+      35.32022,
+      -12.06033
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.345,
+  "before": "2026-08-27/2026-10-04",
+  "after": "2026-10-08/2026-10-09",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261006--10.33_33.21",
+  "hazard": "wildfire",
+  "lon": 33.2094,
+  "lat": -10.3321,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Zambia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032639",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032639&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Zambia (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Green impact for forestfire in 14104 ha"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia (2026-10-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.14092,
+      -10.39993
+     ],
+     [
+      33.27788,
+      -10.39993
+     ],
+     [
+      33.27788,
+      -10.26427
+     ],
+     [
+      33.14092,
+      -10.26427
+     ],
+     [
+      33.14092,
+      -10.39993
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.914,
+  "before": "2026-08-27/2026-10-04",
+  "after": "2026-10-08/2026-10-09",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261005-17.11_99.00",
   "hazard": "flood",
   "lon": 98.9954,
@@ -138,6 +274,79 @@
    "s1_before": 16,
    "s1_after": 1,
    "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261005--22.28_-42.42",
+  "hazard": "flood",
+  "lon": -42.4194,
+  "lat": -22.2753,
+  "bbox": [
+   -44.8893,
+   -23.6927,
+   -40.6296,
+   -20.7632
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104216",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=1&eventtype=FL",
+    "title": "Flood in Brazil (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Brazil (2026-10-05)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -42.56501,
+      -22.41096
+     ],
+     [
+      -42.27379,
+      -22.41096
+     ],
+     [
+      -42.27379,
+      -22.13964
+     ],
+     [
+      -42.56501,
+      -22.13964
+     ],
+     [
+      -42.56501,
+      -22.41096
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.594,
+  "before": "2026-08-31/2026-09-30",
+  "after": "2026-10-05/2026-10-09",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 1,
    "s2_after": 0
   },
   "sensors": [
@@ -934,7 +1143,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-01",
-  "event_end": "2026-10-06",
+  "event_end": "2026-10-09",
   "place": "",
   "country": "The Democratic Republic of Congo",
   "sources": [
@@ -1002,7 +1211,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-30",
-  "event_end": "2026-10-08",
+  "event_end": "2026-10-09",
   "place": "",
   "country": "Angola",
   "sources": [
@@ -3513,6 +3722,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260925--3.06_105.06",
+  "hazard": "wildfire",
+  "lon": 105.064,
+  "lat": -3.0578,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-25",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032521",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032521&episodeid=24&eventtype=WF",
+    "title": "Forest fires in Indonesia (Green alert)",
+    "date": "2026-09-25",
+    "detail": "Green impact for forestfire in 10004 ha"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Indonesia (2026-09-25)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      104.99653,
+      -3.12563
+     ],
+     [
+      105.13147,
+      -3.12563
+     ],
+     [
+      105.13147,
+      -2.98997
+     ],
+     [
+      104.99653,
+      -2.98997
+     ],
+     [
+      104.99653,
+      -3.12563
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.837,
+  "before": "2026-08-16/2026-09-23",
+  "after": "2026-09-27/2026-10-09",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 3,
+   "s2_before": 13,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -7379,7 +7657,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-08",
+  "event_end": "2026-10-09",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -7501,80 +7779,6 @@
    "s1_before": 10,
    "s1_after": 0,
    "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261005--22.28_-42.42",
-  "hazard": "flood",
-  "lon": -42.4194,
-  "lat": -22.2753,
-  "bbox": [
-   -44.8893,
-   -23.6927,
-   -40.6296,
-   -20.7632
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-07",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104216",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=1&eventtype=FL",
-    "title": "Flood in Brazil (Green alert)",
-    "date": "2026-10-05",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-09",
-  "updated": "2026-10-09",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Brazil (2026-10-05)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -42.56501,
-      -22.41096
-     ],
-     [
-      -42.27379,
-      -22.41096
-     ],
-     [
-      -42.27379,
-      -22.13964
-     ],
-     [
-      -42.56501,
-      -22.13964
-     ],
-     [
-      -42.56501,
-      -22.41096
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.594,
-  "before": "2026-08-31/2026-09-30",
-  "after": "2026-10-05/2026-10-09",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 1,
    "s2_after": 0
   },
   "sensors": [
