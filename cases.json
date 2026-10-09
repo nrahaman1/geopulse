@@ -73,6 +73,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261005-17.67_-100.00",
+  "hazard": "flood",
+  "lon": -100.0,
+  "lat": 17.6667,
+  "bbox": [
+   -102.1844,
+   16.3162,
+   -98.0073,
+   18.8878
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Mexico",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104191",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104191&episodeid=1&eventtype=FL",
+    "title": "Flood in Mexico (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-05",
+  "updated": "2026-10-05",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Mexico (2026-10-05)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -100.14142,
+      17.53104
+     ],
+     [
+      -99.85858,
+      17.53104
+     ],
+     [
+      -99.85858,
+      17.80236
+     ],
+     [
+      -100.14142,
+      17.80236
+     ],
+     [
+      -100.14142,
+      17.53104
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.692,
+  "before": "2026-08-31/2026-09-30",
+  "after": "2026-10-05/2026-10-09",
+  "scenes": {
+   "s1_before": 16,
+   "s1_after": 1,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261004--17.45_21.64",
   "hazard": "wildfire",
   "lon": 21.6386,
@@ -419,6 +492,147 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261002-13.40_-85.91",
+  "hazard": "flood",
+  "lon": -85.9139,
+  "lat": 13.3994,
+  "bbox": [
+   -86.0464,
+   12.9628,
+   -85.5221,
+   13.5258
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-04",
+  "place": "",
+  "country": "Nicaragua",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104210",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104210&episodeid=1&eventtype=FL",
+    "title": "Flood in Nicaragua (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-05",
+  "updated": "2026-10-05",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Nicaragua (2026-10-02)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -86.05242,
+      13.26374
+     ],
+     [
+      -85.77538,
+      13.26374
+     ],
+     [
+      -85.77538,
+      13.53506
+     ],
+     [
+      -86.05242,
+      13.53506
+     ],
+     [
+      -86.05242,
+      13.26374
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.279,
+  "before": "2026-08-28/2026-09-27",
+  "after": "2026-10-02/2026-10-09",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 2,
+   "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261002-1.90_-55.77",
+  "hazard": "wildfire",
+  "lon": -55.7733,
+  "lat": 1.9035,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032573",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032573&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10188 ha"
+   }
+  ],
+  "first_seen": "2026-10-06",
+  "updated": "2026-10-06",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -55.84071,
+      1.83567
+     ],
+     [
+      -55.70589,
+      1.83567
+     ],
+     [
+      -55.70589,
+      1.97133
+     ],
+     [
+      -55.84071,
+      1.97133
+     ],
+     [
+      -55.84071,
+      1.83567
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.932,
+  "before": "2026-08-23/2026-09-30",
+  "after": "2026-10-04/2026-10-09",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 2,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -6859,71 +7073,71 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261005-17.67_-100.00",
+  "id": "fl-20261006--33.59_-70.70",
   "hazard": "flood",
-  "lon": -100.0,
-  "lat": 17.6667,
+  "lon": -70.7046,
+  "lat": -33.5923,
   "bbox": [
-   -102.1844,
-   16.3162,
-   -98.0073,
-   18.8878
+   -71.7149,
+   -34.2917,
+   -69.7691,
+   -32.9222
   ],
   "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-07",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-08",
   "place": "",
-  "country": "Mexico",
+  "country": "Chile",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "FL1104191",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104191&episodeid=1&eventtype=FL",
-    "title": "Flood in Mexico (Green alert)",
-    "date": "2026-10-05",
+    "id": "FL1104217",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104217&episodeid=1&eventtype=FL",
+    "title": "Flood in Chile (Green alert)",
+    "date": "2026-10-06",
     "detail": "Magnitude 0"
    }
   ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Flood \u00b7 Mexico (2026-10-05)",
+  "title": "Flood \u00b7 Chile (2026-10-06)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -100.14142,
-      17.53104
+      -70.86636,
+      -33.72796
      ],
      [
-      -99.85858,
-      17.53104
+      -70.54284,
+      -33.72796
      ],
      [
-      -99.85858,
-      17.80236
+      -70.54284,
+      -33.45664
      ],
      [
-      -100.14142,
-      17.80236
+      -70.86636,
+      -33.45664
      ],
      [
-      -100.14142,
-      17.53104
+      -70.86636,
+      -33.72796
      ]
     ]
    ]
   },
-  "aoi_km2": 900.692,
-  "before": "2026-08-31/2026-09-30",
-  "after": "2026-10-05/2026-10-08",
+  "aoi_km2": 903.552,
+  "before": "2026-09-01/2026-10-01",
+  "after": "2026-10-06/2026-10-09",
   "scenes": {
    "s1_before": 16,
    "s1_after": 0,
-   "s2_before": 7,
+   "s2_before": 8,
    "s2_after": 0
   },
   "sensors": [
@@ -6988,7 +7202,7 @@
   },
   "aoi_km2": 224.978,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-07/2026-10-08",
+  "after": "2026-10-07/2026-10-09",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -7057,11 +7271,85 @@
   },
   "aoi_km2": 226.255,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-08",
+  "after": "2026-10-06/2026-10-09",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261005--22.28_-42.42",
+  "hazard": "flood",
+  "lon": -42.4194,
+  "lat": -22.2753,
+  "bbox": [
+   -44.8893,
+   -23.6927,
+   -40.6296,
+   -20.7632
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-07",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104216",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=1&eventtype=FL",
+    "title": "Flood in Brazil (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Brazil (2026-10-05)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -42.56501,
+      -22.41096
+     ],
+     [
+      -42.27379,
+      -22.41096
+     ],
+     [
+      -42.27379,
+      -22.13964
+     ],
+     [
+      -42.56501,
+      -22.13964
+     ],
+     [
+      -42.56501,
+      -22.41096
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.594,
+  "before": "2026-08-31/2026-09-30",
+  "after": "2026-10-05/2026-10-09",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 1,
    "s2_after": 0
   },
   "sensors": [
@@ -7131,154 +7419,11 @@
   },
   "aoi_km2": 43.957,
   "before": "2026-08-29/2026-09-28",
-  "after": "2026-10-03/2026-10-08",
+  "after": "2026-10-03/2026-10-09",
   "scenes": {
    "s1_before": 8,
    "s1_after": 0,
    "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261002-13.40_-85.91",
-  "hazard": "flood",
-  "lon": -85.9139,
-  "lat": 13.3994,
-  "bbox": [
-   -86.0464,
-   12.9628,
-   -85.5221,
-   13.5258
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Nicaragua",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104210",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104210&episodeid=1&eventtype=FL",
-    "title": "Flood in Nicaragua (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Nicaragua (2026-10-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -86.05242,
-      13.26374
-     ],
-     [
-      -85.77538,
-      13.26374
-     ],
-     [
-      -85.77538,
-      13.53506
-     ],
-     [
-      -86.05242,
-      13.53506
-     ],
-     [
-      -86.05242,
-      13.26374
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.279,
-  "before": "2026-08-28/2026-09-27",
-  "after": "2026-10-02/2026-10-08",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 0,
-   "s2_before": 12,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261002-1.90_-55.77",
-  "hazard": "wildfire",
-  "lon": -55.7733,
-  "lat": 1.9035,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-08",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032573",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032573&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Brazil (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Green impact for forestfire in 10188 ha"
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Brazil (2026-10-02)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -55.84071,
-      1.83567
-     ],
-     [
-      -55.70589,
-      1.83567
-     ],
-     [
-      -55.70589,
-      1.97133
-     ],
-     [
-      -55.84071,
-      1.97133
-     ],
-     [
-      -55.84071,
-      1.83567
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 224.932,
-  "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-04/2026-10-08",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 7,
    "s2_after": 0
   },
   "sensors": [
@@ -7343,7 +7488,7 @@
   },
   "aoi_km2": 224.996,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-04/2026-10-08",
+  "after": "2026-10-04/2026-10-09",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -7355,6 +7500,62 @@
    "s2"
   ],
   "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261008-46.99_119.23",
+  "hazard": "wildfire",
+  "lon": 119.2284,
+  "lat": 46.9945,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Mongolia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032652",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032652&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Mongolia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 17663 ha"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mongolia (2026-10-08)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      119.12962,
+      46.92667
+     ],
+     [
+      119.32718,
+      46.92667
+     ],
+     [
+      119.32718,
+      47.06233
+     ],
+     [
+      119.12962,
+      47.06233
+     ],
+     [
+      119.12962,
+      46.92667
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -7419,7 +7620,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-08/2026-10-08"
+  "after": "2026-10-07/2026-10-09"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -7484,7 +7685,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-08"
+  "after": "2026-10-06/2026-10-09"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -7549,7 +7750,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-08"
+  "after": "2026-10-03/2026-10-09"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -7614,7 +7815,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-08"
+  "after": "2026-10-02/2026-10-09"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -7679,7 +7880,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-08"
+  "after": "2026-10-02/2026-10-09"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -7744,7 +7945,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-08"
+  "after": "2026-10-01/2026-10-09"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -7809,7 +8010,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-08"
+  "after": "2026-10-01/2026-10-09"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -7874,6 +8075,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-08"
+  "after": "2026-10-01/2026-10-09"
  }
 ]
