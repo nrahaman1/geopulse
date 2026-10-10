@@ -1,5 +1,146 @@
 [
  {
+  "id": "wi-20261008--17.11_142.92",
+  "hazard": "wildfire",
+  "lon": 142.9212,
+  "lat": -17.1105,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032653",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032653&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 10195 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.85071,
+      -17.17833
+     ],
+     [
+      142.99169,
+      -17.17833
+     ],
+     [
+      142.99169,
+      -17.04267
+     ],
+     [
+      142.85071,
+      -17.04267
+     ],
+     [
+      142.85071,
+      -17.17833
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.309,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-10",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 43,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261008-45.82_13.84",
+  "hazard": "flood",
+  "lon": 13.8443,
+  "lat": 45.8238,
+  "bbox": [
+   13.6086,
+   45.8339,
+   13.8684,
+   46.1081
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Slovenia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104221",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104221&episodeid=1&eventtype=FL",
+    "title": "Flood in Slovenia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Slovenia (2026-10-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      13.60892,
+      45.69824
+     ],
+     [
+      13.86808,
+      45.69824
+     ],
+     [
+      13.86808,
+      45.96956
+     ],
+     [
+      13.60892,
+      45.96956
+     ],
+     [
+      13.60892,
+      45.69824
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 606.872,
+  "before": "2026-09-03/2026-10-03",
+  "after": "2026-10-08/2026-10-10",
+  "scenes": {
+   "s1_before": 23,
+   "s1_after": 2,
+   "s2_before": 58,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261007-10.23_-66.38",
   "hazard": "flood",
   "lon": -66.3807,
@@ -4489,7 +4630,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -8415,75 +8556,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261008--17.11_142.92",
-  "hazard": "wildfire",
-  "lon": 142.9212,
-  "lat": -17.1105,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-08",
-  "event_end": "2026-10-10",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032653",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032653&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Green impact for forestfire in 10195 ha"
-   }
-  ],
-  "first_seen": "2026-10-10",
-  "updated": "2026-10-10",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-08)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      142.85071,
-      -17.17833
-     ],
-     [
-      142.99169,
-      -17.17833
-     ],
-     [
-      142.99169,
-      -17.04267
-     ],
-     [
-      142.85071,
-      -17.04267
-     ],
-     [
-      142.85071,
-      -17.17833
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.309,
-  "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-10/2026-10-10",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 43,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261008-40.84_14.25",
   "hazard": "flood",
   "lon": 14.2488,
@@ -8549,80 +8621,6 @@
    "s1_before": 22,
    "s1_after": 0,
    "s2_before": 21,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261008-45.82_13.84",
-  "hazard": "flood",
-  "lon": 13.8443,
-  "lat": 45.8238,
-  "bbox": [
-   13.6086,
-   45.8339,
-   13.8684,
-   46.1081
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-08",
-  "event_end": "2026-10-10",
-  "place": "",
-  "country": "Slovenia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104221",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104221&episodeid=1&eventtype=FL",
-    "title": "Flood in Slovenia (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-10",
-  "updated": "2026-10-10",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Slovenia (2026-10-08)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      13.60892,
-      45.69824
-     ],
-     [
-      13.86808,
-      45.69824
-     ],
-     [
-      13.86808,
-      45.96956
-     ],
-     [
-      13.60892,
-      45.96956
-     ],
-     [
-      13.60892,
-      45.69824
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 606.872,
-  "before": "2026-09-03/2026-10-03",
-  "after": "2026-10-08/2026-10-10",
-  "scenes": {
-   "s1_before": 23,
-   "s1_after": 0,
-   "s2_before": 58,
    "s2_after": 0
   },
   "sensors": [
