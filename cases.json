@@ -136,6 +136,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261006--33.59_-70.70",
+  "hazard": "flood",
+  "lon": -70.7046,
+  "lat": -33.5923,
+  "bbox": [
+   -71.7149,
+   -34.2917,
+   -69.7691,
+   -32.9222
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-08",
+  "place": "",
+  "country": "Chile",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104217",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104217&episodeid=1&eventtype=FL",
+    "title": "Flood in Chile (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-09",
+  "updated": "2026-10-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Chile (2026-10-06)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -70.86636,
+      -33.72796
+     ],
+     [
+      -70.54284,
+      -33.72796
+     ],
+     [
+      -70.54284,
+      -33.45664
+     ],
+     [
+      -70.86636,
+      -33.45664
+     ],
+     [
+      -70.86636,
+      -33.72796
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.552,
+  "before": "2026-09-01/2026-10-01",
+  "after": "2026-10-06/2026-10-10",
+  "scenes": {
+   "s1_before": 16,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261005-17.11_99.00",
   "hazard": "flood",
   "lon": 98.9954,
@@ -700,6 +773,143 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261003--3.54_-54.66",
+  "hazard": "wildfire",
+  "lon": -54.6576,
+  "lat": -3.5408,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-03",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032622",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032622&episodeid=10&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-03",
+    "detail": "Green impact for forestfire in 10272 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-03)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -54.7251,
+      -3.60863
+     ],
+     [
+      -54.5901,
+      -3.60863
+     ],
+     [
+      -54.5901,
+      -3.47297
+     ],
+     [
+      -54.7251,
+      -3.47297
+     ],
+     [
+      -54.7251,
+      -3.60863
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.208,
+  "before": "2026-08-24/2026-10-01",
+  "after": "2026-10-05/2026-10-10",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261003--10.50_-47.27",
+  "hazard": "wildfire",
+  "lon": -47.2722,
+  "lat": -10.4994,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-03",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032689",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032689&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-03",
+    "detail": "Green impact for forestfire in 10512 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-03)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -47.34072,
+      -10.56723
+     ],
+     [
+      -47.20368,
+      -10.56723
+     ],
+     [
+      -47.20368,
+      -10.43157
+     ],
+     [
+      -47.34072,
+      -10.43157
+     ],
+     [
+      -47.34072,
+      -10.56723
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.269,
+  "before": "2026-08-24/2026-10-01",
+  "after": "2026-10-05/2026-10-10",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 24,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261002-15.49_-88.01",
   "hazard": "flood",
   "lon": -88.0078,
@@ -1002,7 +1212,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-08",
+  "event_end": "2026-10-09",
   "place": "",
   "country": "Bolivia",
   "sources": [
@@ -1058,6 +1268,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261002--7.20_-55.14",
+  "hazard": "wildfire",
+  "lon": -55.1362,
+  "lat": -7.2047,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-02",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032691",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032691&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10545 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -55.20411,
+      -7.27253
+     ],
+     [
+      -55.06829,
+      -7.27253
+     ],
+     [
+      -55.06829,
+      -7.13687
+     ],
+     [
+      -55.20411,
+      -7.13687
+     ],
+     [
+      -55.20411,
+      -7.27253
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.112,
+  "before": "2026-08-23/2026-09-30",
+  "after": "2026-10-04/2026-10-10",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 29,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -1200,6 +1479,143 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261001--3.15_112.21",
+  "hazard": "wildfire",
+  "lon": 112.2144,
+  "lat": -3.1488,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032631",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032631&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Indonesia (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Green impact for forestfire in 11454 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Indonesia (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      112.14692,
+      -3.21663
+     ],
+     [
+      112.28188,
+      -3.21663
+     ],
+     [
+      112.28188,
+      -3.08097
+     ],
+     [
+      112.14692,
+      -3.08097
+     ],
+     [
+      112.14692,
+      -3.21663
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.953,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-03/2026-10-10",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 6,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261001--12.20_-44.72",
+  "hazard": "wildfire",
+  "lon": -44.7181,
+  "lat": -12.1982,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032657",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032657&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Green impact for forestfire in 15053 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -44.78703,
+      -12.26603
+     ],
+     [
+      -44.64917,
+      -12.26603
+     ],
+     [
+      -44.64917,
+      -12.13037
+     ],
+     [
+      -44.78703,
+      -12.13037
+     ],
+     [
+      -44.78703,
+      -12.26603
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.968,
+  "before": "2026-08-22/2026-09-29",
+  "after": "2026-10-03/2026-10-10",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 10,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -2854,6 +3270,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260927--11.21_-45.22",
+  "hazard": "wildfire",
+  "lon": -45.2219,
+  "lat": -11.2138,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-27",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032524",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032524&episodeid=17&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-09-27",
+    "detail": "Green impact for forestfire in 12582 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-09-27)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -45.29058,
+      -11.28163
+     ],
+     [
+      -45.15322,
+      -11.28163
+     ],
+     [
+      -45.15322,
+      -11.14597
+     ],
+     [
+      -45.29058,
+      -11.14597
+     ],
+     [
+      -45.29058,
+      -11.28163
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.929,
+  "before": "2026-08-18/2026-09-25",
+  "after": "2026-09-29/2026-10-10",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 1,
+   "s2_before": 11,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260926-1.37_-77.25",
   "hazard": "flood",
   "lon": -77.2532,
@@ -3581,7 +4066,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-25",
-  "event_end": "2026-10-08",
+  "event_end": "2026-10-09",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -7576,71 +8061,66 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261006--33.59_-70.70",
-  "hazard": "flood",
-  "lon": -70.7046,
-  "lat": -33.5923,
-  "bbox": [
-   -71.7149,
-   -34.2917,
-   -69.7691,
-   -32.9222
-  ],
+  "id": "wi-20261008--17.11_142.92",
+  "hazard": "wildfire",
+  "lon": 142.9212,
+  "lat": -17.1105,
+  "bbox": null,
   "geometry_from": "gdacs",
-  "event_start": "2026-10-06",
-  "event_end": "2026-10-08",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-09",
   "place": "",
-  "country": "Chile",
+  "country": "Australia",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "FL1104217",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104217&episodeid=1&eventtype=FL",
-    "title": "Flood in Chile (Green alert)",
-    "date": "2026-10-06",
-    "detail": "Magnitude 0"
+    "id": "WF1032653",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032653&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 10195 ha"
    }
   ],
-  "first_seen": "2026-10-09",
-  "updated": "2026-10-09",
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Flood \u00b7 Chile (2026-10-06)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 Australia (2026-10-08)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -70.86636,
-      -33.72796
+      142.85071,
+      -17.17833
      ],
      [
-      -70.54284,
-      -33.72796
+      142.99169,
+      -17.17833
      ],
      [
-      -70.54284,
-      -33.45664
+      142.99169,
+      -17.04267
      ],
      [
-      -70.86636,
-      -33.45664
+      142.85071,
+      -17.04267
      ],
      [
-      -70.86636,
-      -33.72796
+      142.85071,
+      -17.17833
      ]
     ]
    ]
   },
-  "aoi_km2": 903.552,
-  "before": "2026-09-01/2026-10-01",
-  "after": "2026-10-06/2026-10-09",
+  "aoi_km2": 225.309,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-10",
   "scenes": {
-   "s1_before": 16,
+   "s1_before": 3,
    "s1_after": 0,
-   "s2_before": 8,
+   "s2_before": 43,
    "s2_after": 0
   },
   "sensors": [
@@ -7705,7 +8185,7 @@
   },
   "aoi_km2": 224.978,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-07/2026-10-09",
+  "after": "2026-10-07/2026-10-10",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -7774,7 +8254,7 @@
   },
   "aoi_km2": 226.255,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-09",
+  "after": "2026-10-06/2026-10-10",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -7849,7 +8329,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 226.609,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-10"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -7914,7 +8397,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-09"
+  "after": "2026-10-07/2026-10-10"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -7979,7 +8462,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-09"
+  "after": "2026-10-06/2026-10-10"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -8044,7 +8527,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-09"
+  "after": "2026-10-03/2026-10-10"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -8109,7 +8592,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-09"
+  "after": "2026-10-02/2026-10-10"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -8174,7 +8657,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-09"
+  "after": "2026-10-02/2026-10-10"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -8239,7 +8722,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-09"
+  "after": "2026-10-01/2026-10-10"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -8304,7 +8787,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-09"
+  "after": "2026-10-01/2026-10-10"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -8369,6 +8852,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-09"
+  "after": "2026-10-01/2026-10-10"
  }
 ]
