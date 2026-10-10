@@ -1,5 +1,78 @@
 [
  {
+  "id": "fl-20261007-10.23_-66.38",
+  "hazard": "flood",
+  "lon": -66.3807,
+  "lat": 10.2343,
+  "bbox": [
+   -68.4287,
+   9.8115,
+   -65.4209,
+   10.8763
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Venezuela",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104219",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104219&episodeid=1&eventtype=FL",
+    "title": "Flood in Venezuela (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Venezuela (2026-10-07)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -66.51763,
+      10.09864
+     ],
+     [
+      -66.24377,
+      10.09864
+     ],
+     [
+      -66.24377,
+      10.36996
+     ],
+     [
+      -66.51763,
+      10.36996
+     ],
+     [
+      -66.51763,
+      10.09864
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.554,
+  "before": "2026-09-02/2026-10-02",
+  "after": "2026-10-07/2026-10-10",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 0,
+   "s2_before": 13,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261006--11.99_35.39",
   "hazard": "wildfire",
   "lon": 35.3891,
@@ -75,7 +148,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -204,6 +277,80 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261006--31.40_-58.02",
+  "hazard": "flood",
+  "lon": -58.0173,
+  "lat": -31.3973,
+  "bbox": [
+   -58.0569,
+   -31.4189,
+   -57.9833,
+   -31.3357
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-09",
+  "place": "",
+  "country": "Argentina",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104218",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104218&episodeid=2&eventtype=FL",
+    "title": "Flood in Argentina (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Argentina (2026-10-06)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -58.0569,
+      -31.4189
+     ],
+     [
+      -57.9833,
+      -31.4189
+     ],
+     [
+      -57.9833,
+      -31.3357
+     ],
+     [
+      -58.0569,
+      -31.3357
+     ],
+     [
+      -58.0569,
+      -31.4189
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 64.549,
+  "before": "2026-09-01/2026-10-01",
+  "after": "2026-10-06/2026-10-10",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -428,6 +575,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261005-41.02_-115.21",
+  "hazard": "wildfire",
+  "lon": -115.20765,
+  "lat": 41.02195,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-10-05",
+  "event_end": "2026-10-05",
+  "place": "Jones, Elko, Nevada",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_25117",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-NVECFX-010656",
+    "title": "Wildfire Jones, Elko, Nevada",
+    "date": "2026-10-05",
+    "detail": "1657.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-08",
+  "updated": "2026-10-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Jones, Elko, Nevada (2026-10-05)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -115.29695,
+      40.95412
+     ],
+     [
+      -115.11835,
+      40.95412
+     ],
+     [
+      -115.11835,
+      41.08978
+     ],
+     [
+      -115.29695,
+      41.08978
+     ],
+     [
+      -115.29695,
+      40.95412
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.255,
+  "before": "2026-08-26/2026-10-03",
+  "after": "2026-10-06/2026-10-10",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261004--17.45_21.64",
   "hazard": "wildfire",
   "lon": 21.6386,
@@ -559,6 +775,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--8.69_142.35",
+  "hazard": "wildfire",
+  "lon": 142.354,
+  "lat": -8.6903,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032665",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032665&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 12046 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.28584,
+      -8.75813
+     ],
+     [
+      142.42216,
+      -8.75813
+     ],
+     [
+      142.42216,
+      -8.62247
+     ],
+     [
+      142.28584,
+      -8.62247
+     ],
+     [
+      142.28584,
+      -8.75813
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.033,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-10",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 1,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -712,7 +997,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -780,7 +1065,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -849,7 +1134,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1136,7 +1421,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1280,7 +1565,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1558,7 +1843,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-01",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2120,7 +2405,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2197,7 +2482,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2488,7 +2773,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2846,7 +3131,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-28",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2987,7 +3272,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3136,7 +3421,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3277,7 +3562,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3419,7 +3704,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -3488,7 +3773,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-26",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3544,6 +3829,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20260926--7.99_142.19",
+  "hazard": "wildfire",
+  "lon": 142.1881,
+  "lat": -7.9919,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-26",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032707",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032707&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-09-26",
+    "detail": "Green impact for forestfire in 11719 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-09-26)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.12007,
+      -8.05973
+     ],
+     [
+      142.25613,
+      -8.05973
+     ],
+     [
+      142.25613,
+      -7.92407
+     ],
+     [
+      142.12007,
+      -7.92407
+     ],
+     [
+      142.12007,
+      -8.05973
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.967,
+  "before": "2026-08-17/2026-09-24",
+  "after": "2026-09-28/2026-10-10",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 3,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -4864,7 +5218,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-21",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -8068,7 +8422,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -8121,6 +8475,223 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 43,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261008-40.84_14.25",
+  "hazard": "flood",
+  "lon": 14.2488,
+  "lat": 40.8359,
+  "bbox": [
+   14.1321,
+   40.7912,
+   14.3538,
+   40.9161
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Italy",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104220",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=2&eventtype=FL",
+    "title": "Flood in Italy (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Italy (2026-10-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.1321,
+      40.7912
+     ],
+     [
+      14.3538,
+      40.7912
+     ],
+     [
+      14.3538,
+      40.9161
+     ],
+     [
+      14.1321,
+      40.9161
+     ],
+     [
+      14.1321,
+      40.7912
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 259.109,
+  "before": "2026-09-03/2026-10-03",
+  "after": "2026-10-08/2026-10-10",
+  "scenes": {
+   "s1_before": 22,
+   "s1_after": 0,
+   "s2_before": 21,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261008-45.82_13.84",
+  "hazard": "flood",
+  "lon": 13.8443,
+  "lat": 45.8238,
+  "bbox": [
+   13.6086,
+   45.8339,
+   13.8684,
+   46.1081
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Slovenia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104221",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104221&episodeid=1&eventtype=FL",
+    "title": "Flood in Slovenia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Slovenia (2026-10-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      13.60892,
+      45.69824
+     ],
+     [
+      13.86808,
+      45.69824
+     ],
+     [
+      13.86808,
+      45.96956
+     ],
+     [
+      13.60892,
+      45.96956
+     ],
+     [
+      13.60892,
+      45.69824
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 606.872,
+  "before": "2026-09-03/2026-10-03",
+  "after": "2026-10-08/2026-10-10",
+  "scenes": {
+   "s1_before": 23,
+   "s1_after": 0,
+   "s2_before": 58,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261008--11.07_-44.05",
+  "hazard": "wildfire",
+  "lon": -44.0527,
+  "lat": -11.0702,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032684",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032684&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 10675 ha"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -44.12135,
+      -11.13803
+     ],
+     [
+      -43.98405,
+      -11.13803
+     ],
+     [
+      -43.98405,
+      -11.00237
+     ],
+     [
+      -44.12135,
+      -11.00237
+     ],
+     [
+      -44.12135,
+      -11.13803
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.995,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-10",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 28,
    "s2_after": 0
   },
   "sensors": [
@@ -8199,75 +8770,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261005-41.02_-115.21",
-  "hazard": "wildfire",
-  "lon": -115.20765,
-  "lat": 41.02195,
-  "bbox": null,
-  "geometry_from": "eonet",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-05",
-  "place": "Jones, Elko, Nevada",
-  "country": "",
-  "sources": [
-   {
-    "kind": "eonet",
-    "id": "EONET_25117",
-    "url": "https://irwin.doi.gov/observer/incidents/2026-NVECFX-010656",
-    "title": "Wildfire Jones, Elko, Nevada",
-    "date": "2026-10-05",
-    "detail": "1657.0 acres"
-   }
-  ],
-  "first_seen": "2026-10-08",
-  "updated": "2026-10-08",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Jones, Elko, Nevada (2026-10-05)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -115.29695,
-      40.95412
-     ],
-     [
-      -115.11835,
-      40.95412
-     ],
-     [
-      -115.11835,
-      41.08978
-     ],
-     [
-      -115.29695,
-      41.08978
-     ],
-     [
-      -115.29695,
-      40.95412
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 226.255,
-  "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-10",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261008-46.99_119.23",
   "hazard": "wildfire",
   "lon": 119.2284,
@@ -8275,7 +8777,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-10",
   "place": "",
   "country": "Mongolia",
   "sources": [
