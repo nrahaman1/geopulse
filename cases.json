@@ -1,5 +1,73 @@
 [
  {
+  "id": "wi-20261009--15.32_134.85",
+  "hazard": "wildfire",
+  "lon": 134.8531,
+  "lat": -15.3249,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-09",
+  "event_end": "2026-10-11",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032702",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032702&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 12605 ha"
+   }
+  ],
+  "first_seen": "2026-10-11",
+  "updated": "2026-10-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      134.78324,
+      -15.39273
+     ],
+     [
+      134.92296,
+      -15.39273
+     ],
+     [
+      134.92296,
+      -15.25707
+     ],
+     [
+      134.78324,
+      -15.25707
+     ],
+     [
+      134.78324,
+      -15.39273
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.047,
+  "before": "2026-08-30/2026-10-07",
+  "after": "2026-10-11/2026-10-11",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261008--17.11_142.92",
   "hazard": "wildfire",
   "lon": 142.9212,
@@ -205,6 +273,79 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261008-40.84_14.25",
+  "hazard": "flood",
+  "lon": 14.2488,
+  "lat": 40.8359,
+  "bbox": [
+   14.1321,
+   40.7912,
+   14.3538,
+   40.9161
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-10",
+  "place": "",
+  "country": "Italy",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104220",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=2&eventtype=FL",
+    "title": "Flood in Italy (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-10",
+  "updated": "2026-10-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Italy (2026-10-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.1321,
+      40.7912
+     ],
+     [
+      14.3538,
+      40.7912
+     ],
+     [
+      14.3538,
+      40.9161
+     ],
+     [
+      14.1321,
+      40.9161
+     ],
+     [
+      14.1321,
+      40.7912
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 259.109,
+  "before": "2026-09-03/2026-10-03",
+  "after": "2026-10-08/2026-10-11",
+  "scenes": {
+   "s1_before": 22,
+   "s1_after": 1,
+   "s2_before": 21,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -9054,140 +9195,66 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261009--15.32_134.85",
+  "id": "wi-20261009--12.95_-67.57",
   "hazard": "wildfire",
-  "lon": 134.8531,
-  "lat": -15.3249,
+  "lon": -67.5657,
+  "lat": -12.9545,
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
   "event_end": "2026-10-11",
   "place": "",
-  "country": "Australia",
+  "country": "Bolivia",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "WF1032702",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032702&episodeid=4&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
+    "id": "WF1032697",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032697&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Bolivia (Green alert)",
     "date": "2026-10-09",
-    "detail": "Green impact for forestfire in 12605 ha"
+    "detail": "Green impact for forestfire in 10291 ha"
    }
   ],
   "first_seen": "2026-10-11",
   "updated": "2026-10-11",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-09)",
+  "title": "Wildfire \u00b7 Bolivia (2026-10-09)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      134.78324,
-      -15.39273
+      -67.63483,
+      -13.02233
      ],
      [
-      134.92296,
-      -15.39273
+      -67.49657,
+      -13.02233
      ],
      [
-      134.92296,
-      -15.25707
+      -67.49657,
+      -12.88667
      ],
      [
-      134.78324,
-      -15.25707
+      -67.63483,
+      -12.88667
      ],
      [
-      134.78324,
-      -15.39273
+      -67.63483,
+      -13.02233
      ]
     ]
    ]
   },
-  "aoi_km2": 225.047,
+  "aoi_km2": 225.103,
   "before": "2026-08-30/2026-10-07",
   "after": "2026-10-11/2026-10-11",
   "scenes": {
-   "s1_before": 3,
+   "s1_before": 9,
    "s1_after": 0,
-   "s2_before": 19,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261008-40.84_14.25",
-  "hazard": "flood",
-  "lon": 14.2488,
-  "lat": 40.8359,
-  "bbox": [
-   14.1321,
-   40.7912,
-   14.3538,
-   40.9161
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-08",
-  "event_end": "2026-10-10",
-  "place": "",
-  "country": "Italy",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104220",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=2&eventtype=FL",
-    "title": "Flood in Italy (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-10",
-  "updated": "2026-10-10",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Italy (2026-10-08)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      14.1321,
-      40.7912
-     ],
-     [
-      14.3538,
-      40.7912
-     ],
-     [
-      14.3538,
-      40.9161
-     ],
-     [
-      14.1321,
-      40.9161
-     ],
-     [
-      14.1321,
-      40.7912
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 259.109,
-  "before": "2026-09-03/2026-10-03",
-  "after": "2026-10-08/2026-10-11",
-  "scenes": {
-   "s1_before": 22,
-   "s1_after": 0,
-   "s2_before": 21,
+   "s2_before": 5,
    "s2_after": 0
   },
   "sensors": [
@@ -9338,6 +9405,62 @@
    "s2"
   ],
   "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261010-46.70_119.74",
+  "hazard": "wildfire",
+  "lon": 119.7365,
+  "lat": 46.7007,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-11",
+  "place": "",
+  "country": "Mongolia, China",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032729",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032729&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Mongolia, China (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 11840 ha"
+   }
+  ],
+  "first_seen": "2026-10-11",
+  "updated": "2026-10-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mongolia, China (2026-10-10)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      119.63826,
+      46.63287
+     ],
+     [
+      119.83474,
+      46.63287
+     ],
+     [
+      119.83474,
+      46.76853
+     ],
+     [
+      119.63826,
+      46.76853
+     ],
+     [
+      119.63826,
+      46.63287
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261008-46.99_119.23",
