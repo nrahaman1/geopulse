@@ -1,9 +1,9 @@
 {
- "started": "2026-10-13T00:46:56+00:00",
+ "started": "2026-10-13T14:19:01+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 45
+   "events": 56
   },
   "cems": {
    "ok": true,
@@ -19,7 +19,7 @@
   },
   "rss:wildfiretoday.com": {
    "ok": true,
-   "articles": 3
+   "articles": 4
   },
   "rss:inciweb.wildfire.gov": {
    "ok": true,
@@ -31,18 +31,18 @@
   }
  },
  "news": {
-  "read": 2,
+  "read": 3,
   "per_hazard": {
    "flood": 0,
-   "wildfire": 2,
+   "wildfire": 3,
    "vegetation": 0
   },
   "events": 0,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-13T00:50:15+00:00",
- "duration_s": 199,
- "cases": 151,
- "new": 0,
+ "finished": "2026-10-13T14:25:17+00:00",
+ "duration_s": 376,
+ "cases": 156,
+ "new": 5,
  "ok": true
 }
