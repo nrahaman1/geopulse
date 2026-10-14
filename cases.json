@@ -81,7 +81,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -150,7 +150,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -161,10 +161,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-10",
     "detail": "Green impact for forestfire in 11616 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032754",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032754&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 13096 ha"
    }
   ],
   "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-10)",
@@ -291,7 +299,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -508,7 +516,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -649,7 +657,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1078,7 +1086,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -1293,7 +1301,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -1732,7 +1740,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -1801,7 +1809,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -1937,7 +1945,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2142,7 +2150,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-12",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2211,7 +2219,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2333,6 +2341,75 @@
    "s1_before": 10,
    "s1_after": 1,
    "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--1.68_104.35",
+  "hazard": "wildfire",
+  "lon": 104.3529,
+  "lat": -1.681,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032747",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032747&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Indonesia (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10287 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Indonesia (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      104.2855,
+      -1.74883
+     ],
+     [
+      104.4203,
+      -1.74883
+     ],
+     [
+      104.4203,
+      -1.61317
+     ],
+     [
+      104.2855,
+      -1.61317
+     ],
+     [
+      104.2855,
+      -1.74883
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.85,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-14",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 2,
+   "s2_before": 6,
    "s2_after": 1
   },
   "sensors": [
@@ -2490,7 +2567,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4116,7 +4193,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-29",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -10931,6 +11008,144 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261010--16.19_137.09",
+  "hazard": "wildfire",
+  "lon": 137.0918,
+  "lat": -16.187,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032725",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032725&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10333 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      137.02165,
+      -16.25483
+     ],
+     [
+      137.16195,
+      -16.25483
+     ],
+     [
+      137.16195,
+      -16.11917
+     ],
+     [
+      137.02165,
+      -16.11917
+     ],
+     [
+      137.02165,
+      -16.25483
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.325,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-14",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261010--12.62_142.72",
+  "hazard": "wildfire",
+  "lon": 142.7201,
+  "lat": -12.6172,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032728",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032728&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10218 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.65106,
+      -12.68503
+     ],
+     [
+      142.78914,
+      -12.68503
+     ],
+     [
+      142.78914,
+      -12.54937
+     ],
+     [
+      142.65106,
+      -12.54937
+     ],
+     [
+      142.65106,
+      -12.68503
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.163,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-14",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 15,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261009--12.95_-67.57",
   "hazard": "wildfire",
   "lon": -67.5657,
@@ -11150,7 +11365,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -11368,7 +11583,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Mongolia, China",
   "sources": [
@@ -11395,10 +11610,18 @@
     "title": "Forest fires in Mongolia, China (Green alert)",
     "date": "2026-10-10",
     "detail": "Green impact for forestfire in 22178 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032753",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032753&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Mongolia, China (Green alert)",
+    "date": "2026-10-11",
+    "detail": "Green impact for forestfire in 11196 ha"
    }
   ],
   "first_seen": "2026-10-11",
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mongolia, China (2026-10-10)",
