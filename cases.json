@@ -509,6 +509,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261009--12.95_-67.57",
+  "hazard": "wildfire",
+  "lon": -67.5657,
+  "lat": -12.9545,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-09",
+  "event_end": "2026-10-11",
+  "place": "",
+  "country": "Bolivia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032697",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032697&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Bolivia (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 10291 ha"
+   }
+  ],
+  "first_seen": "2026-10-11",
+  "updated": "2026-10-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Bolivia (2026-10-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -67.63483,
+      -13.02233
+     ],
+     [
+      -67.49657,
+      -13.02233
+     ],
+     [
+      -67.49657,
+      -12.88667
+     ],
+     [
+      -67.63483,
+      -12.88667
+     ],
+     [
+      -67.63483,
+      -13.02233
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.103,
+  "before": "2026-08-30/2026-10-07",
+  "after": "2026-10-12/2026-10-14",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 2,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261008--17.11_142.92",
   "hazard": "wildfire",
   "lon": 142.9212,
@@ -787,6 +855,75 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261008--15.78_129.55",
+  "hazard": "wildfire",
+  "lon": 129.5479,
+  "lat": -15.775,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032792",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032792&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 10477 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      129.47789,
+      -15.84283
+     ],
+     [
+      129.61791,
+      -15.84283
+     ],
+     [
+      129.61791,
+      -15.70717
+     ],
+     [
+      129.47789,
+      -15.70717
+     ],
+     [
+      129.47789,
+      -15.84283
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.068,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-14",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -2288,7 +2425,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -11137,75 +11274,6 @@
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 15,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261009--12.95_-67.57",
-  "hazard": "wildfire",
-  "lon": -67.5657,
-  "lat": -12.9545,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-09",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Bolivia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032697",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032697&episodeid=7&eventtype=WF",
-    "title": "Forest fires in Bolivia (Green alert)",
-    "date": "2026-10-09",
-    "detail": "Green impact for forestfire in 10291 ha"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Bolivia (2026-10-09)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -67.63483,
-      -13.02233
-     ],
-     [
-      -67.49657,
-      -13.02233
-     ],
-     [
-      -67.49657,
-      -12.88667
-     ],
-     [
-      -67.63483,
-      -12.88667
-     ],
-     [
-      -67.63483,
-      -13.02233
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.103,
-  "before": "2026-08-30/2026-10-07",
-  "after": "2026-10-12/2026-10-14",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 0,
-   "s2_before": 5,
    "s2_after": 0
   },
   "sensors": [
