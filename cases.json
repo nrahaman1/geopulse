@@ -1,5 +1,79 @@
 [
  {
+  "id": "fl-20261012-35.14_40.21",
+  "hazard": "flood",
+  "lon": 40.2143,
+  "lat": 35.1444,
+  "bbox": [
+   39.242,
+   34.0764,
+   41.3238,
+   36.4635
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-12",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Syria",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104233",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104233&episodeid=1&eventtype=FL",
+    "title": "Flood in Syria (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Syria (2026-10-12)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      40.04951,
+      35.00874
+     ],
+     [
+      40.37909,
+      35.00874
+     ],
+     [
+      40.37909,
+      35.28006
+     ],
+     [
+      40.04951,
+      35.28006
+     ],
+     [
+      40.04951,
+      35.00874
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.6,
+  "before": "2026-09-07/2026-10-07",
+  "after": "2026-10-12/2026-10-15",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 3,
+   "s2_before": 69,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261011-28.00_84.63",
   "hazard": "flood",
   "lon": 84.628,
@@ -81,7 +155,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -149,7 +223,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -372,7 +446,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-12",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -433,6 +507,142 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261010-42.34_-114.10",
+  "hazard": "wildfire",
+  "lon": -114.10297,
+  "lat": 42.33722,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-10",
+  "place": "Buckhorn 2, Cassia, Idaho",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_25238",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-IDTFD-000268",
+    "title": "Wildfire Buckhorn 2, Cassia, Idaho",
+    "date": "2026-10-10",
+    "detail": "2000.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-12",
+  "updated": "2026-10-12",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Buckhorn 2, Cassia, Idaho (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -114.19411,
+      42.26939
+     ],
+     [
+      -114.01183,
+      42.26939
+     ],
+     [
+      -114.01183,
+      42.40505
+     ],
+     [
+      -114.19411,
+      42.40505
+     ],
+     [
+      -114.19411,
+      42.26939
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.505,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-11/2026-10-15",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 0,
+   "s2_before": 55,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261010--12.62_142.72",
+  "hazard": "wildfire",
+  "lon": 142.7201,
+  "lat": -12.6172,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032728",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032728&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10218 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.65106,
+      -12.68503
+     ],
+     [
+      142.78914,
+      -12.68503
+     ],
+     [
+      142.78914,
+      -12.54937
+     ],
+     [
+      142.65106,
+      -12.54937
+     ],
+     [
+      142.65106,
+      -12.68503
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.163,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-15",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 15,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261009--15.32_134.85",
   "hazard": "wildfire",
   "lon": 134.8531,
@@ -440,7 +650,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -725,7 +935,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1357,6 +1567,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261007--11.78_-45.47",
+  "hazard": "wildfire",
+  "lon": -45.4694,
+  "lat": -11.7776,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032713",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032713&episodeid=12&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Green impact for forestfire in 10053 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-07)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -45.53822,
+      -11.84543
+     ],
+     [
+      -45.40058,
+      -11.84543
+     ],
+     [
+      -45.40058,
+      -11.70977
+     ],
+     [
+      -45.53822,
+      -11.70977
+     ],
+     [
+      -45.53822,
+      -11.84543
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.959,
+  "before": "2026-08-28/2026-10-05",
+  "after": "2026-10-09/2026-10-15",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 22,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261006--11.99_35.39",
   "hazard": "wildfire",
   "lon": 35.3891,
@@ -1505,7 +1783,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-08",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Chile",
   "sources": [
@@ -2565,7 +2843,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2981,7 +3259,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3049,7 +3327,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3481,7 +3759,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Bolivia",
   "sources": [
@@ -3557,7 +3835,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -4034,6 +4312,80 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261001--22.11_-56.53",
+  "hazard": "flood",
+  "lon": -56.5317,
+  "lat": -22.1073,
+  "bbox": [
+   -57.0498,
+   -22.3016,
+   -53.8904,
+   -21.335
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-13",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104216",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=4&eventtype=FL",
+    "title": "Flood in Brazil (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Brazil (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -56.67714,
+      -22.24296
+     ],
+     [
+      -56.38626,
+      -22.24296
+     ],
+     [
+      -56.38626,
+      -21.97164
+     ],
+     [
+      -56.67714,
+      -21.97164
+     ],
+     [
+      -56.67714,
+      -22.24296
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.071,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-03/2026-10-15",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 2,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -5841,7 +6193,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-27",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -6256,6 +6608,80 @@
    "s1_after": 1,
    "s2_before": 22,
    "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20260926-4.83_-75.67",
+  "hazard": "flood",
+  "lon": -75.6713,
+  "lat": 4.834,
+  "bbox": [
+   -75.9359,
+   4.6646,
+   -75.3755,
+   4.9062
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-26",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Colombia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104200",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104200&episodeid=9&eventtype=FL",
+    "title": "Flood in Colombia (Green alert)",
+    "date": "2026-09-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Colombia (2026-09-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -75.80652,
+      4.6646
+     ],
+     [
+      -75.53608,
+      4.6646
+     ],
+     [
+      -75.53608,
+      4.9062
+     ],
+     [
+      -75.80652,
+      4.9062
+     ],
+     [
+      -75.80652,
+      4.6646
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 800.995,
+  "before": "2026-08-22/2026-09-21",
+  "after": "2026-10-06/2026-10-15",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 6,
+   "s2_before": 5,
+   "s2_after": 1
   },
   "sensors": [
    "s1",
@@ -10044,7 +10470,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-05-19",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "United States",
   "sources": [
@@ -11299,7 +11725,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -11361,75 +11787,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261010-42.34_-114.10",
-  "hazard": "wildfire",
-  "lon": -114.10297,
-  "lat": 42.33722,
-  "bbox": null,
-  "geometry_from": "eonet",
-  "event_start": "2026-10-10",
-  "event_end": "2026-10-10",
-  "place": "Buckhorn 2, Cassia, Idaho",
-  "country": "",
-  "sources": [
-   {
-    "kind": "eonet",
-    "id": "EONET_25238",
-    "url": "https://irwin.doi.gov/observer/incidents/2026-IDTFD-000268",
-    "title": "Wildfire Buckhorn 2, Cassia, Idaho",
-    "date": "2026-10-10",
-    "detail": "2000.0 acres"
-   }
-  ],
-  "first_seen": "2026-10-12",
-  "updated": "2026-10-12",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Buckhorn 2, Cassia, Idaho (2026-10-10)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -114.19411,
-      42.26939
-     ],
-     [
-      -114.01183,
-      42.26939
-     ],
-     [
-      -114.01183,
-      42.40505
-     ],
-     [
-      -114.19411,
-      42.40505
-     ],
-     [
-      -114.19411,
-      42.26939
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 226.505,
-  "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-11/2026-10-15",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 0,
-   "s2_before": 55,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261010--16.19_137.09",
   "hazard": "wildfire",
   "lon": 137.0918,
@@ -11437,7 +11794,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -11490,75 +11847,6 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 8,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261010--12.62_142.72",
-  "hazard": "wildfire",
-  "lon": 142.7201,
-  "lat": -12.6172,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-10",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032728",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032728&episodeid=8&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-10",
-    "detail": "Green impact for forestfire in 10218 ha"
-   }
-  ],
-  "first_seen": "2026-10-14",
-  "updated": "2026-10-14",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-10)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      142.65106,
-      -12.68503
-     ],
-     [
-      142.78914,
-      -12.68503
-     ],
-     [
-      142.78914,
-      -12.54937
-     ],
-     [
-      142.65106,
-      -12.54937
-     ],
-     [
-      142.65106,
-      -12.68503
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.163,
-  "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-15",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 0,
-   "s2_before": 15,
    "s2_after": 0
   },
   "sensors": [
@@ -11845,6 +12133,81 @@
    "s1_before": 5,
    "s1_after": 0,
    "s2_before": 34,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261014-41.01_28.98",
+  "hazard": "flood",
+  "lon": 28.9758715,
+  "lat": 41.006381,
+  "bbox": [
+   28.8158715,
+   40.846381,
+   29.1358715,
+   41.166381
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-14",
+  "place": "Istanbul",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailysabah.com/turkiye/istanbul/2-killed-after-torrential-rain-paralyzes-istanbul-triggers-flooding",
+    "title": "2 killed after torrential rain paralyzes Istanbul , triggers flooding",
+    "outlet": "dailysabah.com",
+    "date": "2026-10-15",
+    "quote": "1,277 flooding incidents",
+    "detail": "stranding 47 people, 808 homes, 280 businesses, 76 vehicles affected"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      28.81587,
+      40.87073
+     ],
+     [
+      29.13587,
+      40.87073
+     ],
+     [
+      29.13587,
+      41.14204
+     ],
+     [
+      28.81587,
+      41.14204
+     ],
+     [
+      28.81587,
+      40.87073
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 811.022,
+  "before": "2026-09-09/2026-10-09",
+  "after": "2026-10-14/2026-10-15",
+  "scenes": {
+   "s1_before": 24,
+   "s1_after": 0,
+   "s2_before": 9,
    "s2_after": 0
   },
   "sensors": [
