@@ -74,6 +74,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261012-36.83_33.97",
+  "hazard": "flood",
+  "lon": 33.9686,
+  "lat": 36.8328,
+  "bbox": [
+   32.3951,
+   35.817,
+   35.1516,
+   37.4283
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-12",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104230",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104230&episodeid=1&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 T\u00fcrkiye (2026-10-12)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.80025,
+      36.69714
+     ],
+     [
+      34.13695,
+      36.69714
+     ],
+     [
+      34.13695,
+      36.96846
+     ],
+     [
+      33.80025,
+      36.96846
+     ],
+     [
+      33.80025,
+      36.69714
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.806,
+  "before": "2026-09-07/2026-10-07",
+  "after": "2026-10-12/2026-10-15",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 21,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261011-28.00_84.63",
   "hazard": "flood",
   "lon": 84.628,
@@ -924,6 +997,74 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261009--19.73_129.53",
+  "hazard": "wildfire",
+  "lon": 129.5272,
+  "lat": -19.7253,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-09",
+  "event_end": "2026-10-13",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032710",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032710&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 11714 ha"
+   }
+  ],
+  "first_seen": "2026-10-12",
+  "updated": "2026-10-12",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      129.45563,
+      -19.79313
+     ],
+     [
+      129.59877,
+      -19.79313
+     ],
+     [
+      129.59877,
+      -19.65747
+     ],
+     [
+      129.45563,
+      -19.65747
+     ],
+     [
+      129.45563,
+      -19.79313
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.177,
+  "before": "2026-08-30/2026-10-07",
+  "after": "2026-10-11/2026-10-15",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -2433,7 +2574,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2774,7 +2915,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2981,7 +3122,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -3050,7 +3191,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -3106,6 +3247,75 @@
    "s2_after": 5
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--9.16_142.53",
+  "hazard": "wildfire",
+  "lon": 142.5334,
+  "lat": -9.1606,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032666",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032666&episodeid=10&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10943 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.46516,
+      -9.22843
+     ],
+     [
+      142.60164,
+      -9.22843
+     ],
+     [
+      142.60164,
+      -9.09277
+     ],
+     [
+      142.46516,
+      -9.09277
+     ],
+     [
+      142.46516,
+      -9.22843
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.049,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-15",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 14,
+   "s2_after": 6
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -11644,80 +11854,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261012-36.83_33.97",
-  "hazard": "flood",
-  "lon": 33.9686,
-  "lat": 36.8328,
-  "bbox": [
-   32.3951,
-   35.817,
-   35.1516,
-   37.4283
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-12",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "T\u00fcrkiye",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104230",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104230&episodeid=1&eventtype=FL",
-    "title": "Flood in T\u00fcrkiye (Green alert)",
-    "date": "2026-10-12",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-14",
-  "updated": "2026-10-14",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 T\u00fcrkiye (2026-10-12)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      33.80025,
-      36.69714
-     ],
-     [
-      34.13695,
-      36.69714
-     ],
-     [
-      34.13695,
-      36.96846
-     ],
-     [
-      33.80025,
-      36.96846
-     ],
-     [
-      33.80025,
-      36.69714
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 903.806,
-  "before": "2026-09-07/2026-10-07",
-  "after": "2026-10-12/2026-10-15",
-  "scenes": {
-   "s1_before": 20,
-   "s1_after": 0,
-   "s2_before": 21,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261011--16.75_144.78",
   "hazard": "wildfire",
   "lon": 144.7754,
@@ -11916,75 +12052,6 @@
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 11,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261009--19.73_129.53",
-  "hazard": "wildfire",
-  "lon": 129.5272,
-  "lat": -19.7253,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-09",
-  "event_end": "2026-10-13",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032710",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032710&episodeid=6&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-09",
-    "detail": "Green impact for forestfire in 11714 ha"
-   }
-  ],
-  "first_seen": "2026-10-12",
-  "updated": "2026-10-12",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-09)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      129.45563,
-      -19.79313
-     ],
-     [
-      129.59877,
-      -19.79313
-     ],
-     [
-      129.59877,
-      -19.65747
-     ],
-     [
-      129.45563,
-      -19.65747
-     ],
-     [
-      129.45563,
-      -19.79313
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.177,
-  "before": "2026-08-30/2026-10-07",
-  "after": "2026-10-11/2026-10-15",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 8,
    "s2_after": 0
   },
   "sensors": [
