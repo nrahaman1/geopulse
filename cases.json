@@ -1776,6 +1776,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261007--2.57_35.11",
+  "hazard": "wildfire",
+  "lon": 35.1094,
+  "lat": -2.5728,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Tanzania",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032794",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032794&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Tanzania (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Green impact for forestfire in 10212 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Tanzania (2026-10-07)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      35.04196,
+      -2.64063
+     ],
+     [
+      35.17684,
+      -2.64063
+     ],
+     [
+      35.17684,
+      -2.50497
+     ],
+     [
+      35.04196,
+      -2.50497
+     ],
+     [
+      35.04196,
+      -2.64063
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.135,
+  "before": "2026-08-28/2026-10-05",
+  "after": "2026-10-09/2026-10-15",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 2,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261006--11.99_35.39",
   "hazard": "wildfire",
   "lon": 35.3891,
@@ -1851,7 +1920,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -2066,7 +2135,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2202,6 +2271,148 @@
    "s1_after": 3,
    "s2_before": 16,
    "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261006--25.50_-54.83",
+  "hazard": "flood",
+  "lon": -54.8333,
+  "lat": -25.5,
+  "bbox": [
+   -55.5506,
+   -26.257,
+   -54.342,
+   -24.4855
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-11",
+  "place": "",
+  "country": "Paraguay",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104222",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104222&episodeid=3&eventtype=FL",
+    "title": "Flood in Paraguay (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-11",
+  "updated": "2026-10-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Paraguay (2026-10-06)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -54.98259,
+      -25.63566
+     ],
+     [
+      -54.68401,
+      -25.63566
+     ],
+     [
+      -54.68401,
+      -25.36434
+     ],
+     [
+      -54.98259,
+      -25.36434
+     ],
+     [
+      -54.98259,
+      -25.63566
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.601,
+  "before": "2026-09-01/2026-10-01",
+  "after": "2026-10-06/2026-10-15",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 34,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261006--12.14_36.79",
+  "hazard": "wildfire",
+  "lon": 36.7939,
+  "lat": -12.1448,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-06",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032714",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032714&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Green impact for forestfire in 10125 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      36.72498,
+      -12.21263
+     ],
+     [
+      36.86282,
+      -12.21263
+     ],
+     [
+      36.86282,
+      -12.07697
+     ],
+     [
+      36.72498,
+      -12.07697
+     ],
+     [
+      36.72498,
+      -12.21263
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.295,
+  "before": "2026-08-27/2026-10-04",
+  "after": "2026-10-08/2026-10-15",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 2,
+   "s2_before": 16,
+   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -2505,7 +2716,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2642,7 +2853,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -4607,7 +4818,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-09-30",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-15",
   "place": "",
   "country": "Angola",
   "sources": [
@@ -12126,80 +12337,6 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 1,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261006--25.50_-54.83",
-  "hazard": "flood",
-  "lon": -54.8333,
-  "lat": -25.5,
-  "bbox": [
-   -55.5506,
-   -26.257,
-   -54.342,
-   -24.4855
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-06",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Paraguay",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104222",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104222&episodeid=3&eventtype=FL",
-    "title": "Flood in Paraguay (Green alert)",
-    "date": "2026-10-06",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Paraguay (2026-10-06)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -54.98259,
-      -25.63566
-     ],
-     [
-      -54.68401,
-      -25.63566
-     ],
-     [
-      -54.68401,
-      -25.36434
-     ],
-     [
-      -54.98259,
-      -25.36434
-     ],
-     [
-      -54.98259,
-      -25.63566
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.601,
-  "before": "2026-09-01/2026-10-01",
-  "after": "2026-10-06/2026-10-15",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 34,
    "s2_after": 0
   },
   "sensors": [
