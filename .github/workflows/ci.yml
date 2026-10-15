@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uvx ruff check geopulse tests hatch_build.py
       - run: uvx ruff format --check geopulse tests hatch_build.py
       - name: Lockfile matches pyproject.toml
@@ -31,7 +31,7 @@ jobs:
         python: ["3.11", "3.12", "3.13", "3.14"]
     steps:
       - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
         with:
           python-version: ${{ matrix.python }}
       - name: Install with CPU PyTorch
@@ -60,7 +60,7 @@ jobs:
         working-directory: app
       - name: Build has the app shell, service worker and examples
         run: test -f app/dist/index.html && test -f app/dist/sw.js && grep -q flood_emilia_conselice app/dist/examples.json
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v7
       - run: uv build
       - name: Wheel ships the web app and example events
         run: |
