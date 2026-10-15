@@ -74,6 +74,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261011--18.24_25.29",
+  "hazard": "wildfire",
+  "lon": 25.2894,
+  "lat": -18.2354,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-11",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032785",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032785&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-11",
+    "detail": "Green impact for forestfire in 19473 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-10-11)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.21846,
+      -18.30323
+     ],
+     [
+      25.36034,
+      -18.30323
+     ],
+     [
+      25.36034,
+      -18.16757
+     ],
+     [
+      25.21846,
+      -18.16757
+     ],
+     [
+      25.21846,
+      -18.30323
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.317,
+  "before": "2026-09-01/2026-10-09",
+  "after": "2026-10-13/2026-10-15",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 16,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261010--17.13_127.93",
   "hazard": "wildfire",
   "lon": 127.9311,
@@ -280,6 +348,79 @@
   "aoi_km2": 99.549,
   "before": "2026-09-05/2026-10-05",
   "after": "2026-10-10/2026-10-14",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 1,
+   "s2_before": 2,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261010--0.58_100.61",
+  "hazard": "flood",
+  "lon": 100.6133,
+  "lat": -0.5828,
+  "bbox": [
+   98.2364,
+   -3.884,
+   101.8929,
+   0.9067
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-12",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104224",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104224&episodeid=1&eventtype=FL",
+    "title": "Flood in Indonesia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-12",
+  "updated": "2026-10-12",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Indonesia (2026-10-10)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.47855,
+      -0.71846
+     ],
+     [
+      100.74805,
+      -0.71846
+     ],
+     [
+      100.74805,
+      -0.44714
+     ],
+     [
+      100.47855,
+      -0.44714
+     ],
+     [
+      100.47855,
+      -0.71846
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.002,
+  "before": "2026-09-05/2026-10-05",
+  "after": "2026-10-10/2026-10-15",
   "scenes": {
    "s1_before": 8,
    "s1_after": 1,
@@ -924,6 +1065,74 @@
   "sensors": [
    "s1",
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261008--18.71_143.10",
+  "hazard": "wildfire",
+  "lon": 143.0955,
+  "lat": -18.7095,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032776",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032776&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 10095 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      143.02437,
+      -18.77733
+     ],
+     [
+      143.16663,
+      -18.77733
+     ],
+     [
+      143.16663,
+      -18.64167
+     ],
+     [
+      143.02437,
+      -18.64167
+     ],
+     [
+      143.02437,
+      -18.77733
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.402,
+  "before": "2026-08-29/2026-10-06",
+  "after": "2026-10-10/2026-10-15",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 13,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -2556,6 +2765,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261004-12.78_13.91",
+  "hazard": "wildfire",
+  "lon": 13.9093,
+  "lat": 12.7773,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Nigeria",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032819",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032819&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Nigeria (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 11801 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Nigeria (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      13.84022,
+      12.70947
+     ],
+     [
+      13.97838,
+      12.70947
+     ],
+     [
+      13.97838,
+      12.84513
+     ],
+     [
+      13.84022,
+      12.84513
+     ],
+     [
+      13.84022,
+      12.70947
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.039,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-15",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 13,
+   "s2_after": 5
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261003--13.13_131.90",
   "hazard": "wildfire",
   "lon": 131.8998,
@@ -3204,7 +3481,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Bolivia",
   "sources": [
@@ -3215,10 +3492,18 @@
     "title": "Forest fires in Bolivia (Green alert)",
     "date": "2026-10-02",
     "detail": "Green impact for forestfire in 10681 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032686",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032686&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Bolivia (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Green impact for forestfire in 10081 ha"
    }
   ],
   "first_seen": "2026-10-08",
-  "updated": "2026-10-08",
+  "updated": "2026-10-15",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Bolivia (2026-10-02)",
@@ -3252,7 +3537,7 @@
   },
   "aoi_km2": 224.996,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-04/2026-10-09",
+  "after": "2026-10-04/2026-10-15",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -3272,7 +3557,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-02",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -3550,7 +3835,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-01",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-14",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -9820,6 +10105,80 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261012-20.80_-156.31",
+  "hazard": "wildfire",
+  "lon": -156.3106833,
+  "lat": 20.8029568,
+  "bbox": [
+   -156.6972445,
+   20.5744337,
+   -155.9790919,
+   21.031561
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-12",
+  "event_end": "2026-10-12",
+  "place": "Maui, Hawaii",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wildfiretoday.com/maui-residents-contaminated-with-toxic-metals-long-after-2023-wildfires-study-finds/",
+    "title": "Maui residents contaminated with toxic metals long after 2023 wildfires, study finds",
+    "outlet": "wildfiretoday.com",
+    "date": "2026-10-12",
+    "quote": "Maui residents contaminated with toxic metals long after 2023 wildfires, study finds",
+    "detail": "contamination of residents with toxic metals"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Maui, Hawaii, United States (2026-10-12)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -156.45483,
+      20.6673
+     ],
+     [
+      -156.16654,
+      20.6673
+     ],
+     [
+      -156.16654,
+      20.93861
+     ],
+     [
+      -156.45483,
+      20.93861
+     ],
+     [
+      -156.45483,
+      20.6673
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.548,
+  "before": "2026-09-02/2026-10-10",
+  "after": "2026-10-13/2026-10-15",
+  "scenes": {
+   "s1_before": 26,
+   "s1_after": 2,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261001-39.02_-94.69",
   "hazard": "flood",
   "lon": -94.689947,
@@ -10845,7 +11204,7 @@
   },
   "aoi_km2": 903.519,
   "before": "2026-09-08/2026-10-08",
-  "after": "2026-10-13/2026-10-14",
+  "after": "2026-10-13/2026-10-15",
   "scenes": {
    "s1_before": 18,
    "s1_after": 0,
@@ -10919,7 +11278,7 @@
   },
   "aoi_km2": 903.806,
   "before": "2026-09-07/2026-10-07",
-  "after": "2026-10-12/2026-10-14",
+  "after": "2026-10-12/2026-10-15",
   "scenes": {
    "s1_before": 20,
    "s1_after": 0,
@@ -10988,85 +11347,11 @@
   },
   "aoi_km2": 225.395,
   "before": "2026-09-01/2026-10-09",
-  "after": "2026-10-13/2026-10-14",
+  "after": "2026-10-13/2026-10-15",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 18,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261010--0.58_100.61",
-  "hazard": "flood",
-  "lon": 100.6133,
-  "lat": -0.5828,
-  "bbox": [
-   98.2364,
-   -3.884,
-   101.8929,
-   0.9067
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-10",
-  "event_end": "2026-10-12",
-  "place": "",
-  "country": "Indonesia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104224",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104224&episodeid=1&eventtype=FL",
-    "title": "Flood in Indonesia (Green alert)",
-    "date": "2026-10-10",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-12",
-  "updated": "2026-10-12",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Indonesia (2026-10-10)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      100.47855,
-      -0.71846
-     ],
-     [
-      100.74805,
-      -0.71846
-     ],
-     [
-      100.74805,
-      -0.44714
-     ],
-     [
-      100.47855,
-      -0.44714
-     ],
-     [
-      100.47855,
-      -0.71846
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.002,
-  "before": "2026-09-05/2026-10-05",
-  "after": "2026-10-10/2026-10-14",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 0,
-   "s2_before": 2,
    "s2_after": 0
   },
   "sensors": [
@@ -11131,7 +11416,7 @@
   },
   "aoi_km2": 226.505,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-11/2026-10-14",
+  "after": "2026-10-11/2026-10-15",
   "scenes": {
    "s1_before": 9,
    "s1_after": 0,
@@ -11200,7 +11485,7 @@
   },
   "aoi_km2": 225.325,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-14",
+  "after": "2026-10-12/2026-10-15",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -11269,11 +11554,80 @@
   },
   "aoi_km2": 225.163,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-14",
+  "after": "2026-10-12/2026-10-15",
   "scenes": {
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 15,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261010--8.79_-45.28",
+  "hazard": "wildfire",
+  "lon": -45.2797,
+  "lat": -8.7931,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-14",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032752",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032752&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10016 ha"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-15",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -45.34787,
+      -8.86093
+     ],
+     [
+      -45.21153,
+      -8.86093
+     ],
+     [
+      -45.21153,
+      -8.72527
+     ],
+     [
+      -45.34787,
+      -8.72527
+     ],
+     [
+      -45.34787,
+      -8.86093
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.887,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-15",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 11,
    "s2_after": 0
   },
   "sensors": [
@@ -11338,7 +11692,7 @@
   },
   "aoi_km2": 225.177,
   "before": "2026-08-30/2026-10-07",
-  "after": "2026-10-11/2026-10-14",
+  "after": "2026-10-11/2026-10-15",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -11412,80 +11766,11 @@
   },
   "aoi_km2": 98.658,
   "before": "2026-09-04/2026-10-04",
-  "after": "2026-10-09/2026-10-14",
+  "after": "2026-10-09/2026-10-15",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 1,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261008--18.71_143.10",
-  "hazard": "wildfire",
-  "lon": 143.0955,
-  "lat": -18.7095,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-08",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032776",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032776&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Green impact for forestfire in 10095 ha"
-   }
-  ],
-  "first_seen": "2026-10-14",
-  "updated": "2026-10-14",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-08)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      143.02437,
-      -18.77733
-     ],
-     [
-      143.16663,
-      -18.77733
-     ],
-     [
-      143.16663,
-      -18.64167
-     ],
-     [
-      143.02437,
-      -18.64167
-     ],
-     [
-      143.02437,
-      -18.77733
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.402,
-  "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-10/2026-10-14",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 13,
    "s2_after": 0
   },
   "sensors": [
@@ -11555,86 +11840,11 @@
   },
   "aoi_km2": 902.601,
   "before": "2026-09-01/2026-10-01",
-  "after": "2026-10-06/2026-10-14",
+  "after": "2026-10-06/2026-10-15",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
    "s2_before": 34,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261012-20.80_-156.31",
-  "hazard": "wildfire",
-  "lon": -156.3106833,
-  "lat": 20.8029568,
-  "bbox": [
-   -156.6972445,
-   20.5744337,
-   -155.9790919,
-   21.031561
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-12",
-  "event_end": "2026-10-12",
-  "place": "Maui, Hawaii",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://wildfiretoday.com/maui-residents-contaminated-with-toxic-metals-long-after-2023-wildfires-study-finds/",
-    "title": "Maui residents contaminated with toxic metals long after 2023 wildfires, study finds",
-    "outlet": "wildfiretoday.com",
-    "date": "2026-10-12",
-    "quote": "Maui residents contaminated with toxic metals long after 2023 wildfires, study finds",
-    "detail": "contamination of residents with toxic metals"
-   }
-  ],
-  "first_seen": "2026-10-14",
-  "updated": "2026-10-14",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Maui, Hawaii, United States (2026-10-12)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -156.45483,
-      20.6673
-     ],
-     [
-      -156.16654,
-      20.6673
-     ],
-     [
-      -156.16654,
-      20.93861
-     ],
-     [
-      -156.45483,
-      20.93861
-     ],
-     [
-      -156.45483,
-      20.6673
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.548,
-  "before": "2026-09-02/2026-10-10",
-  "after": "2026-10-14/2026-10-14",
-  "scenes": {
-   "s1_before": 26,
-   "s1_after": 0,
-   "s2_before": 9,
    "s2_after": 0
   },
   "sensors": [
@@ -11724,7 +11934,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-14"
+  "after": "2026-10-12/2026-10-15"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -11799,7 +12009,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-10/2026-10-14"
+  "after": "2026-10-13/2026-10-15"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -11864,7 +12074,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-14"
+  "after": "2026-10-07/2026-10-15"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -11929,7 +12139,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-14"
+  "after": "2026-10-06/2026-10-15"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -11994,7 +12204,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-14"
+  "after": "2026-10-03/2026-10-15"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -12059,7 +12269,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-14"
+  "after": "2026-10-02/2026-10-15"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -12124,7 +12334,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-14"
+  "after": "2026-10-02/2026-10-15"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -12189,7 +12399,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-14"
+  "after": "2026-10-01/2026-10-15"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -12254,7 +12464,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-14"
+  "after": "2026-10-01/2026-10-15"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -12319,6 +12529,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-14"
+  "after": "2026-10-01/2026-10-15"
  }
 ]
