@@ -425,6 +425,82 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261011--18.94_35.17",
+  "hazard": "wildfire",
+  "lon": 35.171,
+  "lat": -18.9395,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-11",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032811",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032811&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-11",
+    "detail": "Green impact for forestfire in 12796 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032855",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032855&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-08",
+    "detail": "Green impact for forestfire in 23356 ha"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-11)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      35.09977,
+      -19.00733
+     ],
+     [
+      35.24223,
+      -19.00733
+     ],
+     [
+      35.24223,
+      -18.87167
+     ],
+     [
+      35.09977,
+      -18.87167
+     ],
+     [
+      35.09977,
+      -19.00733
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.437,
+  "before": "2026-09-01/2026-10-09",
+  "after": "2026-10-13/2026-10-16",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 13,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261010--17.13_127.93",
   "hazard": "wildfire",
   "lon": 127.9311,
@@ -1477,6 +1553,75 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261009--13.17_31.48",
+  "hazard": "wildfire",
+  "lon": 31.4762,
+  "lat": -13.1741,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-09",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Zambia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032789",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032789&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Zambia (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 10284 ha"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia (2026-10-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      31.40701,
+      -13.24193
+     ],
+     [
+      31.54539,
+      -13.24193
+     ],
+     [
+      31.54539,
+      -13.10627
+     ],
+     [
+      31.40701,
+      -13.10627
+     ],
+     [
+      31.40701,
+      -13.24193
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.121,
+  "before": "2026-08-30/2026-10-07",
+  "after": "2026-10-11/2026-10-16",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 2,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -11382,6 +11527,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261016-52.67_1.00",
+  "hazard": "flood",
+  "lon": 1.0,
+  "lat": 52.666667,
+  "bbox": [
+   0.1536217,
+   52.3553354,
+   1.7457818,
+   52.9916398
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Norfolk",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.edp24.co.uk/news/26638778.norfolk-mps-flooding-bill-seeks-homeowner-protection/",
+    "title": "Norfolk MP flooding bill seeks homeowner protection",
+    "outlet": "edp24.co.uk",
+    "date": "2026-10-16",
+    "quote": "Recent years have seen significant flooding in towns such as Long Stratton, Attleborough and Watton, with deluges causing major damage to scores of homes.",
+    "detail": "damage to homes, stress and emotional damage to families, loss of possessions and family heirlooms, months or years in temporary accommodation"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Norfolk, United Kingdom (2026-10-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      0.77781,
+      52.53101
+     ],
+     [
+      1.22219,
+      52.53101
+     ],
+     [
+      1.22219,
+      52.80232
+     ],
+     [
+      0.77781,
+      52.80232
+     ],
+     [
+      0.77781,
+      52.53101
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.341,
+  "before": "2026-09-11/2026-10-11",
+  "after": "2026-10-16/2026-10-16",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261015-30.76_-98.22",
   "hazard": "flood",
   "lon": -98.2239954,
@@ -12945,81 +13164,6 @@
    "s1_before": 8,
    "s1_after": 0,
    "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261016-52.67_1.00",
-  "hazard": "flood",
-  "lon": 1.0,
-  "lat": 52.666667,
-  "bbox": [
-   0.1536217,
-   52.3553354,
-   1.7457818,
-   52.9916398
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-16",
-  "place": "Norfolk",
-  "country": "United Kingdom",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.edp24.co.uk/news/26638778.norfolk-mps-flooding-bill-seeks-homeowner-protection/",
-    "title": "Norfolk MP flooding bill seeks homeowner protection",
-    "outlet": "edp24.co.uk",
-    "date": "2026-10-16",
-    "quote": "Recent years have seen significant flooding in towns such as Long Stratton, Attleborough and Watton, with deluges causing major damage to scores of homes.",
-    "detail": "damage to homes, stress and emotional damage to families, loss of possessions and family heirlooms, months or years in temporary accommodation"
-   }
-  ],
-  "first_seen": "2026-10-16",
-  "updated": "2026-10-16",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Norfolk, United Kingdom (2026-10-16)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      0.77781,
-      52.53101
-     ],
-     [
-      1.22219,
-      52.53101
-     ],
-     [
-      1.22219,
-      52.80232
-     ],
-     [
-      0.77781,
-      52.80232
-     ],
-     [
-      0.77781,
-      52.53101
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 907.341,
-  "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-16",
-  "scenes": {
-   "s1_before": 20,
-   "s1_after": 0,
-   "s2_before": 14,
    "s2_after": 0
   },
   "sensors": [
