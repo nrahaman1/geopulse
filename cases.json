@@ -920,6 +920,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261010--16.19_137.09",
+  "hazard": "wildfire",
+  "lon": 137.0918,
+  "lat": -16.187,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-15",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032725",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032725&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10333 ha"
+   }
+  ],
+  "first_seen": "2026-10-14",
+  "updated": "2026-10-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      137.02165,
+      -16.25483
+     ],
+     [
+      137.16195,
+      -16.25483
+     ],
+     [
+      137.16195,
+      -16.11917
+     ],
+     [
+      137.02165,
+      -16.11917
+     ],
+     [
+      137.02165,
+      -16.25483
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.325,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-16",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261009--15.32_134.85",
   "hazard": "wildfire",
   "lon": 134.8531,
@@ -2480,7 +2548,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2704,7 +2772,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3061,7 +3129,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3482,10 +3550,18 @@
     "title": "Forest fires in Papua New Guinea (Green alert)",
     "date": "2026-10-04",
     "detail": "Green impact for forestfire in 12046 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032700",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032700&episodeid=10&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-10-02",
+    "detail": "Green impact for forestfire in 10553 ha"
    }
   ],
   "first_seen": "2026-10-10",
-  "updated": "2026-10-10",
+  "updated": "2026-10-16",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Papua New Guinea (2026-10-04)",
@@ -3519,10 +3595,10 @@
   },
   "aoi_km2": 225.033,
   "before": "2026-08-25/2026-10-02",
-  "after": "2026-10-06/2026-10-10",
+  "after": "2026-10-06/2026-10-16",
   "scenes": {
    "s1_before": 6,
-   "s1_after": 1,
+   "s1_after": 2,
    "s2_before": 1,
    "s2_after": 1
   },
@@ -3609,7 +3685,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -3747,7 +3823,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -3884,7 +3960,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-09",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3895,10 +3971,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-03",
     "detail": "Green impact for forestfire in 10154 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032743",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032743&episodeid=14&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-06",
+    "detail": "Green impact for forestfire in 10842 ha"
    }
   ],
   "first_seen": "2026-10-07",
-  "updated": "2026-10-07",
+  "updated": "2026-10-16",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-03)",
@@ -3932,14 +4016,15 @@
   },
   "aoi_km2": 225.529,
   "before": "2026-08-24/2026-10-01",
-  "after": "2026-10-05/2026-10-08",
+  "after": "2026-10-05/2026-10-16",
   "scenes": {
    "s1_before": 3,
-   "s1_after": 0,
+   "s1_after": 1,
    "s2_before": 18,
    "s2_after": 2
   },
   "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -11297,6 +11382,154 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261015-30.76_-98.22",
+  "hazard": "flood",
+  "lon": -98.2239954,
+  "lat": 30.7608552,
+  "bbox": [
+   -98.279825,
+   30.6913,
+   -98.165636,
+   30.785522
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "Burnet, Texas",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailytrib.com/2026/10/15/burnet-completing-flood-buyouts/",
+    "title": "Burnet completes first five closings in multi - million - dollar flood buyout program",
+    "outlet": "dailytrib.com",
+    "date": "2026-10-15",
+    "quote": "Burnet has completed the first five property closings under a major, multimillion-dollar flood relief program",
+    "detail": "The flood caused severe damage to properties, leading to a flood buyout program to assist property owners in recovering from the flood and moving to safer areas."
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Burnet, Texas, United States (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -98.27983,
+      30.6913
+     ],
+     [
+      -98.16564,
+      30.6913
+     ],
+     [
+      -98.16564,
+      30.78552
+     ],
+     [
+      -98.27983,
+      30.78552
+     ],
+     [
+      -98.27983,
+      30.6913
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 114.151,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-15/2026-10-16",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261015-51.75_-1.26",
+  "hazard": "flood",
+  "lon": -1.2578499,
+  "lat": 51.7520131,
+  "bbox": [
+   -1.3042472,
+   51.7109788,
+   -1.1758134,
+   51.7962658
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "Nepal, Tibet-Nepal border",
+  "country": "Nepal",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.oxfordmail.co.uk/news/26639920.oxford-nepalese-community-grieves-deadly-floods/",
+    "title": "Oxford Nepalese community grieves after deadly floods",
+    "outlet": "oxfordmail.co.uk",
+    "date": "2026-10-15",
+    "quote": "Some 1,450 people in Nepal are estimated to have been killed in August's flash flood on the Tibet-Nepal border.",
+    "detail": "1,450 people killed; more than 5,000 people missing; $2.7 billion (\u00a32bn+) of damage; 14,000 people rescued; survivors struggling with lack of shelter, clean drinking water, food and medical supplies."
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Nepal, Tibet-Nepal border, Nepal (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -1.30425,
+      51.71098
+     ],
+     [
+      -1.17581,
+      51.71098
+     ],
+     [
+      -1.17581,
+      51.79627
+     ],
+     [
+      -1.30425,
+      51.79627
+     ],
+     [
+      -1.30425,
+      51.71098
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 84.13,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-15/2026-10-16",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 6,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261012-20.80_-156.31",
   "hazard": "wildfire",
   "lon": -156.3106833,
@@ -11367,6 +11600,81 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261008-33.77_-118.19",
+  "hazard": "flood",
+  "lon": -118.191604,
+  "lat": 33.7690164,
+  "bbox": [
+   -118.248966,
+   33.6905847,
+   -118.0632873,
+   33.8855595
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-08",
+  "event_end": "2026-10-11",
+  "place": "Long Beach, California",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.latintimes.com/rachel-red-tags-13-long-beach-homes-floods-newport-beach-el-nino-season-just-began-600082",
+    "title": "Rachel Red - Tags 13 Long Beach Homes , Floods Newport Beach El Ni\u00f1o Season Just Began",
+    "outlet": "latintimes.com",
+    "date": "2026-10-15",
+    "quote": "ocean water surging across the Balboa Peninsula before Rachel had even reached its peak intensity",
+    "detail": "damaged homes, unsafe residences, breached bulkhead, flooded streets, structural damage to boardwalk and seawall"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Long Beach, California, US (2026-10-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -118.24897,
+      33.69058
+     ],
+     [
+      -118.06329,
+      33.69058
+     ],
+     [
+      -118.06329,
+      33.88556
+     ],
+     [
+      -118.24897,
+      33.88556
+     ],
+     [
+      -118.24897,
+      33.69058
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 371.714,
+  "before": "2026-09-03/2026-10-03",
+  "after": "2026-10-08/2026-10-16",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 5,
+   "s2_before": 15,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -12562,66 +12870,231 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261010--16.19_137.09",
+  "id": "wi-20261013-54.14_-115.68",
   "hazard": "wildfire",
-  "lon": 137.0918,
-  "lat": -16.187,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-10",
-  "event_end": "2026-10-15",
-  "place": "",
-  "country": "Australia",
+  "lon": -115.6846504,
+  "lat": 54.1424574,
+  "bbox": [
+   -115.72668,
+   54.1086014,
+   -115.6014209,
+   54.1660348
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-13",
+  "place": "Whitecourt, Alberta",
+  "country": "Canada",
   "sources": [
    {
-    "kind": "gdacs",
-    "id": "WF1032725",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032725&episodeid=8&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-10",
-    "detail": "Green impact for forestfire in 10333 ha"
+    "kind": "news",
+    "url": "https://www.fairviewpost.com:443/news/local-news/council-highlights-oct-13-2026",
+    "title": "Whitecourt council asked by province to join wildfire pilot program",
+    "outlet": "fairviewpost.com",
+    "date": "2026-10-15",
+    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
+    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.dailyheraldtribune.com:443/news/local-news/council-highlights-oct-13-2026",
+    "title": "Whitecourt council asked by province to join wildfire pilot program | Grande Prairie Daily Herald Tribune",
+    "outlet": "dailyheraldtribune.com",
+    "date": "2026-10-15",
+    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
+    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
    }
   ],
-  "first_seen": "2026-10-14",
-  "updated": "2026-10-14",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Whitecourt, Alberta, Canada (2026-10-13)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      137.02165,
-      -16.25483
+      -115.72668,
+      54.1086
      ],
      [
-      137.16195,
-      -16.25483
+      -115.60142,
+      54.1086
      ],
      [
-      137.16195,
-      -16.11917
+      -115.60142,
+      54.16603
      ],
      [
-      137.02165,
-      -16.11917
+      -115.72668,
+      54.16603
      ],
      [
-      137.02165,
-      -16.25483
+      -115.72668,
+      54.1086
      ]
     ]
    ]
   },
-  "aoi_km2": 225.325,
-  "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-16",
+  "aoi_km2": 52.302,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-14/2026-10-16",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261016-52.67_1.00",
+  "hazard": "flood",
+  "lon": 1.0,
+  "lat": 52.666667,
+  "bbox": [
+   0.1536217,
+   52.3553354,
+   1.7457818,
+   52.9916398
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Norfolk",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.edp24.co.uk/news/26638778.norfolk-mps-flooding-bill-seeks-homeowner-protection/",
+    "title": "Norfolk MP flooding bill seeks homeowner protection",
+    "outlet": "edp24.co.uk",
+    "date": "2026-10-16",
+    "quote": "Recent years have seen significant flooding in towns such as Long Stratton, Attleborough and Watton, with deluges causing major damage to scores of homes.",
+    "detail": "damage to homes, stress and emotional damage to families, loss of possessions and family heirlooms, months or years in temporary accommodation"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Norfolk, United Kingdom (2026-10-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      0.77781,
+      52.53101
+     ],
+     [
+      1.22219,
+      52.53101
+     ],
+     [
+      1.22219,
+      52.80232
+     ],
+     [
+      0.77781,
+      52.80232
+     ],
+     [
+      0.77781,
+      52.53101
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.341,
+  "before": "2026-09-11/2026-10-11",
+  "after": "2026-10-16/2026-10-16",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 0,
+   "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261015-35.53_-98.71",
+  "hazard": "flood",
+  "lon": -98.7075744,
+  "lat": 35.5261633,
+  "bbox": [
+   -98.725158,
+   35.515122,
+   -98.649917,
+   35.566022
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "Weatherford, Oklahoma, Oklahoma",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.koco.com/article/weatherford-clothing-store-faces-flooding-mud-damage/74150361",
+    "title": "Weatherford clothing store faces flooding , mud damage",
+    "outlet": "koco.com",
+    "date": "2026-10-16",
+    "quote": "Heavy rains flooded Daisy Exchange in Weatherford, Oklahoma, leaving racks of clothes surrounded by mud and prompting volunteers to help clean up",
+    "detail": "mud damage, flooding, merchandise loss, store closure, cleanup efforts"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Weatherford, Oklahoma, Oklahoma, United States (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -98.72516,
+      35.51512
+     ],
+     [
+      -98.64992,
+      35.51512
+     ],
+     [
+      -98.64992,
+      35.56602
+     ],
+     [
+      -98.72516,
+      35.56602
+     ],
+     [
+      -98.72516,
+      35.51512
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 38.502,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-15/2026-10-16",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
-   "s2_before": 8,
+   "s2_before": 10,
    "s2_after": 0
   },
   "sensors": [
@@ -12787,6 +13260,68 @@
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
   "after": "2026-10-13/2026-10-16"
+ },
+ {
+  "id": "wi-20261015-39.07_-78.73",
+  "hazard": "wildfire",
+  "lon": -78.7291837,
+  "lat": 39.0745515,
+  "bbox": [
+   -78.7491837,
+   39.0545515,
+   -78.7091837,
+   39.0945515
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "Arkansas, county",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://katv.com/news/local/25-arkansas-counties-at-extreme-wildfire-risk-as-drought-persists",
+    "title": "25 Arkansas counties at extreme wildfire risk as drought persists",
+    "outlet": "katv.com",
+    "date": "2026-10-16",
+    "quote": "Twenty-five Arkansas counties are at extreme risk for wildfires as drought and dry vegetation create dangerous fire conditions across the state",
+    "detail": "elevated wildfire danger"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Arkansas, county, United States (2026-10-15)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -78.75811,
+      39.05194
+     ],
+     [
+      -78.70026,
+      39.05194
+     ],
+     [
+      -78.70026,
+      39.09716
+     ],
+     [
+      -78.75811,
+      39.09716
+     ],
+     [
+      -78.75811,
+      39.05194
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261006--11.74_-67.14",
