@@ -147,6 +147,142 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261012--13.88_135.87",
+  "hazard": "wildfire",
+  "lon": 135.8736,
+  "lat": -13.8849,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-12",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032810",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032810&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Green impact for forestfire in 10378 ha"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-12)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      135.8042,
+      -13.95273
+     ],
+     [
+      135.943,
+      -13.95273
+     ],
+     [
+      135.943,
+      -13.81707
+     ],
+     [
+      135.8042,
+      -13.81707
+     ],
+     [
+      135.8042,
+      -13.95273
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.046,
+  "before": "2026-09-02/2026-10-10",
+  "after": "2026-10-14/2026-10-16",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 16,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261012--16.89_122.92",
+  "hazard": "wildfire",
+  "lon": 122.9152,
+  "lat": -16.8948,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-12",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032831",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032831&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Green impact for forestfire in 11659 ha"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-12)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      122.84479,
+      -16.96263
+     ],
+     [
+      122.98561,
+      -16.96263
+     ],
+     [
+      122.98561,
+      -16.82697
+     ],
+     [
+      122.84479,
+      -16.82697
+     ],
+     [
+      122.84479,
+      -16.96263
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.074,
+  "before": "2026-09-02/2026-10-10",
+  "after": "2026-10-14/2026-10-16",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261011-28.00_84.63",
   "hazard": "flood",
   "lon": 84.628,
@@ -228,7 +364,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -296,7 +432,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -365,7 +501,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -655,7 +791,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -791,7 +927,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1210,6 +1346,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261009--4.02_144.39",
+  "hazard": "wildfire",
+  "lon": 144.3904,
+  "lat": -4.0209,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-09",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032814",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032814&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 10249 ha"
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-16",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Papua New Guinea (2026-10-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      144.32286,
+      -4.08873
+     ],
+     [
+      144.45794,
+      -4.08873
+     ],
+     [
+      144.45794,
+      -3.95307
+     ],
+     [
+      144.32286,
+      -3.95307
+     ],
+     [
+      144.32286,
+      -4.08873
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.311,
+  "before": "2026-08-30/2026-10-07",
+  "after": "2026-10-11/2026-10-16",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 14,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261008--17.11_142.92",
   "hazard": "wildfire",
   "lon": 142.9212,
@@ -1217,7 +1421,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1924,7 +2128,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -2061,7 +2265,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -3267,7 +3471,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -3336,7 +3540,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3889,7 +4093,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -12132,6 +12336,89 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261014-41.01_28.98",
+  "hazard": "flood",
+  "lon": 28.9986,
+  "lat": 41.1157,
+  "bbox": [
+   28.9446,
+   41.0244,
+   29.0186,
+   41.1521
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-16",
+  "place": "Istanbul",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailysabah.com/turkiye/istanbul/2-killed-after-torrential-rain-paralyzes-istanbul-triggers-flooding",
+    "title": "2 killed after torrential rain paralyzes Istanbul , triggers flooding",
+    "outlet": "dailysabah.com",
+    "date": "2026-10-15",
+    "quote": "1,277 flooding incidents",
+    "detail": "stranding 47 people, 808 homes, 280 businesses, 76 vehicles affected"
+   },
+   {
+    "kind": "gdacs",
+    "id": "FL1104230",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104230&episodeid=2&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-16",
+  "score": 0.5,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      28.9446,
+      41.0244
+     ],
+     [
+      29.0186,
+      41.0244
+     ],
+     [
+      29.0186,
+      41.1521
+     ],
+     [
+      28.9446,
+      41.1521
+     ],
+     [
+      28.9446,
+      41.0244
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 88.168,
+  "before": "2026-09-09/2026-10-09",
+  "after": "2026-10-14/2026-10-16",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261013-32.90_13.18",
   "hazard": "flood",
   "lon": 13.1778,
@@ -12213,7 +12500,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-15",
+  "event_end": "2026-10-16",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -12335,81 +12622,6 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 8,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261014-41.01_28.98",
-  "hazard": "flood",
-  "lon": 28.9758715,
-  "lat": 41.006381,
-  "bbox": [
-   28.8158715,
-   40.846381,
-   29.1358715,
-   41.166381
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-14",
-  "event_end": "2026-10-14",
-  "place": "Istanbul",
-  "country": "T\u00fcrkiye",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.dailysabah.com/turkiye/istanbul/2-killed-after-torrential-rain-paralyzes-istanbul-triggers-flooding",
-    "title": "2 killed after torrential rain paralyzes Istanbul , triggers flooding",
-    "outlet": "dailysabah.com",
-    "date": "2026-10-15",
-    "quote": "1,277 flooding incidents",
-    "detail": "stranding 47 people, 808 homes, 280 businesses, 76 vehicles affected"
-   }
-  ],
-  "first_seen": "2026-10-15",
-  "updated": "2026-10-15",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      28.81587,
-      40.87073
-     ],
-     [
-      29.13587,
-      40.87073
-     ],
-     [
-      29.13587,
-      41.14204
-     ],
-     [
-      28.81587,
-      41.14204
-     ],
-     [
-      28.81587,
-      40.87073
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 811.022,
-  "before": "2026-09-09/2026-10-09",
-  "after": "2026-10-14/2026-10-16",
-  "scenes": {
-   "s1_before": 24,
-   "s1_after": 0,
-   "s2_before": 9,
    "s2_after": 0
   },
   "sensors": [
