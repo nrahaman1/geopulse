@@ -1,5 +1,165 @@
 [
  {
+  "id": "wi-20261013-54.14_-115.68",
+  "hazard": "wildfire",
+  "lon": -115.6846504,
+  "lat": 54.1424574,
+  "bbox": [
+   -115.72668,
+   54.1086014,
+   -115.6014209,
+   54.1660348
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-15",
+  "place": "Whitecourt, Alberta",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fairviewpost.com:443/news/local-news/council-highlights-oct-13-2026",
+    "title": "Whitecourt council asked by province to join wildfire pilot program",
+    "outlet": "fairviewpost.com",
+    "date": "2026-10-15",
+    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
+    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.dailyheraldtribune.com:443/news/local-news/council-highlights-oct-13-2026",
+    "title": "Whitecourt council asked by province to join wildfire pilot program | Grande Prairie Daily Herald Tribune",
+    "outlet": "dailyheraldtribune.com",
+    "date": "2026-10-15",
+    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
+    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.coldlakesun.com:443/news/local-news/council-highlights-oct-13-2026",
+    "title": "Whitecourt council asked by province to join wildfire pilot program",
+    "outlet": "coldlakesun.com",
+    "date": "2026-10-15",
+    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
+    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
+   }
+  ],
+  "first_seen": "2026-10-16",
+  "updated": "2026-10-17",
+  "score": 0.45,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Whitecourt, Alberta, Canada (2026-10-13)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -115.72668,
+      54.1086
+     ],
+     [
+      -115.60142,
+      54.1086
+     ],
+     [
+      -115.60142,
+      54.16603
+     ],
+     [
+      -115.72668,
+      54.16603
+     ],
+     [
+      -115.72668,
+      54.1086
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 52.302,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-15/2026-10-17",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 1,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261015--18.15_131.58",
+  "hazard": "wildfire",
+  "lon": 131.58,
+  "lat": -18.151,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-17",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032857",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032857&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 10389 ha"
+   }
+  ],
+  "first_seen": "2026-10-17",
+  "updated": "2026-10-17",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      131.5091,
+      -18.21883
+     ],
+     [
+      131.6509,
+      -18.21883
+     ],
+     [
+      131.6509,
+      -18.08317
+     ],
+     [
+      131.5091,
+      -18.08317
+     ],
+     [
+      131.5091,
+      -18.21883
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.529,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-17",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261013-32.90_13.18",
   "hazard": "flood",
   "lon": 13.1778,
@@ -505,7 +665,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -524,10 +684,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-08",
     "detail": "Green impact for forestfire in 23356 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032847",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032847&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 13719 ha"
    }
   ],
   "first_seen": "2026-10-16",
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-11)",
@@ -561,7 +729,7 @@
   },
   "aoi_km2": 225.437,
   "before": "2026-09-01/2026-10-09",
-  "after": "2026-10-13/2026-10-16",
+  "after": "2026-10-13/2026-10-17",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -1774,7 +1942,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -2687,7 +2855,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -2902,7 +3070,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3483,7 +3651,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3970,7 +4138,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4039,7 +4207,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -4177,7 +4345,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -11744,89 +11912,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261013-54.14_-115.68",
-  "hazard": "wildfire",
-  "lon": -115.6846504,
-  "lat": 54.1424574,
-  "bbox": [
-   -115.72668,
-   54.1086014,
-   -115.6014209,
-   54.1660348
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-13",
-  "event_end": "2026-10-15",
-  "place": "Whitecourt, Alberta",
-  "country": "Canada",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.fairviewpost.com:443/news/local-news/council-highlights-oct-13-2026",
-    "title": "Whitecourt council asked by province to join wildfire pilot program",
-    "outlet": "fairviewpost.com",
-    "date": "2026-10-15",
-    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
-    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
-   },
-   {
-    "kind": "news",
-    "url": "https://www.dailyheraldtribune.com:443/news/local-news/council-highlights-oct-13-2026",
-    "title": "Whitecourt council asked by province to join wildfire pilot program | Grande Prairie Daily Herald Tribune",
-    "outlet": "dailyheraldtribune.com",
-    "date": "2026-10-15",
-    "quote": "The Alberta government is launching the FireSmart policy pathways pilot and has asked two towns, Whitecourt and Canmore, to participate.",
-    "detail": "The Town of Whitecourt will receive a policy 'roadmap' and bylaw and policy templates, according to the presentation. The pilot would run from November 2026 to March 2027."
-   }
-  ],
-  "first_seen": "2026-10-16",
-  "updated": "2026-10-16",
-  "score": 0.3,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Whitecourt, Alberta, Canada (2026-10-13)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -115.72668,
-      54.1086
-     ],
-     [
-      -115.60142,
-      54.1086
-     ],
-     [
-      -115.60142,
-      54.16603
-     ],
-     [
-      -115.72668,
-      54.16603
-     ],
-     [
-      -115.72668,
-      54.1086
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 52.302,
-  "before": "2026-09-03/2026-10-11",
-  "after": "2026-10-15/2026-10-17",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 1,
-   "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20261016-52.67_1.00",
   "hazard": "flood",
   "lon": 1.0,
@@ -13311,6 +13396,81 @@
    "s1_before": 21,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261017-13.08_80.28",
+  "hazard": "flood",
+  "lon": 80.2807978,
+  "lat": 13.0800915,
+  "bbox": [
+   80.1339233,
+   12.8519771,
+   80.3328982,
+   13.235158
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-17",
+  "place": "Tamil Nadu, Chennai",
+  "country": "India",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.thehindu.com/news/national/assam/cyclonic-winds-flooding-are-common-threats-to-telecom-towers-in-assam-tamil-nadu-finds-study-finds/article71596087.ece",
+    "title": "Cyclonic winds , flooding are common threats to telecom towers in Assam , Tamil Nadu , finds study finds",
+    "outlet": "thehindu.com",
+    "date": "2026-10-17",
+    "quote": "57% face high or very high cyclonic wind risk",
+    "detail": "telecom towers exposed to flooding"
+   }
+  ],
+  "first_seen": "2026-10-17",
+  "updated": "2026-10-17",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Tamil Nadu, Chennai, India (2026-10-17)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      80.13391,
+      12.94444
+     ],
+     [
+      80.33291,
+      12.94444
+     ],
+     [
+      80.33291,
+      13.21575
+     ],
+     [
+      80.13391,
+      13.21575
+     ],
+     [
+      80.13391,
+      12.94444
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 647.369,
+  "before": "2026-09-12/2026-10-12",
+  "after": "2026-10-17/2026-10-17",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 10,
    "s2_after": 0
   },
   "sensors": [
