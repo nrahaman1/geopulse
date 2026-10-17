@@ -574,6 +574,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261011--16.75_144.78",
+  "hazard": "wildfire",
+  "lon": 144.7754,
+  "lat": -16.7496,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-11",
+  "event_end": "2026-10-16",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032765",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032765&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-11",
+    "detail": "Green impact for forestfire in 10043 ha"
+   }
+  ],
+  "first_seen": "2026-10-13",
+  "updated": "2026-10-13",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-11)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      144.70504,
+      -16.81743
+     ],
+     [
+      144.84576,
+      -16.81743
+     ],
+     [
+      144.84576,
+      -16.68177
+     ],
+     [
+      144.70504,
+      -16.68177
+     ],
+     [
+      144.70504,
+      -16.81743
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.395,
+  "before": "2026-09-01/2026-10-09",
+  "after": "2026-10-13/2026-10-17",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261010--17.13_127.93",
   "hazard": "wildfire",
   "lon": 127.9311,
@@ -4464,7 +4532,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -13095,75 +13163,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261011--16.75_144.78",
-  "hazard": "wildfire",
-  "lon": 144.7754,
-  "lat": -16.7496,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-11",
-  "event_end": "2026-10-16",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032765",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032765&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-11",
-    "detail": "Green impact for forestfire in 10043 ha"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-11)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      144.70504,
-      -16.81743
-     ],
-     [
-      144.84576,
-      -16.81743
-     ],
-     [
-      144.84576,
-      -16.68177
-     ],
-     [
-      144.70504,
-      -16.68177
-     ],
-     [
-      144.70504,
-      -16.81743
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.395,
-  "before": "2026-09-01/2026-10-09",
-  "after": "2026-10-13/2026-10-17",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 18,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261013-54.14_-115.68",
   "hazard": "wildfire",
   "lon": -115.6846504,
@@ -13314,6 +13313,81 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261015-34.22_-101.31",
+  "hazard": "flood",
+  "lon": -101.3103214,
+  "lat": 34.2247015,
+  "bbox": [
+   -101.3303214,
+   34.2047015,
+   -101.2903214,
+   34.2447015
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "South Plains, Texas",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox4news.com/news/cold-front-triggers-widespread-flooding-tornado-across-west-texas",
+    "title": "Cold front triggers widespread flooding , tornado across West Texas",
+    "outlet": "fox4news.com",
+    "date": "2026-10-15",
+    "quote": "A strong cold front and heavy rainfall triggered flooding and road closures across the South Plains and Rolling Plains.",
+    "detail": "road closures, high-water advisories, flooded roadways, severe weather, tornadoes"
+   }
+  ],
+  "first_seen": "2026-10-17",
+  "updated": "2026-10-17",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 South Plains, Texas, United States (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -101.33748,
+      34.20209
+     ],
+     [
+      -101.28316,
+      34.20209
+     ],
+     [
+      -101.28316,
+      34.24731
+     ],
+     [
+      -101.33748,
+      34.24731
+     ],
+     [
+      -101.33748,
+      34.20209
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.114,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-15/2026-10-17",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 24,
    "s2_after": 0
   },
   "sensors": [
