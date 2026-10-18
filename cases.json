@@ -99,7 +99,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -387,7 +387,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-12",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -455,7 +455,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-12",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1176,7 +1176,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1380,7 +1380,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1448,7 +1448,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1517,7 +1517,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1943,7 +1943,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -2080,7 +2080,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-08",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4414,7 +4414,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -4551,7 +4551,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4769,7 +4769,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -13565,7 +13565,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -13618,6 +13618,159 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261014--19.40_134.62",
+  "hazard": "wildfire",
+  "lon": 134.6231,
+  "lat": -19.4006,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-18",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032851",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032851&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-14",
+    "detail": "Green impact for forestfire in 10789 ha"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-14)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      134.55167,
+      -19.46843
+     ],
+     [
+      134.69453,
+      -19.46843
+     ],
+     [
+      134.69453,
+      -19.33277
+     ],
+     [
+      134.55167,
+      -19.33277
+     ],
+     [
+      134.55167,
+      -19.46843
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.171,
+  "before": "2026-09-04/2026-10-12",
+  "after": "2026-10-16/2026-10-18",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261016-34.27_-91.92",
+  "hazard": "wildfire",
+  "lon": -91.9248307,
+  "lat": 34.2711667,
+  "bbox": [
+   -92.2332249,
+   34.058588,
+   -91.4313495,
+   34.4928108
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Jefferson County, Arkansas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.arkansasonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
+    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage | The Arkansas Democrat - Gazette",
+    "outlet": "arkansasonline.com",
+    "date": "2026-10-17",
+    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
+    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.nwaonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
+    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage",
+    "outlet": "nwaonline.com",
+    "date": "2026-10-17",
+    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
+    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Jefferson County, Arkansas, US (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -92.08789,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.13551
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.342,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-18",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 50,
    "s2_after": 0
   },
   "sensors": [
@@ -13711,72 +13864,147 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261016-34.27_-91.92",
+  "id": "wi-20261016-33.43_-117.61",
   "hazard": "wildfire",
-  "lon": -91.9248307,
-  "lat": 34.2711667,
+  "lon": -117.6124179,
+  "lat": 33.4270275,
   "bbox": [
-   -92.2332249,
-   34.058588,
-   -91.4313495,
-   34.4928108
+   -117.6816859,
+   33.3336696,
+   -117.5711815,
+   33.4908334
   ],
   "geometry_from": "news",
   "event_start": "2026-10-16",
   "event_end": "2026-10-16",
-  "place": "Jefferson County, Arkansas",
-  "country": "US",
+  "place": "San Clemente, Orange County",
+  "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.arkansasonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
-    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage | The Arkansas Democrat - Gazette",
-    "outlet": "arkansasonline.com",
+    "url": "https://www.theepochtimes.com/us/evacuation-orders-issued-as-wildfire-burns-homes-in-southern-california-6105157",
+    "title": "Evacuation Orders Issued as Wildfire Burns Homes in Southern California",
+    "outlet": "theepochtimes.com",
     "date": "2026-10-17",
-    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
-    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+    "quote": "Evacuation orders have been issued after a wind-fueled wildfire ignited Friday in a Southern California coastal community, burning through homes and 465 acres",
+    "detail": "Homes were burned, six homes have either been damaged or destroyed, evacuation orders issued for several neighborhoods, over 500 firefighters assigned to the fire, power shut off for 134,000 customers"
    }
   ],
   "first_seen": "2026-10-18",
   "updated": "2026-10-18",
   "score": 0.15,
   "confidence": "low",
-  "title": "Wildfire \u00b7 Jefferson County, Arkansas, US (2026-10-16)",
+  "title": "Wildfire \u00b7 San Clemente, Orange County, United States (2026-10-16)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -92.08789,
-      34.13551
+      -117.68169,
+      33.33367
      ],
      [
-      -91.76177,
-      34.13551
+      -117.57118,
+      33.33367
      ],
      [
-      -91.76177,
-      34.40682
+      -117.57118,
+      33.49083
      ],
      [
-      -92.08789,
-      34.40682
+      -117.68169,
+      33.49083
      ],
      [
-      -92.08789,
-      34.13551
+      -117.68169,
+      33.33367
      ]
     ]
    ]
   },
-  "aoi_km2": 903.342,
+  "aoi_km2": 179.048,
   "before": "2026-09-06/2026-10-14",
   "after": "2026-10-18/2026-10-18",
   "scenes": {
-   "s1_before": 6,
+   "s1_before": 13,
    "s1_after": 0,
-   "s2_before": 50,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261016-41.04_-83.65",
+  "hazard": "flood",
+  "lon": -83.6503982,
+  "lat": 41.0413873,
+  "bbox": [
+   -83.6887841,
+   40.9929719,
+   -83.5688789,
+   41.0899591
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Findlay, Ohio",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.13abc.com/2026/10/16/findlay-breaks-ground-major-flood-project-after-2007-disaster/",
+    "title": "Findlay breaks ground on major flood project after 2007 disaster",
+    "outlet": "13abc.com",
+    "date": "2026-10-16",
+    "quote": "Floodwaters caused more than $100 million in damage and impacted nearly 1,900 properties.",
+    "detail": "The project could lower flood levels downtown by more than two feet and remove nearly 1,800 properties from the flood zone altogether."
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Findlay, Ohio, United States (2026-10-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -83.68878,
+      40.99297
+     ],
+     [
+      -83.56888,
+      40.99297
+     ],
+     [
+      -83.56888,
+      41.08996
+     ],
+     [
+      -83.68878,
+      41.08996
+     ],
+     [
+      -83.68878,
+      40.99297
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 108.633,
+  "before": "2026-09-11/2026-10-11",
+  "after": "2026-10-16/2026-10-18",
+  "scenes": {
+   "s1_before": 1,
+   "s1_after": 0,
+   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
