@@ -688,7 +688,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -756,7 +756,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2102,7 +2102,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -2940,6 +2940,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261007--17.10_33.78",
+  "hazard": "wildfire",
+  "lon": 33.781,
+  "lat": -17.1012,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-10-18",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032833",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032833&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Green impact for forestfire in 10147 ha"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-07)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.71051,
+      -17.16903
+     ],
+     [
+      33.85149,
+      -17.16903
+     ],
+     [
+      33.85149,
+      -17.03337
+     ],
+     [
+      33.71051,
+      -17.03337
+     ],
+     [
+      33.71051,
+      -17.16903
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.126,
+  "before": "2026-08-28/2026-10-05",
+  "after": "2026-10-09/2026-10-18",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 2,
+   "s2_before": 9,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261006--11.99_35.39",
   "hazard": "wildfire",
   "lon": 35.3891,
@@ -3015,7 +3084,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -3230,7 +3299,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3811,7 +3880,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -12141,6 +12210,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261018-51.91_-8.17",
+  "hazard": "flood",
+  "lon": -8.1700962,
+  "lat": 51.9142741,
+  "bbox": [
+   -8.1964398,
+   51.8893178,
+   -8.1530083,
+   51.9333301
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-18",
+  "place": "Midleton, Co Cork",
+  "country": "Ireland",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.thejournal.ie/midleton-flood-defence-cork-protest-7197044-Oct2026/",
+    "title": "  Not a shovel in the ground : Hundreds protest over Midleton flood defences three years after Storm Babet",
+    "outlet": "thejournal.ie",
+    "date": "2026-10-18",
+    "quote": "Extreme rainfall in Midleton and other parts of east Cork on the 17 October 2023 led to mass flooding in houses and businesses.",
+    "detail": "up to \u20ac200 million in damage to businesses and homes in the town"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Midleton, Co Cork, Ireland (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -8.21113,
+      51.88871
+     ],
+     [
+      -8.13832,
+      51.88871
+     ],
+     [
+      -8.13832,
+      51.93393
+     ],
+     [
+      -8.21113,
+      51.93393
+     ],
+     [
+      -8.21113,
+      51.88871
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.191,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-18",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 1,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261016-52.67_1.00",
   "hazard": "flood",
   "lon": 1.0,
@@ -12504,6 +12647,80 @@
    "s1_before": 3,
    "s1_after": 1,
    "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261015-41.88_-87.62",
+  "hazard": "flood",
+  "lon": -87.6244212,
+  "lat": 41.8755616,
+  "bbox": [
+   -87.9400876,
+   41.644531,
+   -87.5241243,
+   42.0230529
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-15",
+  "place": "Chicago, Illinois",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.manilatimes.net/2026/10/16/tmt-newswire/globenewswire/show-flooring-helps-chicago-homeowners-with-flood-damaged-flooring-replacement-following-severe-storms/2447218",
+    "title": "Show Flooring Helps Chicago Homeowners With Flood - Damaged Flooring Replacement Following Severe Storms",
+    "outlet": "manilatimes.net",
+    "date": "2026-10-16",
+    "quote": "Heavy rainfall and flooding remain concerns for Chicago-area property owners",
+    "detail": "basement flooding, water-damaged flooring, disruption of business operations, renovation expenses"
+   }
+  ],
+  "first_seen": "2026-10-17",
+  "updated": "2026-10-17",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Chicago, Illinois, United States (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -87.80539,
+      41.73991
+     ],
+     [
+      -87.44346,
+      41.73991
+     ],
+     [
+      -87.44346,
+      42.01122
+     ],
+     [
+      -87.80539,
+      42.01122
+     ],
+     [
+      -87.80539,
+      41.73991
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.715,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-15/2026-10-18",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 3,
    "s2_after": 0
   },
   "sensors": [
@@ -13838,7 +14055,7 @@
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
-   "s2_before": 50,
+   "s2_before": 51,
    "s2_after": 0
   },
   "sensors": [
@@ -13848,72 +14065,81 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261018-51.91_-8.17",
-  "hazard": "flood",
-  "lon": -8.1700962,
-  "lat": 51.9142741,
+  "id": "wi-20261016-33.43_-117.61",
+  "hazard": "wildfire",
+  "lon": -117.6124179,
+  "lat": 33.4270275,
   "bbox": [
-   -8.1964398,
-   51.8893178,
-   -8.1530083,
-   51.9333301
+   -117.6816859,
+   33.3336696,
+   -117.5711815,
+   33.4908334
   ],
   "geometry_from": "news",
-  "event_start": "2026-10-18",
+  "event_start": "2026-10-16",
   "event_end": "2026-10-18",
-  "place": "Midleton, Co Cork",
-  "country": "Ireland",
+  "place": "San Clemente, Orange County",
+  "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.thejournal.ie/midleton-flood-defence-cork-protest-7197044-Oct2026/",
-    "title": "  Not a shovel in the ground : Hundreds protest over Midleton flood defences three years after Storm Babet",
-    "outlet": "thejournal.ie",
+    "url": "https://www.theepochtimes.com/us/evacuation-orders-issued-as-wildfire-burns-homes-in-southern-california-6105157",
+    "title": "Evacuation Orders Issued as Wildfire Burns Homes in Southern California",
+    "outlet": "theepochtimes.com",
+    "date": "2026-10-17",
+    "quote": "Evacuation orders have been issued after a wind-fueled wildfire ignited Friday in a Southern California coastal community, burning through homes and 465 acres",
+    "detail": "Homes were burned, six homes have either been damaged or destroyed, evacuation orders issued for several neighborhoods, over 500 firefighters assigned to the fire, power shut off for 134,000 customers"
+   },
+   {
+    "kind": "news",
+    "url": "https://aa.com.tr/en/americas/california-wildfire-forces-thousands-to-evacuate-burns-570-acres/4092753",
+    "title": "California wildfire forces thousands to evacuate , burns 570 acres",
+    "outlet": "aa.com.tr",
     "date": "2026-10-18",
-    "quote": "Extreme rainfall in Midleton and other parts of east Cork on the 17 October 2023 led to mass flooding in houses and businesses.",
-    "detail": "up to \u20ac200 million in damage to businesses and homes in the town"
+    "quote": "California wildfire forces thousands to evacuate, burns 570 acres",
+    "detail": "thousands of residents evacuated, seven homes damaged or destroyed"
    }
   ],
   "first_seen": "2026-10-18",
   "updated": "2026-10-18",
-  "score": 0.15,
+  "score": 0.3,
   "confidence": "low",
-  "title": "Flood \u00b7 Midleton, Co Cork, Ireland (2026-10-18)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 San Clemente, Orange County, United States (2026-10-16)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -8.21113,
-      51.88871
+      -117.68169,
+      33.33367
      ],
      [
-      -8.13832,
-      51.88871
+      -117.57118,
+      33.33367
      ],
      [
-      -8.13832,
-      51.93393
+      -117.57118,
+      33.49083
      ],
      [
-      -8.21113,
-      51.93393
+      -117.68169,
+      33.49083
      ],
      [
-      -8.21113,
-      51.88871
+      -117.68169,
+      33.33367
      ]
     ]
    ]
   },
-  "aoi_km2": 25.191,
-  "before": "2026-09-13/2026-10-13",
+  "aoi_km2": 179.048,
+  "before": "2026-09-06/2026-10-14",
   "after": "2026-10-18/2026-10-18",
   "scenes": {
-   "s1_before": 18,
+   "s1_before": 13,
    "s1_after": 0,
-   "s2_before": 5,
+   "s2_before": 17,
    "s2_after": 0
   },
   "sensors": [
@@ -13998,81 +14224,6 @@
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261016-33.43_-117.61",
-  "hazard": "wildfire",
-  "lon": -117.6124179,
-  "lat": 33.4270275,
-  "bbox": [
-   -117.6816859,
-   33.3336696,
-   -117.5711815,
-   33.4908334
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-16",
-  "place": "San Clemente, Orange County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.theepochtimes.com/us/evacuation-orders-issued-as-wildfire-burns-homes-in-southern-california-6105157",
-    "title": "Evacuation Orders Issued as Wildfire Burns Homes in Southern California",
-    "outlet": "theepochtimes.com",
-    "date": "2026-10-17",
-    "quote": "Evacuation orders have been issued after a wind-fueled wildfire ignited Friday in a Southern California coastal community, burning through homes and 465 acres",
-    "detail": "Homes were burned, six homes have either been damaged or destroyed, evacuation orders issued for several neighborhoods, over 500 firefighters assigned to the fire, power shut off for 134,000 customers"
-   }
-  ],
-  "first_seen": "2026-10-18",
-  "updated": "2026-10-18",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 San Clemente, Orange County, United States (2026-10-16)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -117.68169,
-      33.33367
-     ],
-     [
-      -117.57118,
-      33.33367
-     ],
-     [
-      -117.57118,
-      33.49083
-     ],
-     [
-      -117.68169,
-      33.49083
-     ],
-     [
-      -117.68169,
-      33.33367
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 179.048,
-  "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-18",
-  "scenes": {
-   "s1_before": 13,
-   "s1_after": 0,
-   "s2_before": 17,
    "s2_after": 0
   },
   "sensors": [
@@ -14223,81 +14374,6 @@
    "s1_before": 6,
    "s1_after": 0,
    "s2_before": 24,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261015-41.88_-87.62",
-  "hazard": "flood",
-  "lon": -87.6244212,
-  "lat": 41.8755616,
-  "bbox": [
-   -87.9400876,
-   41.644531,
-   -87.5241243,
-   42.0230529
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-15",
-  "event_end": "2026-10-15",
-  "place": "Chicago, Illinois",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.manilatimes.net/2026/10/16/tmt-newswire/globenewswire/show-flooring-helps-chicago-homeowners-with-flood-damaged-flooring-replacement-following-severe-storms/2447218",
-    "title": "Show Flooring Helps Chicago Homeowners With Flood - Damaged Flooring Replacement Following Severe Storms",
-    "outlet": "manilatimes.net",
-    "date": "2026-10-16",
-    "quote": "Heavy rainfall and flooding remain concerns for Chicago-area property owners",
-    "detail": "basement flooding, water-damaged flooring, disruption of business operations, renovation expenses"
-   }
-  ],
-  "first_seen": "2026-10-17",
-  "updated": "2026-10-17",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Chicago, Illinois, United States (2026-10-15)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -87.80539,
-      41.73991
-     ],
-     [
-      -87.44346,
-      41.73991
-     ],
-     [
-      -87.44346,
-      42.01122
-     ],
-     [
-      -87.80539,
-      42.01122
-     ],
-     [
-      -87.80539,
-      41.73991
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 904.715,
-  "before": "2026-09-10/2026-10-10",
-  "after": "2026-10-15/2026-10-18",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 3,
    "s2_after": 0
   },
   "sensors": [
