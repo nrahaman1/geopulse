@@ -1441,6 +1441,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261010--15.08_129.79",
+  "hazard": "wildfire",
+  "lon": 129.7936,
+  "lat": -15.0849,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-17",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032799",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032799&episodeid=10&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10001 ha"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      129.72382,
+      -15.15273
+     ],
+     [
+      129.86338,
+      -15.15273
+     ],
+     [
+      129.86338,
+      -15.01707
+     ],
+     [
+      129.72382,
+      -15.01707
+     ],
+     [
+      129.72382,
+      -15.15273
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.078,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-18",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261009--15.32_134.85",
   "hazard": "wildfire",
   "lon": 134.8531,
@@ -3856,7 +3925,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-14",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -4276,7 +4345,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-17",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -11986,6 +12055,81 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261016-26.84_80.93",
+  "hazard": "flood",
+  "lon": 80.9346001,
+  "lat": 26.8381,
+  "bbox": [
+   80.7746001,
+   26.6781,
+   81.0946001,
+   26.9981
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Faizullaganj, Lucknow",
+  "country": "India",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.hindustantimes.com/cities/lucknow-news/floods-hit-50-000-in-faizullaganj-lmc-plans-12-day-cleanup-101792162410191.html",
+    "title": "Floods hit 50 , 000 in Faizullaganj , LMC plans 12 - day cleanup",
+    "outlet": "hindustantimes.com",
+    "date": "2026-10-16",
+    "quote": "Floods hit 50,000 in Faizullaganj",
+    "detail": "affected around 50,000 people in 6,500 houses"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Faizullaganj, Lucknow, India (2026-10-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      80.78359,
+      26.70244
+     ],
+     [
+      81.08561,
+      26.70244
+     ],
+     [
+      81.08561,
+      26.97376
+     ],
+     [
+      80.78359,
+      26.97376
+     ],
+     [
+      80.78359,
+      26.70244
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.749,
+  "before": "2026-09-11/2026-10-11",
+  "after": "2026-10-16/2026-10-18",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 2,
+   "s2_before": 9,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261015-30.76_-98.22",
   "hazard": "flood",
   "lon": -98.2239954,
@@ -13354,12 +13498,21 @@
     "title": "Flood in T\u00fcrkiye (Green alert)",
     "date": "2026-10-12",
     "detail": "Magnitude 0"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.nbcnews.com/weather/floods/istanbuls-worst-floods-80-years-leave-4-dead-rcna603855",
+    "title": "Istanbul worst floods in 80 years leave 4 dead",
+    "outlet": "nbcnews.com",
+    "date": "2026-10-16",
+    "quote": "Istanbul\u2019s worst floods in 80 years leave 4 dead",
+    "detail": "4 dead, 9,850 reports of damage, 46,000 personnel working to clean up debris and help residents, homes and businesses flooded, vehicles washed away, water covered streets and parks, body of a 66-year-old man found under a bridge in Sariyer district, three other deaths including a teenager electrocut"
    }
   ],
   "first_seen": "2026-10-15",
-  "updated": "2026-10-16",
-  "score": 0.5,
-  "confidence": "medium",
+  "updated": "2026-10-18",
+  "score": 0.65,
+  "confidence": "high",
   "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
   "task": "flood",
   "aoi": {
@@ -13391,9 +13544,78 @@
   },
   "aoi_km2": 88.168,
   "before": "2026-09-09/2026-10-09",
-  "after": "2026-10-14/2026-10-17",
+  "after": "2026-10-14/2026-10-18",
   "scenes": {
    "s1_before": 21,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261016--15.90_135.16",
+  "hazard": "wildfire",
+  "lon": 135.1632,
+  "lat": -15.898,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-17",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032862",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032862&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 10104 ha"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      135.09315,
+      -15.96583
+     ],
+     [
+      135.23325,
+      -15.96583
+     ],
+     [
+      135.23325,
+      -15.83017
+     ],
+     [
+      135.09315,
+      -15.83017
+     ],
+     [
+      135.09315,
+      -15.96583
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.045,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-18",
+  "scenes": {
+   "s1_before": 3,
    "s1_after": 0,
    "s2_before": 9,
    "s2_after": 0
@@ -13417,7 +13639,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "Tamil Nadu, Chennai",
   "country": "India",
   "sources": [
@@ -13429,10 +13651,19 @@
     "date": "2026-10-17",
     "quote": "57% face high or very high cyclonic wind risk",
     "detail": "telecom towers exposed to flooding"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.thehindu.com/news/cities/chennai/chennai-residents-seek-better-access-to-flood-risk-information/article71593568.ece",
+    "title": "Chennai residents seek better access to flood - risk information",
+    "outlet": "thehindu.com",
+    "date": "2026-10-18",
+    "quote": "Residents and climate groups have called for better access to Chennai\u2019s flood risk maps and disaster-response information.",
+    "detail": "Residents and climate groups are seeking better access to flood-risk information to help vulnerable communities prepare for flooding. Some areas are not adequately captured in the flood-prone zones, and there are concerns about the accessibility of relief centre information for all residents, includ"
    }
   ],
   "first_seen": "2026-10-17",
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "score": 0.15,
   "confidence": "low",
   "title": "Flood \u00b7 Tamil Nadu, Chennai, India (2026-10-17)",
@@ -13466,11 +13697,86 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-17",
+  "after": "2026-10-17/2026-10-18",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261016-34.27_-91.92",
+  "hazard": "wildfire",
+  "lon": -91.9248307,
+  "lat": 34.2711667,
+  "bbox": [
+   -92.2332249,
+   34.058588,
+   -91.4313495,
+   34.4928108
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Jefferson County, Arkansas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.arkansasonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
+    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage | The Arkansas Democrat - Gazette",
+    "outlet": "arkansasonline.com",
+    "date": "2026-10-17",
+    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
+    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Jefferson County, Arkansas, US (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -92.08789,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.13551
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.342,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-18",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 50,
    "s2_after": 0
   },
   "sensors": [
@@ -13541,7 +13847,7 @@
   },
   "aoi_km2": 25.114,
   "before": "2026-09-10/2026-10-10",
-  "after": "2026-10-15/2026-10-17",
+  "after": "2026-10-15/2026-10-18",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -13616,7 +13922,7 @@
   },
   "aoi_km2": 904.715,
   "before": "2026-09-10/2026-10-10",
-  "after": "2026-10-15/2026-10-17",
+  "after": "2026-10-15/2026-10-18",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -13710,7 +14016,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-17"
+  "after": "2026-10-15/2026-10-18"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -13785,7 +14091,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-17"
+  "after": "2026-10-13/2026-10-18"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -13850,7 +14156,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-17/2026-10-17"
+  "after": "2026-10-16/2026-10-18"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -13915,7 +14221,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-17"
+  "after": "2026-10-07/2026-10-18"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -13980,7 +14286,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-17"
+  "after": "2026-10-06/2026-10-18"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -14045,7 +14351,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-17"
+  "after": "2026-10-03/2026-10-18"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -14110,7 +14416,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-17"
+  "after": "2026-10-02/2026-10-18"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -14175,7 +14481,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-17"
+  "after": "2026-10-02/2026-10-18"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -14240,7 +14546,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-17"
+  "after": "2026-10-01/2026-10-18"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -14305,7 +14611,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-17"
+  "after": "2026-10-01/2026-10-18"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -14370,6 +14676,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-17"
+  "after": "2026-10-01/2026-10-18"
  }
 ]

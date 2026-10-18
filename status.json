@@ -1,9 +1,9 @@
 {
- "started": "2026-10-17T20:40:38+00:00",
+ "started": "2026-10-18T04:40:45+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 44
+   "events": 37
   },
   "cems": {
    "ok": true,
@@ -15,7 +15,7 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 64
+   "articles": 56
   },
   "rss:wildfiretoday.com": {
    "ok": true,
@@ -40,9 +40,9 @@
   "events": 7,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-17T21:58:10+00:00",
- "duration_s": 4652,
- "cases": 200,
- "new": 2,
+ "finished": "2026-10-18T05:55:23+00:00",
+ "duration_s": 4478,
+ "cases": 204,
+ "new": 4,
  "ok": true
 }
