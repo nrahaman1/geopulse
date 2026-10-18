@@ -1,5 +1,96 @@
 [
  {
+  "id": "fl-20261014-41.01_28.98",
+  "hazard": "flood",
+  "lon": 28.9986,
+  "lat": 41.1157,
+  "bbox": [
+   28.9446,
+   41.0244,
+   29.0186,
+   41.1521
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-16",
+  "place": "Istanbul",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailysabah.com/turkiye/istanbul/2-killed-after-torrential-rain-paralyzes-istanbul-triggers-flooding",
+    "title": "2 killed after torrential rain paralyzes Istanbul , triggers flooding",
+    "outlet": "dailysabah.com",
+    "date": "2026-10-15",
+    "quote": "1,277 flooding incidents",
+    "detail": "stranding 47 people, 808 homes, 280 businesses, 76 vehicles affected"
+   },
+   {
+    "kind": "gdacs",
+    "id": "FL1104230",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104230&episodeid=2&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-12",
+    "detail": "Magnitude 0"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.nbcnews.com/weather/floods/istanbuls-worst-floods-80-years-leave-4-dead-rcna603855",
+    "title": "Istanbul worst floods in 80 years leave 4 dead",
+    "outlet": "nbcnews.com",
+    "date": "2026-10-16",
+    "quote": "Istanbul\u2019s worst floods in 80 years leave 4 dead",
+    "detail": "4 dead, 9,850 reports of damage, 46,000 personnel working to clean up debris and help residents, homes and businesses flooded, vehicles washed away, water covered streets and parks, body of a 66-year-old man found under a bridge in Sariyer district, three other deaths including a teenager electrocut"
+   }
+  ],
+  "first_seen": "2026-10-15",
+  "updated": "2026-10-18",
+  "score": 0.65,
+  "confidence": "high",
+  "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      28.9446,
+      41.0244
+     ],
+     [
+      29.0186,
+      41.0244
+     ],
+     [
+      29.0186,
+      41.1521
+     ],
+     [
+      28.9446,
+      41.1521
+     ],
+     [
+      28.9446,
+      41.0244
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 88.168,
+  "before": "2026-09-09/2026-10-09",
+  "after": "2026-10-14/2026-10-18",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 1,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261013-54.14_-115.68",
   "hazard": "wildfire",
   "lon": -115.6846504,
@@ -4130,7 +4221,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -4207,7 +4298,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4345,7 +4436,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-17",
+  "event_end": "2026-10-18",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -4536,6 +4627,75 @@
    "s1_after": 1,
    "s2_before": 14,
    "s2_after": 6
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261004--5.76_-53.47",
+  "hazard": "wildfire",
+  "lon": -53.4696,
+  "lat": -5.7596,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-04",
+  "event_end": "2026-10-18",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032821",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032821&episodeid=12&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-04",
+    "detail": "Green impact for forestfire in 10313 ha"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -53.53732,
+      -5.82743
+     ],
+     [
+      -53.40188,
+      -5.82743
+     ],
+     [
+      -53.40188,
+      -5.69177
+     ],
+     [
+      -53.53732,
+      -5.69177
+     ],
+     [
+      -53.53732,
+      -5.82743
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.29,
+  "before": "2026-08-25/2026-10-02",
+  "after": "2026-10-06/2026-10-18",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 17,
+   "s2_after": 8
   },
   "sensors": [
    "s1",
@@ -13466,98 +13626,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261014-41.01_28.98",
-  "hazard": "flood",
-  "lon": 28.9986,
-  "lat": 41.1157,
-  "bbox": [
-   28.9446,
-   41.0244,
-   29.0186,
-   41.1521
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-14",
-  "event_end": "2026-10-16",
-  "place": "Istanbul",
-  "country": "T\u00fcrkiye",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.dailysabah.com/turkiye/istanbul/2-killed-after-torrential-rain-paralyzes-istanbul-triggers-flooding",
-    "title": "2 killed after torrential rain paralyzes Istanbul , triggers flooding",
-    "outlet": "dailysabah.com",
-    "date": "2026-10-15",
-    "quote": "1,277 flooding incidents",
-    "detail": "stranding 47 people, 808 homes, 280 businesses, 76 vehicles affected"
-   },
-   {
-    "kind": "gdacs",
-    "id": "FL1104230",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104230&episodeid=2&eventtype=FL",
-    "title": "Flood in T\u00fcrkiye (Green alert)",
-    "date": "2026-10-12",
-    "detail": "Magnitude 0"
-   },
-   {
-    "kind": "news",
-    "url": "https://www.nbcnews.com/weather/floods/istanbuls-worst-floods-80-years-leave-4-dead-rcna603855",
-    "title": "Istanbul worst floods in 80 years leave 4 dead",
-    "outlet": "nbcnews.com",
-    "date": "2026-10-16",
-    "quote": "Istanbul\u2019s worst floods in 80 years leave 4 dead",
-    "detail": "4 dead, 9,850 reports of damage, 46,000 personnel working to clean up debris and help residents, homes and businesses flooded, vehicles washed away, water covered streets and parks, body of a 66-year-old man found under a bridge in Sariyer district, three other deaths including a teenager electrocut"
-   }
-  ],
-  "first_seen": "2026-10-15",
-  "updated": "2026-10-18",
-  "score": 0.65,
-  "confidence": "high",
-  "title": "Flood \u00b7 Istanbul, T\u00fcrkiye (2026-10-14)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      28.9446,
-      41.0244
-     ],
-     [
-      29.0186,
-      41.0244
-     ],
-     [
-      29.0186,
-      41.1521
-     ],
-     [
-      28.9446,
-      41.1521
-     ],
-     [
-      28.9446,
-      41.0244
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 88.168,
-  "before": "2026-09-09/2026-10-09",
-  "after": "2026-10-14/2026-10-18",
-  "scenes": {
-   "s1_before": 21,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261016--15.90_135.16",
   "hazard": "wildfire",
   "lon": 135.1632,
@@ -13771,6 +13839,81 @@
    "s1_before": 6,
    "s1_after": 0,
    "s2_before": 50,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261018-51.91_-8.17",
+  "hazard": "flood",
+  "lon": -8.1700962,
+  "lat": 51.9142741,
+  "bbox": [
+   -8.1964398,
+   51.8893178,
+   -8.1530083,
+   51.9333301
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-18",
+  "place": "Midleton, Co Cork",
+  "country": "Ireland",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.thejournal.ie/midleton-flood-defence-cork-protest-7197044-Oct2026/",
+    "title": "  Not a shovel in the ground : Hundreds protest over Midleton flood defences three years after Storm Babet",
+    "outlet": "thejournal.ie",
+    "date": "2026-10-18",
+    "quote": "Extreme rainfall in Midleton and other parts of east Cork on the 17 October 2023 led to mass flooding in houses and businesses.",
+    "detail": "up to \u20ac200 million in damage to businesses and homes in the town"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Midleton, Co Cork, Ireland (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -8.21113,
+      51.88871
+     ],
+     [
+      -8.13832,
+      51.88871
+     ],
+     [
+      -8.13832,
+      51.93393
+     ],
+     [
+      -8.21113,
+      51.93393
+     ],
+     [
+      -8.21113,
+      51.88871
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.191,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-18",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 0,
+   "s2_before": 5,
    "s2_after": 0
   },
   "sensors": [
