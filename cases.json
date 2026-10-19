@@ -14558,6 +14558,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261019-38.82_0.02",
+  "hazard": "flood",
+  "lon": 0.02299,
+  "lat": 38.81629,
+  "bbox": [
+   -0.256352,
+   38.652776,
+   0.249658,
+   39.024382
+  ],
+  "geometry_from": "cems",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Moraira, Gandia",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "cems",
+    "id": "EMSR935",
+    "url": "https://rapidmapping.emergency.copernicus.eu/EMSR935",
+    "title": "Flood in Alicante-Valencia Regions, Spain",
+    "date": "2026-10-19",
+    "detail": "On 19 October 2026, an episode of adverse weather affecting the south of Valencia province and the north of Alicante is impacting a large number of people. Up to 500 rescues were carried out within 12 hours, with several fatalities reported and communities affected by disruptions to essential servic"
+   }
+  ],
+  "first_seen": "2026-10-19",
+  "updated": "2026-10-19",
+  "score": 0.5,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Moraira, Gandia, Spain (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.14995,
+      38.68063
+     ],
+     [
+      0.19593,
+      38.68063
+     ],
+     [
+      0.19593,
+      38.95195
+     ],
+     [
+      -0.14995,
+      38.95195
+     ],
+     [
+      -0.14995,
+      38.68063
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.552,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-19",
+  "scenes": {
+   "s1_before": 24,
+   "s1_after": 0,
+   "s2_before": 44,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261016-14.03_-83.38",
   "hazard": "flood",
   "lon": -83.3806,
@@ -14623,6 +14697,75 @@
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261016--17.22_131.80",
+  "hazard": "wildfire",
+  "lon": 131.8003,
+  "lat": -17.2217,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-19",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032926",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032926&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 10379 ha"
+   }
+  ],
+  "first_seen": "2026-10-19",
+  "updated": "2026-10-19",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      131.72976,
+      -17.28953
+     ],
+     [
+      131.87084,
+      -17.28953
+     ],
+     [
+      131.87084,
+      -17.15387
+     ],
+     [
+      131.72976,
+      -17.15387
+     ],
+     [
+      131.72976,
+      -17.28953
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.599,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-19",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 0,
+   "s2_before": 39,
    "s2_after": 0
   },
   "sensors": [
