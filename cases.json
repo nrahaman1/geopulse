@@ -183,6 +183,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261018-37.28_127.44",
+  "hazard": "flood",
+  "lon": 127.4429,
+  "lat": 37.2809,
+  "bbox": [
+   127.33,
+   37.0438,
+   127.6354,
+   37.3617
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "South Korea",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104240",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104240&episodeid=1&eventtype=FL",
+    "title": "Flood in South Korea (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 South Korea (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      127.32984,
+      37.14524
+     ],
+     [
+      127.63556,
+      37.14524
+     ],
+     [
+      127.63556,
+      37.41656
+     ],
+     [
+      127.32984,
+      37.41656
+     ],
+     [
+      127.32984,
+      37.14524
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 816.109,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 2,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261017-41.38_2.18",
   "hazard": "flood",
   "lon": 2.1771,
@@ -329,6 +402,142 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261017--16.44_142.59",
+  "hazard": "wildfire",
+  "lon": 142.5857,
+  "lat": -16.4425,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032915",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032915&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 10205 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.51545,
+      -16.51033
+     ],
+     [
+      142.65595,
+      -16.51033
+     ],
+     [
+      142.65595,
+      -16.37467
+     ],
+     [
+      142.51545,
+      -16.37467
+     ],
+     [
+      142.51545,
+      -16.51033
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.24,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261017--16.77_128.97",
+  "hazard": "wildfire",
+  "lon": 128.966,
+  "lat": -16.7715,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032937",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032937&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 14982 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      128.89563,
+      -16.83933
+     ],
+     [
+      129.03637,
+      -16.83933
+     ],
+     [
+      129.03637,
+      -16.70367
+     ],
+     [
+      128.89563,
+      -16.70367
+     ],
+     [
+      128.89563,
+      -16.83933
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.089,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 20,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016--15.90_135.16",
   "hazard": "wildfire",
   "lon": 135.1632,
@@ -336,7 +545,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -347,10 +556,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-16",
     "detail": "Green impact for forestfire in 10104 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032940",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032940&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 10776 ha"
    }
   ],
   "first_seen": "2026-10-18",
-  "updated": "2026-10-18",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-16)",
@@ -384,7 +601,7 @@
   },
   "aoi_km2": 225.045,
   "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-19",
+  "after": "2026-10-18/2026-10-20",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -404,7 +621,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -472,7 +689,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -694,7 +911,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -762,7 +979,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -966,7 +1183,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1050,7 +1267,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1104,6 +1321,74 @@
    "s1_after": 0,
    "s2_before": 10,
    "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261014--13.69_143.04",
+  "hazard": "wildfire",
+  "lon": 143.0366,
+  "lat": -13.6886,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032858",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032858&episodeid=11&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-14",
+    "detail": "Green impact for forestfire in 10257 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-14)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.96726,
+      -13.75643
+     ],
+     [
+      143.10594,
+      -13.75643
+     ],
+     [
+      143.10594,
+      -13.62077
+     ],
+     [
+      142.96726,
+      -13.62077
+     ],
+     [
+      142.96726,
+      -13.75643
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.256,
+  "before": "2026-09-04/2026-10-12",
+  "after": "2026-10-16/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 15,
+   "s2_after": 2
   },
   "sensors": [
    "s2"
@@ -1245,6 +1530,74 @@
    "s1_after": 0,
    "s2_before": 19,
    "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261013--19.43_133.37",
+  "hazard": "wildfire",
+  "lon": 133.365,
+  "lat": -19.4277,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032874",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032874&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-13",
+    "detail": "Green impact for forestfire in 10347 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-13)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      133.29356,
+      -19.49553
+     ],
+     [
+      133.43644,
+      -19.49553
+     ],
+     [
+      133.43644,
+      -19.35987
+     ],
+     [
+      133.29356,
+      -19.35987
+     ],
+     [
+      133.29356,
+      -19.49553
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.321,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-15/2026-10-20",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 1
   },
   "sensors": [
    "s2"
@@ -1406,7 +1759,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-12",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2203,7 +2556,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2537,6 +2890,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261010--14.29_135.55",
+  "hazard": "wildfire",
+  "lon": 135.5526,
+  "lat": -14.293,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032867",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032867&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10242 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      135.48307,
+      -14.36083
+     ],
+     [
+      135.62213,
+      -14.36083
+     ],
+     [
+      135.62213,
+      -14.22517
+     ],
+     [
+      135.48307,
+      -14.22517
+     ],
+     [
+      135.48307,
+      -14.36083
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.045,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261009--15.32_134.85",
   "hazard": "wildfire",
   "lon": 134.8531,
@@ -2544,7 +2965,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2970,7 +3391,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -5308,7 +5729,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -5327,10 +5748,18 @@
     "title": "Forest fires in Papua New Guinea (Green alert)",
     "date": "2026-10-02",
     "detail": "Green impact for forestfire in 10553 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032828",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032828&episodeid=12&eventtype=WF",
+    "title": "Forest fires in Papua New Guinea, Australia (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Green impact for forestfire in 10193 ha"
    }
   ],
   "first_seen": "2026-10-10",
-  "updated": "2026-10-16",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Papua New Guinea (2026-10-04)",
@@ -5364,12 +5793,12 @@
   },
   "aoi_km2": 225.033,
   "before": "2026-08-25/2026-10-02",
-  "after": "2026-10-06/2026-10-16",
+  "after": "2026-10-06/2026-10-20",
   "scenes": {
    "s1_before": 6,
-   "s1_after": 2,
+   "s1_after": 3,
    "s2_before": 1,
-   "s2_after": 1
+   "s2_after": 2
   },
   "sensors": [
    "s1",
@@ -5798,7 +6227,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -6016,7 +6445,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -14209,6 +14638,81 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261014-43.21_-77.70",
+  "hazard": "flood",
+  "lon": -77.704665,
+  "lat": 43.2090179,
+  "bbox": [
+   -77.7320383,
+   43.1942349,
+   -77.6773713,
+   43.223809
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-15",
+  "place": "Greece, Rhodes, Evia, Sporades islands",
+  "country": "Greece",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.aol.co.uk/articles/hurricane-trudy-menaces-mexico-pacific-100709000.html",
+    "title": "Hurricane Trudy menaces Mexico Pacific coast and Greece hit by deadly floods",
+    "outlet": "aol.co.uk",
+    "date": "2026-10-20",
+    "quote": "heavy rain and thunderstorms caused severe flooding and one fatality across Rhodes, Evia and the Sporades islands",
+    "detail": "severe flooding, landslides, vehicle swept into sea, rescue operations, evacuations, fatalities"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Greece, Rhodes, Evia, Sporades islands, Greece (2026-10-14)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -77.73552,
+      43.18641
+     ],
+     [
+      -77.67389,
+      43.18641
+     ],
+     [
+      -77.67389,
+      43.23163
+     ],
+     [
+      -77.73552,
+      43.23163
+     ],
+     [
+      -77.73552,
+      43.18641
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.17,
+  "before": "2026-09-09/2026-10-09",
+  "after": "2026-10-14/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261012-20.80_-156.31",
   "hazard": "wildfire",
   "lon": -156.3106833,
@@ -15248,6 +15752,81 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260901-13.75_100.49",
+  "hazard": "flood",
+  "lon": 100.4935089,
+  "lat": 13.7524938,
+  "bbox": [
+   100.3278772,
+   13.2191019,
+   100.9386039,
+   13.9551693
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-01",
+  "event_end": "2026-09-30",
+  "place": "Bangkok, Thailand",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.asiaone.com/asia/thailand-cabinet-approves-400m-flood-relief-official-says",
+    "title": "Thailand cabinet approves $400m flood relief , official says",
+    "outlet": "asiaone.com",
+    "date": "2026-10-20",
+    "quote": "In September, Bangkok was declared a disaster-affected zone after nearly 300 mm of rain hit the city in just three days, as much as it typically receives in the whole of the month",
+    "detail": "disruption of operations of automakers and parts suppliers, deaths of at least 80 people"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Bangkok, Thailand, Thailand (2026-09-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.35479,
+      13.61684
+     ],
+     [
+      100.63223,
+      13.61684
+     ],
+     [
+      100.63223,
+      13.88815
+     ],
+     [
+      100.35479,
+      13.88815
+     ],
+     [
+      100.35479,
+      13.61684
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.512,
+  "before": "2026-07-28/2026-08-27",
+  "after": "2026-09-20/2026-10-04",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 2,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260807-49.60_-119.67",
   "hazard": "wildfire",
   "lon": -119.666667,
@@ -15466,6 +16045,80 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "fl-20261018-7.04_99.96",
+  "hazard": "flood",
+  "lon": 99.9615,
+  "lat": 7.0367,
+  "bbox": [
+   98.9586,
+   6.2727,
+   100.2206,
+   7.2037
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104241",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104241&episodeid=1&eventtype=FL",
+    "title": "Flood in Thailand (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Thailand (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      99.82573,
+      6.90104
+     ],
+     [
+      100.09727,
+      6.90104
+     ],
+     [
+      100.09727,
+      7.17236
+     ],
+     [
+      99.82573,
+      7.17236
+     ],
+     [
+      99.82573,
+      6.90104
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 899.744,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-20",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261016-14.03_-83.38",
   "hazard": "flood",
   "lon": -83.3806,
@@ -15531,6 +16184,150 @@
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261015--16.47_125.14",
+  "hazard": "wildfire",
+  "lon": 125.1418,
+  "lat": -16.4725,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032966",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032966&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 11246 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      125.07154,
+      -16.54033
+     ],
+     [
+      125.21206,
+      -16.54033
+     ],
+     [
+      125.21206,
+      -16.40467
+     ],
+     [
+      125.07154,
+      -16.40467
+     ],
+     [
+      125.07154,
+      -16.54033
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.37,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261020-52.72_-2.50",
+  "hazard": "flood",
+  "lon": -2.5008624,
+  "lat": 52.7214452,
+  "bbox": [
+   -2.6673648,
+   52.6145427,
+   -2.3122105,
+   52.8283724
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-20",
+  "place": "Telford and Wrekin, Telford & Wrekin Council",
+  "country": "England",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.shropshirelive.com/news/2026/10/20/750000-investment-underway-to-protect-telford-and-wrekin-communities-from-flooding/",
+    "title": "\u00a3750 , 000 investment underway to protect Telford and Wrekin communities from flooding",
+    "outlet": "shropshirelive.com",
+    "date": "2026-10-20",
+    "quote": "Residents across Telford and Wrekin are being urged to take action by the Environment Agency to prepare for winter flooding.",
+    "detail": "protect homes, reduce the impact of severe weather, support local communities"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Telford and Wrekin, Telford & Wrekin Council, England (2026-10-20)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -2.66736,
+      52.61454
+     ],
+     [
+      -2.31221,
+      52.61454
+     ],
+     [
+      -2.31221,
+      52.82837
+     ],
+     [
+      -2.66736,
+      52.82837
+     ],
+     [
+      -2.66736,
+      52.61454
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 570.571,
+  "before": "2026-09-15/2026-10-15",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 0,
+   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
@@ -16209,6 +17006,68 @@
      [
       -76.53575,
       38.25265
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261019-35.23_-120.70",
+  "hazard": "wildfire",
+  "lon": -120.6968959,
+  "lat": 35.2295226,
+  "bbox": [
+   -120.7019594,
+   35.2232909,
+   -120.6914171,
+   35.2359488
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Johnson Ranch Open Space, San Luis Obispo County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.ksby.com/san-luis-obispo/northern-chumash-tribe-hosts-cultural-burn-at-johnson-ranch-open-space",
+    "title": "Northern Chumash Tribe hosts cultural burn at Johnson Ranch Open Space",
+    "outlet": "ksby.com",
+    "date": "2026-10-20",
+    "quote": "Smoke from the burn could be seen near Highway 101 and in surrounding communities.",
+    "detail": "reducing wildfire risk in the area"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Johnson Ranch Open Space, San Luis Obispo County, United States (2026-10-19)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -120.72418,
+      35.20701
+     ],
+     [
+      -120.66919,
+      35.20701
+     ],
+     [
+      -120.66919,
+      35.25223
+     ],
+     [
+      -120.72418,
+      35.25223
+     ],
+     [
+      -120.72418,
+      35.20701
      ]
     ]
    ]
