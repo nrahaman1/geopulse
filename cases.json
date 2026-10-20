@@ -256,6 +256,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261017-38.71_1.43",
+  "hazard": "flood",
+  "lon": 1.4334,
+  "lat": 38.7062,
+  "bbox": [
+   1.2133,
+   38.6404,
+   1.6216,
+   39.1184
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104235",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104235&episodeid=4&eventtype=FL",
+    "title": "Flood in Spain (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Spain (2026-10-17)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      1.26073,
+      38.57054
+     ],
+     [
+      1.60607,
+      38.57054
+     ],
+     [
+      1.60607,
+      38.84186
+     ],
+     [
+      1.26073,
+      38.84186
+     ],
+     [
+      1.26073,
+      38.57054
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.436,
+  "before": "2026-09-12/2026-10-12",
+  "after": "2026-10-17/2026-10-20",
+  "scenes": {
+   "s1_before": 33,
+   "s1_after": 6,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016--15.90_135.16",
   "hazard": "wildfire",
   "lon": 135.1632,
@@ -320,6 +393,74 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261016--17.22_131.80",
+  "hazard": "wildfire",
+  "lon": 131.8003,
+  "lat": -17.2217,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-19",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032926",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032926&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 10379 ha"
+   }
+  ],
+  "first_seen": "2026-10-19",
+  "updated": "2026-10-19",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      131.72976,
+      -17.28953
+     ],
+     [
+      131.87084,
+      -17.28953
+     ],
+     [
+      131.87084,
+      -17.15387
+     ],
+     [
+      131.72976,
+      -17.15387
+     ],
+     [
+      131.72976,
+      -17.28953
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.599,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-20",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 2,
+   "s2_before": 39,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -844,10 +985,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-17",
     "detail": "Green impact for forestfire in 11368 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032928",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032928&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Green impact for forestfire in 11245 ha"
    }
   ],
   "first_seen": "2026-10-19",
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-14)",
@@ -881,7 +1030,7 @@
   },
   "aoi_km2": 225.325,
   "before": "2026-09-04/2026-10-12",
-  "after": "2026-10-16/2026-10-19",
+  "after": "2026-10-16/2026-10-20",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -1042,7 +1191,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Zimbabwe",
   "sources": [
@@ -2258,7 +2407,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2753,7 +2902,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-11",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Costa Rica",
   "sources": [
@@ -3788,6 +3937,80 @@
    "s1_after": 2,
    "s2_before": 9,
    "s2_after": 3
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261007-43.46_11.14",
+  "hazard": "flood",
+  "lon": 11.1389,
+  "lat": 43.4587,
+  "bbox": [
+   9.6868,
+   42.2376,
+   12.3723,
+   44.4725
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Italy",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104220",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=7&eventtype=FL",
+    "title": "Flood in Italy (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Italy (2026-10-07)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      10.95327,
+      43.32304
+     ],
+     [
+      11.32453,
+      43.32304
+     ],
+     [
+      11.32453,
+      43.59436
+     ],
+     [
+      10.95327,
+      43.59436
+     ],
+     [
+      10.95327,
+      43.32304
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.672,
+  "before": "2026-09-02/2026-10-02",
+  "after": "2026-10-10/2026-10-20",
+  "scenes": {
+   "s1_before": 22,
+   "s1_after": 8,
+   "s2_before": 17,
+   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -12218,7 +12441,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-09-15",
-  "event_end": "2026-10-01",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Ecuador",
   "sources": [
@@ -12858,6 +13081,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260817-28.50_-106.00",
+  "hazard": "flood",
+  "lon": -106.0,
+  "lat": 28.5,
+  "bbox": [
+   -109.075,
+   25.5587,
+   -103.3067,
+   31.7839
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-08-17",
+  "event_end": "2026-10-18",
+  "place": "",
+  "country": "Mexico",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104099",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104099&episodeid=28&eventtype=FL",
+    "title": "Flood in Mexico (Green alert)",
+    "date": "2026-08-17",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Mexico (2026-08-17)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -106.15333,
+      28.36434
+     ],
+     [
+      -105.84667,
+      28.36434
+     ],
+     [
+      -105.84667,
+      28.63566
+     ],
+     [
+      -106.15333,
+      28.63566
+     ],
+     [
+      -106.15333,
+      28.36434
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.283,
+  "before": "2026-07-13/2026-08-12",
+  "after": "2026-10-08/2026-10-20",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 4,
+   "s2_before": 18,
+   "s2_after": 10
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20260704-21.86_96.10",
   "hazard": "flood",
   "lon": 96.098,
@@ -13075,6 +13372,172 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261016-34.27_-91.92",
+  "hazard": "wildfire",
+  "lon": -91.9248307,
+  "lat": 34.2711667,
+  "bbox": [
+   -92.2332249,
+   34.058588,
+   -91.4313495,
+   34.4928108
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Jefferson County, Arkansas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.arkansasonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
+    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage | The Arkansas Democrat - Gazette",
+    "outlet": "arkansasonline.com",
+    "date": "2026-10-17",
+    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
+    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.nwaonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
+    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage",
+    "outlet": "nwaonline.com",
+    "date": "2026-10-17",
+    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
+    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Jefferson County, Arkansas, US (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -92.08789,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.13551
+     ],
+     [
+      -91.76177,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.40682
+     ],
+     [
+      -92.08789,
+      34.13551
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.342,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-17/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 53,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261016-33.43_-117.61",
+  "hazard": "wildfire",
+  "lon": -117.6124179,
+  "lat": 33.4270275,
+  "bbox": [
+   -117.6816859,
+   33.3336696,
+   -117.5711815,
+   33.4908334
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-18",
+  "place": "San Clemente, Orange County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.theepochtimes.com/us/evacuation-orders-issued-as-wildfire-burns-homes-in-southern-california-6105157",
+    "title": "Evacuation Orders Issued as Wildfire Burns Homes in Southern California",
+    "outlet": "theepochtimes.com",
+    "date": "2026-10-17",
+    "quote": "Evacuation orders have been issued after a wind-fueled wildfire ignited Friday in a Southern California coastal community, burning through homes and 465 acres",
+    "detail": "Homes were burned, six homes have either been damaged or destroyed, evacuation orders issued for several neighborhoods, over 500 firefighters assigned to the fire, power shut off for 134,000 customers"
+   },
+   {
+    "kind": "news",
+    "url": "https://aa.com.tr/en/americas/california-wildfire-forces-thousands-to-evacuate-burns-570-acres/4092753",
+    "title": "California wildfire forces thousands to evacuate , burns 570 acres",
+    "outlet": "aa.com.tr",
+    "date": "2026-10-18",
+    "quote": "California wildfire forces thousands to evacuate, burns 570 acres",
+    "detail": "thousands of residents evacuated, seven homes damaged or destroyed"
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 San Clemente, Orange County, United States (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -117.68169,
+      33.33367
+     ],
+     [
+      -117.57118,
+      33.33367
+     ],
+     [
+      -117.57118,
+      33.49083
+     ],
+     [
+      -117.68169,
+      33.49083
+     ],
+     [
+      -117.68169,
+      33.33367
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 179.048,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-20",
+  "scenes": {
+   "s1_before": 13,
+   "s1_after": 0,
+   "s2_before": 17,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -14934,6 +15397,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261018--14.36_25.80",
+  "hazard": "wildfire",
+  "lon": 25.802,
+  "lat": -14.364,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Zambia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032930",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032930&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Zambia (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 12896 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.73245,
+      -14.43183
+     ],
+     [
+      25.87155,
+      -14.43183
+     ],
+     [
+      25.87155,
+      -14.29617
+     ],
+     [
+      25.73245,
+      -14.29617
+     ],
+     [
+      25.73245,
+      -14.43183
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.113,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261016-14.03_-83.38",
   "hazard": "flood",
   "lon": -83.3806,
@@ -14999,243 +15531,6 @@
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261016--17.22_131.80",
-  "hazard": "wildfire",
-  "lon": 131.8003,
-  "lat": -17.2217,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-19",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032926",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032926&episodeid=1&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-16",
-    "detail": "Green impact for forestfire in 10379 ha"
-   }
-  ],
-  "first_seen": "2026-10-19",
-  "updated": "2026-10-19",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-16)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      131.72976,
-      -17.28953
-     ],
-     [
-      131.87084,
-      -17.28953
-     ],
-     [
-      131.87084,
-      -17.15387
-     ],
-     [
-      131.72976,
-      -17.15387
-     ],
-     [
-      131.72976,
-      -17.28953
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.599,
-  "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-20",
-  "scenes": {
-   "s1_before": 12,
-   "s1_after": 0,
-   "s2_before": 39,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261016-34.27_-91.92",
-  "hazard": "wildfire",
-  "lon": -91.9248307,
-  "lat": 34.2711667,
-  "bbox": [
-   -92.2332249,
-   34.058588,
-   -91.4313495,
-   34.4928108
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-16",
-  "place": "Jefferson County, Arkansas",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.arkansasonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
-    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage | The Arkansas Democrat - Gazette",
-    "outlet": "arkansasonline.com",
-    "date": "2026-10-17",
-    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
-    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
-   },
-   {
-    "kind": "news",
-    "url": "https://www.nwaonline.com/news/2026/oct/16/jefferson-county-wildfire-north-of-pine-bluff/",
-    "title": "Jefferson County wildfire north of Pine Bluff about 90 % curbed ; officials tallying damage",
-    "outlet": "nwaonline.com",
-    "date": "2026-10-17",
-    "quote": "Two homes, two shops, several vehicles and farm equipment were lost in the approximately 100-acre wildfire along McFadden Road in Jefferson County.",
-    "detail": "Two homes, two shops, several vehicles and farm equipment were lost."
-   }
-  ],
-  "first_seen": "2026-10-18",
-  "updated": "2026-10-18",
-  "score": 0.3,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Jefferson County, Arkansas, US (2026-10-16)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -92.08789,
-      34.13551
-     ],
-     [
-      -91.76177,
-      34.13551
-     ],
-     [
-      -91.76177,
-      34.40682
-     ],
-     [
-      -92.08789,
-      34.40682
-     ],
-     [
-      -92.08789,
-      34.13551
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 903.342,
-  "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-17/2026-10-20",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 53,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261016-33.43_-117.61",
-  "hazard": "wildfire",
-  "lon": -117.6124179,
-  "lat": 33.4270275,
-  "bbox": [
-   -117.6816859,
-   33.3336696,
-   -117.5711815,
-   33.4908334
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-18",
-  "place": "San Clemente, Orange County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.theepochtimes.com/us/evacuation-orders-issued-as-wildfire-burns-homes-in-southern-california-6105157",
-    "title": "Evacuation Orders Issued as Wildfire Burns Homes in Southern California",
-    "outlet": "theepochtimes.com",
-    "date": "2026-10-17",
-    "quote": "Evacuation orders have been issued after a wind-fueled wildfire ignited Friday in a Southern California coastal community, burning through homes and 465 acres",
-    "detail": "Homes were burned, six homes have either been damaged or destroyed, evacuation orders issued for several neighborhoods, over 500 firefighters assigned to the fire, power shut off for 134,000 customers"
-   },
-   {
-    "kind": "news",
-    "url": "https://aa.com.tr/en/americas/california-wildfire-forces-thousands-to-evacuate-burns-570-acres/4092753",
-    "title": "California wildfire forces thousands to evacuate , burns 570 acres",
-    "outlet": "aa.com.tr",
-    "date": "2026-10-18",
-    "quote": "California wildfire forces thousands to evacuate, burns 570 acres",
-    "detail": "thousands of residents evacuated, seven homes damaged or destroyed"
-   }
-  ],
-  "first_seen": "2026-10-18",
-  "updated": "2026-10-18",
-  "score": 0.3,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 San Clemente, Orange County, United States (2026-10-16)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -117.68169,
-      33.33367
-     ],
-     [
-      -117.57118,
-      33.33367
-     ],
-     [
-      -117.57118,
-      33.49083
-     ],
-     [
-      -117.68169,
-      33.49083
-     ],
-     [
-      -117.68169,
-      33.33367
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 179.048,
-  "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-20",
-  "scenes": {
-   "s1_before": 13,
-   "s1_after": 0,
-   "s2_before": 17,
    "s2_after": 0
   },
   "sensors": [
