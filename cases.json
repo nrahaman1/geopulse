@@ -256,6 +256,142 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261018--14.36_25.80",
+  "hazard": "wildfire",
+  "lon": 25.802,
+  "lat": -14.364,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Zambia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032930",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032930&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Zambia (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 12896 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.73245,
+      -14.43183
+     ],
+     [
+      25.87155,
+      -14.43183
+     ],
+     [
+      25.87155,
+      -14.29617
+     ],
+     [
+      25.73245,
+      -14.29617
+     ],
+     [
+      25.73245,
+      -14.43183
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.113,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261018--14.91_25.74",
+  "hazard": "wildfire",
+  "lon": 25.7411,
+  "lat": -14.9059,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Zambia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032931",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032931&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Zambia (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 12373 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.67138,
+      -14.97373
+     ],
+     [
+      25.81082,
+      -14.97373
+     ],
+     [
+      25.81082,
+      -14.83807
+     ],
+     [
+      25.67138,
+      -14.83807
+     ],
+     [
+      25.67138,
+      -14.97373
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.13,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261017-41.38_2.18",
   "hazard": "flood",
   "lon": 2.1771,
@@ -1605,6 +1741,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261013-10.05_29.07",
+  "hazard": "wildfire",
+  "lon": 29.0687,
+  "lat": 10.0459,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Sudan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032947",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032947&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Sudan (Green alert)",
+    "date": "2026-10-13",
+    "detail": "Green impact for forestfire in 14613 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Sudan (2026-10-13)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.00028,
+      9.97807
+     ],
+     [
+      29.13712,
+      9.97807
+     ],
+     [
+      29.13712,
+      10.11373
+     ],
+     [
+      29.00028,
+      10.11373
+     ],
+     [
+      29.00028,
+      9.97807
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.197,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-15/2026-10-20",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261012-35.14_40.21",
   "hazard": "flood",
   "lon": 40.2143,
@@ -2037,7 +2241,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2958,6 +3162,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261010--19.89_26.20",
+  "hazard": "wildfire",
+  "lon": 26.1983,
+  "lat": -19.887,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-10",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Botswana, Zimbabwe",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032897",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032897&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Botswana, Zimbabwe (Green alert)",
+    "date": "2026-10-10",
+    "detail": "Green impact for forestfire in 10125 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana, Zimbabwe (2026-10-10)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      26.12665,
+      -19.95483
+     ],
+     [
+      26.26995,
+      -19.95483
+     ],
+     [
+      26.26995,
+      -19.81917
+     ],
+     [
+      26.12665,
+      -19.81917
+     ],
+     [
+      26.12665,
+      -19.95483
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.227,
+  "before": "2026-08-31/2026-10-08",
+  "after": "2026-10-12/2026-10-20",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 34,
+   "s2_after": 8
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261009--15.32_134.85",
   "hazard": "wildfire",
   "lon": 134.8531,
@@ -3459,7 +3731,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -4304,7 +4576,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4730,7 +5002,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4962,7 +5234,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-16",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4973,10 +5245,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-06",
     "detail": "Green impact for forestfire in 10125 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032804",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032804&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 10437 ha"
    }
   ],
   "first_seen": "2026-10-15",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
@@ -5010,12 +5290,12 @@
   },
   "aoi_km2": 225.295,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-08/2026-10-15",
+  "after": "2026-10-08/2026-10-20",
   "scenes": {
    "s1_before": 9,
-   "s1_after": 2,
+   "s1_after": 3,
    "s2_before": 16,
-   "s2_after": 4
+   "s2_after": 8
   },
   "sensors": [
    "s1",
@@ -6021,7 +6301,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-04",
-  "event_end": "2026-10-19",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -6032,10 +6312,18 @@
     "title": "Forest fires in Nigeria (Green alert)",
     "date": "2026-10-04",
     "detail": "Green impact for forestfire in 11801 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032906",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032906&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Chad, Nigeria, Cameroon (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Green impact for forestfire in 10039 ha"
    }
   ],
   "first_seen": "2026-10-15",
-  "updated": "2026-10-15",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Nigeria (2026-10-04)",
@@ -6069,14 +6357,15 @@
   },
   "aoi_km2": 225.039,
   "before": "2026-08-25/2026-10-02",
-  "after": "2026-10-06/2026-10-15",
+  "after": "2026-10-06/2026-10-20",
   "scenes": {
    "s1_before": 3,
-   "s1_after": 0,
+   "s1_after": 1,
    "s2_before": 13,
-   "s2_after": 5
+   "s2_after": 8
   },
   "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -13971,6 +14260,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261020-52.72_-2.50",
+  "hazard": "flood",
+  "lon": -2.5008624,
+  "lat": 52.7214452,
+  "bbox": [
+   -2.6673648,
+   52.6145427,
+   -2.3122105,
+   52.8283724
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-20",
+  "place": "Telford and Wrekin, Telford & Wrekin Council",
+  "country": "England",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.shropshirelive.com/news/2026/10/20/750000-investment-underway-to-protect-telford-and-wrekin-communities-from-flooding/",
+    "title": "\u00a3750 , 000 investment underway to protect Telford and Wrekin communities from flooding",
+    "outlet": "shropshirelive.com",
+    "date": "2026-10-20",
+    "quote": "Residents across Telford and Wrekin are being urged to take action by the Environment Agency to prepare for winter flooding.",
+    "detail": "protect homes, reduce the impact of severe weather, support local communities"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Telford and Wrekin, Telford & Wrekin Council, England (2026-10-20)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -2.66736,
+      52.61454
+     ],
+     [
+      -2.31221,
+      52.61454
+     ],
+     [
+      -2.31221,
+      52.82837
+     ],
+     [
+      -2.66736,
+      52.82837
+     ],
+     [
+      -2.66736,
+      52.61454
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 570.571,
+  "before": "2026-09-15/2026-10-15",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 4,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261019-54.27_-0.91",
   "hazard": "flood",
   "lon": -0.9128134,
@@ -14111,6 +14474,80 @@
    "s1_before": 18,
    "s1_after": 1,
    "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261018-52.82_-2.01",
+  "hazard": "wildfire",
+  "lon": -2.0074547,
+  "lat": 52.8246942,
+  "bbox": [
+   -2.4707898,
+   52.4232438,
+   -1.5853561,
+   53.226224
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-18",
+  "place": "A34, Staffordshire",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.stokesentinel.co.uk/news/stoke-on-trent-news/live-updates-firefighters-tackle-a34-11204691",
+    "title": "Live updates as firefighters tackle A34 blaze opposite Royal Stoke",
+    "outlet": "stokesentinel.co.uk",
+    "date": "2026-10-18",
+    "quote": "Firefighters are tackling a blaze off the A34",
+    "detail": "Several fire crews are reportedly at the scene"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 A34, Staffordshire, United Kingdom (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -2.23045,
+      52.68904
+     ],
+     [
+      -1.78446,
+      52.68904
+     ],
+     [
+      -1.78446,
+      52.96035
+     ],
+     [
+      -2.23045,
+      52.96035
+     ],
+     [
+      -2.23045,
+      52.68904
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.056,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 32,
+   "s1_after": 1,
+   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
@@ -15976,75 +16413,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261018--14.36_25.80",
-  "hazard": "wildfire",
-  "lon": 25.802,
-  "lat": -14.364,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-18",
-  "event_end": "2026-10-20",
-  "place": "",
-  "country": "Zambia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032930",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032930&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Zambia (Green alert)",
-    "date": "2026-10-18",
-    "detail": "Green impact for forestfire in 12896 ha"
-   }
-  ],
-  "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Zambia (2026-10-18)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      25.73245,
-      -14.43183
-     ],
-     [
-      25.87155,
-      -14.43183
-     ],
-     [
-      25.87155,
-      -14.29617
-     ],
-     [
-      25.73245,
-      -14.29617
-     ],
-     [
-      25.73245,
-      -14.43183
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.113,
-  "before": "2026-09-08/2026-10-16",
-  "after": "2026-10-20/2026-10-20",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261018-7.04_99.96",
   "hazard": "flood",
   "lon": 99.9615,
@@ -16262,81 +16630,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261020-52.72_-2.50",
-  "hazard": "flood",
-  "lon": -2.5008624,
-  "lat": 52.7214452,
-  "bbox": [
-   -2.6673648,
-   52.6145427,
-   -2.3122105,
-   52.8283724
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-20",
-  "event_end": "2026-10-20",
-  "place": "Telford and Wrekin, Telford & Wrekin Council",
-  "country": "England",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.shropshirelive.com/news/2026/10/20/750000-investment-underway-to-protect-telford-and-wrekin-communities-from-flooding/",
-    "title": "\u00a3750 , 000 investment underway to protect Telford and Wrekin communities from flooding",
-    "outlet": "shropshirelive.com",
-    "date": "2026-10-20",
-    "quote": "Residents across Telford and Wrekin are being urged to take action by the Environment Agency to prepare for winter flooding.",
-    "detail": "protect homes, reduce the impact of severe weather, support local communities"
-   }
-  ],
-  "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Telford and Wrekin, Telford & Wrekin Council, England (2026-10-20)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -2.66736,
-      52.61454
-     ],
-     [
-      -2.31221,
-      52.61454
-     ],
-     [
-      -2.31221,
-      52.82837
-     ],
-     [
-      -2.66736,
-      52.82837
-     ],
-     [
-      -2.66736,
-      52.61454
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 570.571,
-  "before": "2026-09-15/2026-10-15",
-  "after": "2026-10-20/2026-10-20",
-  "scenes": {
-   "s1_before": 20,
-   "s1_after": 0,
-   "s2_before": 4,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261019-64.71_-147.16",
   "hazard": "flood",
   "lon": -147.1584871,
@@ -16478,81 +16771,6 @@
    "s1_before": 12,
    "s1_after": 0,
    "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261018-52.82_-2.01",
-  "hazard": "wildfire",
-  "lon": -2.0074547,
-  "lat": 52.8246942,
-  "bbox": [
-   -2.4707898,
-   52.4232438,
-   -1.5853561,
-   53.226224
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-18",
-  "event_end": "2026-10-18",
-  "place": "A34, Staffordshire",
-  "country": "United Kingdom",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.stokesentinel.co.uk/news/stoke-on-trent-news/live-updates-firefighters-tackle-a34-11204691",
-    "title": "Live updates as firefighters tackle A34 blaze opposite Royal Stoke",
-    "outlet": "stokesentinel.co.uk",
-    "date": "2026-10-18",
-    "quote": "Firefighters are tackling a blaze off the A34",
-    "detail": "Several fire crews are reportedly at the scene"
-   }
-  ],
-  "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 A34, Staffordshire, United Kingdom (2026-10-18)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -2.23045,
-      52.68904
-     ],
-     [
-      -1.78446,
-      52.68904
-     ],
-     [
-      -1.78446,
-      52.96035
-     ],
-     [
-      -2.23045,
-      52.96035
-     ],
-     [
-      -2.23045,
-      52.68904
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 907.056,
-  "before": "2026-09-08/2026-10-16",
-  "after": "2026-10-20/2026-10-20",
-  "scenes": {
-   "s1_before": 32,
-   "s1_after": 0,
-   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
