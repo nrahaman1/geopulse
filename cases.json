@@ -342,10 +342,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-15",
     "detail": "Green impact for forestfire in 10389 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032938",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032938&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 14485 ha"
    }
   ],
   "first_seen": "2026-10-17",
-  "updated": "2026-10-17",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-15)",
@@ -379,11 +387,11 @@
   },
   "aoi_km2": 225.529,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-17/2026-10-17",
+  "after": "2026-10-17/2026-10-20",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
-   "s2_before": 18,
+   "s2_before": 20,
    "s2_after": 2
   },
   "sensors": [
@@ -602,6 +610,142 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261015--21.96_142.06",
+  "hazard": "wildfire",
+  "lon": 142.0612,
+  "lat": -21.9631,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-19",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032883",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032883&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 10944 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      141.98855,
+      -22.03093
+     ],
+     [
+      142.13385,
+      -22.03093
+     ],
+     [
+      142.13385,
+      -21.89527
+     ],
+     [
+      141.98855,
+      -21.89527
+     ],
+     [
+      141.98855,
+      -22.03093
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.329,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-20",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 40,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261015--21.68_140.61",
+  "hazard": "wildfire",
+  "lon": 140.6059,
+  "lat": -21.6831,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-19",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032917",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032917&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 10048 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      140.5334,
+      -21.75093
+     ],
+     [
+      140.6784,
+      -21.75093
+     ],
+     [
+      140.6784,
+      -21.61527
+     ],
+     [
+      140.5334,
+      -21.61527
+     ],
+     [
+      140.5334,
+      -21.75093
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.236,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-20",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 19,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -887,6 +1031,74 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261013--16.12_29.86",
+  "hazard": "wildfire",
+  "lon": 29.8598,
+  "lat": -16.1176,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-19",
+  "place": "",
+  "country": "Zimbabwe",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032873",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032873&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Zimbabwe (Green alert)",
+    "date": "2026-10-13",
+    "detail": "Green impact for forestfire in 10303 ha"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zimbabwe (2026-10-13)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.78967,
+      -16.18543
+     ],
+     [
+      29.92993,
+      -16.18543
+     ],
+     [
+      29.92993,
+      -16.04977
+     ],
+     [
+      29.78967,
+      -16.04977
+     ],
+     [
+      29.78967,
+      -16.18543
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.581,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-15/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -1323,7 +1535,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-19",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -1350,10 +1562,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-10",
     "detail": "Green impact for forestfire in 13719 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032879",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032879&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-09",
+    "detail": "Green impact for forestfire in 10058 ha"
    }
   ],
   "first_seen": "2026-10-16",
-  "updated": "2026-10-17",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-11)",
@@ -1387,12 +1607,12 @@
   },
   "aoi_km2": 225.437,
   "before": "2026-09-01/2026-10-09",
-  "after": "2026-10-13/2026-10-17",
+  "after": "2026-10-13/2026-10-20",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
    "s2_before": 13,
-   "s2_after": 2
+   "s2_after": 4
   },
   "sensors": [
    "s2"
@@ -3514,7 +3734,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-19",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3866,7 +4086,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-19",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3885,10 +4105,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-05",
     "detail": "Green impact for forestfire in 21223 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032672",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032672&episodeid=18&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-05",
+    "detail": "Green impact for forestfire in 50512 ha"
    }
   ],
   "first_seen": "2026-10-11",
-  "updated": "2026-10-12",
+  "updated": "2026-10-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
@@ -3922,12 +4150,12 @@
   },
   "aoi_km2": 225.42,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-08/2026-10-12",
+  "after": "2026-10-08/2026-10-20",
   "scenes": {
    "s1_before": 6,
-   "s1_after": 1,
+   "s1_after": 2,
    "s2_before": 17,
-   "s2_after": 4
+   "s2_after": 8
   },
   "sensors": [
    "s1",
@@ -4652,7 +4880,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-05",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-19",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -12851,6 +13079,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261019-54.27_-0.91",
+  "hazard": "flood",
+  "lon": -0.9128134,
+  "lat": 54.2660508,
+  "bbox": [
+   -0.9328134,
+   54.2460508,
+   -0.8928134,
+   54.2860508
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Kirkby Mills, North Yorkshire",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.yorkpress.co.uk/news/26650868.river-dove-natural-flood-management-appeal-residents/",
+    "title": "River Dove Natural Flood Management appeal to residents",
+    "outlet": "yorkpress.co.uk",
+    "date": "2026-10-19",
+    "quote": "The \u00a3306,000 scheme focused on the River Dove in North Yorkshire and aimed to reduce flood risk for the villages of Kirkby Mills and Keldholme, with work delivered by the Environment Agency and Yorkshire Wildlife Trust.",
+    "detail": "The project reconnected 27 hectares of floodplain to the river and created more than 7,500 cubic metres of flood storage\u2014about the volume of three Olympic-sized swimming pools."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Kirkby Mills, North Yorkshire, United Kingdom (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.95127,
+      54.24344
+     ],
+     [
+      -0.87436,
+      54.24344
+     ],
+     [
+      -0.87436,
+      54.28866
+     ],
+     [
+      -0.95127,
+      54.28866
+     ],
+     [
+      -0.95127,
+      54.24344
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.215,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-20",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261018-51.91_-8.17",
   "hazard": "flood",
   "lon": -8.1700962,
@@ -14618,7 +14920,7 @@
   },
   "aoi_km2": 905.552,
   "before": "2026-09-14/2026-10-14",
-  "after": "2026-10-19/2026-10-19",
+  "after": "2026-10-19/2026-10-20",
   "scenes": {
    "s1_before": 24,
    "s1_after": 0,
@@ -14692,7 +14994,7 @@
   },
   "aoi_km2": 901.496,
   "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-19",
+  "after": "2026-10-16/2026-10-20",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -14761,7 +15063,7 @@
   },
   "aoi_km2": 225.599,
   "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-19",
+  "after": "2026-10-18/2026-10-20",
   "scenes": {
    "s1_before": 12,
    "s1_after": 0,
@@ -14845,7 +15147,7 @@
   },
   "aoi_km2": 903.342,
   "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-17/2026-10-19",
+  "after": "2026-10-17/2026-10-20",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -14929,11 +15231,236 @@
   },
   "aoi_km2": 179.048,
   "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-19",
+  "after": "2026-10-18/2026-10-20",
   "scenes": {
    "s1_before": 13,
    "s1_after": 0,
    "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261019-64.71_-147.16",
+  "hazard": "flood",
+  "lon": -147.1584871,
+  "lat": 64.712967,
+  "bbox": [
+   -147.225047,
+   64.704417,
+   -147.123972,
+   64.721428
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Fairbanks North Star Borough, borough",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.newsminer.com/news/local_news/new-flood-maps-could-bring-relief-to-thousands-of-borough-homeowners/article_30f52e67-ef83-4959-91e3-9a7d88cdffee.html",
+    "title": "New flood maps could bring relief to thousands of borough homeowners",
+    "outlet": "newsminer.com",
+    "date": "2026-10-19",
+    "quote": "A major revision of the region\u2019s floodplain maps goes to the Fairbanks North Star Borough Assembly for approval on Thursday.",
+    "detail": "2,800 homes would be removed from flood zones; 538 structures would be added to flood zones, including most of Moose Creek."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Fairbanks North Star Borough, borough, United States (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -147.22708,
+      64.69031
+     ],
+     [
+      -147.12193,
+      64.69031
+     ],
+     [
+      -147.12193,
+      64.73553
+     ],
+     [
+      -147.22708,
+      64.73553
+     ],
+     [
+      -147.22708,
+      64.69031
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.256,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-20",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261019-37.44_-122.18",
+  "hazard": "flood",
+  "lon": -122.1799526,
+  "lat": 37.4393177,
+  "bbox": [
+   -122.2402411,
+   37.4055711,
+   -122.1148681,
+   37.4660032
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "San Francisquito Creek, Santa Clara County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.paloaltoonline.com/election/2026/10/18/pete-dailey-flood-protection-and-representation-for-north-county/",
+    "title": "Pete Dailey : Flood protection and representation for north county",
+    "outlet": "paloaltoonline.com",
+    "date": "2026-10-19",
+    "quote": "Dailey said Valley Water is trying to back out of flood commitments in Palo Alto along the San Francisquito Creek and changing measurements of success from performance to funding dollars.",
+    "detail": "The needs of District 7 \u2013 especially those related to flooding \u2013 were going unmet. The person that\u2019s in those discussions in the JPA isn\u2019t bringing the lived experience of the residents to the JPA to make decisions."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 San Francisquito Creek, Santa Clara County, United States (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -122.24024,
+      37.40557
+     ],
+     [
+      -122.11487,
+      37.40557
+     ],
+     [
+      -122.11487,
+      37.466
+     ],
+     [
+      -122.24024,
+      37.466
+     ],
+     [
+      -122.24024,
+      37.40557
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 74.366,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-20",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 0,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261018-52.82_-2.01",
+  "hazard": "wildfire",
+  "lon": -2.0074547,
+  "lat": 52.8246942,
+  "bbox": [
+   -2.4707898,
+   52.4232438,
+   -1.5853561,
+   53.226224
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-18",
+  "place": "A34, Staffordshire",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.stokesentinel.co.uk/news/stoke-on-trent-news/live-updates-firefighters-tackle-a34-11204691",
+    "title": "Live updates as firefighters tackle A34 blaze opposite Royal Stoke",
+    "outlet": "stokesentinel.co.uk",
+    "date": "2026-10-18",
+    "quote": "Firefighters are tackling a blaze off the A34",
+    "detail": "Several fire crews are reportedly at the scene"
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 A34, Staffordshire, United Kingdom (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -2.23045,
+      52.68904
+     ],
+     [
+      -1.78446,
+      52.68904
+     ],
+     [
+      -1.78446,
+      52.96035
+     ],
+     [
+      -2.23045,
+      52.96035
+     ],
+     [
+      -2.23045,
+      52.68904
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.056,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-20",
+  "scenes": {
+   "s1_before": 32,
+   "s1_after": 0,
+   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
@@ -14955,7 +15482,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-19",
   "place": "Tamil Nadu, Chennai",
   "country": "India",
   "sources": [
@@ -14976,10 +15503,19 @@
     "date": "2026-10-18",
     "quote": "Residents and climate groups have called for better access to Chennai\u2019s flood risk maps and disaster-response information.",
     "detail": "Residents and climate groups are seeking better access to flood-risk information to help vulnerable communities prepare for flooding. Some areas are not adequately captured in the flood-prone zones, and there are concerns about the accessibility of relief centre information for all residents, includ"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.thehindu.com/news/cities/chennai/city-scrapes-through-first-monsoon-spell-amid-widespread-waterlogging/article71599827.ece",
+    "title": "City scrapes through first monsoon spell amid widespread waterlogging",
+    "outlet": "thehindu.com",
+    "date": "2026-10-18",
+    "quote": "Chennai experienced widespread waterlogging during the first intense spell of Northeast monsoon rain on Saturday night.",
+    "detail": "Widespread waterlogging, uprooted trees in more than 10 places, and concerns about the efficiency of the stormwater drainage system and preparedness of civic authorities for intense rainfall during the Northeast monsoon."
    }
   ],
   "first_seen": "2026-10-17",
-  "updated": "2026-10-18",
+  "updated": "2026-10-20",
   "score": 0.15,
   "confidence": "low",
   "title": "Flood \u00b7 Tamil Nadu, Chennai, India (2026-10-17)",
@@ -15013,7 +15549,7 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-19",
+  "after": "2026-10-17/2026-10-20",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -15088,7 +15624,7 @@
   },
   "aoi_km2": 108.633,
   "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-19",
+  "after": "2026-10-16/2026-10-20",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
@@ -15182,7 +15718,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-19"
+  "after": "2026-10-15/2026-10-20"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -15257,7 +15793,131 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-19"
+  "after": "2026-10-13/2026-10-20"
+ },
+ {
+  "id": "wi-20261019--11.74_-67.14",
+  "hazard": "wildfire",
+  "lon": -67.1366534,
+  "lat": -11.743613,
+  "bbox": [
+   -67.1382745,
+   -11.745704,
+   -67.1346658,
+   -11.7424278
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Ontario, Canada",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wingsmagazine.com/wildfire-costs-for-2025-in-ontario-reach-273m/",
+    "title": "Wildfire costs for 2025 in Ontario reach $273M",
+    "outlet": "wingsmagazine.com",
+    "date": "2026-10-19",
+    "quote": "Wildfire costs for 2025 in Ontario reach $273M",
+    "detail": "The cost of battling wildfires in Ontario is projected to rise significantly, with the 2025 season's expenses reaching $273 million, a 60% increase from 2024. The funds cover wages for fire crews and operational costs for firefighting aircraft."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Ontario, Canada, Canada (2026-10-19)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -67.15941,
+      -11.76668
+     ],
+     [
+      -67.11353,
+      -11.76668
+     ],
+     [
+      -67.11353,
+      -11.72146
+     ],
+     [
+      -67.15941,
+      -11.72146
+     ],
+     [
+      -67.15941,
+      -11.76668
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261019-38.30_-76.49",
+  "hazard": "wildfire",
+  "lon": -76.4933648,
+  "lat": 38.2974855,
+  "bbox": [
+   -76.535754,
+   38.252645,
+   -76.454295,
+   38.342285
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "California",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://kfdm.com/news/nation-world/ca-uses-369m-in-federal-wildfire-aid-for-low-income-housing-not-fire-victims-report-hud-insurance-developers-paradise-santa-cruz-camp-fire-woolsey",
+    "title": "CA uses $369M in federal wildfire aid for low - income housing , not fire victims : report",
+    "outlet": "kfdm.com",
+    "date": "2026-10-19",
+    "quote": "California used $369 million in federal wildfire recovery aid for low-income housing, rather than for fire victims, according to a report.",
+    "detail": "The 2018 wildfires killed 103 people and damaged or destroyed more than 24,000 structures. The Camp Fire destroyed 14,000 homes and killed 85 people in Paradise. The Woolsey Fire killed three people and caused more than $6 billion in damage, destroying 1,643 structures."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 California, United States (2026-10-19)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -76.53575,
+      38.25265
+     ],
+     [
+      -76.4543,
+      38.25265
+     ],
+     [
+      -76.4543,
+      38.34229
+     ],
+     [
+      -76.53575,
+      38.34229
+     ],
+     [
+      -76.53575,
+      38.25265
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -15322,7 +15982,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-10-19"
+  "after": "2026-10-16/2026-10-20"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -15387,7 +16047,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-19"
+  "after": "2026-10-07/2026-10-20"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -15452,7 +16112,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-19"
+  "after": "2026-10-06/2026-10-20"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -15517,7 +16177,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-19"
+  "after": "2026-10-03/2026-10-20"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -15582,7 +16242,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-19"
+  "after": "2026-10-02/2026-10-20"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -15647,7 +16307,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-19"
+  "after": "2026-10-02/2026-10-20"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -15712,7 +16372,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-19"
+  "after": "2026-10-01/2026-10-20"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -15777,7 +16437,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-19"
+  "after": "2026-10-01/2026-10-20"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -15842,6 +16502,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-19"
+  "after": "2026-10-01/2026-10-20"
  }
 ]
