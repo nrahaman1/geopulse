@@ -91,6 +91,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261019-38.82_0.02",
+  "hazard": "flood",
+  "lon": 0.02299,
+  "lat": 38.81629,
+  "bbox": [
+   -0.256352,
+   38.652776,
+   0.249658,
+   39.024382
+  ],
+  "geometry_from": "cems",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Moraira, Gandia",
+  "country": "Spain",
+  "sources": [
+   {
+    "kind": "cems",
+    "id": "EMSR935",
+    "url": "https://rapidmapping.emergency.copernicus.eu/EMSR935",
+    "title": "Flood in Alicante-Valencia Regions, Spain",
+    "date": "2026-10-19",
+    "detail": "On 19 October 2026, an episode of adverse weather affecting the south of Valencia province and the north of Alicante is impacting a large number of people. Up to 500 rescues were carried out within 12 hours, with several fatalities reported and communities affected by disruptions to essential servic"
+   }
+  ],
+  "first_seen": "2026-10-19",
+  "updated": "2026-10-19",
+  "score": 0.5,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Moraira, Gandia, Spain (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.14995,
+      38.68063
+     ],
+     [
+      0.19593,
+      38.68063
+     ],
+     [
+      0.19593,
+      38.95195
+     ],
+     [
+      -0.14995,
+      38.95195
+     ],
+     [
+      -0.14995,
+      38.68063
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.552,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-21",
+  "scenes": {
+   "s1_before": 24,
+   "s1_after": 0,
+   "s2_before": 44,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261013-54.14_-115.68",
   "hazard": "wildfire",
   "lon": -115.6846504,
@@ -17078,80 +17151,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261019-38.82_0.02",
-  "hazard": "flood",
-  "lon": 0.02299,
-  "lat": 38.81629,
-  "bbox": [
-   -0.256352,
-   38.652776,
-   0.249658,
-   39.024382
-  ],
-  "geometry_from": "cems",
-  "event_start": "2026-10-19",
-  "event_end": "2026-10-19",
-  "place": "Moraira, Gandia",
-  "country": "Spain",
-  "sources": [
-   {
-    "kind": "cems",
-    "id": "EMSR935",
-    "url": "https://rapidmapping.emergency.copernicus.eu/EMSR935",
-    "title": "Flood in Alicante-Valencia Regions, Spain",
-    "date": "2026-10-19",
-    "detail": "On 19 October 2026, an episode of adverse weather affecting the south of Valencia province and the north of Alicante is impacting a large number of people. Up to 500 rescues were carried out within 12 hours, with several fatalities reported and communities affected by disruptions to essential servic"
-   }
-  ],
-  "first_seen": "2026-10-19",
-  "updated": "2026-10-19",
-  "score": 0.5,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Moraira, Gandia, Spain (2026-10-19)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -0.14995,
-      38.68063
-     ],
-     [
-      0.19593,
-      38.68063
-     ],
-     [
-      0.19593,
-      38.95195
-     ],
-     [
-      -0.14995,
-      38.95195
-     ],
-     [
-      -0.14995,
-      38.68063
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 905.552,
-  "before": "2026-09-14/2026-10-14",
-  "after": "2026-10-19/2026-10-21",
-  "scenes": {
-   "s1_before": 24,
-   "s1_after": 0,
-   "s2_before": 44,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261016-14.03_-83.38",
   "hazard": "flood",
   "lon": -83.3806,
@@ -17286,6 +17285,165 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 19,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261021-33.33_-105.67",
+  "hazard": "flood",
+  "lon": -105.673099,
+  "lat": 33.3315804,
+  "bbox": [
+   -105.726196,
+   33.305087,
+   -105.503689,
+   33.475344
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-21",
+  "place": "Ruidoso, New Mexico",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kasu.org/weather-environment-infrastructure/2026-10-21/deadly-flash-flood-in-nm-town-shows-how-wildfires-worsen-flood-risks",
+    "title": "Deadly flash flood in NM town shows how wildfires worsen flood risks",
+    "outlet": "kasu.org",
+    "date": "2026-10-21",
+    "quote": "flash flood in Ruidoso, New Mexico, in July 2025 killed three people, including two young children",
+    "detail": "three people killed, including two young children"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.abqjournal.com/news/town-leaders-said-they-were-prepared-for-floods-first-responders-disagree/3146595",
+    "title": "Ruidoso responders cite staffing gaps in deadly 2025 flood",
+    "outlet": "abqjournal.com",
+    "date": "2026-10-21",
+    "quote": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town.",
+    "detail": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town."
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Ruidoso, New Mexico, United States (2026-10-21)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -105.7262,
+      33.30509
+     ],
+     [
+      -105.50369,
+      33.30509
+     ],
+     [
+      -105.50369,
+      33.47534
+     ],
+     [
+      -105.7262,
+      33.47534
+     ],
+     [
+      -105.7262,
+      33.30509
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 390.633,
+  "before": "2026-09-16/2026-10-16",
+  "after": "2026-10-21/2026-10-21",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261020-46.93_-122.89",
+  "hazard": "flood",
+  "lon": -122.8855155,
+  "lat": 46.9319983,
+  "bbox": [
+   -123.2059347,
+   46.7627699,
+   -122.2020154,
+   47.1941356
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-20",
+  "place": "Thurston County, Washington",
+  "country": "USA",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kiro7.com/news/local/prepare-yourself-flooding-season-wa/2BVCJFXWSVHNLLLROBCWOKLJVI/",
+    "title": "Prepare yourself for flooding season in WA",
+    "outlet": "kiro7.com",
+    "date": "2026-10-20",
+    "quote": "Flooding is a recurring hazard in Thurston County",
+    "detail": "significant impacts on communities"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Thurston County, Washington, USA (2026-10-20)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -123.08284,
+      46.79634
+     ],
+     [
+      -122.68819,
+      46.79634
+     ],
+     [
+      -122.68819,
+      47.06765
+     ],
+     [
+      -123.08284,
+      47.06765
+     ],
+     [
+      -123.08284,
+      46.79634
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.731,
+  "before": "2026-09-15/2026-10-15",
+  "after": "2026-10-20/2026-10-21",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 39,
    "s2_after": 0
   },
   "sensors": [
@@ -17789,6 +17947,68 @@
      [
       147.30022,
       -2.44462
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261021-22.50_-81.14",
+  "hazard": "wildfire",
+  "lon": -81.1375455,
+  "lat": 22.4980264,
+  "bbox": [
+   -81.1435633,
+   22.4944522,
+   -81.1302781,
+   22.5015753
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-21",
+  "place": "Australia",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.smh.com.au/environment/climate-change/australia-faces-fiercer-longer-fires-should-we-start-using-smoke-jumpers-20261022-p6171f.html",
+    "title": "Australia bushfire strategy : Former fire chief calls for North American - style  smoke jumpers  to combat climate - fuelled blazes",
+    "outlet": "smh.com.au",
+    "date": "2026-10-21",
+    "quote": "Australia faces fiercer, longer fires.",
+    "detail": "economic cost"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Australia (2026-10-21)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -81.16123,
+      22.4754
+     ],
+     [
+      -81.11261,
+      22.4754
+     ],
+     [
+      -81.11261,
+      22.52062
+     ],
+     [
+      -81.16123,
+      22.52062
+     ],
+     [
+      -81.16123,
+      22.4754
      ]
     ]
    ]
