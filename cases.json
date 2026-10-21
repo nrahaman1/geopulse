@@ -1809,6 +1809,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261013--7.98_113.62",
+  "hazard": "wildfire",
+  "lon": 113.6248,
+  "lat": -7.9766,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-13",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033001",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033001&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Indonesia (Green alert)",
+    "date": "2026-10-13",
+    "detail": "Green impact for forestfire in 11506 ha"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Indonesia (2026-10-13)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      113.55677,
+      -8.04443
+     ],
+     [
+      113.69283,
+      -8.04443
+     ],
+     [
+      113.69283,
+      -7.90877
+     ],
+     [
+      113.55677,
+      -7.90877
+     ],
+     [
+      113.55677,
+      -8.04443
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.346,
+  "before": "2026-09-03/2026-10-11",
+  "after": "2026-10-15/2026-10-21",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261012-35.14_40.21",
   "hazard": "flood",
   "lon": 40.2143,
@@ -3032,7 +3101,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-18",
+  "event_end": "2026-10-20",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -14408,6 +14477,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261019-64.71_-147.16",
+  "hazard": "flood",
+  "lon": -147.1584871,
+  "lat": 64.712967,
+  "bbox": [
+   -147.225047,
+   64.704417,
+   -147.123972,
+   64.721428
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-19",
+  "place": "Fairbanks North Star Borough, borough",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.newsminer.com/news/local_news/new-flood-maps-could-bring-relief-to-thousands-of-borough-homeowners/article_30f52e67-ef83-4959-91e3-9a7d88cdffee.html",
+    "title": "New flood maps could bring relief to thousands of borough homeowners",
+    "outlet": "newsminer.com",
+    "date": "2026-10-19",
+    "quote": "A major revision of the region\u2019s floodplain maps goes to the Fairbanks North Star Borough Assembly for approval on Thursday.",
+    "detail": "2,800 homes would be removed from flood zones; 538 structures would be added to flood zones, including most of Moose Creek."
+   }
+  ],
+  "first_seen": "2026-10-20",
+  "updated": "2026-10-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Fairbanks North Star Borough, borough, United States (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -147.22708,
+      64.69031
+     ],
+     [
+      -147.12193,
+      64.69031
+     ],
+     [
+      -147.12193,
+      64.73553
+     ],
+     [
+      -147.22708,
+      64.73553
+     ],
+     [
+      -147.22708,
+      64.69031
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.256,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-21",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 3,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261018-51.91_-8.17",
   "hazard": "flood",
   "lon": -8.1700962,
@@ -16399,7 +16542,7 @@
   },
   "aoi_km2": 905.552,
   "before": "2026-09-14/2026-10-14",
-  "after": "2026-10-19/2026-10-20",
+  "after": "2026-10-19/2026-10-21",
   "scenes": {
    "s1_before": 24,
    "s1_after": 0,
@@ -16473,7 +16616,7 @@
   },
   "aoi_km2": 899.744,
   "before": "2026-09-13/2026-10-13",
-  "after": "2026-10-18/2026-10-20",
+  "after": "2026-10-18/2026-10-21",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -16547,7 +16690,7 @@
   },
   "aoi_km2": 901.496,
   "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-20",
+  "after": "2026-10-16/2026-10-21",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -16616,86 +16759,11 @@
   },
   "aoi_km2": 225.37,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-17/2026-10-20",
+  "after": "2026-10-17/2026-10-21",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261019-64.71_-147.16",
-  "hazard": "flood",
-  "lon": -147.1584871,
-  "lat": 64.712967,
-  "bbox": [
-   -147.225047,
-   64.704417,
-   -147.123972,
-   64.721428
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-19",
-  "event_end": "2026-10-19",
-  "place": "Fairbanks North Star Borough, borough",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.newsminer.com/news/local_news/new-flood-maps-could-bring-relief-to-thousands-of-borough-homeowners/article_30f52e67-ef83-4959-91e3-9a7d88cdffee.html",
-    "title": "New flood maps could bring relief to thousands of borough homeowners",
-    "outlet": "newsminer.com",
-    "date": "2026-10-19",
-    "quote": "A major revision of the region\u2019s floodplain maps goes to the Fairbanks North Star Borough Assembly for approval on Thursday.",
-    "detail": "2,800 homes would be removed from flood zones; 538 structures would be added to flood zones, including most of Moose Creek."
-   }
-  ],
-  "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Fairbanks North Star Borough, borough, United States (2026-10-19)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -147.22708,
-      64.69031
-     ],
-     [
-      -147.12193,
-      64.69031
-     ],
-     [
-      -147.12193,
-      64.73553
-     ],
-     [
-      -147.22708,
-      64.73553
-     ],
-     [
-      -147.22708,
-      64.69031
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.256,
-  "before": "2026-09-14/2026-10-14",
-  "after": "2026-10-19/2026-10-20",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 3,
    "s2_after": 0
   },
   "sensors": [
@@ -16766,7 +16834,7 @@
   },
   "aoi_km2": 74.366,
   "before": "2026-09-14/2026-10-14",
-  "after": "2026-10-19/2026-10-20",
+  "after": "2026-10-19/2026-10-21",
   "scenes": {
    "s1_before": 12,
    "s1_after": 0,
@@ -16859,7 +16927,7 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-20",
+  "after": "2026-10-17/2026-10-21",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -16934,7 +17002,7 @@
   },
   "aoi_km2": 108.633,
   "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-20",
+  "after": "2026-10-16/2026-10-21",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
@@ -17028,7 +17096,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-20"
+  "after": "2026-10-15/2026-10-21"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -17103,7 +17171,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-20"
+  "after": "2026-10-13/2026-10-21"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -17165,7 +17233,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 25.022,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-10-21"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -17227,7 +17298,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 70.868,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-10-21"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -17289,7 +17363,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 25.121,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-10-21"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -17354,7 +17431,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-10-20"
+  "after": "2026-10-16/2026-10-21"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -17419,7 +17496,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-20"
+  "after": "2026-10-07/2026-10-21"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -17484,7 +17561,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-20"
+  "after": "2026-10-06/2026-10-21"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -17549,7 +17626,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-20"
+  "after": "2026-10-03/2026-10-21"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -17614,7 +17691,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-20"
+  "after": "2026-10-02/2026-10-21"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -17679,7 +17756,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-20"
+  "after": "2026-10-02/2026-10-21"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -17744,7 +17821,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-20"
+  "after": "2026-10-01/2026-10-21"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -17809,7 +17886,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-20"
+  "after": "2026-10-01/2026-10-21"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -17874,6 +17951,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-20"
+  "after": "2026-10-01/2026-10-21"
  }
 ]
