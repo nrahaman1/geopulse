@@ -183,6 +183,152 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261019-43.70_4.11",
+  "hazard": "flood",
+  "lon": 4.1147,
+  "lat": 43.699,
+  "bbox": [
+   3.9745,
+   43.585,
+   4.2686,
+   43.813
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-22",
+  "place": "",
+  "country": "France",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104243",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104243&episodeid=2&eventtype=FL",
+    "title": "Flood in France (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 France (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      3.9745,
+      43.585
+     ],
+     [
+      4.2686,
+      43.585
+     ],
+     [
+      4.2686,
+      43.813
+     ],
+     [
+      3.9745,
+      43.813
+     ],
+     [
+      3.9745,
+      43.585
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 600.205,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-21",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 3,
+   "s2_before": 28,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261019-44.43_34.09",
+  "hazard": "flood",
+  "lon": 34.092,
+  "lat": 44.4341,
+  "bbox": [
+   34.0625,
+   44.4213,
+   34.0985,
+   44.4423
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-21",
+  "place": "",
+  "country": "Ukraine",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104242",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104242&episodeid=1&eventtype=FL",
+    "title": "Flood in Ukraine (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Ukraine (2026-10-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      34.04905,
+      44.40919
+     ],
+     [
+      34.11195,
+      44.40919
+     ],
+     [
+      34.11195,
+      44.45441
+     ],
+     [
+      34.04905,
+      44.45441
+     ],
+     [
+      34.04905,
+      44.40919
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.15,
+  "before": "2026-09-14/2026-10-14",
+  "after": "2026-10-19/2026-10-21",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 1,
+   "s2_before": 6,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261018-37.28_127.44",
   "hazard": "flood",
   "lon": 127.4429,
@@ -392,6 +538,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261018-15.38_-90.24",
+  "hazard": "flood",
+  "lon": -90.239,
+  "lat": 15.3833,
+  "bbox": [
+   -90.3832,
+   15.3216,
+   -90.1115,
+   15.4441
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-20",
+  "place": "",
+  "country": "Guatemala",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104244",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104244&episodeid=1&eventtype=FL",
+    "title": "Flood in Guatemala (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Guatemala (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -90.3832,
+      15.3216
+     ],
+     [
+      -90.1115,
+      15.3216
+     ],
+     [
+      -90.1115,
+      15.4441
+     ],
+     [
+      -90.3832,
+      15.4441
+     ],
+     [
+      -90.3832,
+      15.3216
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 395.92,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-21",
+  "scenes": {
+   "s1_before": 13,
+   "s1_after": 2,
+   "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261017-41.38_2.18",
   "hazard": "flood",
   "lon": 2.1771,
@@ -545,7 +764,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -674,6 +893,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261017--17.49_135.33",
+  "hazard": "wildfire",
+  "lon": 135.3265,
+  "lat": -17.4886,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-21",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032962",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032962&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 10743 ha"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      135.25586,
+      -17.55643
+     ],
+     [
+      135.39714,
+      -17.55643
+     ],
+     [
+      135.39714,
+      -17.42077
+     ],
+     [
+      135.25586,
+      -17.42077
+     ],
+     [
+      135.25586,
+      -17.55643
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.11,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-21",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016--15.90_135.16",
   "hazard": "wildfire",
   "lon": 135.1632,
@@ -681,7 +968,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -700,10 +987,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-16",
     "detail": "Green impact for forestfire in 10776 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032963",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032963&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 11485 ha"
    }
   ],
   "first_seen": "2026-10-18",
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-16)",
@@ -737,7 +1032,7 @@
   },
   "aoi_km2": 225.045,
   "before": "2026-09-06/2026-10-14",
-  "after": "2026-10-18/2026-10-20",
+  "after": "2026-10-18/2026-10-21",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -757,7 +1052,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -825,7 +1120,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1047,7 +1342,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1115,7 +1410,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1319,7 +1614,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1403,7 +1698,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1414,10 +1709,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-14",
     "detail": "Green impact for forestfire in 10684 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1032939",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032939&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 23333 ha"
    }
   ],
   "first_seen": "2026-10-19",
-  "updated": "2026-10-19",
+  "updated": "2026-10-21",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-14)",
@@ -1451,7 +1754,7 @@
   },
   "aoi_km2": 225.204,
   "before": "2026-09-04/2026-10-12",
-  "after": "2026-10-16/2026-10-19",
+  "after": "2026-10-16/2026-10-21",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -1471,7 +1774,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1612,7 +1915,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Zimbabwe",
   "sources": [
@@ -1680,7 +1983,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1816,7 +2119,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -2032,7 +2335,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-12",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2310,7 +2613,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2829,7 +3132,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3101,7 +3404,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3170,7 +3473,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3306,7 +3609,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3732,7 +4035,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Papua New Guinea",
   "sources": [
@@ -3800,7 +4103,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-09",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -4719,7 +5022,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Italy",
   "sources": [
@@ -5303,7 +5606,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -6585,7 +6888,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-03",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -14848,6 +15151,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261016-41.04_-83.65",
+  "hazard": "flood",
+  "lon": -83.6503982,
+  "lat": 41.0413873,
+  "bbox": [
+   -83.6887841,
+   40.9929719,
+   -83.5688789,
+   41.0899591
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-16",
+  "place": "Findlay, Ohio",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.13abc.com/2026/10/16/findlay-breaks-ground-major-flood-project-after-2007-disaster/",
+    "title": "Findlay breaks ground on major flood project after 2007 disaster",
+    "outlet": "13abc.com",
+    "date": "2026-10-16",
+    "quote": "Floodwaters caused more than $100 million in damage and impacted nearly 1,900 properties.",
+    "detail": "The project could lower flood levels downtown by more than two feet and remove nearly 1,800 properties from the flood zone altogether."
+   }
+  ],
+  "first_seen": "2026-10-18",
+  "updated": "2026-10-18",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Findlay, Ohio, United States (2026-10-16)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -83.68878,
+      40.99297
+     ],
+     [
+      -83.56888,
+      40.99297
+     ],
+     [
+      -83.56888,
+      41.08996
+     ],
+     [
+      -83.68878,
+      41.08996
+     ],
+     [
+      -83.68878,
+      40.99297
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 108.633,
+  "before": "2026-09-11/2026-10-11",
+  "after": "2026-10-16/2026-10-21",
+  "scenes": {
+   "s1_before": 1,
+   "s1_after": 0,
+   "s2_before": 6,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261015-30.76_-98.22",
   "hazard": "flood",
   "lon": -98.2239954,
@@ -16704,6 +17081,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261016--16.39_132.96",
+  "hazard": "wildfire",
+  "lon": 132.9602,
+  "lat": -16.3854,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-21",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1032970",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1032970&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 12494 ha"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      132.88997,
+      -16.45323
+     ],
+     [
+      133.03043,
+      -16.45323
+     ],
+     [
+      133.03043,
+      -16.31757
+     ],
+     [
+      132.88997,
+      -16.31757
+     ],
+     [
+      132.88997,
+      -16.45323
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.345,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-21",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261015--16.47_125.14",
   "hazard": "wildfire",
   "lon": 125.1418,
@@ -16711,7 +17157,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-20",
+  "event_end": "2026-10-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -16941,81 +17387,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261016-41.04_-83.65",
-  "hazard": "flood",
-  "lon": -83.6503982,
-  "lat": 41.0413873,
-  "bbox": [
-   -83.6887841,
-   40.9929719,
-   -83.5688789,
-   41.0899591
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-16",
-  "event_end": "2026-10-16",
-  "place": "Findlay, Ohio",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.13abc.com/2026/10/16/findlay-breaks-ground-major-flood-project-after-2007-disaster/",
-    "title": "Findlay breaks ground on major flood project after 2007 disaster",
-    "outlet": "13abc.com",
-    "date": "2026-10-16",
-    "quote": "Floodwaters caused more than $100 million in damage and impacted nearly 1,900 properties.",
-    "detail": "The project could lower flood levels downtown by more than two feet and remove nearly 1,800 properties from the flood zone altogether."
-   }
-  ],
-  "first_seen": "2026-10-18",
-  "updated": "2026-10-18",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Findlay, Ohio, United States (2026-10-16)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -83.68878,
-      40.99297
-     ],
-     [
-      -83.56888,
-      40.99297
-     ],
-     [
-      -83.56888,
-      41.08996
-     ],
-     [
-      -83.68878,
-      41.08996
-     ],
-     [
-      -83.68878,
-      40.99297
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 108.633,
-  "before": "2026-09-11/2026-10-11",
-  "after": "2026-10-16/2026-10-21",
-  "scenes": {
-   "s1_before": 1,
-   "s1_after": 0,
-   "s2_before": 6,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261010-46.70_119.74",
   "hazard": "wildfire",
   "lon": 119.7365,
@@ -17172,6 +17543,68 @@
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
   "after": "2026-10-13/2026-10-21"
+ },
+ {
+  "id": "wi-20261021--2.41_147.33",
+  "hazard": "wildfire",
+  "lon": 147.3262144,
+  "lat": -2.405291,
+  "bbox": [
+   147.3002163,
+   -2.4446225,
+   147.3901856,
+   -2.3659905
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-21",
+  "place": "Lou Island, Manus Province",
+  "country": "Papua New Guinea",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.postcourier.com.pg/livelihoods-threatened-as-extreme-blaze-engulfs-lou-island/",
+    "title": "Livelihoods threatened as extreme blaze engulfs Lou Island",
+    "outlet": "postcourier.com.pg",
+    "date": "2026-10-21",
+    "quote": "A Raging bushfire fueled by extreme dry weather and strong winds has engulfed large areas of Lou Island in Manus Province",
+    "detail": "threatening villages, destroying food gardens, forest"
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Lou Island, Manus Province, Papua New Guinea (2026-10-21)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      147.30022,
+      -2.44462
+     ],
+     [
+      147.39019,
+      -2.44462
+     ],
+     [
+      147.39019,
+      -2.36599
+     ],
+     [
+      147.30022,
+      -2.36599
+     ],
+     [
+      147.30022,
+      -2.44462
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261019--11.74_-67.14",
