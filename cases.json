@@ -901,6 +901,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261018--12.40_37.86",
+  "hazard": "wildfire",
+  "lon": 37.8581,
+  "lat": -12.4032,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-22",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033029",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033029&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 10098 ha"
+   }
+  ],
+  "first_seen": "2026-10-22",
+  "updated": "2026-10-22",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      37.78912,
+      -12.47103
+     ],
+     [
+      37.92708,
+      -12.47103
+     ],
+     [
+      37.92708,
+      -12.33537
+     ],
+     [
+      37.78912,
+      -12.33537
+     ],
+     [
+      37.78912,
+      -12.47103
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.04,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-22",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 2,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261017-41.38_2.18",
   "hazard": "flood",
   "lon": 2.1771,
@@ -2499,7 +2568,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Zimbabwe",
   "sources": [
@@ -2635,7 +2704,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Sudan",
   "sources": [
@@ -2780,7 +2849,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Zambia",
   "sources": [
@@ -3283,7 +3352,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-11",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4280,7 +4349,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Botswana, Zimbabwe",
   "sources": [
@@ -5765,7 +5834,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -6423,7 +6492,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-21",
+  "event_end": "2026-10-22",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -6442,10 +6511,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-09",
     "detail": "Green impact for forestfire in 10437 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033060",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033060&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 12540 ha"
    }
   ],
   "first_seen": "2026-10-15",
-  "updated": "2026-10-20",
+  "updated": "2026-10-22",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
@@ -6479,12 +6556,12 @@
   },
   "aoi_km2": 225.295,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-08/2026-10-20",
+  "after": "2026-10-08/2026-10-22",
   "scenes": {
    "s1_before": 9,
-   "s1_after": 3,
+   "s1_after": 5,
    "s2_before": 16,
-   "s2_after": 8
+   "s2_after": 10
   },
   "sensors": [
    "s1",
@@ -18397,6 +18474,62 @@
      [
       136.50755,
       -20.82393
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261021--18.60_123.71",
+  "hazard": "wildfire",
+  "lon": 123.7148,
+  "lat": -18.6023,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-22",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033047",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033047&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-21",
+    "detail": "Green impact for forestfire in 11696 ha"
+   }
+  ],
+  "first_seen": "2026-10-22",
+  "updated": "2026-10-22",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-21)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      123.64371,
+      -18.67013
+     ],
+     [
+      123.78589,
+      -18.67013
+     ],
+     [
+      123.78589,
+      -18.53447
+     ],
+     [
+      123.64371,
+      -18.53447
+     ],
+     [
+      123.64371,
+      -18.67013
      ]
     ]
    ]
