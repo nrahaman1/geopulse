@@ -324,6 +324,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261021--22.53_24.77",
+  "hazard": "wildfire",
+  "lon": 24.7696,
+  "lat": -22.5251,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033066",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033066&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-21",
+    "detail": "Green impact for forestfire in 11961 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-10-21)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      24.69666,
+      -22.59293
+     ],
+     [
+      24.84254,
+      -22.59293
+     ],
+     [
+      24.84254,
+      -22.45727
+     ],
+     [
+      24.69666,
+      -22.45727
+     ],
+     [
+      24.69666,
+      -22.59293
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.57,
+  "before": "2026-09-11/2026-10-19",
+  "after": "2026-10-23/2026-10-23",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 31,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261020--23.35_122.36",
   "hazard": "wildfire",
   "lon": 122.3554,
@@ -593,6 +661,142 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261020--20.09_23.76",
+  "hazard": "wildfire",
+  "lon": 23.7634,
+  "lat": -20.0946,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033021",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033021&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Green impact for forestfire in 10549 ha"
+   }
+  ],
+  "first_seen": "2026-10-22",
+  "updated": "2026-10-22",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-10-20)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      23.69166,
+      -20.16243
+     ],
+     [
+      23.83514,
+      -20.16243
+     ],
+     [
+      23.83514,
+      -20.02677
+     ],
+     [
+      23.69166,
+      -20.02677
+     ],
+     [
+      23.69166,
+      -20.16243
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.646,
+  "before": "2026-09-10/2026-10-18",
+  "after": "2026-10-22/2026-10-23",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261020--19.90_24.84",
+  "hazard": "wildfire",
+  "lon": 24.844,
+  "lat": -19.899,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033108",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033108&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Green impact for forestfire in 10736 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-10-20)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      24.77235,
+      -19.96683
+     ],
+     [
+      24.91565,
+      -19.96683
+     ],
+     [
+      24.91565,
+      -19.83117
+     ],
+     [
+      24.77235,
+      -19.83117
+     ],
+     [
+      24.77235,
+      -19.96683
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.455,
+  "before": "2026-09-10/2026-10-18",
+  "after": "2026-10-22/2026-10-23",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 33,
+   "s2_after": 4
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -1935,6 +2139,144 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261017--15.99_31.97",
+  "hazard": "wildfire",
+  "lon": 31.9688,
+  "lat": -15.9916,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033120",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033120&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 10850 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      31.89871,
+      -16.05943
+     ],
+     [
+      32.03889,
+      -16.05943
+     ],
+     [
+      32.03889,
+      -15.92377
+     ],
+     [
+      31.89871,
+      -15.92377
+     ],
+     [
+      31.89871,
+      -16.05943
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.138,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-23",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 2,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261017--11.62_33.96",
+  "hazard": "wildfire",
+  "lon": 33.957,
+  "lat": -11.6238,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Malawi",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033119",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033119&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Malawi (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 10104 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Malawi (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.88822,
+      -11.69163
+     ],
+     [
+      34.02578,
+      -11.69163
+     ],
+     [
+      34.02578,
+      -11.55597
+     ],
+     [
+      33.88822,
+      -11.55597
+     ],
+     [
+      33.88822,
+      -11.69163
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.996,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-23",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 18,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016--15.90_135.16",
   "hazard": "wildfire",
   "lon": 135.1632,
@@ -2731,6 +3073,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261015--9.61_33.60",
+  "hazard": "wildfire",
+  "lon": 33.5973,
+  "lat": -9.6061,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Tanzania, Malawi",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033034",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033034&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Tanzania, Malawi (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 11661 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Tanzania, Malawi (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.52897,
+      -9.67393
+     ],
+     [
+      33.66563,
+      -9.67393
+     ],
+     [
+      33.66563,
+      -9.53827
+     ],
+     [
+      33.52897,
+      -9.53827
+     ],
+     [
+      33.52897,
+      -9.67393
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.93,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-23",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261014--19.40_134.62",
   "hazard": "wildfire",
   "lon": 134.6231,
@@ -3030,6 +3441,75 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261014--15.35_29.62",
+  "hazard": "wildfire",
+  "lon": 29.6219,
+  "lat": -15.3508,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-14",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Zambia, Zimbabwe",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033035",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033035&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Zambia, Zimbabwe (Green alert)",
+    "date": "2026-10-14",
+    "detail": "Green impact for forestfire in 17054 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zambia, Zimbabwe (2026-10-14)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.55203,
+      -15.41863
+     ],
+     [
+      29.69177,
+      -15.41863
+     ],
+     [
+      29.69177,
+      -15.28297
+     ],
+     [
+      29.55203,
+      -15.28297
+     ],
+     [
+      29.55203,
+      -15.41863
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.492,
+  "before": "2026-09-04/2026-10-12",
+  "after": "2026-10-16/2026-10-23",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 19,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -4976,10 +5456,18 @@
     "title": "Forest fires in Botswana, Zimbabwe (Green alert)",
     "date": "2026-10-10",
     "detail": "Green impact for forestfire in 10125 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033023",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033023&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Green impact for forestfire in 13437 ha"
    }
   ],
   "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
+  "updated": "2026-10-23",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Botswana, Zimbabwe (2026-10-10)",
@@ -5013,12 +5501,12 @@
   },
   "aoi_km2": 225.227,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-20",
+  "after": "2026-10-12/2026-10-23",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 34,
-   "s2_after": 8
+   "s2_after": 12
   },
   "sensors": [
    "s2"
@@ -18719,75 +19207,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261020--20.09_23.76",
-  "hazard": "wildfire",
-  "lon": 23.7634,
-  "lat": -20.0946,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-20",
-  "event_end": "2026-10-23",
-  "place": "",
-  "country": "Botswana",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1033021",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033021&episodeid=4&eventtype=WF",
-    "title": "Forest fires in Botswana (Green alert)",
-    "date": "2026-10-20",
-    "detail": "Green impact for forestfire in 10549 ha"
-   }
-  ],
-  "first_seen": "2026-10-22",
-  "updated": "2026-10-22",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Botswana (2026-10-20)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      23.69166,
-      -20.16243
-     ],
-     [
-      23.83514,
-      -20.16243
-     ],
-     [
-      23.83514,
-      -20.02677
-     ],
-     [
-      23.69166,
-      -20.02677
-     ],
-     [
-      23.69166,
-      -20.16243
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.646,
-  "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-23",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 8,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "wi-20261020--14.84_134.68",
   "hazard": "wildfire",
   "lon": 134.6828,
@@ -18933,7 +19352,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-22",
+  "event_end": "2026-10-23",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -19297,6 +19716,118 @@
      [
       -82.93597,
       30.42745
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261022--19.74_26.20",
+  "hazard": "wildfire",
+  "lon": 26.1972,
+  "lat": -19.7416,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-22",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Botswana, Zimbabwe",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033103",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033103&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Botswana, Zimbabwe (Green alert)",
+    "date": "2026-10-22",
+    "detail": "Green impact for forestfire in 12545 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana, Zimbabwe (2026-10-22)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      26.12562,
+      -19.80943
+     ],
+     [
+      26.26878,
+      -19.80943
+     ],
+     [
+      26.26878,
+      -19.67377
+     ],
+     [
+      26.12562,
+      -19.67377
+     ],
+     [
+      26.12562,
+      -19.80943
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261022-13.80_0.14",
+  "hazard": "wildfire",
+  "lon": 0.1364,
+  "lat": 13.7989,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-22",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "Burkina Faso",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033086",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033086&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Burkina Faso (Green alert)",
+    "date": "2026-10-22",
+    "detail": "Green impact for forestfire in 16800 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Burkina Faso (2026-10-22)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      0.06702,
+      13.73107
+     ],
+     [
+      0.20578,
+      13.73107
+     ],
+     [
+      0.20578,
+      13.86673
+     ],
+     [
+      0.06702,
+      13.86673
+     ],
+     [
+      0.06702,
+      13.73107
      ]
     ]
    ]
