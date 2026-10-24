@@ -1,9 +1,9 @@
 {
- "started": "2026-10-24T04:45:36+00:00",
+ "started": "2026-10-24T11:10:20+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 35
+   "events": 70
   },
   "cems": {
    "ok": true,
@@ -23,7 +23,7 @@
   },
   "rss:inciweb.wildfire.gov": {
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   "rss:news.mongabay.com": {
    "ok": true,
@@ -40,9 +40,9 @@
   "events": 1,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-24T04:54:20+00:00",
- "duration_s": 524,
- "cases": 298,
- "new": 1,
+ "finished": "2026-10-24T11:37:17+00:00",
+ "duration_s": 1616,
+ "cases": 302,
+ "new": 4,
  "ok": true
 }
