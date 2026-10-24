@@ -1295,7 +1295,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Madagascar",
   "sources": [
@@ -1419,6 +1419,143 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261019-9.73_26.20",
+  "hazard": "wildfire",
+  "lon": 26.1985,
+  "lat": 9.7304,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-23",
+  "place": "",
+  "country": "South Sudan, Sudan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033056",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033056&episodeid=2&eventtype=WF",
+    "title": "Forest fires in South Sudan, Sudan (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Green impact for forestfire in 10307 ha"
+   }
+  ],
+  "first_seen": "2026-10-23",
+  "updated": "2026-10-23",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 South Sudan, Sudan (2026-10-19)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      26.13014,
+      9.66257
+     ],
+     [
+      26.26686,
+      9.66257
+     ],
+     [
+      26.26686,
+      9.79823
+     ],
+     [
+      26.13014,
+      9.79823
+     ],
+     [
+      26.13014,
+      9.66257
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.966,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-10-24",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 21,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261019--13.10_36.36",
+  "hazard": "wildfire",
+  "lon": 36.3574,
+  "lat": -13.1046,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-19",
+  "event_end": "2026-10-24",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033055",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033055&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Green impact for forestfire in 10597 ha"
+   }
+  ],
+  "first_seen": "2026-10-24",
+  "updated": "2026-10-24",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-19)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      36.28823,
+      -13.17243
+     ],
+     [
+      36.42657,
+      -13.17243
+     ],
+     [
+      36.42657,
+      -13.03677
+     ],
+     [
+      36.28823,
+      -13.03677
+     ],
+     [
+      36.28823,
+      -13.17243
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.423,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-10-24",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -1993,6 +2130,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261018--16.95_38.33",
+  "hazard": "wildfire",
+  "lon": 38.3285,
+  "lat": -16.9536,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-24",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033100",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033100&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 10798 ha"
+   }
+  ],
+  "first_seen": "2026-10-24",
+  "updated": "2026-10-24",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      38.25807,
+      -17.02143
+     ],
+     [
+      38.39893,
+      -17.02143
+     ],
+     [
+      38.39893,
+      -16.88577
+     ],
+     [
+      38.25807,
+      -16.88577
+     ],
+     [
+      38.25807,
+      -17.02143
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.097,
+  "before": "2026-09-08/2026-10-16",
+  "after": "2026-10-20/2026-10-24",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261017-41.38_2.18",
   "hazard": "flood",
   "lon": 2.1771,
@@ -2418,7 +2623,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2487,7 +2692,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Malawi",
   "sources": [
@@ -3352,7 +3557,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Tanzania, Malawi",
   "sources": [
@@ -3725,7 +3930,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Zambia, Zimbabwe",
   "sources": [
@@ -7629,7 +7834,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-13",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -7640,10 +7845,18 @@
     "title": "Forest fires in Mozambique (Green alert)",
     "date": "2026-10-06",
     "detail": "Green impact for forestfire in 10245 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033161",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033161&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 15456 ha"
    }
   ],
   "first_seen": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-24",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Mozambique (2026-10-06)",
@@ -7677,14 +7890,15 @@
   },
   "aoi_km2": 225.345,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-08/2026-10-09",
+  "after": "2026-10-08/2026-10-24",
   "scenes": {
    "s1_before": 10,
-   "s1_after": 0,
+   "s1_after": 4,
    "s2_before": 10,
-   "s2_after": 1
+   "s2_after": 6
   },
   "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -19766,75 +19980,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261019-9.73_26.20",
-  "hazard": "wildfire",
-  "lon": 26.1985,
-  "lat": 9.7304,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-19",
-  "event_end": "2026-10-23",
-  "place": "",
-  "country": "South Sudan, Sudan",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1033056",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033056&episodeid=2&eventtype=WF",
-    "title": "Forest fires in South Sudan, Sudan (Green alert)",
-    "date": "2026-10-19",
-    "detail": "Green impact for forestfire in 10307 ha"
-   }
-  ],
-  "first_seen": "2026-10-23",
-  "updated": "2026-10-23",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 South Sudan, Sudan (2026-10-19)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      26.13014,
-      9.66257
-     ],
-     [
-      26.26686,
-      9.66257
-     ],
-     [
-      26.26686,
-      9.79823
-     ],
-     [
-      26.13014,
-      9.79823
-     ],
-     [
-      26.13014,
-      9.66257
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 224.966,
-  "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-21/2026-10-24",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 21,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261021-33.33_-105.67",
   "hazard": "flood",
   "lon": -105.673099,
@@ -20209,7 +20354,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-24",
   "place": "",
   "country": "Botswana, Zimbabwe",
   "sources": [
