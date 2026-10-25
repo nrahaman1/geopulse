@@ -528,6 +528,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261021--16.24_29.23",
+  "hazard": "wildfire",
+  "lon": 29.2284,
+  "lat": -16.2414,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-24",
+  "place": "",
+  "country": "Zimbabwe",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033106",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033106&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Zimbabwe (Green alert)",
+    "date": "2026-10-21",
+    "detail": "Green impact for forestfire in 10030 ha"
+   }
+  ],
+  "first_seen": "2026-10-24",
+  "updated": "2026-10-24",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Zimbabwe (2026-10-21)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.15823,
+      -16.30923
+     ],
+     [
+      29.29857,
+      -16.30923
+     ],
+     [
+      29.29857,
+      -16.17357
+     ],
+     [
+      29.15823,
+      -16.17357
+     ],
+     [
+      29.15823,
+      -16.30923
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.366,
+  "before": "2026-09-11/2026-10-19",
+  "after": "2026-10-23/2026-10-25",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261020--23.35_122.36",
   "hazard": "wildfire",
   "lon": 122.3554,
@@ -17627,6 +17695,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261024-14.92_120.77",
+  "hazard": "flood",
+  "lon": 120.7662073,
+  "lat": 14.9151703,
+  "bbox": [
+   120.7184107,
+   14.867143,
+   120.8035787,
+   14.9309717
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Calumpit, Bulacan, Bulacan",
+  "country": "Philippines",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.manilatimes.net/2026/10/24/news/dpwh-targets-jan-feb-completion-of-calumpit-flood-control-works/2453159",
+    "title": "DPWH targets Jan - Feb completion of Calumpit flood control works",
+    "outlet": "manilatimes.net",
+    "date": "2026-10-24",
+    "quote": "The Department of Public Works and Highways (DPWH) expects to complete by January or February next year the rehabilitation and construction of flood control structures in Calumpit, Bulacan, as the government moves to address recurring flooding in the municipality.",
+    "detail": "recurring flooding in the municipality"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Calumpit, Bulacan, Bulacan, Philippines (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      120.71841,
+      14.86714
+     ],
+     [
+      120.80358,
+      14.86714
+     ],
+     [
+      120.80358,
+      14.93097
+     ],
+     [
+      120.71841,
+      14.93097
+     ],
+     [
+      120.71841,
+      14.86714
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 64.766,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-25",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261022-53.34_-1.28",
   "hazard": "wildfire",
   "lon": -1.2825379,
@@ -20076,75 +20218,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261021--16.24_29.23",
-  "hazard": "wildfire",
-  "lon": 29.2284,
-  "lat": -16.2414,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-21",
-  "event_end": "2026-10-24",
-  "place": "",
-  "country": "Zimbabwe",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1033106",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033106&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Zimbabwe (Green alert)",
-    "date": "2026-10-21",
-    "detail": "Green impact for forestfire in 10030 ha"
-   }
-  ],
-  "first_seen": "2026-10-24",
-  "updated": "2026-10-24",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Zimbabwe (2026-10-21)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      29.15823,
-      -16.30923
-     ],
-     [
-      29.29857,
-      -16.30923
-     ],
-     [
-      29.29857,
-      -16.17357
-     ],
-     [
-      29.15823,
-      -16.17357
-     ],
-     [
-      29.15823,
-      -16.30923
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.366,
-  "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-25",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 18,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261025-33.83_-117.91",
   "hazard": "flood",
   "lon": -117.911732,
@@ -20211,81 +20284,6 @@
    "s1_before": 12,
    "s1_after": 0,
    "s2_before": 15,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261024-14.92_120.77",
-  "hazard": "flood",
-  "lon": 120.7662073,
-  "lat": 14.9151703,
-  "bbox": [
-   120.7184107,
-   14.867143,
-   120.8035787,
-   14.9309717
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-24",
-  "event_end": "2026-10-24",
-  "place": "Calumpit, Bulacan, Bulacan",
-  "country": "Philippines",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.manilatimes.net/2026/10/24/news/dpwh-targets-jan-feb-completion-of-calumpit-flood-control-works/2453159",
-    "title": "DPWH targets Jan - Feb completion of Calumpit flood control works",
-    "outlet": "manilatimes.net",
-    "date": "2026-10-24",
-    "quote": "The Department of Public Works and Highways (DPWH) expects to complete by January or February next year the rehabilitation and construction of flood control structures in Calumpit, Bulacan, as the government moves to address recurring flooding in the municipality.",
-    "detail": "recurring flooding in the municipality"
-   }
-  ],
-  "first_seen": "2026-10-25",
-  "updated": "2026-10-25",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Calumpit, Bulacan, Bulacan, Philippines (2026-10-24)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      120.71841,
-      14.86714
-     ],
-     [
-      120.80358,
-      14.86714
-     ],
-     [
-      120.80358,
-      14.93097
-     ],
-     [
-      120.71841,
-      14.93097
-     ],
-     [
-      120.71841,
-      14.86714
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 64.766,
-  "before": "2026-09-19/2026-10-19",
-  "after": "2026-10-24/2026-10-25",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 14,
    "s2_after": 0
   },
   "sensors": [

@@ -1,5 +1,5 @@
 {
- "started": "2026-10-25T16:29:35+00:00",
+ "started": "2026-10-25T20:57:29+00:00",
  "sources": {
   "gdacs": {
    "ok": false,
@@ -15,11 +15,11 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 77
+   "articles": 80
   },
   "rss:wildfiretoday.com": {
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   "rss:inciweb.wildfire.gov": {
    "ok": true,
@@ -27,21 +27,21 @@
   },
   "rss:news.mongabay.com": {
    "ok": true,
-   "articles": 2
+   "articles": 1
   }
  },
  "news": {
-  "read": 18,
+  "read": 17,
   "per_hazard": {
    "flood": 10,
    "wildfire": 4,
-   "vegetation": 4
+   "vegetation": 3
   },
-  "events": 5,
+  "events": 6,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-25T17:04:05+00:00",
- "duration_s": 2070,
+ "finished": "2026-10-25T21:35:35+00:00",
+ "duration_s": 2285,
  "cases": 313,
  "new": 0,
  "ok": true
