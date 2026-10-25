@@ -17226,6 +17226,90 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261022-37.18_-113.29",
+  "hazard": "flood",
+  "lon": -113.289888,
+  "lat": 37.1750272,
+  "bbox": [
+   -113.449028,
+   37.0723799,
+   -113.2556351,
+   37.2145558
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-22",
+  "event_end": "2026-10-22",
+  "place": "Hurricane, Utah",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.upr.org/utah-news/2026-10-22/hurricane-flooding-emergency-evacuations",
+    "title": "Hurricane declares a local emergency due to flooding",
+    "outlet": "upr.org",
+    "date": "2026-10-23",
+    "quote": "flooding damages over 100 homes and RVs",
+    "detail": "damage to 80 residential homes and 50 RVs, bridges, roadways, and electrical power boxes"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.sltrib.com/news/2026/10/24/utah-flash-floods-damage-hurricane/",
+    "title": "Utah flash floods damage Hurricane couple home twice in two months",
+    "outlet": "sltrib.com",
+    "date": "2026-10-24",
+    "quote": "Widespread flooding damages more than 80 homes, some for second time",
+    "detail": "Damage to more than 80 homes and 50 trailers at Willow Wind RV Park, roads, bridges, culverts, and electrical boxes. Some homes sustained severe damage."
+   }
+  ],
+  "first_seen": "2026-10-24",
+  "updated": "2026-10-25",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Hurricane, Utah, US (2026-10-22)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -113.44903,
+      37.07238
+     ],
+     [
+      -113.25564,
+      37.07238
+     ],
+     [
+      -113.25564,
+      37.21456
+     ],
+     [
+      -113.44903,
+      37.21456
+     ],
+     [
+      -113.44903,
+      37.07238
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 271.186,
+  "before": "2026-09-17/2026-10-17",
+  "after": "2026-10-22/2026-10-25",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 1,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016-34.27_-91.92",
   "hazard": "wildfire",
   "lon": -91.9248307,
@@ -17392,77 +17476,76 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261022-37.18_-113.29",
-  "hazard": "flood",
-  "lon": -113.289888,
-  "lat": 37.1750272,
+  "id": "wi-20261022-53.34_-1.28",
+  "hazard": "wildfire",
+  "lon": -1.2825379,
+  "lat": 53.3393418,
   "bbox": [
-   -113.449028,
-   37.0723799,
-   -113.2556351,
-   37.2145558
+   -1.3320763,
+   53.3254637,
+   -1.2384274,
+   53.3531284
   ],
   "geometry_from": "news",
   "event_start": "2026-10-22",
   "event_end": "2026-10-22",
-  "place": "Hurricane, Utah",
-  "country": "US",
+  "place": "Wales",
+  "country": "United Kingdom",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.upr.org/utah-news/2026-10-22/hurricane-flooding-emergency-evacuations",
-    "title": "Hurricane declares a local emergency due to flooding",
-    "outlet": "upr.org",
-    "date": "2026-10-23",
-    "quote": "flooding damages over 100 homes and RVs",
-    "detail": "damage to 80 residential homes and 50 RVs, bridges, roadways, and electrical power boxes"
+    "url": "https://www.fwi.co.uk/news/environment/farmers-offered-role-in-wales-wildfire-response-plans",
+    "title": "Farmers offered role in Wales wildfire response plans",
+    "outlet": "fwi.co.uk",
+    "date": "2026-10-24",
+    "quote": "Farmers and landowners could be formally enlisted to help tackle wildfires in Wales under new measures announced following this summer\u2019s devastating outbreaks.",
+    "detail": "The effects of this summer\u2019s fires extended beyond visible landscape damage, with habitats destroyed, carbon stores depleted and soils damaged."
    }
   ],
   "first_seen": "2026-10-24",
   "updated": "2026-10-24",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Hurricane, Utah, US (2026-10-22)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 Wales, United Kingdom (2026-10-22)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -113.44903,
-      37.07238
+      -1.33208,
+      53.31669
      ],
      [
-      -113.25564,
-      37.07238
+      -1.23843,
+      53.31669
      ],
      [
-      -113.25564,
-      37.21456
+      -1.23843,
+      53.36191
      ],
      [
-      -113.44903,
-      37.21456
+      -1.33208,
+      53.36191
      ],
      [
-      -113.44903,
-      37.07238
+      -1.33208,
+      53.31669
      ]
     ]
    ]
   },
-  "aoi_km2": 271.186,
-  "before": "2026-09-17/2026-10-17",
-  "after": "2026-10-22/2026-10-24",
+  "aoi_km2": 31.379,
+  "before": "2026-09-12/2026-10-20",
+  "after": "2026-10-23/2026-10-25",
   "scenes": {
-   "s1_before": 8,
-   "s1_after": 1,
-   "s2_before": 11,
-   "s2_after": 2
+   "s1_before": 26,
+   "s1_after": 2,
+   "s2_before": 10,
+   "s2_after": 0
   },
   "sensors": [
-   "s1",
-   "s2"
+   "s1"
   ],
   "status": "ready"
  },
@@ -19897,7 +19980,7 @@
   },
   "aoi_km2": 225.366,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-24",
+  "after": "2026-10-23/2026-10-25",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -19966,7 +20049,7 @@
   },
   "aoi_km2": 225.194,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-24",
+  "after": "2026-10-23/2026-10-25",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -20050,7 +20133,7 @@
   },
   "aoi_km2": 390.633,
   "before": "2026-09-16/2026-10-16",
-  "after": "2026-10-21/2026-10-24",
+  "after": "2026-10-21/2026-10-25",
   "scenes": {
    "s1_before": 10,
    "s1_after": 0,
@@ -20064,72 +20147,222 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261022-53.34_-1.28",
-  "hazard": "wildfire",
-  "lon": -1.2825379,
-  "lat": 53.3393418,
+  "id": "fl-20261024-14.92_120.77",
+  "hazard": "flood",
+  "lon": 120.7662073,
+  "lat": 14.9151703,
   "bbox": [
-   -1.3320763,
-   53.3254637,
-   -1.2384274,
-   53.3531284
+   120.7184107,
+   14.867143,
+   120.8035787,
+   14.9309717
   ],
   "geometry_from": "news",
-  "event_start": "2026-10-22",
-  "event_end": "2026-10-22",
-  "place": "Wales",
-  "country": "United Kingdom",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Calumpit, Bulacan, Bulacan",
+  "country": "Philippines",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.fwi.co.uk/news/environment/farmers-offered-role-in-wales-wildfire-response-plans",
-    "title": "Farmers offered role in Wales wildfire response plans",
-    "outlet": "fwi.co.uk",
+    "url": "https://www.manilatimes.net/2026/10/24/news/dpwh-targets-jan-feb-completion-of-calumpit-flood-control-works/2453159",
+    "title": "DPWH targets Jan - Feb completion of Calumpit flood control works",
+    "outlet": "manilatimes.net",
     "date": "2026-10-24",
-    "quote": "Farmers and landowners could be formally enlisted to help tackle wildfires in Wales under new measures announced following this summer\u2019s devastating outbreaks.",
-    "detail": "The effects of this summer\u2019s fires extended beyond visible landscape damage, with habitats destroyed, carbon stores depleted and soils damaged."
+    "quote": "The Department of Public Works and Highways (DPWH) expects to complete by January or February next year the rehabilitation and construction of flood control structures in Calumpit, Bulacan, as the government moves to address recurring flooding in the municipality.",
+    "detail": "recurring flooding in the municipality"
    }
   ],
-  "first_seen": "2026-10-24",
-  "updated": "2026-10-24",
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
   "score": 0.15,
   "confidence": "low",
-  "title": "Wildfire \u00b7 Wales, United Kingdom (2026-10-22)",
+  "title": "Flood \u00b7 Calumpit, Bulacan, Bulacan, Philippines (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      120.71841,
+      14.86714
+     ],
+     [
+      120.80358,
+      14.86714
+     ],
+     [
+      120.80358,
+      14.93097
+     ],
+     [
+      120.71841,
+      14.93097
+     ],
+     [
+      120.71841,
+      14.86714
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 64.766,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-25",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261023-44.52_-98.99",
+  "hazard": "wildfire",
+  "lon": -98.988434,
+  "lat": 44.518315,
+  "bbox": [
+   -99.0000655,
+   44.5114861,
+   -98.9689834,
+   44.53449
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-23",
+  "event_end": "2026-10-23",
+  "place": "Miller, Arkansas",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.ktbs.com/news/arkansas/firefighters-battle-blazes-across-southwest-arkansas-as-dry-conditions-fuel-elevated-fire-risk/article_cec63df3-6dec-484b-b960-599726aa4d18.html",
+    "title": "Firefighters battle blazes across southwest Arkansas as dry conditions fuel elevated fire risk",
+    "outlet": "ktbs.com",
+    "date": "2026-10-23",
+    "quote": "Firefighters battle blazes across southwest Arkansas as dry conditions fuel elevated fire risk",
+    "detail": "No injuries or structural damages were reported."
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Miller, Arkansas, United States (2026-10-23)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -1.33208,
-      53.31669
+      -99.01602,
+      44.50038
      ],
      [
-      -1.23843,
-      53.31669
+      -98.95303,
+      44.50038
      ],
      [
-      -1.23843,
-      53.36191
+      -98.95303,
+      44.5456
      ],
      [
-      -1.33208,
-      53.36191
+      -99.01602,
+      44.5456
      ],
      [
-      -1.33208,
-      53.31669
+      -99.01602,
+      44.50038
      ]
     ]
    ]
   },
-  "aoi_km2": 31.379,
-  "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-24",
+  "aoi_km2": 25.143,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25",
   "scenes": {
-   "s1_before": 26,
+   "s1_before": 2,
    "s1_after": 0,
-   "s2_before": 10,
+   "s2_before": 11,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261023-52.37_-0.04",
+  "hazard": "wildfire",
+  "lon": -0.044936,
+  "lat": 52.3729017,
+  "bbox": [
+   -0.4998961,
+   52.005779,
+   0.514455,
+   52.7399783
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-23",
+  "event_end": "2026-10-23",
+  "place": "Holme Fen Nature Reserve, Cambridgeshire",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.cambridge-news.co.uk/news/local-news/part-nature-reserve-reopens-after-34806506",
+    "title": "Part of nature reserve reopens after devastating summer wildfire",
+    "outlet": "cambridge-news.co.uk",
+    "date": "2026-10-23",
+    "quote": "Part of a Cambridgeshire nature reserve has reopened following a devastating summer wildfire.",
+    "detail": "An area the size of 60 football pitches was damaged by the fire."
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Holme Fen Nature Reserve, Cambridgeshire, United Kingdom (2026-10-23)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.26564,
+      52.23725
+     ],
+     [
+      0.17577,
+      52.23725
+     ],
+     [
+      0.17577,
+      52.50856
+     ],
+     [
+      -0.26564,
+      52.50856
+     ],
+     [
+      -0.26564,
+      52.23725
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.757,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25",
+  "scenes": {
+   "s1_before": 32,
+   "s1_after": 0,
+   "s2_before": 70,
    "s2_after": 0
   },
   "sensors": [
@@ -20218,7 +20451,7 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-24",
+  "after": "2026-10-17/2026-10-25",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -20285,7 +20518,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 225.221,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -20344,7 +20580,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-24"
+  "after": "2026-10-23/2026-10-25"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -20403,7 +20639,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-24"
+  "after": "2026-10-24/2026-10-25"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -20462,7 +20698,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-24"
+  "after": "2026-10-24/2026-10-25"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -20521,7 +20757,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-24"
+  "after": "2026-10-23/2026-10-25"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -20588,7 +20824,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-24"
+  "after": "2026-10-23/2026-10-25"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -20647,7 +20883,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-24"
+  "after": "2026-10-22/2026-10-25"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -20714,7 +20950,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-24"
+  "after": "2026-10-22/2026-10-25"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -20797,7 +21033,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-24"
+  "after": "2026-10-15/2026-10-25"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -20872,7 +21108,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-24"
+  "after": "2026-10-13/2026-10-25"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -20934,7 +21170,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 25.138,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -20996,7 +21235,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 24.98,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -21061,7 +21303,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-24"
+  "after": "2026-10-23/2026-10-25"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -21126,7 +21368,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-24"
+  "after": "2026-10-22/2026-10-25"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -21191,7 +21433,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-24"
+  "after": "2026-10-22/2026-10-25"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -21256,7 +21498,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-24"
+  "after": "2026-10-20/2026-10-25"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -21321,7 +21563,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-24"
+  "after": "2026-10-20/2026-10-25"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -21386,7 +21628,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-24"
+  "after": "2026-10-20/2026-10-25"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -21451,7 +21693,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-10-24"
+  "after": "2026-10-16/2026-10-25"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -21516,7 +21758,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-24"
+  "after": "2026-10-07/2026-10-25"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -21581,7 +21823,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-24"
+  "after": "2026-10-06/2026-10-25"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -21646,7 +21888,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-24"
+  "after": "2026-10-03/2026-10-25"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -21711,7 +21953,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-24"
+  "after": "2026-10-02/2026-10-25"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -21776,7 +22018,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-24"
+  "after": "2026-10-02/2026-10-25"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -21841,7 +22083,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-24"
+  "after": "2026-10-01/2026-10-25"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -21906,7 +22148,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-24"
+  "after": "2026-10-01/2026-10-25"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -21971,6 +22213,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-24"
+  "after": "2026-10-01/2026-10-25"
  }
 ]
