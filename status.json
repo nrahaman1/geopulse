@@ -1,5 +1,5 @@
 {
- "started": "2026-10-25T04:51:53+00:00",
+ "started": "2026-10-25T11:39:01+00:00",
  "sources": {
   "gdacs": {
    "ok": false,
@@ -15,7 +15,7 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 88
+   "articles": 83
   },
   "rss:wildfiretoday.com": {
    "ok": true,
@@ -31,18 +31,18 @@
   }
  },
  "news": {
-  "read": 23,
+  "read": 21,
   "per_hazard": {
    "flood": 10,
-   "wildfire": 9,
+   "wildfire": 7,
    "vegetation": 4
   },
-  "events": 5,
+  "events": 7,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-25T05:37:39+00:00",
- "duration_s": 2746,
- "cases": 310,
+ "finished": "2026-10-25T12:28:21+00:00",
+ "duration_s": 2960,
+ "cases": 313,
  "new": 3,
  "ok": true
 }

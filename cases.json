@@ -17310,6 +17310,89 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261021-33.33_-105.67",
+  "hazard": "flood",
+  "lon": -105.673099,
+  "lat": 33.3315804,
+  "bbox": [
+   -105.726196,
+   33.305087,
+   -105.503689,
+   33.475344
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-21",
+  "event_end": "2026-10-21",
+  "place": "Ruidoso, New Mexico",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kasu.org/weather-environment-infrastructure/2026-10-21/deadly-flash-flood-in-nm-town-shows-how-wildfires-worsen-flood-risks",
+    "title": "Deadly flash flood in NM town shows how wildfires worsen flood risks",
+    "outlet": "kasu.org",
+    "date": "2026-10-21",
+    "quote": "flash flood in Ruidoso, New Mexico, in July 2025 killed three people, including two young children",
+    "detail": "three people killed, including two young children"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.abqjournal.com/news/town-leaders-said-they-were-prepared-for-floods-first-responders-disagree/3146595",
+    "title": "Ruidoso responders cite staffing gaps in deadly 2025 flood",
+    "outlet": "abqjournal.com",
+    "date": "2026-10-21",
+    "quote": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town.",
+    "detail": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town."
+   }
+  ],
+  "first_seen": "2026-10-21",
+  "updated": "2026-10-21",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Ruidoso, New Mexico, United States (2026-10-21)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -105.7262,
+      33.30509
+     ],
+     [
+      -105.50369,
+      33.30509
+     ],
+     [
+      -105.50369,
+      33.47534
+     ],
+     [
+      -105.7262,
+      33.47534
+     ],
+     [
+      -105.7262,
+      33.30509
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 390.633,
+  "before": "2026-09-16/2026-10-16",
+  "after": "2026-10-21/2026-10-25",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 12,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261016-34.27_-91.92",
   "hazard": "wildfire",
   "lon": -91.9248307,
@@ -20063,81 +20146,72 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261021-33.33_-105.67",
+  "id": "fl-20261025-33.83_-117.91",
   "hazard": "flood",
-  "lon": -105.673099,
-  "lat": 33.3315804,
+  "lon": -117.911732,
+  "lat": 33.8347516,
   "bbox": [
-   -105.726196,
-   33.305087,
-   -105.503689,
-   33.475344
+   -118.0173585,
+   33.7889241,
+   -117.6739673,
+   33.8790572
   ],
   "geometry_from": "news",
-  "event_start": "2026-10-21",
-  "event_end": "2026-10-21",
-  "place": "Ruidoso, New Mexico",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-25",
+  "place": "Disneyland Resort, Anaheim",
   "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.kasu.org/weather-environment-infrastructure/2026-10-21/deadly-flash-flood-in-nm-town-shows-how-wildfires-worsen-flood-risks",
-    "title": "Deadly flash flood in NM town shows how wildfires worsen flood risks",
-    "outlet": "kasu.org",
-    "date": "2026-10-21",
-    "quote": "flash flood in Ruidoso, New Mexico, in July 2025 killed three people, including two young children",
-    "detail": "three people killed, including two young children"
-   },
-   {
-    "kind": "news",
-    "url": "https://www.abqjournal.com/news/town-leaders-said-they-were-prepared-for-floods-first-responders-disagree/3146595",
-    "title": "Ruidoso responders cite staffing gaps in deadly 2025 flood",
-    "outlet": "abqjournal.com",
-    "date": "2026-10-21",
-    "quote": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town.",
-    "detail": "Three people died in Ruidoso on July 8, 2025, after dangerous floods swept through the New Mexico town."
+    "url": "https://www.hindustantimes.com/world-news/us-news/disneyland-flooded-after-sudden-california-downpour-forces-ride-closures-cancels-fireworks-101792895886193.html",
+    "title": "Disneyland flooded after sudden California downpour forces ride closures , cancels fireworks",
+    "outlet": "hindustantimes.com",
+    "date": "2026-10-25",
+    "quote": "A sudden cloudburst flooded parts of Disneyland Resort in Anaheim, California, on Friday evening.",
+    "detail": "temporary closure of outdoor attractions, cancellation of nightly fireworks show, standing water around rides and pathways, difficulty in exiting the resort due to flooded transportation areas"
    }
   ],
-  "first_seen": "2026-10-21",
-  "updated": "2026-10-21",
-  "score": 0.3,
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Ruidoso, New Mexico, United States (2026-10-21)",
+  "title": "Flood \u00b7 Disneyland Resort, Anaheim, United States (2026-10-25)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -105.7262,
-      33.30509
+      -118.07395,
+      33.78892
      ],
      [
-      -105.50369,
-      33.30509
+      -117.74951,
+      33.78892
      ],
      [
-      -105.50369,
-      33.47534
+      -117.74951,
+      33.87906
      ],
      [
-      -105.7262,
-      33.47534
+      -118.07395,
+      33.87906
      ],
      [
-      -105.7262,
-      33.30509
+      -118.07395,
+      33.78892
      ]
     ]
    ]
   },
-  "aoi_km2": 390.633,
-  "before": "2026-09-16/2026-10-16",
-  "after": "2026-10-21/2026-10-25",
+  "aoi_km2": 300.076,
+  "before": "2026-09-20/2026-10-20",
+  "after": "2026-10-25/2026-10-25",
   "scenes": {
-   "s1_before": 10,
+   "s1_before": 12,
    "s1_after": 0,
-   "s2_before": 12,
+   "s2_before": 15,
    "s2_after": 0
   },
   "sensors": [
@@ -20213,6 +20287,81 @@
    "s1_before": 5,
    "s1_after": 0,
    "s2_before": 14,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261024-36.73_-108.21",
+  "hazard": "flood",
+  "lon": -108.205445,
+  "lat": 36.7291152,
+  "bbox": [
+   -108.2841038,
+   36.7067011,
+   -108.0962373,
+   36.8206112
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Farmington, San Juan County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.abqjournal.com/news/it-really-is-this-bad-flooding-triggers-evacuations-rescues-across-san-juan-county/3148013",
+    "title": "San Juan River flooding prompts evacuations in Farmington",
+    "outlet": "abqjournal.com",
+    "date": "2026-10-24",
+    "quote": "heavy rainfall triggered historic flooding along the San Juan and Animas rivers",
+    "detail": "1,500 homes evacuated, 60 rescue operations, water reclamation plant breach, raw sewage spill into river, shelter established, flood warnings issued, advisories to avoid flooded areas, infant rescue near Chaco Canyon, persistent storm system expected through weekend, risk of flash flooding, lightnin"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Farmington, San Juan County, United States (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -108.2841,
+      36.7067
+     ],
+     [
+      -108.09624,
+      36.7067
+     ],
+     [
+      -108.09624,
+      36.82061
+     ],
+     [
+      -108.2841,
+      36.82061
+     ],
+     [
+      -108.2841,
+      36.7067
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 212.19,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-25",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 0,
+   "s2_before": 26,
    "s2_after": 0
   },
   "sensors": [
@@ -20363,6 +20512,81 @@
    "s1_before": 32,
    "s1_after": 0,
    "s2_before": 70,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261023-39.95_-105.17",
+  "hazard": "wildfire",
+  "lon": -105.1685977,
+  "lat": 39.9527634,
+  "bbox": [
+   -105.214424,
+   39.908735,
+   -105.137578,
+   39.96232
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-23",
+  "event_end": "2026-10-23",
+  "place": "Superior, Boulder County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailycamera.com/2026/10/23/small-steps-can-have-a-big-impact-preparing-for-wildfires/",
+    "title": "Small steps can have a big impact \u2013 preparing for wildfires",
+    "outlet": "dailycamera.com",
+    "date": "2026-10-23",
+    "quote": "On December 30th, 2021, a wind-driven grass fire burned about 6,200 acres and destroyed 1,084 homes in Superior, Louisville and unincorporated Boulder County.",
+    "detail": "1,084 homes destroyed"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Superior, Boulder County, United States (2026-10-23)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -105.21442,
+      39.90874
+     ],
+     [
+      -105.13758,
+      39.90874
+     ],
+     [
+      -105.13758,
+      39.96232
+     ],
+     [
+      -105.21442,
+      39.96232
+     ],
+     [
+      -105.21442,
+      39.90874
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 39.042,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-25/2026-10-25",
+  "scenes": {
+   "s1_before": 13,
+   "s1_after": 0,
+   "s2_before": 12,
    "s2_after": 0
   },
   "sensors": [
