@@ -17362,6 +17362,89 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261024-41.45_-72.19",
+  "hazard": "flood",
+  "lon": -72.1948014,
+  "lat": 41.4495425,
+  "bbox": [
+   -72.2148014,
+   41.4295425,
+   -72.1748014,
+   41.4695425
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Four Corners region, Arizona",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.independent.co.uk/news/world/americas/colorado-new-mexico-flooding-four-corners-weather-b3072815.html",
+    "title": "Severe flooding in the Four Corners region prompts evacuations and rooftop rescues",
+    "outlet": "independent.co.uk",
+    "date": "2026-10-24",
+    "quote": "Severe flooding in the Four Corners region",
+    "detail": "forced evacuations, hundreds without power, 600 homes advised to evacuate, 1,500 people without electricity, key roads and bridges closed, 20 rescues staged, flood levels exceeded predictions, rivers expected to rise again"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wfmz.com/news/ap/ap-national/more-rain-is-expected-after-bad-flooding-in-the-four-corners-region-led-to-rescues-and-evacuations/article_11200049-2f75-5079-996d-5747a40fd528.html",
+    "title": "Still more rain , evacuations remain in place from Four Corners region flooding",
+    "outlet": "wfmz.com",
+    "date": "2026-10-24",
+    "quote": "Hundreds of homes remained evacuated and without electricity",
+    "detail": "Hundreds of people have lost power and been told to stay out of their homes"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Four Corners region, Arizona, United States (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -72.22476,
+      41.42693
+     ],
+     [
+      -72.16484,
+      41.42693
+     ],
+     [
+      -72.16484,
+      41.47215
+     ],
+     [
+      -72.22476,
+      41.47215
+     ],
+     [
+      -72.22476,
+      41.42693
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.16,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-26",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261022-37.18_-113.29",
   "hazard": "flood",
   "lon": -113.289888,
@@ -17766,6 +17849,80 @@
   "sensors": [
    "s1",
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261025-33.83_-117.91",
+  "hazard": "flood",
+  "lon": -117.911732,
+  "lat": 33.8347516,
+  "bbox": [
+   -118.0173585,
+   33.7889241,
+   -117.6739673,
+   33.8790572
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-25",
+  "place": "Disneyland Resort, Anaheim",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.hindustantimes.com/world-news/us-news/disneyland-flooded-after-sudden-california-downpour-forces-ride-closures-cancels-fireworks-101792895886193.html",
+    "title": "Disneyland flooded after sudden California downpour forces ride closures , cancels fireworks",
+    "outlet": "hindustantimes.com",
+    "date": "2026-10-25",
+    "quote": "A sudden cloudburst flooded parts of Disneyland Resort in Anaheim, California, on Friday evening.",
+    "detail": "temporary closure of outdoor attractions, cancellation of nightly fireworks show, standing water around rides and pathways, difficulty in exiting the resort due to flooded transportation areas"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Disneyland Resort, Anaheim, United States (2026-10-25)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -118.07395,
+      33.78892
+     ],
+     [
+      -117.74951,
+      33.78892
+     ],
+     [
+      -117.74951,
+      33.87906
+     ],
+     [
+      -118.07395,
+      33.87906
+     ],
+     [
+      -118.07395,
+      33.78892
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 300.076,
+  "before": "2026-09-20/2026-10-20",
+  "after": "2026-10-25/2026-10-26",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 1,
+   "s2_before": 15,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -20442,6 +20599,81 @@
   "status": "ready"
  },
  {
+  "id": "wi-20260901-32.72_-98.28",
+  "hazard": "wildfire",
+  "lon": -98.2814881,
+  "lat": 32.7215726,
+  "bbox": [
+   -98.5761595,
+   32.5115751,
+   -98.0559348,
+   33.0078065
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-09-01",
+  "event_end": "2026-09-30",
+  "place": "Palo Pinto County, Texas",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wildfiretoday.com/nearly-20m-awarded-to-rural-texas-fire-departments-to-prepare-for-wildfire/",
+    "title": "Nearly $20M awarded to rural Texas fire departments to prepare for wildfire",
+    "outlet": "wildfiretoday.com",
+    "date": "2026-10-26",
+    "quote": "Texas recorded its largest summer wildfire in history in September when the Ross Fire burned over 90,000 acres in Palo Pinto County.",
+    "detail": "167 structures destroyed, 18 occupied residences destroyed, 95 structures damaged"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Palo Pinto County, Texas, United States (2026-09-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -98.44165,
+      32.58592
+     ],
+     [
+      -98.12132,
+      32.58592
+     ],
+     [
+      -98.12132,
+      32.85723
+     ],
+     [
+      -98.44165,
+      32.85723
+     ],
+     [
+      -98.44165,
+      32.58592
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.911,
+  "before": "2026-07-23/2026-08-30",
+  "after": "2026-10-01/2026-10-26",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 2,
+   "s2_before": 8,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260807-49.60_-119.67",
   "hazard": "wildfire",
   "lon": -119.666667,
@@ -20517,72 +20749,147 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261025-33.83_-117.91",
+  "id": "fl-20261025-33.51_-115.91",
   "hazard": "flood",
-  "lon": -117.911732,
-  "lat": 33.8347516,
+  "lon": -115.9091712,
+  "lat": 33.5147895,
   "bbox": [
-   -118.0173585,
-   33.7889241,
-   -117.6739673,
-   33.8790572
+   -115.95624,
+   33.474642,
+   -115.857271,
+   33.555073
   ],
   "geometry_from": "news",
   "event_start": "2026-10-25",
   "event_end": "2026-10-25",
-  "place": "Disneyland Resort, Anaheim",
+  "place": "Oahu, North Shore",
   "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.hindustantimes.com/world-news/us-news/disneyland-flooded-after-sudden-california-downpour-forces-ride-closures-cancels-fireworks-101792895886193.html",
-    "title": "Disneyland flooded after sudden California downpour forces ride closures , cancels fireworks",
-    "outlet": "hindustantimes.com",
+    "url": "https://www.thegardenisland.com/2026/10/25/hawaii-news/hawaiis-plantation-legacy-leaves-lasting-risks-of-flooding-and-fires/",
+    "title": "Hawaii plantation legacy leaves lasting risks of flooding and fires",
+    "outlet": "thegardenisland.com",
     "date": "2026-10-25",
-    "quote": "A sudden cloudburst flooded parts of Disneyland Resort in Anaheim, California, on Friday evening.",
-    "detail": "temporary closure of outdoor attractions, cancellation of nightly fireworks show, standing water around rides and pathways, difficulty in exiting the resort due to flooded transportation areas"
+    "quote": "Months after Kona-low storms in March flooded homes and farmland on Oahu\u2019s North Shore",
+    "detail": "damaged infrastructure, blocked waterways and a lack of clear responsibility for maintaining plantation-era irrigation systems continue to leave the area vulnerable to flooding"
    }
   ],
-  "first_seen": "2026-10-25",
-  "updated": "2026-10-25",
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Disneyland Resort, Anaheim, United States (2026-10-25)",
+  "title": "Flood \u00b7 Oahu, North Shore, United States (2026-10-25)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -118.07395,
-      33.78892
+      -115.95624,
+      33.47464
      ],
      [
-      -117.74951,
-      33.78892
+      -115.85727,
+      33.47464
      ],
      [
-      -117.74951,
-      33.87906
+      -115.85727,
+      33.55507
      ],
      [
-      -118.07395,
-      33.87906
+      -115.95624,
+      33.55507
      ],
      [
-      -118.07395,
-      33.78892
+      -115.95624,
+      33.47464
      ]
     ]
    ]
   },
-  "aoi_km2": 300.076,
+  "aoi_km2": 81.982,
   "before": "2026-09-20/2026-10-20",
   "after": "2026-10-25/2026-10-26",
   "scenes": {
-   "s1_before": 12,
+   "s1_before": 11,
    "s1_after": 0,
-   "s2_before": 15,
+   "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261024-44.39_-68.80",
+  "hazard": "wildfire",
+  "lon": -68.7966248,
+  "lat": 44.3878303,
+  "bbox": [
+   -68.8535226,
+   44.3546761,
+   -68.7627939,
+   44.4620406
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Castine, Maine",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.foxbangor.com/news/castine-community-comes-together-to-reduce-future-wildfires/article_e7f49487-3b26-4d20-b5ba-fdf275d660ce.html",
+    "title": "Castine community comes together to reduce future wildfires",
+    "outlet": "foxbangor.com",
+    "date": "2026-10-25",
+    "quote": "Community members gathered at the park to create fire breaks, portions of land cleared of flammable materials meant to slow or stop wildfires from spreading.",
+    "detail": "The efforts were a collaboration between the town, fire department, Maine Forest Service, and the Maine Coast Heritage Trust. ... If there was a fire in Witherle Woods, it could jeopardize the entire town. There have been several wildfires in the vicinity of Castine over the past two years, and even"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Castine, Maine, United States (2026-10-24)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -68.85352,
+      44.35468
+     ],
+     [
+      -68.76279,
+      44.35468
+     ],
+     [
+      -68.76279,
+      44.46204
+     ],
+     [
+      -68.85352,
+      44.46204
+     ],
+     [
+      -68.85352,
+      44.35468
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 86.149,
+  "before": "2026-09-14/2026-10-22",
+  "after": "2026-10-26/2026-10-26",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 0,
+   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
