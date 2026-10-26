@@ -17695,6 +17695,81 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261025-53.74_-0.34",
+  "hazard": "flood",
+  "lon": -0.3394758,
+  "lat": 53.7435722,
+  "bbox": [
+   -0.4994758,
+   53.5835722,
+   -0.1794758,
+   53.9035722
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-25",
+  "place": "Humber region, Hull",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.hulldailymail.co.uk/news/hull-east-yorkshire-news/scouts-humber-region-first-earn-11208039",
+    "title": "Scouts from Humber region first to earn new BeFloodReady badge",
+    "outlet": "hulldailymail.co.uk",
+    "date": "2026-10-25",
+    "quote": "Scouts from the Humber region were the first to earn a new BeFloodReady badge, during Flood Action Week.",
+    "detail": "Flood preparedness education for youth organizations"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Humber region, Hull, United Kingdom (2026-10-25)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.49948,
+      53.60792
+     ],
+     [
+      -0.17948,
+      53.60792
+     ],
+     [
+      -0.17948,
+      53.87923
+     ],
+     [
+      -0.49948,
+      53.87923
+     ],
+     [
+      -0.49948,
+      53.60792
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 637.515,
+  "before": "2026-09-20/2026-10-20",
+  "after": "2026-10-25/2026-10-26",
+  "scenes": {
+   "s1_before": 25,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261024-14.92_120.77",
   "hazard": "flood",
   "lon": 120.7662073,
@@ -17765,6 +17840,230 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261024-36.73_-108.21",
+  "hazard": "flood",
+  "lon": -108.205445,
+  "lat": 36.7291152,
+  "bbox": [
+   -108.2841038,
+   36.7067011,
+   -108.0962373,
+   36.8206112
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Farmington, San Juan County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.abqjournal.com/news/it-really-is-this-bad-flooding-triggers-evacuations-rescues-across-san-juan-county/3148013",
+    "title": "San Juan River flooding prompts evacuations in Farmington",
+    "outlet": "abqjournal.com",
+    "date": "2026-10-24",
+    "quote": "heavy rainfall triggered historic flooding along the San Juan and Animas rivers",
+    "detail": "1,500 homes evacuated, 60 rescue operations, water reclamation plant breach, raw sewage spill into river, shelter established, flood warnings issued, advisories to avoid flooded areas, infant rescue near Chaco Canyon, persistent storm system expected through weekend, risk of flash flooding, lightnin"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Farmington, San Juan County, United States (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -108.2841,
+      36.7067
+     ],
+     [
+      -108.09624,
+      36.7067
+     ],
+     [
+      -108.09624,
+      36.82061
+     ],
+     [
+      -108.2841,
+      36.82061
+     ],
+     [
+      -108.2841,
+      36.7067
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 212.19,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-26",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 26,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261023-52.37_-0.04",
+  "hazard": "wildfire",
+  "lon": -0.044936,
+  "lat": 52.3729017,
+  "bbox": [
+   -0.4998961,
+   52.005779,
+   0.514455,
+   52.7399783
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-23",
+  "event_end": "2026-10-23",
+  "place": "Holme Fen Nature Reserve, Cambridgeshire",
+  "country": "United Kingdom",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.cambridge-news.co.uk/news/local-news/part-nature-reserve-reopens-after-34806506",
+    "title": "Part of nature reserve reopens after devastating summer wildfire",
+    "outlet": "cambridge-news.co.uk",
+    "date": "2026-10-23",
+    "quote": "Part of a Cambridgeshire nature reserve has reopened following a devastating summer wildfire.",
+    "detail": "An area the size of 60 football pitches was damaged by the fire."
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Holme Fen Nature Reserve, Cambridgeshire, United Kingdom (2026-10-23)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.26564,
+      52.23725
+     ],
+     [
+      0.17577,
+      52.23725
+     ],
+     [
+      0.17577,
+      52.50856
+     ],
+     [
+      -0.26564,
+      52.50856
+     ],
+     [
+      -0.26564,
+      52.23725
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.757,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-24/2026-10-26",
+  "scenes": {
+   "s1_before": 32,
+   "s1_after": 1,
+   "s2_before": 70,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261023-39.95_-105.17",
+  "hazard": "wildfire",
+  "lon": -105.1685977,
+  "lat": 39.9527634,
+  "bbox": [
+   -105.214424,
+   39.908735,
+   -105.137578,
+   39.96232
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-23",
+  "event_end": "2026-10-23",
+  "place": "Superior, Boulder County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.dailycamera.com/2026/10/23/small-steps-can-have-a-big-impact-preparing-for-wildfires/",
+    "title": "Small steps can have a big impact \u2013 preparing for wildfires",
+    "outlet": "dailycamera.com",
+    "date": "2026-10-23",
+    "quote": "On December 30th, 2021, a wind-driven grass fire burned about 6,200 acres and destroyed 1,084 homes in Superior, Louisville and unincorporated Boulder County.",
+    "detail": "1,084 homes destroyed"
+   }
+  ],
+  "first_seen": "2026-10-25",
+  "updated": "2026-10-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Superior, Boulder County, United States (2026-10-23)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -105.21442,
+      39.90874
+     ],
+     [
+      -105.13758,
+      39.90874
+     ],
+     [
+      -105.13758,
+      39.96232
+     ],
+     [
+      -105.21442,
+      39.96232
+     ],
+     [
+      -105.21442,
+      39.90874
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 39.042,
+  "before": "2026-09-13/2026-10-21",
+  "after": "2026-10-24/2026-10-26",
+  "scenes": {
+   "s1_before": 13,
+   "s1_after": 1,
+   "s2_before": 12,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -20279,86 +20578,11 @@
   },
   "aoi_km2": 300.076,
   "before": "2026-09-20/2026-10-20",
-  "after": "2026-10-25/2026-10-25",
+  "after": "2026-10-25/2026-10-26",
   "scenes": {
    "s1_before": 12,
    "s1_after": 0,
    "s2_before": 15,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261024-36.73_-108.21",
-  "hazard": "flood",
-  "lon": -108.205445,
-  "lat": 36.7291152,
-  "bbox": [
-   -108.2841038,
-   36.7067011,
-   -108.0962373,
-   36.8206112
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-24",
-  "event_end": "2026-10-24",
-  "place": "Farmington, San Juan County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.abqjournal.com/news/it-really-is-this-bad-flooding-triggers-evacuations-rescues-across-san-juan-county/3148013",
-    "title": "San Juan River flooding prompts evacuations in Farmington",
-    "outlet": "abqjournal.com",
-    "date": "2026-10-24",
-    "quote": "heavy rainfall triggered historic flooding along the San Juan and Animas rivers",
-    "detail": "1,500 homes evacuated, 60 rescue operations, water reclamation plant breach, raw sewage spill into river, shelter established, flood warnings issued, advisories to avoid flooded areas, infant rescue near Chaco Canyon, persistent storm system expected through weekend, risk of flash flooding, lightnin"
-   }
-  ],
-  "first_seen": "2026-10-25",
-  "updated": "2026-10-25",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Farmington, San Juan County, United States (2026-10-24)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -108.2841,
-      36.7067
-     ],
-     [
-      -108.09624,
-      36.7067
-     ],
-     [
-      -108.09624,
-      36.82061
-     ],
-     [
-      -108.2841,
-      36.82061
-     ],
-     [
-      -108.2841,
-      36.7067
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 212.19,
-  "before": "2026-09-19/2026-10-19",
-  "after": "2026-10-24/2026-10-25",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 0,
-   "s2_before": 26,
    "s2_after": 0
   },
   "sensors": [
@@ -20429,161 +20653,11 @@
   },
   "aoi_km2": 25.143,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25",
+  "after": "2026-10-24/2026-10-26",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 11,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261023-52.37_-0.04",
-  "hazard": "wildfire",
-  "lon": -0.044936,
-  "lat": 52.3729017,
-  "bbox": [
-   -0.4998961,
-   52.005779,
-   0.514455,
-   52.7399783
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-23",
-  "event_end": "2026-10-23",
-  "place": "Holme Fen Nature Reserve, Cambridgeshire",
-  "country": "United Kingdom",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.cambridge-news.co.uk/news/local-news/part-nature-reserve-reopens-after-34806506",
-    "title": "Part of nature reserve reopens after devastating summer wildfire",
-    "outlet": "cambridge-news.co.uk",
-    "date": "2026-10-23",
-    "quote": "Part of a Cambridgeshire nature reserve has reopened following a devastating summer wildfire.",
-    "detail": "An area the size of 60 football pitches was damaged by the fire."
-   }
-  ],
-  "first_seen": "2026-10-25",
-  "updated": "2026-10-25",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Holme Fen Nature Reserve, Cambridgeshire, United Kingdom (2026-10-23)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -0.26564,
-      52.23725
-     ],
-     [
-      0.17577,
-      52.23725
-     ],
-     [
-      0.17577,
-      52.50856
-     ],
-     [
-      -0.26564,
-      52.50856
-     ],
-     [
-      -0.26564,
-      52.23725
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 907.757,
-  "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25",
-  "scenes": {
-   "s1_before": 32,
-   "s1_after": 0,
-   "s2_before": 70,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261023-39.95_-105.17",
-  "hazard": "wildfire",
-  "lon": -105.1685977,
-  "lat": 39.9527634,
-  "bbox": [
-   -105.214424,
-   39.908735,
-   -105.137578,
-   39.96232
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-23",
-  "event_end": "2026-10-23",
-  "place": "Superior, Boulder County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.dailycamera.com/2026/10/23/small-steps-can-have-a-big-impact-preparing-for-wildfires/",
-    "title": "Small steps can have a big impact \u2013 preparing for wildfires",
-    "outlet": "dailycamera.com",
-    "date": "2026-10-23",
-    "quote": "On December 30th, 2021, a wind-driven grass fire burned about 6,200 acres and destroyed 1,084 homes in Superior, Louisville and unincorporated Boulder County.",
-    "detail": "1,084 homes destroyed"
-   }
-  ],
-  "first_seen": "2026-10-25",
-  "updated": "2026-10-25",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Superior, Boulder County, United States (2026-10-23)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -105.21442,
-      39.90874
-     ],
-     [
-      -105.13758,
-      39.90874
-     ],
-     [
-      -105.13758,
-      39.96232
-     ],
-     [
-      -105.21442,
-      39.96232
-     ],
-     [
-      -105.21442,
-      39.90874
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 39.042,
-  "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25",
-  "scenes": {
-   "s1_before": 13,
-   "s1_after": 0,
-   "s2_before": 12,
    "s2_after": 0
   },
   "sensors": [
@@ -20672,7 +20746,7 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-25",
+  "after": "2026-10-17/2026-10-26",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -20742,7 +20816,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25"
+  "after": "2026-10-25/2026-10-26"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -20801,7 +20875,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-10-25"
+  "after": "2026-10-23/2026-10-26"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -20860,7 +20934,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-25"
+  "after": "2026-10-24/2026-10-26"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -20919,7 +20993,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-25"
+  "after": "2026-10-24/2026-10-26"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -20978,7 +21052,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-25"
+  "after": "2026-10-23/2026-10-26"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -21045,7 +21119,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-25"
+  "after": "2026-10-23/2026-10-26"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -21104,7 +21178,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-25"
+  "after": "2026-10-24/2026-10-26"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -21171,7 +21245,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-25"
+  "after": "2026-10-22/2026-10-26"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -21254,7 +21328,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-25"
+  "after": "2026-10-15/2026-10-26"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -21329,7 +21403,69 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-25"
+  "after": "2026-10-13/2026-10-26"
+ },
+ {
+  "id": "wi-20261025--12.84_130.96",
+  "hazard": "wildfire",
+  "lon": 130.964048,
+  "lat": -12.8376538,
+  "bbox": [
+   130.889302,
+   -12.860388,
+   131.038949,
+   -12.771655
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-25",
+  "place": "Duncan Road, Northern Territory",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.miragenews.com/bushfire-advice-issued-for-duncan-road-darwin-1766081/",
+    "title": "Bushfire Advice Issued for Duncan Road , Darwin River",
+    "outlet": "miragenews.com",
+    "date": "2026-10-25",
+    "quote": "A fire has started in the area.",
+    "detail": "Smoke from this fire may affect visibility, active fire may occur close to the roadside, firefighting crews may be working close to the roadside."
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Duncan Road, Northern Territory, Australia (2026-10-25)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      130.8893,
+      -12.86039
+     ],
+     [
+      131.03895,
+      -12.86039
+     ],
+     [
+      131.03895,
+      -12.77166
+     ],
+     [
+      130.8893,
+      -12.77166
+     ],
+     [
+      130.8893,
+      -12.86039
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -21394,7 +21530,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25"
+  "after": "2026-10-24/2026-10-26"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -21459,7 +21595,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-25"
+  "after": "2026-10-24/2026-10-26"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -21524,7 +21660,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-10-25"
+  "after": "2026-10-23/2026-10-26"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -21589,7 +21725,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-25"
+  "after": "2026-10-22/2026-10-26"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -21654,7 +21790,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-25"
+  "after": "2026-10-22/2026-10-26"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -21719,7 +21855,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-25"
+  "after": "2026-10-20/2026-10-26"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -21784,7 +21920,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-25"
+  "after": "2026-10-20/2026-10-26"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -21849,7 +21985,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-25"
+  "after": "2026-10-20/2026-10-26"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -21914,7 +22050,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-10-25"
+  "after": "2026-10-16/2026-10-26"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -21979,7 +22115,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-25"
+  "after": "2026-10-07/2026-10-26"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -22044,7 +22180,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-25"
+  "after": "2026-10-06/2026-10-26"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -22109,7 +22245,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-25"
+  "after": "2026-10-03/2026-10-26"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -22174,7 +22310,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-25"
+  "after": "2026-10-02/2026-10-26"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -22239,7 +22375,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-25"
+  "after": "2026-10-02/2026-10-26"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -22304,7 +22440,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-25"
+  "after": "2026-10-01/2026-10-26"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -22369,7 +22505,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-25"
+  "after": "2026-10-01/2026-10-26"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -22434,6 +22570,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-25"
+  "after": "2026-10-01/2026-10-26"
  }
 ]
