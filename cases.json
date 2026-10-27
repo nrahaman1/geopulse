@@ -17796,6 +17796,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261026-11.44_76.70",
+  "hazard": "flood",
+  "lon": 76.69752,
+  "lat": 11.4449997,
+  "bbox": [
+   76.2329467,
+   11.1876836,
+   77.0147824,
+   11.7056491
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-26",
+  "place": "Nilgiris village, Nilgiris",
+  "country": "India",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.orissapost.com/moyar-river-floods-after-heavy-rain-leaving-nilgiris-village-cut-off/",
+    "title": "Moyar River floods after heavy rain , leaving Nilgiris village cut off",
+    "outlet": "orissapost.com",
+    "date": "2026-10-26",
+    "quote": "Moyar River floods after heavy rain",
+    "detail": "cut off"
+   }
+  ],
+  "first_seen": "2026-10-27",
+  "updated": "2026-10-27",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Nilgiris village, Nilgiris, India (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      76.56004,
+      11.30934
+     ],
+     [
+      76.835,
+      11.30934
+     ],
+     [
+      76.835,
+      11.58066
+     ],
+     [
+      76.56004,
+      11.58066
+     ],
+     [
+      76.56004,
+      11.30934
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.543,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-27",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261025-53.74_-0.34",
   "hazard": "flood",
   "lon": -0.3394758,
@@ -21817,7 +21891,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-10-26",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-27",
   "place": "Berlin State Forest, New York State",
   "country": "US",
   "sources": [

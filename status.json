@@ -1,5 +1,5 @@
 {
- "started": "2026-10-27T12:20:58+00:00",
+ "started": "2026-10-27T22:19:32+00:00",
  "sources": {
   "gdacs": {
    "ok": false,
@@ -15,34 +15,34 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 18
+   "articles": 11
   },
   "rss:wildfiretoday.com": {
    "ok": true,
    "articles": 2
   },
   "rss:inciweb.wildfire.gov": {
-   "ok": true,
-   "articles": 1
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   },
   "rss:news.mongabay.com": {
    "ok": true,
-   "articles": 2
+   "articles": 3
   }
  },
  "news": {
-  "read": 17,
+  "read": 16,
   "per_hazard": {
-   "flood": 10,
+   "flood": 8,
    "wildfire": 5,
-   "vegetation": 2
+   "vegetation": 3
   },
   "events": 5,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-27T12:58:49+00:00",
- "duration_s": 2270,
- "cases": 321,
- "new": 2,
+ "finished": "2026-10-27T22:52:37+00:00",
+ "duration_s": 1986,
+ "cases": 322,
+ "new": 1,
  "ok": true
 }
