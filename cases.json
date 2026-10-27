@@ -18076,6 +18076,81 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261024-44.39_-68.80",
+  "hazard": "wildfire",
+  "lon": -68.7966248,
+  "lat": 44.3878303,
+  "bbox": [
+   -68.8535226,
+   44.3546761,
+   -68.7627939,
+   44.4620406
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-24",
+  "place": "Castine, Maine",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.foxbangor.com/news/castine-community-comes-together-to-reduce-future-wildfires/article_e7f49487-3b26-4d20-b5ba-fdf275d660ce.html",
+    "title": "Castine community comes together to reduce future wildfires",
+    "outlet": "foxbangor.com",
+    "date": "2026-10-25",
+    "quote": "Community members gathered at the park to create fire breaks, portions of land cleared of flammable materials meant to slow or stop wildfires from spreading.",
+    "detail": "The efforts were a collaboration between the town, fire department, Maine Forest Service, and the Maine Coast Heritage Trust. ... If there was a fire in Witherle Woods, it could jeopardize the entire town. There have been several wildfires in the vicinity of Castine over the past two years, and even"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Castine, Maine, United States (2026-10-24)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -68.85352,
+      44.35468
+     ],
+     [
+      -68.76279,
+      44.35468
+     ],
+     [
+      -68.76279,
+      44.46204
+     ],
+     [
+      -68.85352,
+      44.46204
+     ],
+     [
+      -68.85352,
+      44.35468
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 86.149,
+  "before": "2026-09-14/2026-10-22",
+  "after": "2026-10-25/2026-10-27",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 2,
+   "s2_before": 6,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261023-52.37_-0.04",
   "hazard": "wildfire",
   "lon": -0.044936,
@@ -20810,86 +20885,11 @@
   },
   "aoi_km2": 81.982,
   "before": "2026-09-20/2026-10-20",
-  "after": "2026-10-25/2026-10-26",
+  "after": "2026-10-25/2026-10-27",
   "scenes": {
    "s1_before": 11,
    "s1_after": 0,
    "s2_before": 12,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261024-44.39_-68.80",
-  "hazard": "wildfire",
-  "lon": -68.7966248,
-  "lat": 44.3878303,
-  "bbox": [
-   -68.8535226,
-   44.3546761,
-   -68.7627939,
-   44.4620406
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-24",
-  "event_end": "2026-10-24",
-  "place": "Castine, Maine",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.foxbangor.com/news/castine-community-comes-together-to-reduce-future-wildfires/article_e7f49487-3b26-4d20-b5ba-fdf275d660ce.html",
-    "title": "Castine community comes together to reduce future wildfires",
-    "outlet": "foxbangor.com",
-    "date": "2026-10-25",
-    "quote": "Community members gathered at the park to create fire breaks, portions of land cleared of flammable materials meant to slow or stop wildfires from spreading.",
-    "detail": "The efforts were a collaboration between the town, fire department, Maine Forest Service, and the Maine Coast Heritage Trust. ... If there was a fire in Witherle Woods, it could jeopardize the entire town. There have been several wildfires in the vicinity of Castine over the past two years, and even"
-   }
-  ],
-  "first_seen": "2026-10-26",
-  "updated": "2026-10-26",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Castine, Maine, United States (2026-10-24)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -68.85352,
-      44.35468
-     ],
-     [
-      -68.76279,
-      44.35468
-     ],
-     [
-      -68.76279,
-      44.46204
-     ],
-     [
-      -68.85352,
-      44.46204
-     ],
-     [
-      -68.85352,
-      44.35468
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 86.149,
-  "before": "2026-09-14/2026-10-22",
-  "after": "2026-10-26/2026-10-26",
-  "scenes": {
-   "s1_before": 21,
-   "s1_after": 0,
-   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -20960,7 +20960,7 @@
   },
   "aoi_km2": 25.143,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-10-26",
+  "after": "2026-10-24/2026-10-27",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -21053,7 +21053,7 @@
   },
   "aoi_km2": 647.369,
   "before": "2026-09-12/2026-10-12",
-  "after": "2026-10-17/2026-10-26",
+  "after": "2026-10-17/2026-10-27",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -21123,7 +21123,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-25/2026-10-26"
+  "after": "2026-10-25/2026-10-27"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -21182,7 +21182,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-10-26"
+  "after": "2026-10-23/2026-10-27"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -21241,7 +21241,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-26"
+  "after": "2026-10-25/2026-10-27"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -21300,7 +21300,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-24/2026-10-26"
+  "after": "2026-10-25/2026-10-27"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -21359,7 +21359,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-26"
+  "after": "2026-10-23/2026-10-27"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -21426,7 +21426,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-26"
+  "after": "2026-10-25/2026-10-27"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -21485,7 +21485,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-10-26"
+  "after": "2026-10-24/2026-10-27"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -21552,7 +21552,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-22/2026-10-26"
+  "after": "2026-10-25/2026-10-27"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -21635,7 +21635,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-10-26"
+  "after": "2026-10-15/2026-10-27"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -21710,7 +21710,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-10-26"
+  "after": "2026-10-13/2026-10-27"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -21772,7 +21772,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 159.53,
+  "before": "2026-09-15/2026-10-23",
+  "after": "2026-10-27/2026-10-27"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -21837,7 +21840,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-10-26"
+  "after": "2026-10-24/2026-10-27"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -21902,7 +21905,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-10-26"
+  "after": "2026-10-24/2026-10-27"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -21967,7 +21970,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-10-26"
+  "after": "2026-10-23/2026-10-27"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -22032,7 +22035,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-26"
+  "after": "2026-10-22/2026-10-27"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -22097,7 +22100,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-10-26"
+  "after": "2026-10-22/2026-10-27"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -22162,7 +22165,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-26"
+  "after": "2026-10-20/2026-10-27"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -22227,7 +22230,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-26"
+  "after": "2026-10-20/2026-10-27"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -22292,7 +22295,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-10-26"
+  "after": "2026-10-20/2026-10-27"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -22357,7 +22360,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-10-26"
+  "after": "2026-10-16/2026-10-27"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -22422,7 +22425,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-10-26"
+  "after": "2026-10-07/2026-10-27"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -22487,7 +22490,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-10-26"
+  "after": "2026-10-06/2026-10-27"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -22552,7 +22555,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-10-26"
+  "after": "2026-10-03/2026-10-27"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -22617,7 +22620,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-26"
+  "after": "2026-10-02/2026-10-27"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -22682,7 +22685,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-10-26"
+  "after": "2026-10-02/2026-10-27"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -22747,7 +22750,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-26"
+  "after": "2026-10-01/2026-10-27"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -22812,7 +22815,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-26"
+  "after": "2026-10-01/2026-10-27"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -22877,6 +22880,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-10-26"
+  "after": "2026-10-01/2026-10-27"
  }
 ]
