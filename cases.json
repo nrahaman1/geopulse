@@ -164,6 +164,107 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261024-41.45_-72.19",
+  "hazard": "flood",
+  "lon": -72.1948014,
+  "lat": 41.4495425,
+  "bbox": [
+   -72.2148014,
+   41.4295425,
+   -72.1748014,
+   41.4695425
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-26",
+  "place": "Four Corners region, Arizona",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.independent.co.uk/news/world/americas/colorado-new-mexico-flooding-four-corners-weather-b3072815.html",
+    "title": "Severe flooding in the Four Corners region prompts evacuations and rooftop rescues",
+    "outlet": "independent.co.uk",
+    "date": "2026-10-24",
+    "quote": "Severe flooding in the Four Corners region",
+    "detail": "forced evacuations, hundreds without power, 600 homes advised to evacuate, 1,500 people without electricity, key roads and bridges closed, 20 rescues staged, flood levels exceeded predictions, rivers expected to rise again"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wfmz.com/news/ap/ap-national/more-rain-is-expected-after-bad-flooding-in-the-four-corners-region-led-to-rescues-and-evacuations/article_11200049-2f75-5079-996d-5747a40fd528.html",
+    "title": "Still more rain , evacuations remain in place from Four Corners region flooding",
+    "outlet": "wfmz.com",
+    "date": "2026-10-24",
+    "quote": "Hundreds of homes remained evacuated and without electricity",
+    "detail": "Hundreds of people have lost power and been told to stay out of their homes"
+   },
+   {
+    "kind": "news",
+    "url": "https://isp.netscape.com:443/news/story/0001/20261025/961459bac9d5db8dc9e5260cac61aec3",
+    "title": "More flooding possible in Four Corners region after days of heavy rain",
+    "outlet": "isp.netscape.com",
+    "date": "2026-10-25",
+    "quote": "A rain-soaked swath of the Southwest U.S. endured additional flooding",
+    "detail": "homes flooded, water rescues, evacuations, power outages, contaminated water, broken gas and propane lines, sewage releases into the San Juan River"
+   },
+   {
+    "kind": "news",
+    "url": "https://isp.netscape.com:443/news/story/0001/20261026/961459bac9d5db8dc9e5260cac61aec3",
+    "title": "More flooding in Four Corners region after storms bring heavy rain and at least one tornado",
+    "outlet": "isp.netscape.com",
+    "date": "2026-10-26",
+    "quote": "A rain-soaked swath of the Southwest U.S. endured additional flooding as crews in New Mexico scoured evacuated neighborhoods Sunday for dead animals, downed power lines and other hazards left behind by receding floodwaters and at least one tornado.",
+    "detail": "Many remain evacuated and hundreds are without power in the Farmington area. Floodwaters could be contaminated with chemicals and raw sewage, and gas and propane lines could be broken, among other hazards. About 4 feet (1.2 meters) of water flooded the home of county Sheriff Shane Ferrari. Officials"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-27",
+  "score": 0.45,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Four Corners region, Arizona, United States (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -72.22476,
+      41.42693
+     ],
+     [
+      -72.16484,
+      41.42693
+     ],
+     [
+      -72.16484,
+      41.47215
+     ],
+     [
+      -72.22476,
+      41.47215
+     ],
+     [
+      -72.22476,
+      41.42693
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.16,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-27",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261013-54.14_-115.68",
   "hazard": "wildfire",
   "lon": -115.6846504,
@@ -17362,89 +17463,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261024-41.45_-72.19",
-  "hazard": "flood",
-  "lon": -72.1948014,
-  "lat": 41.4495425,
-  "bbox": [
-   -72.2148014,
-   41.4295425,
-   -72.1748014,
-   41.4695425
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-24",
-  "event_end": "2026-10-24",
-  "place": "Four Corners region, Arizona",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.independent.co.uk/news/world/americas/colorado-new-mexico-flooding-four-corners-weather-b3072815.html",
-    "title": "Severe flooding in the Four Corners region prompts evacuations and rooftop rescues",
-    "outlet": "independent.co.uk",
-    "date": "2026-10-24",
-    "quote": "Severe flooding in the Four Corners region",
-    "detail": "forced evacuations, hundreds without power, 600 homes advised to evacuate, 1,500 people without electricity, key roads and bridges closed, 20 rescues staged, flood levels exceeded predictions, rivers expected to rise again"
-   },
-   {
-    "kind": "news",
-    "url": "https://www.wfmz.com/news/ap/ap-national/more-rain-is-expected-after-bad-flooding-in-the-four-corners-region-led-to-rescues-and-evacuations/article_11200049-2f75-5079-996d-5747a40fd528.html",
-    "title": "Still more rain , evacuations remain in place from Four Corners region flooding",
-    "outlet": "wfmz.com",
-    "date": "2026-10-24",
-    "quote": "Hundreds of homes remained evacuated and without electricity",
-    "detail": "Hundreds of people have lost power and been told to stay out of their homes"
-   }
-  ],
-  "first_seen": "2026-10-26",
-  "updated": "2026-10-26",
-  "score": 0.3,
-  "confidence": "low",
-  "title": "Flood \u00b7 Four Corners region, Arizona, United States (2026-10-24)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -72.22476,
-      41.42693
-     ],
-     [
-      -72.16484,
-      41.42693
-     ],
-     [
-      -72.16484,
-      41.47215
-     ],
-     [
-      -72.22476,
-      41.47215
-     ],
-     [
-      -72.22476,
-      41.42693
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.16,
-  "before": "2026-09-19/2026-10-19",
-  "after": "2026-10-24/2026-10-26",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 1,
-   "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20261022-37.18_-113.29",
   "hazard": "flood",
   "lon": -113.289888,
@@ -17923,6 +17941,80 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261025-33.51_-115.91",
+  "hazard": "flood",
+  "lon": -115.9091712,
+  "lat": 33.5147895,
+  "bbox": [
+   -115.95624,
+   33.474642,
+   -115.857271,
+   33.555073
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-25",
+  "place": "Oahu, North Shore",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.thegardenisland.com/2026/10/25/hawaii-news/hawaiis-plantation-legacy-leaves-lasting-risks-of-flooding-and-fires/",
+    "title": "Hawaii plantation legacy leaves lasting risks of flooding and fires",
+    "outlet": "thegardenisland.com",
+    "date": "2026-10-25",
+    "quote": "Months after Kona-low storms in March flooded homes and farmland on Oahu\u2019s North Shore",
+    "detail": "damaged infrastructure, blocked waterways and a lack of clear responsibility for maintaining plantation-era irrigation systems continue to leave the area vulnerable to flooding"
+   }
+  ],
+  "first_seen": "2026-10-26",
+  "updated": "2026-10-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Oahu, North Shore, United States (2026-10-25)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -115.95624,
+      33.47464
+     ],
+     [
+      -115.85727,
+      33.47464
+     ],
+     [
+      -115.85727,
+      33.55507
+     ],
+     [
+      -115.95624,
+      33.55507
+     ],
+     [
+      -115.95624,
+      33.47464
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 81.982,
+  "before": "2026-09-20/2026-10-20",
+  "after": "2026-10-25/2026-10-27",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 0,
+   "s2_before": 12,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -20824,72 +20916,72 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261025-33.51_-115.91",
+  "id": "fl-20261027-5.85_100.42",
   "hazard": "flood",
-  "lon": -115.9091712,
-  "lat": 33.5147895,
+  "lon": 100.4151899,
+  "lat": 5.8482755,
   "bbox": [
-   -115.95624,
-   33.474642,
-   -115.857271,
-   33.555073
+   100.283183,
+   5.7147305,
+   100.4699191,
+   5.9788617
   ],
   "geometry_from": "news",
-  "event_start": "2026-10-25",
-  "event_end": "2026-10-25",
-  "place": "Oahu, North Shore",
-  "country": "United States",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-27",
+  "place": "Kedah",
+  "country": "Malaysia",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.thegardenisland.com/2026/10/25/hawaii-news/hawaiis-plantation-legacy-leaves-lasting-risks-of-flooding-and-fires/",
-    "title": "Hawaii plantation legacy leaves lasting risks of flooding and fires",
-    "outlet": "thegardenisland.com",
-    "date": "2026-10-25",
-    "quote": "Months after Kona-low storms in March flooded homes and farmland on Oahu\u2019s North Shore",
-    "detail": "damaged infrastructure, blocked waterways and a lack of clear responsibility for maintaining plantation-era irrigation systems continue to leave the area vulnerable to flooding"
+    "url": "https://www.thestar.com.my/news/nation/2026/10/27/floods-90-areas-in-kedah-designated-as-hotspots",
+    "title": "Floods : 90 areas in Kedah designated as hotspots",
+    "outlet": "thestar.com.my",
+    "date": "2026-10-27",
+    "quote": "A total of 90 areas in Kedah have been identified as flood risk hotspots",
+    "detail": "202 people from 69 families relocated to three relief centres"
    }
   ],
-  "first_seen": "2026-10-26",
-  "updated": "2026-10-26",
+  "first_seen": "2026-10-27",
+  "updated": "2026-10-27",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Oahu, North Shore, United States (2026-10-25)",
+  "title": "Flood \u00b7 Kedah, Malaysia (2026-10-27)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -115.95624,
-      33.47464
+      100.28318,
+      5.71473
      ],
      [
-      -115.85727,
-      33.47464
+      100.46992,
+      5.71473
      ],
      [
-      -115.85727,
-      33.55507
+      100.46992,
+      5.97886
      ],
      [
-      -115.95624,
-      33.55507
+      100.28318,
+      5.97886
      ],
      [
-      -115.95624,
-      33.47464
+      100.28318,
+      5.71473
      ]
     ]
    ]
   },
-  "aoi_km2": 81.982,
-  "before": "2026-09-20/2026-10-20",
-  "after": "2026-10-25/2026-10-27",
+  "aoi_km2": 603.917,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-10-27",
   "scenes": {
-   "s1_before": 11,
+   "s1_before": 4,
    "s1_after": 0,
-   "s2_before": 12,
+   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -21711,6 +21803,68 @@
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
   "after": "2026-10-13/2026-10-27"
+ },
+ {
+  "id": "wi-20261026-42.66_-73.32",
+  "hazard": "wildfire",
+  "lon": -73.3212378,
+  "lat": 42.6584938,
+  "bbox": [
+   -73.3523962,
+   42.6166707,
+   -73.2863342,
+   42.7002799
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-26",
+  "place": "Berlin State Forest, New York State",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.iberkshires.com/story/84297/Mass-National-Guard-to-Aid-in-Battling-NY-Wildfire.html",
+    "title": "Mass National Guard to Aid in Battling NY Wildfire",
+    "outlet": "iberkshires.com",
+    "date": "2026-10-27",
+    "quote": "The blaze was first reported Sunday in New York State's 678-acre Berlin State Forest along the state border.",
+    "detail": "The fire has consumed more than 150 acres and moved into Williamstown. Smoke is affecting areas such as Cheshire, and residents are encouraged to avoid the area and follow public safety guidance."
+   }
+  ],
+  "first_seen": "2026-10-27",
+  "updated": "2026-10-27",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Berlin State Forest, New York State, US (2026-10-26)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -73.3524,
+      42.61667
+     ],
+     [
+      -73.28633,
+      42.61667
+     ],
+     [
+      -73.28633,
+      42.70028
+     ],
+     [
+      -73.3524,
+      42.70028
+     ],
+     [
+      -73.3524,
+      42.61667
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261025--12.84_130.96",
