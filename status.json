@@ -1,9 +1,9 @@
 {
- "started": "2026-10-28T05:49:18+00:00",
+ "started": "2026-10-28T13:02:36+00:00",
  "sources": {
   "gdacs": {
    "ok": false,
-   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+   "error": "TimeoutError: The read operation timed out"
   },
   "cems": {
    "ok": true,
@@ -14,16 +14,16 @@
    "events": 0
   },
   "gdelt": {
-   "ok": false,
-   "error": "OSError: GDELT kept refusing requests (rate limit)"
+   "ok": true,
+   "articles": 6
   },
   "rss:wildfiretoday.com": {
-   "ok": true,
-   "articles": 2
+   "ok": false,
+   "error": "ParseError: not well-formed (invalid token): line 1, column 119"
   },
   "rss:inciweb.wildfire.gov": {
-   "ok": false,
-   "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+   "ok": true,
+   "articles": 0
   },
   "rss:news.mongabay.com": {
    "ok": true,
@@ -31,17 +31,17 @@
   }
  },
  "news": {
-  "read": 5,
+  "read": 9,
   "per_hazard": {
-   "flood": 0,
+   "flood": 4,
    "wildfire": 2,
    "vegetation": 3
   },
-  "events": 1,
+  "events": 2,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-28T06:02:16+00:00",
- "duration_s": 778,
+ "finished": "2026-10-28T13:17:48+00:00",
+ "duration_s": 912,
  "cases": 322,
  "new": 0,
  "ok": true
