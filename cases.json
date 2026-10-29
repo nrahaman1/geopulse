@@ -357,6 +357,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261027-31.25_34.79",
+  "hazard": "flood",
+  "lon": 34.7925,
+  "lat": 31.2457,
+  "bbox": [
+   34.734,
+   31.1926,
+   34.8548,
+   31.3234
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Israel",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104261",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104261&episodeid=1&eventtype=FL",
+    "title": "Flood in Israel (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Israel (2026-10-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      34.734,
+      31.1926
+     ],
+     [
+      34.8548,
+      31.1926
+     ],
+     [
+      34.8548,
+      31.3234
+     ],
+     [
+      34.734,
+      31.3234
+     ],
+     [
+      34.734,
+      31.1926
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 166.846,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-10-29",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 2,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261026--12.54_-73.67",
   "hazard": "flood",
   "lon": -73.6698,
@@ -1564,7 +1637,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2676,7 +2749,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-24",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2812,7 +2885,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-24",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Madagascar",
   "sources": [
@@ -2948,7 +3021,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -2959,10 +3032,18 @@
     "title": "Forest fires in South Sudan, Sudan (Green alert)",
     "date": "2026-10-19",
     "detail": "Green impact for forestfire in 10307 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033292",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033292&episodeid=2&eventtype=WF",
+    "title": "Forest fires in South Sudan (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 15331 ha"
    }
   ],
   "first_seen": "2026-10-23",
-  "updated": "2026-10-23",
+  "updated": "2026-10-29",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 South Sudan, Sudan (2026-10-19)",
@@ -2996,12 +3077,12 @@
   },
   "aoi_km2": 224.966,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-21/2026-10-24",
+  "after": "2026-10-21/2026-10-29",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 21,
-   "s2_after": 2
+   "s2_after": 5
   },
   "sensors": [
    "s2"
@@ -3016,7 +3097,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4214,7 +4295,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -4283,7 +4364,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Malawi",
   "sources": [
@@ -4318,6 +4399,14 @@
     "title": "Forest fires in Malawi (Green alert)",
     "date": "2026-10-15",
     "detail": "Green impact for forestfire in 15734 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033322",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033322&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Malawi (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 22388 ha"
    }
   ],
   "first_seen": "2026-10-23",
@@ -4360,7 +4449,7 @@
    "s1_before": 9,
    "s1_after": 1,
    "s2_before": 19,
-   "s2_after": 6
+   "s2_after": 8
   },
   "sensors": [
    "s1",
@@ -4376,7 +4465,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Tanzania, Mozambique",
   "sources": [
@@ -4445,7 +4534,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4726,6 +4815,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261016--1.47_-54.29",
+  "hazard": "wildfire",
+  "lon": -54.2902,
+  "lat": -1.4665,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-16",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033294",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033294&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-16",
+    "detail": "Green impact for forestfire in 11027 ha"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-10-16)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -54.3576,
+      -1.53433
+     ],
+     [
+      -54.2228,
+      -1.53433
+     ],
+     [
+      -54.2228,
+      -1.39867
+     ],
+     [
+      -54.3576,
+      -1.39867
+     ],
+     [
+      -54.3576,
+      -1.53433
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.351,
+  "before": "2026-09-06/2026-10-14",
+  "after": "2026-10-18/2026-10-29",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 1,
+   "s2_before": 23,
+   "s2_after": 8
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -5241,7 +5399,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Tanzania, Malawi",
   "sources": [
@@ -9807,7 +9965,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -10331,7 +10489,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -23040,71 +23198,66 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261027-31.25_34.79",
-  "hazard": "flood",
-  "lon": 34.7925,
-  "lat": 31.2457,
-  "bbox": [
-   34.734,
-   31.1926,
-   34.8548,
-   31.3234
-  ],
+  "id": "wi-20261027--23.04_21.41",
+  "hazard": "wildfire",
+  "lon": 21.4087,
+  "lat": -23.0449,
+  "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
   "event_end": "2026-10-29",
   "place": "",
-  "country": "Israel",
+  "country": "Botswana",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "FL1104261",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104261&episodeid=1&eventtype=FL",
-    "title": "Flood in Israel (Green alert)",
+    "id": "WF1033272",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033272&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
     "date": "2026-10-27",
-    "detail": "Magnitude 0"
+    "detail": "Green impact for forestfire in 11223 ha"
    }
   ],
   "first_seen": "2026-10-29",
   "updated": "2026-10-29",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Flood \u00b7 Israel (2026-10-27)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 Botswana (2026-10-27)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      34.734,
-      31.1926
+      21.33548,
+      -23.11273
      ],
      [
-      34.8548,
-      31.1926
+      21.48192,
+      -23.11273
      ],
      [
-      34.8548,
-      31.3234
+      21.48192,
+      -22.97707
      ],
      [
-      34.734,
-      31.3234
+      21.33548,
+      -22.97707
      ],
      [
-      34.734,
-      31.1926
+      21.33548,
+      -23.11273
      ]
     ]
    ]
   },
-  "aoi_km2": 166.846,
-  "before": "2026-09-22/2026-10-22",
-  "after": "2026-10-27/2026-10-29",
+  "aoi_km2": 225.31,
+  "before": "2026-09-17/2026-10-25",
+  "after": "2026-10-29/2026-10-29",
   "scenes": {
-   "s1_before": 18,
+   "s1_before": 6,
    "s1_after": 0,
-   "s2_before": 7,
+   "s2_before": 9,
    "s2_after": 0
   },
   "sensors": [
@@ -23550,6 +23703,118 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261028--21.15_23.35",
+  "hazard": "wildfire",
+  "lon": 23.3462,
+  "lat": -21.1493,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-28",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033271",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033271&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-28",
+    "detail": "Green impact for forestfire in 21070 ha"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-10-28)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      23.27396,
+      -21.21713
+     ],
+     [
+      23.41844,
+      -21.21713
+     ],
+     [
+      23.41844,
+      -21.08147
+     ],
+     [
+      23.27396,
+      -21.08147
+     ],
+     [
+      23.27396,
+      -21.21713
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261028-31.09_-89.10",
+  "hazard": "wildfire",
+  "lon": -89.09778,
+  "lat": 31.08583,
+  "bbox": null,
+  "geometry_from": "eonet",
+  "event_start": "2026-10-28",
+  "event_end": "2026-10-28",
+  "place": "South Tank Trail, Perry, Mississippi",
+  "country": "",
+  "sources": [
+   {
+    "kind": "eonet",
+    "id": "EONET_25827",
+    "url": "https://irwin.doi.gov/observer/incidents/2026-MSMNF-000680",
+    "title": "Wildfire South Tank Trail, Perry, Mississippi",
+    "date": "2026-10-28",
+    "detail": "1000.0 acres"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 South Tank Trail, Perry, Mississippi (2026-10-28)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -89.17645,
+      31.018
+     ],
+     [
+      -89.01911,
+      31.018
+     ],
+     [
+      -89.01911,
+      31.15366
+     ],
+     [
+      -89.17645,
+      31.15366
+     ],
+     [
+      -89.17645,
+      31.018
+     ]
+    ]
+   ]
+  }
+ },
+ {
   "id": "wi-20261027--21.07_24.03",
   "hazard": "wildfire",
   "lon": 24.0313,
@@ -23576,6 +23841,14 @@
     "title": "Forest fires in Botswana (Green alert)",
     "date": "2026-10-27",
     "detail": "Green impact for forestfire in 14571 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033287",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033287&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Green impact for forestfire in 32322 ha"
    }
   ],
   "first_seen": "2026-10-28",
@@ -23750,7 +24023,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Botswana, Zimbabwe",
   "sources": [
