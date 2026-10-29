@@ -357,6 +357,299 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261026--12.54_-73.67",
+  "hazard": "flood",
+  "lon": -73.6698,
+  "lat": -12.5412,
+  "bbox": [
+   -73.8051,
+   -12.7104,
+   -73.5439,
+   -12.372
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Peru",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104259",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104259&episodeid=1&eventtype=FL",
+    "title": "Flood in Peru (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Peru (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -73.8051,
+      -12.67686
+     ],
+     [
+      -73.5439,
+      -12.67686
+     ],
+     [
+      -73.5439,
+      -12.40554
+     ],
+     [
+      -73.8051,
+      -12.40554
+     ],
+     [
+      -73.8051,
+      -12.67686
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 851.809,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-29",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 2,
+   "s2_before": 11,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261026-53.55_10.00",
+  "hazard": "flood",
+  "lon": 10.0013,
+  "lat": 53.5502,
+  "bbox": [
+   6.3459,
+   51.2951,
+   11.5983,
+   54.1378
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-27",
+  "place": "",
+  "country": "Germany",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104257",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104257&episodeid=1&eventtype=FL",
+    "title": "Flood in Germany (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Germany (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      9.7745,
+      53.41454
+     ],
+     [
+      10.2281,
+      53.41454
+     ],
+     [
+      10.2281,
+      53.68586
+     ],
+     [
+      9.7745,
+      53.68586
+     ],
+     [
+      9.7745,
+      53.41454
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 907.236,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-29",
+  "scenes": {
+   "s1_before": 25,
+   "s1_after": 2,
+   "s2_before": 8,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261025-4.36_18.58",
+  "hazard": "flood",
+  "lon": 18.5836,
+  "lat": 4.3635,
+  "bbox": [
+   18.5239,
+   4.3237,
+   18.6441,
+   4.433
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-27",
+  "place": "",
+  "country": "Central African Republic",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104256",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104256&episodeid=1&eventtype=FL",
+    "title": "Flood in Central African Republic (Green alert)",
+    "date": "2026-10-25",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Central African Republic (2026-10-25)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      18.5239,
+      4.3237
+     ],
+     [
+      18.6441,
+      4.3237
+     ],
+     [
+      18.6441,
+      4.433
+     ],
+     [
+      18.5239,
+      4.433
+     ],
+     [
+      18.5239,
+      4.3237
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 161.414,
+  "before": "2026-09-20/2026-10-20",
+  "after": "2026-10-25/2026-10-29",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 16,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261024-2.19_99.38",
+  "hazard": "flood",
+  "lon": 99.3812,
+  "lat": 2.1924,
+  "bbox": [
+   96.7204,
+   -1.0336,
+   100.5496,
+   4.4395
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104253",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104253&episodeid=5&eventtype=FL",
+    "title": "Flood in Indonesia (Green alert)",
+    "date": "2026-10-24",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Indonesia (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      99.24635,
+      2.05674
+     ],
+     [
+      99.51605,
+      2.05674
+     ],
+     [
+      99.51605,
+      2.32806
+     ],
+     [
+      99.24635,
+      2.32806
+     ],
+     [
+      99.24635,
+      2.05674
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 899.396,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-29",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 1,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261023--24.47_23.33",
   "hazard": "wildfire",
   "lon": 23.3342,
@@ -500,7 +793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-23",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -636,7 +929,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -712,7 +1005,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -781,7 +1074,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Chad",
   "sources": [
@@ -849,7 +1142,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "China",
   "sources": [
@@ -911,6 +1204,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261022--28.36_-59.26",
+  "hazard": "flood",
+  "lon": -59.2593,
+  "lat": -28.355,
+  "bbox": [
+   -59.4442,
+   -28.3989,
+   -59.0736,
+   -28.2584
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-22",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Argentina",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104250",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104250&episodeid=4&eventtype=FL",
+    "title": "Flood in Argentina (Green alert)",
+    "date": "2026-10-22",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Argentina (2026-10-22)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -59.41238,
+      -28.3989
+     ],
+     [
+      -59.10622,
+      -28.3989
+     ],
+     [
+      -59.10622,
+      -28.2584
+     ],
+     [
+      -59.41238,
+      -28.2584
+     ],
+     [
+      -59.41238,
+      -28.3989
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 467.672,
+  "before": "2026-09-17/2026-10-17",
+  "after": "2026-10-22/2026-10-29",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 4,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261021--18.83_125.20",
   "hazard": "wildfire",
   "lon": 125.1982,
@@ -918,7 +1284,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1054,7 +1420,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1267,7 +1633,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1336,7 +1702,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Mali",
   "sources": [
@@ -1404,7 +1770,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2095,7 +2461,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-20",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3150,7 +3516,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-18",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-27",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -3344,6 +3710,80 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261018-18.13_100.15",
+  "hazard": "flood",
+  "lon": 100.1488,
+  "lat": 18.1323,
+  "bbox": [
+   100.1038,
+   18.0872,
+   100.1938,
+   18.1773
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-18",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Thailand",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104241",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104241&episodeid=3&eventtype=FL",
+    "title": "Flood in Thailand (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Thailand (2026-10-18)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.1038,
+      18.0872
+     ],
+     [
+      100.1938,
+      18.0872
+     ],
+     [
+      100.1938,
+      18.1773
+     ],
+     [
+      100.1038,
+      18.1773
+     ],
+     [
+      100.1038,
+      18.0872
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 94.939,
+  "before": "2026-09-13/2026-10-13",
+  "after": "2026-10-18/2026-10-29",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 3,
+   "s2_before": 6,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -3843,7 +4283,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-17",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Malawi",
   "sources": [
@@ -3870,10 +4310,18 @@
     "title": "Forest fires in Malawi (Green alert)",
     "date": "2026-10-13",
     "detail": "Green impact for forestfire in 18360 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033295",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033295&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Malawi (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 15734 ha"
    }
   ],
   "first_seen": "2026-10-23",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Malawi (2026-10-17)",
@@ -3907,12 +4355,81 @@
   },
   "aoi_km2": 224.996,
   "before": "2026-09-07/2026-10-15",
-  "after": "2026-10-19/2026-10-28",
+  "after": "2026-10-19/2026-10-29",
   "scenes": {
    "s1_before": 9,
    "s1_after": 1,
    "s2_before": 19,
    "s2_after": 6
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261017--11.74_35.81",
+  "hazard": "wildfire",
+  "lon": 35.8123,
+  "lat": -11.7427,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-17",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Tanzania, Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033199",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033199&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Tanzania, Mozambique (Green alert)",
+    "date": "2026-10-17",
+    "detail": "Green impact for forestfire in 10063 ha"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Tanzania, Mozambique (2026-10-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      35.74349,
+      -11.81053
+     ],
+     [
+      35.88111,
+      -11.81053
+     ],
+     [
+      35.88111,
+      -11.67487
+     ],
+     [
+      35.74349,
+      -11.67487
+     ],
+     [
+      35.74349,
+      -11.81053
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.464,
+  "before": "2026-09-07/2026-10-15",
+  "after": "2026-10-19/2026-10-29",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 29,
+   "s2_after": 14
   },
   "sensors": [
    "s1",
@@ -3928,7 +4445,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4153,7 +4670,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4724,7 +5241,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Tanzania, Malawi",
   "sources": [
@@ -4852,6 +5369,75 @@
    "s1_after": 1,
    "s2_before": 4,
    "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261015--15.33_40.44",
+  "hazard": "wildfire",
+  "lon": 40.4434,
+  "lat": -15.331,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033296",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033296&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Green impact for forestfire in 11386 ha"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-10-15)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      40.37354,
+      -15.39883
+     ],
+     [
+      40.51326,
+      -15.39883
+     ],
+     [
+      40.51326,
+      -15.26317
+     ],
+     [
+      40.37354,
+      -15.26317
+     ],
+     [
+      40.37354,
+      -15.39883
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.173,
+  "before": "2026-09-05/2026-10-13",
+  "after": "2026-10-17/2026-10-29",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 3,
+   "s2_before": 40,
+   "s2_after": 14
   },
   "sensors": [
    "s1",
@@ -5103,7 +5689,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -5171,7 +5757,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Zambia, Zimbabwe",
   "sources": [
@@ -5240,7 +5826,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-14",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-27",
   "place": "",
   "country": "Central African Republic, Sudan",
   "sources": [
@@ -5732,7 +6318,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Suriname, Brazil",
   "sources": [
@@ -5743,10 +6329,18 @@
     "title": "Forest fires in Suriname, Brazil (Green alert)",
     "date": "2026-10-13",
     "detail": "Green impact for forestfire in 16332 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033218",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033218&episodeid=13&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-10-23",
+    "detail": "Green impact for forestfire in 14467 ha"
    }
   ],
   "first_seen": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Suriname, Brazil (2026-10-13)",
@@ -5780,10 +6374,10 @@
   },
   "aoi_km2": 224.918,
   "before": "2026-09-03/2026-10-11",
-  "after": "2026-10-15/2026-10-28",
+  "after": "2026-10-15/2026-10-29",
   "scenes": {
    "s1_before": 6,
-   "s1_after": 2,
+   "s1_after": 3,
    "s2_before": 16,
    "s2_after": 8
   },
@@ -9213,7 +9807,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -9737,7 +10331,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-06",
-  "event_end": "2026-10-26",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -17878,6 +18472,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260915--2.19_-79.89",
+  "hazard": "flood",
+  "lon": -79.8869,
+  "lat": -2.1901,
+  "bbox": [
+   -80.3124,
+   -2.617,
+   -79.8564,
+   -1.9622
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-09-15",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Ecuador",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104167",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104167&episodeid=11&eventtype=FL",
+    "title": "Flood in Ecuador (Green alert)",
+    "date": "2026-09-15",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Ecuador (2026-09-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -80.02175,
+      -2.32576
+     ],
+     [
+      -79.75205,
+      -2.32576
+     ],
+     [
+      -79.75205,
+      -2.05444
+     ],
+     [
+      -80.02175,
+      -2.05444
+     ],
+     [
+      -80.02175,
+      -2.32576
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 899.698,
+  "before": "2026-08-11/2026-09-10",
+  "after": "2026-10-18/2026-10-29",
+  "scenes": {
+   "s1_before": 17,
+   "s1_after": 6,
+   "s2_before": 11,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260914--12.57_134.48",
   "hazard": "wildfire",
   "lon": 134.4842,
@@ -22298,6 +22966,228 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261027-44.27_28.29",
+  "hazard": "flood",
+  "lon": 28.2922,
+  "lat": 44.2679,
+  "bbox": [
+   27.2734,
+   43.7337,
+   28.9944,
+   44.802
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Romania",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104260",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104260&episodeid=1&eventtype=FL",
+    "title": "Flood in Romania (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Romania (2026-10-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      28.10403,
+      44.13224
+     ],
+     [
+      28.48037,
+      44.13224
+     ],
+     [
+      28.48037,
+      44.40356
+     ],
+     [
+      28.10403,
+      44.40356
+     ],
+     [
+      28.10403,
+      44.13224
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.428,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-10-29",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 0,
+   "s2_before": 27,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261027-31.25_34.79",
+  "hazard": "flood",
+  "lon": 34.7925,
+  "lat": 31.2457,
+  "bbox": [
+   34.734,
+   31.1926,
+   34.8548,
+   31.3234
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Israel",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104261",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104261&episodeid=1&eventtype=FL",
+    "title": "Flood in Israel (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Israel (2026-10-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      34.734,
+      31.1926
+     ],
+     [
+      34.8548,
+      31.1926
+     ],
+     [
+      34.8548,
+      31.3234
+     ],
+     [
+      34.734,
+      31.3234
+     ],
+     [
+      34.734,
+      31.1926
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 166.846,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-10-29",
+  "scenes": {
+   "s1_before": 18,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261026-40.87_29.27",
+  "hazard": "flood",
+  "lon": 29.2705,
+  "lat": 40.8722,
+  "bbox": [
+   29.2664,
+   40.8633,
+   29.2794,
+   40.8803
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104254",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104254&episodeid=1&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 T\u00fcrkiye (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.2432,
+      40.84919
+     ],
+     [
+      29.3026,
+      40.84919
+     ],
+     [
+      29.3026,
+      40.89441
+     ],
+     [
+      29.2432,
+      40.89441
+     ],
+     [
+      29.2432,
+      40.84919
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.148,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-29",
+  "scenes": {
+   "s1_before": 13,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261024--18.88_134.16",
   "hazard": "wildfire",
   "lon": 134.1559,
@@ -22374,7 +23264,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-23",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -22427,6 +23317,80 @@
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 18,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261001--15.26_-39.41",
+  "hazard": "flood",
+  "lon": -39.4112,
+  "lat": -15.2604,
+  "bbox": [
+   -39.8319,
+   -15.3525,
+   -39.298,
+   -13.8916
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104216",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=8&eventtype=FL",
+    "title": "Flood in Brazil (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-29",
+  "updated": "2026-10-29",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Brazil (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -39.55087,
+      -15.39606
+     ],
+     [
+      -39.27153,
+      -15.39606
+     ],
+     [
+      -39.27153,
+      -15.12474
+     ],
+     [
+      -39.55087,
+      -15.12474
+     ],
+     [
+      -39.55087,
+      -15.39606
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.175,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-19/2026-10-29",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 8,
    "s2_after": 0
   },
   "sensors": [
@@ -22593,7 +23557,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-10-28",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -22604,10 +23568,18 @@
     "title": "Forest fires in Botswana (Green alert)",
     "date": "2026-10-27",
     "detail": "Green impact for forestfire in 11269 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033276",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033276&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Green impact for forestfire in 14571 ha"
    }
   ],
   "first_seen": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Botswana (2026-10-27)",
@@ -22652,7 +23624,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-23",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-28",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -22837,7 +23809,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Burkina Faso",
   "sources": [
@@ -22963,7 +23935,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-27",
+  "event_end": "2026-10-29",
   "place": "",
   "country": "Australia",
   "sources": [
