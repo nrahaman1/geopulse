@@ -577,6 +577,152 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261026-36.34_29.30",
+  "hazard": "flood",
+  "lon": 29.3039,
+  "lat": 36.3366,
+  "bbox": [
+   27.1183,
+   36.235,
+   29.7932,
+   37.6018
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104254",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104254&episodeid=3&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 T\u00fcrkiye (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      29.13663,
+      36.20094
+     ],
+     [
+      29.47117,
+      36.20094
+     ],
+     [
+      29.47117,
+      36.47226
+     ],
+     [
+      29.13663,
+      36.47226
+     ],
+     [
+      29.13663,
+      36.20094
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.485,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-30",
+  "scenes": {
+   "s1_before": 29,
+   "s1_after": 1,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261026-29.21_33.81",
+  "hazard": "flood",
+  "lon": 33.8119,
+  "lat": 29.2077,
+  "bbox": [
+   33.7669,
+   29.1626,
+   33.857,
+   29.2527
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-10-28",
+  "place": "",
+  "country": "Egypt",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104264",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104264&episodeid=1&eventtype=FL",
+    "title": "Flood in Egypt (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Egypt (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      33.7669,
+      29.1626
+     ],
+     [
+      33.857,
+      29.1626
+     ],
+     [
+      33.857,
+      29.2527
+     ],
+     [
+      33.7669,
+      29.2527
+     ],
+     [
+      33.7669,
+      29.1626
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 87.443,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-10-30",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 2,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261025-4.36_18.58",
   "hazard": "flood",
   "lon": 18.5836,
@@ -650,6 +796,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261025-42.15_122.88",
+  "hazard": "wildfire",
+  "lon": 122.8774,
+  "lat": 42.1499,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-25",
+  "event_end": "2026-10-30",
+  "place": "",
+  "country": "China",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033300",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033300&episodeid=3&eventtype=WF",
+    "title": "Forest fires in China (Green alert)",
+    "date": "2026-10-25",
+    "detail": "Green impact for forestfire in 10333 ha"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 China (2026-10-25)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      122.78653,
+      42.08207
+     ],
+     [
+      122.96827,
+      42.08207
+     ],
+     [
+      122.96827,
+      42.21773
+     ],
+     [
+      122.78653,
+      42.21773
+     ],
+     [
+      122.78653,
+      42.08207
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.178,
+  "before": "2026-09-15/2026-10-23",
+  "after": "2026-10-27/2026-10-30",
+  "scenes": {
+   "s1_before": 1,
+   "s1_after": 0,
+   "s2_before": 13,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261024-2.19_99.38",
   "hazard": "flood",
   "lon": 99.3812,
@@ -715,6 +929,79 @@
    "s1_before": 5,
    "s1_after": 1,
    "s2_before": 1,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261024-4.37_97.03",
+  "hazard": "flood",
+  "lon": 97.0253,
+  "lat": 4.3685,
+  "bbox": [
+   94.7717,
+   1.4587,
+   98.6867,
+   6.2744
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-24",
+  "event_end": "2026-10-30",
+  "place": "",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104253",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104253&episodeid=6&eventtype=FL",
+    "title": "Flood in Indonesia (Green alert)",
+    "date": "2026-10-24",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Indonesia (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      96.89016,
+      4.23284
+     ],
+     [
+      97.16044,
+      4.23284
+     ],
+     [
+      97.16044,
+      4.50416
+     ],
+     [
+      96.89016,
+      4.50416
+     ],
+     [
+      96.89016,
+      4.23284
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.452,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-10-30",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 1,
+   "s2_before": 2,
    "s2_after": 0
   },
   "sensors": [
@@ -1078,7 +1365,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1706,7 +1993,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2588,6 +2875,80 @@
    "s1_after": 1,
    "s2_before": 7,
    "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261020-17.17_81.71",
+  "hazard": "flood",
+  "lon": 81.7099,
+  "lat": 17.1671,
+  "bbox": [
+   81.64,
+   17.0598,
+   81.7831,
+   17.2749
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-20",
+  "event_end": "2026-10-30",
+  "place": "",
+  "country": "India",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104248",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104248&episodeid=3&eventtype=FL",
+    "title": "Flood in India (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 India (2026-10-20)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      81.64,
+      17.0598
+     ],
+     [
+      81.7831,
+      17.0598
+     ],
+     [
+      81.7831,
+      17.2749
+     ],
+     [
+      81.64,
+      17.2749
+     ],
+     [
+      81.64,
+      17.0598
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 362.186,
+  "before": "2026-09-15/2026-10-15",
+  "after": "2026-10-20/2026-10-30",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 2,
+   "s2_before": 11,
+   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -6476,7 +6837,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Suriname, Brazil",
   "sources": [
@@ -23205,7 +23566,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -23258,6 +23619,80 @@
    "s1_before": 6,
    "s1_after": 0,
    "s2_before": 9,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261027-35.96_39.01",
+  "hazard": "flood",
+  "lon": 39.0146,
+  "lat": 35.9628,
+  "bbox": [
+   39.0095,
+   35.9564,
+   39.0243,
+   35.969
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-29",
+  "place": "",
+  "country": "Syria",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104263",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104263&episodeid=1&eventtype=FL",
+    "title": "Flood in Syria (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-30",
+  "updated": "2026-10-30",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Syria (2026-10-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      38.98915,
+      35.94009
+     ],
+     [
+      39.04465,
+      35.94009
+     ],
+     [
+      39.04465,
+      35.98531
+     ],
+     [
+      38.98915,
+      35.98531
+     ],
+     [
+      38.98915,
+      35.94009
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.1,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-10-30",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 0,
+   "s2_before": 17,
    "s2_after": 0
   },
   "sensors": [
@@ -23710,7 +24145,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -23828,7 +24263,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -24088,7 +24523,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Burkina Faso",
   "sources": [
@@ -24214,7 +24649,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-29",
+  "event_end": "2026-10-30",
   "place": "",
   "country": "Australia",
   "sources": [
