@@ -1,9 +1,9 @@
 {
- "started": "2026-10-30T13:02:41+00:00",
+ "started": "2026-10-30T22:25:50+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 54
+   "events": 61
   },
   "cems": {
    "ok": true,
@@ -27,22 +27,22 @@
   },
   "rss:news.mongabay.com": {
    "ok": true,
-   "articles": 2
+   "articles": 3
   }
  },
  "news": {
-  "read": 4,
+  "read": 5,
   "per_hazard": {
    "flood": 0,
    "wildfire": 2,
-   "vegetation": 2
+   "vegetation": 3
   },
   "events": 1,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-30T13:20:45+00:00",
- "duration_s": 1084,
- "cases": 366,
- "new": 6,
+ "finished": "2026-10-30T22:45:03+00:00",
+ "duration_s": 1153,
+ "cases": 370,
+ "new": 4,
  "ok": true
 }
