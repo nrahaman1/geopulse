@@ -584,7 +584,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Botswana, South Africa",
   "sources": [
@@ -641,6 +641,74 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261027-45.83_124.13",
+  "hazard": "wildfire",
+  "lon": 124.1252,
+  "lat": 45.831,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-31",
+  "place": "",
+  "country": "China",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033362",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033362&episodeid=1&eventtype=WF",
+    "title": "Forest fires in China (Green alert)",
+    "date": "2026-10-27",
+    "detail": "Green impact for forestfire in 12567 ha"
+   }
+  ],
+  "first_seen": "2026-10-31",
+  "updated": "2026-10-31",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 China (2026-10-27)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      124.02851,
+      45.76317
+     ],
+     [
+      124.22189,
+      45.76317
+     ],
+     [
+      124.22189,
+      45.89883
+     ],
+     [
+      124.02851,
+      45.89883
+     ],
+     [
+      124.02851,
+      45.76317
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 226.419,
+  "before": "2026-09-17/2026-10-25",
+  "after": "2026-10-29/2026-10-31",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 16,
+   "s2_after": 1
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -1092,7 +1160,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-25",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "China",
   "sources": [
@@ -1722,7 +1790,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2001,7 +2069,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2350,7 +2418,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3808,7 +3876,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -4316,7 +4384,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-18",
-  "event_end": "2026-10-23",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -4327,10 +4395,18 @@
     "title": "Forest fires in Nigeria (Green alert)",
     "date": "2026-10-18",
     "detail": "Green impact for forestfire in 11104 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033286",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033286&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Nigeria (Green alert)",
+    "date": "2026-10-28",
+    "detail": "Green impact for forestfire in 11186 ha"
    }
   ],
   "first_seen": "2026-10-22",
-  "updated": "2026-10-22",
+  "updated": "2026-10-31",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Nigeria (2026-10-18)",
@@ -4364,15 +4440,16 @@
   },
   "aoi_km2": 225.109,
   "before": "2026-09-08/2026-10-16",
-  "after": "2026-10-20/2026-10-22",
+  "after": "2026-10-20/2026-10-31",
   "scenes": {
    "s1_before": 14,
-   "s1_after": 1,
+   "s1_after": 2,
    "s2_before": 9,
-   "s2_after": 0
+   "s2_after": 3
   },
   "sensors": [
-   "s1"
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -5614,7 +5691,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-16",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -7263,7 +7340,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Suriname, Brazil",
   "sources": [
@@ -8841,7 +8918,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-10-24",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -8852,10 +8929,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-10",
     "detail": "Green impact for forestfire in 10242 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033274",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033274&episodeid=11&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Green impact for forestfire in 10906 ha"
    }
   ],
   "first_seen": "2026-10-20",
-  "updated": "2026-10-20",
+  "updated": "2026-10-31",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-10)",
@@ -8889,14 +8974,15 @@
   },
   "aoi_km2": 225.045,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-12/2026-10-20",
+  "after": "2026-10-12/2026-10-31",
   "scenes": {
    "s1_before": 3,
-   "s1_after": 0,
+   "s1_after": 1,
    "s2_before": 8,
-   "s2_after": 2
+   "s2_after": 3
   },
   "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -23985,6 +24071,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261029-27.64_89.84",
+  "hazard": "flood",
+  "lon": 89.8364,
+  "lat": 27.6363,
+  "bbox": [
+   89.4512,
+   27.468,
+   90.4554,
+   28.2474
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-29",
+  "event_end": "2026-10-31",
+  "place": "",
+  "country": "Bhutan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104265",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104265&episodeid=1&eventtype=FL",
+    "title": "Flood in Bhutan (Green alert)",
+    "date": "2026-10-29",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-31",
+  "updated": "2026-10-31",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Bhutan (2026-10-29)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      89.6843,
+      27.50064
+     ],
+     [
+      89.9885,
+      27.50064
+     ],
+     [
+      89.9885,
+      27.77196
+     ],
+     [
+      89.6843,
+      27.77196
+     ],
+     [
+      89.6843,
+      27.50064
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.65,
+  "before": "2026-09-24/2026-10-24",
+  "after": "2026-10-29/2026-10-31",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 11,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261027--23.04_21.41",
   "hazard": "wildfire",
   "lon": 21.4087,
@@ -24061,7 +24221,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-26",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -24417,7 +24577,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -24551,7 +24711,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -24945,7 +25105,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-30",
+  "event_end": "2026-10-31",
   "place": "",
   "country": "Australia",
   "sources": [
