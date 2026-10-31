@@ -1,9 +1,9 @@
 {
- "started": "2026-10-30T22:25:50+00:00",
+ "started": "2026-10-31T05:52:07+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 61
+   "events": 43
   },
   "cems": {
    "ok": true,
@@ -40,9 +40,9 @@
   "events": 1,
   "model": "qwen3:8b"
  },
- "finished": "2026-10-30T22:45:03+00:00",
- "duration_s": 1153,
+ "finished": "2026-10-31T06:11:02+00:00",
+ "duration_s": 1135,
  "cases": 370,
- "new": 4,
+ "new": 0,
  "ok": true
 }
