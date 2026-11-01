@@ -364,7 +364,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -432,7 +432,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -489,6 +489,74 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261028-8.89_25.95",
+  "hazard": "wildfire",
+  "lon": 25.9504,
+  "lat": 8.8879,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-28",
+  "event_end": "2026-11-01",
+  "place": "",
+  "country": "South Sudan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033367",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033367&episodeid=3&eventtype=WF",
+    "title": "Forest fires in South Sudan (Green alert)",
+    "date": "2026-10-28",
+    "detail": "Green impact for forestfire in 11327 ha"
+   }
+  ],
+  "first_seen": "2026-11-01",
+  "updated": "2026-11-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 South Sudan (2026-10-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.88221,
+      8.82007
+     ],
+     [
+      26.01859,
+      8.82007
+     ],
+     [
+      26.01859,
+      8.95573
+     ],
+     [
+      25.88221,
+      8.95573
+     ],
+     [
+      25.88221,
+      8.82007
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.966,
+  "before": "2026-09-18/2026-10-26",
+  "after": "2026-10-30/2026-11-01",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 1,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -1359,7 +1427,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-26",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -2204,7 +2272,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-23",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -4153,7 +4221,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-20",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "Tanzania",
   "sources": [
@@ -4709,7 +4777,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -4839,6 +4907,75 @@
    "s1_after": 1,
    "s2_before": 18,
    "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261019-9.88_27.09",
+  "hazard": "wildfire",
+  "lon": 27.095,
+  "lat": 9.8758,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-19",
+  "event_end": "2026-11-01",
+  "place": "",
+  "country": "Sudan, South Sudan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033340",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033340&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Sudan, South Sudan (Green alert)",
+    "date": "2026-10-19",
+    "detail": "Green impact for forestfire in 11510 ha"
+   }
+  ],
+  "first_seen": "2026-11-01",
+  "updated": "2026-11-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Sudan, South Sudan (2026-10-19)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      27.02661,
+      9.80797
+     ],
+     [
+      27.16339,
+      9.80797
+     ],
+     [
+      27.16339,
+      9.94363
+     ],
+     [
+      27.02661,
+      9.94363
+     ],
+     [
+      27.02661,
+      9.80797
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.927,
+  "before": "2026-09-09/2026-10-17",
+  "after": "2026-10-21/2026-11-01",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 2,
+   "s2_before": 39,
+   "s2_after": 12
   },
   "sensors": [
    "s1",
@@ -5217,7 +5354,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-18",
-  "event_end": "2026-10-31",
+  "event_end": "2026-11-01",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -5236,10 +5373,18 @@
     "title": "Forest fires in Nigeria (Green alert)",
     "date": "2026-10-28",
     "detail": "Green impact for forestfire in 11186 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033198",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033198&episodeid=14&eventtype=WF",
+    "title": "Forest fires in Nigeria (Green alert)",
+    "date": "2026-10-18",
+    "detail": "Green impact for forestfire in 10652 ha"
    }
   ],
   "first_seen": "2026-10-22",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Nigeria (2026-10-18)",
@@ -5273,12 +5418,12 @@
   },
   "aoi_km2": 225.109,
   "before": "2026-09-08/2026-10-16",
-  "after": "2026-10-20/2026-10-31",
+  "after": "2026-10-20/2026-11-01",
   "scenes": {
    "s1_before": 14,
    "s1_after": 2,
    "s2_before": 9,
-   "s2_after": 3
+   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -24975,6 +25120,75 @@
    "s2"
   ],
   "status": "ready"
+ },
+ {
+  "id": "wi-20261030-12.17_14.46",
+  "hazard": "wildfire",
+  "lon": 14.4611,
+  "lat": 12.1664,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-30",
+  "event_end": "2026-11-01",
+  "place": "",
+  "country": "Nigeria, Cameroon",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033360",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033360&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Nigeria, Cameroon (Green alert)",
+    "date": "2026-10-30",
+    "detail": "Green impact for forestfire in 12999 ha"
+   }
+  ],
+  "first_seen": "2026-11-01",
+  "updated": "2026-11-01",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Nigeria, Cameroon (2026-10-30)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      14.39218,
+      12.09857
+     ],
+     [
+      14.53002,
+      12.09857
+     ],
+     [
+      14.53002,
+      12.23423
+     ],
+     [
+      14.39218,
+      12.23423
+     ],
+     [
+      14.39218,
+      12.09857
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.975,
+  "before": "2026-09-20/2026-10-28",
+  "after": "2026-11-01/2026-11-01",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
  },
  {
   "id": "fl-20261029-27.64_89.84",
