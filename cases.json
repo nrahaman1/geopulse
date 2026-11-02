@@ -364,7 +364,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -432,7 +432,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -500,7 +500,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -557,6 +557,75 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261028-9.31_25.15",
+  "hazard": "wildfire",
+  "lon": 25.153,
+  "lat": 9.311,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-28",
+  "event_end": "2026-11-02",
+  "place": "",
+  "country": "South Sudan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033368",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033368&episodeid=6&eventtype=WF",
+    "title": "Forest fires in South Sudan (Green alert)",
+    "date": "2026-10-28",
+    "detail": "Green impact for forestfire in 10414 ha"
+   }
+  ],
+  "first_seen": "2026-11-02",
+  "updated": "2026-11-02",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 South Sudan (2026-10-28)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      25.08473,
+      9.24317
+     ],
+     [
+      25.22127,
+      9.24317
+     ],
+     [
+      25.22127,
+      9.37883
+     ],
+     [
+      25.08473,
+      9.37883
+     ],
+     [
+      25.08473,
+      9.24317
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.125,
+  "before": "2026-09-18/2026-10-26",
+  "after": "2026-10-30/2026-11-02",
+  "scenes": {
+   "s1_before": 1,
+   "s1_after": 1,
+   "s2_before": 12,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -993,7 +1062,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -1004,10 +1073,18 @@
     "title": "Forest fires in Botswana (Green alert)",
     "date": "2026-10-27",
     "detail": "Green impact for forestfire in 17205 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033382",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033382&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Botswana, Namibia (Green alert)",
+    "date": "2026-10-29",
+    "detail": "Green impact for forestfire in 10753 ha"
    }
   ],
   "first_seen": "2026-10-31",
-  "updated": "2026-10-31",
+  "updated": "2026-11-02",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Botswana (2026-10-27)",
@@ -1041,7 +1118,7 @@
   },
   "aoi_km2": 225.65,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-10-29/2026-10-31",
+  "after": "2026-10-29/2026-11-02",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -1427,7 +1504,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-26",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -2622,7 +2699,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-22",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3250,7 +3327,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -4290,7 +4367,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-20",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -4777,7 +4854,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -4922,7 +4999,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Sudan, South Sudan",
   "sources": [
@@ -8318,7 +8395,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Suriname, Brazil",
   "sources": [
@@ -21762,6 +21839,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261027-5.85_100.42",
+  "hazard": "flood",
+  "lon": 100.4151899,
+  "lat": 5.8482755,
+  "bbox": [
+   100.283183,
+   5.7147305,
+   100.4699191,
+   5.9788617
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-27",
+  "event_end": "2026-10-27",
+  "place": "Kedah",
+  "country": "Malaysia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.thestar.com.my/news/nation/2026/10/27/floods-90-areas-in-kedah-designated-as-hotspots",
+    "title": "Floods : 90 areas in Kedah designated as hotspots",
+    "outlet": "thestar.com.my",
+    "date": "2026-10-27",
+    "quote": "A total of 90 areas in Kedah have been identified as flood risk hotspots",
+    "detail": "202 people from 69 families relocated to three relief centres"
+   }
+  ],
+  "first_seen": "2026-10-27",
+  "updated": "2026-10-27",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Kedah, Malaysia (2026-10-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.28318,
+      5.71473
+     ],
+     [
+      100.46992,
+      5.71473
+     ],
+     [
+      100.46992,
+      5.97886
+     ],
+     [
+      100.28318,
+      5.97886
+     ],
+     [
+      100.28318,
+      5.71473
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 603.917,
+  "before": "2026-09-22/2026-10-22",
+  "after": "2026-10-27/2026-11-02",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 1,
+   "s2_before": 6,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261026-11.44_76.70",
   "hazard": "flood",
   "lon": 76.69752,
@@ -25129,7 +25280,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-30",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Nigeria, Cameroon",
   "sources": [
@@ -25256,81 +25407,6 @@
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 11,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261027-5.85_100.42",
-  "hazard": "flood",
-  "lon": 100.4151899,
-  "lat": 5.8482755,
-  "bbox": [
-   100.283183,
-   5.7147305,
-   100.4699191,
-   5.9788617
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-27",
-  "event_end": "2026-10-27",
-  "place": "Kedah",
-  "country": "Malaysia",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.thestar.com.my/news/nation/2026/10/27/floods-90-areas-in-kedah-designated-as-hotspots",
-    "title": "Floods : 90 areas in Kedah designated as hotspots",
-    "outlet": "thestar.com.my",
-    "date": "2026-10-27",
-    "quote": "A total of 90 areas in Kedah have been identified as flood risk hotspots",
-    "detail": "202 people from 69 families relocated to three relief centres"
-   }
-  ],
-  "first_seen": "2026-10-27",
-  "updated": "2026-10-27",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Kedah, Malaysia (2026-10-27)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      100.28318,
-      5.71473
-     ],
-     [
-      100.46992,
-      5.71473
-     ],
-     [
-      100.46992,
-      5.97886
-     ],
-     [
-      100.28318,
-      5.97886
-     ],
-     [
-      100.28318,
-      5.71473
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 603.917,
-  "before": "2026-09-22/2026-10-22",
-  "after": "2026-10-27/2026-11-02",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -25481,7 +25557,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -25875,7 +25951,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-02",
   "place": "",
   "country": "Australia",
   "sources": [
