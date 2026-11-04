@@ -430,6 +430,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261101--15.58_125.02",
+  "hazard": "wildfire",
+  "lon": 125.0241,
+  "lat": -15.5754,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-01",
+  "event_end": "2026-11-04",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033451",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033451&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-01",
+    "detail": "Green impact for forestfire in 11433 ha"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-01)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      124.95416,
+      -15.64323
+     ],
+     [
+      125.09404,
+      -15.64323
+     ],
+     [
+      125.09404,
+      -15.50757
+     ],
+     [
+      124.95416,
+      -15.50757
+     ],
+     [
+      124.95416,
+      -15.64323
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.301,
+  "before": "2026-09-22/2026-10-30",
+  "after": "2026-11-03/2026-11-04",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 2,
+   "s2_before": 18,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261030-12.17_14.46",
   "hazard": "wildfire",
   "lon": 14.4611,
@@ -562,6 +630,82 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261030--14.57_125.79",
+  "hazard": "wildfire",
+  "lon": 125.7935,
+  "lat": -14.5744,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-30",
+  "event_end": "2026-11-04",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033457",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033457&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-30",
+    "detail": "Green impact for forestfire in 11380 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033452",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033452&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-31",
+    "detail": "Green impact for forestfire in 10422 ha"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-10-30)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      125.72389,
+      -14.64223
+     ],
+     [
+      125.86311,
+      -14.64223
+     ],
+     [
+      125.86311,
+      -14.50657
+     ],
+     [
+      125.72389,
+      -14.50657
+     ],
+     [
+      125.72389,
+      -14.64223
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.511,
+  "before": "2026-09-20/2026-10-28",
+  "after": "2026-11-01/2026-11-04",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 39,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -845,6 +989,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261029-27.64_89.84",
+  "hazard": "flood",
+  "lon": 89.8364,
+  "lat": 27.6363,
+  "bbox": [
+   89.4512,
+   27.468,
+   90.4554,
+   28.2474
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-29",
+  "event_end": "2026-10-31",
+  "place": "",
+  "country": "Bhutan",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104265",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104265&episodeid=1&eventtype=FL",
+    "title": "Flood in Bhutan (Green alert)",
+    "date": "2026-10-29",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-10-31",
+  "updated": "2026-10-31",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Bhutan (2026-10-29)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      89.6843,
+      27.50064
+     ],
+     [
+      89.9885,
+      27.50064
+     ],
+     [
+      89.9885,
+      27.77196
+     ],
+     [
+      89.6843,
+      27.77196
+     ],
+     [
+      89.6843,
+      27.50064
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.65,
+  "before": "2026-09-24/2026-10-24",
+  "after": "2026-10-29/2026-11-04",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 11,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261028-8.89_25.95",
   "hazard": "wildfire",
   "lon": 25.9504,
@@ -852,7 +1069,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -920,7 +1137,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -997,7 +1214,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1490,7 +1707,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -2362,6 +2579,154 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261026-37.16_28.26",
+  "hazard": "flood",
+  "lon": 28.2624,
+  "lat": 37.1642,
+  "bbox": [
+   27.1183,
+   36.235,
+   29.7932,
+   37.6018
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-11-03",
+  "place": "",
+  "country": "T\u00fcrkiye",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104254",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104254&episodeid=6&eventtype=FL",
+    "title": "Flood in T\u00fcrkiye (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 T\u00fcrkiye (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      28.09331,
+      37.02854
+     ],
+     [
+      28.43149,
+      37.02854
+     ],
+     [
+      28.43149,
+      37.29986
+     ],
+     [
+      28.09331,
+      37.29986
+     ],
+     [
+      28.09331,
+      37.02854
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.012,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-11-04",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 3,
+   "s2_before": 58,
+   "s2_after": 11
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261026--3.57_-80.46",
+  "hazard": "flood",
+  "lon": -80.4596,
+  "lat": -3.5708,
+  "bbox": [
+   -80.5047,
+   -3.6158,
+   -80.4146,
+   -3.5257
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-26",
+  "event_end": "2026-11-03",
+  "place": "",
+  "country": "Peru",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104259",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104259&episodeid=3&eventtype=FL",
+    "title": "Flood in Peru (Green alert)",
+    "date": "2026-10-26",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Peru (2026-10-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -80.5047,
+      -3.6158
+     ],
+     [
+      -80.4146,
+      -3.6158
+     ],
+     [
+      -80.4146,
+      -3.5257
+     ],
+     [
+      -80.5047,
+      -3.5257
+     ],
+     [
+      -80.5047,
+      -3.6158
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 99.665,
+  "before": "2026-09-21/2026-10-21",
+  "after": "2026-10-26/2026-11-04",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 2,
+   "s2_before": 7,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261025-4.36_18.58",
   "hazard": "flood",
   "lon": 18.5836,
@@ -2588,7 +2953,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-24",
-  "event_end": "2026-11-01",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Indonesia",
   "sources": [
@@ -3974,7 +4339,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-10-30",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3985,10 +4350,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-21",
     "detail": "Green impact for forestfire in 22037 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033456",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033456&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-10-30",
+    "detail": "Green impact for forestfire in 13199 ha"
    }
   ],
   "first_seen": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-11-04",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-21)",
@@ -4022,12 +4395,12 @@
   },
   "aoi_km2": 225.043,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-10-28",
+  "after": "2026-10-23/2026-11-04",
   "scenes": {
    "s1_before": 6,
    "s1_after": 2,
    "s2_before": 14,
-   "s2_after": 2
+   "s2_after": 5
   },
   "sensors": [
    "s1",
@@ -4043,7 +4416,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-21",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -5083,7 +5456,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-20",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -5140,6 +5513,79 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261020-15.45_80.17",
+  "hazard": "flood",
+  "lon": 80.1661,
+  "lat": 15.446,
+  "bbox": [
+   80.1211,
+   15.4009,
+   80.2112,
+   15.491
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-20",
+  "event_end": "2026-11-04",
+  "place": "",
+  "country": "India",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104248",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104248&episodeid=4&eventtype=FL",
+    "title": "Flood in India (Green alert)",
+    "date": "2026-10-20",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 India (2026-10-20)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      80.1211,
+      15.4009
+     ],
+     [
+      80.2112,
+      15.4009
+     ],
+     [
+      80.2112,
+      15.491
+     ],
+     [
+      80.1211,
+      15.491
+     ],
+     [
+      80.1211,
+      15.4009
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 96.35,
+  "before": "2026-09-15/2026-10-15",
+  "after": "2026-10-25/2026-11-04",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 16,
+   "s2_after": 5
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -5570,7 +6016,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-19",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -8322,6 +8768,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261015-3.21_101.30",
+  "hazard": "flood",
+  "lon": 101.3041,
+  "lat": 3.2083,
+  "bbox": [
+   100.3875,
+   2.4046,
+   101.9698,
+   3.8704
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-11-04",
+  "place": "",
+  "country": "Malaysia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104239",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104239&episodeid=4&eventtype=FL",
+    "title": "Flood in Malaysia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Malaysia (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      101.16914,
+      3.07264
+     ],
+     [
+      101.43906,
+      3.07264
+     ],
+     [
+      101.43906,
+      3.34396
+     ],
+     [
+      101.16914,
+      3.34396
+     ],
+     [
+      101.16914,
+      3.07264
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.818,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-25/2026-11-04",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 2,
+   "s2_before": 4,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261014--19.40_134.62",
   "hazard": "wildfire",
   "lon": 134.6231,
@@ -9194,7 +9714,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-13",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Suriname, Brazil",
   "sources": [
@@ -10772,7 +11292,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-10",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -12677,6 +13197,80 @@
    "s1_after": 8,
    "s2_before": 17,
    "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261007-41.69_15.38",
+  "hazard": "flood",
+  "lon": 15.3776,
+  "lat": 41.6898,
+  "bbox": [
+   15.2972,
+   41.5451,
+   15.6063,
+   41.7734
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-07",
+  "event_end": "2026-11-03",
+  "place": "",
+  "country": "Italy",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104220",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=17&eventtype=FL",
+    "title": "Flood in Italy (Green alert)",
+    "date": "2026-10-07",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Italy (2026-10-07)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      15.2972,
+      41.5451
+     ],
+     [
+      15.6063,
+      41.5451
+     ],
+     [
+      15.6063,
+      41.7734
+     ],
+     [
+      15.2972,
+      41.7734
+     ],
+     [
+      15.2972,
+      41.5451
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 652.312,
+  "before": "2026-09-02/2026-10-02",
+  "after": "2026-10-24/2026-11-04",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 6,
+   "s2_before": 16,
+   "s2_after": 2
   },
   "sensors": [
    "s1",
@@ -21516,7 +22110,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-09-15",
-  "event_end": "2026-10-28",
+  "event_end": "2026-11-03",
   "place": "",
   "country": "Ecuador",
   "sources": [
@@ -22601,6 +23195,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20260519-37.28_-107.88",
+  "hazard": "flood",
+  "lon": -107.8766,
+  "lat": 37.2769,
+  "bbox": [
+   -107.9373,
+   36.9925,
+   -106.4762,
+   37.4235
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-05-19",
+  "event_end": "2026-11-03",
+  "place": "",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1103888",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1103888&episodeid=120&eventtype=FL",
+    "title": "Flood in United States (Green alert)",
+    "date": "2026-05-19",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 United States (2026-05-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -108.04594,
+      37.14124
+     ],
+     [
+      -107.70726,
+      37.14124
+     ],
+     [
+      -107.70726,
+      37.41256
+     ],
+     [
+      -108.04594,
+      37.41256
+     ],
+     [
+      -108.04594,
+      37.14124
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.189,
+  "before": "2026-04-14/2026-05-14",
+  "after": "2026-10-24/2026-11-04",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 3,
+   "s2_before": 21,
+   "s2_after": 6
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261022-37.18_-113.29",
   "hazard": "flood",
   "lon": -113.289888,
@@ -22934,6 +23602,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261103-40.20_-79.52",
+  "hazard": "flood",
+  "lon": -79.5208718,
+  "lat": 40.1989597,
+  "bbox": [
+   -79.5408718,
+   40.1789597,
+   -79.5008718,
+   40.2189597
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-03",
+  "event_end": "2026-11-03",
+  "place": "U.S. Southwest, United States",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.khqa.com/news/nation-world/flood-risks-remain-after-storms-forced-evacuations-in-us-southwest-in-photos/article_01e40b2f-84b4-5d9a-99e6-1a818f9e699f.html",
+    "title": "Flood risks remain after storms forced evacuations in US Southwest , in photos",
+    "outlet": "khqa.com",
+    "date": "2026-11-03",
+    "quote": "Powerful storms flooded parts of the U.S. Southwest",
+    "detail": "evacuations"
+   }
+  ],
+  "first_seen": "2026-11-03",
+  "updated": "2026-11-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 U.S. Southwest, United States, US (2026-11-03)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -79.55027,
+      40.17635
+     ],
+     [
+      -79.49147,
+      40.17635
+     ],
+     [
+      -79.49147,
+      40.22157
+     ],
+     [
+      -79.55027,
+      40.22157
+     ],
+     [
+      -79.55027,
+      40.17635
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.128,
+  "before": "2026-09-29/2026-10-29",
+  "after": "2026-11-03/2026-11-04",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 11,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261102-34.54_-112.47",
   "hazard": "flood",
   "lon": -112.468812,
@@ -23000,6 +23742,154 @@
    "s1_before": 11,
    "s1_after": 0,
    "s2_before": 4,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261102-29.87_-93.93",
+  "hazard": "flood",
+  "lon": -93.9332302,
+  "lat": 29.8716577,
+  "bbox": [
+   -94.1066173,
+   29.6331171,
+   -93.8113504,
+   30.032348
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-02",
+  "event_end": "2026-11-03",
+  "place": "Port Arthur, Jefferson County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://kfdm.com/news/local/drainage-district-7-lamar-university-to-install-10-flood-sensors-in-port-arthur-area",
+    "title": "Drainage District 7 , Lamar University to install 10 flood sensors in Port Arthur area",
+    "outlet": "kfdm.com",
+    "date": "2026-11-03",
+    "quote": "Drainage District 7 is partnering with Lamar University to install 10 flood sensors across the Port Arthur area.",
+    "detail": "Residents report repeated flooding of streets and homes, with concerns about infrastructure and water management."
+   }
+  ],
+  "first_seen": "2026-11-03",
+  "updated": "2026-11-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Port Arthur, Jefferson County, United States (2026-11-02)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -94.10667,
+      29.736
+     ],
+     [
+      -93.81129,
+      29.736
+     ],
+     [
+      -93.81129,
+      30.00731
+     ],
+     [
+      -94.10667,
+      30.00731
+     ],
+     [
+      -94.10667,
+      29.736
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 857.731,
+  "before": "2026-09-28/2026-10-28",
+  "after": "2026-11-02/2026-11-04",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 27,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261101-37.27_-107.01",
+  "hazard": "flood",
+  "lon": -107.010816,
+  "lat": 37.2695661,
+  "bbox": [
+   -107.0950576,
+   37.2449148,
+   -106.983392,
+   37.2873676
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-01",
+  "event_end": "2026-11-02",
+  "place": "Pagosa Springs, La Plata County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.denverpost.com/2026/11/02/colorado-flooding-pagosa-springs-durango/",
+    "title": "Major flooding , rain thrashes southwestern Colorado for second week",
+    "outlet": "denverpost.com",
+    "date": "2026-11-03",
+    "quote": "Floodwaters reach Pagosa Springs, Durango homes and businesses",
+    "detail": "Floodwaters caused widespread damage, including the flooding of homes and businesses, road closures, and stranded individuals. The San Juan River reached near-record levels, and the Animas River experienced significant rises. Power and communication outages were reported in Pagosa Springs, and some "
+   }
+  ],
+  "first_seen": "2026-11-03",
+  "updated": "2026-11-03",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Pagosa Springs, La Plata County, United States (2026-11-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -107.09506,
+      37.24353
+     ],
+     [
+      -106.98339,
+      37.24353
+     ],
+     [
+      -106.98339,
+      37.28875
+     ],
+     [
+      -107.09506,
+      37.28875
+     ],
+     [
+      -107.09506,
+      37.24353
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 49.711,
+  "before": "2026-09-27/2026-10-27",
+  "after": "2026-11-01/2026-11-04",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 6,
    "s2_after": 1
   },
   "sensors": [
@@ -26516,365 +27406,66 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "wi-20261101--15.58_125.02",
+  "id": "wi-20261030--15.46_127.91",
   "hazard": "wildfire",
-  "lon": 125.0241,
-  "lat": -15.5754,
+  "lon": 127.9089,
+  "lat": -15.4623,
   "bbox": null,
   "geometry_from": "gdacs",
-  "event_start": "2026-11-01",
+  "event_start": "2026-10-30",
   "event_end": "2026-11-04",
   "place": "",
   "country": "Australia",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "WF1033451",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033451&episodeid=4&eventtype=WF",
+    "id": "WF1033463",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033463&episodeid=4&eventtype=WF",
     "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-11-01",
-    "detail": "Green impact for forestfire in 11433 ha"
+    "date": "2026-10-30",
+    "detail": "Green impact for forestfire in 12748 ha"
    }
   ],
   "first_seen": "2026-11-04",
   "updated": "2026-11-04",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-11-01)",
+  "title": "Wildfire \u00b7 Australia (2026-10-30)",
   "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      124.95416,
-      -15.64323
+      127.839,
+      -15.53013
      ],
      [
-      125.09404,
-      -15.64323
+      127.9788,
+      -15.53013
      ],
      [
-      125.09404,
-      -15.50757
+      127.9788,
+      -15.39447
      ],
      [
-      124.95416,
-      -15.50757
+      127.839,
+      -15.39447
      ],
      [
-      124.95416,
-      -15.64323
+      127.839,
+      -15.53013
      ]
     ]
    ]
   },
-  "aoi_km2": 225.301,
-  "before": "2026-09-22/2026-10-30",
-  "after": "2026-11-03/2026-11-04",
+  "aoi_km2": 225.106,
+  "before": "2026-09-20/2026-10-28",
+  "after": "2026-11-01/2026-11-04",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
-   "s2_before": 18,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261029-27.64_89.84",
-  "hazard": "flood",
-  "lon": 89.8364,
-  "lat": 27.6363,
-  "bbox": [
-   89.4512,
-   27.468,
-   90.4554,
-   28.2474
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-29",
-  "event_end": "2026-10-31",
-  "place": "",
-  "country": "Bhutan",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104265",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104265&episodeid=1&eventtype=FL",
-    "title": "Flood in Bhutan (Green alert)",
-    "date": "2026-10-29",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-31",
-  "updated": "2026-10-31",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Bhutan (2026-10-29)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      89.6843,
-      27.50064
-     ],
-     [
-      89.9885,
-      27.50064
-     ],
-     [
-      89.9885,
-      27.77196
-     ],
-     [
-      89.6843,
-      27.77196
-     ],
-     [
-      89.6843,
-      27.50064
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 903.65,
-  "before": "2026-09-24/2026-10-24",
-  "after": "2026-10-29/2026-11-04",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 0,
-   "s2_before": 11,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261103-40.20_-79.52",
-  "hazard": "flood",
-  "lon": -79.5208718,
-  "lat": 40.1989597,
-  "bbox": [
-   -79.5408718,
-   40.1789597,
-   -79.5008718,
-   40.2189597
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-03",
-  "event_end": "2026-11-03",
-  "place": "U.S. Southwest, United States",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.khqa.com/news/nation-world/flood-risks-remain-after-storms-forced-evacuations-in-us-southwest-in-photos/article_01e40b2f-84b4-5d9a-99e6-1a818f9e699f.html",
-    "title": "Flood risks remain after storms forced evacuations in US Southwest , in photos",
-    "outlet": "khqa.com",
-    "date": "2026-11-03",
-    "quote": "Powerful storms flooded parts of the U.S. Southwest",
-    "detail": "evacuations"
-   }
-  ],
-  "first_seen": "2026-11-03",
-  "updated": "2026-11-03",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 U.S. Southwest, United States, US (2026-11-03)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -79.55027,
-      40.17635
-     ],
-     [
-      -79.49147,
-      40.17635
-     ],
-     [
-      -79.49147,
-      40.22157
-     ],
-     [
-      -79.55027,
-      40.22157
-     ],
-     [
-      -79.55027,
-      40.17635
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.128,
-  "before": "2026-09-29/2026-10-29",
-  "after": "2026-11-03/2026-11-04",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 11,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261102-29.87_-93.93",
-  "hazard": "flood",
-  "lon": -93.9332302,
-  "lat": 29.8716577,
-  "bbox": [
-   -94.1066173,
-   29.6331171,
-   -93.8113504,
-   30.032348
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-02",
-  "event_end": "2026-11-03",
-  "place": "Port Arthur, Jefferson County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://kfdm.com/news/local/drainage-district-7-lamar-university-to-install-10-flood-sensors-in-port-arthur-area",
-    "title": "Drainage District 7 , Lamar University to install 10 flood sensors in Port Arthur area",
-    "outlet": "kfdm.com",
-    "date": "2026-11-03",
-    "quote": "Drainage District 7 is partnering with Lamar University to install 10 flood sensors across the Port Arthur area.",
-    "detail": "Residents report repeated flooding of streets and homes, with concerns about infrastructure and water management."
-   }
-  ],
-  "first_seen": "2026-11-03",
-  "updated": "2026-11-03",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Port Arthur, Jefferson County, United States (2026-11-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -94.10667,
-      29.736
-     ],
-     [
-      -93.81129,
-      29.736
-     ],
-     [
-      -93.81129,
-      30.00731
-     ],
-     [
-      -94.10667,
-      30.00731
-     ],
-     [
-      -94.10667,
-      29.736
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 857.731,
-  "before": "2026-09-28/2026-10-28",
-  "after": "2026-11-02/2026-11-04",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 27,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261101-37.27_-107.01",
-  "hazard": "flood",
-  "lon": -107.010816,
-  "lat": 37.2695661,
-  "bbox": [
-   -107.0950576,
-   37.2449148,
-   -106.983392,
-   37.2873676
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-01",
-  "event_end": "2026-11-02",
-  "place": "Pagosa Springs, La Plata County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.denverpost.com/2026/11/02/colorado-flooding-pagosa-springs-durango/",
-    "title": "Major flooding , rain thrashes southwestern Colorado for second week",
-    "outlet": "denverpost.com",
-    "date": "2026-11-03",
-    "quote": "Floodwaters reach Pagosa Springs, Durango homes and businesses",
-    "detail": "Floodwaters caused widespread damage, including the flooding of homes and businesses, road closures, and stranded individuals. The San Juan River reached near-record levels, and the Animas River experienced significant rises. Power and communication outages were reported in Pagosa Springs, and some "
-   }
-  ],
-  "first_seen": "2026-11-03",
-  "updated": "2026-11-03",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Pagosa Springs, La Plata County, United States (2026-11-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -107.09506,
-      37.24353
-     ],
-     [
-      -106.98339,
-      37.24353
-     ],
-     [
-      -106.98339,
-      37.28875
-     ],
-     [
-      -107.09506,
-      37.28875
-     ],
-     [
-      -107.09506,
-      37.24353
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 49.711,
-  "before": "2026-09-27/2026-10-27",
-  "after": "2026-11-01/2026-11-04",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 0,
-   "s2_before": 6,
+   "s2_before": 20,
    "s2_after": 0
   },
   "sensors": [
@@ -26891,7 +27482,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-03",
+  "event_end": "2026-11-04",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -27769,6 +28360,68 @@
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
   "after": "2026-10-13/2026-11-04"
+ },
+ {
+  "id": "wi-20261103--2.33_110.99",
+  "hazard": "wildfire",
+  "lon": 110.9889936,
+  "lat": -2.326059,
+  "bbox": [
+   110.9689936,
+   -2.346059,
+   111.0089936,
+   -2.306059
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-03",
+  "event_end": "2026-11-03",
+  "place": "Indonesia, Kalimantan",
+  "country": "Indonesia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wildfiretoday.com/over-3500-killed-from-indonesia-wildfires-air-pollution/",
+    "title": "Over 3,500 killed from Indonesia wildfires\u2019 air pollution",
+    "outlet": "wildfiretoday.com",
+    "date": "2026-11-03",
+    "quote": "Indonesia\u2019s hazardous air quality killed thousands in September",
+    "detail": "air pollution"
+   }
+  ],
+  "first_seen": "2026-11-04",
+  "updated": "2026-11-04",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Indonesia, Kalimantan, Indonesia (2026-11-03)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      110.96652,
+      -2.34867
+     ],
+     [
+      111.01147,
+      -2.34867
+     ],
+     [
+      111.01147,
+      -2.30345
+     ],
+     [
+      110.96652,
+      -2.30345
+     ],
+     [
+      110.96652,
+      -2.34867
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261102-46.82_-67.92",
