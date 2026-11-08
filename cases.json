@@ -437,7 +437,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -513,7 +513,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -581,7 +581,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -657,7 +657,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -793,7 +793,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-03",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Nigeria",
   "sources": [
@@ -869,7 +869,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-03",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1151,7 +1151,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-01",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1309,7 +1309,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-01",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1320,10 +1320,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-11-01",
     "detail": "Green impact for forestfire in 11241 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033509",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033509&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-03",
+    "detail": "Green impact for forestfire in 10568 ha"
    }
   ],
   "first_seen": "2026-11-05",
-  "updated": "2026-11-05",
+  "updated": "2026-11-08",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-11-01)",
@@ -1357,7 +1365,7 @@
   },
   "aoi_km2": 225.317,
   "before": "2026-09-22/2026-10-30",
-  "after": "2026-11-03/2026-11-07",
+  "after": "2026-11-03/2026-11-08",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -1582,7 +1590,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-31",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1787,7 +1795,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-30",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Burkina Faso",
   "sources": [
@@ -1798,10 +1806,18 @@
     "title": "Forest fires in Burkina Faso (Green alert)",
     "date": "2026-10-30",
     "detail": "Green impact for forestfire in 10017 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033568",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033568&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Burkina Faso (Green alert)",
+    "date": "2026-11-05",
+    "detail": "Green impact for forestfire in 10130 ha"
    }
   ],
   "first_seen": "2026-11-03",
-  "updated": "2026-11-03",
+  "updated": "2026-11-08",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Burkina Faso (2026-10-30)",
@@ -1835,14 +1851,15 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-11-01/2026-11-03",
+  "after": "2026-11-01/2026-11-08",
   "scenes": {
    "s1_before": 3,
-   "s1_after": 0,
+   "s1_after": 1,
    "s2_before": 34,
-   "s2_after": 2
+   "s2_after": 6
   },
   "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -1855,7 +1872,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-30",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1874,10 +1891,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-10-31",
     "detail": "Green impact for forestfire in 10422 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033507",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033507&episodeid=10&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-02",
+    "detail": "Green impact for forestfire in 10065 ha"
    }
   ],
   "first_seen": "2026-11-04",
-  "updated": "2026-11-04",
+  "updated": "2026-11-08",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-10-30)",
@@ -1911,15 +1936,16 @@
   },
   "aoi_km2": 225.511,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-11-01/2026-11-04",
+  "after": "2026-11-01/2026-11-08",
   "scenes": {
    "s1_before": 6,
    "s1_after": 1,
    "s2_before": 39,
-   "s2_after": 0
+   "s2_after": 4
   },
   "sensors": [
-   "s1"
+   "s1",
+   "s2"
   ],
   "status": "ready"
  },
@@ -2505,7 +2531,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Brazil",
   "sources": [
@@ -2788,7 +2814,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3349,7 +3375,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-27",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Botswana",
   "sources": [
@@ -10734,6 +10760,80 @@
    "s1_after": 2,
    "s2_before": 4,
    "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261015-4.00_101.00",
+  "hazard": "flood",
+  "lon": 101.0,
+  "lat": 4.0,
+  "bbox": [
+   100.885,
+   3.8529,
+   101.2437,
+   4.1836
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-15",
+  "event_end": "2026-11-07",
+  "place": "",
+  "country": "Malaysia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104239",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104239&episodeid=5&eventtype=FL",
+    "title": "Flood in Malaysia (Green alert)",
+    "date": "2026-10-15",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Malaysia (2026-10-15)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      100.86492,
+      3.86434
+     ],
+     [
+      101.13508,
+      3.86434
+     ],
+     [
+      101.13508,
+      4.13566
+     ],
+     [
+      100.86492,
+      4.13566
+     ],
+     [
+      100.86492,
+      3.86434
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 900.493,
+  "before": "2026-09-10/2026-10-10",
+  "after": "2026-10-28/2026-11-08",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 2,
+   "s2_before": 6,
+   "s2_after": 2
   },
   "sensors": [
    "s1",
@@ -25723,6 +25823,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261106-40.29_-74.17",
+  "hazard": "flood",
+  "lon": -74.1671114,
+  "lat": 40.2932319,
+  "bbox": [
+   -74.6146384,
+   40.0791435,
+   -73.90214,
+   40.519095
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-06",
+  "event_end": "2026-11-06",
+  "place": "New Jersey, Monmouth County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.rustourismnews.com/2026/11/06/flash-flooding-closes-new-jersey-roads-as-raleigh-and-durham-face-warnings/",
+    "title": "Flash Flooding Closes New Jersey Roads as Raleigh and Durham Face Warnings",
+    "outlet": "rustourismnews.com",
+    "date": "2026-11-07",
+    "quote": "Flash flooding closed roads in New Jersey on November 6, 2026.",
+    "detail": "Road closures and flood warnings affecting roads and urban areas."
+   }
+  ],
+  "first_seen": "2026-11-07",
+  "updated": "2026-11-07",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 New Jersey, Monmouth County, United States (2026-11-06)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -74.34377,
+      40.15758
+     ],
+     [
+      -73.99045,
+      40.15758
+     ],
+     [
+      -73.99045,
+      40.42889
+     ],
+     [
+      -74.34377,
+      40.42889
+     ],
+     [
+      -74.34377,
+      40.15758
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.439,
+  "before": "2026-10-02/2026-11-01",
+  "after": "2026-11-06/2026-11-08",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 13,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261103-40.20_-79.52",
   "hazard": "flood",
   "lon": -79.5208718,
@@ -29677,6 +29851,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261106--16.36_126.03",
+  "hazard": "wildfire",
+  "lon": 126.0297,
+  "lat": -16.3615,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-06",
+  "event_end": "2026-11-08",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033567",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033567&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 12396 ha"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      125.95948,
+      -16.42933
+     ],
+     [
+      126.09992,
+      -16.42933
+     ],
+     [
+      126.09992,
+      -16.29367
+     ],
+     [
+      125.95948,
+      -16.29367
+     ],
+     [
+      125.95948,
+      -16.42933
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.637,
+  "before": "2026-09-27/2026-11-04",
+  "after": "2026-11-08/2026-11-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261105--21.72_140.51",
   "hazard": "wildfire",
   "lon": 140.5077,
@@ -29684,7 +29927,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-05",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -29753,7 +29996,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-05",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -29772,6 +30015,14 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-11-07",
     "detail": "Green impact for forestfire in 20659 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033623",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033623&episodeid=1&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Green impact for forestfire in 25039 ha"
    }
   ],
   "first_seen": "2026-11-08",
@@ -30208,81 +30459,6 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261106-40.29_-74.17",
-  "hazard": "flood",
-  "lon": -74.1671114,
-  "lat": 40.2932319,
-  "bbox": [
-   -74.6146384,
-   40.0791435,
-   -73.90214,
-   40.519095
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-06",
-  "event_end": "2026-11-06",
-  "place": "New Jersey, Monmouth County",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.rustourismnews.com/2026/11/06/flash-flooding-closes-new-jersey-roads-as-raleigh-and-durham-face-warnings/",
-    "title": "Flash Flooding Closes New Jersey Roads as Raleigh and Durham Face Warnings",
-    "outlet": "rustourismnews.com",
-    "date": "2026-11-07",
-    "quote": "Flash flooding closed roads in New Jersey on November 6, 2026.",
-    "detail": "Road closures and flood warnings affecting roads and urban areas."
-   }
-  ],
-  "first_seen": "2026-11-07",
-  "updated": "2026-11-07",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 New Jersey, Monmouth County, United States (2026-11-06)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -74.34377,
-      40.15758
-     ],
-     [
-      -73.99045,
-      40.15758
-     ],
-     [
-      -73.99045,
-      40.42889
-     ],
-     [
-      -74.34377,
-      40.42889
-     ],
-     [
-      -74.34377,
-      40.15758
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 904.439,
-  "before": "2026-10-02/2026-11-01",
-  "after": "2026-11-06/2026-11-08",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 13,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
   "id": "fl-20261104-44.51_-88.01",
   "hazard": "flood",
   "lon": -88.0125794,
@@ -30523,7 +30699,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-07",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -30534,6 +30710,30 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-11-07",
     "detail": "Green impact for forestfire in 12586 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033565",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033565&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Green impact for forestfire in 51426 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033604",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033604&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Green impact for forestfire in 21062 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033513",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033513&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-05",
+    "detail": "Green impact for forestfire in 28167 ha"
    }
   ],
   "first_seen": "2026-11-08",
@@ -30572,6 +30772,62 @@
   }
  },
  {
+  "id": "wi-20261107--20.99_123.78",
+  "hazard": "wildfire",
+  "lon": 123.7785,
+  "lat": -20.9907,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-07",
+  "event_end": "2026-11-08",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033564",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033564&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Green impact for forestfire in 20487 ha"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-07)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      123.70634,
+      -21.05853
+     ],
+     [
+      123.85066,
+      -21.05853
+     ],
+     [
+      123.85066,
+      -20.92287
+     ],
+     [
+      123.70634,
+      -20.92287
+     ],
+     [
+      123.70634,
+      -21.05853
+     ]
+    ]
+   ]
+  }
+ },
+ {
   "id": "wi-20261105--19.12_125.17",
   "hazard": "wildfire",
   "lon": 125.1732,
@@ -30579,7 +30835,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-05",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -30662,7 +30918,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Australia",
   "sources": [
