@@ -786,6 +786,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261104-41.59_9.28",
+  "hazard": "flood",
+  "lon": 9.2794,
+  "lat": 41.5911,
+  "bbox": [
+   9.1639,
+   41.4832,
+   9.3878,
+   41.6869
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-04",
+  "event_end": "2026-11-07",
+  "place": "",
+  "country": "France",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104270",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104270&episodeid=2&eventtype=FL",
+    "title": "Flood in France (Green alert)",
+    "date": "2026-11-04",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-07",
+  "updated": "2026-11-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 France (2026-11-04)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      9.1639,
+      41.4832
+     ],
+     [
+      9.3878,
+      41.4832
+     ],
+     [
+      9.3878,
+      41.6869
+     ],
+     [
+      9.1639,
+      41.6869
+     ],
+     [
+      9.1639,
+      41.4832
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 422.064,
+  "before": "2026-09-30/2026-10-30",
+  "after": "2026-11-04/2026-11-08",
+  "scenes": {
+   "s1_before": 17,
+   "s1_after": 2,
+   "s2_before": 29,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261103-12.38_5.52",
   "hazard": "wildfire",
   "lon": 5.5239,
@@ -1066,6 +1140,75 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261102-12.97_-0.73",
+  "hazard": "wildfire",
+  "lon": -0.728,
+  "lat": 12.9675,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-02",
+  "event_end": "2026-11-08",
+  "place": "",
+  "country": "Burkina Faso",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033596",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033596&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Burkina Faso (Green alert)",
+    "date": "2026-11-02",
+    "detail": "Green impact for forestfire in 11353 ha"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Burkina Faso (2026-11-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -0.79714,
+      12.89967
+     ],
+     [
+      -0.65886,
+      12.89967
+     ],
+     [
+      -0.65886,
+      13.03533
+     ],
+     [
+      -0.79714,
+      13.03533
+     ],
+     [
+      -0.79714,
+      12.89967
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.328,
+  "before": "2026-09-23/2026-10-31",
+  "after": "2026-11-04/2026-11-08",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 2,
+   "s2_before": 10,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -2239,7 +2382,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-29",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "Mozambique",
   "sources": [
@@ -2882,7 +3025,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -3841,7 +3984,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-26",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-08",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -25416,6 +25559,90 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261106-3.15_101.53",
+  "hazard": "flood",
+  "lon": 101.5328379,
+  "lat": 3.1544088,
+  "bbox": [
+   101.5218595,
+   3.1438765,
+   101.5367663,
+   3.1657193
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-06",
+  "event_end": "2026-11-08",
+  "place": "Kampung Melayu Subang, Selangor",
+  "country": "Malaysia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.malaysiakini.com/columns/888620-comment-sgor-floods-billions-allocated-but-are-residents-adequately-protected",
+    "title": "COMMENT | Sgor floods : Billions allocated , but are residents adequately protected ? ",
+    "outlet": "malaysiakini.com",
+    "date": "2026-11-06",
+    "quote": "The recent floods affecting Kampung Melayu Subang, Sungai Buloh, Paya Jaras, Kubu Gajah, Rawang and parts of Shah Alam have once again disrupted the lives of Selangor residents.",
+    "detail": "Repeated flooding has disrupted the lives of Selangor residents, with damage to homes and loss of belongings reported. Residents question whether flood mitigation measures, drainage infrastructure, and urban planning policies are adequate to address the challenges posed by rapid development."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.thestar.com.my/metro/views/2026/11/08/holistic-approach-needed-as-long-term-solution-to-recurrent-floods-in-selangor",
+    "title": "Holistic approach needed as long - term solution to recurrent floods in Selangor",
+    "outlet": "thestar.com.my",
+    "date": "2026-11-08",
+    "quote": "recurring floods in Selangor, particularly in Kampung Melayu Subang",
+    "detail": "property damage, financial losses, disruption to families\u2019 daily lives"
+   }
+  ],
+  "first_seen": "2026-11-06",
+  "updated": "2026-11-08",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Kampung Melayu Subang, Selangor, Malaysia (2026-11-06)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      101.50682,
+      3.13219
+     ],
+     [
+      101.5518,
+      3.13219
+     ],
+     [
+      101.5518,
+      3.17741
+     ],
+     [
+      101.50682,
+      3.17741
+     ],
+     [
+      101.50682,
+      3.13219
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.029,
+  "before": "2026-10-02/2026-11-01",
+  "after": "2026-11-06/2026-11-08",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 2,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261022-37.18_-113.29",
   "hazard": "flood",
   "lon": -113.289888,
@@ -25749,80 +25976,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261106-3.15_101.53",
-  "hazard": "flood",
-  "lon": 101.5328379,
-  "lat": 3.1544088,
-  "bbox": [
-   101.5218595,
-   3.1438765,
-   101.5367663,
-   3.1657193
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-06",
-  "event_end": "2026-11-06",
-  "place": "Kampung Melayu Subang, Selangor",
-  "country": "Malaysia",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.malaysiakini.com/columns/888620-comment-sgor-floods-billions-allocated-but-are-residents-adequately-protected",
-    "title": "COMMENT | Sgor floods : Billions allocated , but are residents adequately protected ? ",
-    "outlet": "malaysiakini.com",
-    "date": "2026-11-06",
-    "quote": "The recent floods affecting Kampung Melayu Subang, Sungai Buloh, Paya Jaras, Kubu Gajah, Rawang and parts of Shah Alam have once again disrupted the lives of Selangor residents.",
-    "detail": "Repeated flooding has disrupted the lives of Selangor residents, with damage to homes and loss of belongings reported. Residents question whether flood mitigation measures, drainage infrastructure, and urban planning policies are adequate to address the challenges posed by rapid development."
-   }
-  ],
-  "first_seen": "2026-11-06",
-  "updated": "2026-11-06",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Kampung Melayu Subang, Selangor, Malaysia (2026-11-06)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      101.50682,
-      3.13219
-     ],
-     [
-      101.5518,
-      3.13219
-     ],
-     [
-      101.5518,
-      3.17741
-     ],
-     [
-      101.50682,
-      3.17741
-     ],
-     [
-      101.50682,
-      3.13219
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.029,
-  "before": "2026-10-02/2026-11-01",
-  "after": "2026-11-06/2026-11-08",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 1,
-   "s2_before": 2,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20261106-40.29_-74.17",
   "hazard": "flood",
   "lon": -74.1671114,
@@ -25893,6 +26046,80 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261104-41.67_-79.28",
+  "hazard": "wildfire",
+  "lon": -79.2753734,
+  "lat": 41.6733345,
+  "bbox": [
+   -79.4760039,
+   41.3453537,
+   -78.6449797,
+   41.9989397
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-04",
+  "event_end": "2026-11-05",
+  "place": "Allegheny National Forest, Pennsylvania",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://radio.wpsu.org/2026-11-05/crews-battle-wildfires-in-mckean-and-clinton-counties-as-region-sees-abnormally-dry-weather",
+    "title": "Crews battle wildfires in McKean and Clinton counties as region sees  abnormally dry  weather",
+    "outlet": "radio.wpsu.org",
+    "date": "2026-11-06",
+    "quote": "Crews battle wildfires in McKean and Clinton counties",
+    "detail": "The fire is not expected to spread beyond its current containment; however, smoke and occasional flames may remain visible for several days as fuel within the fire area continues to burn."
+   }
+  ],
+  "first_seen": "2026-11-06",
+  "updated": "2026-11-06",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Allegheny National Forest, Pennsylvania, United States (2026-11-04)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -79.45577,
+      41.53768
+     ],
+     [
+      -79.09498,
+      41.53768
+     ],
+     [
+      -79.09498,
+      41.80899
+     ],
+     [
+      -79.45577,
+      41.80899
+     ],
+     [
+      -79.45577,
+      41.53768
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.07,
+  "before": "2026-09-25/2026-11-02",
+  "after": "2026-11-06/2026-11-08",
+  "scenes": {
+   "s1_before": 10,
+   "s1_after": 1,
+   "s2_before": 21,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -29920,6 +30147,75 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "wi-20261106--23.66_23.13",
+  "hazard": "wildfire",
+  "lon": 23.1265,
+  "lat": -23.6604,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-06",
+  "event_end": "2026-11-08",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033583",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033583&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 12466 ha"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-11-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      23.05294,
+      -23.72823
+     ],
+     [
+      23.20006,
+      -23.72823
+     ],
+     [
+      23.20006,
+      -23.59257
+     ],
+     [
+      23.05294,
+      -23.59257
+     ],
+     [
+      23.05294,
+      -23.72823
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.585,
+  "before": "2026-09-27/2026-11-04",
+  "after": "2026-11-08/2026-11-08",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 35,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261105--21.72_140.51",
   "hazard": "wildfire",
   "lon": 140.5077,
@@ -30065,80 +30361,6 @@
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261104-41.59_9.28",
-  "hazard": "flood",
-  "lon": 9.2794,
-  "lat": 41.5911,
-  "bbox": [
-   9.1639,
-   41.4832,
-   9.3878,
-   41.6869
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-11-04",
-  "event_end": "2026-11-07",
-  "place": "",
-  "country": "France",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104270",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104270&episodeid=2&eventtype=FL",
-    "title": "Flood in France (Green alert)",
-    "date": "2026-11-04",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-11-07",
-  "updated": "2026-11-07",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 France (2026-11-04)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      9.1639,
-      41.4832
-     ],
-     [
-      9.3878,
-      41.4832
-     ],
-     [
-      9.3878,
-      41.6869
-     ],
-     [
-      9.1639,
-      41.6869
-     ],
-     [
-      9.1639,
-      41.4832
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 422.064,
-  "before": "2026-09-30/2026-10-30",
-  "after": "2026-11-04/2026-11-08",
-  "scenes": {
-   "s1_before": 17,
-   "s1_after": 0,
-   "s2_before": 29,
    "s2_after": 0
   },
   "sensors": [
@@ -30384,6 +30606,156 @@
   "status": "waiting for imagery"
  },
  {
+  "id": "fl-20261108-29.42_-98.50",
+  "hazard": "flood",
+  "lon": -98.4951405,
+  "lat": 29.4246002,
+  "bbox": [
+   -98.8131865,
+   29.1862572,
+   -98.2230029,
+   29.7309623
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-08",
+  "place": "San Antonio, Texas",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox7austin.com/weather/austin-weather-sunday-rain-flood-risk",
+    "title": "Austin weather : Sunday rain and flood risk",
+    "outlet": "fox7austin.com",
+    "date": "2026-11-08",
+    "quote": "Steady rain will bring 1 to 3 inches southwest of Austin and minor street flooding risks to San Antonio and the Hill Country Sunday",
+    "detail": "minor street flooding"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 San Antonio, Texas, US (2026-11-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -98.64984,
+      29.28894
+     ],
+     [
+      -98.34044,
+      29.28894
+     ],
+     [
+      -98.34044,
+      29.56026
+     ],
+     [
+      -98.64984,
+      29.56026
+     ],
+     [
+      -98.64984,
+      29.28894
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.256,
+  "before": "2026-10-04/2026-11-03",
+  "after": "2026-11-08/2026-11-08",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 5,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261108-32.22_-110.98",
+  "hazard": "flood",
+  "lon": -110.9762198,
+  "lat": 32.2157163,
+  "bbox": [
+   -110.9767716,
+   32.2154047,
+   -110.9748496,
+   32.2166816
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-08",
+  "place": "US Southwest, Arizona",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wxii12.com/article/southwest-reservoirs-flooding-lake-powell/74368630",
+    "title": "Floods bring rare relief to US Southwest reservoirs",
+    "outlet": "wxii12.com",
+    "date": "2026-11-08",
+    "quote": "Floods bring rare relief to US Southwest reservoirs as Lake Powell rises 20 feet",
+    "detail": "Floods caused evacuations, cut off access to areas, and damaged local communities. However, the water from the floods is expected to replenish reservoirs and underground aquifers, providing temporary relief to water supplies in the region."
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 US Southwest, Arizona, United States (2026-11-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -111.00236,
+      32.19343
+     ],
+     [
+      -110.94927,
+      32.19343
+     ],
+     [
+      -110.94927,
+      32.23865
+     ],
+     [
+      -111.00236,
+      32.23865
+     ],
+     [
+      -111.00236,
+      32.19343
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.077,
+  "before": "2026-10-04/2026-11-03",
+  "after": "2026-11-08/2026-11-08",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 0,
+   "s2_before": 10,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "fl-20261107-46.54_-102.87",
   "hazard": "flood",
   "lon": -102.8682231,
@@ -30525,81 +30897,6 @@
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 17,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261104-41.67_-79.28",
-  "hazard": "wildfire",
-  "lon": -79.2753734,
-  "lat": 41.6733345,
-  "bbox": [
-   -79.4760039,
-   41.3453537,
-   -78.6449797,
-   41.9989397
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-04",
-  "event_end": "2026-11-05",
-  "place": "Allegheny National Forest, Pennsylvania",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://radio.wpsu.org/2026-11-05/crews-battle-wildfires-in-mckean-and-clinton-counties-as-region-sees-abnormally-dry-weather",
-    "title": "Crews battle wildfires in McKean and Clinton counties as region sees  abnormally dry  weather",
-    "outlet": "radio.wpsu.org",
-    "date": "2026-11-06",
-    "quote": "Crews battle wildfires in McKean and Clinton counties",
-    "detail": "The fire is not expected to spread beyond its current containment; however, smoke and occasional flames may remain visible for several days as fuel within the fire area continues to burn."
-   }
-  ],
-  "first_seen": "2026-11-06",
-  "updated": "2026-11-06",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Allegheny National Forest, Pennsylvania, United States (2026-11-04)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -79.45577,
-      41.53768
-     ],
-     [
-      -79.09498,
-      41.53768
-     ],
-     [
-      -79.09498,
-      41.80899
-     ],
-     [
-      -79.45577,
-      41.80899
-     ],
-     [
-      -79.45577,
-      41.53768
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 905.07,
-  "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-06/2026-11-08",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 0,
-   "s2_before": 21,
    "s2_after": 0
   },
   "sensors": [
@@ -31954,6 +32251,68 @@
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
   "after": "2026-11-07/2026-11-08"
+ },
+ {
+  "id": "wi-20261108-47.66_-117.42",
+  "hazard": "wildfire",
+  "lon": -117.42351,
+  "lat": 47.6571934,
+  "bbox": [
+   -117.6039994,
+   47.5867785,
+   -117.3038581,
+   47.7587975
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-08",
+  "place": "Spokane, Pacific NW",
+  "country": "USA",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.spokesman.com/stories/2026/nov/08/cool-critters-spokanes-wildfire-areas-come-to-life/",
+    "title": "Cool Critters : Spokane wildfire areas come to life with arrival of a mysterious burn bird",
+    "outlet": "spokesman.com",
+    "date": "2026-11-08",
+    "quote": "Three months after the Spokane Complex fires carved a path of destruction through neighborhoods and forests",
+    "detail": "Parts of the burn site are coming alive with a heart-warming sound: rat-a-tat-tat. The landscape may look like an ash-laden wasteland with blacked trees, but for the black-backed woodpecker, it is a goldmine."
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Spokane, Pacific NW, USA (2026-11-08)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -117.604,
+      47.58678
+     ],
+     [
+      -117.30386,
+      47.58678
+     ],
+     [
+      -117.30386,
+      47.7588
+     ],
+     [
+      -117.604,
+      47.7588
+     ],
+     [
+      -117.604,
+      47.58678
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261107-54.44_-1.89",
