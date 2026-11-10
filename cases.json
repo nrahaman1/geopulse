@@ -650,6 +650,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261107-32.33_34.86",
+  "hazard": "flood",
+  "lon": 34.8566,
+  "lat": 32.3286,
+  "bbox": [
+   34.8247,
+   31.7096,
+   35.265,
+   32.3605
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-07",
+  "event_end": "2026-11-09",
+  "place": "",
+  "country": "Israel",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104273",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104273&episodeid=1&eventtype=FL",
+    "title": "Flood in Israel (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-09",
+  "updated": "2026-11-09",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Israel (2026-11-07)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      34.69714,
+      32.19294
+     ],
+     [
+      35.01606,
+      32.19294
+     ],
+     [
+      35.01606,
+      32.46426
+     ],
+     [
+      34.69714,
+      32.46426
+     ],
+     [
+      34.69714,
+      32.19294
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.414,
+  "before": "2026-10-03/2026-11-02",
+  "after": "2026-11-07/2026-11-10",
+  "scenes": {
+   "s1_before": 16,
+   "s1_after": 2,
+   "s2_before": 12,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261105-43.81_4.06",
   "hazard": "flood",
   "lon": 4.0647,
@@ -1719,6 +1792,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261103--20.44_24.69",
+  "hazard": "wildfire",
+  "lon": 24.6921,
+  "lat": -20.4355,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-03",
+  "event_end": "2026-11-06",
+  "place": "",
+  "country": "Botswana",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033516",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033516&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-11-03",
+    "detail": "Green impact for forestfire in 10262 ha"
+   }
+  ],
+  "first_seen": "2026-11-07",
+  "updated": "2026-11-07",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Botswana (2026-11-03)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      24.6202,
+      -20.50333
+     ],
+     [
+      24.764,
+      -20.50333
+     ],
+     [
+      24.764,
+      -20.36767
+     ],
+     [
+      24.6202,
+      -20.36767
+     ],
+     [
+      24.6202,
+      -20.50333
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.523,
+  "before": "2026-09-24/2026-11-01",
+  "after": "2026-11-07/2026-11-10",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 1,
+   "s2_before": 16,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261102-43.40_28.17",
   "hazard": "flood",
   "lon": 28.1681,
@@ -1924,6 +2065,74 @@
   },
   "sensors": [
    "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261102--20.91_140.44",
+  "hazard": "wildfire",
+  "lon": 140.4375,
+  "lat": -20.9115,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-02",
+  "event_end": "2026-11-09",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033563",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033563&episodeid=13&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-02",
+    "detail": "Green impact for forestfire in 16449 ha"
+   }
+  ],
+  "first_seen": "2026-11-10",
+  "updated": "2026-11-10",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-02)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      140.36538,
+      -20.97933
+     ],
+     [
+      140.50962,
+      -20.97933
+     ],
+     [
+      140.50962,
+      -20.84367
+     ],
+     [
+      140.36538,
+      -20.84367
+     ],
+     [
+      140.36538,
+      -20.97933
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.217,
+  "before": "2026-09-23/2026-10-31",
+  "after": "2026-11-04/2026-11-10",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 15,
+   "s2_after": 4
+  },
+  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -19476,6 +19685,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261001--27.22_-49.64",
+  "hazard": "flood",
+  "lon": -49.6437,
+  "lat": -27.2163,
+  "bbox": [
+   -50.6964,
+   -28.4333,
+   -49.5273,
+   -27.08
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-10-01",
+  "event_end": "2026-11-06",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104216",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=11&eventtype=FL",
+    "title": "Flood in Brazil (Green alert)",
+    "date": "2026-10-01",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-06",
+  "updated": "2026-11-06",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Brazil (2026-10-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -49.79522,
+      -27.35196
+     ],
+     [
+      -49.49218,
+      -27.35196
+     ],
+     [
+      -49.49218,
+      -27.08064
+     ],
+     [
+      -49.79522,
+      -27.08064
+     ],
+     [
+      -49.79522,
+      -27.35196
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.219,
+  "before": "2026-08-27/2026-09-26",
+  "after": "2026-10-27/2026-11-10",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 3,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20260930--8.68_14.13",
   "hazard": "wildfire",
   "lon": 14.1286,
@@ -26375,6 +26657,182 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261105-34.89_-84.27",
+  "hazard": "flood",
+  "lon": -84.2715585,
+  "lat": 34.8867955,
+  "bbox": [
+   -84.6229212,
+   34.602982,
+   -84.0929722,
+   34.988494
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-05",
+  "event_end": "2026-11-06",
+  "place": "Fannin County, Georgia, Georgia",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.aol.com/articles/least-80-rescued-historic-flooding-144434000.html",
+    "title": "At least 80 rescued as historic flooding prompts state of emergency near Georgia - Tennessee state line",
+    "outlet": "aol.com",
+    "date": "2026-11-06",
+    "quote": "Torrential rain triggered Flash Flood Emergencies across Polk County, Tennessee, and Fannin County, Georgia",
+    "detail": "widespread flooding, evacuations, rescue operations, infrastructure damage, fire incidents, state of emergency declared"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wtvm.com/2026/11/05/heavy-rains-spark-flash-floods-state-emergency-across-north-georgia/",
+    "title": "Heavy rains spark flash floods , state of emergency across North Georgia",
+    "outlet": "wtvm.com",
+    "date": "2026-11-05",
+    "quote": "Parts of north Georgia are cleaning up Thursday after devastating flash flooding caused widespread damage and led to mass evacuations and power outages.",
+    "detail": "mass evacuations, power outages, dangerous floodwaters, road closures, school cancellations, vehicle and debris floating in river, propane tank fire, multiple water rescues, state of emergency declared"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wtvm.com/2026/11/05/what-does-flood-insurance-cover-what-georgia-homeowners-renters-need-know/",
+    "title": "What does flood insurance cover ? What Georgia homeowners , renters need to know",
+    "outlet": "wtvm.com",
+    "date": "2026-11-05",
+    "quote": "Torrential downpours early Thursday triggered flash flood emergencies and prompted dozens of water rescues in towns like McCaysville.",
+    "detail": "flash flood emergencies, water rescues"
+   }
+  ],
+  "first_seen": "2026-11-06",
+  "updated": "2026-11-06",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Fannin County, Georgia, Georgia, US (2026-11-05)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -84.43583,
+      34.75114
+     ],
+     [
+      -84.10729,
+      34.75114
+     ],
+     [
+      -84.10729,
+      35.02245
+     ],
+     [
+      -84.43583,
+      35.02245
+     ],
+     [
+      -84.43583,
+      34.75114
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 904.619,
+  "before": "2026-10-01/2026-10-31",
+  "after": "2026-11-05/2026-11-10",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 25,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261024-37.28_-107.88",
+  "hazard": "flood",
+  "lon": -107.8766,
+  "lat": 37.2769484,
+  "bbox": [
+   -107.9372871,
+   37.2176555,
+   -107.8137566,
+   37.3266979
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-10-24",
+  "event_end": "2026-11-02",
+  "place": "Durango, Colorado",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.ksut.org/news/2026-11-03/el-nino-rains-bring-drought-relief-to-the-rocky-mountains-but-destructive-floods-to-the-four-corners",
+    "title": "El Ni\u00f1o rains bring drought relief to the Rocky Mountains , but destructive floods to the Four Corners",
+    "outlet": "ksut.org",
+    "date": "2026-11-04",
+    "quote": "The Animas River flooded two weekends in a row, causing damage to roads and infrastructure in Durango.",
+    "detail": "Flooding closed roads, caused power outages, and prompted evacuations in Archuleta County and La Plata County."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.durangoherald.com/articles/news/durango-nonprofit-hosting-buffet-lunch-to-raise-funds-for-flood-victims/",
+    "title": "Durango nonprofit hosting buffet lunch to raise funds for flood victims",
+    "outlet": "durangoherald.com",
+    "date": "2026-11-10",
+    "quote": "After heavy flooding on Nov. 1 and 2",
+    "detail": "community efforts to help flood victims throughout La Plata County"
+   }
+  ],
+  "first_seen": "2026-11-05",
+  "updated": "2026-11-10",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Durango, Colorado, US (2026-10-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -107.93729,
+      37.21766
+     ],
+     [
+      -107.81376,
+      37.21766
+     ],
+     [
+      -107.81376,
+      37.3267
+     ],
+     [
+      -107.93729,
+      37.3267
+     ],
+     [
+      -107.93729,
+      37.21766
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 132.695,
+  "before": "2026-09-19/2026-10-19",
+  "after": "2026-10-24/2026-11-07",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 4,
+   "s2_before": 18,
+   "s2_after": 9
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261022-37.18_-113.29",
   "hazard": "flood",
   "lon": -113.289888,
@@ -26700,6 +27158,80 @@
    "s1_before": 13,
    "s1_after": 0,
    "s2_before": 17,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261108-32.22_-110.98",
+  "hazard": "flood",
+  "lon": -110.9762198,
+  "lat": 32.2157163,
+  "bbox": [
+   -110.9767716,
+   32.2154047,
+   -110.9748496,
+   32.2166816
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-08",
+  "place": "US Southwest, Arizona",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wxii12.com/article/southwest-reservoirs-flooding-lake-powell/74368630",
+    "title": "Floods bring rare relief to US Southwest reservoirs",
+    "outlet": "wxii12.com",
+    "date": "2026-11-08",
+    "quote": "Floods bring rare relief to US Southwest reservoirs as Lake Powell rises 20 feet",
+    "detail": "Floods caused evacuations, cut off access to areas, and damaged local communities. However, the water from the floods is expected to replenish reservoirs and underground aquifers, providing temporary relief to water supplies in the region."
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-08",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 US Southwest, Arizona, United States (2026-11-08)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -111.00236,
+      32.19343
+     ],
+     [
+      -110.94927,
+      32.19343
+     ],
+     [
+      -110.94927,
+      32.23865
+     ],
+     [
+      -111.00236,
+      32.23865
+     ],
+     [
+      -111.00236,
+      32.19343
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.077,
+  "before": "2026-10-04/2026-11-03",
+  "after": "2026-11-08/2026-11-10",
+  "scenes": {
+   "s1_before": 12,
+   "s1_after": 0,
+   "s2_before": 10,
    "s2_after": 2
   },
   "sensors": [
@@ -28110,81 +28642,6 @@
    "s1_after": 2,
    "s2_before": 6,
    "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261024-37.28_-107.88",
-  "hazard": "flood",
-  "lon": -107.8766,
-  "lat": 37.2769484,
-  "bbox": [
-   -107.9372871,
-   37.2176555,
-   -107.8137566,
-   37.3266979
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-24",
-  "event_end": "2026-10-24",
-  "place": "Durango, Colorado",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.ksut.org/news/2026-11-03/el-nino-rains-bring-drought-relief-to-the-rocky-mountains-but-destructive-floods-to-the-four-corners",
-    "title": "El Ni\u00f1o rains bring drought relief to the Rocky Mountains , but destructive floods to the Four Corners",
-    "outlet": "ksut.org",
-    "date": "2026-11-04",
-    "quote": "The Animas River flooded two weekends in a row, causing damage to roads and infrastructure in Durango.",
-    "detail": "Flooding closed roads, caused power outages, and prompted evacuations in Archuleta County and La Plata County."
-   }
-  ],
-  "first_seen": "2026-11-05",
-  "updated": "2026-11-05",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Durango, Colorado, US (2026-10-24)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -107.93729,
-      37.21766
-     ],
-     [
-      -107.81376,
-      37.21766
-     ],
-     [
-      -107.81376,
-      37.3267
-     ],
-     [
-      -107.93729,
-      37.3267
-     ],
-     [
-      -107.93729,
-      37.21766
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 132.695,
-  "before": "2026-09-19/2026-10-19",
-  "after": "2026-10-24/2026-11-05",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 3,
-   "s2_before": 18,
-   "s2_after": 6
   },
   "sensors": [
    "s1",
@@ -31087,85 +31544,11 @@
   },
   "aoi_km2": 225.744,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-09",
+  "after": "2026-11-09/2026-11-10",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
    "s2_before": 35,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261107-32.33_34.86",
-  "hazard": "flood",
-  "lon": 34.8566,
-  "lat": 32.3286,
-  "bbox": [
-   34.8247,
-   31.7096,
-   35.265,
-   32.3605
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-11-07",
-  "event_end": "2026-11-09",
-  "place": "",
-  "country": "Israel",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104273",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104273&episodeid=1&eventtype=FL",
-    "title": "Flood in Israel (Green alert)",
-    "date": "2026-11-07",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-11-09",
-  "updated": "2026-11-09",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Israel (2026-11-07)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      34.69714,
-      32.19294
-     ],
-     [
-      35.01606,
-      32.19294
-     ],
-     [
-      35.01606,
-      32.46426
-     ],
-     [
-      34.69714,
-      32.46426
-     ],
-     [
-      34.69714,
-      32.19294
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 903.414,
-  "before": "2026-10-03/2026-11-02",
-  "after": "2026-11-07/2026-11-09",
-  "scenes": {
-   "s1_before": 16,
-   "s1_after": 0,
-   "s2_before": 12,
    "s2_after": 0
   },
   "sensors": [
@@ -31230,7 +31613,7 @@
   },
   "aoi_km2": 225.188,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-09",
+  "after": "2026-11-09/2026-11-10",
   "scenes": {
    "s1_before": 8,
    "s1_after": 0,
@@ -31299,7 +31682,7 @@
   },
   "aoi_km2": 225.637,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -31368,7 +31751,7 @@
   },
   "aoi_km2": 225.585,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -31442,7 +31825,7 @@
   },
   "aoi_km2": 901.179,
   "before": "2026-10-02/2026-11-01",
-  "after": "2026-11-06/2026-11-09",
+  "after": "2026-11-06/2026-11-10",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -31511,7 +31894,7 @@
   },
   "aoi_km2": 225.436,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -31596,7 +31979,7 @@
   },
   "aoi_km2": 225.206,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-09",
+  "after": "2026-11-07/2026-11-10",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
@@ -31628,10 +32011,18 @@
     "title": "Forest fires in Botswana (Green alert)",
     "date": "2026-11-05",
     "detail": "Green impact for forestfire in 11060 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033634",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033634&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Botswana (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 10776 ha"
    }
   ],
   "first_seen": "2026-11-09",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Botswana (2026-11-05)",
@@ -31665,7 +32056,7 @@
   },
   "aoi_km2": 225.502,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-09",
+  "after": "2026-11-07/2026-11-10",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -31734,247 +32125,11 @@
   },
   "aoi_km2": 225.019,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-09",
+  "after": "2026-11-07/2026-11-10",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261103--20.44_24.69",
-  "hazard": "wildfire",
-  "lon": 24.6921,
-  "lat": -20.4355,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-11-03",
-  "event_end": "2026-11-06",
-  "place": "",
-  "country": "Botswana",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1033516",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033516&episodeid=5&eventtype=WF",
-    "title": "Forest fires in Botswana (Green alert)",
-    "date": "2026-11-03",
-    "detail": "Green impact for forestfire in 10262 ha"
-   }
-  ],
-  "first_seen": "2026-11-07",
-  "updated": "2026-11-07",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Botswana (2026-11-03)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      24.6202,
-      -20.50333
-     ],
-     [
-      24.764,
-      -20.50333
-     ],
-     [
-      24.764,
-      -20.36767
-     ],
-     [
-      24.6202,
-      -20.36767
-     ],
-     [
-      24.6202,
-      -20.50333
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.523,
-  "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-07/2026-11-09",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 0,
-   "s2_before": 16,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261001--27.22_-49.64",
-  "hazard": "flood",
-  "lon": -49.6437,
-  "lat": -27.2163,
-  "bbox": [
-   -50.6964,
-   -28.4333,
-   -49.5273,
-   -27.08
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-01",
-  "event_end": "2026-11-06",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104216",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=11&eventtype=FL",
-    "title": "Flood in Brazil (Green alert)",
-    "date": "2026-10-01",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-11-06",
-  "updated": "2026-11-06",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Brazil (2026-10-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -49.79522,
-      -27.35196
-     ],
-     [
-      -49.49218,
-      -27.35196
-     ],
-     [
-      -49.49218,
-      -27.08064
-     ],
-     [
-      -49.79522,
-      -27.08064
-     ],
-     [
-      -49.79522,
-      -27.35196
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.219,
-  "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-27/2026-11-09",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 3,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261105-34.89_-84.27",
-  "hazard": "flood",
-  "lon": -84.2715585,
-  "lat": 34.8867955,
-  "bbox": [
-   -84.6229212,
-   34.602982,
-   -84.0929722,
-   34.988494
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-05",
-  "event_end": "2026-11-06",
-  "place": "Fannin County, Georgia, Georgia",
-  "country": "US",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.aol.com/articles/least-80-rescued-historic-flooding-144434000.html",
-    "title": "At least 80 rescued as historic flooding prompts state of emergency near Georgia - Tennessee state line",
-    "outlet": "aol.com",
-    "date": "2026-11-06",
-    "quote": "Torrential rain triggered Flash Flood Emergencies across Polk County, Tennessee, and Fannin County, Georgia",
-    "detail": "widespread flooding, evacuations, rescue operations, infrastructure damage, fire incidents, state of emergency declared"
-   },
-   {
-    "kind": "news",
-    "url": "https://www.wtvm.com/2026/11/05/heavy-rains-spark-flash-floods-state-emergency-across-north-georgia/",
-    "title": "Heavy rains spark flash floods , state of emergency across North Georgia",
-    "outlet": "wtvm.com",
-    "date": "2026-11-05",
-    "quote": "Parts of north Georgia are cleaning up Thursday after devastating flash flooding caused widespread damage and led to mass evacuations and power outages.",
-    "detail": "mass evacuations, power outages, dangerous floodwaters, road closures, school cancellations, vehicle and debris floating in river, propane tank fire, multiple water rescues, state of emergency declared"
-   },
-   {
-    "kind": "news",
-    "url": "https://www.wtvm.com/2026/11/05/what-does-flood-insurance-cover-what-georgia-homeowners-renters-need-know/",
-    "title": "What does flood insurance cover ? What Georgia homeowners , renters need to know",
-    "outlet": "wtvm.com",
-    "date": "2026-11-05",
-    "quote": "Torrential downpours early Thursday triggered flash flood emergencies and prompted dozens of water rescues in towns like McCaysville.",
-    "detail": "flash flood emergencies, water rescues"
-   }
-  ],
-  "first_seen": "2026-11-06",
-  "updated": "2026-11-06",
-  "score": 0.3,
-  "confidence": "low",
-  "title": "Flood \u00b7 Fannin County, Georgia, Georgia, US (2026-11-05)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -84.43583,
-      34.75114
-     ],
-     [
-      -84.10729,
-      34.75114
-     ],
-     [
-      -84.10729,
-      35.02245
-     ],
-     [
-      -84.43583,
-      35.02245
-     ],
-     [
-      -84.43583,
-      34.75114
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 904.619,
-  "before": "2026-10-01/2026-10-31",
-  "after": "2026-11-05/2026-11-09",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 0,
-   "s2_before": 25,
    "s2_after": 0
   },
   "sensors": [
@@ -32045,86 +32200,11 @@
   },
   "aoi_km2": 902.256,
   "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
    "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261108-32.22_-110.98",
-  "hazard": "flood",
-  "lon": -110.9762198,
-  "lat": 32.2157163,
-  "bbox": [
-   -110.9767716,
-   32.2154047,
-   -110.9748496,
-   32.2166816
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-08",
-  "event_end": "2026-11-08",
-  "place": "US Southwest, Arizona",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.wxii12.com/article/southwest-reservoirs-flooding-lake-powell/74368630",
-    "title": "Floods bring rare relief to US Southwest reservoirs",
-    "outlet": "wxii12.com",
-    "date": "2026-11-08",
-    "quote": "Floods bring rare relief to US Southwest reservoirs as Lake Powell rises 20 feet",
-    "detail": "Floods caused evacuations, cut off access to areas, and damaged local communities. However, the water from the floods is expected to replenish reservoirs and underground aquifers, providing temporary relief to water supplies in the region."
-   }
-  ],
-  "first_seen": "2026-11-08",
-  "updated": "2026-11-08",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 US Southwest, Arizona, United States (2026-11-08)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -111.00236,
-      32.19343
-     ],
-     [
-      -110.94927,
-      32.19343
-     ],
-     [
-      -110.94927,
-      32.23865
-     ],
-     [
-      -111.00236,
-      32.23865
-     ],
-     [
-      -111.00236,
-      32.19343
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.077,
-  "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-09",
-  "scenes": {
-   "s1_before": 12,
-   "s1_after": 0,
-   "s2_before": 10,
    "s2_after": 0
   },
   "sensors": [
@@ -32195,7 +32275,7 @@
   },
   "aoi_km2": 83.111,
   "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
@@ -32270,7 +32350,7 @@
   },
   "aoi_km2": 904.029,
   "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-09",
+  "after": "2026-11-08/2026-11-10",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32296,7 +32376,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-11-07",
-  "event_end": "2026-11-08",
+  "event_end": "2026-11-09",
   "place": "San Saba County, Texas",
   "country": "US",
   "sources": [
@@ -32345,7 +32425,7 @@
   },
   "aoi_km2": 902.52,
   "before": "2026-10-03/2026-11-02",
-  "after": "2026-11-07/2026-11-09",
+  "after": "2026-11-07/2026-11-10",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -32439,7 +32519,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-09"
+  "after": "2026-11-08/2026-11-10"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -32530,7 +32610,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-09"
+  "after": "2026-11-09/2026-11-10"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -32589,7 +32669,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-09"
+  "after": "2026-11-09/2026-11-10"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -32672,7 +32752,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-09"
+  "after": "2026-11-07/2026-11-10"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -32739,7 +32819,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-06/2026-11-09"
+  "after": "2026-11-06/2026-11-10"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -32814,7 +32894,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-09"
+  "after": "2026-11-06/2026-11-10"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -32873,7 +32953,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-09"
+  "after": "2026-10-29/2026-11-10"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -32956,7 +33036,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-09"
+  "after": "2026-11-07/2026-11-10"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -33023,7 +33103,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-09"
+  "after": "2026-10-29/2026-11-10"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -33082,7 +33162,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-09"
+  "after": "2026-10-23/2026-11-10"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -33141,7 +33221,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-09"
+  "after": "2026-10-30/2026-11-10"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -33208,7 +33288,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-09"
+  "after": "2026-10-31/2026-11-10"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -33267,7 +33347,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-09"
+  "after": "2026-10-23/2026-11-10"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -33342,7 +33422,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-09"
+  "after": "2026-11-08/2026-11-10"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -33401,7 +33481,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-09"
+  "after": "2026-10-24/2026-11-10"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -33476,7 +33556,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-09"
+  "after": "2026-10-27/2026-11-10"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -33559,7 +33639,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-11-09"
+  "after": "2026-10-15/2026-11-10"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -33634,7 +33714,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-11-09"
+  "after": "2026-10-13/2026-11-10"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -33717,7 +33797,7 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-09"
+  "after": "2026-11-08/2026-11-10"
  },
  {
   "id": "wi-20261108-47.66_-117.42",
@@ -33779,7 +33859,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 430.751,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-10"
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -33844,7 +33927,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-09"
+  "after": "2026-11-08/2026-11-10"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -33909,7 +33992,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-09"
+  "after": "2026-11-04/2026-11-10"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -33974,7 +34057,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-09"
+  "after": "2026-11-04/2026-11-10"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -34039,7 +34122,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-09"
+  "after": "2026-10-31/2026-11-10"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -34104,7 +34187,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-09"
+  "after": "2026-10-28/2026-11-10"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -34169,7 +34252,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-09"
+  "after": "2026-10-26/2026-11-10"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -34234,7 +34317,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-09"
+  "after": "2026-10-24/2026-11-10"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -34299,7 +34382,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-09"
+  "after": "2026-10-24/2026-11-10"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -34364,7 +34447,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-09"
+  "after": "2026-10-23/2026-11-10"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -34429,7 +34512,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-09"
+  "after": "2026-10-22/2026-11-10"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -34494,7 +34577,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-09"
+  "after": "2026-10-22/2026-11-10"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -34559,7 +34642,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-09"
+  "after": "2026-10-20/2026-11-10"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -34624,7 +34707,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-09"
+  "after": "2026-10-20/2026-11-10"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -34689,7 +34772,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-09"
+  "after": "2026-10-20/2026-11-10"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -34754,7 +34837,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-11-09"
+  "after": "2026-10-16/2026-11-10"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -34819,7 +34902,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-11-09"
+  "after": "2026-10-07/2026-11-10"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -34884,7 +34967,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-11-09"
+  "after": "2026-10-06/2026-11-10"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -34949,7 +35032,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-11-09"
+  "after": "2026-10-03/2026-11-10"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -35014,7 +35097,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-11-09"
+  "after": "2026-10-02/2026-11-10"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -35079,7 +35162,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-11-09"
+  "after": "2026-10-02/2026-11-10"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
@@ -35144,7 +35227,7 @@
   },
   "aoi_km2": 904.958,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-11-09"
+  "after": "2026-10-01/2026-11-10"
  },
  {
   "id": "wi-20260930-49.26_-123.11",
@@ -35209,7 +35292,7 @@
   },
   "aoi_km2": 191.309,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-11-09"
+  "after": "2026-10-01/2026-11-10"
  },
  {
   "id": "wi-20260930-51.05_12.30",
@@ -35274,6 +35357,6 @@
   },
   "aoi_km2": 100.334,
   "before": "2026-08-21/2026-09-28",
-  "after": "2026-10-01/2026-11-09"
+  "after": "2026-10-01/2026-11-10"
  }
 ]
