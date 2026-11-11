@@ -932,6 +932,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261106--11.21_142.26",
+  "hazard": "wildfire",
+  "lon": 142.2636,
+  "lat": -11.208,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-06",
+  "event_end": "2026-11-10",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033610",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033610&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 10019 ha"
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-06)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.19492,
+      -11.27583
+     ],
+     [
+      142.33228,
+      -11.27583
+     ],
+     [
+      142.33228,
+      -11.14017
+     ],
+     [
+      142.19492,
+      -11.14017
+     ],
+     [
+      142.19492,
+      -11.27583
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.036,
+  "before": "2026-09-27/2026-11-04",
+  "after": "2026-11-08/2026-11-11",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 1,
+   "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261105-43.81_4.06",
   "hazard": "flood",
   "lon": 4.0647,
@@ -1740,7 +1808,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-09",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2100,7 +2168,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-03",
-  "event_end": "2026-11-08",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2111,10 +2179,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-11-03",
     "detail": "Green impact for forestfire in 13376 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033683",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033683&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 10656 ha"
    }
   ],
   "first_seen": "2026-11-05",
-  "updated": "2026-11-05",
+  "updated": "2026-11-11",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-11-03)",
@@ -2148,12 +2224,12 @@
   },
   "aoi_km2": 225.283,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-05/2026-11-07",
+  "after": "2026-11-05/2026-11-11",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 33,
-   "s2_after": 2
+   "s2_after": 4
   },
   "sensors": [
    "s2"
@@ -2958,7 +3034,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-31",
-  "event_end": "2026-11-07",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -2969,10 +3045,18 @@
     "title": "Forest fires in South Sudan (Green alert)",
     "date": "2026-10-31",
     "detail": "Green impact for forestfire in 12788 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033674",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033674&episodeid=4&eventtype=WF",
+    "title": "Forest fires in South Sudan (Green alert)",
+    "date": "2026-11-08",
+    "detail": "Green impact for forestfire in 10797 ha"
    }
   ],
   "first_seen": "2026-11-05",
-  "updated": "2026-11-05",
+  "updated": "2026-11-11",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 South Sudan (2026-10-31)",
@@ -3006,12 +3090,12 @@
   },
   "aoi_km2": 225.09,
   "before": "2026-09-21/2026-10-29",
-  "after": "2026-11-02/2026-11-06",
+  "after": "2026-11-02/2026-11-11",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 11,
-   "s2_after": 1
+   "s2_after": 2
   },
   "sensors": [
    "s2"
@@ -3239,7 +3323,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-30",
-  "event_end": "2026-11-09",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "Burkina Faso",
   "sources": [
@@ -4334,7 +4418,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-28",
-  "event_end": "2026-11-08",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -27195,6 +27279,99 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261101-27.94_-80.58",
+  "hazard": "flood",
+  "lon": -80.5773329,
+  "lat": 27.9378067,
+  "bbox": [
+   -80.6230855,
+   27.888732,
+   -80.5085329,
+   27.9694206
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-01",
+  "event_end": "2026-11-11",
+  "place": "Grant-Valkaria, Brevard County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox35orlando.com/news/nearly-25-inches-rain-reported-brevard-county-historic-rainfall-floods-central-florida",
+    "title": "Nearly 25 inches of rain reported in Brevard County as historic rainfall floods Central Florida",
+    "outlet": "fox35orlando.com",
+    "date": "2026-11-06",
+    "quote": "A slow-moving weather system dumped more than two feet of rain in parts of Brevard County over several days, triggering widespread flooding and flash flood emergencies across Central Florida and the Treasure Coast.",
+    "detail": "flash flood emergencies across Central Florida and the Treasure Coast, rising St. Johns River levels, and prolonged flooding concerns along the St. Johns River."
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wesh.com/article/florida-warn-of-mosquitoes-bacteria-after-floodwaters/74392006",
+    "title": "Florida health officials warn of mosquitoes after floodwaters recede",
+    "outlet": "wesh.com",
+    "date": "2026-11-11",
+    "quote": "While most floodwaters in Brevard County have receded, that doesn't mean the threat is gone.",
+    "detail": "health risk"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.wesh.com/article/families-looking-for-help-after-flooding-in-brevard-county/74392704",
+    "title": "Families looking for help after flooding in Brevard County",
+    "outlet": "wesh.com",
+    "date": "2026-11-11",
+    "quote": "Families are looking for further help after catastrophic flooding in the southern part of Brevard County last week.",
+    "detail": "Families are seeking assistance due to property damage and lack of insurance. A boil-water notice was issued due to a water main break during restoration efforts."
+   }
+  ],
+  "first_seen": "2026-11-07",
+  "updated": "2026-11-11",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Flood \u00b7 Grant-Valkaria, Brevard County, United States (2026-11-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -80.62309,
+      27.88873
+     ],
+     [
+      -80.50853,
+      27.88873
+     ],
+     [
+      -80.50853,
+      27.96942
+     ],
+     [
+      -80.62309,
+      27.96942
+     ],
+     [
+      -80.62309,
+      27.88873
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 100.75,
+  "before": "2026-09-27/2026-10-27",
+  "after": "2026-11-01/2026-11-11",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 1,
+   "s2_before": 18,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261024-37.28_-107.88",
   "hazard": "flood",
   "lon": -107.8766,
@@ -28574,77 +28751,76 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261101-27.94_-80.58",
-  "hazard": "flood",
-  "lon": -80.5773329,
-  "lat": 27.9378067,
+  "id": "wi-20261031-48.78_-123.71",
+  "hazard": "wildfire",
+  "lon": -123.7080446,
+  "lat": 48.7786872,
   "bbox": [
-   -80.6230855,
-   27.888732,
-   -80.5085329,
-   27.9694206
+   -123.719444,
+   48.7716623,
+   -123.6848837,
+   48.7884589
   ],
   "geometry_from": "news",
-  "event_start": "2026-11-01",
-  "event_end": "2026-11-02",
-  "place": "Grant-Valkaria, Brevard County",
-  "country": "United States",
+  "event_start": "2026-10-31",
+  "event_end": "2026-11-01",
+  "place": "Duncan, British Columbia",
+  "country": "Canada",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.fox35orlando.com/news/nearly-25-inches-rain-reported-brevard-county-historic-rainfall-floods-central-florida",
-    "title": "Nearly 25 inches of rain reported in Brevard County as historic rainfall floods Central Florida",
-    "outlet": "fox35orlando.com",
-    "date": "2026-11-06",
-    "quote": "A slow-moving weather system dumped more than two feet of rain in parts of Brevard County over several days, triggering widespread flooding and flash flood emergencies across Central Florida and the Treasure Coast.",
-    "detail": "flash flood emergencies across Central Florida and the Treasure Coast, rising St. Johns River levels, and prolonged flooding concerns along the St. Johns River."
+    "url": "https://westerlynews.ca/2026/11/10/duncan-air-quality-warning-follows-prescribed-burn-in-lake-cowichan/",
+    "title": "Duncan air quality warning follows prescribed burn in Lake Cowichan | Tofino / Ucluelet Westerly News",
+    "outlet": "westerlynews.ca",
+    "date": "2026-11-11",
+    "quote": "planned and controlled prescribed burns were carried out as part of Mosaic's fire hazard abatement strategy",
+    "detail": "air quality advisory"
    }
   ],
-  "first_seen": "2026-11-07",
-  "updated": "2026-11-07",
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 Grant-Valkaria, Brevard County, United States (2026-11-01)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 Duncan, British Columbia, Canada (2026-10-31)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -80.62309,
-      27.88873
+      -123.73624,
+      48.75745
      ],
      [
-      -80.50853,
-      27.88873
+      -123.66808,
+      48.75745
      ],
      [
-      -80.50853,
-      27.96942
+      -123.66808,
+      48.80267
      ],
      [
-      -80.62309,
-      27.96942
+      -123.73624,
+      48.80267
      ],
      [
-      -80.62309,
-      27.88873
+      -123.73624,
+      48.75745
      ]
     ]
    ]
   },
-  "aoi_km2": 100.75,
-  "before": "2026-09-27/2026-10-27",
-  "after": "2026-11-01/2026-11-07",
+  "aoi_km2": 25.172,
+  "before": "2026-09-21/2026-10-29",
+  "after": "2026-11-02/2026-11-11",
   "scenes": {
-   "s1_before": 2,
+   "s1_before": 6,
    "s1_after": 1,
-   "s2_before": 18,
-   "s2_after": 2
+   "s2_before": 8,
+   "s2_after": 0
   },
   "sensors": [
-   "s1",
-   "s2"
+   "s1"
   ],
   "status": "ready"
  },
@@ -32083,6 +32259,144 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261108--19.14_142.71",
+  "hazard": "wildfire",
+  "lon": 142.705,
+  "lat": -19.1418,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-10",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033680",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033680&episodeid=3&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-08",
+    "detail": "Green impact for forestfire in 11354 ha"
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      142.63368,
+      -19.20963
+     ],
+     [
+      142.77632,
+      -19.20963
+     ],
+     [
+      142.77632,
+      -19.07397
+     ],
+     [
+      142.63368,
+      -19.07397
+     ],
+     [
+      142.63368,
+      -19.20963
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.341,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-11",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 17,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "wi-20261108--18.95_139.12",
+  "hazard": "wildfire",
+  "lon": 139.1219,
+  "lat": -18.9453,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-10",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033689",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033689&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-08",
+    "detail": "Green impact for forestfire in 11968 ha"
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      139.05067,
+      -19.01313
+     ],
+     [
+      139.19313,
+      -19.01313
+     ],
+     [
+      139.19313,
+      -18.87747
+     ],
+     [
+      139.05067,
+      -18.87747
+     ],
+     [
+      139.05067,
+      -19.01313
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.356,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-11",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 32,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
   "id": "wi-20261107--21.51_131.90",
   "hazard": "wildfire",
   "lon": 131.9012,
@@ -32138,7 +32452,7 @@
   },
   "aoi_km2": 225.744,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-10",
+  "after": "2026-11-09/2026-11-11",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
@@ -32207,7 +32521,7 @@
   },
   "aoi_km2": 225.637,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-10",
+  "after": "2026-11-08/2026-11-11",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32281,7 +32595,7 @@
   },
   "aoi_km2": 901.179,
   "before": "2026-10-02/2026-11-01",
-  "after": "2026-11-06/2026-11-10",
+  "after": "2026-11-06/2026-11-11",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -32350,7 +32664,7 @@
   },
   "aoi_km2": 225.436,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-10",
+  "after": "2026-11-08/2026-11-11",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -32427,11 +32741,161 @@
   },
   "aoi_km2": 225.019,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-10",
+  "after": "2026-11-07/2026-11-11",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 20,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261111-42.25_130.31",
+  "hazard": "flood",
+  "lon": 130.3113296,
+  "lat": 42.2497316,
+  "bbox": [
+   130.04222,
+   41.9840592,
+   130.8861177,
+   42.6174085
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-11",
+  "event_end": "2026-11-11",
+  "place": "Rason, northeast of the country",
+  "country": "North Korea",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.nknews.org/pro/north-korea-builds-new-homes-for-flood-victims-but-hides-news-of-suffering/",
+    "title": "North Korea builds new homes for flood victims but hides news of suffering",
+    "outlet": "nknews.org",
+    "date": "2026-11-11",
+    "quote": "Planet Labs satellite imagery shows new homes have been built in Rason in the northeast of the country since flooding at the end of August",
+    "detail": "The article states that new homes were built for flood victims, but the damage to other homes may not have been significant enough for authorities to dedicate resources to rebuilding. It also mentions that state media refrained from reporting on the damages or possible casualties, suggesting a cover"
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Rason, northeast of the country, North Korea (2026-11-11)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      130.12929,
+      42.11408
+     ],
+     [
+      130.49337,
+      42.11408
+     ],
+     [
+      130.49337,
+      42.38539
+     ],
+     [
+      130.12929,
+      42.38539
+     ],
+     [
+      130.12929,
+      42.11408
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.021,
+  "before": "2026-10-07/2026-11-06",
+  "after": "2026-11-11/2026-11-11",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 0,
+   "s2_before": 43,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261110-14.79_120.88",
+  "hazard": "flood",
+  "lon": 120.8792703,
+  "lat": 14.7946733,
+  "bbox": [
+   120.7744185,
+   14.6011485,
+   120.9149641,
+   14.8235127
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-10",
+  "place": "Triple Junction Subdivision, Bulakan",
+  "country": "Philippines",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.rappler.com/philippines/luzon/disconnected-dikes-sloppy-plans-millions-flood-control-failed-bulakan/",
+    "title": "Disconnected dikes , sloppy plans : Why millions in flood control projects failed Bulakan",
+    "outlet": "rappler.com",
+    "date": "2026-11-10",
+    "quote": "Residents of Triple Junction Subdivision in Bulakan, Bulacan, have faced severe flooding, exacerbated by ineffective flood control projects despite significant government spending.",
+    "detail": "Residents had to use boats to navigate flooded areas, and some raised ground around their properties with fill soil to make flood control structures effective."
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Triple Junction Subdivision, Bulakan, Philippines (2026-11-10)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      120.77442,
+      14.60115
+     ],
+     [
+      120.91496,
+      14.60115
+     ],
+     [
+      120.91496,
+      14.82351
+     ],
+     [
+      120.77442,
+      14.82351
+     ],
+     [
+      120.77442,
+      14.60115
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 372.572,
+  "before": "2026-10-06/2026-11-05",
+  "after": "2026-11-10/2026-11-11",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 0,
+   "s2_before": 12,
    "s2_after": 0
   },
   "sensors": [
@@ -32502,7 +32966,7 @@
   },
   "aoi_km2": 83.111,
   "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-10",
+  "after": "2026-11-08/2026-11-11",
   "scenes": {
    "s1_before": 1,
    "s1_after": 0,
@@ -32577,7 +33041,7 @@
   },
   "aoi_km2": 904.029,
   "before": "2026-10-04/2026-11-03",
-  "after": "2026-11-08/2026-11-10",
+  "after": "2026-11-08/2026-11-11",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32671,7 +33135,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-10"
+  "after": "2026-11-08/2026-11-11"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -32762,7 +33226,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-10"
+  "after": "2026-11-09/2026-11-11"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -32821,7 +33285,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-09/2026-11-10"
+  "after": "2026-11-09/2026-11-11"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -32904,7 +33368,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-07/2026-11-10"
+  "after": "2026-11-09/2026-11-11"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -32971,7 +33435,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-06/2026-11-10"
+  "after": "2026-11-09/2026-11-11"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -33046,7 +33510,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-10"
+  "after": "2026-11-06/2026-11-11"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -33105,7 +33569,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-10"
+  "after": "2026-10-29/2026-11-11"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -33188,7 +33652,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-10"
+  "after": "2026-11-07/2026-11-11"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -33255,7 +33719,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-10"
+  "after": "2026-10-29/2026-11-11"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -33314,7 +33778,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-10"
+  "after": "2026-10-23/2026-11-11"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -33373,7 +33837,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-10"
+  "after": "2026-10-30/2026-11-11"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -33440,7 +33904,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-10"
+  "after": "2026-10-31/2026-11-11"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -33499,7 +33963,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-10"
+  "after": "2026-10-23/2026-11-11"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -33574,7 +34038,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-11-08/2026-11-10"
+  "after": "2026-11-08/2026-11-11"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -33633,7 +34097,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-10"
+  "after": "2026-10-24/2026-11-11"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -33708,7 +34172,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-10"
+  "after": "2026-10-27/2026-11-11"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -33791,7 +34255,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-11-10"
+  "after": "2026-10-15/2026-11-11"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -33866,7 +34330,81 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-11-10"
+  "after": "2026-10-13/2026-11-11"
+ },
+ {
+  "id": "wi-20261108-47.66_-117.42",
+  "hazard": "wildfire",
+  "lon": -117.42351,
+  "lat": 47.6571934,
+  "bbox": [
+   -117.6039994,
+   47.5867785,
+   -117.3038581,
+   47.7587975
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-10",
+  "place": "Spokane, Pacific NW",
+  "country": "USA",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.spokesman.com/stories/2026/nov/08/cool-critters-spokanes-wildfire-areas-come-to-life/",
+    "title": "Cool Critters : Spokane wildfire areas come to life with arrival of a mysterious burn bird",
+    "outlet": "spokesman.com",
+    "date": "2026-11-08",
+    "quote": "Three months after the Spokane Complex fires carved a path of destruction through neighborhoods and forests",
+    "detail": "Parts of the burn site are coming alive with a heart-warming sound: rat-a-tat-tat. The landscape may look like an ash-laden wasteland with blacked trees, but for the black-backed woodpecker, it is a goldmine."
+   },
+   {
+    "kind": "news",
+    "url": "http://www.chronline.com/stories/wildfire-season-officially-ends-in-washington-state-lands-commissioner-seeks-future-funding,411653",
+    "title": "Wildfire season officially ends in Washington state Lands Commissioner seeks future funding",
+    "outlet": "chronline.com",
+    "date": "2026-11-11",
+    "quote": "more than 1,500 fires ignited and nearly 1 million acres burned across the state",
+    "detail": "nearly a thousand homes destroyed, 65,000 people evacuated"
+   }
+  ],
+  "first_seen": "2026-11-08",
+  "updated": "2026-11-11",
+  "score": 0.3,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Spokane, Pacific NW, USA (2026-11-08)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -117.604,
+      47.58678
+     ],
+     [
+      -117.30386,
+      47.58678
+     ],
+     [
+      -117.30386,
+      47.7588
+     ],
+     [
+      -117.604,
+      47.7588
+     ],
+     [
+      -117.604,
+      47.58678
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 430.751,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-11"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -33949,40 +34487,40 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-08/2026-11-10"
+  "after": "2026-11-08/2026-11-11"
  },
  {
-  "id": "wi-20261108-47.66_-117.42",
+  "id": "wi-20261111-38.85_-94.41",
   "hazard": "wildfire",
-  "lon": -117.42351,
-  "lat": 47.6571934,
+  "lon": -94.413093,
+  "lat": 38.8484703,
   "bbox": [
-   -117.6039994,
-   47.5867785,
-   -117.3038581,
-   47.7587975
+   -94.4173959,
+   38.8465174,
+   -94.4088171,
+   38.8501715
   ],
   "geometry_from": "news",
-  "event_start": "2026-11-08",
-  "event_end": "2026-11-08",
-  "place": "Spokane, Pacific NW",
-  "country": "USA",
+  "event_start": "2026-11-11",
+  "event_end": "2026-11-11",
+  "place": "Napa Valley, California",
+  "country": "United States",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.spokesman.com/stories/2026/nov/08/cool-critters-spokanes-wildfire-areas-come-to-life/",
-    "title": "Cool Critters : Spokane wildfire areas come to life with arrival of a mysterious burn bird",
-    "outlet": "spokesman.com",
-    "date": "2026-11-08",
-    "quote": "Three months after the Spokane Complex fires carved a path of destruction through neighborhoods and forests",
-    "detail": "Parts of the burn site are coming alive with a heart-warming sound: rat-a-tat-tat. The landscape may look like an ash-laden wasteland with blacked trees, but for the black-backed woodpecker, it is a goldmine."
+    "url": "https://www.independent.co.uk/news/world/americas/hundred-acre-winery-california-wildfire-lawsuit-b3082743.html",
+    "title": "Napa Valley winery sued after worker allegedly started wildfire that destroyed harvests",
+    "outlet": "independent.co.uk",
+    "date": "2026-11-11",
+    "quote": "The Pickett Fire ignited August 21, 2025, at Hundred Acre's property in Calistoga, burning 6,800 acres.",
+    "detail": "The fire allegedly destroyed grape harvests and caused around $90 million in losses. Smoke from the fire contaminated grapes across the region, wiping out the 2025 harvest for numerous wineries and growers, particularly in the Howell Mountain wine region. Smoke taint occurred when compounds from wil"
    }
   ],
-  "first_seen": "2026-11-08",
-  "updated": "2026-11-08",
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
   "score": 0.15,
   "confidence": "low",
-  "title": "Wildfire \u00b7 Spokane, Pacific NW, USA (2026-11-08)",
+  "title": "Wildfire \u00b7 Napa Valley, California, United States (2026-11-11)",
   "task": "wildfire",
   "status": "too recent",
   "aoi": {
@@ -33990,31 +34528,152 @@
    "coordinates": [
     [
      [
-      -117.604,
-      47.58678
+      -94.44194,
+      38.82574
      ],
      [
-      -117.30386,
-      47.58678
+      -94.38427,
+      38.82574
      ],
      [
-      -117.30386,
-      47.7588
+      -94.38427,
+      38.87095
      ],
      [
-      -117.604,
-      47.7588
+      -94.44194,
+      38.87095
      ],
      [
-      -117.604,
-      47.58678
+      -94.44194,
+      38.82574
      ]
     ]
    ]
-  },
-  "aoi_km2": 430.751,
-  "before": "2026-09-29/2026-11-06",
-  "after": "2026-11-10/2026-11-10"
+  }
+ },
+ {
+  "id": "wi-20261110-50.54_-116.01",
+  "hazard": "wildfire",
+  "lon": -116.008185,
+  "lat": 50.538892,
+  "bbox": [
+   -116.028185,
+   50.518892,
+   -115.988185,
+   50.558892
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-10",
+  "place": "North Shuswap, British Columbia",
+  "country": "Canada",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://saobserver.net/2026/11/09/viewpoint-will-b-c-s-new-government-improve-wildfire-mitigation-and-prevention/",
+    "title": "VIEWPOINT : Will B . C . new government improve wildfire mitigation and prevention ? ",
+    "outlet": "saobserver.net",
+    "date": "2026-11-10",
+    "quote": "The Bush Creek East wildfire in the North Shuswap in 2023.",
+    "detail": "Damage to property and forests, potential threat to communities, financial and ecological costs of lost forests and firefighting efforts."
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 North Shuswap, British Columbia, Canada (2026-11-10)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -116.04352,
+      50.51628
+     ],
+     [
+      -115.97285,
+      50.51628
+     ],
+     [
+      -115.97285,
+      50.5615
+     ],
+     [
+      -116.04352,
+      50.5615
+     ],
+     [
+      -116.04352,
+      50.51628
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261110-38.90_-77.04",
+  "hazard": "wildfire",
+  "lon": -77.0363849,
+  "lat": 38.8950982,
+  "bbox": [
+   -77.1197949,
+   38.7916303,
+   -76.909366,
+   38.995968
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-10",
+  "place": "North Whidbey Fire and Rescue, Washington",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.whidbeynewstimes.com/2026/11/10/broken-brush-truck-raises-concerns-for-wildfire-season/",
+    "title": "Broken brush truck raises concerns for wildfire season",
+    "outlet": "whidbeynewstimes.com",
+    "date": "2026-11-11",
+    "quote": "Wildland firefighters from North Whidbey Fire and Rescue are concerned about the feasibility of mobilizing next wildfire season after one of the district\u2019s two brush trucks broke down during its last deployment.",
+    "detail": "The broken brush truck raises concerns about the district's ability to mobilize during the wildfire season, potentially affecting firefighting operations and resource allocation."
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 North Whidbey Fire and Rescue, Washington, United States (2026-11-10)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -77.11979,
+      38.79163
+     ],
+     [
+      -76.90937,
+      38.79163
+     ],
+     [
+      -76.90937,
+      38.99597
+     ],
+     [
+      -77.11979,
+      38.99597
+     ],
+     [
+      -77.11979,
+      38.79163
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -34079,7 +34738,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-08/2026-11-10"
+  "after": "2026-11-08/2026-11-11"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -34144,7 +34803,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-10"
+  "after": "2026-11-04/2026-11-11"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -34209,7 +34868,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-10"
+  "after": "2026-11-04/2026-11-11"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -34274,7 +34933,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-10"
+  "after": "2026-10-31/2026-11-11"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -34339,7 +34998,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-10"
+  "after": "2026-10-28/2026-11-11"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -34404,7 +35063,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-10"
+  "after": "2026-10-26/2026-11-11"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -34469,7 +35128,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-10"
+  "after": "2026-10-24/2026-11-11"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -34534,7 +35193,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-10"
+  "after": "2026-10-24/2026-11-11"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -34599,7 +35258,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-10"
+  "after": "2026-10-23/2026-11-11"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -34664,7 +35323,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-10"
+  "after": "2026-10-22/2026-11-11"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -34729,7 +35388,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-10"
+  "after": "2026-10-22/2026-11-11"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -34794,7 +35453,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-10"
+  "after": "2026-10-20/2026-11-11"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -34859,7 +35518,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-10"
+  "after": "2026-10-20/2026-11-11"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -34924,7 +35583,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-10"
+  "after": "2026-10-20/2026-11-11"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -34989,7 +35648,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-11-10"
+  "after": "2026-10-16/2026-11-11"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -35054,7 +35713,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-11-10"
+  "after": "2026-10-07/2026-11-11"
  },
  {
   "id": "wi-20261005-35.20_-111.65",
@@ -35119,7 +35778,7 @@
   },
   "aoi_km2": 252.283,
   "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-11-10"
+  "after": "2026-10-06/2026-11-11"
  },
  {
   "id": "wi-20261002-33.97_-78.39",
@@ -35184,7 +35843,7 @@
   },
   "aoi_km2": 148.69,
   "before": "2026-08-23/2026-09-30",
-  "after": "2026-10-03/2026-11-10"
+  "after": "2026-10-03/2026-11-11"
  },
  {
   "id": "wi-20261001-47.71_15.74",
@@ -35249,7 +35908,7 @@
   },
   "aoi_km2": 180.747,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-11-10"
+  "after": "2026-10-02/2026-11-11"
  },
  {
   "id": "wi-20261001-50.27_-119.27",
@@ -35314,7 +35973,7 @@
   },
   "aoi_km2": 335.643,
   "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-02/2026-11-10"
+  "after": "2026-10-02/2026-11-11"
  },
  {
   "id": "wi-20260930-37.84_-119.52",
