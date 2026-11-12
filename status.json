@@ -1,9 +1,9 @@
 {
- "started": "2026-11-12T07:19:05+00:00",
+ "started": "2026-11-12T20:00:18+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 32
+   "events": 34
   },
   "cems": {
    "ok": true,
@@ -14,8 +14,8 @@
    "events": 0
   },
   "gdelt": {
-   "ok": false,
-   "error": "OSError: GDELT kept refusing requests (rate limit)"
+   "ok": true,
+   "articles": 66
   },
   "rss:wildfiretoday.com": {
    "ok": true,
@@ -31,18 +31,18 @@
   }
  },
  "news": {
-  "read": 1,
+  "read": 20,
   "per_hazard": {
-   "flood": 0,
-   "wildfire": 1,
+   "flood": 10,
+   "wildfire": 10,
    "vegetation": 0
   },
-  "events": 0,
+  "events": 4,
   "model": "qwen3:8b"
  },
- "finished": "2026-11-12T07:25:18+00:00",
- "duration_s": 373,
- "cases": 507,
- "new": 2,
+ "finished": "2026-11-12T20:24:44+00:00",
+ "duration_s": 1466,
+ "cases": 511,
+ "new": 4,
  "ok": true
 }

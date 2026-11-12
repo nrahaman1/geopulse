@@ -566,6 +566,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261108--18.95_139.12",
+  "hazard": "wildfire",
+  "lon": 139.1219,
+  "lat": -18.9453,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-11",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033689",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033689&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-08",
+    "detail": "Green impact for forestfire in 11968 ha"
+   }
+  ],
+  "first_seen": "2026-11-11",
+  "updated": "2026-11-11",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      139.05067,
+      -19.01313
+     ],
+     [
+      139.19313,
+      -19.01313
+     ],
+     [
+      139.19313,
+      -18.87747
+     ],
+     [
+      139.05067,
+      -18.87747
+     ],
+     [
+      139.05067,
+      -19.01313
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.356,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-12",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 32,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261107-36.19_44.01",
   "hazard": "flood",
   "lon": 44.0094,
@@ -1065,6 +1134,80 @@
    "s1_before": 10,
    "s1_after": 2,
    "s2_before": 11,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261107-37.24_-8.15",
+  "hazard": "flood",
+  "lon": -8.1508,
+  "lat": 37.2448,
+  "bbox": [
+   -8.9971,
+   36.96,
+   -7.3949,
+   37.5291
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-07",
+  "event_end": "2026-11-12",
+  "place": "",
+  "country": "Portugal",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104276",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104276&episodeid=3&eventtype=FL",
+    "title": "Flood in Portugal (Green alert)",
+    "date": "2026-11-07",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-12",
+  "updated": "2026-11-12",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Portugal (2026-11-07)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -8.32007,
+      37.10914
+     ],
+     [
+      -7.98153,
+      37.10914
+     ],
+     [
+      -7.98153,
+      37.38046
+     ],
+     [
+      -8.32007,
+      37.38046
+     ],
+     [
+      -8.32007,
+      37.10914
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.871,
+  "before": "2026-10-03/2026-11-02",
+  "after": "2026-11-07/2026-11-12",
+  "scenes": {
+   "s1_before": 15,
+   "s1_after": 2,
+   "s2_before": 6,
    "s2_after": 1
   },
   "sensors": [
@@ -13098,7 +13241,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-15",
-  "event_end": "2026-11-04",
+  "event_end": "2026-11-10",
   "place": "",
   "country": "Malaysia",
   "sources": [
@@ -17535,7 +17678,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-07",
-  "event_end": "2026-11-12",
+  "event_end": "2026-11-13",
   "place": "",
   "country": "Italy",
   "sources": [
@@ -28576,6 +28719,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261112-37.76_-107.65",
+  "hazard": "flood",
+  "lon": -107.6495508,
+  "lat": 37.7633081,
+  "bbox": [
+   -107.97506,
+   37.639501,
+   -107.458134,
+   37.965015
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-12",
+  "event_end": "2026-11-12",
+  "place": "San Juan County, New Mexico",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.koat.com/article/san-juan-county-calls-for-federal-disaster-aid-after-record-breaking-floods/74405674",
+    "title": "San Juan County calls for federal disaster aid after record - breaking floods",
+    "outlet": "koat.com",
+    "date": "2026-11-12",
+    "quote": "historic flooding caused millions in damages and left hundreds of properties destroyed",
+    "detail": "833 properties were impacted by the flooding, including 308 with major damage and 71 that were destroyed. The county is facing an estimated $8 million in losses."
+   }
+  ],
+  "first_seen": "2026-11-12",
+  "updated": "2026-11-12",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 San Juan County, New Mexico, United States (2026-11-12)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -107.82,
+      37.62765
+     ],
+     [
+      -107.4791,
+      37.62765
+     ],
+     [
+      -107.4791,
+      37.89896
+     ],
+     [
+      -107.82,
+      37.89896
+     ],
+     [
+      -107.82,
+      37.62765
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 905.033,
+  "before": "2026-10-08/2026-11-07",
+  "after": "2026-11-12/2026-11-12",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 1,
+   "s2_before": 45,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261111-42.25_130.31",
   "hazard": "flood",
   "lon": 130.3113296,
@@ -28642,6 +28859,80 @@
    "s1_before": 9,
    "s1_after": 0,
    "s2_before": 43,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261110-27.39_-80.89",
+  "hazard": "flood",
+  "lon": -80.8873655,
+  "lat": 27.3923408,
+  "bbox": [
+   -81.213717,
+   26.958919,
+   -80.677356,
+   27.643238
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-10",
+  "place": "Okeechobee County, Florida",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wgcu.org/section/weather/2026-11-10/donations-needed-to-assist-those-impacted-by-floods-in-okeechobee-county",
+    "title": "Donations needed to assist those impacted by floods in Okeechobee County",
+    "outlet": "wgcu.org",
+    "date": "2026-11-11",
+    "quote": "As much as 13 inches of rain fell last week, flooding hundreds of homes in low-lying areas.",
+    "detail": "Donations of clothing and canned food items are being accepted after historic flooding washed over Okeechobee County."
+   }
+  ],
+  "first_seen": "2026-11-12",
+  "updated": "2026-11-12",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Okeechobee County, Florida, United States (2026-11-10)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -81.03913,
+      27.25669
+     ],
+     [
+      -80.7356,
+      27.25669
+     ],
+     [
+      -80.7356,
+      27.528
+     ],
+     [
+      -81.03913,
+      27.528
+     ],
+     [
+      -81.03913,
+      27.25669
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.843,
+  "before": "2026-10-06/2026-11-05",
+  "after": "2026-11-10/2026-11-12",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 20,
    "s2_after": 4
   },
   "sensors": [
@@ -33268,66 +33559,71 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261108--18.95_139.12",
-  "hazard": "wildfire",
-  "lon": 139.1219,
-  "lat": -18.9453,
-  "bbox": null,
+  "id": "fl-20261110-21.51_98.01",
+  "hazard": "flood",
+  "lon": 98.0098,
+  "lat": 21.5122,
+  "bbox": [
+   96.1511,
+   19.2993,
+   101.1701,
+   24.1591
+  ],
   "geometry_from": "gdacs",
-  "event_start": "2026-11-08",
-  "event_end": "2026-11-11",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-12",
   "place": "",
-  "country": "Australia",
+  "country": "Myanmar",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "WF1033689",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033689&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-11-08",
-    "detail": "Green impact for forestfire in 11968 ha"
+    "id": "FL1104280",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104280&episodeid=1&eventtype=FL",
+    "title": "Flood in Myanmar (Green alert)",
+    "date": "2026-11-10",
+    "detail": "Magnitude 0"
    }
   ],
-  "first_seen": "2026-11-11",
-  "updated": "2026-11-11",
+  "first_seen": "2026-11-12",
+  "updated": "2026-11-12",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-11-08)",
-  "task": "wildfire",
+  "title": "Flood \u00b7 Myanmar (2026-11-10)",
+  "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      139.05067,
-      -19.01313
+      97.86496,
+      21.37654
      ],
      [
-      139.19313,
-      -19.01313
+      98.15464,
+      21.37654
      ],
      [
-      139.19313,
-      -18.87747
+      98.15464,
+      21.64786
      ],
      [
-      139.05067,
-      -18.87747
+      97.86496,
+      21.64786
      ],
      [
-      139.05067,
-      -19.01313
+      97.86496,
+      21.37654
      ]
     ]
    ]
   },
-  "aoi_km2": 225.356,
-  "before": "2026-09-29/2026-11-06",
+  "aoi_km2": 901.187,
+  "before": "2026-10-06/2026-11-05",
   "after": "2026-11-10/2026-11-12",
   "scenes": {
-   "s1_before": 7,
+   "s1_before": 8,
    "s1_after": 0,
-   "s2_before": 32,
+   "s2_before": 24,
    "s2_after": 0
   },
   "sensors": [
