@@ -808,6 +808,148 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261110-21.51_98.01",
+  "hazard": "flood",
+  "lon": 98.0098,
+  "lat": 21.5122,
+  "bbox": [
+   96.1511,
+   19.2993,
+   101.1701,
+   24.1591
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-10",
+  "event_end": "2026-11-12",
+  "place": "",
+  "country": "Myanmar",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104280",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104280&episodeid=1&eventtype=FL",
+    "title": "Flood in Myanmar (Green alert)",
+    "date": "2026-11-10",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-12",
+  "updated": "2026-11-12",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Myanmar (2026-11-10)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      97.86496,
+      21.37654
+     ],
+     [
+      98.15464,
+      21.37654
+     ],
+     [
+      98.15464,
+      21.64786
+     ],
+     [
+      97.86496,
+      21.64786
+     ],
+     [
+      97.86496,
+      21.37654
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 901.187,
+  "before": "2026-10-06/2026-11-05",
+  "after": "2026-11-10/2026-11-14",
+  "scenes": {
+   "s1_before": 8,
+   "s1_after": 0,
+   "s2_before": 24,
+   "s2_after": 3
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261109-9.04_21.21",
+  "hazard": "wildfire",
+  "lon": 21.2101,
+  "lat": 9.043,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-09",
+  "event_end": "2026-11-14",
+  "place": "",
+  "country": "Central African Republic",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033747",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033747&episodeid=8&eventtype=WF",
+    "title": "Forest fires in Central African Republic (Green alert)",
+    "date": "2026-11-09",
+    "detail": "Green impact for forestfire in 10029 ha"
+   }
+  ],
+  "first_seen": "2026-11-14",
+  "updated": "2026-11-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Central African Republic (2026-11-09)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      21.14188,
+      8.97517
+     ],
+     [
+      21.27832,
+      8.97517
+     ],
+     [
+      21.27832,
+      9.11083
+     ],
+     [
+      21.14188,
+      9.11083
+     ],
+     [
+      21.14188,
+      8.97517
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.9,
+  "before": "2026-09-30/2026-11-07",
+  "after": "2026-11-11/2026-11-14",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 13,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261108--31.71_-60.57",
   "hazard": "flood",
   "lon": -60.5658,
@@ -1558,6 +1700,75 @@
    "s2_after": 2
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261108--18.55_143.39",
+  "hazard": "wildfire",
+  "lon": 143.3938,
+  "lat": -18.5498,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-08",
+  "event_end": "2026-11-14",
+  "place": "",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033795",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033795&episodeid=5&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-08",
+    "detail": "Green impact for forestfire in 11412 ha"
+   }
+  ],
+  "first_seen": "2026-11-14",
+  "updated": "2026-11-14",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Australia (2026-11-08)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      143.32273,
+      -18.61763
+     ],
+     [
+      143.46487,
+      -18.61763
+     ],
+     [
+      143.46487,
+      -18.48197
+     ],
+     [
+      143.32273,
+      -18.48197
+     ],
+     [
+      143.32273,
+      -18.61763
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.502,
+  "before": "2026-09-29/2026-11-06",
+  "after": "2026-11-10/2026-11-14",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 1,
+   "s2_before": 9,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -35210,71 +35421,66 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261110-21.51_98.01",
-  "hazard": "flood",
-  "lon": 98.0098,
-  "lat": 21.5122,
-  "bbox": [
-   96.1511,
-   19.2993,
-   101.1701,
-   24.1591
-  ],
+  "id": "wi-20261112-12.79_-0.21",
+  "hazard": "wildfire",
+  "lon": -0.2105,
+  "lat": 12.7898,
+  "bbox": null,
   "geometry_from": "gdacs",
-  "event_start": "2026-11-10",
-  "event_end": "2026-11-12",
+  "event_start": "2026-11-12",
+  "event_end": "2026-11-14",
   "place": "",
-  "country": "Myanmar",
+  "country": "Burkina Faso",
   "sources": [
    {
     "kind": "gdacs",
-    "id": "FL1104280",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104280&episodeid=1&eventtype=FL",
-    "title": "Flood in Myanmar (Green alert)",
-    "date": "2026-11-10",
-    "detail": "Magnitude 0"
+    "id": "WF1033826",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033826&episodeid=4&eventtype=WF",
+    "title": "Forest fires in Burkina Faso (Green alert)",
+    "date": "2026-11-12",
+    "detail": "Green impact for forestfire in 10000 ha"
    }
   ],
-  "first_seen": "2026-11-12",
-  "updated": "2026-11-12",
+  "first_seen": "2026-11-14",
+  "updated": "2026-11-14",
   "score": 0.35,
   "confidence": "medium",
-  "title": "Flood \u00b7 Myanmar (2026-11-10)",
-  "task": "flood",
+  "title": "Wildfire \u00b7 Burkina Faso (2026-11-12)",
+  "task": "wildfire",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      97.86496,
-      21.37654
+      -0.27959,
+      12.72197
      ],
      [
-      98.15464,
-      21.37654
+      -0.14141,
+      12.72197
      ],
      [
-      98.15464,
-      21.64786
+      -0.14141,
+      12.85763
      ],
      [
-      97.86496,
-      21.64786
+      -0.27959,
+      12.85763
      ],
      [
-      97.86496,
-      21.37654
+      -0.27959,
+      12.72197
      ]
     ]
    ]
   },
-  "aoi_km2": 901.187,
-  "before": "2026-10-06/2026-11-05",
-  "after": "2026-11-10/2026-11-14",
+  "aoi_km2": 225.494,
+  "before": "2026-10-03/2026-11-10",
+  "after": "2026-11-14/2026-11-14",
   "scenes": {
-   "s1_before": 8,
+   "s1_before": 2,
    "s1_after": 0,
-   "s2_before": 24,
+   "s2_before": 20,
    "s2_after": 0
   },
   "sensors": [
@@ -35344,6 +35550,81 @@
    "s1_before": 8,
    "s1_after": 0,
    "s2_before": 30,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261114--41.29_174.78",
+  "hazard": "flood",
+  "lon": 174.7772114,
+  "lat": -41.2887953,
+  "bbox": [
+   174.6172114,
+   -41.4487953,
+   174.9372114,
+   -41.1287953
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-14",
+  "event_end": "2026-11-14",
+  "place": "Wellington, Wellington City",
+  "country": "New Zealand",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://newswire.co.nz/2026/11/wellington-moa-point-sewage-plant-restarts-after-february-flood/",
+    "title": "Wellington Moa Point sewage plant restarts nine months after the February flood , but full capacity is months away",
+    "outlet": "newswire.co.nz",
+    "date": "2026-11-14",
+    "quote": "Wellington\u2019s Moa Point wastewater treatment plant began treating sewage again on Saturday 14 November, more than nine months after a flood on the night of 4 February knocked it out and sent the city\u2019s raw sewage into the sea off the south coast.",
+    "detail": "raw sewage into the sea off the south coast"
+   }
+  ],
+  "first_seen": "2026-11-14",
+  "updated": "2026-11-14",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Wellington, Wellington City, New Zealand (2026-11-14)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      174.61721,
+      -41.42445
+     ],
+     [
+      174.93721,
+      -41.42445
+     ],
+     [
+      174.93721,
+      -41.15314
+     ],
+     [
+      174.61721,
+      -41.15314
+     ],
+     [
+      174.61721,
+      -41.42445
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 807.729,
+  "before": "2026-10-10/2026-11-09",
+  "after": "2026-11-14/2026-11-14",
+  "scenes": {
+   "s1_before": 9,
+   "s1_after": 0,
+   "s2_before": 19,
    "s2_after": 0
   },
   "sensors": [
