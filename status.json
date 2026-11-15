@@ -1,9 +1,9 @@
 {
- "started": "2026-11-15T06:42:11+00:00",
+ "started": "2026-11-15T18:56:02+00:00",
  "sources": {
   "gdacs": {
    "ok": true,
-   "events": 53
+   "events": 61
   },
   "cems": {
    "ok": true,
@@ -15,7 +15,7 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 8
+   "articles": 1
   },
   "rss:wildfiretoday.com": {
    "ok": true,
@@ -27,22 +27,22 @@
   },
   "rss:news.mongabay.com": {
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  },
  "news": {
-  "read": 10,
+  "read": 2,
   "per_hazard": {
-   "flood": 6,
-   "wildfire": 3,
-   "vegetation": 1
+   "flood": 1,
+   "wildfire": 1,
+   "vegetation": 0
   },
   "events": 1,
   "model": "qwen3:8b"
  },
- "finished": "2026-11-15T07:09:41+00:00",
- "duration_s": 1650,
- "cases": 537,
- "new": 1,
+ "finished": "2026-11-15T19:01:21+00:00",
+ "duration_s": 319,
+ "cases": 543,
+ "new": 6,
  "ok": true
 }
