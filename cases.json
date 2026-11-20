@@ -1191,6 +1191,79 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261113--3.56_38.80",
+  "hazard": "flood",
+  "lon": 38.8035,
+  "lat": -3.5593,
+  "bbox": [
+   38.4058,
+   -4.1417,
+   39.2199,
+   -2.9763
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-13",
+  "event_end": "2026-11-18",
+  "place": "",
+  "country": "Kenya",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "FL1104288",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104288&episodeid=2&eventtype=FL",
+    "title": "Flood in Kenya (Green alert)",
+    "date": "2026-11-13",
+    "detail": "Magnitude 0"
+   }
+  ],
+  "first_seen": "2026-11-20",
+  "updated": "2026-11-20",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Flood \u00b7 Kenya (2026-11-13)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      38.66849,
+      -3.69496
+     ],
+     [
+      38.93851,
+      -3.69496
+     ],
+     [
+      38.93851,
+      -3.42364
+     ],
+     [
+      38.66849,
+      -3.42364
+     ],
+     [
+      38.66849,
+      -3.69496
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 899.384,
+  "before": "2026-10-09/2026-11-08",
+  "after": "2026-11-13/2026-11-20",
+  "scenes": {
+   "s1_before": 4,
+   "s1_after": 0,
+   "s2_before": 11,
+   "s2_after": 5
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261112-12.79_-0.21",
   "hazard": "wildfire",
   "lon": -0.2105,
@@ -1765,10 +1838,18 @@
     "title": "Forest fires in South Sudan (Green alert)",
     "date": "2026-11-12",
     "detail": "Green impact for forestfire in 10017 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033971",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033971&episodeid=1&eventtype=WF",
+    "title": "Forest fires in South Sudan (Green alert)",
+    "date": "2026-11-06",
+    "detail": "Green impact for forestfire in 11972 ha"
    }
   ],
   "first_seen": "2026-11-19",
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 South Sudan (2026-11-12)",
@@ -1802,7 +1883,7 @@
   },
   "aoi_km2": 224.919,
   "before": "2026-10-03/2026-11-10",
-  "after": "2026-11-14/2026-11-19",
+  "after": "2026-11-14/2026-11-20",
   "scenes": {
    "s1_before": 5,
    "s1_after": 1,
@@ -8836,7 +8917,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-10-30",
-  "event_end": "2026-11-18",
+  "event_end": "2026-11-19",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -22798,152 +22879,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261005-17.11_99.00",
-  "hazard": "flood",
-  "lon": 98.9954,
-  "lat": 17.1054,
-  "bbox": [
-   97.7422,
-   15.18,
-   99.467,
-   17.8679
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-07",
-  "place": "",
-  "country": "Thailand",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104169",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104169&episodeid=1&eventtype=FL",
-    "title": "Flood in Thailand (Green alert)",
-    "date": "2026-10-05",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Thailand (2026-10-05)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      98.85442,
-      16.96974
-     ],
-     [
-      99.13638,
-      16.96974
-     ],
-     [
-      99.13638,
-      17.24106
-     ],
-     [
-      98.85442,
-      17.24106
-     ],
-     [
-      98.85442,
-      16.96974
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.33,
-  "before": "2026-08-31/2026-09-30",
-  "after": "2026-10-05/2026-10-08",
-  "scenes": {
-   "s1_before": 11,
-   "s1_after": 0,
-   "s2_before": 5,
-   "s2_after": 4
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261005-17.67_-100.00",
-  "hazard": "flood",
-  "lon": -100.0,
-  "lat": 17.6667,
-  "bbox": [
-   -102.1844,
-   16.3162,
-   -98.0073,
-   18.8878
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-07",
-  "place": "",
-  "country": "Mexico",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104191",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104191&episodeid=1&eventtype=FL",
-    "title": "Flood in Mexico (Green alert)",
-    "date": "2026-10-05",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Mexico (2026-10-05)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -100.14142,
-      17.53104
-     ],
-     [
-      -99.85858,
-      17.53104
-     ],
-     [
-      -99.85858,
-      17.80236
-     ],
-     [
-      -100.14142,
-      17.80236
-     ],
-     [
-      -100.14142,
-      17.53104
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.692,
-  "before": "2026-08-31/2026-09-30",
-  "after": "2026-10-05/2026-10-09",
-  "scenes": {
-   "s1_before": 16,
-   "s1_after": 1,
-   "s2_before": 7,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20261005--22.28_-42.42",
   "hazard": "flood",
   "lon": -42.4194,
@@ -24366,225 +24301,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261002-15.49_-88.01",
-  "hazard": "flood",
-  "lon": -88.0078,
-  "lat": 15.4936,
-  "bbox": [
-   -88.0552,
-   15.4178,
-   -87.9178,
-   15.5693
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Honduras",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104209",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104209&episodeid=1&eventtype=FL",
-    "title": "Flood in Honduras (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Honduras (2026-10-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -88.0552,
-      15.4178
-     ],
-     [
-      -87.9178,
-      15.4178
-     ],
-     [
-      -87.9178,
-      15.5693
-     ],
-     [
-      -88.0552,
-      15.5693
-     ],
-     [
-      -88.0552,
-      15.4178
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 247.023,
-  "before": "2026-08-28/2026-09-27",
-  "after": "2026-10-02/2026-10-05",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 1,
-   "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261002-40.40_-7.54",
-  "hazard": "flood",
-  "lon": -7.5409,
-  "lat": 40.4006,
-  "bbox": [
-   -7.6129,
-   40.3113,
-   -7.4189,
-   40.4616
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Portugal",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104212",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104212&episodeid=1&eventtype=FL",
-    "title": "Flood in Portugal (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Portugal (2026-10-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -7.6129,
-      40.3113
-     ],
-     [
-      -7.4189,
-      40.3113
-     ],
-     [
-      -7.4189,
-      40.4616
-     ],
-     [
-      -7.6129,
-      40.4616
-     ],
-     [
-      -7.6129,
-      40.3113
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 274.809,
-  "before": "2026-08-28/2026-09-27",
-  "after": "2026-10-02/2026-10-08",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 0,
-   "s2_before": 8,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261002-13.40_-85.91",
-  "hazard": "flood",
-  "lon": -85.9139,
-  "lat": 13.3994,
-  "bbox": [
-   -86.0464,
-   12.9628,
-   -85.5221,
-   13.5258
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-02",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Nicaragua",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104210",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104210&episodeid=1&eventtype=FL",
-    "title": "Flood in Nicaragua (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Nicaragua (2026-10-02)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -86.05242,
-      13.26374
-     ],
-     [
-      -85.77538,
-      13.26374
-     ],
-     [
-      -85.77538,
-      13.53506
-     ],
-     [
-      -86.05242,
-      13.53506
-     ],
-     [
-      -86.05242,
-      13.26374
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.279,
-  "before": "2026-08-28/2026-09-27",
-  "after": "2026-10-02/2026-10-09",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 2,
-   "s2_before": 12,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20261002-1.90_-55.77",
   "hazard": "wildfire",
   "lon": -55.7733,
@@ -25668,74 +25384,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20260929--17.16_123.24",
-  "hazard": "wildfire",
-  "lon": 123.2374,
-  "lat": -17.1552,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-29",
-  "event_end": "2026-10-09",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032544",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032544&episodeid=5&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-09-29",
-    "detail": "Green impact for forestfire in 10879 ha"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-09-29)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      123.16689,
-      -17.22303
-     ],
-     [
-      123.30791,
-      -17.22303
-     ],
-     [
-      123.30791,
-      -17.08737
-     ],
-     [
-      123.16689,
-      -17.08737
-     ],
-     [
-      123.16689,
-      -17.22303
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.091,
-  "before": "2026-08-20/2026-09-27",
-  "after": "2026-10-01/2026-10-05",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 0,
-   "s2_before": 34,
-   "s2_after": 4
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20260929-32.65_-16.92",
   "hazard": "flood",
   "lon": -16.9205,
@@ -25955,156 +25603,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20260929--15.18_134.30",
-  "hazard": "wildfire",
-  "lon": 134.296,
-  "lat": -15.1834,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-29",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032546",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032546&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-09-29",
-    "detail": "Green impact for forestfire in 11416 ha"
-   },
-   {
-    "kind": "gdacs",
-    "id": "WF1032556",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032556&episodeid=4&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-02",
-    "detail": "Green impact for forestfire in 10703 ha"
-   }
-  ],
-  "first_seen": "2026-10-04",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-09-29)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      134.22619,
-      -15.25123
-     ],
-     [
-      134.36581,
-      -15.25123
-     ],
-     [
-      134.36581,
-      -15.11557
-     ],
-     [
-      134.22619,
-      -15.11557
-     ],
-     [
-      134.22619,
-      -15.25123
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.064,
-  "before": "2026-08-20/2026-09-27",
-  "after": "2026-10-01/2026-10-08",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20260928-40.81_0.52",
-  "hazard": "flood",
-  "lon": 0.5209,
-  "lat": 40.811,
-  "bbox": [
-   0.2328,
-   40.5479,
-   2.139,
-   41.3803
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-28",
-  "event_end": "2026-10-05",
-  "place": "",
-  "country": "Spain",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104199",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104199&episodeid=10&eventtype=FL",
-    "title": "Flood in Spain (Green alert)",
-    "date": "2026-09-28",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Spain (2026-09-28)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      0.34287,
-      40.67534
-     ],
-     [
-      0.69893,
-      40.67534
-     ],
-     [
-      0.69893,
-      40.94666
-     ],
-     [
-      0.34287,
-      40.94666
-     ],
-     [
-      0.34287,
-      40.67534
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 905.436,
-  "before": "2026-08-24/2026-09-23",
-  "after": "2026-09-28/2026-10-05",
-  "scenes": {
-   "s1_before": 17,
-   "s1_after": 3,
-   "s2_before": 28,
-   "s2_after": 2
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20260928-41.62_-4.73",
   "hazard": "flood",
   "lon": -4.726,
@@ -26248,79 +25746,6 @@
   },
   "sensors": [
    "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20260927-14.76_-17.43",
-  "hazard": "flood",
-  "lon": -17.4315,
-  "lat": 14.7607,
-  "bbox": [
-   -17.5066,
-   14.725,
-   -17.4292,
-   14.7823
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-27",
-  "event_end": "2026-10-06",
-  "place": "",
-  "country": "Senegal",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104203",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104203&episodeid=2&eventtype=FL",
-    "title": "Flood in Senegal (Green alert)",
-    "date": "2026-09-27",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Senegal (2026-09-27)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -17.5066,
-      14.725
-     ],
-     [
-      -17.4292,
-      14.725
-     ],
-     [
-      -17.4292,
-      14.7823
-     ],
-     [
-      -17.5066,
-      14.7823
-     ],
-     [
-      -17.5066,
-      14.725
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 52.887,
-  "before": "2026-08-23/2026-09-22",
-  "after": "2026-09-27/2026-10-05",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 9,
-   "s2_after": 3
-  },
-  "sensors": [
    "s2"
   ],
   "status": "ready"
@@ -26541,148 +25966,6 @@
    "s1_after": 1,
    "s2_before": 7,
    "s2_after": 3
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20260926-1.37_-77.25",
-  "hazard": "flood",
-  "lon": -77.2532,
-  "lat": 1.3696,
-  "bbox": [
-   -77.2983,
-   1.3245,
-   -77.2082,
-   1.4146
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-26",
-  "event_end": "2026-10-05",
-  "place": "",
-  "country": "Colombia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104200",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104200&episodeid=2&eventtype=FL",
-    "title": "Flood in Colombia (Green alert)",
-    "date": "2026-09-26",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Colombia (2026-09-26)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -77.2983,
-      1.3245
-     ],
-     [
-      -77.2082,
-      1.3245
-     ],
-     [
-      -77.2082,
-      1.4146
-     ],
-     [
-      -77.2983,
-      1.4146
-     ],
-     [
-      -77.2983,
-      1.3245
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 99.973,
-  "before": "2026-08-22/2026-09-21",
-  "after": "2026-09-26/2026-10-05",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 2,
-   "s2_before": 1,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20260926--9.04_141.97",
-  "hazard": "wildfire",
-  "lon": 141.9671,
-  "lat": -9.0375,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-26",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Papua New Guinea",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032548",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032548&episodeid=5&eventtype=WF",
-    "title": "Forest fires in Papua New Guinea (Green alert)",
-    "date": "2026-09-26",
-    "detail": "Green impact for forestfire in 10587 ha"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Papua New Guinea (2026-09-26)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      141.89888,
-      -9.10533
-     ],
-     [
-      142.03532,
-      -9.10533
-     ],
-     [
-      142.03532,
-      -8.96967
-     ],
-     [
-      141.89888,
-      -8.96967
-     ],
-     [
-      141.89888,
-      -9.10533
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 224.963,
-  "before": "2026-08-17/2026-09-24",
-  "after": "2026-09-28/2026-10-05",
-  "scenes": {
-   "s1_before": 10,
-   "s1_after": 2,
-   "s2_before": 21,
-   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -27657,154 +26940,6 @@
   },
   "sensors": [
    "s1"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20260918-11.55_-9.36",
-  "hazard": "flood",
-  "lon": -9.3595,
-  "lat": 11.5496,
-  "bbox": [
-   -9.4046,
-   11.5045,
-   -9.3145,
-   11.5946
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-18",
-  "event_end": "2026-10-05",
-  "place": "",
-  "country": "Guinea",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104178",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104178&episodeid=5&eventtype=FL",
-    "title": "Flood in Guinea (Green alert)",
-    "date": "2026-09-18",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Guinea (2026-09-18)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -9.4046,
-      11.5045
-     ],
-     [
-      -9.3145,
-      11.5045
-     ],
-     [
-      -9.3145,
-      11.5946
-     ],
-     [
-      -9.4046,
-      11.5946
-     ],
-     [
-      -9.4046,
-      11.5045
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 97.88,
-  "before": "2026-08-14/2026-09-13",
-  "after": "2026-09-25/2026-10-05",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 1,
-   "s2_before": 3,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20260918-13.81_121.18",
-  "hazard": "flood",
-  "lon": 121.1763,
-  "lat": 13.8114,
-  "bbox": [
-   121.1312,
-   13.7664,
-   121.2213,
-   13.8565
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-18",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Philippines",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104176",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104176&episodeid=4&eventtype=FL",
-    "title": "Flood in Philippines (Green alert)",
-    "date": "2026-09-18",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Philippines (2026-09-18)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      121.1312,
-      13.7664
-     ],
-     [
-      121.2213,
-      13.7664
-     ],
-     [
-      121.2213,
-      13.8565
-     ],
-     [
-      121.1312,
-      13.8565
-     ],
-     [
-      121.1312,
-      13.7664
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 97.126,
-  "before": "2026-08-14/2026-09-13",
-  "after": "2026-09-24/2026-10-05",
-  "scenes": {
-   "s1_before": 7,
-   "s1_after": 1,
-   "s2_before": 5,
-   "s2_after": 5
-  },
-  "sensors": [
-   "s1",
-   "s2"
   ],
   "status": "ready"
  },
@@ -29440,6 +28575,228 @@
   },
   "sensors": [
    "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261119-18.38_-66.56",
+  "hazard": "flood",
+  "lon": -66.5602412,
+  "lat": 18.3755793,
+  "bbox": [
+   -66.5916303,
+   18.3372496,
+   -66.5306555,
+   18.4139994
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-19",
+  "event_end": "2026-11-20",
+  "place": "Florida, United States",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://ktok.iheart.com/content/2026-11-19-heavy-rains-cause-flooding-across-us-coasts/",
+    "title": "Heavy Rains Cause Flooding Across U . S . Coasts | NewsRadio 1000 KTOK",
+    "outlet": "ktok.iheart.com",
+    "date": "2026-11-19",
+    "quote": "Both coasts of the United States are experiencing severe flooding due to heavy rains.",
+    "detail": "closed schools and government offices, rescued at least two people, flash flood warnings in effect, St. Johns River surpassed previous record high"
+   }
+  ],
+  "first_seen": "2026-11-19",
+  "updated": "2026-11-19",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Florida, United States, United States (2026-11-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -66.59163,
+      18.33725
+     ],
+     [
+      -66.53066,
+      18.33725
+     ],
+     [
+      -66.53066,
+      18.414
+     ],
+     [
+      -66.59163,
+      18.414
+     ],
+     [
+      -66.59163,
+      18.33725
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 54.782,
+  "before": "2026-10-15/2026-11-14",
+  "after": "2026-11-19/2026-11-20",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 0,
+   "s2_before": 6,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261119-34.05_-118.24",
+  "hazard": "flood",
+  "lon": -118.2427676,
+  "lat": 34.0536923,
+  "bbox": [
+   -118.6681798,
+   33.659541,
+   -118.1552983,
+   34.337306
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-19",
+  "event_end": "2026-11-19",
+  "place": "Los Angeles, California",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://newsroomamerica.com/a/IiAAu4WW849kLBC5pvzyPU2a7Dz/los_angeles_lifted_its_flash_flood_warning_flood_watch_and_evacuation_warning_for_burn_scar_areas_on_november_19_as_crews_cleared_debris_and_reopened_roads_amid_el_ni_o_preparations.html",
+    "title": "Los Angeles Lifts Flash Flood Warning , Flood Watch and Evacuation Warning as Storm Impacts Ease",
+    "outlet": "newsroomamerica.com",
+    "date": "2026-11-20",
+    "quote": "City crews have been working to address localized flooding, power outages and other rain-related impacts across the city",
+    "detail": "localized flooding, power outages, and other rain-related impacts"
+   }
+  ],
+  "first_seen": "2026-11-20",
+  "updated": "2026-11-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Los Angeles, California, United States (2026-11-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -118.4054,
+      33.91804
+     ],
+     [
+      -118.08013,
+      33.91804
+     ],
+     [
+      -118.08013,
+      34.18935
+     ],
+     [
+      -118.4054,
+      34.18935
+     ],
+     [
+      -118.4054,
+      33.91804
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.343,
+  "before": "2026-10-15/2026-11-14",
+  "after": "2026-11-19/2026-11-20",
+  "scenes": {
+   "s1_before": 21,
+   "s1_after": 3,
+   "s2_before": 13,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261119-39.59_-105.25",
+  "hazard": "flood",
+  "lon": -105.2452684,
+  "lat": 39.594988,
+  "bbox": [
+   -105.2652684,
+   39.574988,
+   -105.2252684,
+   39.614988
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-19",
+  "event_end": "2026-11-19",
+  "place": "Lone Pine Estates, Riviera Beach",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wptv.com/news/region-c-palm-beach-county/riviera-beach/lone-pine-estates-residents-brace-for-more-rain-while-still-recovering-from-flooding",
+    "title": "Lone Pine Estates residents brace for more rain , still recovering from flooding",
+    "outlet": "wptv.com",
+    "date": "2026-11-19",
+    "quote": "Weeks after floodwaters devastated Lone Pine Estates",
+    "detail": "Residents are preparing for more rain, using sandbags to protect their homes, and facing financial and emotional challenges due to previous flooding. Some residents question the city's response and drainage solutions, and many lack flood insurance as the area is not considered a flood zone."
+   }
+  ],
+  "first_seen": "2026-11-20",
+  "updated": "2026-11-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Lone Pine Estates, Riviera Beach, United States (2026-11-19)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -105.27441,
+      39.57238
+     ],
+     [
+      -105.21612,
+      39.57238
+     ],
+     [
+      -105.21612,
+      39.6176
+     ],
+     [
+      -105.27441,
+      39.6176
+     ],
+     [
+      -105.27441,
+      39.57238
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 25.118,
+  "before": "2026-10-15/2026-11-14",
+  "after": "2026-11-19/2026-11-20",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 1,
+   "s2_before": 13,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
   ],
   "status": "ready"
  },
@@ -33672,7 +33029,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-10-06/2026-11-13",
-  "after": "2026-11-17/2026-11-19",
+  "after": "2026-11-17/2026-11-20",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -33749,86 +33106,11 @@
   },
   "aoi_km2": 225.287,
   "before": "2026-10-06/2026-11-13",
-  "after": "2026-11-17/2026-11-19",
+  "after": "2026-11-17/2026-11-20",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 10,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "fl-20261119-18.38_-66.56",
-  "hazard": "flood",
-  "lon": -66.5602412,
-  "lat": 18.3755793,
-  "bbox": [
-   -66.5916303,
-   18.3372496,
-   -66.5306555,
-   18.4139994
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-19",
-  "event_end": "2026-11-20",
-  "place": "Florida, United States",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://ktok.iheart.com/content/2026-11-19-heavy-rains-cause-flooding-across-us-coasts/",
-    "title": "Heavy Rains Cause Flooding Across U . S . Coasts | NewsRadio 1000 KTOK",
-    "outlet": "ktok.iheart.com",
-    "date": "2026-11-19",
-    "quote": "Both coasts of the United States are experiencing severe flooding due to heavy rains.",
-    "detail": "closed schools and government offices, rescued at least two people, flash flood warnings in effect, St. Johns River surpassed previous record high"
-   }
-  ],
-  "first_seen": "2026-11-19",
-  "updated": "2026-11-19",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Florida, United States, United States (2026-11-19)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -66.59163,
-      18.33725
-     ],
-     [
-      -66.53066,
-      18.33725
-     ],
-     [
-      -66.53066,
-      18.414
-     ],
-     [
-      -66.59163,
-      18.414
-     ],
-     [
-      -66.59163,
-      18.33725
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 54.782,
-  "before": "2026-10-15/2026-11-14",
-  "after": "2026-11-19/2026-11-19",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 0,
-   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -33899,7 +33181,7 @@
   },
   "aoi_km2": 25.018,
   "before": "2026-10-15/2026-11-14",
-  "after": "2026-11-19/2026-11-19",
+  "after": "2026-11-19/2026-11-20",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -33925,7 +33207,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-18",
+  "event_end": "2026-11-20",
   "place": "San Francisco, Bay Area",
   "country": "US",
   "sources": [
@@ -33937,10 +33219,19 @@
     "date": "2026-11-18",
     "quote": "Widespread flooding seen across San Francisco",
     "detail": "Roadways flooded, sidewalks and bike lanes underwater, traffic backups, downed trees, power outages, flood advisories issued, emergency crews working to clear storm drains, ferry service disrupted, flood barriers overwhelmed, and floodwaters reaching postal vehicles."
+   },
+   {
+    "kind": "news",
+    "url": "https://abc7news.com/live-updates/live-bay-area-storm-updates-tornado-warning-issued-santa-cruz-county-waterspouts-spotted-san-francisco/20045464/entry/20057371/",
+    "title": "Residents blame SF Muni buses for worsening flooding during storm",
+    "outlet": "abc7news.com",
+    "date": "2026-11-20",
+    "quote": "Record-breaking rainfall left much of San Francisco underwater on Wednesday as a Level 3 storm dumped several inches of rain across the region.",
+    "detail": "Residents blame SF Muni buses for worsening flooding during storm"
    }
   ],
   "first_seen": "2026-11-18",
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "score": 0.15,
   "confidence": "low",
   "title": "Flood \u00b7 San Francisco, Bay Area, US (2026-11-18)",
@@ -33974,7 +33265,7 @@
   },
   "aoi_km2": 903.848,
   "before": "2026-10-14/2026-11-13",
-  "after": "2026-11-18/2026-11-19",
+  "after": "2026-11-18/2026-11-20",
   "scenes": {
    "s1_before": 14,
    "s1_after": 0,
@@ -34068,7 +33359,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-19"
+  "after": "2026-11-08/2026-11-20"
  },
  {
   "id": "wi-20261118--15.52_142.81",
@@ -34124,7 +33415,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 225.247,
+  "before": "2026-10-09/2026-11-16",
+  "after": "2026-11-20/2026-11-20"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -34215,7 +33509,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-19"
+  "after": "2026-11-10/2026-11-20"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -34274,7 +33568,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-19"
+  "after": "2026-11-10/2026-11-20"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -34357,7 +33651,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-09/2026-11-19"
+  "after": "2026-11-09/2026-11-20"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -34424,7 +33718,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-09/2026-11-19"
+  "after": "2026-11-09/2026-11-20"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -34499,7 +33793,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-19"
+  "after": "2026-11-06/2026-11-20"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -34558,7 +33852,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-19"
+  "after": "2026-10-29/2026-11-20"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -34641,7 +33935,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-19"
+  "after": "2026-11-07/2026-11-20"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -34708,7 +34002,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-19"
+  "after": "2026-10-29/2026-11-20"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -34767,7 +34061,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-19"
+  "after": "2026-10-23/2026-11-20"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -34826,7 +34120,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-19"
+  "after": "2026-10-30/2026-11-20"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -34893,7 +34187,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-19"
+  "after": "2026-10-31/2026-11-20"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -34952,7 +34246,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-19"
+  "after": "2026-10-23/2026-11-20"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -35027,7 +34321,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-11-08/2026-11-19"
+  "after": "2026-11-08/2026-11-20"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -35086,7 +34380,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-19"
+  "after": "2026-10-24/2026-11-20"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -35161,7 +34455,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-19"
+  "after": "2026-10-27/2026-11-20"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -35244,7 +34538,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-11-19"
+  "after": "2026-10-15/2026-11-20"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -35319,7 +34613,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-11-19"
+  "after": "2026-10-13/2026-11-20"
  },
  {
   "id": "wi-20261108-47.66_-117.42",
@@ -35393,7 +34687,7 @@
   },
   "aoi_km2": 430.751,
   "before": "2026-09-29/2026-11-06",
-  "after": "2026-11-11/2026-11-19"
+  "after": "2026-11-11/2026-11-20"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -35476,7 +34770,131 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-08/2026-11-19"
+  "after": "2026-11-08/2026-11-20"
+ },
+ {
+  "id": "wi-20261120-36.17_-82.88",
+  "hazard": "wildfire",
+  "lon": -82.8766356,
+  "lat": 36.1698443,
+  "bbox": [
+   -83.173309,
+   35.921814,
+   -82.577126,
+   36.419056
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-20",
+  "event_end": "2026-11-20",
+  "place": "Greene County, Tennessee",
+  "country": "US",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.electric949.com/national-guard-dispatched-to-greene-county-to-help-in-wildfire-fight/",
+    "title": "National Guard dispatched to Greene County to help in wildfire fight",
+    "outlet": "electric949.com",
+    "date": "2026-11-20",
+    "quote": "forest fire in the Caney Creek Lane area grew to 500 acres in less than 24 hours",
+    "detail": "wildfire containment efforts"
+   }
+  ],
+  "first_seen": "2026-11-20",
+  "updated": "2026-11-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Greene County, Tennessee, US (2026-11-20)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -83.04355,
+      36.03419
+     ],
+     [
+      -82.70972,
+      36.03419
+     ],
+     [
+      -82.70972,
+      36.3055
+     ],
+     [
+      -83.04355,
+      36.3055
+     ],
+     [
+      -83.04355,
+      36.03419
+     ]
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wi-20261120--35.05_150.80",
+  "hazard": "wildfire",
+  "lon": 150.8012,
+  "lat": -35.0485,
+  "bbox": [
+   150.767052,
+   -35.0946766,
+   150.8499138,
+   -34.9907404
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-20",
+  "event_end": "2026-11-20",
+  "place": "Beecroft Peninsula, Shoalhaven",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.ulladullatimes.com.au/story/9395109/beecroft-peninsula-bushfire-rfs-faces-unexploded-ordnance/",
+    "title": "Beecroft Peninsula bushfire : RFS faces unexploded ordnance | Milton Ulladulla Times",
+    "outlet": "ulladullatimes.com.au",
+    "date": "2026-11-20",
+    "quote": "The fire on Defence land has burnt about 350ha, but crews have been able to hold the fire east of Lighthouse Road and back towards Echo Hill, although conditions remain difficult.",
+    "detail": "The fire has burnt about 350ha of Defence land on the Beecroft Peninsula. The fire remains at advice level and there is no immediate threat to life or property."
+   }
+  ],
+  "first_seen": "2026-11-20",
+  "updated": "2026-11-20",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Beecroft Peninsula, Shoalhaven, Australia (2026-11-20)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      150.76705,
+      -35.09468
+     ],
+     [
+      150.84991,
+      -35.09468
+     ],
+     [
+      150.84991,
+      -34.99074
+     ],
+     [
+      150.76705,
+      -34.99074
+     ],
+     [
+      150.76705,
+      -35.09468
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261119-36.21_-112.06",
@@ -35603,7 +35021,7 @@
   },
   "aoi_km2": 25.116,
   "before": "2026-10-02/2026-11-09",
-  "after": "2026-11-12/2026-11-19"
+  "after": "2026-11-12/2026-11-20"
  },
  {
   "id": "wi-20261110-50.54_-116.01",
@@ -35668,7 +35086,7 @@
   },
   "aoi_km2": 25.184,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-19"
+  "after": "2026-11-11/2026-11-20"
  },
  {
   "id": "wi-20261110-38.90_-77.04",
@@ -35733,7 +35151,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-19"
+  "after": "2026-11-11/2026-11-20"
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -35798,7 +35216,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-08/2026-11-19"
+  "after": "2026-11-08/2026-11-20"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -35863,7 +35281,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-19"
+  "after": "2026-11-04/2026-11-20"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -35928,7 +35346,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-19"
+  "after": "2026-11-04/2026-11-20"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -35993,7 +35411,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-19"
+  "after": "2026-10-31/2026-11-20"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -36058,7 +35476,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-19"
+  "after": "2026-10-28/2026-11-20"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -36123,7 +35541,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-19"
+  "after": "2026-10-26/2026-11-20"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -36188,7 +35606,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-19"
+  "after": "2026-10-24/2026-11-20"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -36253,7 +35671,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-19"
+  "after": "2026-10-24/2026-11-20"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -36318,7 +35736,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-19"
+  "after": "2026-10-23/2026-11-20"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -36383,7 +35801,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-19"
+  "after": "2026-10-22/2026-11-20"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -36448,7 +35866,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-19"
+  "after": "2026-10-22/2026-11-20"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -36513,7 +35931,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-19"
+  "after": "2026-10-20/2026-11-20"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -36578,7 +35996,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-19"
+  "after": "2026-10-20/2026-11-20"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -36643,7 +36061,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-19"
+  "after": "2026-10-20/2026-11-20"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -36708,7 +36126,7 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-11-19"
+  "after": "2026-10-16/2026-11-20"
  },
  {
   "id": "wi-20261006--11.74_-67.14",
@@ -36774,70 +36192,5 @@
   "aoi_km2": 25.022,
   "before": "2026-08-27/2026-10-04",
   "after": "2026-10-07/2026-11-16"
- },
- {
-  "id": "wi-20261005-35.20_-111.65",
-  "hazard": "wildfire",
-  "lon": -111.651822,
-  "lat": 35.1987522,
-  "bbox": [
-   -111.719044,
-   35.1223963,
-   -111.50678,
-   35.240102
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-05",
-  "place": "Flagstaff, Arizona, Arizona",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://wildfiretoday.com/advancing-community-wildfire-adaptation/",
-    "title": "Advancing community wildfire adaptation",
-    "outlet": "wildfiretoday.com",
-    "date": "2026-10-05",
-    "quote": "Residents gather in Flagstaff, Arizona, for a presentation on modeled post-fire flood risk maps after the 2019 Museum Fire.",
-    "detail": "post-fire flood risk mapping"
-   }
-  ],
-  "first_seen": "2026-10-05",
-  "updated": "2026-10-05",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Flagstaff, Arizona, Arizona, United States (2026-10-05)",
-  "task": "wildfire",
-  "status": "too recent",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -111.71904,
-      35.1224
-     ],
-     [
-      -111.50678,
-      35.1224
-     ],
-     [
-      -111.50678,
-      35.2401
-     ],
-     [
-      -111.71904,
-      35.2401
-     ],
-     [
-      -111.71904,
-      35.1224
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 252.283,
-  "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-06/2026-11-15"
  }
 ]
