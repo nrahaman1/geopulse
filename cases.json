@@ -617,7 +617,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-17",
-  "event_end": "2026-11-20",
+  "event_end": "2026-11-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -685,7 +685,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-16",
-  "event_end": "2026-11-20",
+  "event_end": "2026-11-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1136,10 +1136,18 @@
     "title": "Forest fires in Australia (Green alert)",
     "date": "2026-11-12",
     "detail": "Green impact for forestfire in 11190 ha"
+   },
+   {
+    "kind": "gdacs",
+    "id": "WF1033937",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033937&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Australia (Green alert)",
+    "date": "2026-11-15",
+    "detail": "Green impact for forestfire in 19363 ha"
    }
   ],
   "first_seen": "2026-11-17",
-  "updated": "2026-11-17",
+  "updated": "2026-11-21",
   "score": 0.35,
   "confidence": "medium",
   "title": "Wildfire \u00b7 Australia (2026-11-15)",
@@ -1173,7 +1181,7 @@
   },
   "aoi_km2": 225.287,
   "before": "2026-10-06/2026-11-13",
-  "after": "2026-11-17/2026-11-20",
+  "after": "2026-11-17/2026-11-21",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -1397,7 +1405,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-14",
-  "event_end": "2026-11-20",
+  "event_end": "2026-11-21",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -6674,7 +6682,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-05",
-  "event_end": "2026-11-19",
+  "event_end": "2026-11-20",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -24527,79 +24535,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261003-14.50_-90.56",
-  "hazard": "flood",
-  "lon": -90.556,
-  "lat": 14.4977,
-  "bbox": [
-   -90.5799,
-   14.4708,
-   -90.5289,
-   14.543
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-03",
-  "event_end": "2026-10-05",
-  "place": "",
-  "country": "Guatemala",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104213",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104213&episodeid=1&eventtype=FL",
-    "title": "Flood in Guatemala (Green alert)",
-    "date": "2026-10-03",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Guatemala (2026-10-03)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -90.5799,
-      14.4708
-     ],
-     [
-      -90.5289,
-      14.4708
-     ],
-     [
-      -90.5289,
-      14.543
-     ],
-     [
-      -90.5799,
-      14.543
-     ],
-     [
-      -90.5799,
-      14.4708
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 43.957,
-  "before": "2026-08-29/2026-09-28",
-  "after": "2026-10-03/2026-10-09",
-  "scenes": {
-   "s1_before": 8,
-   "s1_after": 1,
-   "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20261003--14.73_143.85",
   "hazard": "wildfire",
   "lon": 143.8458,
@@ -25896,80 +25831,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20260929-32.65_-16.92",
-  "hazard": "flood",
-  "lon": -16.9205,
-  "lat": 32.6519,
-  "bbox": [
-   -16.9655,
-   32.6068,
-   -16.8754,
-   32.6969
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-29",
-  "event_end": "2026-10-04",
-  "place": "",
-  "country": "Portugal",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104212",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104212&episodeid=2&eventtype=FL",
-    "title": "Flood in Portugal (Green alert)",
-    "date": "2026-09-29",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Portugal (2026-09-29)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -16.9655,
-      32.6068
-     ],
-     [
-      -16.8754,
-      32.6068
-     ],
-     [
-      -16.8754,
-      32.6969
-     ],
-     [
-      -16.9655,
-      32.6969
-     ],
-     [
-      -16.9655,
-      32.6068
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 84.462,
-  "before": "2026-08-25/2026-09-24",
-  "after": "2026-09-29/2026-10-06",
-  "scenes": {
-   "s1_before": 15,
-   "s1_after": 3,
-   "s2_before": 4,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20260929--14.40_133.58",
   "hazard": "wildfire",
   "lon": 133.5758,
@@ -26836,75 +26697,6 @@
    "s1_before": 7,
    "s1_after": 3,
    "s2_before": 1,
-   "s2_after": 3
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20260925--6.78_140.24",
-  "hazard": "wildfire",
-  "lon": 140.2405,
-  "lat": -6.7767,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-25",
-  "event_end": "2026-10-09",
-  "place": "",
-  "country": "Indonesia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032502",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032502&episodeid=15&eventtype=WF",
-    "title": "Forest fires in Indonesia (Green alert)",
-    "date": "2026-09-25",
-    "detail": "Green impact for forestfire in 14991 ha"
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Indonesia (2026-09-25)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      140.17265,
-      -6.84453
-     ],
-     [
-      140.30835,
-      -6.84453
-     ],
-     [
-      140.30835,
-      -6.70887
-     ],
-     [
-      140.17265,
-      -6.70887
-     ],
-     [
-      140.17265,
-      -6.84453
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 224.917,
-  "before": "2026-08-16/2026-09-23",
-  "after": "2026-09-27/2026-10-06",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 1,
-   "s2_before": 12,
    "s2_after": 3
   },
   "sensors": [
@@ -33187,81 +32979,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20260916-13.75_100.49",
-  "hazard": "flood",
-  "lon": 100.4935089,
-  "lat": 13.7524938,
-  "bbox": [
-   100.3278772,
-   13.2191019,
-   100.9386039,
-   13.9551693
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-09-16",
-  "event_end": "2026-10-06",
-  "place": "Bangkok, Thailand",
-  "country": "Thailand",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://wtvbam.com/2026/10/06/thailand-asks-firms-to-cut-egg-exports-after-flood-losses/",
-    "title": "Thailand asks firms to cut egg exports after flood losses",
-    "outlet": "wtvbam.com",
-    "date": "2026-10-06",
-    "quote": "Since September 16, there has been flooding in 51 provinces, including Bangkok, with 31 people killed, according to the Interior Ministry.",
-    "detail": "Thailand has asked companies to cut egg exports by 30% to 50% until December 2026, with supplies hit by heavy flooding, which killed a significant number of hens"
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Flood \u00b7 Bangkok, Thailand, Thailand (2026-09-16)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      100.35479,
-      13.61684
-     ],
-     [
-      100.63223,
-      13.61684
-     ],
-     [
-      100.63223,
-      13.88815
-     ],
-     [
-      100.35479,
-      13.88815
-     ],
-     [
-      100.35479,
-      13.61684
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.512,
-  "before": "2026-08-12/2026-09-11",
-  "after": "2026-09-26/2026-10-06",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 2,
-   "s2_before": 2,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20260901-13.75_100.49",
   "hazard": "flood",
   "lon": 100.4935089,
@@ -33473,7 +33190,7 @@
   },
   "aoi_km2": 25.018,
   "before": "2026-10-15/2026-11-14",
-  "after": "2026-11-19/2026-11-20",
+  "after": "2026-11-19/2026-11-21",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -33557,7 +33274,7 @@
   },
   "aoi_km2": 903.848,
   "before": "2026-10-14/2026-11-13",
-  "after": "2026-11-18/2026-11-20",
+  "after": "2026-11-18/2026-11-21",
   "scenes": {
    "s1_before": 14,
    "s1_after": 0,
@@ -33651,7 +33368,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-20"
+  "after": "2026-11-08/2026-11-21"
  },
  {
   "id": "wi-20261118--15.52_142.81",
@@ -33710,7 +33427,7 @@
   },
   "aoi_km2": 225.247,
   "before": "2026-10-09/2026-11-16",
-  "after": "2026-11-20/2026-11-20"
+  "after": "2026-11-20/2026-11-21"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -33801,7 +33518,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-20"
+  "after": "2026-11-10/2026-11-21"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -33860,7 +33577,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-20"
+  "after": "2026-11-10/2026-11-21"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -33943,7 +33660,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-09/2026-11-20"
+  "after": "2026-11-09/2026-11-21"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -34010,7 +33727,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-09/2026-11-20"
+  "after": "2026-11-09/2026-11-21"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -34085,7 +33802,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-20"
+  "after": "2026-11-06/2026-11-21"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -34144,7 +33861,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-20"
+  "after": "2026-10-29/2026-11-21"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -34227,7 +33944,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-20"
+  "after": "2026-11-07/2026-11-21"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -34294,7 +34011,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-20"
+  "after": "2026-10-29/2026-11-21"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -34353,7 +34070,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-20"
+  "after": "2026-10-23/2026-11-21"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -34412,7 +34129,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-20"
+  "after": "2026-10-30/2026-11-21"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -34479,7 +34196,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-20"
+  "after": "2026-10-31/2026-11-21"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -34538,7 +34255,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-20"
+  "after": "2026-10-23/2026-11-21"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -34613,7 +34330,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-11-08/2026-11-20"
+  "after": "2026-11-08/2026-11-21"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -34672,7 +34389,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-20"
+  "after": "2026-10-24/2026-11-21"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -34747,7 +34464,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-20"
+  "after": "2026-10-27/2026-11-21"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -34830,7 +34547,7 @@
   },
   "aoi_km2": 226.675,
   "before": "2026-08-31/2026-10-08",
-  "after": "2026-10-15/2026-11-20"
+  "after": "2026-10-15/2026-11-21"
  },
  {
   "id": "wi-20261008-46.99_119.23",
@@ -34905,7 +34622,7 @@
   },
   "aoi_km2": 226.609,
   "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-11-20"
+  "after": "2026-10-13/2026-11-21"
  },
  {
   "id": "wi-20261108-47.66_-117.42",
@@ -34979,7 +34696,7 @@
   },
   "aoi_km2": 430.751,
   "before": "2026-09-29/2026-11-06",
-  "after": "2026-11-11/2026-11-20"
+  "after": "2026-11-11/2026-11-21"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -35062,7 +34779,7 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-08/2026-11-20"
+  "after": "2026-11-08/2026-11-21"
  },
  {
   "id": "wi-20261120-36.17_-82.88",
@@ -35248,7 +34965,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 25.105,
+  "before": "2026-10-10/2026-11-17",
+  "after": "2026-11-21/2026-11-21"
  },
  {
   "id": "wi-20261111-38.85_-94.41",
@@ -35313,7 +35033,7 @@
   },
   "aoi_km2": 25.116,
   "before": "2026-10-02/2026-11-09",
-  "after": "2026-11-12/2026-11-20"
+  "after": "2026-11-12/2026-11-21"
  },
  {
   "id": "wi-20261110-50.54_-116.01",
@@ -35378,7 +35098,7 @@
   },
   "aoi_km2": 25.184,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-20"
+  "after": "2026-11-11/2026-11-21"
  },
  {
   "id": "wi-20261110-38.90_-77.04",
@@ -35443,7 +35163,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-20"
+  "after": "2026-11-11/2026-11-21"
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -35508,7 +35228,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-08/2026-11-20"
+  "after": "2026-11-08/2026-11-21"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -35573,7 +35293,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-20"
+  "after": "2026-11-04/2026-11-21"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -35638,7 +35358,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-20"
+  "after": "2026-11-04/2026-11-21"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -35703,7 +35423,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-20"
+  "after": "2026-10-31/2026-11-21"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -35768,7 +35488,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-20"
+  "after": "2026-10-28/2026-11-21"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -35833,7 +35553,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-20"
+  "after": "2026-10-26/2026-11-21"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -35898,7 +35618,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-20"
+  "after": "2026-10-24/2026-11-21"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -35963,7 +35683,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-20"
+  "after": "2026-10-24/2026-11-21"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -36028,7 +35748,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-20"
+  "after": "2026-10-23/2026-11-21"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -36093,7 +35813,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-20"
+  "after": "2026-10-22/2026-11-21"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -36158,7 +35878,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-20"
+  "after": "2026-10-22/2026-11-21"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -36223,7 +35943,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-20"
+  "after": "2026-10-20/2026-11-21"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -36288,7 +36008,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-20"
+  "after": "2026-10-20/2026-11-21"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -36353,7 +36073,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-20"
+  "after": "2026-10-20/2026-11-21"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
@@ -36418,71 +36138,6 @@
   },
   "aoi_km2": 25.135,
   "before": "2026-09-05/2026-10-13",
-  "after": "2026-10-16/2026-11-20"
- },
- {
-  "id": "wi-20261006--11.74_-67.14",
-  "hazard": "wildfire",
-  "lon": -67.1366534,
-  "lat": -11.743613,
-  "bbox": [
-   -67.1382745,
-   -11.745704,
-   -67.1346658,
-   -11.7424278
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-10-06",
-  "event_end": "2026-10-06",
-  "place": "Canada, Wildfire Resilience Consortium of Canada",
-  "country": "Canada",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://wildfiretoday.com/sorting-and-sharing-in-the-world-of-new-technology/",
-    "title": "Sorting and sharing in the world of new technology",
-    "outlet": "wildfiretoday.com",
-    "date": "2026-10-06",
-    "quote": "Wildfire agencies are regularly approached by companies spruiking the next best thing in innovation for wildfire prevention, preparedness, detection, response, recovery or fuels management.",
-    "detail": "The article discusses challenges in adopting wildfire technologies due to budget limitations, risk appetite, and the need for collaboration platforms to share insights and reduce duplication of effort."
-   }
-  ],
-  "first_seen": "2026-10-06",
-  "updated": "2026-10-06",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Canada, Wildfire Resilience Consortium of Canada, Canada (2026-10-06)",
-  "task": "wildfire",
-  "status": "too recent",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -67.15941,
-      -11.76668
-     ],
-     [
-      -67.11353,
-      -11.76668
-     ],
-     [
-      -67.11353,
-      -11.72146
-     ],
-     [
-      -67.15941,
-      -11.72146
-     ],
-     [
-      -67.15941,
-      -11.76668
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 25.022,
-  "before": "2026-08-27/2026-10-04",
-  "after": "2026-10-07/2026-11-16"
+  "after": "2026-10-16/2026-11-21"
  }
 ]
