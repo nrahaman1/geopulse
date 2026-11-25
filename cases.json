@@ -1075,6 +1075,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261120--17.83_36.64",
+  "hazard": "wildfire",
+  "lon": 36.6376,
+  "lat": -17.8349,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-20",
+  "event_end": "2026-11-25",
+  "place": "",
+  "country": "Mozambique",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1034073",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1034073&episodeid=2&eventtype=WF",
+    "title": "Forest fires in Mozambique (Green alert)",
+    "date": "2026-11-20",
+    "detail": "Green impact for forestfire in 13546 ha"
+   }
+  ],
+  "first_seen": "2026-11-25",
+  "updated": "2026-11-25",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Mozambique (2026-11-20)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      36.56683,
+      -17.90273
+     ],
+     [
+      36.70837,
+      -17.90273
+     ],
+     [
+      36.70837,
+      -17.76707
+     ],
+     [
+      36.56683,
+      -17.76707
+     ],
+     [
+      36.56683,
+      -17.90273
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.444,
+  "before": "2026-10-11/2026-11-18",
+  "after": "2026-11-22/2026-11-25",
+  "scenes": {
+   "s1_before": 11,
+   "s1_after": 2,
+   "s2_before": 18,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261118-8.18_25.14",
   "hazard": "wildfire",
   "lon": 25.1423,
@@ -1082,7 +1151,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "South Sudan, Central African Republic",
   "sources": [
@@ -1370,7 +1439,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-17",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "South Sudan, Sudan",
   "sources": [
@@ -1809,7 +1878,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-15",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1946,7 +2015,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-15",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2234,7 +2303,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-14",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2302,7 +2371,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-13",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2463,7 +2532,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-13",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Sudan, South Sudan",
   "sources": [
@@ -3107,7 +3176,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-12",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3253,7 +3322,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-12",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3475,7 +3544,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-11",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Madagascar",
   "sources": [
@@ -3990,7 +4059,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-10",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "South Sudan",
   "sources": [
@@ -4704,7 +4773,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-08",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -8507,7 +8576,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "India",
   "sources": [
@@ -27811,6 +27880,80 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261123-38.93_-119.98",
+  "hazard": "wildfire",
+  "lon": -119.9780188,
+  "lat": 38.9319293,
+  "bbox": [
+   -120.022652,
+   38.881541,
+   -119.930036,
+   38.964256
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-23",
+  "event_end": "2026-11-23",
+  "place": "Angora Lakes, South Lake Tahoe",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.2news.com/news/local/liberty-utilities-installs-new-power-poles-reduces-wildfire-risks-near-angora-lakes/article_7ff4a133-eb28-4285-ba87-9f16225a0f58.html",
+    "title": "Liberty Utilities installs new power poles , reduces wildfire risks near Angora Lakes",
+    "outlet": "2news.com",
+    "date": "2026-11-24",
+    "quote": "Liberty Utilities has finished upgrading aging equipment and removing hazardous trees and other materials that could be possible wildfire risks in South Lake Tahoe.",
+    "detail": "reduces wildfire risks"
+   }
+  ],
+  "first_seen": "2026-11-25",
+  "updated": "2026-11-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Angora Lakes, South Lake Tahoe, United States (2026-11-23)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -120.02265,
+      38.88154
+     ],
+     [
+      -119.93004,
+      38.88154
+     ],
+     [
+      -119.93004,
+      38.96426
+     ],
+     [
+      -120.02265,
+      38.96426
+     ],
+     [
+      -120.02265,
+      38.88154
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 73.813,
+  "before": "2026-10-14/2026-11-21",
+  "after": "2026-11-25/2026-11-25",
+  "scenes": {
+   "s1_before": 31,
+   "s1_after": 1,
+   "s2_before": 23,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261120-44.38_-70.65",
   "hazard": "wildfire",
   "lon": -70.6458645,
@@ -28120,7 +28263,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-22",
+  "event_end": "2026-11-25",
   "place": "San Francisco, Bay Area",
   "country": "US",
   "sources": [
@@ -28159,10 +28302,19 @@
     "date": "2026-11-21",
     "quote": "Record-breaking rainfall left much of San Francisco underwater on Wednesday as a Level 3 storm dumped several inches of rain across the region.",
     "detail": "flooding, road inundation, ferry service disruption, stormwater system overwhelmed"
+   },
+   {
+    "kind": "news",
+    "url": "https://abc7news.com/live-updates/live-bay-area-weather-updates-san-francisco-recovers-severe-flooding-more-storms-king-tides-coming-northern-california/20069742/entry/20075954/",
+    "title": "SF releases map showing areas prone to flooding amid record king tides",
+    "outlet": "abc7news.com",
+    "date": "2026-11-25",
+    "quote": "The City of San Francisco has released a storm and flood hazard map that shows which areas are prone to flooding as the region gears up for record king tides.",
+    "detail": "flooded roads, road closures, erosion, dangerous beach conditions, submerged sidewalks, flooded docks, potential for higher water levels, risk of flooding in low-lying areas, high surf warning, risk of dangerous waves, potential for hazardous beach conditions, risk of serious injury or drowning for "
    }
   ],
   "first_seen": "2026-11-18",
-  "updated": "2026-11-22",
+  "updated": "2026-11-25",
   "score": 0.15,
   "confidence": "low",
   "title": "Flood \u00b7 San Francisco, Bay Area, US (2026-11-18)",
@@ -29760,6 +29912,81 @@
    "s2_after": 1
   },
   "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261101-18.38_-66.56",
+  "hazard": "flood",
+  "lon": -66.5602412,
+  "lat": 18.3755793,
+  "bbox": [
+   -66.5916303,
+   18.3372496,
+   -66.5306555,
+   18.4139994
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-01",
+  "event_end": "2026-11-19",
+  "place": "Florida, state",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://politifact.com/factchecks/2026/nov/23/angie-nixon/florida-flooding-el-nino-desantis-angie-nixon/",
+    "title": "Angie Nixon claim that DeSanti vetoes left Florida neighborhoods flooded omits key facts \u2013 PolitiFact",
+    "outlet": "politifact.com",
+    "date": "2026-11-24",
+    "quote": "DeSantis has approved nearly $2 billion in local water projects through Resilient Florida, a grant program his administration created that specifically targets flooding and sea-level rise.",
+    "detail": "neighborhoods flooded out"
+   }
+  ],
+  "first_seen": "2026-11-25",
+  "updated": "2026-11-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Florida, state, United States (2026-11-01)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -66.59163,
+      18.33725
+     ],
+     [
+      -66.53066,
+      18.33725
+     ],
+     [
+      -66.53066,
+      18.414
+     ],
+     [
+      -66.59163,
+      18.414
+     ],
+     [
+      -66.59163,
+      18.33725
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 54.782,
+  "before": "2026-09-27/2026-10-27",
+  "after": "2026-11-09/2026-11-23",
+  "scenes": {
+   "s1_before": 5,
+   "s1_after": 3,
+   "s2_before": 5,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s1",
    "s2"
   ],
   "status": "ready"
@@ -32310,15 +32537,15 @@
  {
   "id": "wi-20261123--39.80_147.96",
   "hazard": "wildfire",
-  "lon": 148.089437,
-  "lat": -39.9967743,
+  "lon": 147.9416,
+  "lat": -39.8324,
   "bbox": [
    147.7481693,
    -40.2740865,
    148.3320973,
    -39.719546
   ],
-  "geometry_from": "news",
+  "geometry_from": "gdacs",
   "event_start": "2026-11-23",
   "event_end": "2026-11-25",
   "place": "Flinders Island, Tasmania",
@@ -32349,11 +32576,20 @@
     "date": "2026-11-25",
     "quote": "A major bushfire continues to burn on Flinders Island, threatening homes and cutting power.",
     "detail": "threatening homes, cutting power, forcing evacuation of people, a dog, and a wombat, some structures destroyed, emergency warnings in place, smoke affecting visibility, 3000 hectares burned, smoke traveling hundreds of kilometers south over mainland Tasmania, loss of fences, fire threat continuing a"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.morungexpress.com/life-threatening-bushfire-emergency-declared-on-australian-island",
+    "title": "Life - threatening bushfire emergency declared on Australian island",
+    "outlet": "morungexpress.com",
+    "date": "2026-11-25",
+    "quote": "A life-threatening bushfire emergency has been declared on an island off the southeast coast of the Australian mainland.",
+    "detail": "Residents told that it is too late to leave. Fire is threatening evacuation routes, and leaving now will put your life in danger. You must take shelter before the fire arrives; do not try to actively fight the fire at this point."
    }
   ],
   "first_seen": "2026-11-25",
   "updated": "2026-11-25",
-  "score": 0.65,
+  "score": 0.8,
   "confidence": "high",
   "title": "Wildfire \u00b7 Flinders Island, Tasmania, Australia (2026-11-23)",
   "task": "wildfire",
@@ -32362,29 +32598,29 @@
    "coordinates": [
     [
      [
-      147.91355,
-      -40.13243
+      147.76613,
+      -39.96806
      ],
      [
-      148.26533,
-      -40.13243
+      148.11707,
+      -39.96806
      ],
      [
-      148.26533,
-      -39.86112
+      148.11707,
+      -39.69674
      ],
      [
-      147.91355,
-      -39.86112
+      147.76613,
+      -39.69674
      ],
      [
-      147.91355,
-      -40.13243
+      147.76613,
+      -39.96806
      ]
     ]
    ]
   },
-  "aoi_km2": 904.454,
+  "aoi_km2": 904.413,
   "before": "2026-10-14/2026-11-21",
   "after": "2026-11-25/2026-11-25",
   "scenes": {
@@ -32481,7 +32717,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-22",
-  "event_end": "2026-11-24",
+  "event_end": "2026-11-25",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -32828,81 +33064,6 @@
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 13,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261123-38.93_-119.98",
-  "hazard": "wildfire",
-  "lon": -119.9780188,
-  "lat": 38.9319293,
-  "bbox": [
-   -120.022652,
-   38.881541,
-   -119.930036,
-   38.964256
-  ],
-  "geometry_from": "news",
-  "event_start": "2026-11-23",
-  "event_end": "2026-11-23",
-  "place": "Angora Lakes, South Lake Tahoe",
-  "country": "United States",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.2news.com/news/local/liberty-utilities-installs-new-power-poles-reduces-wildfire-risks-near-angora-lakes/article_7ff4a133-eb28-4285-ba87-9f16225a0f58.html",
-    "title": "Liberty Utilities installs new power poles , reduces wildfire risks near Angora Lakes",
-    "outlet": "2news.com",
-    "date": "2026-11-24",
-    "quote": "Liberty Utilities has finished upgrading aging equipment and removing hazardous trees and other materials that could be possible wildfire risks in South Lake Tahoe.",
-    "detail": "reduces wildfire risks"
-   }
-  ],
-  "first_seen": "2026-11-25",
-  "updated": "2026-11-25",
-  "score": 0.15,
-  "confidence": "low",
-  "title": "Wildfire \u00b7 Angora Lakes, South Lake Tahoe, United States (2026-11-23)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -120.02265,
-      38.88154
-     ],
-     [
-      -119.93004,
-      38.88154
-     ],
-     [
-      -119.93004,
-      38.96426
-     ],
-     [
-      -120.02265,
-      38.96426
-     ],
-     [
-      -120.02265,
-      38.88154
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 73.813,
-  "before": "2026-10-14/2026-11-21",
-  "after": "2026-11-25/2026-11-25",
-  "scenes": {
-   "s1_before": 31,
-   "s1_after": 0,
-   "s2_before": 23,
    "s2_after": 0
   },
   "sensors": [
