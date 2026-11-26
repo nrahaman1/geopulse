@@ -1296,6 +1296,74 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261118--13.85_-64.28",
+  "hazard": "wildfire",
+  "lon": -64.2831,
+  "lat": -13.8473,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-18",
+  "event_end": "2026-11-21",
+  "place": "",
+  "country": "Bolivia",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1033977",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1033977&episodeid=6&eventtype=WF",
+    "title": "Forest fires in Bolivia (Green alert)",
+    "date": "2026-11-18",
+    "detail": "Green impact for forestfire in 10090 ha"
+   }
+  ],
+  "first_seen": "2026-11-22",
+  "updated": "2026-11-22",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Bolivia (2026-11-18)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -64.35249,
+      -13.91513
+     ],
+     [
+      -64.21371,
+      -13.91513
+     ],
+     [
+      -64.21371,
+      -13.77947
+     ],
+     [
+      -64.35249,
+      -13.77947
+     ],
+     [
+      -64.35249,
+      -13.91513
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.106,
+  "before": "2026-10-09/2026-11-16",
+  "after": "2026-11-22/2026-11-26",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 4,
+   "s2_after": 1
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261117--21.47_126.09",
   "hazard": "wildfire",
   "lon": 126.0892,
@@ -22532,74 +22600,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261009--12.95_-67.57",
-  "hazard": "wildfire",
-  "lon": -67.5657,
-  "lat": -12.9545,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-09",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Bolivia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032697",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032697&episodeid=7&eventtype=WF",
-    "title": "Forest fires in Bolivia (Green alert)",
-    "date": "2026-10-09",
-    "detail": "Green impact for forestfire in 10291 ha"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Bolivia (2026-10-09)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -67.63483,
-      -13.02233
-     ],
-     [
-      -67.49657,
-      -13.02233
-     ],
-     [
-      -67.49657,
-      -12.88667
-     ],
-     [
-      -67.63483,
-      -12.88667
-     ],
-     [
-      -67.63483,
-      -13.02233
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.103,
-  "before": "2026-08-30/2026-10-07",
-  "after": "2026-10-12/2026-10-14",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 2,
-   "s2_before": 5,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20261009--19.73_129.53",
   "hazard": "wildfire",
   "lon": 129.5272,
@@ -23227,153 +23227,6 @@
   "sensors": [
    "s1",
    "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261007-40.98_16.62",
-  "hazard": "flood",
-  "lon": 16.621,
-  "lat": 40.9843,
-  "bbox": [
-   14.9342,
-   39.7896,
-   18.5205,
-   42.2265
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-07",
-  "event_end": "2026-10-12",
-  "place": "",
-  "country": "Italy",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104220",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104220&episodeid=5&eventtype=FL",
-    "title": "Flood in Italy (Green alert)",
-    "date": "2026-10-07",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Italy (2026-10-07)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      16.4425,
-      40.84864
-     ],
-     [
-      16.7995,
-      40.84864
-     ],
-     [
-      16.7995,
-      41.11996
-     ],
-     [
-      16.4425,
-      41.11996
-     ],
-     [
-      16.4425,
-      40.84864
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 904.928,
-  "before": "2026-09-02/2026-10-02",
-  "after": "2026-10-07/2026-10-11",
-  "scenes": {
-   "s1_before": 23,
-   "s1_after": 2,
-   "s2_before": 16,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261007-19.20_109.60",
-  "hazard": "flood",
-  "lon": 109.6,
-  "lat": 19.2,
-  "bbox": [
-   108.3882,
-   8.6651,
-   118.0551,
-   20.288
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-07",
-  "event_end": "2026-10-10",
-  "place": "",
-  "country": "China",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104223",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104223&episodeid=1&eventtype=FL",
-    "title": "Flood in China (Green alert)",
-    "date": "2026-10-07",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 China (2026-10-07)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      109.45732,
-      19.06434
-     ],
-     [
-      109.74268,
-      19.06434
-     ],
-     [
-      109.74268,
-      19.33566
-     ],
-     [
-      109.45732,
-      19.33566
-     ],
-     [
-      109.45732,
-      19.06434
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 901.073,
-  "before": "2026-09-02/2026-10-02",
-  "after": "2026-10-07/2026-10-11",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 1,
-   "s2_before": 4,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
   ],
   "status": "ready"
  },
@@ -24042,79 +23895,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261006--25.50_-54.83",
-  "hazard": "flood",
-  "lon": -54.8333,
-  "lat": -25.5,
-  "bbox": [
-   -55.5506,
-   -26.257,
-   -54.342,
-   -24.4855
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-06",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Paraguay",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104222",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104222&episodeid=3&eventtype=FL",
-    "title": "Flood in Paraguay (Green alert)",
-    "date": "2026-10-06",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Paraguay (2026-10-06)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -54.98259,
-      -25.63566
-     ],
-     [
-      -54.68401,
-      -25.63566
-     ],
-     [
-      -54.68401,
-      -25.36434
-     ],
-     [
-      -54.98259,
-      -25.36434
-     ],
-     [
-      -54.98259,
-      -25.63566
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 902.601,
-  "before": "2026-09-01/2026-10-01",
-  "after": "2026-10-06/2026-10-15",
-  "scenes": {
-   "s1_before": 5,
-   "s1_after": 1,
-   "s2_before": 34,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20261006--12.14_36.79",
   "hazard": "wildfire",
   "lon": 36.7939,
@@ -24192,75 +23972,6 @@
    "s1_after": 5,
    "s2_before": 16,
    "s2_after": 10
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20261005--16.41_36.43",
-  "hazard": "wildfire",
-  "lon": 36.4321,
-  "lat": -16.4142,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-05",
-  "event_end": "2026-10-19",
-  "place": "",
-  "country": "Mozambique",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032672",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032672&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Mozambique (Green alert)",
-    "date": "2026-10-05",
-    "detail": "Green impact for forestfire in 12253 ha"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Mozambique (2026-10-05)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      36.36186,
-      -16.48203
-     ],
-     [
-      36.50234,
-      -16.48203
-     ],
-     [
-      36.50234,
-      -16.34637
-     ],
-     [
-      36.36186,
-      -16.34637
-     ],
-     [
-      36.36186,
-      -16.48203
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.5,
-  "before": "2026-08-26/2026-10-03",
-  "after": "2026-10-07/2026-10-11",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 2,
-   "s2_before": 24,
-   "s2_after": 3
   },
   "sensors": [
    "s1",
@@ -24482,75 +24193,6 @@
    "s1_before": 6,
    "s1_after": 3,
    "s2_before": 1,
-   "s2_after": 2
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20261004--11.83_142.60",
-  "hazard": "wildfire",
-  "lon": 142.6022,
-  "lat": -11.8319,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-04",
-  "event_end": "2026-10-19",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032664",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032664&episodeid=7&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-04",
-    "detail": "Green impact for forestfire in 10300 ha"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-04)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      142.53336,
-      -11.89973
-     ],
-     [
-      142.67104,
-      -11.89973
-     ],
-     [
-      142.67104,
-      -11.76407
-     ],
-     [
-      142.53336,
-      -11.76407
-     ],
-     [
-      142.53336,
-      -11.89973
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.136,
-  "before": "2026-08-25/2026-10-02",
-  "after": "2026-10-06/2026-10-11",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 1,
-   "s2_before": 15,
    "s2_after": 2
   },
   "sensors": [
@@ -25139,74 +24781,6 @@
   },
   "sensors": [
    "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20261001--6.22_-52.84",
-  "hazard": "wildfire",
-  "lon": -52.8407,
-  "lat": -6.2202,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032633",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032633&episodeid=11&eventtype=WF",
-    "title": "Forest fires in Brazil (Green alert)",
-    "date": "2026-10-01",
-    "detail": "Green impact for forestfire in 10310 ha"
-   }
-  ],
-  "first_seen": "2026-10-11",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Brazil (2026-10-01)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -52.90847,
-      -6.28803
-     ],
-     [
-      -52.77293,
-      -6.28803
-     ],
-     [
-      -52.77293,
-      -6.15237
-     ],
-     [
-      -52.90847,
-      -6.15237
-     ],
-     [
-      -52.90847,
-      -6.28803
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.085,
-  "before": "2026-08-22/2026-09-29",
-  "after": "2026-10-03/2026-10-11",
-  "scenes": {
-   "s1_before": 9,
-   "s1_after": 1,
-   "s2_before": 17,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
   ],
   "status": "ready"
  },
@@ -25866,83 +25440,6 @@
    "s1_after": 3,
    "s2_before": 3,
    "s2_after": 1
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "wi-20260927--11.21_-45.22",
-  "hazard": "wildfire",
-  "lon": -45.2219,
-  "lat": -11.2138,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-09-27",
-  "event_end": "2026-10-14",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032524",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032524&episodeid=17&eventtype=WF",
-    "title": "Forest fires in Brazil (Green alert)",
-    "date": "2026-09-27",
-    "detail": "Green impact for forestfire in 12582 ha"
-   },
-   {
-    "kind": "gdacs",
-    "id": "WF1032656",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032656&episodeid=7&eventtype=WF",
-    "title": "Forest fires in Brazil (Green alert)",
-    "date": "2026-10-04",
-    "detail": "Green impact for forestfire in 10813 ha"
-   }
-  ],
-  "first_seen": "2026-10-10",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Brazil (2026-09-27)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -45.29058,
-      -11.28163
-     ],
-     [
-      -45.15322,
-      -11.28163
-     ],
-     [
-      -45.15322,
-      -11.14597
-     ],
-     [
-      -45.29058,
-      -11.14597
-     ],
-     [
-      -45.29058,
-      -11.28163
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 224.929,
-  "before": "2026-08-18/2026-09-25",
-  "after": "2026-09-29/2026-10-11",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 1,
-   "s2_before": 11,
-   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -28263,7 +27760,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-25",
+  "event_end": "2026-11-26",
   "place": "San Francisco, Bay Area",
   "country": "US",
   "sources": [
@@ -32622,7 +32119,7 @@
   },
   "aoi_km2": 904.413,
   "before": "2026-10-14/2026-11-21",
-  "after": "2026-11-25/2026-11-25",
+  "after": "2026-11-25/2026-11-26",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32696,7 +32193,7 @@
   },
   "aoi_km2": 899.764,
   "before": "2026-10-18/2026-11-17",
-  "after": "2026-11-22/2026-11-25",
+  "after": "2026-11-22/2026-11-26",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -32765,80 +32262,11 @@
   },
   "aoi_km2": 225.527,
   "before": "2026-10-13/2026-11-20",
-  "after": "2026-11-24/2026-11-25",
+  "after": "2026-11-24/2026-11-26",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
    "s2_before": 20,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "waiting for imagery"
- },
- {
-  "id": "wi-20261118--13.85_-64.28",
-  "hazard": "wildfire",
-  "lon": -64.2831,
-  "lat": -13.8473,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-11-18",
-  "event_end": "2026-11-21",
-  "place": "",
-  "country": "Bolivia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1033977",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1033977&episodeid=6&eventtype=WF",
-    "title": "Forest fires in Bolivia (Green alert)",
-    "date": "2026-11-18",
-    "detail": "Green impact for forestfire in 10090 ha"
-   }
-  ],
-  "first_seen": "2026-11-22",
-  "updated": "2026-11-22",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Bolivia (2026-11-18)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -64.35249,
-      -13.91513
-     ],
-     [
-      -64.21371,
-      -13.91513
-     ],
-     [
-      -64.21371,
-      -13.77947
-     ],
-     [
-      -64.35249,
-      -13.77947
-     ],
-     [
-      -64.35249,
-      -13.91513
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.106,
-  "before": "2026-10-09/2026-11-16",
-  "after": "2026-11-22/2026-11-25",
-  "scenes": {
-   "s1_before": 2,
-   "s1_after": 0,
-   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
@@ -32909,7 +32337,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-21/2026-11-20",
-  "after": "2026-11-25/2026-11-25",
+  "after": "2026-11-25/2026-11-26",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -32984,11 +32412,236 @@
   },
   "aoi_km2": 903.26,
   "before": "2026-10-20/2026-11-19",
-  "after": "2026-11-24/2026-11-25",
+  "after": "2026-11-24/2026-11-26",
   "scenes": {
    "s1_before": 7,
    "s1_after": 0,
    "s2_before": 8,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261124-35.48_-79.18",
+  "hazard": "flood",
+  "lon": -79.1802994,
+  "lat": 35.4798757,
+  "bbox": [
+   -79.2415119,
+   35.4070654,
+   -79.0923973,
+   35.5953755
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-24",
+  "event_end": "2026-11-24",
+  "place": "Sanford, Volusia County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.wftv.com/news/local/sanford-neighborhood-flooded-st-johns-river-rises-forcing-residents-use-boats/SBNU4DUBC5CFLIUDRUZUYYUT5Q/",
+    "title": "Sanford flooding : St . Johns River leaves roads underwater",
+    "outlet": "wftv.com",
+    "date": "2026-11-24",
+    "quote": "rising water from the St. Johns River continues to flood streets",
+    "detail": "Residents are relying on boats to reach their homes, some have had to park vehicles on dry land, and floodwaters are expected to last for several weeks, with receding taking about a month."
+   }
+  ],
+  "first_seen": "2026-11-26",
+  "updated": "2026-11-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Sanford, Volusia County, United States (2026-11-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -79.24151,
+      35.40707
+     ],
+     [
+      -79.0924,
+      35.40707
+     ],
+     [
+      -79.0924,
+      35.59538
+     ],
+     [
+      -79.24151,
+      35.59538
+     ],
+     [
+      -79.24151,
+      35.40707
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 282.616,
+  "before": "2026-10-20/2026-11-19",
+  "after": "2026-11-24/2026-11-26",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 7,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261124-28.61_-80.81",
+  "hazard": "flood",
+  "lon": -80.8079545,
+  "lat": 28.6126236,
+  "bbox": [
+   -80.871651,
+   28.4936303,
+   -80.7778237,
+   28.6517915
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-24",
+  "event_end": "2026-11-24",
+  "place": "Titusville, Brevard County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox13news.com/news/brevard-county-faces-worsening-flooding-residents-struggle-recover",
+    "title": "Space Coast faces worsening flooding as residents struggle to recover",
+    "outlet": "fox13news.com",
+    "date": "2026-11-25",
+    "quote": "Rising water levels along the St. Johns River continue to flood neighborhoods across Brevard, Seminole and Volusia counties.",
+    "detail": "Residents are stranded, homes damaged, roads impassable, trash collection suspended, and some homes are underwater. A 24-inch sewer main rupture has prompted repair work and calls for residents to limit sewer use. Flooding has been described as worse than during Hurricane Ian in 2022."
+   }
+  ],
+  "first_seen": "2026-11-26",
+  "updated": "2026-11-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Titusville, Brevard County, United States (2026-11-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -80.87165,
+      28.49363
+     ],
+     [
+      -80.77782,
+      28.49363
+     ],
+     [
+      -80.77782,
+      28.65179
+     ],
+     [
+      -80.87165,
+      28.65179
+     ],
+     [
+      -80.87165,
+      28.49363
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 160.786,
+  "before": "2026-10-20/2026-11-19",
+  "after": "2026-11-24/2026-11-26",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 6,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261124-30.33_-81.66",
+  "hazard": "flood",
+  "lon": -81.6579179,
+  "lat": 30.3262247,
+  "bbox": [
+   -82.0493895,
+   30.103748,
+   -81.316712,
+   30.5862095
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-24",
+  "event_end": "2026-11-25",
+  "place": "St. Nicholas, Jacksonville",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.news4jax.com/news/florida/2026/11/24/flood-damage-could-push-florida-homeowners-insurance-rates-higher/",
+    "title": "Flood damage could push Florida homeowners insurance rates higher",
+    "outlet": "news4jax.com",
+    "date": "2026-11-25",
+    "quote": "Recent flooding in South and Central Florida exposed a gap in protection: Only about 20% of flood victims had flood insurance",
+    "detail": "Most people affected by recent flooding lacked flood insurance, prompting experts to urge more homeowners to consider a separate policy"
+   }
+  ],
+  "first_seen": "2026-11-26",
+  "updated": "2026-11-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 St. Nicholas, Jacksonville, United States (2026-11-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -81.81403,
+      30.19057
+     ],
+     [
+      -81.50181,
+      30.19057
+     ],
+     [
+      -81.50181,
+      30.46188
+     ],
+     [
+      -81.81403,
+      30.46188
+     ],
+     [
+      -81.81403,
+      30.19057
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 902.452,
+  "before": "2026-10-20/2026-11-19",
+  "after": "2026-11-24/2026-11-26",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 0,
+   "s2_before": 4,
    "s2_after": 0
   },
   "sensors": [
@@ -33059,7 +32712,7 @@
   },
   "aoi_km2": 901.687,
   "before": "2026-10-19/2026-11-18",
-  "after": "2026-11-23/2026-11-25",
+  "after": "2026-11-23/2026-11-26",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -33134,7 +32787,7 @@
   },
   "aoi_km2": 902.136,
   "before": "2026-10-17/2026-11-16",
-  "after": "2026-11-21/2026-11-25",
+  "after": "2026-11-21/2026-11-26",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -33228,7 +32881,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-25"
+  "after": "2026-11-08/2026-11-26"
  },
  {
   "id": "wi-20261118--15.52_142.81",
@@ -33287,7 +32940,7 @@
   },
   "aoi_km2": 225.247,
   "before": "2026-10-09/2026-11-16",
-  "after": "2026-11-20/2026-11-25"
+  "after": "2026-11-20/2026-11-26"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -33378,7 +33031,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-25"
+  "after": "2026-11-10/2026-11-26"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -33437,7 +33090,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-25"
+  "after": "2026-11-10/2026-11-26"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -33520,7 +33173,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-09/2026-11-25"
+  "after": "2026-11-09/2026-11-26"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -33587,7 +33240,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-09/2026-11-25"
+  "after": "2026-11-09/2026-11-26"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -33662,7 +33315,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-25"
+  "after": "2026-11-06/2026-11-26"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -33721,7 +33374,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-25"
+  "after": "2026-10-29/2026-11-26"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -33804,7 +33457,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-25"
+  "after": "2026-11-07/2026-11-26"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -33871,7 +33524,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-25"
+  "after": "2026-10-29/2026-11-26"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -33930,7 +33583,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-25"
+  "after": "2026-10-23/2026-11-26"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -33989,7 +33642,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-25"
+  "after": "2026-10-30/2026-11-26"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -34056,7 +33709,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-25"
+  "after": "2026-10-31/2026-11-26"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -34115,7 +33768,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-25"
+  "after": "2026-10-23/2026-11-26"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -34190,7 +33843,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-11-08/2026-11-25"
+  "after": "2026-11-08/2026-11-26"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -34249,7 +33902,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-25"
+  "after": "2026-10-24/2026-11-26"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -34324,7 +33977,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-25"
+  "after": "2026-10-27/2026-11-26"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -34410,81 +34063,6 @@
   "after": "2026-10-15/2026-11-24"
  },
  {
-  "id": "wi-20261008-46.99_119.23",
-  "hazard": "wildfire",
-  "lon": 119.2284,
-  "lat": 46.9945,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-08",
-  "event_end": "2026-10-12",
-  "place": "",
-  "country": "Mongolia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032652",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032652&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Mongolia (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Green impact for forestfire in 17663 ha"
-   },
-   {
-    "kind": "gdacs",
-    "id": "WF1032663",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032663&episodeid=2&eventtype=WF",
-    "title": "Forest fires in Mongolia (Green alert)",
-    "date": "2026-10-08",
-    "detail": "Green impact for forestfire in 35969 ha"
-   },
-   {
-    "kind": "gdacs",
-    "id": "WF1032726",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032726&episodeid=1&eventtype=WF",
-    "title": "Forest fires in Mongolia (Green alert)",
-    "date": "2026-10-10",
-    "detail": "Green impact for forestfire in 15293 ha"
-   }
-  ],
-  "first_seen": "2026-10-09",
-  "updated": "2026-10-11",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Mongolia (2026-10-08)",
-  "task": "wildfire",
-  "status": "too recent",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      119.12962,
-      46.92667
-     ],
-     [
-      119.32718,
-      46.92667
-     ],
-     [
-      119.32718,
-      47.06233
-     ],
-     [
-      119.12962,
-      47.06233
-     ],
-     [
-      119.12962,
-      46.92667
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 226.609,
-  "before": "2026-08-29/2026-10-06",
-  "after": "2026-10-13/2026-11-22"
- },
- {
   "id": "wi-20261108-47.66_-117.42",
   "hazard": "wildfire",
   "lon": -117.42351,
@@ -34556,7 +34134,7 @@
   },
   "aoi_km2": 430.751,
   "before": "2026-09-29/2026-11-06",
-  "after": "2026-11-11/2026-11-25"
+  "after": "2026-11-11/2026-11-26"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -34639,7 +34217,69 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-08/2026-11-25"
+  "after": "2026-11-08/2026-11-26"
+ },
+ {
+  "id": "wi-20261125-37.40_-8.32",
+  "hazard": "wildfire",
+  "lon": -8.3156107,
+  "lat": 37.4005123,
+  "bbox": [
+   -8.3156607,
+   37.4004623,
+   -8.3155607,
+   37.4005623
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-25",
+  "event_end": "2026-11-25",
+  "place": "Coimbra, Portugal, Portugal",
+  "country": "Portugal",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://wildfiretoday.com/wildfire-science-from-coimbra-conference/",
+    "title": "Wildfire science from Coimbra conference",
+    "outlet": "wildfiretoday.com",
+    "date": "2026-11-25",
+    "quote": "The 10th International Conference on Forest Fire Research and the 19th International Wildland Fire Safety Summit in Coimbra, Portugal, November 2026.",
+    "detail": "The conference focused on wildfire research and safety, including topics like fire behaviour, extreme fire weather conditions, climate change, wildfire risk management, the wildland-urban interface, and wildland fire safety."
+   }
+  ],
+  "first_seen": "2026-11-26",
+  "updated": "2026-11-26",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Wildfire \u00b7 Coimbra, Portugal, Portugal, Portugal (2026-11-25)",
+  "task": "wildfire",
+  "status": "too recent",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -8.34388,
+      37.3779
+     ],
+     [
+      -8.28734,
+      37.3779
+     ],
+     [
+      -8.28734,
+      37.42312
+     ],
+     [
+      -8.34388,
+      37.42312
+     ],
+     [
+      -8.34388,
+      37.3779
+     ]
+    ]
+   ]
+  }
  },
  {
   "id": "wi-20261124-38.47_-78.46",
@@ -34701,7 +34341,10 @@
      ]
     ]
    ]
-  }
+  },
+  "aoi_km2": 905.044,
+  "before": "2026-10-15/2026-11-22",
+  "after": "2026-11-26/2026-11-26"
  },
  {
   "id": "wi-20261121-36.50_-81.13",
@@ -34766,7 +34409,7 @@
   },
   "aoi_km2": 695.916,
   "before": "2026-10-12/2026-11-19",
-  "after": "2026-11-22/2026-11-25"
+  "after": "2026-11-22/2026-11-26"
  },
  {
   "id": "wi-20261120-36.17_-82.88",
@@ -34831,7 +34474,7 @@
   },
   "aoi_km2": 904.108,
   "before": "2026-10-11/2026-11-18",
-  "after": "2026-11-21/2026-11-25"
+  "after": "2026-11-21/2026-11-26"
  },
  {
   "id": "wi-20261120--35.05_150.80",
@@ -34896,7 +34539,7 @@
   },
   "aoi_km2": 87.195,
   "before": "2026-10-11/2026-11-18",
-  "after": "2026-11-21/2026-11-25"
+  "after": "2026-11-21/2026-11-26"
  },
  {
   "id": "wi-20261119-36.21_-112.06",
@@ -34970,7 +34613,7 @@
   },
   "aoi_km2": 25.105,
   "before": "2026-10-10/2026-11-17",
-  "after": "2026-11-20/2026-11-25"
+  "after": "2026-11-20/2026-11-26"
  },
  {
   "id": "wi-20261111-38.85_-94.41",
@@ -35035,7 +34678,7 @@
   },
   "aoi_km2": 25.116,
   "before": "2026-10-02/2026-11-09",
-  "after": "2026-11-12/2026-11-25"
+  "after": "2026-11-12/2026-11-26"
  },
  {
   "id": "wi-20261110-50.54_-116.01",
@@ -35100,7 +34743,7 @@
   },
   "aoi_km2": 25.184,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-25"
+  "after": "2026-11-11/2026-11-26"
  },
  {
   "id": "wi-20261110-38.90_-77.04",
@@ -35165,7 +34808,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-25"
+  "after": "2026-11-11/2026-11-26"
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -35230,7 +34873,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-08/2026-11-25"
+  "after": "2026-11-08/2026-11-26"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -35295,7 +34938,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-25"
+  "after": "2026-11-04/2026-11-26"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -35360,7 +35003,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-25"
+  "after": "2026-11-04/2026-11-26"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -35425,7 +35068,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-25"
+  "after": "2026-10-31/2026-11-26"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -35490,7 +35133,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-25"
+  "after": "2026-10-28/2026-11-26"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -35555,7 +35198,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-25"
+  "after": "2026-10-26/2026-11-26"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -35620,7 +35263,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-25"
+  "after": "2026-10-24/2026-11-26"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -35685,7 +35328,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-25"
+  "after": "2026-10-24/2026-11-26"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -35750,7 +35393,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-25"
+  "after": "2026-10-23/2026-11-26"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -35815,7 +35458,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-25"
+  "after": "2026-10-22/2026-11-26"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -35880,7 +35523,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-25"
+  "after": "2026-10-22/2026-11-26"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -35945,7 +35588,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-25"
+  "after": "2026-10-20/2026-11-26"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -36010,7 +35653,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-25"
+  "after": "2026-10-20/2026-11-26"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -36075,7 +35718,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-25"
+  "after": "2026-10-20/2026-11-26"
  },
  {
   "id": "wi-20261015-39.07_-78.73",

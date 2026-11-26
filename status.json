@@ -1,9 +1,9 @@
 {
- "started": "2026-11-25T21:46:36+00:00",
+ "started": "2026-11-26T08:29:14+00:00",
  "sources": {
   "gdacs": {
-   "ok": true,
-   "events": 40
+   "ok": false,
+   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "cems": {
    "ok": true,
@@ -15,11 +15,11 @@
   },
   "gdelt": {
    "ok": true,
-   "articles": 107
+   "articles": 112
   },
   "rss:wildfiretoday.com": {
    "ok": true,
-   "articles": 2
+   "articles": 3
   },
   "rss:inciweb.wildfire.gov": {
    "ok": true,
@@ -37,12 +37,12 @@
    "wildfire": 10,
    "vegetation": 2
   },
-  "events": 10,
+  "events": 11,
   "model": "qwen3:8b"
  },
- "finished": "2026-11-25T22:48:44+00:00",
- "duration_s": 3728,
- "cases": 495,
- "new": 2,
+ "finished": "2026-11-26T09:08:41+00:00",
+ "duration_s": 2367,
+ "cases": 490,
+ "new": 4,
  "ok": true
 }
