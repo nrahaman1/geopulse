@@ -1,5 +1,96 @@
 [
  {
+  "id": "fl-20261121-51.68_-9.45",
+  "hazard": "flood",
+  "lon": -9.4524,
+  "lat": 51.6798,
+  "bbox": [
+   -9.4974,
+   51.6347,
+   -9.4073,
+   51.7248
+  ],
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-21",
+  "event_end": "2026-11-28",
+  "place": "Bantry, Cork County",
+  "country": "IE",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.southernstar.ie/news/council-say-help-is-at-hand-for-bantry-businesses-affected-by-flooding-4381925",
+    "title": "Council say help is at hand for Bantry businesses affected by flooding",
+    "outlet": "southernstar.ie",
+    "date": "2026-11-22",
+    "quote": "Over 20 businesses were flooded following torrential rain and despite several putting down flood barriers the flood waters came up through floors, walls and toilets.",
+    "detail": "Over 20 businesses were flooded, with flood waters coming up through floors, walls, and toilets. Wildflour, which opened its premises on New Street last month, were also flooded."
+   },
+   {
+    "kind": "gdacs",
+    "id": "FL1104295",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1104295&episodeid=1&eventtype=FL",
+    "title": "Flood in Ireland (Green alert)",
+    "date": "2026-11-22",
+    "detail": "Magnitude 0"
+   },
+   {
+    "kind": "news",
+    "url": "https://www.irishexaminer.com/news/munster/arid-41943303.html",
+    "title": "  Dont open a business on the ground floor : Bantry traders reach breaking point over flooding",
+    "outlet": "irishexaminer.com",
+    "date": "2026-11-28",
+    "quote": "More than 20 businesses, including the Wildflour bakery that Chris Fahy only opened seven weeks ago, and Paudie McSweeney\u2019s Anchor Tavern on New Street, saw their premises flooded with up to eight inches of water.",
+    "detail": "Businesses are considering a rates strike due to flooding concerns, and there is fear over the town\u2019s ageing infrastructure and potential collapse of historic sections of the town."
+   }
+  ],
+  "first_seen": "2026-11-22",
+  "updated": "2026-11-28",
+  "score": 0.65,
+  "confidence": "high",
+  "title": "Flood \u00b7 Bantry, Cork County, IE (2026-11-21)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -9.4974,
+      51.6347
+     ],
+     [
+      -9.4073,
+      51.6347
+     ],
+     [
+      -9.4073,
+      51.7248
+     ],
+     [
+      -9.4974,
+      51.7248
+     ],
+     [
+      -9.4974,
+      51.6347
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 62.425,
+  "before": "2026-10-17/2026-11-16",
+  "after": "2026-11-21/2026-11-28",
+  "scenes": {
+   "s1_before": 20,
+   "s1_after": 3,
+   "s2_before": 6,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "fl-20261014-41.01_28.98",
   "hazard": "flood",
   "lon": 28.9986,
@@ -83,88 +174,6 @@
    "s1_before": 21,
    "s1_after": 1,
    "s2_before": 9,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261121-51.68_-9.45",
-  "hazard": "flood",
-  "lon": -9.4524,
-  "lat": 51.6798,
-  "bbox": [
-   -9.4974,
-   51.6347,
-   -9.4073,
-   51.7248
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-11-21",
-  "event_end": "2026-11-24",
-  "place": "Bantry, Cork County",
-  "country": "IE",
-  "sources": [
-   {
-    "kind": "news",
-    "url": "https://www.southernstar.ie/news/council-say-help-is-at-hand-for-bantry-businesses-affected-by-flooding-4381925",
-    "title": "Council say help is at hand for Bantry businesses affected by flooding",
-    "outlet": "southernstar.ie",
-    "date": "2026-11-22",
-    "quote": "Over 20 businesses were flooded following torrential rain and despite several putting down flood barriers the flood waters came up through floors, walls and toilets.",
-    "detail": "Over 20 businesses were flooded, with flood waters coming up through floors, walls, and toilets. Wildflour, which opened its premises on New Street last month, were also flooded."
-   },
-   {
-    "kind": "gdacs",
-    "id": "FL1104295",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104295&episodeid=1&eventtype=FL",
-    "title": "Flood in Ireland (Green alert)",
-    "date": "2026-11-22",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-11-22",
-  "updated": "2026-11-23",
-  "score": 0.5,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Bantry, Cork County, IE (2026-11-21)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -9.4974,
-      51.6347
-     ],
-     [
-      -9.4073,
-      51.6347
-     ],
-     [
-      -9.4073,
-      51.7248
-     ],
-     [
-      -9.4974,
-      51.7248
-     ],
-     [
-      -9.4974,
-      51.6347
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 62.425,
-  "before": "2026-10-17/2026-11-16",
-  "after": "2026-11-21/2026-11-23",
-  "scenes": {
-   "s1_before": 20,
-   "s1_after": 1,
-   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -267,7 +276,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "Garden Route, Garden Route District Municipality (GRDM)",
   "country": "South Africa",
   "sources": [
@@ -936,7 +945,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-22",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1072,7 +1081,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-21",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -1355,7 +1364,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-18",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "South Sudan, Central African Republic",
   "sources": [
@@ -1772,6 +1781,75 @@
   "status": "ready"
  },
  {
+  "id": "wi-20261117-1.69_-50.60",
+  "hazard": "wildfire",
+  "lon": -50.5952,
+  "lat": 1.6934,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-17",
+  "event_end": "2026-11-27",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1034084",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1034084&episodeid=9&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-11-17",
+    "detail": "Green impact for forestfire in 10210 ha"
+   }
+  ],
+  "first_seen": "2026-11-28",
+  "updated": "2026-11-28",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-11-17)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -50.6626,
+      1.62557
+     ],
+     [
+      -50.5278,
+      1.62557
+     ],
+     [
+      -50.5278,
+      1.76123
+     ],
+     [
+      -50.6626,
+      1.76123
+     ],
+     [
+      -50.6626,
+      1.62557
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 224.831,
+  "before": "2026-10-08/2026-11-15",
+  "after": "2026-11-19/2026-11-28",
+  "scenes": {
+   "s1_before": 6,
+   "s1_after": 1,
+   "s2_before": 18,
+   "s2_after": 4
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "wi-20261116--22.53_125.55",
   "hazard": "wildfire",
   "lon": 125.5473,
@@ -2150,7 +2228,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-15",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2287,7 +2365,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-15",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2575,7 +2653,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-14",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -2643,7 +2721,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-13",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3594,7 +3672,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-12",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -3733,6 +3811,75 @@
    "s1_after": 2,
    "s2_before": 24,
    "s2_after": 12
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "wi-20261112--2.87_-53.07",
+  "hazard": "wildfire",
+  "lon": -53.0654,
+  "lat": -2.8669,
+  "bbox": null,
+  "geometry_from": "gdacs",
+  "event_start": "2026-11-12",
+  "event_end": "2026-11-27",
+  "place": "",
+  "country": "Brazil",
+  "sources": [
+   {
+    "kind": "gdacs",
+    "id": "WF1034071",
+    "url": "https://www.gdacs.org/report.aspx?eventid=1034071&episodeid=7&eventtype=WF",
+    "title": "Forest fires in Brazil (Green alert)",
+    "date": "2026-11-12",
+    "detail": "Green impact for forestfire in 11214 ha"
+   }
+  ],
+  "first_seen": "2026-11-28",
+  "updated": "2026-11-28",
+  "score": 0.35,
+  "confidence": "medium",
+  "title": "Wildfire \u00b7 Brazil (2026-11-12)",
+  "task": "wildfire",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -53.13286,
+      -2.93473
+     ],
+     [
+      -52.99794,
+      -2.93473
+     ],
+     [
+      -52.99794,
+      -2.79907
+     ],
+     [
+      -53.13286,
+      -2.79907
+     ],
+     [
+      -53.13286,
+      -2.93473
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 225.135,
+  "before": "2026-10-03/2026-11-10",
+  "after": "2026-11-14/2026-11-28",
+  "scenes": {
+   "s1_before": 3,
+   "s1_after": 1,
+   "s2_before": 13,
+   "s2_after": 4
   },
   "sensors": [
    "s1",
@@ -5114,7 +5261,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-08",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Australia",
   "sources": [
@@ -8917,7 +9064,7 @@
   "bbox": null,
   "geometry_from": "gdacs",
   "event_start": "2026-11-04",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "India",
   "sources": [
@@ -13420,7 +13567,7 @@
   ],
   "geometry_from": "gdacs",
   "event_start": "2026-10-26",
-  "event_end": "2026-11-16",
+  "event_end": "2026-11-27",
   "place": "",
   "country": "Peru",
   "sources": [
@@ -21527,74 +21674,6 @@
   "status": "ready"
  },
  {
-  "id": "wi-20261011--16.75_144.78",
-  "hazard": "wildfire",
-  "lon": 144.7754,
-  "lat": -16.7496,
-  "bbox": null,
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-11",
-  "event_end": "2026-10-17",
-  "place": "",
-  "country": "Australia",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "WF1032765",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1032765&episodeid=3&eventtype=WF",
-    "title": "Forest fires in Australia (Green alert)",
-    "date": "2026-10-11",
-    "detail": "Green impact for forestfire in 10043 ha"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Wildfire \u00b7 Australia (2026-10-11)",
-  "task": "wildfire",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      144.70504,
-      -16.81743
-     ],
-     [
-      144.84576,
-      -16.81743
-     ],
-     [
-      144.84576,
-      -16.68177
-     ],
-     [
-      144.70504,
-      -16.68177
-     ],
-     [
-      144.70504,
-      -16.81743
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 225.395,
-  "before": "2026-09-01/2026-10-09",
-  "after": "2026-10-13/2026-10-17",
-  "scenes": {
-   "s1_before": 4,
-   "s1_after": 0,
-   "s2_before": 18,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "wi-20261011--11.94_133.71",
   "hazard": "wildfire",
   "lon": 133.7121,
@@ -22586,152 +22665,6 @@
   },
   "sensors": [
    "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261009-8.19_-79.19",
-  "hazard": "flood",
-  "lon": -79.1925,
-  "lat": 8.1942,
-  "bbox": [
-   -79.9191,
-   7.0109,
-   -78.0643,
-   9.5012
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-09",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Panama",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104228",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104228&episodeid=1&eventtype=FL",
-    "title": "Flood in Panama (Green alert)",
-    "date": "2026-10-09",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Panama (2026-10-09)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -79.32864,
-      8.05854
-     ],
-     [
-      -79.05636,
-      8.05854
-     ],
-     [
-      -79.05636,
-      8.32986
-     ],
-     [
-      -79.32864,
-      8.32986
-     ],
-     [
-      -79.32864,
-      8.05854
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 900.458,
-  "before": "2026-09-04/2026-10-04",
-  "after": "2026-10-09/2026-10-13",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 0,
-   "s2_before": 6,
-   "s2_after": 1
-  },
-  "sensors": [
-   "s2"
-  ],
-  "status": "ready"
- },
- {
-  "id": "fl-20261009-9.85_-83.90",
-  "hazard": "flood",
-  "lon": -83.9027,
-  "lat": 9.8542,
-  "bbox": [
-   -83.9477,
-   9.8091,
-   -83.8576,
-   9.8992
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-09",
-  "event_end": "2026-10-20",
-  "place": "",
-  "country": "Costa Rica",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104227",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104227&episodeid=1&eventtype=FL",
-    "title": "Flood in Costa Rica (Green alert)",
-    "date": "2026-10-09",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Costa Rica (2026-10-09)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -83.9477,
-      9.8091
-     ],
-     [
-      -83.8576,
-      9.8091
-     ],
-     [
-      -83.8576,
-      9.8992
-     ],
-     [
-      -83.9477,
-      9.8992
-     ],
-     [
-      -83.9477,
-      9.8091
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 98.658,
-  "before": "2026-09-04/2026-10-04",
-  "after": "2026-10-09/2026-10-16",
-  "scenes": {
-   "s1_before": 3,
-   "s1_after": 1,
-   "s2_before": 1,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
   ],
   "status": "ready"
  },
@@ -24717,79 +24650,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20261001--22.58_-44.96",
-  "hazard": "flood",
-  "lon": -44.9642,
-  "lat": -22.5784,
-  "bbox": [
-   -45.1246,
-   -22.66,
-   -44.902,
-   -22.4632
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-10-01",
-  "event_end": "2026-10-12",
-  "place": "",
-  "country": "Brazil",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104216",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104216&episodeid=3&eventtype=FL",
-    "title": "Flood in Brazil (Green alert)",
-    "date": "2026-10-01",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Brazil (2026-10-01)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -45.1246,
-      -22.66
-     ],
-     [
-      -44.902,
-      -22.66
-     ],
-     [
-      -44.902,
-      -22.4632
-     ],
-     [
-      -45.1246,
-      -22.4632
-     ],
-     [
-      -45.1246,
-      -22.66
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 498.547,
-  "before": "2026-08-27/2026-09-26",
-  "after": "2026-10-02/2026-10-13",
-  "scenes": {
-   "s1_before": 6,
-   "s1_after": 2,
-   "s2_before": 12,
-   "s2_after": 0
-  },
-  "sensors": [
-   "s1"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20261001--22.11_-56.53",
   "hazard": "flood",
   "lon": -56.5317,
@@ -26046,80 +25906,6 @@
   "status": "ready"
  },
  {
-  "id": "fl-20260817-18.60_-98.84",
-  "hazard": "flood",
-  "lon": -98.845,
-  "lat": 18.5951,
-  "bbox": [
-   -99.017,
-   18.4573,
-   -98.7595,
-   18.6815
-  ],
-  "geometry_from": "gdacs",
-  "event_start": "2026-08-17",
-  "event_end": "2026-10-11",
-  "place": "",
-  "country": "Mexico",
-  "sources": [
-   {
-    "kind": "gdacs",
-    "id": "FL1104099",
-    "url": "https://www.gdacs.org/report.aspx?eventid=1104099&episodeid=25&eventtype=FL",
-    "title": "Flood in Mexico (Green alert)",
-    "date": "2026-08-17",
-    "detail": "Magnitude 0"
-   }
-  ],
-  "first_seen": "2026-10-13",
-  "updated": "2026-10-13",
-  "score": 0.35,
-  "confidence": "medium",
-  "title": "Flood \u00b7 Mexico (2026-08-17)",
-  "task": "flood",
-  "aoi": {
-   "type": "Polygon",
-   "coordinates": [
-    [
-     [
-      -99.017,
-      18.4573
-     ],
-     [
-      -98.7595,
-      18.4573
-     ],
-     [
-      -98.7595,
-      18.6815
-     ],
-     [
-      -99.017,
-      18.6815
-     ],
-     [
-      -99.017,
-      18.4573
-     ]
-    ]
-   ]
-  },
-  "aoi_km2": 674.004,
-  "before": "2026-07-13/2026-08-12",
-  "after": "2026-10-01/2026-10-13",
-  "scenes": {
-   "s1_before": 19,
-   "s1_after": 7,
-   "s2_before": 14,
-   "s2_after": 3
-  },
-  "sensors": [
-   "s1",
-   "s2"
-  ],
-  "status": "ready"
- },
- {
   "id": "fl-20260817-31.87_-116.60",
   "hazard": "flood",
   "lon": -116.603,
@@ -27167,6 +26953,80 @@
   "status": "ready"
  },
  {
+  "id": "fl-20261127-34.67_-111.92",
+  "hazard": "flood",
+  "lon": -111.923093,
+  "lat": 34.6716609,
+  "bbox": [
+   -112.090534,
+   34.4567483,
+   -111.7920688,
+   34.862553
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-27",
+  "event_end": "2026-11-27",
+  "place": "Verde Valley, Yavapai County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.fox10phoenix.com/news/alcantara-winery-hosts-free-thanksgiving-dinner-verde-valley-flood-survivors",
+    "title": "Alcantara Winery hosts free Thanksgiving dinner for Verde Valley flood survivors",
+    "outlet": "fox10phoenix.com",
+    "date": "2026-11-27",
+    "quote": "Flooding that began Oct. 31 damaged hundreds of homes, leaving some residents displaced and others working to recover what they lost.",
+    "detail": "Hundreds of families in the Verde Valley are recovering after devastating floods damaged homes starting Oct. 31."
+   }
+  ],
+  "first_seen": "2026-11-28",
+  "updated": "2026-11-28",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Verde Valley, Yavapai County, United States (2026-11-27)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -112.09056,
+      34.53601
+     ],
+     [
+      -111.79205,
+      34.53601
+     ],
+     [
+      -111.79205,
+      34.80732
+     ],
+     [
+      -112.09056,
+      34.80732
+     ],
+     [
+      -112.09056,
+      34.53601
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 822.928,
+  "before": "2026-10-23/2026-11-22",
+  "after": "2026-11-27/2026-11-28",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 19,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
+  ],
+  "status": "ready"
+ },
+ {
   "id": "ve-20261125-34.05_-118.24",
   "hazard": "vegetation",
   "lon": -118.2427676,
@@ -27254,7 +27114,7 @@
   ],
   "geometry_from": "news",
   "event_start": "2026-11-25",
-  "event_end": "2026-11-26",
+  "event_end": "2026-11-27",
   "place": "La Jolla, San Diego County",
   "country": "US",
   "sources": [
@@ -27312,6 +27172,80 @@
   },
   "sensors": [
    "s1"
+  ],
+  "status": "ready"
+ },
+ {
+  "id": "fl-20261124-33.59_-100.22",
+  "hazard": "flood",
+  "lon": -100.2178972,
+  "lat": 33.588178,
+  "bbox": [
+   -100.5186409,
+   33.3969915,
+   -99.9909488,
+   33.8359922
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-24",
+  "event_end": "2026-11-24",
+  "place": "King County",
+  "country": "United States",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.kentreporter.com/2026/11/23/december-2025-flood-caused-10m-in-loss-for-king-county-residents/",
+    "title": "December 2025 flood caused $10M in loss for King County residents",
+    "outlet": "kentreporter.com",
+    "date": "2026-11-24",
+    "quote": "Historic flooding in December 2025 caused $61 million worth of loss for Washington residents",
+    "detail": "property damage"
+   }
+  ],
+  "first_seen": "2026-11-25",
+  "updated": "2026-11-25",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 King County, United States (2026-11-24)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      -100.37965,
+      33.45252
+     ],
+     [
+      -100.05614,
+      33.45252
+     ],
+     [
+      -100.05614,
+      33.72383
+     ],
+     [
+      -100.37965,
+      33.72383
+     ],
+     [
+      -100.37965,
+      33.45252
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 903.26,
+  "before": "2026-10-20/2026-11-19",
+  "after": "2026-11-24/2026-11-28",
+  "scenes": {
+   "s1_before": 7,
+   "s1_after": 0,
+   "s2_before": 8,
+   "s2_after": 2
+  },
+  "sensors": [
+   "s2"
   ],
   "status": "ready"
  },
@@ -32076,7 +32010,7 @@
   },
   "aoi_km2": 904.413,
   "before": "2026-10-14/2026-11-21",
-  "after": "2026-11-25/2026-11-27",
+  "after": "2026-11-25/2026-11-28",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32150,7 +32084,7 @@
   },
   "aoi_km2": 899.764,
   "before": "2026-10-18/2026-11-17",
-  "after": "2026-11-22/2026-11-27",
+  "after": "2026-11-22/2026-11-28",
   "scenes": {
    "s1_before": 5,
    "s1_after": 0,
@@ -32224,11 +32158,86 @@
   },
   "aoi_km2": 900.109,
   "before": "2026-10-18/2026-11-17",
-  "after": "2026-11-22/2026-11-27",
+  "after": "2026-11-22/2026-11-28",
   "scenes": {
    "s1_before": 4,
    "s1_after": 0,
    "s2_before": 1,
+   "s2_after": 0
+  },
+  "sensors": [
+   "s1",
+   "s2"
+  ],
+  "status": "waiting for imagery"
+ },
+ {
+  "id": "fl-20261126--34.87_150.52",
+  "hazard": "flood",
+  "lon": 150.5227778,
+  "lat": -34.8713889,
+  "bbox": [
+   150.493681,
+   -34.8920383,
+   150.5556118,
+   -34.8508415
+  ],
+  "geometry_from": "news",
+  "event_start": "2026-11-26",
+  "event_end": "2026-11-28",
+  "place": "Queensland, Longreach",
+  "country": "Australia",
+  "sources": [
+   {
+    "kind": "news",
+    "url": "https://www.examiner.com.au/story/9399821/final-spring-deluge-delivers-storms-and-flood-warnings/",
+    "title": "Final spring deluge delivers storms and flood warnings",
+    "outlet": "examiner.com.au",
+    "date": "2026-11-28",
+    "quote": "Flash flooding has stopped traffic in Queensland",
+    "detail": "Traffic on major roads has ground to a halt and flash flooding has submerged cars on the final weekend of Australia's wettest spring on record for an El Ni\u00f1o year."
+   }
+  ],
+  "first_seen": "2026-11-28",
+  "updated": "2026-11-28",
+  "score": 0.15,
+  "confidence": "low",
+  "title": "Flood \u00b7 Queensland, Longreach, Australia (2026-11-26)",
+  "task": "flood",
+  "aoi": {
+   "type": "Polygon",
+   "coordinates": [
+    [
+     [
+      150.49368,
+      -34.89405
+     ],
+     [
+      150.55561,
+      -34.89405
+     ],
+     [
+      150.55561,
+      -34.84883
+     ],
+     [
+      150.49368,
+      -34.84883
+     ],
+     [
+      150.49368,
+      -34.89405
+     ]
+    ]
+   ]
+  },
+  "aoi_km2": 28.419,
+  "before": "2026-10-22/2026-11-21",
+  "after": "2026-11-26/2026-11-28",
+  "scenes": {
+   "s1_before": 2,
+   "s1_after": 0,
+   "s2_before": 6,
    "s2_after": 0
   },
   "sensors": [
@@ -32299,7 +32308,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-21/2026-11-20",
-  "after": "2026-11-25/2026-11-27",
+  "after": "2026-11-25/2026-11-28",
   "scenes": {
    "s1_before": 6,
    "s1_after": 0,
@@ -32313,72 +32322,72 @@
   "status": "waiting for imagery"
  },
  {
-  "id": "fl-20261124-33.59_-100.22",
+  "id": "fl-20261125-40.71_-74.01",
   "hazard": "flood",
-  "lon": -100.2178972,
-  "lat": 33.588178,
+  "lon": -74.0060152,
+  "lat": 40.7127281,
   "bbox": [
-   -100.5186409,
-   33.3969915,
-   -99.9909488,
-   33.8359922
+   -74.258843,
+   40.476578,
+   -73.700233,
+   40.91763
   ],
   "geometry_from": "news",
-  "event_start": "2026-11-24",
-  "event_end": "2026-11-24",
-  "place": "King County",
-  "country": "United States",
+  "event_start": "2026-11-25",
+  "event_end": "2026-11-26",
+  "place": "New Jersey, state",
+  "country": "US",
   "sources": [
    {
     "kind": "news",
-    "url": "https://www.kentreporter.com/2026/11/23/december-2025-flood-caused-10m-in-loss-for-king-county-residents/",
-    "title": "December 2025 flood caused $10M in loss for King County residents",
-    "outlet": "kentreporter.com",
-    "date": "2026-11-24",
-    "quote": "Historic flooding in December 2025 caused $61 million worth of loss for Washington residents",
-    "detail": "property damage"
+    "url": "https://www.fox5ny.com/news/thanksgiving-storm-damages-power-outages-what-we-know",
+    "title": "Thanksgiving storm knocks out power to over 53 , 000 , floods Tri - State area",
+    "outlet": "fox5ny.com",
+    "date": "2026-11-26",
+    "quote": "A Thanksgiving coastal storm with 52 mph wind gusts and nearly 1.5 inches of rain has prompted a state of emergency in New Jersey and left roughly 118,000 Tri-State utility customers without power.",
+    "detail": "power outages, flooding, travel delays, infrastructure damage, rescue operations"
    }
   ],
-  "first_seen": "2026-11-25",
-  "updated": "2026-11-25",
+  "first_seen": "2026-11-28",
+  "updated": "2026-11-28",
   "score": 0.15,
   "confidence": "low",
-  "title": "Flood \u00b7 King County, United States (2026-11-24)",
+  "title": "Flood \u00b7 New Jersey, state, US (2026-11-25)",
   "task": "flood",
   "aoi": {
    "type": "Polygon",
    "coordinates": [
     [
      [
-      -100.37965,
-      33.45252
+      -74.18378,
+      40.57707
      ],
      [
-      -100.05614,
-      33.45252
+      -73.82825,
+      40.57707
      ],
      [
-      -100.05614,
-      33.72383
+      -73.82825,
+      40.84838
      ],
      [
-      -100.37965,
-      33.72383
+      -74.18378,
+      40.84838
      ],
      [
-      -100.37965,
-      33.45252
+      -74.18378,
+      40.57707
      ]
     ]
    ]
   },
-  "aoi_km2": 903.26,
-  "before": "2026-10-20/2026-11-19",
-  "after": "2026-11-24/2026-11-27",
+  "aoi_km2": 904.555,
+  "before": "2026-10-21/2026-11-20",
+  "after": "2026-11-25/2026-11-28",
   "scenes": {
    "s1_before": 7,
    "s1_after": 0,
-   "s2_before": 8,
+   "s2_before": 27,
    "s2_after": 0
   },
   "sensors": [
@@ -32449,7 +32458,7 @@
   },
   "aoi_km2": 282.616,
   "before": "2026-10-20/2026-11-19",
-  "after": "2026-11-24/2026-11-27",
+  "after": "2026-11-24/2026-11-28",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -32524,7 +32533,7 @@
   },
   "aoi_km2": 160.786,
   "before": "2026-10-20/2026-11-19",
-  "after": "2026-11-24/2026-11-27",
+  "after": "2026-11-24/2026-11-28",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32599,7 +32608,7 @@
   },
   "aoi_km2": 902.452,
   "before": "2026-10-20/2026-11-19",
-  "after": "2026-11-24/2026-11-27",
+  "after": "2026-11-24/2026-11-28",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32674,7 +32683,7 @@
   },
   "aoi_km2": 901.687,
   "before": "2026-10-19/2026-11-18",
-  "after": "2026-11-23/2026-11-27",
+  "after": "2026-11-23/2026-11-28",
   "scenes": {
    "s1_before": 3,
    "s1_after": 0,
@@ -32749,7 +32758,7 @@
   },
   "aoi_km2": 25.127,
   "before": "2026-10-19/2026-11-18",
-  "after": "2026-11-23/2026-11-27",
+  "after": "2026-11-23/2026-11-28",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -32824,7 +32833,7 @@
   },
   "aoi_km2": 902.136,
   "before": "2026-10-17/2026-11-16",
-  "after": "2026-11-21/2026-11-27",
+  "after": "2026-11-21/2026-11-28",
   "scenes": {
    "s1_before": 2,
    "s1_after": 0,
@@ -32918,7 +32927,7 @@
   },
   "aoi_km2": 906.043,
   "before": "2026-09-27/2026-11-04",
-  "after": "2026-11-08/2026-11-27"
+  "after": "2026-11-08/2026-11-28"
  },
  {
   "id": "wi-20261118--15.52_142.81",
@@ -32977,7 +32986,7 @@
   },
   "aoi_km2": 225.247,
   "before": "2026-10-09/2026-11-16",
-  "after": "2026-11-20/2026-11-27"
+  "after": "2026-11-26/2026-11-28"
  },
  {
   "id": "wi-20261107--19.70_124.79",
@@ -33068,7 +33077,7 @@
   },
   "aoi_km2": 225.364,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-27"
+  "after": "2026-11-10/2026-11-28"
  },
  {
   "id": "wi-20261107--20.99_123.78",
@@ -33127,7 +33136,7 @@
   },
   "aoi_km2": 225.243,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-10/2026-11-27"
+  "after": "2026-11-10/2026-11-28"
  },
  {
   "id": "wi-20261105--19.12_125.17",
@@ -33210,7 +33219,7 @@
   },
   "aoi_km2": 225.453,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-09/2026-11-27"
+  "after": "2026-11-09/2026-11-28"
  },
  {
   "id": "wi-20261104--20.12_136.55",
@@ -33277,7 +33286,7 @@
   },
   "aoi_km2": 225.329,
   "before": "2026-09-25/2026-11-02",
-  "after": "2026-11-09/2026-11-27"
+  "after": "2026-11-09/2026-11-28"
  },
  {
   "id": "wi-20261028--21.15_23.35",
@@ -33352,7 +33361,7 @@
   },
   "aoi_km2": 225.552,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-11-06/2026-11-27"
+  "after": "2026-11-06/2026-11-28"
  },
  {
   "id": "wi-20261028-31.09_-89.10",
@@ -33411,7 +33420,7 @@
   },
   "aoi_km2": 225.852,
   "before": "2026-09-18/2026-10-26",
-  "after": "2026-10-29/2026-11-27"
+  "after": "2026-10-29/2026-11-28"
  },
  {
   "id": "wi-20261027--21.07_24.03",
@@ -33494,7 +33503,7 @@
   },
   "aoi_km2": 225.745,
   "before": "2026-09-17/2026-10-25",
-  "after": "2026-11-07/2026-11-27"
+  "after": "2026-11-07/2026-11-28"
  },
  {
   "id": "wi-20261023--21.00_128.87",
@@ -33561,7 +33570,7 @@
   },
   "aoi_km2": 225.221,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-29/2026-11-27"
+  "after": "2026-10-29/2026-11-28"
  },
  {
   "id": "wi-20261022-30.50_-82.86",
@@ -33620,7 +33629,7 @@
   },
   "aoi_km2": 225.783,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-27"
+  "after": "2026-10-23/2026-11-28"
  },
  {
   "id": "wi-20261022--19.74_26.20",
@@ -33679,7 +33688,7 @@
   },
   "aoi_km2": 225.208,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-30/2026-11-27"
+  "after": "2026-10-30/2026-11-28"
  },
  {
   "id": "wi-20261022-13.80_0.14",
@@ -33746,7 +33755,7 @@
   },
   "aoi_km2": 225.547,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-31/2026-11-27"
+  "after": "2026-10-31/2026-11-28"
  },
  {
   "id": "wi-20261021--20.76_136.58",
@@ -33805,7 +33814,7 @@
   },
   "aoi_km2": 225.357,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-23/2026-11-27"
+  "after": "2026-10-23/2026-11-28"
  },
  {
   "id": "wi-20261021--18.60_123.71",
@@ -33880,7 +33889,7 @@
   },
   "aoi_km2": 225.174,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-11-08/2026-11-27"
+  "after": "2026-11-08/2026-11-28"
  },
  {
   "id": "wi-20261020--21.61_122.34",
@@ -33939,7 +33948,7 @@
   },
   "aoi_km2": 225.267,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-24/2026-11-27"
+  "after": "2026-10-24/2026-11-28"
  },
  {
   "id": "wi-20261020--21.91_123.41",
@@ -34014,7 +34023,7 @@
   },
   "aoi_km2": 225.255,
   "before": "2026-09-10/2026-10-18",
-  "after": "2026-10-27/2026-11-27"
+  "after": "2026-10-27/2026-11-28"
  },
  {
   "id": "wi-20261010-46.70_119.74",
@@ -34171,7 +34180,7 @@
   },
   "aoi_km2": 430.751,
   "before": "2026-09-29/2026-11-06",
-  "after": "2026-11-11/2026-11-27"
+  "after": "2026-11-11/2026-11-28"
  },
  {
   "id": "wi-20261105-48.01_-120.92",
@@ -34254,7 +34263,7 @@
   },
   "aoi_km2": 32.26,
   "before": "2026-09-26/2026-11-03",
-  "after": "2026-11-08/2026-11-27"
+  "after": "2026-11-08/2026-11-28"
  },
  {
   "id": "wi-20261125-37.40_-8.32",
@@ -34319,7 +34328,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-10-16/2026-11-23",
-  "after": "2026-11-27/2026-11-27"
+  "after": "2026-11-26/2026-11-28"
  },
  {
   "id": "wi-20261124-38.47_-78.46",
@@ -34384,7 +34393,7 @@
   },
   "aoi_km2": 905.044,
   "before": "2026-10-15/2026-11-22",
-  "after": "2026-11-25/2026-11-27"
+  "after": "2026-11-25/2026-11-28"
  },
  {
   "id": "wi-20261121-36.50_-81.13",
@@ -34449,7 +34458,7 @@
   },
   "aoi_km2": 695.916,
   "before": "2026-10-12/2026-11-19",
-  "after": "2026-11-22/2026-11-27"
+  "after": "2026-11-22/2026-11-28"
  },
  {
   "id": "wi-20261120-36.17_-82.88",
@@ -34514,7 +34523,7 @@
   },
   "aoi_km2": 904.108,
   "before": "2026-10-11/2026-11-18",
-  "after": "2026-11-21/2026-11-27"
+  "after": "2026-11-21/2026-11-28"
  },
  {
   "id": "wi-20261120--35.05_150.80",
@@ -34579,7 +34588,7 @@
   },
   "aoi_km2": 87.195,
   "before": "2026-10-11/2026-11-18",
-  "after": "2026-11-21/2026-11-27"
+  "after": "2026-11-21/2026-11-28"
  },
  {
   "id": "wi-20261119-36.21_-112.06",
@@ -34653,7 +34662,7 @@
   },
   "aoi_km2": 25.105,
   "before": "2026-10-10/2026-11-17",
-  "after": "2026-11-20/2026-11-27"
+  "after": "2026-11-20/2026-11-28"
  },
  {
   "id": "wi-20261111-38.85_-94.41",
@@ -34718,7 +34727,7 @@
   },
   "aoi_km2": 25.116,
   "before": "2026-10-02/2026-11-09",
-  "after": "2026-11-12/2026-11-27"
+  "after": "2026-11-12/2026-11-28"
  },
  {
   "id": "wi-20261110-50.54_-116.01",
@@ -34783,7 +34792,7 @@
   },
   "aoi_km2": 25.184,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-27"
+  "after": "2026-11-11/2026-11-28"
  },
  {
   "id": "wi-20261110-38.90_-77.04",
@@ -34848,7 +34857,7 @@
   },
   "aoi_km2": 414.088,
   "before": "2026-10-01/2026-11-08",
-  "after": "2026-11-11/2026-11-27"
+  "after": "2026-11-11/2026-11-28"
  },
  {
   "id": "wi-20261107-54.44_-1.89",
@@ -34913,7 +34922,7 @@
   },
   "aoi_km2": 33.026,
   "before": "2026-09-28/2026-11-05",
-  "after": "2026-11-08/2026-11-27"
+  "after": "2026-11-08/2026-11-28"
  },
  {
   "id": "wi-20261103--2.33_110.99",
@@ -34978,7 +34987,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-24/2026-11-01",
-  "after": "2026-11-04/2026-11-27"
+  "after": "2026-11-04/2026-11-28"
  },
  {
   "id": "wi-20261102-46.82_-67.92",
@@ -35043,7 +35052,7 @@
   },
   "aoi_km2": 25.164,
   "before": "2026-09-23/2026-10-31",
-  "after": "2026-11-04/2026-11-27"
+  "after": "2026-11-04/2026-11-28"
  },
  {
   "id": "wi-20261030-37.40_-8.32",
@@ -35108,7 +35117,7 @@
   },
   "aoi_km2": 25.107,
   "before": "2026-09-20/2026-10-28",
-  "after": "2026-10-31/2026-11-27"
+  "after": "2026-10-31/2026-11-28"
  },
  {
   "id": "wi-20261026-42.66_-73.32",
@@ -35173,7 +35182,7 @@
   },
   "aoi_km2": 50.297,
   "before": "2026-09-16/2026-10-24",
-  "after": "2026-10-28/2026-11-27"
+  "after": "2026-10-28/2026-11-28"
  },
  {
   "id": "wi-20261025--12.84_130.96",
@@ -35238,7 +35247,7 @@
   },
   "aoi_km2": 159.53,
   "before": "2026-09-15/2026-10-23",
-  "after": "2026-10-26/2026-11-27"
+  "after": "2026-10-26/2026-11-28"
  },
  {
   "id": "wi-20261023-42.04_-94.14",
@@ -35303,7 +35312,7 @@
   },
   "aoi_km2": 25.138,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-27"
+  "after": "2026-10-24/2026-11-28"
  },
  {
   "id": "wi-20261023--2.33_110.99",
@@ -35368,7 +35377,7 @@
   },
   "aoi_km2": 24.98,
   "before": "2026-09-13/2026-10-21",
-  "after": "2026-10-24/2026-11-27"
+  "after": "2026-10-24/2026-11-28"
  },
  {
   "id": "wi-20261022--31.95_152.56",
@@ -35433,7 +35442,7 @@
   },
   "aoi_km2": 25.078,
   "before": "2026-09-12/2026-10-20",
-  "after": "2026-10-23/2026-11-27"
+  "after": "2026-10-23/2026-11-28"
  },
  {
   "id": "wi-20261021--2.41_147.33",
@@ -35498,7 +35507,7 @@
   },
   "aoi_km2": 86.938,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-27"
+  "after": "2026-10-22/2026-11-28"
  },
  {
   "id": "wi-20261021-22.50_-81.14",
@@ -35563,7 +35572,7 @@
   },
   "aoi_km2": 25.032,
   "before": "2026-09-11/2026-10-19",
-  "after": "2026-10-22/2026-11-27"
+  "after": "2026-10-22/2026-11-28"
  },
  {
   "id": "wi-20261019--11.74_-67.14",
@@ -35628,7 +35637,7 @@
   },
   "aoi_km2": 25.022,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-27"
+  "after": "2026-10-20/2026-11-28"
  },
  {
   "id": "wi-20261019-38.30_-76.49",
@@ -35693,7 +35702,7 @@
   },
   "aoi_km2": 70.868,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-27"
+  "after": "2026-10-20/2026-11-28"
  },
  {
   "id": "wi-20261019-35.23_-120.70",
@@ -35758,7 +35767,7 @@
   },
   "aoi_km2": 25.121,
   "before": "2026-09-09/2026-10-17",
-  "after": "2026-10-20/2026-11-27"
+  "after": "2026-10-20/2026-11-28"
  },
  {
   "id": "wi-20261015-39.07_-78.73",
